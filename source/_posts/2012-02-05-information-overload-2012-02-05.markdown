@@ -5,7 +5,6 @@ date: 2012-02-05 00:00
 comments: true
 categories:
   - informationoverload
-published: false
 ---
 {% blockquote William Gibson http://www.theverge.com/2012/1/24/2724370/william-gibson-intervie An interview with William Gibson %}
 [T]oday's strangeness, while only a few mouse-clicks away from anyone, becomes difficult to find because it has to occur to you to Google it. You may be able to Google everything, but the trick is figuring what you need to Google.
@@ -21,3 +20,7 @@ published: false
 * [To My Old Master](http://www.lettersofnote.com/2012/01/to-my-old-master.html)<br/>A letter from a former slave to his old "master".
 * [Four Difficult Questions Regarding Bullying and Youth Suicide](http://www.zephoria.org/thoughts/archives/2011/12/12/questions-bullying-suicide.html)<br/>Intersting questions for a necessary debate.
 * [You Will Never Kill Piracy, and Piracy Will Never Kill You](http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/)<br/>Despite the headline, this has been published by Forbes.
+
+{% blockquote Paul Tassi http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/ You Will Never Kill Piracy, and Piracy Will Never Kill You %}
+The only other thing you could get the internet to agree on was if they tried to institute a ban on cat pictures.
+{% endblockquote %}
