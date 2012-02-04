@@ -1,0 +1,36 @@
+--- 
+layout: post
+title: "23C3: Day 2"
+date: "2006-12-28"
+comments: true
+categories: 
+- 23c3
+- events
+- personal
+---
+Lectures seen on day 2:
+
+"_MMORPGs_":http://events.ccc.de/congress/2006/Fahrplan/events/1738.en.html
+Although I'm not into WoW myself, I was looking forward to see "Joi":http://joi.ito.com/ talk again at the C3. As expected his lecture was quite entertaining and since it wasn't about a "heavy" topic it was a perfect starter for what would become a pretty long day.
+
+"_Tor and China_":https://events.congress.ccc.de/congress/2006/Fahrplan/events/1444.en.html
+As you might know I'm a big supporter of "Tor":http://tor.eff.org and have studied Chinese for several years, so this was a lecture I was obviously really interested in. The talk was pretty nice, although it didn't offer too much for people already familiar with Tor. Besides that I was a little disappointed that it  actually had so little to do with China, that one could easily have used $genericEvilCountry as an adequate substitute.
+
+"_Hackerspaces_":https://events.congress.ccc.de/congress/2006/Fahrplan/events/1500.en.html
+"Metalab":http://metalab.at/, "C-Base":http://c-base.org/ and "Netzladen":http://netzladen.org introduced their projects and the challenges involved in creating a Hackerspace in a light-hearted way which was just perfect for me since I was quite tired at that time.
+
+"_Stealth malware - can good guys win?_":https://events.congress.ccc.de/congress/2006/Fahrplan/events/1381.en.html
+"Joanna Rutkowska":http://invisiblethings.org/ is gorgeous and clever, so she can basically talk about whatever she wants and I will want to marry her afterwards.
+
+<a href="https://events.congress.ccc.de/congress/2006/Fahrplan/events/1651.en.html"><I>Ãœberwachen und Strafen in Entenhausen</I></a>
+Ok, but not as funny as her talk 2 years ago.
+
+"_You can't make this stuff up_":https://events.congress.ccc.de/congress/2006/Fahrplan/events/1428.en.html
+You can't blame Fefe and Ilja for trying, but IMHO this was only a weak substitute for the "Literatisches Code-Quartett".
+
+But the real highlight of the day started at around midnight, when "Monochrom":http://www.monochrom.at started to perform what they call "proto-melodischen interventionismus". It's pretty hard to describe how funny this spontaneous concert which moved through the whole building really was if you haven't been there, so you just have to believe me that this was great stuff!
+
+See also:
+"23C3 day two":http://blog.red667.org/?p=39
+
+Pungenday, The Aftermath 71, 3172 YOLD

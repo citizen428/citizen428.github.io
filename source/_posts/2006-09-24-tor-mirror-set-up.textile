@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: Tor mirror set up!
+date: 2006-9-24
+comments: true
+categories: 
+- disobey
+- freedom
+- privacy
+- tor
+- webculture
+---
+After running a "Tor":http://tor.eff.org server for more than half a year already and having donated some money to support Tor's development, I was looking for new ways to help out the project. That's why I decided to set up a mirror, which can be reached "here":http://tor.blingblingsquad.net ("dist/ mirror":http://tor.blingblingsquad.net). The initial sync is still running, but the site should be fully functional soon. Once this is finished, I'll also try to set up another mirror on the Vienna based server hosting this domain.
+
+Boomtime, Bureaucracy 48, 3172 YOLD

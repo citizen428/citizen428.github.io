@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: "23C3: Preface"
+date: "2006-12-26"
+comments: true
+categories: 
+- 23c3
+- events
+- personal
+---
+After a mostly sleepless bus journey and "some" waiting, we've finally made it to the already quite busy "Hackcenter":http://events.ccc.de/congress/2006/Hackcenter, where we met a few people we know from previous years. About half an hour ago the queue at the ticket counter was way too long, so we're trying our luck a little later. Since we're getting up quite early tomorrow (around 9am) to see the "keynote":http://events.ccc.de/congress/2006/Fahrplan/events/1256.en.html, I'll try to catch a few more hours of sleep tonight.
+
+See also:
+<a href="http://blog.red667.org/?p=37">arrived @ 23c3 (red667)</a>
+
+Setting Orange, The Aftermath 68, 3172 YOLD

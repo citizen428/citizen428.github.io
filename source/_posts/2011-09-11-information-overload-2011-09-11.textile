@@ -1,0 +1,22 @@
+--- 
+layout: post
+title: Information Overload 2011-09-11
+date: 2011-9-11
+comments: true
+categories: 
+- informationoverload
+- politics
+- society
+---
+<ul>
+<li>"The intolerance of the tolerant":http://www.eurozine.com/articles/2010-10-29-mudde-en.html<br/>Trying to shed some light on the perceived rise of intolerance towards Islam in northern Europe. I'm not sure what to think of this, but it's interesting nonetheless.</li>
+<li>"Nation Blanding: Hedonism and the Underselling of Beirut":http://www.ourmaninbeirut.com/2011/09/nation-blanding-hedonism-and-the-underselling-of-beirut/<br/>Interesting piece on Beirut being sold as a party city.</li>
+<li>"Don't dumb girls down":http://www.smh.com.au/lifestyle/dont-dumb-girls-down-20110829-1jh86.html<br/>When you talk to little girls, don't enforce stereotypes by how you talk to them. I guess the same goes for boys and "being strong".</li>
+<li>"Caable reveals extent of lapdoggery from Swedish govt on copyright monopoly":http://falkvinge.net/2011/09/05/cable-reveals-extent-of-lapdoggery-from-swedish-govt-on-copyright-monopoly/<br/>Leaked cables show how the US actively influenced Sweden in regards of copyright policies.</li>
+<li>"hackme: Deconstructing an ELF File":http://manoharvanga.com/hackme/<br/>If you wanna see how to dissect an ELF binary to solve a hacking challenge, this is a good read.</li>
+<li>"Monsters":http://www.newyorker.com/talk/2011/09/12/110912ta_talk_smith<br/>Short text by "Zadie Smith":http://en.wikipedia.org/wiki/Zadie_Smith on the post 9/11 world.</li>
+<li>"Anders Breivik's spider web of hate":http://www.guardian.co.uk/commentisfree/2011/sep/07/anders-breivik-hate-manifesto<br/>The Guardian features a map of sites Anders Breivik mentions in his manifesto and the sites they link to.</li>
+<li>"Are jobs obsolete?":http://edition.cnn.com/2011/OPINION/09/07/rushkoff.jobs.obsolete/index.html<br/>I agree, we shouldn't treat the current information based society the same way we treated industria</li>
+<li>"Chomsky: 9/11 - was there an alternative?":http://english.aljazeera.net/indepth/opinion/2011/09/20119775453842191.html<br/>Noam Chomsky reflects on 9/11. Both of them.</li>
+<li>"In China, Don't Dare Help the Elderly: Adam Minter":http://www.bloomberg.com/news/2011-09-08/in-china-don-t-dare-help-the-elderly-adam-minter.html<br/>In a country that always has been know to rever its eleder, this is a shocking new development.</li>
+</ul>

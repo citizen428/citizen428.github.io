@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: Gentoo/BSD docs, Nitro
+date: 2005-8-31
+comments: true
+categories: 
+- FOSS
+- gentoo
+- ruby
+---
+Thanks to "Xavier Neys":http://gentoo.neysx.org/, the Gentoo/FreeBSD doc has made it's way into Gentoo's "official documentation":http://www.gentoo.org/doc/en/gentoo-freebsd.xml. To celebrate this occasion there have been a few little updates and corrections, enjoy! :)
+
+Additionally I've also done an "installation guide for Gentoo/NetBSD":http://dev.gentoo.org/~citizen428/doc/gentoo-netbsd.html this afternoon. Note that this is *NOT* an official Gentoo project though! Instead all the work so far was done by only one person: #gentoo-bsd regular "Damian Florczyk":mailto:thunder@gentoo.pl aka "thunder", who keeps track of this effort in his personal "blog":http://thunder.netbsd.edu.pl/. If you're interested in this project feel free to contact Damian to see how you can help!
+
+Last but not least today saw the release of a new "Nitro":http://nitrohq.com/ version! As I was just checking my mail when the release announcement came, I immediately started working and had bumped ebuilds for glue, og and nitro (including two new ebuilds for new deps) ready less than an hour later. Unfortunately there seems to be a packaging bug in one of the deps (filenames get all messed up, so require can't find them), so this stuff is not commited yet. I've reported this bug upstream and hope this gets fixed fast, so nitro-0.23.0 can find its way into Portage soon. :)

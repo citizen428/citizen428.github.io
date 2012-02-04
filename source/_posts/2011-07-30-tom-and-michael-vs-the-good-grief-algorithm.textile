@@ -1,0 +1,48 @@
+--- 
+layout: post
+title: Tom and Michael vs The Good Grief Algorithm
+date: 2011-7-30
+comments: true
+categories: 
+- papers
+- technology
+- versus
+---
+This week "Tom":http://mrjaba.posterous.com/ &mdash; who is now a happily married man :-) &mdash; and yours truly finally read another paper and since I'm sick and barely left bed for the last 2 days I decided to fight my boredom by writing about it.
+
+*The paper*
+"Multiple Aspect Ranking using the Good Grief Algorithm" by Benjamin Snyder and Regina Barzilay from the MIT CS and AI Lab.
+
+<ul>
+<li>"Paper":http://people.csail.mit.edu/regina/my_papers/ggranker.ps</li>
+<li>"Presentation":http://pages.cs.wisc.edu/~bsnyder/presentations/naacl07.pdf</li>
+<li>"Data and code":http://people.csail.mit.edu/bsnyder/naacl07/</li>
+</ul>
+
+*Summary*
+The paper is in the field of sentiment analysis &mdash; extracting opinions from a text &mdash; and uses restaurant reviews as a corpus. The prime assumption is that such texts will contain more than one opinion (e.g. quality of food, price range, interior, quality of service), which the authors believe is not properly reflected by previous work in this area, where one opinion per text is assumed.
+
+The problem the authors try to solve is assigning a rank from a fixed scale (e.g. 1-5) to several related aspects. They dismiss the easy approach of treating every aspect as a separate ranking problem, since they believe that a real text relates the different aspects in a coherent way (e.g. through phrases like "but", "one problem was" etc.). 
+
+They built on previous work in the natural language processing field, namely linear models trained with <a href="http://en.wikipedia.org/wiki/Perceptron">"Perceptron"</a> and extended this framework with a sort of "meta-model" that predicts relations (agreement or disagreement) between the individually ranked aspects. By relating the different aspects in such a way, it's easier to reflect the contrasting views in real text like "good BUT pricey" in a meaningful way.
+
+What follows is some math, where each input (a review) gets assigned an m-dimensional ranking vector (reflecting m aspects). For example if you try to rank 3 different aspects (food, service, price) on a scale of 1-5 a ranking vector might look like <5,5,3> ("food and service were great, but it was a bit pricey"). The joint ranking model then combines the individual ranks with an "agreement model" to introduce "grief terms" which express dissatisfaction in a certain aspect. The algorithm than tries to minimize the sum of this "grief" &mdash; which is what gave the algorithm its name &mdash; in a joint rank. This step then gets incorporated into the training of the individual rankers (there's some pseudo-code for the joint training), where features of an aspect get represented through presence or absence of words and word "bigrams":http://en.wikipedia.org/wiki/Bigram. This is obviously a very simplified description of the algorithm, but it seems moot to repeat the entire math here, which is very well laid out in the presentation. There's also a very nice illustration about decoding and relating the various aspects at the end of the PDF.
+
+What then follows is a comparison of the Good Grief algorithm with similar algorithms on a corpus of 4500 restaurant reviews ranking restaurants on 5 different aspects, where it outperforms the "competition" in a statistically relevant way. 
+
+*Takeaway*
+As someone who works in an area where sentiment analyses could come in handy I do have an interest in the topic, but alas we don't have the time and resources to develop our own system to do this properly. I once hacked something together with JRuby and the OpenNLP library, which wasn't really sentiment analysis but an attempt to extract useful phrases from reviews. It was crude and had its faults, but worked surprisingly well for the amount of time it took to write. It did however get abandoned in a prototype stage and after reading the paper it's quite clear to me that that probably was a good choice. Sentiment analysis is a non-trivial problem that can't properly be tackled in the ad-hoc fashion we tried. Should this topic ever resurface at my company I'll definitely try to go for a more elaborate and scientific approach. 
+
+*Difficulty of the paper*
+I know that for some people the math might look scary, but if you take some time and look at it carefully you'll notice that it's actually rather simple. It probably doesn't hurt to be acquainted with some basic concepts of NLP and machine learning, but if you have those it's quite an enjoyable paper even if you are not an absolute crack in the field.
+
+*Further reading*
+
+<ul>
+	<li>"Natural language processing":http://en.wikipedia.org/wiki/Natural_language_processing</li>
+
+	<li>"Sentiment analysis":http://en.wikipedia.org/wiki/Sentiment_analysis</li>
+
+	<li>"OpenNLP":http://incubator.apache.org/opennlp/</li>
+
+</ul>

@@ -1,0 +1,20 @@
+--- 
+layout: post
+title: It's a redesign, may I keep it?
+date: 2005-8-21
+comments: true
+categories: 
+- blogs
+- personal
+---
+Ok, I've done it again. Another redesign. Guilty as charged. This is the forth layout since I started this blog and the third in the last 3 weeks. Here's a little recap of all the designs:
+
+* *MT - Trendy*: A nice design by Sebastian Bergmann, but after a while it just got on my nerves too much and I can't even say why.
+
+* *Kubrick 1.2.6 port*: After I got tired of my initial layout, I switched over to the Kubrick port done by Tom Sommer. I still think that Kubrick actually is a rather nice layout, but so do lots of other people, which is the reason you can see this theme everywhere...
+
+* *Blogger-Tabacco*: Done by Frédéric Wenzel, I tweaked the CSS a little to get the background image to the right and was pretty happy with the look. But after a really short period I realized that although I liked the colors and all, the design wasn't "me" somehow...
+
+* *The current design*: initially based on the template "Joshua" by Hendrik Scholz, I've changed the CSS quite a lot already. Not only did I create my own banner graphic using "Fyre":http://fyre.navi.cx/, I also tweaked the colors to my liking and completely redid the sidebar as I didn't like the one "Joshua" had to offer. There will be some more minor adjustments to the CSS, but otherwise, this is it, the new look of citizen428.net! 
+
+<p>Please post any comments, desing proposals etc. that you might have as a comment, thanks!</p>

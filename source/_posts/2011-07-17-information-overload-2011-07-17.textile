@@ -1,0 +1,25 @@
+--- 
+layout: post
+title: Information Overload 2011-07-17
+date: 2011-7-17
+comments: true
+categories: 
+- informationoverload
+- netculture
+- programming
+- psychology
+- science
+- society
+---
+<ul>
+<li>"How Seawater Can Power the World":http://www.nytimes.com/2011/07/11/opinion/11Prager.html<br/>Interesting NYT op-ed on the future of fusion energy.</li>
+<li>"Zoobotics":http://www.economist.com/node/18925855?story_id=18925855<br/>Robot researchers are modeling their creations after animals now, assuming that it's hard to come up with a better design than evolution.</li>
+<li>"Edward Tufte's &quot;Slopegraphs&quot;":http://charliepark.org/slopegraphs/<br/>I really like this under-used chart style, I think it conveys meaning very well.</li>
+<li>"Groundhog Decade":http://www.slate.com/id/2298871/pagenum/all/<br/>Very good piece on how Hollywood apparently is dead set on repeating the mistakes of the music industry.</li>
+<li>"Why Programming Languages?":http://soft.vub.ac.be/~tvcutsem/whypls.html<br/>A programming language researcher explains why there are so many different programming languages and why we'll likely keep on seeing new ones.</li>
+<li>"The Menace Within":http://www.stanfordalumni.org/news/magazine/2011/julaug/features/spe.html<br/>40 years after the Stanford Prison Experiment some key players tell about their experience and what they took away from the experiment.</li>
+<li>"Misattribution of Arousal":http://youarenotsosmart.com/2011/07/07/misattribution-of-arousal/<br/>I love all those insights into how our brains work. This article deals with the misattribution of arousal (not only of the sexual kind) to other people.</li>
+<li>"How Digital Detectives Deciphered Stuxnet, the Most Menacing Malware in History":http://www.wired.com/threatlevel/2011/07/how-digital-detectives-deciphered-stuxnet/all/1<br/>If you have the slightest interest in IT security, you'll love this article, but even if you usually don't enjoy this topic the story still reads like the plot of a Hollywood movie.</li>
+<li>"Tower of David: 45 Floors of Favela Chic":http://d-build.org/blog/?p=2128<br/>One of Latin America's tallest buildings is now squatted by around 2500 people, many of them escaping live on the streets.</li>
+<li>"My Summer at an Indian Call Center":http://m.motherjones.com/politics/2011/05/indian-call-center-americanization<br/>An American citizen works in an Indian call center for a summer.</li>
+</ul>

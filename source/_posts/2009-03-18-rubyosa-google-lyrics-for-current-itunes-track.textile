@@ -1,0 +1,12 @@
+--- 
+layout: post
+title: "RubyOSA: Google lyrics for current iTunes track"
+date: 2009-3-18
+comments: true
+categories: 
+- mac
+- ruby
+---
+<script src="http://gist.github.com/81399.js"></script>
+
+Adjust to your liking. :)

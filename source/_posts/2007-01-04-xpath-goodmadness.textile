@@ -1,0 +1,28 @@
+--- 
+layout: post
+title: XPath (good|mad)ness
+date: 2007-1-4
+comments: true
+categories: 
+- development
+- geek
+- javascript
+- web
+- xpath
+---
+Today I started writing a useful little "Greasemonkey":http://greasemonkey.mozdev.org/ "userscript":http://userscripts.org/ for a "browser-based MMRPG":http://www.pardus.at I'm playing. Although I'm no JavaScript guru I feel somewhat confident in the language and am quite fond of "XPath":http://www.w3.org/TR/xpath ever since I joined the "hoodwink.d":http://hoodwinkd.hobix.com/ community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. "funky") from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here's the working result:
+
+{% codeblock %}
+var xpath = "/html/frameset/frame[@name='main']";
+var frameResult = document.evaluate(xpath, document, null, 
+   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
+var document2 = frameResult.contentDocument;
+var imgResult = document2.evaluate("//img[contains(@src,'funky')]", document2, null, 
+  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
+{% endcodeblock %}
+
+Of course if any of you know sbout a better way to achieve the same result, please don't hesitate to post a comment, thanks!
+
+On a completely unrelated note: I'm probably the last person to find out that "Slashdot":http://sladhdot.org features random Futurama quotes in its HTTP headers, but nonetheless I find it pretty cool to find stuff like "X-Fry: The less fortunate get all the breaks!" in there!
+
+Setting Orange, Chaos 5, 3173 YOLD

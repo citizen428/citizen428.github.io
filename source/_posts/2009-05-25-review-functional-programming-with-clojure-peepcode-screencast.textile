@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: "Review: Functional Programming with Clojure (PeepCode screencast) "
+date: 2009-5-25
+comments: true
+categories: 
+- clojure
+- programming
+- ruby
+- scala
+---
+A couple of month ago I first heard about "Clojure":http://clojure.org/, a <a href="http://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a>-like language sitting on top of the "JVM":http://en.wikipedia.org/wiki/Java_virtual_machine. Alas I didn't yet have time to have a closer look at it, so I decided to get myself the "PeepCode screencast":https://peepcode.com/products/functional-programming-with-clojure. 
+
+This 65 minute video is the first to use PeepCode's new post-production workflow, and it's very well done! In just a little over an hour you go from learning about Clojure's basic concepts and syntax to writing a "multi-user text based adventure game":http://github.com/technomancy/mire/tree/master, tackling topics such as data structures, thread safety, lazy collections, unit testing and packaging of Clojure apps. All of that is clearly presented and easy to follow, which makes for an ideal first overview of the language. If you are curious about Clojure but have little time, consider investing the money for this screencast!
+
+On a more general note it's interesting to see that more and more languages seem to target the JVM. I never really had any interest in Java and also totally ignored "Groovy":http://groovy.codehaus.org/, but now that "JRuby":http://jruby.codehaus.org/, "Scala":http://www.scala-lang.org/ and Clojure entered the stage, I might start looking into the Java platform a bit more. Especially Scala with its mixed Ruby/Haskell feel appeals to me, but as "antifuchs":http://boinkor.net/ showed, there's also "pretty neat stuff":http://boinkor.net/archives/2009/03/clojure_and_art_of_illusion_bf.html ("GitHub project":http://github.com/antifuchs/aoi-swank-plugin/) one can do with Clojure.

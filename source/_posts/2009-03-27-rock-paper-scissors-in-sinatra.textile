@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: Rock-paper-scissors in Sinatra
+date: 2009-3-27
+comments: true
+categories: 
+- heroku
+- ruby
+- sinatra
+---
+Just a stupid little example to demonstrate why Sinatra is cool:
+
+<script src="http://gist.github.com/86780.js"></script>

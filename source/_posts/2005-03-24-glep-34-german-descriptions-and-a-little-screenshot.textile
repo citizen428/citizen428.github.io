@@ -1,0 +1,11 @@
+--- 
+layout: post
+title: GLEP 34 German descriptions and a little screenshot
+date: 2005-3-24
+comments: true
+categories: 
+- gentoo
+---
+As I think that <a href="http://dev.gentoo.org/~ciaranm/">ciaranm</a>'s GLEP 34 is a pretty neat idea, I today went ahead and added German longdescriptions to 90+ categories. I'll try to do the remaining categories tomorrow, which shouldn't be to much work as it seems like <a href="http://dev.gentoo.org/~kugelfang/">Kugelfang</a> is already taking care of the sci- categories.
+
+Besides that nothing special happended, but I've finally uploaded a <a href="http://dev.gentoo.org/~citizen428/pictures/screenshots/e16_20050322.png">screenshot</a> of my current E16 setup to my dev webspace.

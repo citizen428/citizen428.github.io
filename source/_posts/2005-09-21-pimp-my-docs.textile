@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: Pimp my docs
+date: 2005-9-21
+comments: true
+categories: 
+- FOSS
+- gentoo
+- ruby
+---
+Currently I don't have that much time for Gentoo stuff, so things are going rather slowly on my end of things. At least I managed to do a version bump of "pdf-writer":http://ruby-pdf.rubyforge.org/pdf-writer/index.html and to finally commit the ebuilds for "Nitro":http://nitrohq.com 0.23.0 that were sitting in my overlay for some time now. 
+
+Today I've been a good boy and submitted patches for the "MySQL upgrade guide":http://www.gentoo.org/doc/en/mysql-upgrading.xml and the "Gentoo/FreeBSD documentation":http://www.gentoo.org/doc/en/gentoo-freebsd.xml. I'm sure the great folks from the docs team will commit them soon for your reading pleasure. There also was a little update to the unofficial "Gentoo/NetBSD doc":http://dev.gentoo.org/~citizen428/doc/gentoo-netbsd.html, so now there's really no excuse for not helping "Damian":http://thunder.netbsd.edu.pl/ anymore. 

@@ -1,0 +1,19 @@
+--- 
+layout: post
+title: Mac Mini - First impressions
+date: 2006-5-20
+comments: true
+categories: 
+- FOSS
+- personal
+---
+As regular reader of this blog, you should already know that the Mac Mini I've ordered a while ago arrived last Saturday. During the time I was "waiting for the delivery":http://citizen428.net/archives/268-Sure,-I-can-wait....html I already read up lots of stuff, so that I could immediately get my hands dirty once my new shiny toy arrives. Here are the first impressions of a new Mac OS X convert after one week.
+
+Personally I think that the designers of OS X can't be praised high enough. Sure, Aqua may not be everyone's taste, but IMHO it's quite nice looking and the usability is absolutely fantastic. All things you want to do work in a simple and intuitive manner without bothering you. Add stuff like "Expose":http://www.apple.com/macosx/features/expose/, "Dashboard":http://www.apple.com/macosx/features/dashboard/ and "Spotlight":http://www.apple.com/macosx/features/spotlight/ and you'll understand why the system is such a pleasure to work with. And that doesn't even take into account the power that comes with "AppleScript":http://www.apple.com/macosx/features/applescript/, "Automator":http://www.apple.com/macosx/features/automator/ and the available Bash shell.
+
+However, where there's light, there's shadow. As a long-time user of various Linux distributions, I have come to appreciate the merits of centralized software repositories, where a single command like "emerge foo" or "apt-get install foo" will get me the app I want without me going to a website and downloading stuff. Now also consider the value of easy upgrades of all installed software components, and it's obvious why a good repo is the heart of any self-respecting Linux distro. That's something I sometimes thouroughly miss, although Mac OS X doesn't fare to bad in this department either: Mac Update keeps the core system up to date, while most decent applications have a way to automatically upate themselfs to the newest available version. Besides that the disk images OS X apps are often distributed as are a really convenient way to try out a program before finally moving it to the "Applications" folder. Oh well, you can't have everything I guess...
+
+With Mac OS X comes the possibility to use a plethora of free (as in beer and/or speech) or commercial programs, which as far as I have seen are all of fairly high quality and do a good job of integrating with the user experience of the whole system. Now that I've wet your appetite, you may be quite disappointed to find out that I won't talk about this topic right now, but will reserve this for a later blog entry. What can I say, life's a bitch...
+
+
+Setting Orange, Discord 67, 3172 YOLD

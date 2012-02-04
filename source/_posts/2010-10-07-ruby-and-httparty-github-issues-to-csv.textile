@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Ruby and HTTParty: GitHub issues to CSV"
+date: 2010-10-7
+comments: true
+categories:
+- github
+- ruby
+---
+To fill our backlog at work, our project manager needed a list of our current <a href="https://github.com/">GitHub</a> issues, ideally in a spreadsheet format. A couple lines of Ruby produce CSV output consisting of issue title, creation date, reporter and labels, which then can be redirected to a file and opened with any spreadsheet program.
+
+{% codeblock lang:ruby %}
+require 'httparty'
+
+class GitHubIssues
+  include HTTParty
+  base_uri 'http://github.com/api/v2/yaml'
+
+  def self.show
+    # username must be of the form '<username>/token:<token>'
+    opts = {:basic_auth => {:username => ''}}
+    self.get('/issues/list/<user>/<projects>/open', opts)["issues"].each do |issue|
+      puts "#{issue["title"]};#{issue["created_at"]};#{issue["user"]};#{issue["labels"].join(',')}"
+    end
+  end
+end
+
+GitHubIssues.show
+{% endcodeblock %}
+
+It's quick and dirty (e.g. will die if there are no issues), but does exactly what we needed in just a couple of lines thanks to the awesome <a href="http://github.com/jnunemaker/httparty">HTTParty</a>.
+
+<i>This also has been <a href="http://tupalo.com/en/blog/github-issues-as-csv-with-ruby-and-httparty/">published</a> in slightly different form on our <a href="http://tupalo.com/en/blog/">company blog</a>.</i>

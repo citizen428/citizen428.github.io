@@ -1,0 +1,23 @@
+---
+layout: post
+title: Rubinius has a new fan
+date: 2010-9-18
+comments: true
+categories:
+- programming
+- ruby
+---
+Being kinda sick I decided to use the weekend for emptying out my "Instapaper":http://www.instapaper.com/ account a little. Doing so I finally read "<a href="http://www.engineyard.com/blog/2010/rubinius-wants-to-help-you-make-ruby-better/">Rubinius wants to help YOU make Ruby better</a>" on the "Engine Yard blog":http://www.engineyard.com/blog/. This reminded me that it's been over a year since I last looked at Rubinius, so I used the excellent "RVM":http://rvm.beginrescueend.com/ to get the latest version and started my experiments. Basically everything I threw at it just worked, except for some of my scripts using 1.9's new lambda syntax. Speedwise it seems to be more in the MRI 1.8.7 than the 1.9.2 range, but that's fair enough. Getting adventurous I decided to try how Rubinius would handle one of my all-time favorite Ruby annoyances, the inability to override <i>to_s</i> in subclasses of <i>String</I> (don't ask, but this once cost me almost an entire afternoon).
+
+Example:
+{% codeblock lang:ruby %}
+class SubclassedString < String
+  def to_s
+    "overriden"
+  end
+end
+
+puts SubclassedString.new("original")
+{% endcodeblock %}
+
+In MRI 1.8.7, MRI 1.9.2, JRuby HEAD and MacRuby 0.6 this will output "original", which I believe to have tracked down to <i>rb_obj_as_string</i> in string.c in the MRI source (no idea about the other implementations). To my great surprise Rubinius 1.0.1 actually output "overriden", which instantly won it a new fan. :-)

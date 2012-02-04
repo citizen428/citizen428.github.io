@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Review: Learn You a Haskell for Great Good"
+date: 2011-7-7
+comments: true
+categories:
+- books
+- haskell
+- programming
+- review
+---
+<em>Disclaimer: <a href="http://www.nostarch.com/">No Starch Press</a> were nice enough to provide me with a free copy of the book reviewed here but what I'm about to write has not been influenced by this.</em>
+
+Properly learning Haskell has been on my todo list for years. One of my first more serious attempts was in 2009, when I found "a weird little book with lots of cartoons online":http://learnyouahaskell.com/. As you may have guessed that was Miran Lipovaca's "Learn You a Haskell for Great Good" and I was immediately intrigued by the writing style and cute cartoons. However back then the book was still a work in progress and I eventually stopped reading it before Miran got around to adding the last chapters. I always promised myself to eventually revisit this later, so I was delighted when I found out that No Starch Press is actually releasing an offline version of the book! Here you can see the cover in its full cartoony glory:
+<img class="aligncenter" style="border-width: 2px; border-color: black; border-style: solid;" title="Learn You A Haskell cover" src="http://s3.amazonaws.com/files.posterous.com/teddythebear/1XvdQkcaG7iWYJB8XYQeLVwwt5VGYAcxGPa1PNdigVpx60HxVtEQphHTlXEI/LearnYouAHaskell.jpg?AWSAccessKeyId=AKIAJFZAE65UYRT34AOQ&Expires=1319408436&Signature=woTKJQqeEIU9zs1Ib3AfV64gtfY%3D" alt="Learn You A Haskell cover" width="170" height="225" align="centre" border="1" />
+
+Before you think this book is all about funny drawings, lets talk about the real star, the content. LYAH definitely is among the top programming books I read so far. Due to the author's easy-going and funny style &mdash; though I'm sure there will be some readers who won't appreciate his humor &mdash; you might not even notice at first how choke-full of good content this book is, but once you are done with it you realize that you actually learned a lot. This would be an amazing feat for any technical book, but is even more impressive considering Haskell's reputation as being a very academical and arcane language. Sure, not everything is covered here &mdash; Arrows or CPS come to mind &mdash; but every book is finite and the selection of topics is absolutely appropriate for beginning Haskell enthusiasts. The only chapter I wasn't so happy with was the last one on "Zippers":http://en.wikipedia.org/wiki/Zipper, not because it wasn't well written or interesting, but more because it felt a bit tucked on.
+
+What can you expect from this book? Will you be a Haskell guru after reading it? Most likely not, because that takes a long time of practice and actually writing code. Maybe that's one of the few weak points of LYAH, the code examples are usually rather short and focussed on getting the point across, not "real-world" tasks you are likely to encounter in day to day programming. They still are great for introducing the reader to Haskell's way of abstracting problems, which I find immensely beautiful and well thought out. Still, a chapter or two on "programming in the large" and how to structure a big Haskell project would have been nice additions, but there are other places for learning more about the language, e.g. the "Haskell wiki":http://www.haskell.org/haskellwiki/Haskell or the "Haskell Wikibook":https://encrypted.google.com/#hl=en&q=haskell%20wikibook&aq=f&aqi=&aql=&oq=&gs_rfai=&fp=1&bav=on.2,or.r_gc.r_pw.&cad=b. What the book will do for you is that once you are done with it, you should have a good basic understanding of the language's key concepts and type system and will be comfortable around terms like "monoid", "applicative functor" and "monad". There still we be a long way to go before you can consider yourself a Haskell expert, but you'll have a very solid grounding to build on.
+
+All in all this is a remarkable book and maybe just what this beautiful language was missing, an easy to read, entertaining yet still thorough introduction to the language, that gives you an idea that Haskell is not only a research subject for computer scientists but a useful tool that can be used to build software.

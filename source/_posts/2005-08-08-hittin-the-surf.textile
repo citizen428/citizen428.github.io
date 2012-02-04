@@ -1,0 +1,22 @@
+--- 
+layout: post
+title: Hittin' the surf
+date: 2005-8-8
+comments: true
+categories: 
+- FOSS
+---
+It's summer and lots of people love to go surfing. While some go to Hawaii or Portugal, others will  go to the club house of one of the projects I'm involved in, to surf the web on one of the two shiny new surf stations. Ok, that probably was the lamest introduction I've ever posted here, so let's get it on with the technical stuff, seems like I'm better at that...
+
+Things started when "we":http://www.xn--friedhofstribne-cwb.at/fht/index.jsp got donated some old Compaq PCs and decided that they will get used as surf stations for the club house. Being old Pentium IIs in the 200 something MHz Range with 3GB hard disks they surely don't make you want to scream in ecstasy, but they aren't too shabby either. Unfortunately they don't have CD-ROM drives and their design also doesn't really allow for them. 
+<!--more-->That's why the "Morphix":http://livecd.net-based "LiveKiosk":http://livecd.net wasn't really an option, despite fitting my requirements almost exactly. For my second try I used "Morphix LightGUI":http://www.morphix.org/index.php?option=com_content&task=view&id=26&Itemid=59, which is a pretty good live distribution which also features an HD installer (BTW: if you ask me, good old cfdisk still is way better than this graphical partitioning thingy Morphix offers you). However, this solution also didn't really satisfy me, as it had several problems:
+
+* The system needed really long to boot up.
+* Most of the nice software that gets installed will never be used.
+* The installer didn't really work. Although installation finished, I couldn't boot Morphix afterwards and neither Google nor the "Morphix Forum":http://www.morphix.org/index.php?option=com_simpleboard&Itemid=78 had any information on my particular problem. 
+
+As I didn't want to waste too much time on this two boxes, the show was now officially over for Morphix. Skipping through the pile of CDs that usually come with my Linux magazines, I found  an older version of "Damn Small Linux":http://damnsmalllinux.org/, which turned out to be an excellent choice: it boots fast, sports a good automatic hardware detection and the ISO only weighs in at around 50MB. So I immediately downloaded their newest release and installed it on the first PC. As a window manager the box now uses a "hacked up version of the good old twm":http://kiosk.mozdev.org/twm-kiosk.html which features a kiosk mode. If you specifiy the options KioskMode, RandomPlacement and NoTitle in your /etc/X11/twm/system.twmrc,  twm will automatically start the application you specify in /etc/X11/twm/kiosk-default.sh in fullscreen mode, without window decorations on startup. You don't even have to compile this baby, just copy the twn-kiosk binary from the "tarball":http://stlouis-shopper.com/~jtjsoftware/software/kiosk-twm.tar somewhere into your $PATH. Additionally I changed the menu from the standard twm configuration a little: it now only has two entries, one to restart Firefox (in case you closed it after installing an extension for example) and one to entirely shut down the computer, because the guys who are about to come near this surf stations, aren't exactly experts and might get lost on a shell prompt. 
+
+Coming from a live CD background, DSL automatically starts X when the standard user called "dsl" logs in, so I decided to automate this during the init process, so nobody besides me will ever have to see a shell prompt on this machines. For this purpose I edited /etc/rc.5/S99localstart, to automatically "su":http://www.computerhope.com/unix/usu.htm to the appropriate user. The second box I only set up with an image (dd if=/dev/hda2 of=/dev/hdb2). I then chrooted into this copy to fix some small issues like the hostname and the fsck'ed up MBR which was a leftover from the failed Morphix install.
+
+If you now turn on one of this boxes, it boots up until you see a fullscreen Firefox browser ready to surf. When you want to turn off the machine, just close FF (either via "File"-"Quit" or Ctrl-Q) and shutdown the box from the menu. That seems to be a really simple solution, that even my non-techy friends should be able to handle without me. Aloha he, cowabunga, etc! :)

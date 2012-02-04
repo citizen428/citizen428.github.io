@@ -1,0 +1,25 @@
+---
+layout: post
+title: Information Overload 2010-12-05
+date: 2010-12-5
+comments: true
+categories:
+- informationoverload
+- literature
+- politics
+- programming
+- science
+- technology
+---
+<ul>
+<li>"Die unertraegliche Lameness des Web 2.0":http://blog.koehntopp.de/archives/2978-Die-unertraegliche-Lameness-des-Web-2.0.html<br/>Why the "social web" fails and what could be done better. I couldn't agree more, the author tackles lots of valid points (in German, but also "available in English":http://blog.koehntopp.de/archives/2978-Die-unertraegliche-Lameness-des-Web-2.0.html#en. Update: Currently offline because of the controversial "JMStV":http://www.techeye.net/internet/web-age-certificates-law-forces-german-blogs-offline). </li>
+<li>"What Your Computer Does While You Wait":http://duartes.org/gustavo/blog/post/what-your-computer-does-while-you-wait<br/>Interesting article comparing the relative speeds of the various parts in your computer, using illustrative examples.</li>
+<li><a href="http://pragprog.com/magazines/2010-12/whats-new-in-ruby-">What's New in Ruby 1.9.2</a><br/>I've been using 1.9 since it came out, and 1.9.2 definitely is the best Ruby I've ever used. Hopefully this post by Dave Thomas will convince even more people to finally leave 1.8 behind.</li>
+<li>"The Xenotext Experiment":http://www.law.ed.ac.uk/ahrc/script-ed/vol5-2/editorial.asp#sdendnote2sym<br/>Awesome beyond words, the Xenotext Experiment tries to combine genetics and poetry.</li>
+<li>"Full Body Scanners: What's Next?":http://www.schneier.com/blog/archives/2010/12/full_body_scann.html<br/>Bruce Schneier, spot on as always.</li>
+<li>"Favelas, Drug Trade & Twitter: What Went Down in Rio":http://www.aspiringluminary.com/post/1726856462<br/>The role of mobile phones and Twitter in the recent "favela wars" in Rio.</li>
+<li>"Google Maps & Label Readability":http://www.41latitude.com/post/2072504768/google-maps-label-readability<br/>Interesting read on what little tricks Google uses to make their maps more readable than their competitors'.</li>
+<li>"Spacelog":http://spacelog.org/<br/>Transcripts of early space exploration missions, beautifully visualized. </li>
+<li>"Mercury poisoning makes male birds homosexual":http://www.newscientist.com/article/dn19784-mercury-poisoning-makes-male-birds-homosexual.html<br/>As interesting as this is scientifically, I'm already afraid of all the nuts who'll try to extrapolate these results to humans.</li>
+<li>"Conflict or Cooperation?":http://www.foreignaffairs.com/articles/66802/richard-k-betts/conflict-or-cooperation?page=show<br/>Good comparison of the theories of Fukuyama, Mearsheimer and Huntington.</li>
+</ul>

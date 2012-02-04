@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: Ruby eselect, G/FBSD, MySQL
+date: 2005-9-11
+comments: true
+categories: 
+- FOSS
+- gentoo
+- ruby
+---
+If you haven't tried out "eselect":http://www.gentoo.org/proj/en/eselect/index.xml yet, you definitely should do so! Especially if you maintain one of the current foo-config and update-bar tools please consider converting it to an eselect module, to offer our users the benefits of a  consistent and flexible framework, which additionally also has the advantage of fully supporting $ROOT. Also there's good documentation for "users":http://www.gentoo.org/proj/en/eselect/user-guide.xml and "developers":http://www.gentoo.org/proj/en/eselect/dev-guide.xml, so you won't have any problems getting started. That said, I've written a replacement for ruby-config that "Danny":http://dev.gentoo.org/~kugelfang/ will commit pretty soon, so expect to see it in the next release of eselect.
+
+There also have been some small updates to the "Gentoo/FreeBSD installation instructions":http://www.gentoo.org/doc/en/gentoo-freebsd.xml, and thanks to "Cardoe's":http://dev.gentoo.org/~cardoe/ input I've already done another patch that soon will be commited by one of our docs team's members.
+
+Last but not least I've written up a short guide for migrating from MySQL 4.0.x to 4.1.x which can be found "here":http://dev.gentoo.org/~citizen428/mysql-update.txt. It's just plain text and based on Francesco's mail, but he didn't want to write something up himself. It was done late yesterday evening when I was really tired, but it's better than nothing and we have a link to give out to our users. 

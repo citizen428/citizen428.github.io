@@ -1,0 +1,19 @@
+--- 
+layout: post
+title: Latex mania
+date: 2005-8-22
+comments: true
+categories: 
+- FOSS
+- personal
+---
+As most of us know, MS Word isn't really suited for long and complex documents. I've heard things got better with recent releases, but judging from the experiences of others, it still pretty much sucks in some respects...
+
+Now that I will soon start with my diploma thesis, I obviously spent some time thinking about the tool I will use to write it. As all my current machines only run "Gentoo Linux":http://www.gentoo.org/ or some flavor of "BSD":http://www.bsd.org/, Word was definitely not an option (it never really was one anway). After some considertation, I came to the conclusion that this is the perfect opportunity to finally teach myself some "LaTeX":http://www.latex-project.org/. I've done some research already and found useful stuff like "KOMA-Script":http://www.komascript.de/. Now one big question remains: which editor/IDE shall be used? Here are the contestants:
+<!--more-->* "LyX":http://www.lyx.org/: I think this is about as close as one can get when looking for a WYSIWYG editor for LaTeX. I know this tool from hearsay for quite a while already, but some days ago I finally installed it. The "graphical tour":http://www.lyx.org/LGT/ looks pretty promising, but even with the optional QT interface LyX isn't really an attractive application and I'd prefer something which better fits into my GNOME desktop. However, form follows function in this case...
+
+* "Kile":http://kile.sourceforge.net/: The project advertises itself as "integrated LaTeX environment" and was written for the KDE desktop. As I've heard some nice things about it, I went ahead and installed the newest version. Although Kile seems to offer the "features":http://kile.sourceforge.net/Documentation/html/intro_mainfeat.html I'm looking for, its cluttered interface really gives me the creeps (that holds true for quite a lot of KDE apps btw). I know that it's possible to customize this, but is it really worth it?
+
+* "VIM-LaTeX":http://kile.sourceforge.net/Documentation/html/intro_mainfeat.html: I knew there must be a LaTeX suite for my favorite editor, and it didn't really took me long to find it. This thing has nice "features":http://vim-latex.sourceforge.net/index.php?subject=features&title=Features, and I could do everything (writing, compiling, opening the .dvi) from within my "nice shiny GVim with GTK2 support":http://gallery.symbion.at/ides/gvim_latex (this screenshot shows an "example file":http://www.math.duke.edu/computing/tex/templates.html I found on the web). I really like this option, as it would allow me to use the full power of (G)Vim for my diploma thesis! :)
+
+<p>I know that this comparison was only based on first impressions, so keep the flames down, please. But I'd be very grateful for all helpful tips/pointers in regard to LaTeX, especially when it comes to Chinese support. And I'd really like to know why there isn't a decent LaTeX IDE/editor for the GNOME desktop...<p>

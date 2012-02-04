@@ -1,0 +1,20 @@
+--- 
+layout: post
+title: "My way: Ruby, Sinatra, Heroku"
+date: 2009-3-25
+comments: true
+categories: 
+- git
+- heroku
+- ruby
+- rubylearning
+- sinatra
+---
+"RubyLearning":http://rubylearning.org just had a nice one week introductory course on "Sinatra":http://www.sinatrarb.com/, a "DSL":http://en.wikipedia.org/wiki/Domain-specific_programming_language for easily creating web applications. The next batch will start on May 2nd (and I'll probably be around as a mentor again), you can "join here":http://rubylearning.org/class/course/enrol.php?id=32 if you are interested.
+
+Anyway, since it's so easy to write applications with Sinatra, you probably don't want to waste time deploying them. That's where "Heroku":http://heroku.com/ comes into play, a Ruby hosting platform which modeled it's workflow around "git":http://git-scm.com/. In my - still somewhat limited - experience working with Heroku is painless and feels very natural, kudos to the team for providing us with such a nice option for hosting "Rack":http://rack.rubyforge.org/ based apps! In fact I liked Heroku so much, that I wrote a patch for <a href="http://quirkey.com/">Aaron Quint</a>'s "sinatra-gen":http://github.com/quirkey/sinatra-gen/tree/master which will initialize git and create your app on Heroku for you. It's not in the main branch yet, but Aaron said he likes the idea and that he will include it. Up until then you can get my version from "here":http://github.com/citizen428/sinatra-gen/tree/master.
+
+_Update: Said patch - in slightly modified form - is now part of mainline sinatra-gen, so I recommend getting the "official" version, not mine._
+
+Oh yeah, once you are done creating all this shiny new webapps in Sinatra, don't forget to take some snapshots of them with "snapurl":http://github.com/jurisgalang/snapurl/tree/master, another nifty little app I recently wrote a small patch for.
+

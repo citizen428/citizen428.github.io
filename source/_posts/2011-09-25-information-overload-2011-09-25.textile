@@ -1,0 +1,22 @@
+--- 
+layout: post
+title: Information Overload 2011-09-25
+date: 2011-9-25
+comments: true
+categories: 
+- economics
+- informationoverload
+- politics
+- programming
+- technology
+---
+This week's issue is shorter than usual since I spent 4 days in Helsinki to attend "Frozen Rails":https://frozenrails.eu/ and then had to prepare my talk for "Linuxwochenende 2011":http://linuxwochenende2011.luga.at/. I also had to deal with a non-functioning hard-disk in my MacBook Pro, it still remains to be seen if the disk failed or if it's just the SATA cable.
+
+<ul>
+<li>"Running a startup on Haskell":http://bos.github.com/strange-loop-2011/talk/talk.html<br/>Unfortunately the slides are missing some bits that were in the actual talk, but they are still interesting.</li>
+<li>"The case of the 500-mile email":http://www.ibiblio.org/harris/500milemail.html<br/>An old story by now that's been posted all over the interent, but still a good piece of sysadmin lore.</li>
+<li>"Defending jobs":http://www.economist.com/blogs/dailychart/2011/09/employment<br/>Of the world's 10 biggest employers, 7 are state run.</li>
+<li>"Lost: Wired's Guide to Pop Culture's Buried Treasure":http://www.wired.com/magazine/2011/08/ff_lost_basementtapes/<br/>No matter if it's movies, TV shows, music albums or video games, some of pop cultures greatest treasures seem to be lost forever.</li>
+<li>"The Rust Programming Language":http://dl.dropbox.com/u/4186469/rust-all-hands-w2011/assets/fallback/index.html<br/>More slides from a presentation related to programming, this time on Mozilla's new systems programming language "Rust":http://www.rust-lang.org/, which is starting to shape up.</li>
+<li>"&quot;Da bleibt mir die Spucke weg&quot;":http://www.falter.at/web/print/detail.php?id=1460<br/>An interview with "SZ":http://www.sueddeutsche.de/ journalist Michael Frank about democracy and the political system in Austria (in German).</li>
+</ul>

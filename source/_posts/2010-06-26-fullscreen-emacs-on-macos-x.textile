@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: Fullscreen Emacs on MacOS X
+date: 2010-6-26
+comments: true
+categories: 
+- emacs
+---
+After years of being an avid Vim user, I recently succumbed to the temptation of Emacs and haven't looked back since. Now that I slowly understand the concept of "living in Emacs", I also wanted a fullscreen mode. Turns out you'll have to patch and build Emacs yourself for that if you are on OSX, so here's a step by step guide on what I did to build the current Git HEAD ("About Emacs" reports the version as 24.0.50 by the way) with fullscreen support, based on <a href="http://www.sanityinc.com/full-screen-support-for-cocoa-emacs-on-osx">Steve Purcell's post</a> from last January:
+
+<script src="http://gist.github.com/454018.js?file=gistfile1.sh"></script>
+
+To toggle fullscreen mode call "M-x ns-toggle-fullscreen", which I have bound to "M-RET". Looking forward to try this on 1920x1080 at work on Monday!
+
+If you can't be bothered to build Emacs yourself, you can <a href="http://dl.dropbox.com/u/8492251/Emacs.zip">download the version I built</a>.

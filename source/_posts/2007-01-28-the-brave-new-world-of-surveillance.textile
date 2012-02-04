@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: The brave new world of surveillance
+date: 2007-1-28
+comments: true
+categories: 
+- animation
+- links
+- privacy
+---
+Today I found this excellent Flash animation on the "Metalab":http://www.metalab.at members mailing list, which may prove to be a great help in raising your non-techy friends awareness of privacy issues. Unfortunately it's in German only... 
+
+"http://www.trashhero.ch/redirect/1881.html":http://www.trashhero.ch/redirect/1881.html
+
+Pungenday, Chaos 28, 3173 YOLD

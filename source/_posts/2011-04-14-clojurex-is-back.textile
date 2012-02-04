@@ -1,0 +1,12 @@
+--- 
+layout: post
+title: ClojureX is back
+date: 2011-4-14
+comments: true
+categories: 
+- clojure
+- programming
+---
+Considering how many tools for getting up and running with Clojure are available nowadays (e.g. "cljr":https://github.com/liebke/cljr, "cake":http://github.com/ninjudd/cake or "Dejour":https://github.com/russolsen/dejour) I'm not sure if anyone still cares, but as of today I'm actively working on "ClojureX":https://github.com/citizen428/ClojureX again.
+
+There's not really a good reason for that, but I noticed I've been absent from the Clojure community for way too long and would like to change that again, so see this as a first step.

@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: "Haskell: A summary of the \"Typeclassopedia\""
+date: 2011-7-23
+comments: true
+categories: 
+- haskell
+- programming
+---
+In my current effort of trying to really learn and master Haskell, I spent the last two or so weeks reading the excellent "Typeclassopedia":http://www.haskell.org/haskellwiki/Typeclassopedia by Brent Yorgey. Since I probably will have to go through it a couple more times, I took notes in Emacs "org-mode":http://orgmode.org/ and exported them to HTML. You can find the summary either on GitHub or here:
+
+* "GitHub repo":https://github.com/citizen428/study-notes/tree/master/typeclassopedia
+* "Typeclassopedia on citizen428.net":http://typeclassopedia.citizen428.net/

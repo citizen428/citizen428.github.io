@@ -1,0 +1,31 @@
+---
+layout: post
+title: The Birthday Paradox in Clojure
+date: 2010-4-13
+comments: true
+categories:
+- clojure
+- math
+- programming
+---
+The <a href="http://en.wikipedia.org/wiki/Birthday_problem">Birthday Paradox</a> is an interesting little problem in probability theory. To quote Wikipedia:
+
+{% blockquote %}
+[...] the birthday problem, or birthday paradox pertains to the probability that in a set of randomly chosen people some pair of them will have the same birthday. In a group of at least 23 randomly chosen people, there is more than 50% probability that some pair of them will have the same birthday. Such a result is counter-intuitive to many.
+{% endblockquote %}
+
+I don't really find this counter-intuitive, but as Kalid from <a href="http://betterexplained.com/">BetterExplained</a> accurately <a href="http://betterexplained.com/articles/understanding-the-birthday-paradox/">observed</a> "exponents aren't intuitive" and "humans are a tad bit selfish". Here's a quote regarding that last comment:
+
+{% blockquote Kalid Azad http://betterexplained.com/articles/understanding-the-birthday-paradox/ Understanding the Birthday Paradox %}
+In a room of 23, do you think of the 22 comparisons where your birthday is being compared against someone else’s? Probably.
+
+Do you think of the 231 comparisons where someone you don’t know is being checked against someone else you don’t know? Do you realize there are so many? Probably not.
+
+The fact that we neglect the 10 times as many comparisons that don’t include us helps us see why the “paradox” can happen.
+{% endblockquote %}
+
+So let's use Clojure to see why math works better than people's intuition:
+
+<script src="http://gist.github.com/365172.js?file=gistfile1.clj"></script>
+
+Happy birthday everyone!

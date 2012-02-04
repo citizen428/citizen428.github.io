@@ -1,0 +1,21 @@
+--- 
+layout: post
+title: A first look at GNOME 2.12_rc1
+date: 2005-9-6
+comments: true
+categories: 
+- FOSS
+- gnome
+- tips
+---
+I've "already blogged":http://citizen428.net/archives/198-GNOME-goodness.html about this "preview of GNOME 2.12":http://www.gnome.org/~davyd/gnome-2-12/ a while ago and talked about how eager I am to try out this new release. So when Gentoo developer John N. Laliberte "asked":http://www.mail-archive.com/gentoo-dev@lists.gentoo.org/msg04235.html for some people willing to test the ebuilds for GNOME-2.12_rc1, I immediately went ahead and installed them.  
+<!--more-->Thanks to the <i>package.keywords</i>, <i>package.unmask</i> and testing instructions Nathaniel "provides":http://dev.gentoo.org/~allanonjl/gnome/2.12_rc/, the whole process is really straight forward, although I had to add <i>x11-libs/libsvg-cairo</i> and <i>sys-apps/pmount</i> to aforementioned config files. After this I just removed "Epiphany":http://dev.gentoo.org/~allanonjl/gnome/2.12_rc/ and everything related to "Evolution":http://www.novell.com/products/desktop/features/evolution.html from the meta-ebuild, as I'm really happy with "Firefox":http://www.mozilla.org/products/firefox/ and "Sylpheed-claws":http://claws.sylpheed.org/, especially since I use a version of the latter that is linked against "GTK+-2.8.3":http://www.gtk.org/ and therefore not only looks better, but finally has good support for Unicode thanks to "Pango":http://en.wikipedia.org/wiki/Pango. I'm glad that Gentoo's flexible nature gives me the possibility to leave out exactly they 3 or 4 packages I don't need, without loosing the ability to install GNOME via Portage!
+
+Installation went smoothly, but when i first started my new desktop my two panels didn't work. I soon found out that this had to do with GTK+-2.8.3 and that this "bug":http://bugs.gentoo.org/show_bug.cgi?id=104820 has been fixed in <i>gtk+-2.8.3-r1.ebuild</i>. And indeed, re-emerging gtk, gnome-desktop and gnome-panel (just to be sure) really fixed this issues, and I now have this shiny new GNOME 2.12 that I *really* love! :) 
+
+The new default theme called "Clearlooks" is really neat, especially in combination with my currently favorite icon theme called "Kreski Lines":http://art.gnome.org/themes/icon/1008. But there's another reason why GNOME 2.12 looks as good as it does: the underlying toolkit GTK+ is now linked against the vector graphics library "Cairo":http://cairographics.org/introduction, which - to quote the preview - allows for "smoother edges, RGBA translucency and better looking, more flexible theming". Additionally this also offers the possibility to accelerate graphics through OpenGL via "Glitz":http://www.freedesktop.org/Software/glitz. I also like the new spatial tree view in Nautilus (maybe I'll start using it now), as well as all the other cool small changes and feature additions. And I'm sure there's some more nice stuff I haven't discovered yet... Unfortunately the much anticipated "Evince":http://www.gnome.org/projects/evince/ doesn't work for me, it only shows some garbled up text when looking at a PDF that works perfectly fine in "GPdf":http://freshmeat.net/projects/gpdf/. 
+
+Once again the GNOME team has been very active and put lots of nice stuff into this new release, and I really like the overall direction of the project, viz providing users with a desktop that is easy and intuitive to use and which doesn't get in your way. At the same time it is offering a nice framework for application developers, especially since we have Mono. Thanks to all the people who make this possible!
+
+
+BTW: a screenshot of my current setup can be seen at the top of the right sidebar, where from now on I wil regularly post pictures of my desktops.

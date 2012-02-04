@@ -1,0 +1,24 @@
+--- 
+layout: post
+title: Freie Editoren braucht das Land
+date: 2009-1-29
+comments: true
+categories: 
+- FOSS
+- mac
+- review
+- software
+- tip
+---
+Geht es um Text-Editoren für MacOS X führt kaum ein Weg an <a href="http://macromates.com/">TextMate</a> vorbei, als freie Alternative ist <a href="http://tuppis.com/smultron/">Smultron</a> sehr beliebt.
+
+Mit <a href="http://code.google.com/p/macvim/">MacVim</a> steht nun aber auch endlich ein vernünftiger Port des Unix-Veteranen <a href="http://www.vim.org/">Vim</a> zur Verfügung, welcher nichts mit der veralteten <a href="http://macvim.org/">Carbon-Version</a> zu tun hat. Vim hat zwar eine deutlich steilere Lernkurve als andere Editoren, hat man die Bedienung aber einmal gemeistert, wird man mit ungeahnter Flexibilität und Effizienz belohnt. Da MacVim typische Tastaturkürzel wie ?Z, ?V und ?A versteht, können sich Neulinge langsam an die Bedienung des Editors heranzutasten ohne sofort eine Vielzahl an Kommandos lernen zu müssen. Darüber hinaus bietet das Programm transparente Hintergründe, einen Vollbild-Modus sowie volle Unterstützung für Multibyte-Text. Insgesamt eine sehr gelungene Portierung, welche die Vorzüge von Vim und MacOS X optimal verbindet. 
+
+Links:
+<a href="http://code.google.com/p/macvim/wiki/FAQ">MavVim FAQ</a>
+<a href="http://thomer.com/vi/vi.html">The Vi Lovers Home Page</a>
+<a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">Graphical vi-vim Cheat Sheet and Tutorial</a>
+<a href="http://stuff.citizen428.net/vimrc">Meine .vimrc</a> (ausführlich kommentiert)
+
+(Originally published by me on <a href="http://www.opensourcemac.de/2009/01/29/freie-editoren-braucht-das-land/">open.source.mac</a> on Jan 29th 2009.)
+

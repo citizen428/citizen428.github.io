@@ -1,0 +1,21 @@
+---
+layout: post
+title: Babysteps
+date: 2009-2-2
+comments: true
+categories:
+- ruby
+- shoes
+---
+While writing my "second Shoes app":http://the-shoebox.org/apps/128 I ran into the problem of how to require a gem from within Shoes. Luckily "the truth is out there":http://hackety.org/2008/05/08/clearingUpTheWholeShoesAndRubyGemsDeal.html, but I wanna share it with you nonetheless:
+
+{% codeblock lang:ruby %}
+Shoes.setup do
+  gem 'foo'
+end
+require 'foo'
+{% endcodeblock %}
+
+Enjoy!
+
+

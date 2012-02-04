@@ -1,0 +1,25 @@
+--- 
+layout: post
+title: Information Overload 2010-08-29
+date: 2010-8-29
+comments: true
+categories: 
+- informationoverload
+- links
+- math
+- politics
+- programming
+- science
+---
+<ul>
+<li>"How to feed the world":http://vimeo.com/8812686<br/>A nice 9 minute animation aimed mainly at kids. Interesting nonetheless and very well done.</li>
+<li>"Danish volunteers build manned spacecraft":http://www.wired.co.uk/news/archive/2010-08/23/danish-manned-spacecraft<br/>SomethingAwful goons will launch a space rocket on August 31st without government funding.</li>
+<li>"Measuring the Speed of Light with Marshmallows":http://demonstrations.wolfram.com/MeasuringTheSpeedOfLightWithMarshmallows/<br/>A fun idea plus a Mathematica notebook for download.</li>
+<li>"Inside the secret world of Trader Joe's":http://money.cnn.com/2010/08/20/news/companies/inside_trader_joes_full_version.fortune/index.htm<br/>Interesting insights into the "cool" convenience store chain.</li>
+<li>"The 7 Stages Of Doing Something New":http://malevolent.com/weblog/archive/2010/08/27/7-stages-doing-something-new/<br/>A good reminder that "<a href="http://knowyourmeme.com/memes/impossible-is-nothing">impossible is nothing</a>" ;-).</li>
+<li>"Maoists in Limbo":http://www.foreignpolicy.com/articles/2010/08/26/maoists_in_limbo?page=full<br/>Article about the situation of Maoist revolutionaries in present day Nepal. I hope one of my favorite countries will soon be able to establish real peace!</li>
+<li>"China's secure communications quantum leap":http://atimes.com/atimes/China_Business/LH26Cb01.html<br/>Overview of China's breakthrough in quantum communication. This could have interesting military implications (e.g. for <a href="http://www.sinodefence.com/navy/sub/default.asp">submarines</a> in the South China Sea), bet the PLA's very happy.</li>
+<li>"Ruby for Awesome Command Line Applications":http://awesome-cli-ruby.heroku.com/<br />Dave Copeland's presentation from "Lone Star Ruby Conference":http://www.lonestarrubyconf.com/. Not earth-shattering, but overall sane advice plus some useful links at the end.</li>
+<li>"Badass of the Week: Nikola Tesla":http://www.badassoftheweek.com/tesla.html<br />Entertaining little article on a very interesting person.</li>
+<li>"Filesharing, Flattr und Bezahlschranken: Die Aufloesung historischer Unfaelle":http://www.neunetz.com/2010/08/25/filesharing-flattr-und-bezahlschranken-die-aufloesung-historischer-unfaelle/<br />Value creation in the digital world and how it should differ from the analog times (German).</li>
+</ul>

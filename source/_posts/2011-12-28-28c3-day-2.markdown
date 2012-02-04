@@ -1,0 +1,16 @@
+---
+layout: post
+title: "28C3 day 2"
+date: 2011-12-29 14:00
+comments: true
+categories:
+    - private
+    - review
+---
+* [Don't scan, just ask](http://events.ccc.de/congress/2011/Fahrplan/events/4770.en.html)<br/>This sounded a lot more interesting than it actually was, especially since the tool that was introduced is not publicly available (as far as I know that is).
+* [Effective Denial of Service attacks against web application platforms](http://events.ccc.de/congress/2011/Fahrplan/events/4680.en.html)<br/>Great talk, solid presentation, this is the type of talk you want to download the video for.
+* [The Science of Insecurity](http://events.ccc.de/congress/2011/Fahrplan/events/4763.en.html)<br/>Another great presentation, another definite recommendation.
+* [How governments have tried to block Tor](http://events.ccc.de/congress/2011/Fahrplan/events/4800.en.html)<br/>An inspiring and insightful presentation about government surveillance and Tor.
+* [Apple vs. Google Client Platforms](http://events.ccc.de/congress/2011/Fahrplan/events/4676.en.html)<br/>A security comparison of iOS and Android and the repective vendor's app markets.
+* [Quantified-Self and OpenBCI Neurofeedback Mind-Hacking](http://events.ccc.de/congress/2011/Fahrplan/events/4756.en.html)<br/>One big WTF and I definitely would have left, but unfortunately one of the 2 speakers had to borrow my ThinkPad power supply so I was stuck in this talk until the bitter end.
+* [Hacker Jeopardy](http://events.ccc.de/congress/2011/Fahrplan/events/4775.en.html)<br/>Fun as always, but this year's questions seemed a lot easier than the ones I remember from previous years.

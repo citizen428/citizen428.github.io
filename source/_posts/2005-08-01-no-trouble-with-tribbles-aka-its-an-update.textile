@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: No trouble with tribbles aka It's an update!
+date: 2005-8-1
+comments: true
+categories: 
+- blogs
+- personal
+---
+After coming back from "What The Hack":http//www.whatthehack.org I was full of energy and new ideas, so I decided to redesign my blog a little.
+
+As you can see I haven't only updated to the newest version of "Serendipity":http://s9y.org, but I've also switched to the "Kubrick":http://binarybonsai.com/kubrick/  template that so many people "seem":http://www.7nights.com/asterisk/archives05/2005/05/the-scourge-of-kubrick "to":http://www.c3w.de/2005/03/06/kubrick-suckt.html "hate":http://www.das-netzbuch.de/article/2181/nieder-mit-kubrick. I really couldn't care less, because I'm going to adapt the CSS to my own liking pretty soon. Up until then you theoretically could bitch about this boring design, but I think the template provides a clear and reasonably stylish look so I won't listen to you.
+
+What else is new? I've moved all the plugins to the right column and rearranged them a little, added a plugin to show some of my "del.icio.us":http://del.icio.us links as well as another one for random quotes, and reformatted most of the old entries because I got rid of a certain markup plugin that got on my nerves too much. There's been some other minor tweaks like finally incorporating a "Technorati":http://technorati.com ping, but finding those is left as an exercise to the reader...

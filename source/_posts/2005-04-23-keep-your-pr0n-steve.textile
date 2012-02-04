@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: Keep your pr0n, Steve!
+date: 2005-4-23
+comments: true
+categories: 
+- FOSS
+---
+Not to long ago I've "blogged about":http://citizen428.net/index.php?/archives/185-This-space-for-rent.html#extended how happy the current state of the GNU/Linux desktop makes me. I briefly mentioned the "Project Utopia stack":http://citizen428.net/exit.php?url=aHR0cDovL2NpdGl6ZW40MjgubmV0L2V4aXQucGhwP3VybF9pZD01NjYmYW1wO2VudHJ5X2lkPTE4NQ==&entry_id=185 in this entry and today I want to show you something that makes uses of this exciting technology: "Ivman":http://ivman.sourceforge.net/
+<!--more-->To quote the homepage, here's a short summary of what this tool is all about: <i>Ivman is an extremely flexible desktop independent frontend to HAL, the userspace Hardware Abstraction Layer for Linux. It can be used to execute arbitrary commands when devices are added to or removed from your system, or when device properties change. Any properties of the new or changed device can be included within the executed command.</i>
+
+If you don't think that's cool, read the above paragraph again! Read it carefully and slowly and notice the phrase <b>arbitrary commands</b> and <b>any properties of the new or changed device</b>. Now for some real world example: You may know my friend Steve. He's got an incredible collection of pr0n he wishes to sneak onto my innocent little computer. If you'd know Steve, you also know he's a nasty little guy, so he sure doesn't have any pr0n sane persons would be interested in. So, how to prevent Steve from copying his favourite diversion to my notebook? Well, that's fairly easy: Suppose Steve is backing up his pr0n collection to DVDs or CDs and is nice enough to name them something like "steves_pr0n". Now all I have to do is edit the file /etc/ivman/IvmConfigActions.xml and add the following little rule there:
+{% codeblock %}<ivm:Match name="hal.volume.label" value="steves_pr0n">
+<ivm:Option name="exec" value="/usr/bin/eject $hal.block.device$" />
+</ivm:match>
+{% endcodeblock %}
+Now, when a disk is entered into my DVD drive, Ivman will check all his rules. The one we've added above will check for the disk label and, if it matches the string "steves_pr0n" will immediately eject the disc again! None of Steve's pr0n for me, which definitely is good for my mental health! That's all so far, good night kids and have some fun playing around with Ivman!

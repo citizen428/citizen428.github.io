@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: Comprehensive list of cloud-related links
+date: 2010-2-25
+comments: true
+categories: 
+- cloud
+- links
+- work
+---
+Lately a lot of my working time is spent on cloud technologies, most notably the <a href="http://aws.amazon.com/">Amazon Web Services</a>. In recent month I compiled a rather comprehensive list of cloud-related links which I now decided to share with you all.
+
+<a href="http://gist.github.com/314445">Cloud Links</a>
+
+It's just a markdown file copied into a Gist, so if you want to add any links just fork away! :-)

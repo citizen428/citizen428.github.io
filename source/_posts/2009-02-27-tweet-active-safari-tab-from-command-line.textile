@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: Tweet active Safari tab from command line
+date: 2009-2-27
+comments: true
+categories: 
+- github
+- hacking
+- ruby
+- twitter
+---
+Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn't already running, copy  the URL, shorten it, paste it into the client... 
+
+I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It's just a quick and dirty hack, feel free to change it according to your needs... :-)
+
+<script src="http://gist.github.com/71559.js"></script>

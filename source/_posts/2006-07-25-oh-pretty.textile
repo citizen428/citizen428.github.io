@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: Oh, pretty...
+date: 2006-7-25
+comments: true
+categories: 
+- apple
+- mac
+---
+I found a "great tutorial":http://baghira.sourceforge.net/OS_Clone-en.php about how to make KDE look like MacOS X on the "Baghira website":http://baghira.sourceforge.net/ and although I didn't follow all the steps, I'm really satisfied with the result:
+
+<a href="http://static.flickr.com/60/198234006_2f971bb092_o.png" border="1"><img src="http://static.flickr.com/60/198234006_2f971bb092.jpg" /></a>
+
+Sweetmorn, Confusion 60, 3172 YOLD
+
+
+

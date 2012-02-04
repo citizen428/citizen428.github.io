@@ -1,0 +1,20 @@
+--- 
+layout: post
+title: What's new pussycat?
+date: 2009-10-6
+comments: true
+categories: 
+- clojure
+- github
+- personal
+- ruby
+- rubylearning
+- work
+---
+Quite a bit actually:<ul>
+<li>I live in Vienna again. Seriously.</li>
+<li>I started my new job as IT systems engineer at <a href="http://www.nessus.at/">Nessus</a>. <b>Update</b>: That was October. In November I changed job and now work for <a href="http://matrixware.com">Matrixware</a> </li>
+<li><a href="http://github.com/citizen428/ClojureX">ClojureX</a> got mentioned in the <a href="http://github.com/citizen428/ClojureX">latest GitHub rebase</a>, yeah!</li>
+<li><a href="http://github.com/citizen428/unsavory">unsavory</a> is now also available on <a href="http://gemcutter.org/">Gemcutter</a>, so get it while it&#8217;s hot (Disclaimer: product may not be as hot as advertised, YMMV).</li>
+<li><a href="http://rubylearning.org">RubyLearning</a> started a <a href="http://rubylearning.com/blog/2009/09/20/rpcfn-ruby-programming-challenge-for-newbies/">Ruby Programming Challenge for Newbies</a> and I&#8217;m part of the jury. The <a href="http://rubylearning.com/blog/2009/09/24/rpcfn-shift-subtitle-1/">first challenge</a> was provided by <a href="http://www.akitaonrails.com/">Fabio Akita</a> and saw quite a lot of participants. I also wrote a quick <a href="http://github.com/citizen428/rubylearning/blob/master/rpcfn/01subtitles/subtitles.rb">example solution</a>.</li>
+</ul>

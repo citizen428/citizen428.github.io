@@ -1,0 +1,23 @@
+--- 
+layout: post
+title: Information Overload 2011-03-20
+date: 2011-3-20
+comments: true
+categories: 
+- informationoverload
+- math
+- netculture
+- programming
+---
+<ul>
+<li>"Haskell's Niche: Hard Problems":http://cdsmith.wordpress.com/2011/03/13/haskells-niche-hard-problems/<br/>Doing more Haskell was on my todo list for 2011, but so far I've failed rather miserably. Oh well, at least I'm reading about it...</li>
+<li>"Beyond Rules":http://www.friendlyanarchist.com/beyond-rules/<br/>Nice post with a free download of the ebook "Beyond Rules: A Dilettante's Guide to Personal Sovereignty, Space Travel, and Lots of Ice Cream".</li>
+<li>"The Tau Manifesto":http://tauday.com/<br/>The math fans among my readers should like this one (and the accompanying "Half Tau Day":http://halftauday.com/), I certainly did!</li>
+<li>"Was haben wir aus unserer Welt gemacht?":http://www.misik.at/texte-aus-der-taz-berlin/was-haben-wir-aus-unserer-welt-gemacht.php<br/>Austrian journalist Robert Misik comments on the current nuclear energy safety discussion (in German).</li>
+<li>"Antarctica, 1961: A Soviet Surgeon Has to Remove His Own Appendix":http://www.theatlantic.com/technology/archive/2011/03/antarctica-1961-a-soviet-surgeon-has-to-remove-his-own-appendix/72445/<br/>The Chuck Norris of surgery.</li>
+<li>"Partitioning my digital life into security domains":http://theinvisiblethings.blogspot.com/2011/03/partitioning-my-digital-life-into.html<br/>Well--known security researcher Joanna Rutkowska describes how she partitions her digital life into separate domains with "Qubes OS":http://qubes-os.org/Home.html. A very interesting approach and I'm curious to see Beta 1 of the OS.</li>
+<li>"Cosmonaut Crashed Into Earth 'Crying In Rage'":http://www.npr.org/blogs/krulwich/2011/03/18/134597833/cosmonaut-crashed-into-earth-crying-in-rage?ft=1&f=1026<br/>The man who died to save his friend Yuri Gagarin.</li>
+<li>"Facebook: Online-Proteste ohne Offline-Effekt":http://futurezone.at/netzpolitik/2282-facebook-online-proteste-ohne-offline-effekt.php<br/>Good article on "Slacktivism" (in German).</li>
+<li>"Chomsky on 'Intellectual Property'":http://groups.google.com/group/alt.fan.noam-chomsky/msg/12c9b62ed459d63d?pli=1<br/>Interview with Noam Chomsky about intellectual property. This is a bit older, but still a good read.</li>
+<li>"Nerds, we need to have a talk":http://thingist.com/t/item/4372/<br/>Good rant about an attitude problem in nerd culture.</li>
+</ul>

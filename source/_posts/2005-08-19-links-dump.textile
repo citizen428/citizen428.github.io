@@ -1,0 +1,19 @@
+--- 
+layout: post
+title: links.dump()
+date: 2005-8-19
+comments: true
+categories: 
+- links
+---
+"Bundesdance 2005":http://www.sueddeutsche.de/app/kultur/bundesdance/index2.html: No comment. Enjoy!
+
+"Pen spinning tricks":http://www.pentrix.com/pentix/tricks/index.html: Impress the ladies. Probably won't work though, but it's cool nonetheless. (via "m3":http://www.leyrer.priv.at/martin/2005/08/15#200508_Online_Tidbits)
+
+"NetBSD powered toaster":http://www.embeddedarm.com/news/netbsd_toaster.htm: We all knew it would be possible, but now it's reality! (via "m3":http://www.leyrer.priv.at/martin/2005/08/15#200508_Online_Tidbits)
+
+"It takes patience to find the best solitaire":http://software.newsforge.com/article.pl?sid=05/07/28/1639234: Comparing Solitaire on Windows, GNOME and KDE.
+
+"An interview with Neal Stephenson":http://www.reason.com/0502/fe.mg.neal.shtml: Not overwhelmingly interesting, but still a nice interview with one of my favourite authors though. (via Jabber from "m3":http://www.leyrer.priv.at/martin/)
+
+"Make Fire From Water":http://www.gizmodo.com/gadgets/home/make-fire-from-water-116027.php: Me like. (via "BoingBoing":http://boingboing.net/)

@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: Major changes in ClojureX
+date: 2010-2-21
+comments: true
+categories: 
+- clojure
+- mac
+- programming
+---
+When ClojureX was started it tried to be everything for everybody. Not only did it checkout and compile the git HEADs of clojure, clojure-contrib and jline, it also (optionally) downloaded packages for Clojure support in TextMate or Emacs, configured and installed them. This has two obvious drawbacks. First off, people end up downloading stuff they don't need. With current disk sizes and connection speeds that's probably not much of a problem, but some users may still find annoying. More importantly though it was hard to keep up with the upstream changes, e.g. clojure-contrib's recent switch to Maven. 
+
+So now instead of trying to provide a one-size-fits-all solution I'm taking a totally different approach: from now on ClojureX will only contain the most recent *stable* releases of clojure, clojure-contrib and jline, as well as a very full-featured clj script:
+
+<script src="http://gist.github.com/310392.js?file=ClojureX+help"></script>
+
+I know that this potentially makes ClojureX less useful to some people, but I do believe that it's one of the fastest and most painless ways to set up a Clojure development environment.

@@ -1,0 +1,26 @@
+---
+layout: post
+title: First small Clojure program
+date: 2009-8-26
+comments: true
+categories:
+- clojure
+- programming
+---
+	<p>After I recently got interested in Clojure, I decided to use it for a small &#8220;project&#8221;, namely a script which will download all the enclosures from an RSS 2.0 feed to the current working directory. The <a href="https://github.com/citizen428/codequickies/blob/master/clojure/rss/fetcher.clj">program</a> itself is very concise, with only 9 lines of actual code (the rest are comments and library imports). </p>
+
+	<p>My impressions: for somebody with little previous exposure to <a href="http://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a> (some <a href="http://en.wikipedia.org/wiki/Common_lisp">CL</a> and very little <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)">Scheme</a>) and no Java background the learning curve can be a bit steep in the beginning, especially since documentation is still a bit (too) sparse. However, if you are willing to spend some time on Google or reading the actual source code of Clojure and clojure-contrib you&#8217;ll generally find what you are looking for. Besides that people in the Clojure community seem to be quite friendly and my question on #clojure got satisfactorily answered within a minute. </p>
+
+	<p>It&#8217;s a definitely too early for any real assessment of the language, but I quite like what I saw so far, so there probably will be some more Clojure-related posts in the near future. </p>
+
+	<p>Some links to get you started:<br />
+<a href="http://clojure.org/api">Clojure API</a><br />
+<a href="http://richhickey.github.com/clojure-contrib/">An overview of clojure.contrib</a><br />
+<a href="http://java.ociweb.com/mark/clojure/article.html">Clojure &#8211; Functional Programming for the JVM</a><br />
+<a href="http://mattsears.com/2009/6/6/20-clojure-links-to-get-you-up-to-speed">20 Clojure links to get you up to speed</a><br />
+<a href="http://lifeofaprogrammergeek.blogspot.com/2009/03/learning-clojure-and-emacs.html">Learning Clojure and Emacs</a></p>
+
+
+
+
+

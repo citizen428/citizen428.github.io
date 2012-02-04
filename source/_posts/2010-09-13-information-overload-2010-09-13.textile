@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: Information Overload 2010-09-13
+date: 2010-9-13
+comments: true
+categories: 
+- informationoverload
+- politics
+- programming
+---
+Due to an extended weekend trip this issue of "Information Overload" is much shorter and a bit later than usual, the next one should be back to normal:
+
+<ul>
+<li>"Who Killed Prolog":http://vanemden.wordpress.com/2010/08/21/who-killed-prolog/<br/>Interesting read for programming language nerds, also contains interesting info on how the Japanese economy was feared by the US in the 80ies.</li>
+
+<li>"Obama ist nur ein normaler, gemaessigter Demokrat im Stil von Bill Clinton":http://www.heise.de/tp/r4/artikel/32/32381/1.html<br/>Interview with Noam Chomsky in German.</li>
+</ul>

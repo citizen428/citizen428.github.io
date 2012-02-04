@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: Gentoo/FreeBSD, FreeRIDE, eclectic, IRC
+date: 2005-3-1
+comments: true
+categories: 
+- gentoo
+- ruby
+---
+I finally found the time to try out Gentoo/FreeBSD. While doing that I thought I might as well write up some documentation. Well, here it is: <a href="http://dev.gentoo.org/~citizen428/doc/gentoo-freebsd.html" target="_blank">A short guide to Gentoo/FreeBSD</a>. I've also joined the BSD herd to stay up to date on development progress, but nonetheless contributions are more than welcome, mostly because I'm not sure how much time I really can spare for this project.<!--more-->Besides that I've added a new version of FreeRIDE to the tree, which now works without the patch I've created for the last release. I really hope this project is going somewhere, as I'd love to see a complete IDE for my favourite language, which itself is written in Ruby. Up until then I will continue to use (G)Vim and jEdit for this task (<a href="http://gallery.citizen428.net/ides" target="_blank">Screenshots</A>).
+
+<a href="http://dev.gentoo.org/~ciaranm/random//20050228.001.shtml" target="_blank">ciaranm's blog</a> brought eclectic (the programm formerly know as gentoo-config) back to my attention. At 21C3 I've been talking to Kugelfang about taking care of the ruby-config part of it, but never actually came around to do more than a CVS checkout. Well, here we go for another item on the never-ending todo list...
+
+Finally I've been thinking lately that I really should spend more time on IRC, but honestly, I'm still not much of an IRC guy. The main problem is that once I start chatting, I can't really concentrate on the stuff I actually should be doing. Seems like the fun has to continue without me... ;)

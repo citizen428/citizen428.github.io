@@ -1,0 +1,22 @@
+--- 
+layout: post
+title: The first steps in new Shoes
+date: 2009-1-31
+comments: true
+categories: 
+- programming
+- ruby
+- rubylearning
+- shoes
+---
+If you haven't heard about it yet, "Shoes":http://shoooes.net/ is yet another ingenious brainchild of Ruby hacker extraordinaire "_why":http://whytheluckystiff.net/. Here's the project description from the website:
+
+<I>"Shoes is a tiny graphics toolkit, designed for beginners. But make no mistake: this is real programming. You can make real, colorful apps in Shoes."</i>
+
+Since I'm always interested in multi-platform GUI toolkits (and everything _why does) I finally took some time and wrote my first Shoes application yesterday. So I now proudly present the "Little Helper":http://the-shoebox.org/apps/126, a tiny application for people receiving hourly wages to calculate how much they make a month. To get a few things straight: this is *not* a great program. It's not even a necessary program. Ok, it's hardly a program, just a quick hack. But it was an excellent way to get a first impression of Shoes, which is as follows: As somebody who never worked with it before, it took me a very small amount of time and exactly 33 lines of code to have a working GUI application. No need to learn an interface builder or anything. I didn't even really have to read the built-in documentation, looking at how other apps do stuff was enough.
+
+So how is my first impression of Shoes? Good, actually very good. While the toolkit is somewhat limited in controls (which is a feature, remember it's a  <b>simple</b> toolkit), it's straight-forward and easy to pick up, so it's definitely something I'll consider for writing quick GUI apps. This blog is likely to see some more Shoes related posts in the near feature, since I signed up for "RubyLearning's upcoming Shoes course":http://rubylearning.com/blog/2008/10/30/ruby-and-shoes-programming-a-new-course/.
+
+Links:
+"The Shoebox":http://the-shoebox.org/
+"waveninja's 10 steps in Shoes":http://waveninja.blogspot.com/2009/01/10-steps-in-shoes-step-1-paras.html

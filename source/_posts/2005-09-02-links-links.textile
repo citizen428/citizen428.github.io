@@ -1,0 +1,28 @@
+--- 
+layout: post
+title: Links? Links!
+date: 2005-9-2
+comments: true
+categories: 
+- blogs
+- links
+---
+"DomeBlog":http://blogs.chron.com/domeblog/:
+Blogging after Katrina.
+
+"Winston's Lego Computer":http://home.hawaii.rr.com/chowfamily/lego/: 
+Lego rocks! (via "parasew":http://parasew.5uper.net/)
+
+"Banshee":http://banshee-project.org/: 
+Music management and playback for GNOME.
+
+"Griffith":http://griffith.vasconunes.net/: 
+A movie collection manager.
+
+"(THE OTHER) TOP 10 MOST RIDICULOUS BLACK METAL PICS OF ALL TIME":http://ruthlessreviews.com/top10/10blackmetal2.html
+
+"Stockstock Film Festival":http://stockstock.org/: 
+Stockstock is a film festival consisting of short films made entirely from stock footage. We select a limited amount of stock footage and give it to you, your job is to make it into some kind of short video presentation.
+
+"h a l f b a k e r y":http://www.halfbakery.com/: 
+A communal database of original, fictitious inventions, edited by its users.

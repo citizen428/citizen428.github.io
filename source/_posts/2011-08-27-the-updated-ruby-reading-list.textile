@@ -1,0 +1,26 @@
+---
+layout: post
+title: The updated Ruby reading list
+date: 2011-8-27
+comments: true
+categories:
+- programming
+- ruby
+---
+A little more than a year ago, I posted a "Ruby reading list":http://citizen428.net/archives/430 consisting of blog posts I often recommend to our students at RubyLearning as well as some interesting articles. It's time for the updated version (some links are the same as last time, some are new, some are gone):
+<ul>
+<li><a href="http://www.caliban.org/ruby/rubyguide.shtml">The Unofficial Ruby Usage Guide</a> (tips, tricks and style guidelines)</li><br />
+<li><a href="http://www.hokstad.com/ruby-object-model.html">The Ruby Object Model &#8211; Structure and Semantics</a></li><br />
+<li><a href="http://viewsourcecode.org/why/hacking/seeingMetaclassesClearly.html">Seeing Metaclasses Clearly</a> </li><br />
+<li><a href="http://ola-bini.blogspot.com/2006/09/ruby-singleton-class.html">The Ruby Singleton Class</a> </li><br />
+<li><a href="http://practicalruby.blogspot.com/2007/02/ruby-metaprogramming-introduction.html">A Ruby Metaprogramming Introduction</a> </li><br />
+<li><a href="http://viewsourcecode.org/why/hacking/theFullyUpturnedBin.html">The Fully Upturned Bin</a> (memory management and garbage collection)</li><br />
+<li><a href="http://coaxialhost.com/tutorials/writing_ruby_extensions.html">Writing Ruby extensions</a> </li><br />
+<li><a href="http://devver.wordpress.com/2009/06/30/a-dozen-or-so-ways-to-start-sub-processes-in-ruby-part-1/">A dozen (or so) ways to start sub-processes in Ruby: Part 1</a> ("Part 2":http://devver.wordpress.com/2009/07/13/a-dozen-or-so-ways-to-start-sub-processes-in-ruby-part-2/, "Part 3":http://devver.wordpress.com/2009/10/12/ruby-subprocesses-part_3/)</li><br />
+<li><a href="http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/">Understanding Ruby Blocks, Procs and Lambdas</a></li><br />
+<li><a href="http://railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/">Class and Instance Variables In Ruby</a> (also class instance variables)</li><br />
+<li><a href="http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers/">Untangling Evented Code with Ruby Fibers</a> </li><br />
+<li><a href="http://judofyr.net/posts/tailin-ruby.html" title="faking tail call optimization in Ruby">Tailin&#8217; Ruby</a> </li><br />
+<li><a href="http://tagaholic.me/2009/05/11/demystifying-irb-commands.html">Demistifying IRB&#8217;s Commands</a> </li><br />
+<li><a href="http://kconrails.com/2010/11/30/ruby-enumerable-primer-part-1-the-basics/">Ruby Enumerable Magic: The Basics</a></li><br />
+</ul>

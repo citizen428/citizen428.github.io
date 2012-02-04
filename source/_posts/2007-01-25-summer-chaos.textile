@@ -1,0 +1,12 @@
+--- 
+layout: post
+title: Summer Chaos
+date: 2007-1-25
+comments: true
+categories: 
+- hacking
+- travelling
+---
+The date and location for the "Chaos Communication Camp 2007":http://events.ccc.de/camp/ have now been confirmed! Hope to see you all there!
+
+Setting Orange, Chaos 25, 3173 YOLD

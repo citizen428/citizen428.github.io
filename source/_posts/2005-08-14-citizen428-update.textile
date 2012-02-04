@@ -1,0 +1,23 @@
+--- 
+layout: post
+title: citizen428.update()
+date: 2005-8-14
+comments: true
+categories: 
+- FOSS
+- gentoo
+- ruby
+---
+I haven't posted on Planet Gentoo for a rather long time, so before anyone thinks that I'm MIA again, I thought I'd better post a little update. 
+
+1. I left the games herd. Nobody there will probably miss me, as I never found the time to do more than adding some small games (try "Tornado":http://home.kcore.de/~kiza/linux/tornado!) and "games-util/xgame":http://packages.gentoo.org/search/?sstring=xgame to the tree. 
+
+2. I'm currently trying to clean out the Ruby herd's bug list. I've finally added some long overdue packages to the tree and set up Rubyforge monitoring so I won't forget about them in the future and will try to poke some people to get some of our other old bugs closed.
+
+3. Over the next few days I'm going to add "ruby-gnome2-0.13.0":http://ruby-gnome2.sourceforge.jp/ to the tree. It's not exactly a fun process, as I've learned when I did the version bump to 0.12.0... While I'm at it, I also want to add "ruby-gtkmozembed":http://ruby-gnome2.sourceforge.jp/hiki.cgi?Gtk%3A%3AMozEmbed and ruby-gtktrayicon, which currently aren't a part of the official ruby-gnome2 releases.
+
+4. I created a "shared ta-da list":http://citizen428.tadalist.com/lists/public/95952 for my Gentoo work, so everyone can see which packages are next on my list to get added to the tree etc. If you are really interested in being able to edit this list, just send an email to citizen428@g.o so I can add you to the trusted people who are allowed to do just this (NOTE: this offer only concerns people who have a mail adress ending in @gentoo.org, sorry guys).
+
+5. I've done German longdescriptions for all the category metadata.xml files which got added since I first went on a translation spree (except for sci-*, which were done by Kugelfang).
+
+Last but not least here's an old but still good article called "Extending Vim with Ruby":http://www.linux-mag.com/content/view/1014/2218/. 

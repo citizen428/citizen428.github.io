@@ -1,0 +1,37 @@
+--- 
+layout: post
+title: Delusions of grandeur
+date: 2006-8-12
+comments: true
+categories: 
+- apple
+- blogs
+- design
+- FOSS
+- gentoo
+- mac
+- nintendo
+- personal
+---
+As my PR manager told me, large numbers of fans have already complained about the recent lack of updates. Since I'm only my reader's humble servant, I of course have to comply with this wishes, so here are the long awaited news about yours truly:
+
+*Gentoo:*
+After being a "Gentoo":http://www.gentoo.org developer for 2 years, I finally decided to leave the project. Since I haven't really been active for the past 4 month anyway for several reasons (e.g. work), this was long overdue anyway. I've met a lot of nice and interesting people in the Gentoo community and working with you guys has really been a pleasure! Thanks for that, I really appreciate what I have learned from all of you during that time!
+
+*Mac:*
+Today I've joined the team of "Open.Source.Mac":http://opensourcemac.de/ and have already published "my first little article":http://www.opensourcemac.de/2006/08/12/machtgeil/ on the site. Enjoy!
+
+*Personal:*
+On the 2nd of August I celebrated my 27th birthday at "Xeno":http://www.xeno.co.at/. A lot of "friends":http://red667.org/ showed up, whereas "certain people":http://berq.net/ decided to get drunk somewhere else and then blamed innocent squirrels for their not showing up. It was a cool evening which I really enjoyed, but working on the next day didn't exactly qualify as a good cure against the headaches... 
+
+*Capitalism:*
+I have to admit that I love portable consoles, especially when they are as sexy as the black Nintendo DS Lite I bought three weeks ago. So far I own "Advance Wars: Dual Strike":http://ds.ign.com/articles/643/643656p1.html, "Brain Age: Train Your Brain in Minutes a Day":http://ds.ign.com/articles/702/702057p1.html, "Feel The Magic XY/XX":http://ds.ign.com/articles/567/567496p1.html and "Castlevania: Dawn of Sorrow":http://ds.ign.com/articles/655/655830p1.html. All of them are really great and I can hardly wait until my copy of "Mario Kart DS":http://ds.ign.com/articles/666/666125p1.html finally arrives.
+
+I also got myself a nice "M9 DX enclosure":http://www.macpower.com.tw/products/hdd3/m9/m9dx with a 250GB Samsung HD as a backup disk for the Mac Mini. Overall it's pretty neat, although it could match the color of the Mini a little better. 
+
+*Misc*
+Found an "article":http://www.explosm.net/articles/6135/4/ about "Habbo Hotel":http://www.habbohotel.co.uk/ on the "Pardus":http://www.pardus.at forums and just had "to try it out":http://flickr.com/photos/citizen428/sets/72157594226374139/. Like the author of the article I most likely won't visit the site again, but I had a lot of fun during the hour I spent there.
+
+"teemow":http://teemow.com recently blogged about "BumpTop":http://honeybrown.ca/Pubs/BumpTop.html, a new take at the desktop metaphor we all grew used to. The video is quite impressive and I'd really like to try out such an interface myself, as I'm interested in how well it works for everyday usage. 
+
+Prickle-Prickle, Bureaucracy 5, 3172 YOLD

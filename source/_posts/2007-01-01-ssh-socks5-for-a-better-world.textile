@@ -1,0 +1,28 @@
+---
+layout: post
+title: SSH & SOCKS5 for a better world
+date: 2007-1-1
+comments: true
+categories: []
+
+---
+Say you live in a country where access to information isn't as free as it should be. Sure, there are a lot of free proxy servers you could use, but unfortunately they tend to get blocked after a while. "Tor":http://tor.eff.org would also be an option, but unfortunately it's not always as fast as we'd like it to be (run more servers, folks!).
+
+That's why I thought I'll show you another possibility to get the information you want without somebody censoring it:<ol>
+<li>Get yourself a "free UNIX shell account":http://www.ductape.net/~mitja/freeunix.shtml which is accessible by SSH (consider using "SSH keys":http://pkeck.myweb.uga.edu/ssh/ for authentification).</li>
+
+<li>Use ssh's cool "-D" option to start a local "SOCKS proxy":http://en.wikipedia.org/wiki/SOCKS.
+
+Example: ssh -D 9999 youraccount@somefreeshellserver.com. Consider adding this to some startup script to make life easier in the future.
+</li>
+
+<li>Configure your browser to use localhost:9999 as a SOCKS5 proxy. If you're using Firefox, consider using "MM3-ProxySwitch":https://addons.mozilla.org/firefox/2648/ or <a href="http://foxyproxy.mozdev.org/">FoxyProxy</a>.</li>
+
+<li>Voila, from now on every connection you make will go over an ecrypted connection to the SSH server which unlike the site you really want to access isn't blocked. The server will then perform your originally planned connection and forward the results to you (once again encrypted and not coming from a blocked IP). And of course this doesn't only work with browsers, but all applications supporting SOCKS proxies. Additionally "tsocks":http://tsocks.sourceforge.net/ may help with applications which normally don't support SOCKS servers.</li>
+
+<li>If you experience connection problems and are suspecting that someone has tampered with the name servers in order to deliver bogus results for certain sites (bad government, no cookie!) make sure that the option "network.proxy.socks_remote_dns" in Firefox's about:config is set to true, because then DNS lookups will be performed at the SSH server.</li>
+</ol>
+
+That"s it, please leave a commentary if you have any questions or suggestions regarding this little tip or if you just want to provide me with some feedback how this worked for you.
+
+Sweetmorn, Chaos 1, 3173 YOLD

@@ -1,0 +1,57 @@
+--- 
+layout: post
+title: What the hack recap
+date: 2005-8-3
+comments: true
+categories: 
+- FOSS
+- freedom
+- gentoo
+- personal
+---
+"What the Hack":http://wiki.whatthehack.org/index.php/Main_Page is over since Sunday, and I finally feel like writing about this great event, which so far definitely was my personal highlight of this summer. A big "Thank you!" goes to everyone who made this event possible, I've really enjoyed these 3 days with interesting lectures, nice people and an overall great atmosphere. Special thanks go to Gentoo user and travel compagnion "Red B@ron":http://forums.gentoo.org/profile.php?mode=viewprofile&u=44722 who regularly lent me his laptop (yep, mine's still broken) as well as "teemow":http://www.teemow.de/ who told me about quite some cool stuff, including "Plazes":http://www.plazes.com/ and who incidentally is also a Gentoo user. 
+
+Unfortunately I didn't meet any other Gentoo devs at the event, can it really be that besides me and "Hanno":http://www.hboeck.de/ nobody made it to the event? If that's really the case it's a shame, as WTH really was a good mixture of interesting technical and social lectures, as well as a good chance to meet nice people. It surely boosted my motivation to work on FOSS projects (including Gentoo of course) even more, so it definitely was worth the trip for me.
+
+And now for some comments on the talks I've seen:<!--more-->*DAY 1*
+
+*Opening and Keynote address* - _Emmanuel Goldstein & Rop Gonggrijp_: Nothing overly spectacular, but still a nice keynote, introducing the history of the hacker events that are hold in the Netherlands every 4 years since 1989. 
+
+*Cyborgs: Practical experimentation* - _Kevin Warwick_: I initially planned on watching "Reverse Engineering Microsoft .NET", which fortunately got cancelled. This gave me the opportunity to see this informative and entertaining lecture on state of the art cyborg research, held by a real enthusiast for the subject. This was a guy who really put some wires in his arm, assigned an IP adress to this thing and used it to remotely control a robot arm which was on the other side of an ocean. Need I say more? ;)
+
+*Attacks on Digital Passports* - _Mark Witteman_: If we really have to use Digital IDs, we at least should make sure their design is good. In a pretty interesting talk, Mark Witteman showed us that this isn't the case with the currently tested digital passports.
+
+*Do we run out of oil?* - _Peter Polder_: Although I'm really interested in this topic, I found this lecture pretty boring and left early. I don't think I've really missed anything and will just continue to follow this topic through "EnergyBulletin.net":http://www.energybulletin.net/.
+
+*Extended police powers in Europe* - _ Ben Hayes  & Wil van der Schans_: Another interesting topic, where the speakers didn't manage to get my attention, so I gave up after 10 minutes.
+
+*The politics of Psychedelic Research* - _John Gilmore_: For me this was the best lecture of Day 1 and definitely one of the most interesting I saw at the whole conference. John was talking about the use of MDMA, LSD and other currently illegal drugs in medical treatments, getting FDA approval for use of these substances on patients with terminal cancer and other really interesting stuff.
+
+*Day 2*
+
+*Modeling World Energy - A proposal* - _Richard Lawrence_: It's a fact that someday we will run out of oil, so I recently started to may more attention to this topic. This lecture wasn't bad at all, but I expected a little more from it (don't know exactly what though). You can't have everything I guess...
+
+*Is blogging Open Source journalism?* - _Colin Daniels & Vincent Maher_: As someone who is fascinated by this whole blogging scene, I found this lecture pretty good. The speakers only gave a pretty general introduction and left most of the discussion to the audience, which in my opinion worked out pretty good.
+
+*Phasing out UNIX before 2038-01-19* - _Andreas Bogk & Hannes Mehnert_: This probably should have been titled "Why C sucks and Dylan is the r0xors", but then a lot less people would have watched this, so they definitely get the price for the best marketing at WTH. Besides that most of the talk was old news (C has buffer and integer overflows and format string vulnerabilites? Gosh, if only I had known before...), but the proposal that rewritting an entire OS in a language with obscure sytanx was somewhat original. However, I now somewhat feel a strange urge to spend some time on Dylan, which is really weird...
+
+*Day 3*
+
+*Literature wants to be free!* - _Greg Newby_: A really nice introduction to "Project Gutenberg":http://www.gutenberg.org/, a project I have a lot of respect for. This lecture really motivated me to get active in this regard, most probably as a "distributed proofreader":pgdp.net.
+
+*Everything You Know About Client Security Is Wrong* - _Michiel de Bruijn_: Everything I ever knew about client security was that most of the time it sucks, and the speaker did nothing to convince me of the opposite. It was quite an entertaining talk nonetheless, with some interesting proposals in regards to a secure operating system popping up.
+
+*Documenting Police Data Raids On California Medical Cannabis Dispensaries* - _Ann Harrison_:  Bad cops, bad cops. Watcha gonna do? Whatcha gonna do when they come for you? (Yes, I know the original lyrics of this song and that it was the theme of a TV show called Cops. That's just my bad sense of humor).
+
+*OpenStreetMap Collaborative* - _Benjamin Gimpert & Steve Coast_: Great talk! Let's try to do us much open projects as we can as a community, so all the data is free and belongs to everyone who's interested in it!
+
+*C64 in the 21st century* - _Stephan Humer_: Not too bad, but I expected more. Neiter really fascinating, nor really boring, this lecture wasn't about retro computing, but current developments and trends in the C64 community. 
+
+*Day 4*
+
+*Buckminster Fuller: Universal Hacker* - _Marnix Arnold_: A definite highlight of this whole conference! If there'd be more people like "Bucky":http://www.bfi.org/introduction_to_bmf.htm the world surely would be a nicer place to live in!
+
+Unfortunately WTH was over for us after this lecture (with a 13 hour car ride before us), but as you can see, the conference had a broad range on topics to offer, so there should have been something interesting for everyone.
+
+Here's a list of cool topics I've heard, learned and discussed about, and that I want to spend more time on in the not-so-distant future (in no particular order): metadata/tags, "semantic web":http://www.w3.org/2001/sw/, Mono/C#, Dylan, Project Gutenberg, OpenStreetMaps, Buckminster Fuller and "how do I make my days have 30 hours so all this fits into them".
+

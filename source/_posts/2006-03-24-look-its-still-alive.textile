@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: Look, it's still alive...
+date: 2006-3-24
+comments: true
+categories: 
+- gentoo
+---
+After a pretty long period of not doing any work related to Gentoo (blame my boss) I've finally come around to put together the upgrade of the "Gentoo/FreeBSD documentation":http://www.gentoo.org/doc/en/gentoo-freebsd.xml I promised "Diego":http://dev.gentoo.org/~flameeyes/ quite some time ago. I'm sure that our nice documentation developers will commit this soon! 
+
+Next week will again be rather busy because my girlfriend and me are moving to a new apartment, but after that I hope I'll be able to regularly contribute to Gentoo again.
+
+Pungenday, Discord 10, 3172 YOLD

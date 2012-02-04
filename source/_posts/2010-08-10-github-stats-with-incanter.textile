@@ -1,0 +1,43 @@
+--- 
+layout: post
+title: GitHub stats with Incanter
+date: 2010-8-10
+comments: true
+categories: 
+- clojure
+- incanter
+- programming
+---
+Today I stumbled upon a post called <a href="http://www.r-chart.com/2010/08/github-stats-on-programming-languages.html">GitHub Stats on Programming Languages</a>, where the author uses <a href="http://www.r-project.org/">R</a> to create various graphs about GitHub's top 10 programming languages. He was nice and posted his <a href="http://github.com/ezgraphs/R-Programs/blob/master/git_lang_stats.txt">data set</a>, so I had a go at it with <a href="http://data-sorcery.org/">Incanter</a>.
+
+Load the necessary libraries:
+<script src="http://gist.github.com/518090.js?file=gistfile1.clj"></script>
+
+Then read in the data set (the delimiter defaults to \, which can be changed with the :delim option) and create a (somewhat arbitrary) list of languages to examine:
+<script src="http://gist.github.com/518090.js?file=gistfile2.clj"></script>
+
+Get a tabular view of the data:
+<script src="http://gist.github.com/518090.js?file=gistfile5.clj"></script>
+
+<div class="thumbnail"><a href="http://skitch.com/citizen428/dtc5e/screen-shot-2010-08-10-at-19.02.03"><img src="http://img.skitch.com/20100810-cqyy9wcfe8biqcwt83k7y91puy.preview.jpg" alt="Screen shot 2010-08-10 at 19.02.03" /></a><br /></div>
+
+Narrow the data set down to languages of interest:
+<script src="http://gist.github.com/518090.js?file=gistfile3.clj"></script>
+
+Display a bar chart of repositories per user (this has to be within the with-data form shown above):
+<script src="http://gist.github.com/518090.js?file=gistfile4.clj"></script>
+
+<div class="thumbnail"><a href="http://skitch.com/citizen428/dtchx/screen-shot-2010-08-10-at-23.40.36"><img src="http://img.skitch.com/20100810-mg1kd6257pstaeqct2hr9e33ei.preview.jpg" alt="Screen shot 2010-08-10 at 23.40.36" /></a><br /></div>
+
+More graphs:
+
+<div class="thumbnail"><a href="http://skitch.com/citizen428/dtc7d/screen-shot-2010-08-10-at-23.40.53"><img src="http://img.skitch.com/20100810-f14j5pj592gc2nkc2dfqs5xwba.preview.jpg" alt="Screen shot 2010-08-10 at 23.40.53" /></a><br /></div>
+
+<div class="thumbnail"><a href="http://skitch.com/citizen428/dtc78/screen-shot-2010-08-10-at-23.40.09"><img src="http://img.skitch.com/20100810-kjduhqj47pa8tridr1n6gm5f9c.preview.jpg" alt="Screen shot 2010-08-10 at 23.40.09" /></a><br /></div>
+
+<div class="thumbnail"><a href="http://skitch.com/citizen428/dtc7c/screen-shot-2010-08-10-at-23.41.06"><img src="http://img.skitch.com/20100810-e6w4insn9fs2g2eshc852uhmnd.preview.jpg" alt="Screen shot 2010-08-10 at 23.41.06" /></a><br /></div>
+
+The full code:
+<script src="http://gist.github.com/518090.js?file=gistfile6.clj"></script>
+
+I just love how simple Incanter makes this type of thing. It's an immensely cool and useful library, which can do much more than what I showed in this post (and previous ones). I hope that one day there'll be a book about it!

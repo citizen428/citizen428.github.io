@@ -1,0 +1,30 @@
+--- 
+layout: post
+title: Lazy sunday afternoon
+date: 2005-9-11
+comments: true
+categories: 
+- football
+- FOSS
+- games
+- gnome
+- links
+- music
+- personal
+---
+Today is the perfect example of a nice and lazy afternoon, and I just love it! After having a great brunch at "HighTea":http://hightea.at/ where we had toasties, antipasti, bagles and lots of other really good stuff, I'm just hanging around in front of my PC reading, doing some Gentoo work and generally having a good time. Live can be so easy... :)
+
+Now let's see if I have anything interesting to tell you:<!--more-->
+* "OSNews":http://www.osnews.com/ had a "review of GNOME 2.12":http://www.osnews.com/story.php?news_id=11800 and Eugenia seems to enjoy the new release as much as I do. Although she also points out some drawbacks of the desktop environment as lacking good API docs and a RAD tool, she concludes that "[...] Gnome 2.12 is the best X11 DE there is". You wonder why? Because "all in all, Gnome is today more powerful, better integrated to the underlying system with DBUS and HAL, looks good, behaves as expected and, most of all, it's simple and clean". I couldn't agree more! (via "FootNotes":http://www.gnomedesktop.org)
+<br>
+* A fellow Gentoo developer convinced me to start hanging out on IRC regularly, which I now do despite being a little reluctant at first. But after two or three weeks I can see all the positive effects this has had for my dev work, which may also have to do with my further increased feeling of being part of a larger community. Directly (as in chat vs. mail) communicating with people really can do wonders for understanding each other better... If you got something you want to tell me, you'll find me as 'citizen428' (surprising, huh?) on Freenode where I usually can be found in #gentoo-bsd, #gentoo-dev, #gentoo-ruby and #nitro.
+<br>
+* I've been looking for new Linux games and have found "OpenAnno":http://www.lanadminsystem.de/cgi-bin/Lanas.pl?OPENANNO and "The Mana World":http://themanaworld.org/, which both look promising but are still in early stages of development.
+<br>
+* Read a "shocking account":http://www.filmstadtinferno.de/offener_kanal.htm (in German) of how the "Livorno":http://www.livornocalcio.it/ "Ultras":http://en.wikipedia.org/wiki/Ultras and their German visitors got treated by the police in Rome after the game against Lazio. Carabinieri vaffanculo!
+<br>
+* Want to create your own first person shooter? Have fun with "FPS Creator":http://www.fpscreator.com/! It uses DirectX though, so you're stuck to Windows... :(
+<br>
+* For all you music lovers out there, make sure to check out the Flash magazine "Music Hurts":http://musichurts.com/! I got the link from the current print issue of "de:bug":http://www.de-bug.de/, a magazine you definitely should check out when you're into electronic music!
+
+That's it for today, see you at the next episode of "citizen428's random link dump"!

@@ -1,0 +1,58 @@
+---
+layout: post
+title: "Rewiring my brain: APL and J"
+date: 2010-8-16
+comments: true
+categories:
+- polyglot
+- programming
+---
+"_By relieving the brain of all unnecesary work, a good notation sets it free to concentrate on more advanced problems, and in effect increases the mental power of the race._" - "A. N. Whitehead":http://en.wikipedia.org/wiki/Alfred_North_Whitehead
+
+Yesterday "Andreas":http://antifuchs.soup.io/ posted this awesome video of a <a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Game of Life</a> coding session in <a href="http://en.wikipedia.org/wiki/APL_(programming_language)">APL</a>, which really blew my mind. Watch it, it's well worth 8 minutes of your time!
+
+<div align="center"><iframe width="420" height="315" src="http://www.youtube.com/embed/a9xAKttWgP4" frameborder="0" allowfullscreen></iframe></div>
+
+Being extremely impressed by what I saw, I realized that I never wrote anything in a language from the "APL family":http://en.wikipedia.org/wiki/Category:APL_programming_language_family, so I decided to change that. I couldn't find a free version of APL running on OSX that wasn't time limited or required me to apply for an educational license, so I finally settled on "J":http://www.jsoftware.com/ (<a href="http://en.wikipedia.org/wiki/J_(programming_language)">Wikipedia article</a>), skimmed the docs and wrote solutions to 4 different "Project Euler":http://projecteuler.net/ problems. They are all extremely terse, but I lack the APL/J knowledge to further comment on their quality. If you have experience in either language, I'd really appreciate some comments!
+
+_Problem 7: Find the 10001st prime._
+
+This ones fairly easy, since the vocabulary contains "p:":http://www.jsoftware.com/help/dictionary/dpco.htm which will return the n-th prime (0 indexed):
+{% codeblock %}
+p: 10000
+{% endcodeblock %}
+
+_Problem 3: What is the largest prime factor of the number 600851475143?_
+{% codeblock %}
+{: q: 600851475143
+{% endcodeblock %}
+
+Get the tail ("{:":http://www.jsoftware.com/help/dictionary/d522.htm) of the list of prime factors ("q:":http://www.jsoftware.com/help/dictionary/dqco.htm)
+
+_Problem 5: What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?_
+{% codeblock %}
+*./ }. i.20
+{% endcodeblock %}
+Behead ("}.":http://www.jsoftware.com/help/dictionary/d531.htm) the list of all non-negative integers up to 20 ("i.20":http://www.jsoftware.com/help/dictionary/didot.htm) and apply ("/":http://www.jsoftware.com/help/dictionary/d420.htm) the least common multiple ("*.":http://www.jsoftware.com/help/dictionary/d111.htm).
+
+_Problem 1: Find the sum of all the multiples of 3 or 5 below 1000._
+
+This one took me a bit, so we'll do it step by step. First, apply ("/":http://www.jsoftware.com/help/dictionary/d420.htm) the residue ("|":http://www.jsoftware.com/help/dictionary/d230.htm) to the non-negative integers up to (non-inclusive) 1000 (i.1000):
+{% codeblock %}
+    (3 5|/i.1000)
+0 1 2 0 1 2 0 1 2 0 1 2 ...
+0 1 2 3 4 0 1 2 3 4 0 1 ...
+{% endcodeblock %}
+Filter out the elements with index 0 (0 ("[:":http://www.jsoftware.com/help/dictionary/d502.htm "I.":http://www.jsoftware.com/help/dictionary/dicapdot.htm "=":http://www.jsoftware.com/help/dictionary/d000.htm)):
+{% codeblock %}
+    0 ([: I. =) (3 5|/i.1000)
+0 3  6  9 12 15 18 21 24 27 30 ...
+0 5 10 15 20 25 30 35 40 45 50 ...
+{% endcodeblock %}
+
+Finally append the two lists (",":http://www.jsoftware.com/help/dictionary/d320.htm), remove duplicates ("~.":http://www.jsoftware.com/help/dictionary/d221.htm) and apply ("/":http://www.jsoftware.com/help/dictionary/d420.htm) "+":http://www.jsoftware.com/help/dictionary/d100.htm:
+{% codeblock %}
++/ ~. ,0 ([: I. =) (3 5|/i.1000)
+{% endcodeblock %}
+
+Overall playing with my first non-<a href="http://en.wikipedia.org/wiki/Von_Neumann_programming_languages">von Neumann programming language</a> was a rather fun experience, especially after getting over the somewhat strange syntax and the fact that most "words" have monadic and dyadic versions. From my cursory glances J's documentation looks pretty solid and the language starts making sense a lot quicker than one might expect. It's definitely stimulating to play around with and I think I'll do a bit more of that over the next few weeks, especially since I haven't yet explored the "plotting":http://www.jsoftware.com/jwiki/Plot and "OpenGL":http://www.jsoftware.com/jwiki/OpenGL frameworks.

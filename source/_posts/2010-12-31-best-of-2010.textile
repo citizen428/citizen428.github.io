@@ -1,0 +1,73 @@
+--- 
+layout: post
+title: (best-of 2010)
+date: "2010-12-31"
+comments: true
+categories: 
+- personal
+- programming
+---
+After reading "Fogus'":http://blog.fogus.me/about/ post "The best things in 2010":http://blog.fogus.me/2010/12/30/the-best-things-in-2010/, I decided to do one of my own. 
+
+<strong>Great blog posts read:</strong>
+
+So many that I started the weekly "Information Overload":http://citizen428.net/archives/tag/informationoverload.
+
+<strong>Most viewed blog posts by me:</strong>
+
+* "30 free programming eBooks":http://citizen428.net/archives/434
+* "Review: Create Your Own Programming Language":http://citizen428.net/archives/1269
+* "Hey dude, where's our future?":http://citizen428.net/archives/1348
+* "Clojure: Deriving the Y Combinator in 7 Stolen Steps":http://citizen428.net/archives/1410
+* "Rewiring my brain: APL and J":http://citizen428.net/archives/436
+
+<strong>Favorite technical books discovered (and read):</strong>
+
+* "Programming in Haskell" by Graham Hutton
+* "Programming Erlang: Software for a Concurrent World" by Joe Armstrong
+* "The Little Schemer" by Daniel P. Friedman
+* "Refactoring Ruby" by Jay Fields
+
+"Land of Lisp" by Conrad Barski and "The Joy of Clojure" by Michael Fogus and Chris Houser should also be on this list, but I haven't finished them yet.
+
+<strong>Favorite non-technical books read:</strong>
+
+* "House of Leaves" by Mark Z. Danielewski
+* "Wie der Soldat das Grammofon repariert" by Sasa Stanisic
+* "The Book Thief" by Markus Zusak
+* "Haroun and the Sea of Stories" by Salman Rushdie
+
+<strong>Number of books read:</strong>
+57
+
+<strong>Number of books written:</strong>
+Still none :-(
+
+<strong>Favorite TV series about zombies:</strong>
+The Walking Dead
+
+<strong>Favorite programming languages:</strong>
+Ruby, Clojure, Erlang, Common Lisp, Haskell, J
+
+<strong>Programming languages used for projects both professional and not:</strong>
+Ruby, Clojure, Bash, Python, JavaScript, Scheme, Haskell, SQL
+
+<strong>Cool new technology:</strong>
+
+* Kindle 3
+* Instapaper
+* Dropbox
+
+<strong>Lifestyle changes:</strong>
+
+* Stopped smoking
+* Started training Wing Chun
+
+<strong>Plans for 2011:</strong>
+
+* More Haskell
+* More Erlang
+* More Common Lisp
+* Release more open source code
+* Reduce size of unread book pile
+* More sports

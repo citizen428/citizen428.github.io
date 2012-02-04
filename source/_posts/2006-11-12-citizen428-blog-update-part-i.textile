@@ -1,0 +1,21 @@
+--- 
+layout: post
+title: citizen428.blog() Update - Part I
+date: "2006-11-12"
+comments: true
+categories: 
+- blogs
+- personal
+- web2.0
+---
+After using it for quite a while, I got bored with the old look of my blog and so I started to update it today. Here's a quick rundown of things that changed:
+<ul>
+<li>*Added various links:* I've updated the sidebar to include links to "my MySpace profile":http://myspace.com/citizen428 (resistance really is futile) and "my SuprGlu site":http://citizen428.suprglu.com/ (making it easier for you stalkers). I've also readded the links to my profiles on "43 Things":http://www.43things.com/person/citizen428 and "43 Plazes":http://www.43places.com/person/citizen428, so it's a happy day for all you buzzword loving Web 2.0 fans out there.</li>
+<li>*Advanced syndication:* I got rid of my blog's own syndication features in favor of "FeedBurner":http://feeds.feedburner.com/citizen428/. Why? Because it offers really cool stuff like "SmartFeeds" which create the right RSS/Atom feeds for the reader you use on the fly, "link slicing" (a daily entry of links I add to "my del.icio.us account":http://del.icio.us/citizen428 gets generated and added to the feed) and the possibility to subscribe to this blog via email. If you are among my true fans who have  subscribed to this site long ago don't despair, I'm 301 redirecting most of the old syndication links to FeedBurner (the RSS 0.91 feed is used to push data to FeedBurner).</li>
+<li>*More syndication features:* I've signed up for "Talkr":http://talkr.com so you lazy folks have the chance to get this site as a Podcast, without me having to go through the hassle of actually recording one. Nifty, eh? Besides that I get US$ 7 for everyone who signs up to Talkr for at least 30 days, and since Christmas is near that just sounds like the perfect opportunity to make yours truly happy, doesn't it? ;) Apart from the Podcast goodness there's now also a convenient link to add this site to your "Technorati":http://del.icio.us/citizen428 favorites with just a single click of your mouse, which means lazyness finally is no longer an excuse for not doing so.</li>
+<li>*Sidebar reorganization:* Dropped some plugins, added, rearranged and reconfigured some others.</li>
+</ul>
+
+As you can see I've also changed the theme from my tweaked version of "Joshua" to the Serendipity port of "Modern World". I like the overall look of the theme quite a lot, but there are various changes I want to apply to the CSS as soon as I can be bothered to do so. Until now I've only changed some of the colors, but once I'm done it would be pretty cool if this site wouldn't only look good, but also validate as XHMTL. I'm also in need of a logo sized 220x128 pixels, so if you're feeling creative and want to surprise me, send your work of art to my Gmail address. Once I finally take over leadership of the world, I'm sure you'll be pretty happy to say "I did the logo for this guy's website". 
+
+Sweetmorn, The Aftermath 24, 3172 YOLD

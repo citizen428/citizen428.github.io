@@ -1,0 +1,24 @@
+---
+layout: post
+title: I'm in your Pi, crunching your numbers ;-)
+date: 2009-5-3
+comments: true
+categories:
+- programming
+- ruby
+---
+From "Ruby Quiz #202":http://rubyquiz.strd6.com/quizzes/202:
+
+_And sometimes the fastest code is the code you don't write. Michael Kohl's solution:_
+
+{% codeblock lang:ruby %}
+require 'rubygems'
+require 'hpricot'
+require 'open-uri'
+doc = Hpricot(open('http://www.eveandersson.com/pi/digits/100000'))
+puts (doc/'pre').inner_html
+{% endcodeblock %}
+
+_It finishes in less than one second for the entire 100,000 digits!_
+
+And no, this wasn't a serious submission... :-)

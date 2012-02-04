@@ -1,0 +1,32 @@
+--- 
+layout: post
+title: Nitro powered
+date: 2005-8-16
+comments: true
+categories: 
+- FOSS
+- gentoo
+- ruby
+---
+No, this is not about a certain patchset for the kernel sources, so you can get your blood pressure down again. Instead it's about "an efficient, yet simple engine for developing professional Web Applications using the Ruby language" (quoted from "Rubyforge":http://rubyforge.org/projects/nitro/).
+
+I know, this sounds a lot like the much hyped "Rails":http://www.rubyonrails.org/, but "Nitro":http://nitrohq.com/ definitely is diffent! I now could try to sum up the cool features of this framework, but I think some excerpts from the README can do a better job than me:
+<!--more-->"<i>Nitro redefines Rapid Application Development by providing a clean, yet efficient API, a layer of domain specific languages implemented on top of Ruby and the most powerful and elegant  object relational mapping solution available everywhere.
+<br />
+ Nitro is Web 2.0 ready, featuring excellent support for AJAX,  XML, Syndication while staying standards compliant.
+<br />
+ Nitro gives choice to the developer: Multiple paradigms are implemented, incorporating ideas from Rails, CherryPy, Catalyst, Wee, PHP, JSP and Microsoft.NET and more. The developer is free
+ to choose the pattern that better fits his application. This kind of freedom makes Nitro applicable to a wide range of applications, spanning from big, scalable web sites with thousands of concurrent users to simple solutions for deployment on intranet desktops.</i>"
+
+And here's a little more info from the project's website:
+
+"<i>Nitro integrates the powerful Og object-relational mapping library. Og provides a domain specific language to describe the relations between objects, a flexible and intuitive API for querying the database, support for lifecycle callbacks and observers, raw access to the SQL language, adapters for PostgreSQL, MySQL, Sqlite3, Oracle and much more.</i>"
+
+What I find most attractive is that Nitro allows for a lot of different programming paradigmas, including the server page style used by ASP/JSP/PHP. Maybe I'm just too stupid for the "MVC pattern":http://www.google.com/search?btnG=Google+Search&q=mvc%20pattern Rails uses (which btw can also be used in Nitro), but I really think that having a flexible web frameworks that allows using the paradigm that is most suited for a given task is pretty cool stuff. 
+
+If I got you interested in Nitro (thanks to Jochen Schalanda for submitting the initial ebuilds by the way!), you definitely should check out the website, which offers tutorials, an API reference, a step by step guide, FAQ and much more. Over the next few days I will also add "Spark":http://nitrohq.com/view/Spark (a Wiki powered by Nitro) and "nitro-auth":http://nitrohq.com/view/nitro-auth (an authorization system) to the tree, so all you new Nitro fans have something to play with! :)
+
+<i>Disclaimer: that I'm currently posting a lot about Ruby has several reasons: 
+1. I now have time, which may change once I start working on my thesis (pretty soon).
+2. Ruby needs more advertising, it's cool and deserves the attention! :)
+3. I've found out that our planet really is a great way of getting people interested in certain topics, so I might as well use the possibilities it provides.</i>

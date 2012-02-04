@@ -1,0 +1,23 @@
+---
+layout: post
+title: Information Overload 2011-01-09
+date: 2011-1-9
+comments: true
+categories:
+- informationoverload
+- math
+- politics
+- science
+---
+<ul>
+<li>"Transcending the Human, DIY Style":http://www.wired.com/threatlevel/2010/12/transcending-the-human-diy-style<br/>DIY biohacking and transhumanism. I have a feeling we'll see more of this in the not too distant future.</li>
+<li>"Six ads that changed the way you think":http://www.bbc.co.uk/news/world-us-canada-11963364<br/>I've always been interested in _good_ ads and this BBC article lists some that each changed the industry in their own way.</li>
+<li>"The surprising usefulness of sloppy arithmetic":http://web.mit.edu/newsoffice/2010/fuzzy-logic-0103.html<br/>A computer chip providing imprecise answers could speed up tasks like video processing or human-computer interaction.</li>
+<li>"Everything the Internet Knows About Me":http://blogs.wsj.com/digits/2010/12/22/everything-the-internet-knows-about-me-because-i-asked-it-to<br/>"Lifelogging" can indeed be quite interesting, which is why I use sites like Foursquare (but often don't share my checkins etc.).</li>
+<li>"Clickable Index Map of Mathematics":http://www.math.niu.edu/~rusin/known-math/index/mathmap.html<br/>While not exactly visually pleasing, this is an interesting way to browse through the body of modern mathematics.</li>
+<li>"Game on for the virtual sweatshop":http://www.ft.com/cms/s/2/aacd3c7a-185e-11e0-88c9-00144feab49a.html<br/>The Financial Times on WoW, gold farming and digital economies.</li>
+<li>"The Agonizing Last Words of Programmer Bill Zeller":http://gizmodo.com/5726667/the-agonizing-last-words-of-bill-zeller<br/>Bill Zeller's suicide note, a talented individual who took his own life because he was sexually abused as a child.</li>
+<li>"The subject of suicide & why I'm alive today":http://blog.jolieodell.com/2011/01/06/the-subject-of-suicide-why-im-alive-today/<br/>Mashable journalist Jolie O'Dell tells the story of her own attempted suicide as a reaction to Bill Zeller's.</li>
+<li>"Francis Ford Coppola: On Risk, Money, Craft & Collaboration":http://the99percent.com/articles/6973/Francis-Ford-Coppola-On-Risk-Money-Craft-Collaboration<br/>Very nice Q&A session with Francis Ford Coppola.</li>
+<li><a href="http://www.zeit.de/2011/01/DOS-Ziegler?page=all">"Ich bin ein weisser Neger"</a><br/>Very interesting interview with author, former professor of sociology and UN Special Rapporteur on the Right to Food, Jean Ziegler.</li>
+</ul>

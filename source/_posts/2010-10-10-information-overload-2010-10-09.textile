@@ -1,0 +1,27 @@
+--- 
+layout: post
+title: Information Overload 2010-10-09
+date: "2010-10-10"
+comments: true
+categories: 
+- economics
+- hacktivism
+- informationoverload
+- netculture
+- politics
+- programming
+- science
+- sociology
+---
+<ul>
+<li>"How Fake Money Saved Brazil":http://www.npr.org/blogs/money/2010/10/04/130329523/how-fake-money-saved-brazil<br/>How Brazilian economists overcame hyper-inflation.</li>
+<li>"Humor on the web & how to stop it":http://blog.bumblebeelabs.com/social-software-sundays-1-humor-on-the-web-how-to-stop-it/<br/>I iz in your memes, explaining dem. Oh, damn.</li>
+<li>"Why is the Gates foundation investing in GM giant Monsanto?":http://www.guardian.co.uk/global-development/poverty-matters/2010/sep/29/gates-foundation-gm-monsanto<br/>The gates foundation is investing in GM giants Monsanto and Cargill. Is this their vision for agrarian development in Africa?</li>
+<li>"Scientists and Soldiers Solve a Bee Mystery":http://www.nytimes.com/2010/10/07/science/07bees.html?_r=1<br/>In the US scientists and the military teamed up to solve the mystery of "collapsing" bee colonies.</li>
+<li>"Taking Uncle Bob to school":http://bestinclass.dk/index.clj/2010/10/taking-uncle-bob-to-school.html<br/><a href="http://bestinclass.dk/">Lau Jenson</a> goes through some Clojure code by "Uncle Bob":http://www.objectmentor.com/omTeam/martin_r.html and makes it more idiomatic.</li>
+<li>"Later - What does procrastination tell us about ourselves?":http://www.newyorker.com/arts/critics/books/2010/10/11/101011crbo_books_surowiecki?currentPage=all<br/>A <a href="http://www.newyorker.com/">New Yorker</a> piece on "The Thief of Time":http://books.google.com/books?id=Huw5YrMQ4icC&dq=%E2%80%9CThe+Thief+of+Time%E2%80%9D+Andreou;+Mark+D.+White;+Essays;+George+Ainslie;+George+Akerlof&source=bl&ots=SSIyiC2lqp&sig=_9LM9nZImBmWCqcy9wR4FW4KB6g&hl=en&ei=jXWvTKjfLsKeOrua_NUF&sa=X&oi=book_result&ct=result&resnum=3&ved=0CBYQ6AEwAg, a collection of essays about procrastination. Don't read this tomorrow, read it now!</li>
+<li>"Confessions of a used-book salesman.":http://www.slate.com/id/2268000/pagenum/all/<br/>Interesting insight into what the person describing his job perceives as a shameful profession.</li>
+<li>"A shocking discovery":http://www.nature.com/news/2010/101004/full/467645a.html<br/>In the late 1940s, the US Public Health Service infected Guatemalan prisoners with Syphilis.</li>
+<li>"U.N. Report finds Israel 'summarily executed' U.S. citizen on flotilla":http://www.salon.com/news/opinion/glenn_greenwald/2010/10/01/flotilla<br/>Is anyone even surprised anymore?</li>
+<li>"Wiretapping the Internet":http://www.schneier.com/blog/archives/2010/09/wiretapping_the.html<br/>Another excellent writeup by Bruce Schneier.</li>
+</ul>

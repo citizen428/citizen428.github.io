@@ -1,0 +1,31 @@
+---
+layout: post
+title: Create script from IRB session
+date: 2009-3-18
+comments: true
+categories:
+- hacking
+- ruby
+---
+We all know the feeling: before starting a new script you hack around in IRB to try out some things, but once you're done you realize that now you either have to type everything again or copy/paste from the IRB session (or the history file if you keep one). So I set out on my search for a solution and found an "old ruby-talk post by Gavin Sinclair":http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results, which implemented a method called <b>dumphist</b>, which I modified to my needs and put in my ~/.irbrc:
+
+<script src="http://gist.github.com/71624.js"></script>
+
+Let's look at the following IRB session:
+
+{% codeblock lang:ruby %}
+>> puts "hello"
+hello
+=> nil
+>> puts "world"
+world
+=> nil
+>> def foo
+..   puts 'bar'
+..   end
+=> nil
+>> dumphist(3, 'test.rb')
+=> ["def foo", "puts 'bar'", "end"]
+{% endcodeblock %}
+
+The last command created a file named test.rb for us, which contains only the method foo. :-)

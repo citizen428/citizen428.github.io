@@ -1,0 +1,25 @@
+--- 
+layout: post
+title: Information Overload 2010-12-26
+date: "2010-12-26"
+comments: true
+categories: 
+- games
+- informationoverload
+- literature
+- politics
+- programming
+- science
+---
+<ul>
+<li>"The Limits of Pain - Irukandji Syndrome":http://godheadv.blogspot.com/2010/12/limits-of-pain-irukandji-syndrome.html<br/>Small jellyfish, big pain!</li>
+<li>"The Simple Software That Could -- but Probably Won't -- Change the Face of Writing":http://www.theatlantic.com/technology/archive/2010/12/the-simple-software-that-could-but-probably-wont-change-the-face-of-writing/68364/<br/>"T.S. Eliot":http://en.wikipedia.org/wiki/T._S._Eliot and "Etherpad":http://en.wikipedia.org/wiki/Etherpad aren't often mentioned int the same article, but here they are.</li>
+<li>"How I Made Money Spamming Twitter with Contextual Book Suggestions":http://www.charleshooper.net/blog/how-i-made-money-spamming-twitter-with-contextual-book-suggestions/<br/>The fine line between spam and a useful service.</li>
+<li>"The Blast Shack":http://www.webstock.org.nz/blog/2010/the-blast-shack/<br/>If you only want to read one article on Wikileaks, make it this one by <a href="http://en.wikipedia.org/wiki/Bruce_Sterling">Bruce Stirling</a>!</li>
+<li>"Getting shot by a handgun":http://tidypub.org/ldcUR<br/>A person describing what it was like to be shot in the chest.</li>
+<li>"Das Welthemd":http://www.zeit.de/2010/51/Billige-T-Shirts<br/>German weekly "Die Zeit":http://en.wikipedia.org/wiki/Die_Zeit uses an H&M T-Shirt to explain how the globalized economy works. Follow the story through the US, Bangladesh and Malaysia to Germany (in German).</li>
+<li>"Censorship - Won't someone think of the adults?":http://gonedigital.net/2010/12/20/censorship-%E2%80%93-won%E2%80%99t-someone-think-of-the-adults/<br/>Next time someone goes "Think of the children!" on you, you'll know what to say.</li>
+<li>"Solving the Expression Problem with Clojure 1.2":https://www.ibm.com/developerworks/library/j-clojure-protocols/<br/>Great writeup by Stuart Halloway on how Clojure protocols help in solving the "Expression Problem":http://en.wikipedia.org/wiki/Expression_Problem.</li>
+<li>"Shigeru Miyamoto, Nintendo's man behind Mario":http://www.newyorker.com/reporting/2010/12/20/101220fa_fact_paumgarten?currentPage=all<br/>Awesome article on "Shigeru Miyamoto":http://en.wikipedia.org/wiki/Shigeru_Miyamoto, most awesome video game designer ever.</li>
+<li>"Signal, Curation, Discovery":http://battellemedia.com/archives/2010/12/signal_curation_discovery<br/>Thougths on searching the web.</li>
+</ul>

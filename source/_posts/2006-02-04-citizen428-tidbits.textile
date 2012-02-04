@@ -1,0 +1,24 @@
+--- 
+layout: post
+title: citizen428.tidbits()
+date: 2006-2-4
+comments: true
+categories: 
+- books
+- food
+- personal
+---
+*Personal:*
+Yesterday I had the last seminar of my university "career", which feels kind of strange. As the people who know me better can tell you, for the past few years I've always been torn between a job in the technical field and pursuing an academic career in humanities. Now that I've surprisingly found a job which allows me to work full time on/with free software, it seems that this decision has finally been made, but there still is a certain amount of uncertainty...
+
+*Food:*
+During yesterday's lunch break we've been to a nice "Korean restaurant":http://falter.at/web/wwei/detail.php?nr=679&ref=bezirk%3D9%26kueche%3D231%26teil%3D1 which offers nice set meals (consisting of "miso soup":http://en.wikipedia.org/wiki/Miso_soup, a salad and a main course) in the range of 6,20-10,20 Euro. The beef "bibimbap":http://en.wikipedia.org/wiki/Bibimbap is great and everything else also was really good.
+
+In the evening we've ordered a nice pizza which goes really well with Friday night TV, and today I'll meet some friends at the "Blunzenstricker":http://www.blunzenstricker.at/ to have some solid Austrian food. :)
+
+*Books:*
+I've just finished J.G. Ballard's "Millenium People":http://www.amazon.com/gp/product/000225848X/002-3286426-3377608?v=glance&n=283155 which I wholeheartedly recommend to everyone! Currently I'm reading "Do Androids Dream of Electric Sheep?":http://www.amazon.com/gp/product/0345404475/qid=1139069018/sr=2-1/ref=pd_bbs_b_2_1/002-3286426-3377608?s=books&v=glance&n=283155 by Philip K. Dick, which is long overdue given that I have seen "Blade Runner":http://www.imdb.com/title/tt0083658/ a gazillion times but never actually came around to read the book. 
+
+As it's pretty thin I went to a book store today and came home with "The Cocka Hola company":http://www.amazon.co.uk/exec/obidos/ASIN/3453400526/202-6097115-8739022 by Matias Faldbakken, "Vernon God Little":http://www.amazon.com/gp/product/0156029987/qid=1139068428/sr=2-2/ref=pd_bbs_b_2_2/002-3286426-3377608?s=books&v=glance&n=283155 by DBC Pierre and Alan Bisset's "The incredible Adam Spark":http://www.laurahird.com/newreview/incredibleadamspark.html. 
+
+Setting Orange, Chaos 35, 3172 YOLD

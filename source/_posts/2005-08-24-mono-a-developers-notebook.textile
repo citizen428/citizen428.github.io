@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: "Mono: A Developer's Notebook"
+date: 2005-8-24
+comments: true
+categories: 
+- FOSS
+- gnome
+- programming
+---
+Yeah, today my copy of "Mono: A Developer's Notebook":http://www.amazon.com/exec/obidos/tg/detail/-/0596007922/qid=1124917941/sr=8-1/ref=pd_bbs_1/002-4699908-2098445?v=glance&s=books&n=507846 finally arrived! I ordered this book because I'm a fan of "Mono":http://www.mono-project.com/Main_Page pretty much since I've first heard about it, and examples like this "tutorial on writing a web browser":http://primates.ximian.com/~edasque/projects/Tutorial/glade2.html show that the framework is quite capable. Additionally there are all this cool new GNOME apps like Blam!, Beagle, f-spot, Tomboy etc., that demonstrate the possibilites of Mono. 
+
+That's why I ordered this book that has gotten pretty good reviews everywhere and which was modelled after the important FOSS mantra "Show me the code!". Instead of long-winded syntactical explanations, the author uses lots of annotated examples to get his point across. I hope that this weekend I'll have some free time to get started with reading.... :)
+
+A last note: it's incredibly cool that Amazon gives you the possibility to buy books from alternative   dealers via their site! I can go to Amazon, look for the books I'm interested in, read the reviews etc. and then compare if it may be cheaper to buy this book somewhere else. And if it really is, I can still buy the book as if I would have bought it from Amazon. But guess what? Of all the books I've ordered there, only 2 so far were from alternative dealers, because most of the time the extra shipment costs make the book more expensive than the ad itself makes you believe. But for the "Developer's Notebook" it really made sense to buy it from "Caiman":http://caiman.com/, because it was not only cheaper, I also got the book after 7 days (from Florida!) compared to 10 to 13 days Amazon.de states as delivery time for this article.
+
+P.S. I'm tired. My English probably sucks because of that. Live with it.

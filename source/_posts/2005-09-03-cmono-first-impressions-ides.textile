@@ -1,0 +1,25 @@
+--- 
+layout: post
+title: "C#/Mono: first impressions, IDEs"
+date: 2005-9-3
+comments: true
+categories: 
+- books
+- FOSS
+- mono
+- opinion
+- programming
+---
+Now that I'm working through my "Mono Developer's Notebook":http://www.amazon.de/exec/obidos/tg/detail/-/0596007922/qid=1125743180/sr=8-1/ref=pd_bbs_1/302-8376596-0194421?v=glance&s=books&n=507846, I thought it's time for some first impressions on C# and Mono. Ok, they are not really first impressions, as I've played with the framework before. But not until now have I done so methodically, with the aim of *really* learning C# and the "class libraries":http://www.go-mono.com/docs/.<!--more-->*Firsts impressions:*
+First off, C# is a pretty modern language which features stuff like automatic garbage collection, support for interfaces, versioning, delegates and much more. I really like the "StringBuilder":http://www.go-mono.com/docs/index.aspx?link=T%3aSystem.Text.StringBuilder, and think that regular expressions are handled "in a nice way":http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconUsingRegularExpressionClasses.asp. "Collections":http://www.go-mono.com/docs/monodoc.ashx?tlink=7@N%3aSystem.Collections and "Indexers":http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcerrusingindexers.asp are pretty neat too, and I yet have to look into "Attributes and Reflection":http://www.oreilly.com/catalog/progcsharp/chapter/ch18.html a little more. I also like the great documentation that can either be found on the "MSDN library":http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcoriCProgrammersReference.asp or the "Mono website":http://www.go-mono.com/docs/. 
+
+What I don't like is that like Java C# is a pretty verbose language, which means you have to write lots of code for simple tasks. I guess that's the problem that comes with such a comprehensive class library: easy programs get more complicated than necessary, but the advantages of the framework really pay off when you start writing larger applications. It feels kinda strange to work with a strongly typed language again, but I'm getting used to it faster than you can say "type cast". ;) I'm missing quite a lot of the nice iterators Ruby has to offer, but at least C# has a decent "foreach loop":http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vclrftheforeachstatement.asp. Still it's strange to have to write all this for loops again, when a simple _10.downto(1)_ or _5.times_ could have achieved the same... 
+
+*IDEs:*
+When it comes to editing C# files, I naturally thought about using "Vim":http://www.vim.org/, which of course offers syntax highlighting for the language. However, it is not an IDE, and for a language with such an excessive class library, I really prefer to have all this nifty things like auto-completion (if only someone would port "Intellisense":http://www.vim.org/scripts/script.php?script_id=747 to Linux), integrated documentation etc.
+
+Enter "MonoDevelop":http://www.monodevelop.com/, a GTK port of the famous "SharpDevelop":http://www.icsharpcode.net/OpenSource/SD/Default.aspx. It's a nice IDE that caters exclusively to the Mono programmer, e.g. I really ike how they seamlessly integrated "MonoDoc":http://www.mono-project.com/Image:Screenshot-B2-thumb.png. The problem is that MD is still very much a work in progress and is missing some features like starting a program from the IDE with specified parameters and also sometimes crashes on me. Still I think that over time MD may well become the #1 Mono IDE for Linux.  I surely will use it again when I start playing around with "Boo":http://boo.codehaus.org/. 
+
+For the time being though I will continue to use "Anjuta 1.2.4":http://www.anjuta.org/ as my IDE of choice. It offers good syntax highlighting and auto-completion, and unlike MD it also does code folding. If I want to test a program from the IDE I can start it with "Build" - "Set program params ..." without the need for a seperate terminal window (_Note: for this to work I had to add change the line mono "$(current.full.filename).exe" to "mono $(current.full.filename).exe $(anjuta.program.arguments)" under "Settings" - "Commands" - "Execute"_). Anjuta is a pretty mature development environment, so it offers all the goodies you might expect from such a tool (like CVS integration), without having an overly cluttered interface. Also version 2 is coming along nicely ("Screenshot":http://www.anjuta.org/screen-shots) and has cool features like Glad integration. 
+
+That's it for today, but I think I'll continue to post about my adventures in Mono land...

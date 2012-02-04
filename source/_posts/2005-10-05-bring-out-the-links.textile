@@ -1,0 +1,21 @@
+--- 
+layout: post
+title: Bring out the links!
+date: 2005-10-5
+comments: true
+categories: 
+- blogs
+- games
+- links
+---
+Yeah, time for another random link dump. I'd bet you've been waiting for that, haven't you?
+
+<ul>
+<li>"blog.red667.org":http://blog.red667.org/: My friend Red started blogging, so I thought I'll put some pressure on him by giving his site some exposure. Now he just has to write more...</li>
+<li>"bonki's blog":http://bonki.is-a-geek.net/blog/: bonki started blogging too, and he definitely should post more often. Entertain me you punk! ;)</li>
+<li>"The Ministry of Silly Walks":http://www.pythonsite.de/javascr/walk.htm: And now for something completely different...</li>
+<li><a href=":http://mutednoise.com/article.cfm?article=Interview_with_NYC2123">An interview with the makers of NYC2123</a>: Not too long ago I've blogged about this new cool, free online cyberpunk comic called NYC2123. Here's an interesting interview with its creators, which at least is something too read until the next episode comes out. (via <a href="http://nyc2123.com/blog/">NYC2123 blog</a>)</li>
+<li>"Sewing, a Flickr photoset on sewing":http://www.flickr.com/photos/elyofborg/sets/1059992/: Yes, sewing. Geek sewing! How about a "Space Invaders quilt":http://www.flickr.com/photos/elyofborg/48475548/in/set-1059992/? Or would you prefer Tetris? (via <a href="http://www.boingboing.net/2005/10/02/videogame_quilts.html">BoingBoing</a>)</li>
+<li>"Red Cell":http://www.redcell.net.tf/: I've already blogged about "Pardus":http://pardus.at before, but during the last few month I got pretty addicted to that game, so I ended up doing a website for the alliance I'm in. And yes, I would have other things to do, thanks for asking...</li>
+</ul>
+

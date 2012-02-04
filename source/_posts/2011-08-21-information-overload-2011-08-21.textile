@@ -1,0 +1,24 @@
+--- 
+layout: post
+title: Information Overload 2011-08-21
+date: 2011-8-21
+comments: true
+categories: 
+- economy
+- informationoverload
+- politics
+- science
+- technology
+---
+<ul>
+<li>"Saddam's demon seed":http://www.telegraph.co.uk/culture/film/8681025/Saddams-demon-seed.html<br/>Latif Yahia was forced to work as Uday Hussein's (Saddam's son) body double, now a movie has been made about his life.</li>
+<li>"Indonesia: Military Documents Reveal Unlawful Spying in Papua":http://www.hrw.org/news/2011/08/14/indonesia-military-documents-reveal-unlawful-spying-papua<br/>Lately I've been quite interested in Indonesia, not least because it's a place people don't tend to talk about too much, which is kinda odd considering it's the 4th biggest country in the world.</li>
+<li>"How GitHub Works: Hours are Bullshit":http://zachholman.com/posts/how-github-works-hours/<br/>A 3 part series of blog posts explaining how GitHub works. This is not about technical stuff, but about working hours, internal communications and so on ("part 2":http://zachholman.com/posts/how-github-works-asynchronous/, "part 3":http://zachholman.com/posts/how-github-works-creativity/).</li>
+<li>"For first time, more corn used for ethanol than livestock":http://thegazette.com/2011/08/15/for-first-time-more-corn-to-be-used-for-ethanol-than-livestock/<br/>While food prices rise and people are starving, more corn is used for ethanol than for feeding animals (and we are not even talking feeding people here).</li>
+<li>"I'm a phony. Are you?":http://www.hanselman.com/blog/ImAPhonyAreYou.aspx<br/>I too noticed this lack of self-confidence in a lot of IT people and occasionally myself. Do you have any experience with it?</li>
+<li>"Don't look down":http://www.economist.com/node/21525851<br/>I'm always surprised by how many people adhere to the "as long as someone is worth of than me" principle.</li>
+<li>"Why most people don't finish video games":http://articles.cnn.com/2011-08-17/tech/finishing.videogames.snow_1_red-dead-redemption-entertainment-software-association-avid-gamers?_s=PM:TECH<br/>I barely play video games anymore, but when I do I also prefer short and/or multiplayer ones.</li>
+<li>"A Stick Figure Guide to the Advanced Encryption Standard (AES)":http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html<br/>Awesome post explaining crypto to the non-techies out there. In related news, a "new potential weakness":http://www.net-security.org/secworld.php?id=11474 in AES as found this week.</li>
+<li>"Karl Marx Is Hot":http://www.businessinsider.com/karl-marx-is-hot-2011-8<br/>When US economists start quoting Marx, I start wondering if the global economy is really screwed?</li>
+<li>"13-Year-Old Makes Solar Power Breakthrough by Harnessing the Fibonacci Sequence":http://inhabitat.com/13-year-old-makes-solar-power-breakthrough-by-harnessing-the-fibonacci-sequence/<br/>A young boy looks at nature, sees a pattern and turns it into something useful. Here's an "essay":http://www.amnh.org/nationalcenter/youngnaturalistawards/2011/aidan.html</li> he wrote for the Young Naturalist Award. Or maybe this all was a hoax, at least according to one "removed post on Blogger":http://webcache.googleusercontent.com/search?q=cache:JmlMNqVPKlsJ:uvdiv.blogspot.com/2011/08/solar-panel-trees-really-are-inferior.html+http://uvdiv.blogspot.com/2011/08/solar-panel-trees-really-are-inferior.html&cd=1&hl=en&ct=clnk&gl=us.
+</ul>

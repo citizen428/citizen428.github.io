@@ -1,0 +1,24 @@
+--- 
+layout: post
+title: Information Overload 2011-05-01
+date: 2011-5-1
+comments: true
+categories: 
+- health
+- informationoverload
+- politics
+- programming
+- science
+---
+<ul>
+<li>"Solar power goes viral":http://web.mit.edu/newsoffice/2011/solar-virus-0425.html<br/>A genetically modified virus increases the efficiency of solar cells.</li>
+<li>"Digging Deeper":http://ajr.org/Article.asp?id=5078<br/>In a time where it seems like a lot of journalists just seem to copy whatever they find online, it's refreshing when a journalist from a small newspaper - who above all is a science and data geek - wins a Pulitzer Price.</li>
+<li>"Guantanamo leaks lift lid on world's most controversial prison":http://www.guardian.co.uk/world/2011/apr/25/guantanamo-files-lift-lid-prison<br/>The Guardian covers the Guantanamo leaks, Including a "video":http://www.guardian.co.uk/world/video/2011/apr/25/guantanamo-bay-files-reprieve-video interview with Clive Stafford Smith, legal director of Reprieve, as well as an "interactive presentation":http://www.guardian.co.uk/world/interactive/2011/apr/25/guantanamo-files-guantanamo-bay of all the prisoners' files.</li>
+<li>"Eating Healthily for $3 a Day":http://www.miketuritzin.com/writing/eating-healthily-for-3-a-day/<br/>Bad eating habits are quite common in the hacker community, so I decided to include this link. For me the main problem when it comes to healthy eating is having to work, but even there you can manage without too much overhead.</li>
+<li>"Richard Feynman on education in Brazil":http://v.cx/2010/04/feynman-brazil-education<br/>A good read. During my academic life I met enough people who considered memorizing more important than understanding.</li>
+<li>"The Consequentialist":http://www.newyorker.com/reporting/2011/05/02/110502fa_fact_lizza?printable=true<br/>A very long and detailed article by the New Yorker that helps better understand the Obama administration's foreign policy.</li>
+<li>"Amazon's $23,698,655.93 book about flies":http://www.michaeleisen.org/blog/?p=358<br/>On the wonders of algorithmic pricing.</li>
+<li>"LSD: The Geek's Wonder Drug?":http://www.wired.com/science/discoveries/news/2006/01/70015?currentPage=1<br/>This article is already 5 years old and I feel we still haven't moved forward in rehabilitating certain drugs and using them for good.</li>
+<li>"The Ten Commandments of Egoless Programming":http://www.codinghorror.com/blog/2006/05/the-ten-commandments-of-egoless-programming.html<br/>Another article from 2006, but still as true today as it was back then.</li>
+<li>"Programming may one day be about getting the maths right":http://www.irishtimes.com/newspaper/finance/2011/0429/1224295670955.html?via=mr<br/>Yes, I'm an FP aficionado, so what? ;-)</li>
+</ul>

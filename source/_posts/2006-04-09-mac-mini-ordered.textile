@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: Mac Mini ordered
+date: 2006-4-9
+comments: true
+categories: 
+- apple
+- gentoo
+- mac
+- personal
+---
+I've done it. I decided to finally get my first Mac and ordered one of those nifty new Intel Mac Minis. Since it will mainly be used for mailing, surfing the web and other things which don't need lots of CPU cycles, I've decided to go for the Core Solo, which should be more than enough for my needs. 
+
+I'm really looking forward to have a new machine to play around with, and I think I'll have lots of fun installing Gentoo on the Mac Mini (dual boot) and giving "Gentoo for MacOS X":http://www.gentoo.org/proj/en/gentoo-alt/macos/ a try.
+
+Prickle-Prickle, Discord 26, 3172 YOLD

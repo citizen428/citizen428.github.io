@@ -1,0 +1,157 @@
+---
+layout: post
+title: Tom and Michael vs Prototypical Inheritance
+date: 2011-7-11
+comments: true
+categories:
+- papers
+- programming
+- versus
+---
+"Tom":http://mrjaba.posterous.com/ and I read another paper, this time on prototypical inheritance: "Organizing Programs Without Classes":http://selflanguage.org/documentation/published/organizing-programs.html. You can find his post "here":http://mrjaba.posterous.com/organizing-programs-without-classes and I have to admit that he also did almost the entire summary this time whereas I only added some minor things and code examples.
+
+<strong>Summary</strong>
+
+OOP is a paradigm which uses "objects" to encapsulate behavior and state in a programming language. This can be accomplished in a few ways, two of the more popular being class based and prototype based object orientation. In class based object models (e.g. Java) a class will be written to define the behavior and state that the object will embody. A class can be inherited from and extended to provide new functionality. In prototype based object models (e.g. ECMAScript, Io), there are no classes, only objects which can be cloned and altered to provide new features. Here's a quick comparison of the two approaches in Ruby and ECMAScript:
+
+Ruby:
+{% codeblock lang:ruby %}
+# define a class
+class Hello
+   def hello
+     puts "Hello"
+   end
+end #=> nil
+# create an object instance
+h = Hello.new #=> #<Hello:0x00000100a2f520>
+# call a method
+h.hello #=> nil
+Hello
+{% endcodeblock %}
+
+ECMAScript:
+{% codeblock lang:javascript %}
+// create object using a function
+function Hello() { this.hello = function() { alert("Hello!") } };
+// create instance
+h = new Hello();
+h.hello(); // pops up an alert
+// alternatively we can use an object literal
+h = {hello: function() { alert("Hello!") } };
+h.hello();
+{% endcodeblock %}
+
+Class based inheritance purports many organizational benefits. Do prototype based languages share them? The paper looks at each benefit in turn and shows approaches to add these features into classless languages or even improve upon them.
+
+<em>Behaviour Sharing:
+</em>In class based programming languages code re-use is easy, you can inherit from a class and you'll get access to that class's methods and member variables.
+
+In prototype based languages a clone/copy method is written on a prototypical object which can define which data members and methods are copied to the new object. This idea can be refined to an object whose sole purpose is to supply behavior, a trait. This can be a parent object of the new object to provide its functionality. As this trait object is shared amongst all clones, any changes to it affect the clones, just as with the class and subclass of class based programming. Here's an example on behavior sharing in a prototype based language (Io):
+
+{% codeblock lang:javascript %}
+A := Object clone
+A m := method(write("in A\n"))
+A m
+B := A clone
+B m
+{% endcodeblock %}
+
+This will print:
+{% codeblock lang:bash %}
+in A
+in B
+{% endcodeblock %}
+
+<em>Representation Sharing:</em>
+In class based languages, subclassing gives the child class access to the member variables of the parent, its representation. In prototype based languages, a trait object provides only behavior, not data. This job is performed by a prototype instance of the object, one every other object will be cloned from. Its clone method will copy across its data slots (member variables) with any default values the programmer has provided. This is called a "Data Parent".
+
+In Ruby:
+{% codeblock lang:ruby %}
+class A
+  def initialize
+    @member = "fred"
+  end
+ def method_a
+   puts "in A with #{@member}"
+ end
+end
+
+class B < A
+  def method_b
+    puts "in B with #{@member}"
+  end
+end
+
+A.new.method_a
+B.new.method_b
+
+#in A with fred
+#in B with fred
+{% endcodeblock %}
+
+In IO:
+{% codeblock lang:javascript %}
+Food := Object clone
+
+pizza := Food clone
+pizza name := "Meat Feast"
+pizza price := 10
+
+pasta := pizza clone
+pasta name = "Macaroni Cheese"
+pasta price = 5
+{% endcodeblock %}
+<em>Dynamic Behaviour Changes - Changing an instance's class and dynamic inheritance:
+</em><em>Tom:</em> This was a section of particular interest, mainly because I think it's not quite as skewed as they portray it. The idea is that because in a prototype based model the reference to the parent object (traits, data) is simply a reference it can be changed very easily depending on the state the object is in. This provides new functionality as the object goes through its life. In a class based model, changing an instance's class is difficult at best and not a good idea, however the idea of changing behavior based on state is still a useful concept. The authors however seem to miss the concept of composition and delegation, it's next to trivial to change the behavior of an object simply by changing the object that is providing a function, just take a look at the Strategy Pattern for an example.
+<em>Michael:</em> This paper is from 1991, the "Gang of Four book on Design Patterns":http://en.wikipedia.org/wiki/Design_Patterns from 1994, so I guess you're blaming the authors for not knowing about something that hasn't been published when they wrote their paper.
+<em>Tom:</em> Fair point! I wonder when the concept of delegation was first coined?
+<em>Michael:</em> According to <a href="http://en.wikipedia.org/wiki/Delegation_(programming)">Wikipedia</a> in a paper from 1986, "Using Prototypical Objects to Implement Shared Behavior in Object-Oriented Systems".
+
+In ECMAScript:
+{% codeblock lang:javascript %}
+function circle(){}
+circle.prototype
+#circle
+circle.prototype = function ellipse(){}
+circle.prototype
+#ellipse
+{% endcodeblock %}
+
+Changing the prototype can entirely change the behavior of an object.
+
+<em>Naming and Categorising:
+</em>This feature is vital in any nontrivial system, without being able to find code to serve its purpose the programmer would be constantly rewriting the same code over and over. Class based languages tend to provide a globally accessible name for a set of functions. They also tend to provide namespaces to prevent naming collisions or categorisation. Prototype based languages need to be able to access the prototype anywhere in the system to be cloned, but as they are just regular objects, they have no internal names. The authors of the paper propose that namespace objects can be used to fill this need. Essentially a globally accessible hash map, which can contain nested namespace objects to provide categorisation. This later emerged as a fairly common pattern in ECMAScript.
+
+In Ruby:
+{% codeblock lang:ruby %}
+class A; end
+A
+#A
+{% endcodeblock %}
+A is a globally defined constant which points to an Object.
+
+In ECMAScript:
+{% codeblock lang:javascript %}
+TopLevel = window.TopLevel || {}
+TopLevel.SecondLevel = function(){
+  var member = null;
+  function memberMethod(){
+  }
+}
+{% endcodeblock %}
+
+Note that TopLevel is simply an object literal.
+
+The naming of these type of systems is highly dependent on the structure of the system, this type of naming is called Extensional naming. Intensional naming is the term given to systems where the name of classes is defined by the programmer and not necessarily related to the structure of the system. The authors claim that Extensional naming has a few key advantages:
+
+1) It's free with a classless language; no other constructs are required for this behaviour to work.
+2) The names are also expressions, and as this is code it can have additional interpretations.
+3) Intensional naming can become inconsistent quite easily.
+
+Tom's not convinced any of these reasons are actually advantages: 1) just because a system comes with a feature doesn't mean you should use it if there is a better alternative available - prototype based models don't seem to have much of an alternative. 2) because it is code and not a simple lookup this is more complicated and has more potential for error. 3) this is probably valid. Changing a class name does require it to be updated everywhere in the system, but with refactoring tools this is mitigated.
+
+<strong>Conclusion:
+</strong>This was a pretty interesting paper. Personally I've always been drawn to Io, but never got past the "playing around" stage with it. Checking out Self also is on my todo list. I think there's a certain elegance to prototype based object orientation and I'd like to research it a bit more.
+
+<strong>Further reading:</strong>
+<ul><li><a href="http://en.wikipedia.org/wiki/Self_(programming_language)" title="Self">Self</a></li><li><a href="http://en.wikipedia.org/wiki/Javascript" title="Javascript">Javascript</a></li><li><a href="http://en.wikipedia.org/wiki/Io_(programming_language)" title="Io">Io</a></li><li><a href="http://en.wikipedia.org/wiki/Prototype_based" title="Protoype based object orientation">Protoype based object orientation</a></li><li><a href="http://en.wikipedia.org/wiki/Trait_(computer_programming)" title="Trait">Trait</a></li></ul>

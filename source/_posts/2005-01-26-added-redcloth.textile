@@ -1,0 +1,12 @@
+--- 
+layout: post
+title: Added RedCloth
+date: 2005-1-26
+comments: true
+categories: 
+- gentoo
+- ruby
+---
+Today I found some time (read: ignored University duties) to work on Gentoo again. I finally remembered to add dev-ruby/redcloth (<a href="http://www.whytheluckystiff.net/ruby/redcloth/">link</a>) to the tree, which is a really cool library for <a href="http://textism.com/tools/textile/">Textile</a>. If you're looking for a nice and easy markup language give this one a try!
+
+Besides that it was just the usual stable marking and cleaning out of old package versions. 

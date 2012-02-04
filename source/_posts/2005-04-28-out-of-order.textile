@@ -1,0 +1,10 @@
+--- 
+layout: post
+title: Out of order
+date: 2005-4-28
+comments: true
+categories: 
+- gentoo
+- personal
+---
+Just a little heads up that I may be away longer than I originally intended. As you can see on the <a href="http://dev.gentoo.org/devaway/">Devaway</a> page I expected inactivity in April. But now that my laptop started entertaining himself with random shutdowns which sometimes happen so frequently that you can't work anymore, this may take a little longer than planned...

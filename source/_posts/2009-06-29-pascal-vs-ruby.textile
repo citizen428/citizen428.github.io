@@ -1,0 +1,33 @@
+---
+layout: post
+title: Pascal vs. Ruby
+date: 2009-6-29
+comments: true
+categories:
+- programming
+- ruby
+---
+On ruby-talk somebody "was asking":http://www.ruby-forum.com/topic/190552 for a method which will be used to generate a random string, by returning either a lowercase letter or one of the digits 0-9 when called. As an example he posted the following Pascal program:
+
+{% codeblock lang:pascal %}
+function GetRandomChar: char;
+var
+ r: integer;
+begin
+ r := random(36);
+ case r of
+   0..25: result := chr(ord('a') + r);
+   else : result := chr(ord('0') + r);
+ end;
+end;
+{% endcodeblock %}
+
+"Translating" this to Ruby, this is what I got:
+
+<script src="http://gist.github.com/137675.js"></script>
+
+In your face, Niklaus Wirth! ;-)
+
+P.S. Actually I <i>do</i> have fond memories of the good old "Turbo Pascal":http://en.wikipedia.org/wiki/Turbo_Pascal days.
+
+

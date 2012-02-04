@@ -1,0 +1,77 @@
+--- 
+layout: post
+title: 2009 Reading list
+date: 2010-1-2
+comments: true
+categories: 
+- books
+- personal
+---
+Here's what I read in 2009, in the order I read them:
+
+<b>Brick Lane</b>: Monica Ali<br />
+<b>Die Angst des Tormanns beim Elfmeter</b>: Peter Handke<br />
+<b>Soweto Stories</b>: Miriam Tzali<br />
+<b>The Eighth Day</b>: John Case<br />
+<b>A Language in Common</b>: Marion Molteno<br />
+<b>The Lover</b>: A. B. Yehoshua<br />
+<b>Everything Is Illuminated</b>: Jonathan Safran Foer<br />
+<b>Ali Smith's Supersonic 70s</b>: Ali Smith<br />
+<b>Die Memoiren des Rodriguez Fazantas</b>: Helge Schneider<br />
+<b>German Amok</b>: Feridun Zaimoglu<br />
+<b>Imaginings of Sand</b>: Andre Brink<br />
+<b>Leinwand</b>: Feridun Zaimoglu<br />
+<b>Bitter Fruit</b>: Achmat Dangor<br />
+<b>Die Betrogene</b>: Thomas Mann<br />
+<b>The Crow Road</b>: Iain Banks<br />
+<b>The White Tiger</b>: Aravind Adiga<br />
+<b>Kali: Eine Vorwintergeschichte</b>: Peter Handke<br />
+<b>The Icarus Girl</b>: Helen Oyeyemi<br />
+<b>Der Hund aus Terracotta</b>: Andrea Camilleri<br />
+<b>Ansichten eines Clowns</b>: Heinrich Böll<br />
+<b>Lust</b>: Elfriede Jelinek<br />
+<b>Transmission</b>: Hari Kunzru<br />
+<b>Zwölf Gramm Glück</b>: Feridun Zaimoglu<br />
+<b>Hokkaido Highway Blues</b>: Will Ferguson<br />
+<b>Never Let Me Go</b>: Kazuo Ishiguro<br />
+<b>Lunar Park</b>: Bret Easton Ellis<br />
+<b>The Burial Brothers</b>: Simon Mayle<br />
+<b>Ruby in Practice</b>: Jeremy McAnally<br />
+<b>An der Arche um Acht</b>: Ulrich Hub<br />
+<b>Ubik</b>: Philip Kindred Dick<br />
+<b>A Loyal Character Dancer</b>: Qiu Xiaolong<br />
+<b>Bartleby The Scrivener</b>: Herman Melville<br />
+<b>2 B R 0 2 B</b>: Kurt Vonnegut<br />
+<b>Handbuch des Kriegers des Lichts</b>: Paulo Coelho<br />
+<b>The Well-Grounded Rubyist</b>: David A. Black<br />
+<b>The Accidental</b>: Ali Smith<br />
+<b>Rice Boy</b>: Evan Dahm<br />
+<b>South Africa: The Rise and Fall of Apartheid</b>: Nancy L. Clark<br />
+<b>Squeak by Example</b>: Andrew P. Black<br />
+<b>Rabbit, Run</b>: John Updike<br />
+<b>Heartland</b>: Joey Goebel<br />
+<b>Guards! Guards!</b>: Terry Pratchett<br />
+<b>Die Girls von Riad</b>: Rajaa Alsanea<br />
+<b>Angela's Ashes</b>: Frank McCourt<br />
+<b>Verblendung</b>: Stieg Larsson<br />
+<b>Der Tote im Sumida</b>: Sujata Massey<br />
+<b>Crime</b>: Irvine Welsh<br />
+<b>Interesting Times</b>: Terry Pratchett<br />
+<b>Sacred Games</b>: Vikram Chandra<br />
+<b>The God of Small Things</b>: Arundhati Roy<br />
+<b>Programming Clojure</b>: Stuart Halloway<br />
+<b>Armageddon</b>: Leon Uris<br />
+<b>Small Gods</b>: Terry Pratchett<br />
+<b>The Dice Man</b>: Luke Rhinehart<br />
+<b>Verdammnis</b>: Stieg Larsson<br />
+<b>Oranges Are Not the Only Fruit</b>: Jeanette Winterson<br />
+<b>Vergebung</b>: Stieg Larsson<br />
+<b>JavaScript: The Good Parts</b>: Douglas Crockford<br />
+<b>Going Postal</b>: Terry Pratchett<br />
+
+Started in 2009 but not finished:<br />
+
+<b>Gödel, Escher, Bach</b>: Douglas R. Hofstadter<br />
+<b>Brückenkurs Mathematik</b>: Guido Walz<br />
+
+This list is not taking into account stuff that didn't have ISBNs like some eBooks or scientific papers.

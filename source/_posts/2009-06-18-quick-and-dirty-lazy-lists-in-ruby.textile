@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: Quick and dirty lazy lists in Ruby
+date: 2009-6-18
+comments: true
+categories: 
+- programming
+- ruby
+---
+Hash.new with a block is a sexy beast: you can specify default hash values and when a key is first used, the value will be calculated and inserted into the Hash. Based on that behavior I took a couple of minutes to hack together a small proof of concept class for "lazy lists":http://en.wikipedia.org/wiki/Lazy_evaluation:
+
+<script src="http://gist.github.com/131821.js"></script>
+
+As I said, this is quick and dirty, especially since you have to pass the entire Hash.new block to LazyList.new right now. Other than that I quite like it though. I know there are at least "two":http://lazylist.rubyforge.org/ "other":http://moonbase.rydia.net/software/lazy.rb/ lazy list implementations for Ruby, but it seems like both haven't been updated in a while and I don't particularly like their interfaces. Dunno, if I manage to simplify list definition, I may actually try to develop this into something. Don't hold your breath though...

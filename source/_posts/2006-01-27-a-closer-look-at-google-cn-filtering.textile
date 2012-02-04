@@ -1,0 +1,72 @@
+--- 
+layout: post
+title: A closer look at Google.cn filtering
+date: 2006-1-27
+comments: true
+categories: 
+- censorship
+- china
+- discordia
+- disobey
+- freedom
+- google
+- links
+- webculture
+---
+While reading "netzpolitik.org":netzpolitik.org yesterday, I found a link to an article on the "OpenNet Initiative Blog":http://opennetinitiative.net/blog/, explaining "how the filtering of Google.cn works":http://www.opennetinitiative.net/blog/?p=87. Now let's have a closer look at some of the blocked sites:
+
+site:hrw.org
+site:hrichina.org
+
+Human Rights Watch and Human Rights in China. Who is surprised that they get blocked? Nobody? Guessed so...
+
+site:rfa.org
+
+Radio Free Asia describes itself in the following way: "_RFA is a private, nonprofit corporation that broadcasts news and information in nine native Asian languages to listeners who do not have access to full and free news media. The purpose of RFA is to provide a forum for a variety of opinions and voices from within these Asian countries._" 
+
+site:tsquare.tv
+
+A pretty informative site about the incident on Tiananmen Square in 1989. You really should try to see the "documentary":http://tsquare.tv/film/, it's probably the best I've seen so far on this topic.
+
+http://64memo.com/
+
+The Tianmen Massacre Memorial Museum. I haven't read any of the articles on this site yet, so it's hard to tell how exactly they are dealing with the subject. 
+
+site:news.bbc.co.uk
+site:voa.gov
+
+Ok, the BBC and Voice of America may not be the most objective news sources one can find in the world, but blocking them seems a little harsh.
+
+site:boxun.com
+site:peacehall.com
+
+Both domains will lead you to the Boxun News Network, a site writing a lot about censorship, free speech and similar topics.
+
+site:freechina.net
+
+After having a look at the "goals":http://www.freechina.net/goal/index_en.htm of The Free China Movement, it should be pretty obvious why the Chinese government wants this site blocked.
+
+site:geocities.com
+
+Free web hosting == free expression? It seems so...
+
+site:falundafa.org
+site:epochtimes.com
+
+After having been at a conference with participants from these groups I have to say that I don't feel any sympathy for them, but that definitely isn't an excuse for locking them up and censoring their sites.
+
+site:savetibet.org
+
+It should be pretty obvious why this got blocked.
+
+site:topforum.com
+
+A dynamic index of Chinese forums websites.
+
+site:laogai.org
+
+Since 1992 the Laogai Research Foundation is trying to gather information on Chinese penal camps and other "_systemic human rights violations in China, including public executions, organ harvesting from executed prisoners, the coercive enforcement of China's population control policy, and persecution of religious believers._" 
+
+I guess that sites like the "China Labour Bulletin":http://www.china-labour.org.hk/public/main and related worker's movements get filtered as well, but I can't personally confirm this currently.
+
+Boomtime, Chaos 27, 3172 YOLD

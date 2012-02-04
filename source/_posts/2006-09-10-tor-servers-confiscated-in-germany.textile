@@ -1,0 +1,40 @@
+--- 
+layout: post
+title: Tor servers confiscated in Germany
+date: 2006-9-10
+comments: true
+categories: 
+- disobey
+- freedom
+- links
+- personal
+- rants
+- technology
+- tor
+---
+Since I was pretty busy with personal stuff during the last few days, I hadn't noticed that two days ago German authorities started confiscating "Tor":http://tor.eff.org/ middleman servers. That changed when earlier today I received an email from the owner of a confiscated system, who wants to get in touch with other Tor admins, in order to start a kind of "Knowledge Base" for people who were affected by the recent confiscations or who (still) want to set up their own Tor server. Since I'm also running "such a baby":http://serifos.eecs.harvard.edu/cgi-bin/desc.pl?q=blingblingserver (which never was an exit node though) on a virtual server in Germany, I'm of course interested in this recent development, so I want to share the informative links provided in his mail with you. 
+
+*Articles/postings about the confiscations:*
+"Anonymisierungsserver bei Razzia beschlagnahmt":http://www.heise.de/newsticker/meldung/77915 (German)
+"Staatsanwaltschaft beschlagnahmt Anonymisierungs-Server":http://www.golem.de/0609/47702.html (German)
+"Erfolgreicher Schlag gegen die PrivatsphÃ¤re":http://de.indymedia.org/2006/09/156671.shtml (German)
+"Wie man die Anonymisierung kriminalisiert":http://rabe.supersized.org/comment.php?type=trackback&entry_id=810 (German)
+Re: confiscating middleman-tor-nodes "[1]":http://archives.seul.org/or/talk/Sep-2006/msg00116.html, "[2]":http://archives.seul.org/or/talk/Sep-2006/msg00117.html & "[3]":http://archives.seul.org/or/talk/Sep-2006/msg00126.html (English)
+"Staatsanwaltschaft geht gegen Tor-Server vor":http://forums.gentoo.org/viewtopic-t-496214.html (German)
+
+*General info on Tor/anonymity:*
+"TOR web site":http://tor.eff.org/ (English, German and more)
+Wikipedia article on Tor ("English":http://en.wikipedia.org/wiki/Tor_%28anonymity_network%29, "German":http://de.wikipedia.org/wiki/Tor_%28Netzwerk%29)
+"Sicher und anonym im Internet mit Proxys":http://kai.iks-jena.de/bigb/asurf.html (German)
+"Onion Routing und Tor":http://wiki.chaostreff.ch/index.php/Onion_Routing_und_Tor (German)
+"TheOnionRouter/OperationalSecurity":http://wiki.noreply.org/noreply/TheOnionRouter/OperationalSecurity (English)
+
+*Tor network overview:*
+"Tor Network Status":http://serifos.eecs.harvard.edu/cgi-bin/exit.pl
+"Current Tor routers":http://www.noreply.org/tor-running-routers/current.html
+
+Don't get me wrong, child pornography is one of the worst crimes I can think of, and I wish the German authorities all the best in finding the people they are after. I do however feel that the route taken here wasn't ideal, as it may well lead to a negative perception of Tor in the general public.
+
+That's why I've tripled the total amount of traffic Tor is allowed to serve on my system and "donated some money":http://tor.eff.org/donate.html.en to the project. I would advise you to do the same! Besides that I also encourage you to use Tor and promote it to other people, because anonymity is something that can't be gained, only lost.
+
+Pungenday, Bureaucracy 34, 3172 YOLD

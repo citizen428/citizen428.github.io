@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: OpenSolaris cheat sheet
+date: 2010-1-26
+comments: true
+categories: 
+- opensolaris
+- tips
+---
+I've always been a big fan of the handy little utility <a href="http://cheat.errtheblog.com">cheat</a> and recently became interested in <a href="http://hub.opensolaris.org/bin/view/Main/">OpenSolaris</a> (which btw runs fine on my Thinkpad x200s), so I did the obvious and created an OpenSolaris cheat sheet:
+
+<a href="http://cheat.errtheblog.com/s/open_solaris">http://cheat.errtheblog.com/s/open_solaris</a>
+
+It's still missing information regarding ZFS, but I guess I'll eventually add that too. And who knows, maybe I even get motivated enough for a nicely formatted Latex version...

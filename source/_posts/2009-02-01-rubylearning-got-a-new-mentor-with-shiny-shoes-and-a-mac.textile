@@ -1,0 +1,21 @@
+--- 
+layout: post
+title: RubyLearning got a new mentor with shiny Shoes and a Mac
+date: 2009-2-1
+comments: true
+categories: 
+- github
+- mac
+- ruby
+- rubylearning
+- shoes
+---
+Since I currently have quite a lot of time but am slightly on the poor side (as we all know: 'money = has_time ? 0 : loads.to_i') I decided to join batch 10 of <a href="http://rubylearning.org/class/">RubyLearning's</a> free online core Ruby programming course. In my opinion the course is *very* good, so if you always wanted to learn Ruby but couldn't find the motivation alone, definitely give this a try! But since I myself am not exactly new to Ruby, it so happened that after the first week of the course I now joined the RubyLearning team as a mentor. Glad to be part of the gang, folks! :)
+
+Yesterday "I blogged":http://citizen428.net/archives/353-The-first-steps-in-new-Shoes.html about my first experiments with "Shoes":http://shoooes.net/ and thanks to some feedback by "ashbb":http://ashbb.github.com/ a newer version of the "Little Helper":http://the-shoebox.org/apps/126 is now available. And since I plan on doing some more experiments with Shoes, I also started a "repo called littlesteps":http://github.com/citizen428/littlesteps/tree/master on Github where I will keep the source for all those nice little application.
+
+Finally a bit of good news for all you Ruby on MacOS X fans out there: there soon will be new versions of the "Ruby One-Click Installer for OSX":http://rubyosx.rubyforge.org/ for Ruby 1.9.1! :) The "maintainer":http://wiki.rubyonrails.org/rails/pages/parasew is a friend of mine, so I tried to convince him to include "rspec":http://rspec.info/ and "cheats":http://cheat.errtheblog.com/ in the next release, let's see if we'll get them...
+
+Some links:
+"waveninja's Ten Steps in Shoes, part 2":http://waveninja.blogspot.com/2009/01/ten-steps-in-shoes-step-2-stack-flow.html
+"ashbb's Shoes Tutorial":http://github.com/ashbb/shoes_tutorial_html/tree/master

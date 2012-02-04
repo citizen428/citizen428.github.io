@@ -1,0 +1,36 @@
+---
+layout: post
+title: Enumerable#filter
+date: 2009-4-1
+comments: true
+categories:
+- ruby
+---
+*Update:* Thanks to some feedback I rewrote Enumberable#filter so it doesn't use 'eval'. It's a bit less flexible now and I also like the syntax less, but at least it doesn't eat puppies for breakfast. As the disclaimer said, maybe it was a bad idea to begin with.
+
+As much as I like Ruby, some constructs I just don't find too sexy, e.g.:
+
+{% codeblock lang:ruby %}
+[1,2,5,8,7,3,1,9,5].select { |x| x < 5 }
+{% endcodeblock %}
+
+That's why I came up with an alternative solution which I find reads nicer than the above code:
+
+<script src="http://gist.github.com/88836.js"></script>
+(Sorry, I really don't care much about having this for strings)
+
+I kinda got inspired by Martin Aumont's "every":http://mynyml.com/15-enumerableevery/, which allows us to use
+
+{% codeblock lang:ruby %}
+enum.every.floor
+{% endcodeblock %}
+
+instead of
+
+{% codeblock lang:ruby %}
+enum.map {|n| n.floor }
+or in 1.8.7 or 1.9.1
+enum.map(&:floor)
+{% endcodeblock %}
+
+<i>Disclaimer: Today this seems like a pretty good idea, but I also haven't slept much. In case this breaks in horrible ways, already exists in some other form or is stupid for some other reason I'm too tired to consider, please let me know.</i>

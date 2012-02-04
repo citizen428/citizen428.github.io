@@ -1,0 +1,23 @@
+--- 
+layout: post
+title: emacsclient on OS X
+date: 2010-9-22
+comments: true
+categories: 
+- emacs
+---
+If you are running a non-system Emacs on OS X and have tried to use "emacsclient", you may have seen the following error message despite having started the Emacs server:
+
+{% codeblock %}
+emacsclient: can't find socket; have you started the server?
+To start the server in Emacs, type "M-x server-start".
+emacsclient: No socket or alternate editor.  Please use:
+
+	--socket-name
+	--server-file      (or environment variable EMACS_SERVER_FILE)
+	--alternate-editor (or environment variable ALTERNATE_EDITOR)
+{% endcodeblock %}
+
+This doesn't work because you are invoking "/usr/bin/emacsclient" which came with the OS, instead of "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient". This can easily be fixed by symlinking the latter to "/usr/local/bin/emacsclient" and making sure that "/usr/local/bin" is listed in your path before "/usr/bin". 
+
+Not a big deal, but it took me a couple of minutes to figure out and I thought I might as well save others some time... 

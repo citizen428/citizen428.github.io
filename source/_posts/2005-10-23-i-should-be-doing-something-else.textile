@@ -1,0 +1,43 @@
+--- 
+layout: post
+title: I should be doing something else...
+date: "2005-10-23"
+comments: true
+categories: 
+- links
+---
+...but as I really don't want to, I thought I might as well entertain my readers with some nice links. Ready, steady, go!
+<ul>
+<li> "HAIR' IS THE HAT":http://www.jamaica-star.com/thestar/20051006/news/news1.html: Nothing special to see here, just your regular Jamaican barber who is styling his hair to look like a hat for more than 20 years already. "A di policeman have to tell him seh is mi hair. Him congratulate mi an' tell mi seh mi have talent". Word! (blame <a href="http://www.boingboing.net/2005/10/07/man_fashions_his_hai.html">BoingBoing</a>) </li>
+
+
+<li> "Yuh did a expect flood ar yuh tek yuh measurement inna wata?":http://en.wikipedia.org/wiki/Patois: Ever wondered what mister barber from the article linked above is trying to tell you? Then you definitely should try to <a href="http://jamaicans.com/speakja/index.htm">learn some Patois</a>! </li>
+
+
+<li> "Tango Desktop Project":http://tango-project.org/Tango_Desktop_Project: Wouldn't you just love a consistent user experience for free software GUIs? The guys from the Tango Project sure would, so they're putting a lot of effort into style guidelines, a basic icon library and an icon naming spec. Mi likey! (via  <a href="http://gnomedesktop.org/node/2425">Footnotes</a>)</li>
+
+
+<li> "BoingBoing - resistance is futile": They just have too many cool links: "Super Mario in 64 costumes":http://www.geekonstun.com/mt/archives/marios_64_100405.html, "the 1966 Batmobile paper craft":http://www.mundonu.com/batmobile1966/ or "how to build your own Dr. Octopus costume":http://www.cockeyed.com/incredible/octopus/octopus1.html. </li>
+
+
+<li> "Stefan Landsberger's Chinese Propaganda Poster Pages":http://www.iisg.nl/~landsberger/: I admit it, I just love communist propaganda posters. Have a look at this really nice collection, and if you happen to have some related links, please send them my way, thanks!</li>
+
+
+<li> "TiddlyWiki":http://www.tiddlywiki.com/: Not too long ago I found this interesting project, which defines itself as "a reusable non-linear personal web notebook" and "an experimental MicroContent WikiWikiWeb built by Jeremy Ruston. It's written in HTML, CSS and JavaScript to run on any modern browser without needing any ServerSide logic". Nifty, eh? Funny enough just a little earlier today someone posted to the "Tomboy":http://www.beatniksoftware.com/tomboy/ mailing list, asking if anyone's working on a way to transfer data to and from TiddlyWiki, which I personally think is a rather cool idea.</li>
+
+
+<li> "HC Hinterseer":http://raketa.at/index.php?id=4603: Ok, this is only funny for my Austrian readers, but given that today there are elections taking place in Vienna, you should have a look at the great photoshop tutorial "raketa.at":http://raketa.at/ has to offer...</li>
+
+
+<li> "Bibi Blocksberg and Benjamin Bluemchen are Anarchists!":http://www.spiegel.de/unispiegel/studium/0,1518,380238,00.html: You don't believe me? Than have a look at this interview (in German) that news magazine "Der Spiegel" featured some days ago. </li>
+
+
+<li> "Anarchism":http://www.anarchism.net/: Now that I've started talking about this topic, I might as well give you some other links from my collection... "Anarchist Black Cross":http://www.anarchistblackcross.org/, "Anarchist FAQ":http://www.geocities.com/CapitolHill/1931/. "Wikipedia on Anarchism":http://en.wikipedia.org/wiki/Anarchism, "Social Anarchism":http://www.socialanarchism.org/ and an interview with Noam Chomsky on "Anarchism, Marxism & Hope for the Future":http://flag.blackened.net/revolt/rbr/noamrbr2.html. Please note that I'm not trying to encourage anyone to change his political mindset. As long as you're open-minded and use your brain,  I can live with most world-views...</li>
+
+
+<li> "Taking the Bible literally":http://www.huk.org/e/bible-literally-laura.htm: Talking about being open-minded: "<i>The radio talk show host Dr. Laura Schlessinger is well known in the USA. She said that her opposition to homosexuality is firmly grounded in biblical law, namely Leviticus 18:22</i>". I think this humorous open letter is quite a good way to deal with religious fundamentalists like Dr. Schlessinger. Thank god I'm not religious... ;)("German translation":http://www.huk.org/aktuell/bibelzitate-woertlich.htm). <b>Edit: Hmpf, only minutes after I post this, I find a forums discussion which suggests that the whole letter may be a hoax. Sorry if that's really the case, but I still find the content kind of amusing.</b></li>
+
+
+<li> "So you wanna...":http://www.soyouwanna.com/: Today I was googling for some information on the "top ten most widely spoken languages in the world":http://www.soyouwanna.com/site/toptens/languages/languages.html and ended up on "SoYouWanna":http://www.soyouwanna.com/, a site I instantly fell in love with. Why? Because according to the site's self definition, it's all about "<i>teach[ing] you how to do all the things nobody taught you in school</i>". Given that I consider the greater part of my formal education a complete waste of time (and university is only slightly better), I immediately started reading up on lots of topics, and soon found out that the various articles aren't only well written, they are pretty funny too! Now go and learn everything you ever wanted to know about "faking an appreciation for art":http://www.soyouwanna.com/site/syws/fakeart/fakeart.html, "speaking with an Irish accent":http://www.soyouwanna.com/site/syws/irishaccent/irishaccent.html, "curing a hangover":http://www.soyouwanna.com/site/syws/hangover/hangover.html or "enjoying sushi":http://www.soyouwanna.com/site/syws/sushi/sushi.html. </li>
+</ul>
+In my current mood I could go on posting links forever, but if I really did that, I wouldn't have enough to blog about the next time I don't want to prepare for classes...

@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: Gentoo/FreeBSD documentation, Mono
+date: 2005-8-28
+comments: true
+categories: 
+- FOSS
+- gentoo
+- programming
+---
+This week I not only had time to finally install Gentoo/FreeBSD on one of my machines again, I also  completed the long overdue update of the "related documentation":http://dev.gentoo.org/~citizen428/doc/gentoo-freebsd.html. What bothers me a little is that the pre-tags (and the comments inside them) look a little odd, but maybe the guide.xsl I use is just too old (I used the one from swift's webspace mentioned in "this doc":http://www.gentoo.org/proj/en/gdp/doc/doc-tipsntricks.xml)... However, the long term goal is to finally make this document conform to the documentation team's coding style and make this an official doc, and I guess these problems will go away then.
+
+On a somewhat unrelated note I recently bought a copy of "Mono: A Developer's Notebook":http://www.oreilly.com/catalog/monoadn/. I really like this book, and working through it is a lot of fun, I'd just wish I had a little more time for it! 

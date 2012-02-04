@@ -1,0 +1,19 @@
+--- 
+layout: post
+title: This space for rent
+date: 2005-4-11
+comments: true
+categories: 
+- FOSS
+- personal
+---
+If you want to know what I've been up to lately and why you hardly ever see me on IRC or Jabber nowadays, by all means read on.
+
+And if you don't care about that - which I could perfectly understand - make sure to at least "read":http://fourmilab.ch/documents/digital-imprimatur/ "something":http://groups.yahoo.com/group/extremeprogramming/message/105448 "interesting":http://www.brandeins.de/home/inhalt_detail.asp?id=1644&MenuID=8&MagID=61&sid=su6624971538595909! Thanks to "Martin 'm3' Leyrer":http://www.leyrer.priv.at/martin/ for some of those links!
+<!--more-->So, here we go: 
+
+Well, once again I've come back to "GNOME":http://gnome.org ("Screenshot":http://gallery.symbion.at/album47/gnome_20050405). After using "Ion3":http://modeemi.cs.tut.fi/~tuomov/ion/ and "E16":http://enlightenment.org for the last couple of month, I just wanted to try my old favourite out again. I have to say that once again I'm really impressed by the work the GNOME folks are doing so they are able to provide the users with a nice, consistent and easy to use desktop environment. I still don't use (nor install, thanks to my "edited ebuild":http://dev.gentoo.org/~citizen428/overlay/gnome-base/gnome/gnome-2.8.3-r1.ebuild) Evolution and Epiphany because I prefer Sylpheed-claws and Firefox, but I'm thinking about giving the first one another try. 
+
+I'm sure that the GNOME project will become even better, especially now that we have the really cool "Mono":http://www.mono-project.com/ framework. If you want to try out some cool apps that use this technology, make sure to have a look at the cool music player "Muine":http://muine.gooeylinux.org/ (written by Jorn Baayen who's also responsible for "Rhythmbox":http://www.rhythmbox.org/) and the *really* nice notes taking application "Tomboy":http://www.beatniksoftware.com/tomboy/. As I've also been playing around with the "Project Utopia stack":http://kerneltrap.org/node/3450 (D-Bus, HAL and inotify) recently, the next app I want to try out is "Beagle":http://www.gnome.org/projects/beagle/, which currently seems to be one of the most hyped FOSS applications in quite some time. If you're now curious and want to write your own Mono apps you really should try out "MonoDevelop":http://www.monodevelop.com/, which is a GTK port of the excellent "SharpDevelop":http://www.icsharpcode.net/OpenSource/SD/. And if you want me to write more Mono code (why you should want that is left vague on purpose ;) ) just go to "my Amazon wish list":http://www.amazon.de/exec/obidos/registry/XFQ04S6N8UUE/ and buy me "that book":http://www.amazon.de/exec/obidos/ASIN/0596007922/ref=cm_mp_wli_/028-3935783-0160510?coliid=IIH8BDZWXLYI0&colid=XFQ04S6N8UUE.
+
+When I didn't play around with my computer, I've been watching some good hacking related documentaries over the last few days. First I've seen "Unauthorized Access", which gives a nice overview of the early to mid 90ies hacker scene in the US, Holland and Germany. After that I watched "Attack of the Cyber Pirates", a BBC production about file sharing and P2P networks, which despite the lurid name is pretty good and balanced. Today I finally saw the excellent "New York City Hackers" as well as "Codes - Makers and Breakers". Those two were really great and if you're interested in hacker culture you definitely should watch them, especially since all the movies I've just mentioned are available for "download":http://www.thinknerd.org/?q=node/view/6 at "ThinkNerd":http://www.thinknerd.org/.

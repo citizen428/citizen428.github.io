@@ -1,0 +1,17 @@
+---
+layout: post
+title: /me in the press
+date: 2005-2-7
+comments: true
+categories:
+- personal
+---
+Quoting from <a href="http://www.gentoo.org/news/en/gwn/20050207-newsletter.xml">this weeks Gentoo Weekly Newsletter</A>, section "Gentoo in the press":
+
+{% blockquote Linux Magazin (Issue 3/2005) %}
+The German Linux Magazin carries an article by Gentoo developer Michael Kohl in its latest number. Michael explains the catalyst release engineering tool and the release process for Gentoo Linux on three pages full of interesting details, mentioning examples for using catalyst to create variant LiveCDs like the German "Fizzle Wizzle" release that includes a complete KDE environment running Knoppix-like from the CD without the need to install on the harddisk. The printed magazine is available at newsstands in Germany since Thursday last week, and also includes an additional Gentoo installation rundown by editor Oliver Frommel.
+{% endblockquote %}
+
+Unfortunately the article can't be found online†, so you have to go buy the magazine if you want to read it.
+
+†I've already talked to the editorial staff of Linux Magazin and should be able to put up an HTML version of the text next month.

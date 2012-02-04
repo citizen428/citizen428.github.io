@@ -1,0 +1,66 @@
+---
+layout: post
+title: Destructuring binds in Ruby
+date: 2010-4-29
+comments: true
+categories:
+- ruby
+---
+When we "swap variables in Ruby", what really happens is something called "a destructuring binding" in other languages:
+{% codeblock lang:ruby %}
+>> x = 10
+=> 10
+>> y = 20
+=> 20
+>> x.object_id
+=> 21
+>> y.object_id
+=> 41
+>> x, y = y, x
+=> [20, 10]
+>> x.object_id
+=> 41
+>> y.object_id
+=> 21
+{% endcodeblock %}
+This is only the beginning though:
+{% codeblock lang:ruby %}
+>> a = [1, 2, 3, 4, 5]
+=> [1, 2, 3, 4, 5]
+>> # assign first 2 elements to x and y
+>> # throw away the rest
+>> x, y = a
+=> [1, 2, 3, 4, 5]
+>> x
+=> 1
+>> y
+=> 2
+>> # assign first 2 elements to x and y
+>> # assign rest to z
+>> x, y, *z  = a
+=> [1, 2, 3, 4, 5]
+>> x
+=> 1
+>> y
+=> 2
+>> z
+=> [3, 4, 5]
+>> # assign first 2 elements to x and y
+>> # throw away the third
+>> # assign the rest to z
+>> x, y, _, *z = a
+=> [1, 2, 3, 4, 5]
+>> x
+=> 1
+>> y
+=> 2
+>> z
+=> [4, 5]
+>> # if there aren't enough rvalues,
+>> # remaining lvalues are nil
+>> a, b = 1
+=> 1
+>> b
+=> nil
+{% endcodeblock %}
+The reason I'm posting this long explanation is that destructuring is often useful and can do much more for you than "just" swap variables, yet I rarely see it used to its full potential in Ruby. If only we could have <a href="http://java.ociweb.com/mark/clojure/article.html#Destructuring">Clojure's destructuring</a> in Ruby...

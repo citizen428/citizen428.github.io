@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: Scary Ruby
+date: 2010-1-12
+comments: true
+categories: 
+- programming
+- ruby
+---
+We all know that Ruby's a flexible beast, but just how much you can bend it is almost scary. How about inheriting from a class randomly chosen at runtime? Sure, no problem:
+
+<script src="http://gist.github.com/275701.js?file=gistfile1.rb"></script>
+
+I dare you to find a use case for this ;-) And in case random isn't good enough for you, why not have the user choose the superclass for you?
+
+<script src="http://gist.github.com/275701.js?file=gistfile2.rb"></script>

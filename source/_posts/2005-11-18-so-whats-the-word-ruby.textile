@@ -1,0 +1,22 @@
+--- 
+layout: post
+title: So what's the word? RUBY!
+date: "2005-11-18"
+comments: true
+categories: 
+- FOSS
+- gentoo
+- gnome
+- nitro
+- rails
+- ruby
+---
+This week I finally had a little more time to work on Gentoo related things again, so I commited some overdue packages to the tree.
+
+The action started on Tuesday, when I commited the 20+ ebuilds from "ruby-gnome-0.14.1":http://ruby-gnome2.sourceforge.jp/ (mostly version bumps plus a few new packages like "ruby-gtkmozembed":http://ruby-gnome2.sourceforge.jp/hiki.cgi?RubyZilla). Quite a lot of users have been waiting for this, as the previous version we had in the tree (0.12.0) didn't play nicely with GTK+ 2.8/GNOME 2.12. This problems are now sorted, so that quite a few bugs could be closed and marked fixed. :)
+
+And then "George released Nitro 0.25.0":http://www.gmosx.com/article/2 yesterday, which found its way into the tree only hours later. This has mainly to do with the fact that I already had everything in place from the 0.24.0 release, which I then never commited because George said that there soon will be a release focussed on bug fixes and code clean-up. Apparently this has worked out nicely, so go ahaed, emerge "Nitro":http://www.nitrohq.com/ and play around with it, I'm sure you'll like it.
+
+In the evening "we":http://aglug.net had our montly Viennese Gentoo users meetup, which as always was really funny. I came home pretty late and my head still hurts, but it definitely was among the most entertaining evenings in the last few weeks. Thanks guys! 
+
+Boomtime, The Aftermath 30, 3171 YOLD

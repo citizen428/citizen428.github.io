@@ -1,0 +1,40 @@
+--- 
+layout: post
+title: "23C3: Days 3 & 4 and conclusion"
+date: 2007-1-1
+comments: true
+categories: 
+- 23c3
+- events
+- personal
+---
+Lectures seen on day 3:
+
+"Nintendo DS":http://events.ccc.de/congress/2006/Fahrplan/events/1552.en.html
+
+"Subverting AJAX":http://events.ccc.de/congress/2006/Fahrplan/events/1602.en.html
+
+"Geschichte der Automaten, Androiden und Homunculi":http://events.ccc.de/congress/2006/Fahrplan/events/1652.en.html
+
+"Ãœberwachungsdruck - einige Experimente":http://events.ccc.de/congress/2006/Fahrplan/events/1679.en.html
+
+"Pornography and Technology":http://events.ccc.de/congress/2006/Fahrplan/events/1422.en.html
+
+"Hacker Jeopardy":http://events.ccc.de/congress/2006/Fahrplan/events/1567.en.html
+
+Lectures seen on day 4:
+
+"Ego Striptease - Ich zeig dir, wer du bist":http://events.ccc.de/congress/2006/Fahrplan/events/1494.en.html
+
+"Software Reliability in Aerospace":http://events.ccc.de/congress/2006/Fahrplan/events/1627.en.html
+
+"We are great together, the liberal society and its enemies!":http://events.ccc.de/congress/2006/Fahrplan/events/1347.en.html
+
+"Security Nightmares 2007":http://events.ccc.de/congress/2006/Fahrplan/events/1682.en.html
+
+"Fnord JahresrÃ¼ckblick":http://events.ccc.de/congress/2006/Fahrplan/events/1429.en.html
+
+Conclusion:
+As usual the C3 was a blast: interesting lectures, meeting nice people, and generally having a good time with friends is what makes this event a highlight for me. This year's congress seemed a little less organized and more chaotic than 22C3, but in a way that was quite refreshing.
+
+Sweetmorn, Chaos 1, 3173 YOLD

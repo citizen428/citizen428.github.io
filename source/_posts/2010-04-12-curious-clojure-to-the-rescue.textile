@@ -1,0 +1,44 @@
+--- 
+layout: post
+title: Curious? Clojure to the rescue!
+date: 2010-4-12
+comments: true
+categories: 
+- clojure
+- math
+- programming
+---
+When reading John Derbyshire&#8217;s excellent book <a href="http://www.amazon.com/Prime-Obsession-Bernhard-Greatest-Mathematics/dp/0309085497">Prime Obsession</a>, I stumbled upon the following interesting footnote about <a href="http://en.wikipedia.org/wiki/E_(mathematical_constant)">Euler&#8217;s number</a>:
+
+"<i>Here is an example of e turning up unexpectedly. Select a random number between 0 and 1. Now select another and add it to the first. Keep doing this, piling on random numbers. How many random numbers, on average, do you need to make the total greater than 1? Answer: 2.71828...</i>"
+
+Personally I found this rather intriguing, so I decided to try this out for myself. Clojure seemed to be an obvious choice for this, since it's very easy to express ones thoughts in code.
+
+Let's start with a function that will tell us how many random numbers we needed to sum up to get over 1:
+
+<script src="http://gist.github.com/363888.js?file=gistfile1.clj"></script>
+
+Next we will create a function that will take n elements from an infinite list generated from another function:
+
+<script src="http://gist.github.com/363888.js?file=gistfile2.clj"></script>
+
+We are doing this because def-ing a seq will cache it:
+
+<script src="http://gist.github.com/363888.js?file=gistfile3.clj"></script>
+
+Now we have to find out how many numbers it takes on average to go over 1:
+
+<script src="http://gist.github.com/363888.js?file=gistfile4.clj"></script>
+
+Let's wrap it all up and also display the results as floats:
+
+<script src="http://gist.github.com/363888.js?file=gistfile5.clj"></script>
+
+Sure enough, the results seem to be around the value of e, curiosity satisfied. Last but not least the final program in all its glory:
+
+<script src="http://gist.github.com/363888.js?file=gistfile6.clj"></script>
+
+Note: this will die with an OOM error when you try to calculate the average of a too long list. Fixing this is left as an exercise for the reader ("holding on to the head" will probably be useful as a search term).
+
+
+

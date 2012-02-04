@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: A new look for GMail
+date: "2007-10-26"
+comments: true
+categories: []
+
+---
+Today I found a neat "userstyle":http://userstyles.org/ for GMail called "GMail.app":http://userstyles.org/styles/3845 which gives the site a Mac-like appearance. It can be used with "Stylish":https://addons.mozilla.org/firefox/2108/ or "Greasemonkey":https://addons.mozilla.org/en-US/firefox/addon/748 and I like the style quite a lot.
+
+<img src="http://userstyles.org/style_screenshots/3845_after.gif" />
+
+P.S. The new "IMAP Access":https://mail.google.com/support/bin/topic.py?topic=12760 for GMail is much appreciated too.
+
+Prickle-Prickle, The Aftermath 7, 3173 YOLD

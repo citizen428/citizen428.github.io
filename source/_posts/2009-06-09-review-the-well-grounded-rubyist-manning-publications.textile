@@ -1,0 +1,21 @@
+--- 
+layout: post
+title: "Review: The Well-Grounded Rubyist (Manning Publications)"
+date: 2009-6-9
+comments: true
+categories: 
+- books
+- programming
+- review
+- ruby
+- rubylearning
+---
+As part of "Rubylearning's":http://www.rubylearning.org/class/ "current book promotion":http://rubylearning.com/blog/2009/05/29/book-promotion-the-well-grounded-rubyist/ I'm reading "The Well-Grounded Rubyist":http://www.manning.com/black2/ by David A. Black. Here are my thoughts on the book:
+
+If you are new to Ruby, this may very well be the book you are looking for, since the author was really serious about the "well-grounded" in the title. Together the first six chapters form Part 1, aptly called "Ruby Foundations". Here you'll learn about objects, modules, classes, self and control-flow techniques. Although this part may not be the most interesting for more experienced Rubyists, it's certainly well-written and manages to present a lot of very fundamental Ruby right at the beginning. True, at first I was a bit surprised to see that singleton methods were - implicitly - introduced before classes, but when you follow the author's logic, it all makes a lot of sense. What I really like about this approach is that it exposes the reader to concepts needed for some quite advanced Ruby coding right away, and in a very light-hearted and "natural" manner. Well done!
+
+Part 2 ("Built-in classes and modules") covers everything from strings, over symbols to regular expressions and file I/O. What I really like about this part is that the author dedicated two whole chapters to collections and iterators/enumerators, which are essential for everyone striving to become fluent in Ruby. 
+
+Last but not least Part 3 ("Ruby dynamics") talks about singleton methods, procs, lambdas, Symbol#to_proc, the various eval methods, bindings and introspection, thus equipping the reader with all the necessary tools for metaprogramming, one of the many things that make Ruby that sexy little beast it is. 
+
+Oh yeah, since I didn't mention this before, "The Well-Grounded" Rubyist" covers Ruby 1.9.1, which means you'll learn about the coolest Ruby around. Don't worry though, most of what you read will also apply to 1.8.6, but isn't it about time that we all slowly moved on?

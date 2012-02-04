@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: Back in action, Ruby news
+date: 2005-2-7
+comments: true
+categories: 
+- gentoo
+- ruby
+---
+First off I'm happy that I was able to fix my system more quickly than I expected.
+
+This gave me the time to finally work on a "bug":http://bugs.gentoo.org/show_bug.cgi?id=68277 I have ignored for way too long: "FreeRIDE":http://freeride.rubyforge.org/wiki/wiki.pl finally found its way into the tree, so there's no excuse for not doing "cool Ruby stuff":http://dev.gentoo.org/~pythonhead/blog/archives/2005-02-05T06_53_00.html anymore. 
+Other Ruby news: "Pythonhead":http://dev.gentoo.org/~pythonhead/ (aka Rubyhead ;)) and Caleb Tennis recently joined the Ruby herd. Welcome guys, it's always good to have more people on board!

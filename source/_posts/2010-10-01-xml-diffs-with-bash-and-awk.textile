@@ -1,0 +1,62 @@
+---
+layout: post
+title: " XML diffs with bash and awk"
+date: 2010-10-1
+comments: true
+categories:
+- programming
+- shell
+---
+<i>Slightly modified version of a "post":http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/ I originally wrote for our "company blog":http://tupalo.com/en/blog/.</i>
+
+When importing data at work, we often have to deal with XML. This generally works fine, but the format's structured nature also means that you can't just treat it like any old text file.
+
+That's something we recently had to work around when we wanted to generate a daily XML diff, which only contains elements which changed since the previous feed. Of course there are several open source tools for diff-ing XML (e.g. <a href="http://diffxml.sourceforge.net/">diffxml</a> or <a href="http://www.logilab.org/859">xmldiff</a>) but since we didn't get them to do what we want in a reasonable amount of time, we just decided to roll our own.
+
+The final solution is a 71 line bash script, which downloads a zip, extracts it, generates <a href="http://en.wikipedia.org/wiki/MD5">MD5</a> sums for every element and then creates a diff between this new file and the previous list of MD5 sums. Once we know which elements have changed we merge them into a new feed which then gets handed to our importer. The awesome <a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> was a great help in this, as was battle-tested old <a href="http://en.wikipedia.org/wiki/AWK">awk</a>.
+
+Let's look at an interesting snippet from the script:
+
+{% codeblock lang:bash %}
+xmlstarlet sel -I -t -m "//item" -v "./guid" -o "|" -c "." -n - |
+  sed -e '...' |
+  awk \
+    'BEGIN {
+      FS="|"
+      RS="\n"
+    }
+    {
+      id=$1
+      command="printf \"%s\" \"" $2 "\" | md5sum | cut -d\" \" -f1"
+      command | getline md5
+      close(command)
+      print id":"md5
+    }' >> $MD5_DIR/vendor-md5-$TODAY
+{% endcodeblock %}
+
+Here we use xmlstarlet to iterate over all the items in the feed (the <a href="http://www.w3.org/TR/xpath/">XPath</a> "//item"), print the value of the "guid" element (-v "./guid"), output a pipe character (-o "|") and then copy the current element followed by a newline (-c "." -n) . This then gets piped through sed for some cleaning up (which I omitted here for brevity's sake) before awk takes the part after each "|", generates an MD5 sum and finally produces a file that looks like this:
+
+{% codeblock %}
+rKKTZ:4012fced7c4cd77da607d294fbb8b5b6
+hC7Jr:39245a0f9a976e6d47c0e2d76abf6238
+...
+{% endcodeblock %}
+
+Now that we are able to create a daily list of MD5 sums, it's easy to generate the diff feed:
+
+{% codeblock lang:bash %}
+if [ -e $MD5_DIR/vendor-md5-last ] ; then
+  changed=`diff $MD5_DIR/vendor-md5-last $MD5_DIR/vendor-md5-$TODAY |
+	   grep "^>" |
+           cut -d":" -f 1 |
+           cut -b 1-2 --complement`
+
+for record in $changed ; do
+  f=`fgrep -l "<guid>$record</guid>" $FILE_PATTERN`
+  xmlstarlet sel -I -t -c "/rss/channel/item[guid='$record']" $f >> vendor-import-$TODAY.xml
+done
+{% endcodeblock %}
+
+Here we create an array with the id of the changed elements over which we then iterate. In the loop we once again use xmlstarlet to extract the current item from the feed which contains the right guid.
+
+I'm quite happy with the result, it does exactly what we want it to do and is also reasonably fast. This is a good example of how familiar Unix tools can be combined to create fairly concise solutions for non-trivial problem.

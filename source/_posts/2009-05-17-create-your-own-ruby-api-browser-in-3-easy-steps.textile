@@ -1,0 +1,24 @@
+--- 
+layout: post
+title: Create your own (Ruby) API browser in 3 easy steps
+date: 2009-5-17
+comments: true
+categories: 
+- osx
+- programming
+- ruby
+- web
+---
+<ul>
+  <li><b>Step 1:</b> Download "Fluid":http://fluidapp.com/, an awesome little application to create site specific browsers.</li>
+  <li><b>Step 2:</b> Find some online API documentation. For Ruby I recommend "railsapi.com":railsapi.com or "RubyBrains":http://rubybrains.com. </li>
+  <li><b>Step 3:</b> Create your app in Fluid:</li>
+
+<img src="http://citizen428.net/uploads/fluid.png" alt="Fluid" />
+</ul>
+
+Here's an example screenshot of a site specific browser for RubyBrain.com:
+
+<img src="http://citizen428.net/uploads/fluid_rubybrain.png" alt="Fluid RubyBrain" />
+
+Of course this still requires you to have a working internet connection, but you could always use a local version of the API docs when creating the app. On a related note you should also check out "Goo":http://www.robinlu.com/blog/goo which is a nice alternative to gem server on OS X.

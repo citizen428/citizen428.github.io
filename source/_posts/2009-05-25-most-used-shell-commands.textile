@@ -1,0 +1,37 @@
+---
+layout: post
+title: Most used shell commands
+date: 2009-5-25
+comments: true
+categories:
+- programming
+- ruby
+- shell
+---
+I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:
+
+{% codeblock %}
+history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head
+{% endcodeblock %}
+
+Although there was no real point in doing so, I felt the need to write a short Ruby script to do the same:
+
+<script src="http://gist.github.com/117571.js"></script>
+
+
+Here's the output on my MacBook:
+{% codeblock lang:bash %}
+$ command_stats | head
+time: 75
+cd: 68
+ls: 66
+git: 35
+cat: 32
+irb: 20
+awk: 17
+ruby: 15
+scala: 15
+vim: 12
+{% endcodeblock %}
+
+If you are surprised by how many times (no pun intended) I called _time_, it's just because I was benchmarking "Project Euler":http://projecteuler.net/ solutions in several languages, everything else is quite regular (and suggests I don't use the Finder much ;) ).

@@ -1,0 +1,12 @@
+---
+layout: post
+title: Babel
+date: 2007-2-4
+comments: true
+categories:
+- cinema
+- movies
+---
+Today I've been to the cinema for the first time in quite a while and watched "Babel":http://imdb.com/title/tt0449467/ by "Alejandro González Iñárritu":http://imdb.com/name/nm0327944/ of "Amores perros":http://imdb.com/title/tt0245712/ and "21 Grams":http://imdb.com/title/tt0315733/ fame. Once again Iñárritu's unexcited story telling is a welcome change from the fancy camera work and editing which got so popular in the last few years and serves the - sometimes a little too predictable - story well. The acting ranges between solid and excellent, and I especially liked the performance of "Rinko Kikuchi":http://imdb.com/name/nm1946248/ who excels in the role of disturbed teenager Chieko.
+
+Setting Orange, Chaos 35, 3173 YOLD

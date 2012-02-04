@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: Layout changes
+date: 2005-8-16
+comments: true
+categories: 
+- blogs
+- personal
+---
+As you can see, I've once again changed the template I'm using for my blog. As I've told you before the Kubrick port was only a temporary solution, but it got on my nerves faster than I expected. There are just too many sites using it...
+
+I now use a style called "Blogger-Tabacco" by "Frédéric Wenzel":blog.magenson.de, which I think looks pretty cool. I've changed the CSS to better suit my taste though: the image initially was on the left, but I thought this interferes too much with the main content. I therefore put it on the right and switched it horizontally. After this I had to move the header a little, otherwise the top left corner would have been way too empty. 
+
+Now I'm pretty happy with the new look, although there are still a few more tweaks I want to apply to the stylesheet. I guess this template will stay a little longer than the last one, but who knows what mood I'm in next week... ;)

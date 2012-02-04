@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Incanter and the Birthday Paradox "
+date: 2010-4-15
+comments: true
+categories:
+- clojure
+- incanter
+- math
+- programming
+---
+As a little follow-up to <a href="http://citizen428.net/archives/423-The-Birthday-Paradox-in-Clojure.html">my recent post on the Birthday Paradox</a> I decided to clean up the code and also plot the relationship between group size and the probability of a shared birthday with <a href="http://incanter.org/">Incanter</a> (mostly because I wanted to show off 1.2&#8217;s <a href="http://data-sorcery.org/2010/04/04/new-chart-theme/">hot new default theme</a>).
+
+Code:
+<script src="http://gist.github.com/365172.js?file=gistfile2.clj"></script>
+
+Screenshot:
+
+<a href="http://twitpic.com/1ftr8f" title="Birthday Paradox plotted by Incanter on Twitpic"><img src="http://twitpic.com/show/thumb/1ftr8f.png" width="250" height="250" border="1" alt="Birthday Paradox plotted by Incanter on Twitpic" /></a>
+
+I just love how easy it is to explore problems like this with Clojure and then use Incanter go get some cute little plot too! :-)
+
+<b>Update</b>: Incanter's author David Liebke sent me <a href="http://twitter.com/liebke/status/12242784190">a version of the above that fits into one tweet</a> and <a href="https://gist.github.com/6aa65685559cdb5b6e5e">another one with a Latex annotation</a>! I updated my code to incorporate some of his suggestions.

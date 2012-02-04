@@ -1,0 +1,24 @@
+---
+layout: post
+title: Irrepressible - An Amnesty International campaign
+date: 2007-7-14
+comments: true
+categories:
+- censorship
+- disobey
+- freedom
+---
+_The web is a great tool for sharing ideas and freedom of expression. However, efforts to try and control the Internet are growing. Internet repression is reported in countries like China, Vietnam, Tunisia, Iran, Saudi Arabia and Syria. People are persecuted and imprisoned simply for criticising their government, calling for democracy and greater press freedom, or exposing human rights abuses, online._
+
+_But Internet repression is not just about governments. IT companies have helped build the systems that enable surveillance and censorship to take place. Yahoo! have supplied email usersâ€™ private data to the Chinese authorities, helping to facilitate cases of wrongful imprisonment. Microsoft and Google have both complied with government demands to actively censor Chinese users of their services._
+
+_Freedom of expression is a fundamental human right. It is one of the most precious of all rights. We should fight to protect it._
+"http://irrepressible.info/about":http://irrepressible.info/about
+
+I've "signed the pledge":http://irrepressible.info/pledge and have "added irrepressible content":http://irrepressible.info/addcontent to this blog (in the sidebar on the left) and I encourage you to do so too!
+
+There are also two other petitions which I deem worthy of your support:
+"Flucht is kein Verbrechen":http://www.fluchtistkeinverbrechen.at/index.htm - Keine Schubhaft für AsylwerberInnen (in German)
+"Protect the Baltic Sea":http://www.balticsea.lt/en/ while it's still not too late!
+
+Setting Orange, Confusion 49, 3173 YOLD

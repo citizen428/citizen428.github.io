@@ -1,0 +1,25 @@
+--- 
+layout: post
+title: Information Overload 2011-07-10
+date: 2011-7-10
+comments: true
+categories: 
+- economics
+- freedom
+- hacktivism
+- informationoverload
+- politics
+- science
+---
+<ul>
+<li>"US anti-piracy body targets foreign website owners for extradition":http://www.guardian.co.uk/technology/2011/jul/03/us-anti-piracy-extradition-prosecution<br/>Is anyone still shocked by news like this?</li>
+<li>"Exclusive first interview with key LulzSec hacker":http://www.newscientist.com/article/dn20649-exclusive-first-interview-with-key-lulzsec-hacker.html?full=true<br/>I'm not sure how legit this interview is, better make up your own mind.</li>
+<li>"Hobo Lobo of Hamelin":http://hobolobo.net/<br/>Awesome story-telling in HTML, CSS and JS. Can't wait for the next part.</li>
+<li>"Who defaults first: Greece or the US?":http://www.bbc.co.uk/news/business-14025485<br/>With all the attention on Greece, it's easy to overlook that the US are in a dire situation too.</li>
+<li>"Portugal drug law show results ten years on, experts say":http://news.yahoo.com/portugal-drug-law-show-results-ten-years-experts-180013798.html<br/>Unfortunately this is very unlikely to have any effect on the "War on Drugs", but it's good news nonetheless.</li>
+<li>"DNA is now DIY: OpenPCR ships worldwide":http://openpcr.org/2011/07/dna-is-now-diy-openpcr-ships-worldwide/<br/>Another very impressive achievement of the maker/DIY community.</li>
+<li>"IRA VS. Al Qaeda: I was wrong":Comparing the tactics of the IRA and Al Qaeda. Some interesting food for thought, but I'd encourage you to draw your own conclusions from the provided information (like always).<br/></li>
+<li>"Associated Press Opening North Korea Bureau":http://www.huffingtonpost.com/2011/06/29/ap-associated-press-north-korea-bureau_n_887147.html<br/>Let's see how this goes, but I'm cautiously optimistic about this.</li>
+<li>"Arab spring: an interactive timeline of Middle East protests":http://www.guardian.co.uk/world/interactive/2011/mar/22/middle-east-protest-interactive-timeline<br/>Another nice interactive infographic by the Guardian.</li>
+<li>"Rhesus monkeys have a form of self awareness not previously attributed to them":http://www.physorg.com/news/2011-07-rhesus-monkeys-awareness-previously-attributed.html<br/>There's still so little we know about animals...</li>
+</ul>

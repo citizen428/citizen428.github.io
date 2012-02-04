@@ -1,0 +1,29 @@
+--- 
+layout: post
+title: Ruby's Lisp features
+date: 2006-4-30
+comments: true
+categories: 
+- lisp
+- programming
+- ruby
+---
+Not too long ago, Edward Kenworthy "inquired about 'Ruby's lisp features'":http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179515 on ruby-talk. "Matz' answer":http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179642 was as follows:
+
+<i>Ruby is a language designed in the following steps:
+
+* take a simple lisp language (like one prior to CL).
+* remove macros, s-expression.
+* add simple object system (much simpler than CLOS).
+* add blocks, inspired by higher order functions.
+* add methods found in Smalltalk.
+* add functionality found in Perl (in OO way).<br />
+So, Ruby was a Lisp originally, in theory.
+Let's call it MatzLisp from now on. ;-)</i><br />
+Is it just me, or does that really sound like "I took a Lisp dialect, removed most of the cool stuff and added some things from other languages"? Don't get me wrong, I still think Matz has done a really amazing job when he created Ruby, and it still is one of my favourite programming languages. I just find it amazing how Lisp doesn't have more exposure, when apparently some of the "cool" languages of today are trying hard to incorporate some of its (less powerful) features.<br /><br />
+
+Further references:
+"Why Ruby is an acceptable Lisp":http://www.randomhacks.net/articles/2005/12/03/why-ruby-is-an-acceptable-lisp
+"'Ruby aka MatzLisp' on comp.lang.lisp":http://groups.google.com/group/comp.lang.lisp/browse_frm/thread/c75404a8a0c05fb0/352dc25c0db37fc7?tvc=1&q=matzlisp#352dc25c0db37fc7
+
+Sweetmorn, Discord 48, 3172 YOLD

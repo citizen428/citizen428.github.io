@@ -1,0 +1,60 @@
+---
+layout: post
+title: Motivating MethodFinder feedback
+date: 2011-4-8
+comments: true
+categories:
+- personal
+- ruby
+---
+Apparently there was a certain demand for "MethodFinder":https://github.com/citizen428/methodfinder and after being mentioned on "Ruby5":http://ruby5.envylabs.com, it now has almost 150 followers on GitHub as well as over 200 downloads on Rubygems, which is more than I ever expected.  There's also been some very nice feedback on Twitter:
+
+{% blockquote @rbates http://twitter.com/#!/metasoarous/status/55714164802453504 %}
+MethodFinder, where have you been all my life?
+{% endblockquote %}
+
+{% blockquote @anentropic http://twitter.com/#!/anentropic/status/53086564179382272 %}
+[...] that MethodFinder is quite awesome though I'm not sure I've ever needed one
+{% endblockquote %}
+
+{% blockquote @avibryant http://twitter.com/#!/caldeiro/status/53078298682593280 %}
+MethodFinder is one of the coolest things about Squeak. Neat to see it's been ported to Ruby
+{% endblockquote %}
+
+{% blockquote @bilco105 http://twitter.com/bilco105/status/53052032973676544 %}
+MethodFinder in ruby has to be the coolest Gem I've ever seen
+{% endblockquote %}
+
+{% blockquote @microspino http://twitter.com/microspino/status/53020300220182528 %}
+geniale
+{% endblockquote %}
+
+{% blockquote @wallingf http://twitter.com/#!/wdjunaidi/status/52872212788678657 %}
+ I loved Smalltalk's method finder. Now there is one for Ruby. Cool!
+{% endblockquote %}
+
+{% blockquote @lukaszkorecki http://twitter.com/lukaszkorecki/status/52824077538312192 %}
+This is one neat piece of code
+{% endblockquote %}
+
+{% blockquote @marick http://twitter.com/#!/garybernhardt/status/52801103615635456 %}
+Hulk WANTS for #clojure.
+{% endblockquote %}
+
+{% blockquote @batasrki http://twitter.com/#!/batasrki/status/52799132351463424 %}
+Holy shitballs, I need to learn SmallTalk
+{% endblockquote %}
+
+{% blockquote @stiiifff http://twitter.com/#!/stiiifff/status/52792106460266496 %}
+ This is great for Ruby newbies like me !
+{% endblockquote %}
+
+{% blockquote @kuroi_kenshi http://twitter.com/kuroi_kenshi/status/52791499364118528 %}
+#Ruby method finder ftw!
+{% endblockquote %}
+
+{% blockquote @5pidou http://twitter.com/5pidou/status/52788853618122752 %}
+Really amazing!!
+{% endblockquote %}
+
+That's quite motivating and I'm currently experimenting with some ideas that might eventually lead to another tool useful for Ruby learners.

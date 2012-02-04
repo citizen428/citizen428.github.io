@@ -1,0 +1,20 @@
+---
+layout: post
+title: Ruby and the Principle Of Least Surprise
+date: 2010-4-24
+comments: true
+categories:
+- programming
+- ruby
+---
+I generally observed that people tend to bring up the POLS when <i>they</i> find one specific aspect counter-intuitive. For example you sometimes will hear people complain about how the "modulo operator" (String#% really) is used for formatting strings in Ruby which in their opinion violates the POLS:
+{% codeblock lang:ruby %}
+>> "%05d" % 123
+=> "00123"
+{% endcodeblock %}
+
+Well, when you start out from the wrong assumption that the percent sign is the "modulo operator", you can only reach wrong conclusions.
+
+In mathematical textbooks you will generally find 'mod' used in this context, which is also the operator used in e.g. Haskell. The surprise in this case stems from the assumption that the symbol % is in some way tied to the modulo operation, which it only is in some programming languages (mod, rem, \\, remainder, modulo, |~, %% and IDIV being some other options).
+
+This is not intended to sound harsh, I just think that whenever you feel Ruby violates the POLS, it's probably a good time to check your own assumptions and find out that for people with a better understanding of the topic at hand, the POLS most likely did not get violated. Don't confuse "what I would expect" with "what the majority of people knowledgeable in a given area find surprising". When I traveled in Bulgaria I found it very confusing that people there shake their head for "yes" and nod for "no". Turns out all the locals were perfectly fine with it... ;-)

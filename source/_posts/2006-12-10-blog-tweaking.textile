@@ -1,0 +1,21 @@
+--- 
+layout: post
+title: Blog tweaking
+date: "2006-12-10"
+comments: true
+categories: 
+- blog
+- blogs
+- personal
+- web2.0
+---
+This evening I found some time to work on my blog again, so here's a quick rundown of things that changed:
+
+<ul>
+<li>*Share and save:* After reading the templates used by "Serendipity":http://s9y.org to get a hang of "Smarty":http://smarty.php.net/, I've edited entries.tpl to include a mailto link to share entries, as well as the possibility to digg posts or add them to del.icio.us. There ya go, Web 2.0 lovers.</li>
+<li>*Feed love:* Syndication rocks, especially when using "Feedburner":http://www.feedburner.com which offers great features like the Link Splicer which automatically creates this "Links for the day" entries out of my del.icio.us bookmarks. But since I also got an account on "SuprGlu":http://citizen428.suprglu.com/, I've decided to additionally provide you with the "citizen428stalker":http://feeds.feedburner.com/citizen428stalker feed, which additionally contains my flickr photos, my Plazes traze, info from 43 Things and 43 Places and much more. So if you're up for the whole citizen428 package, you might want to give this new feed a try.</li>
+</ul>
+
+I haven't come around to do any more CSS changes yet, but that's next on my list.
+
+Prickle-Prickle, The Aftermath 52, 3172 YOLD

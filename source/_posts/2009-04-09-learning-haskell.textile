@@ -1,0 +1,19 @@
+--- 
+layout: post
+title: Learning Haskell
+date: 2009-4-9
+comments: true
+categories: 
+- haskell
+- lisp
+- programming
+---
+To get my mind off Ruby I recently started dabbling in Haskell. I really like what I've seen so far and it seems I'm finally starting to understand functional programming (my two attempts with "Practical Common Lisp":http://www.gigamonkeys.com/book/ never got past the first few chapters).
+
+In case you are interested in Haskell too, here's a list of the resources I use:
+<ul>
+<li>"Haskell :: Functional Programming with Types":http://en.wikibooks.org/wiki/Haskell: A very nice "Wikibook":http://wikibooks.org covering a wide range of topics from the very basics to Monads, Arrows and Zippers.</li>
+<li>"Learn You a Haskell for Great Good":http://learnyouahaskell.com/: A nice and colorful tutorial in the spirit of <a href="http://poignantguide.net/ruby/">Why's (Poignant) Guide to Ruby</a></li>
+<li>"Real World Haskell":http://book.realworldhaskell.org/: Yes, the entire book can be read online (including per paragraph comments!) for free! I've only just started reading this, since I first want to brush up my basic Haskell a bit, but once I'm past the "Project Euler":http://projecteuler.net/ stage this is probably gonna be very nice.</li>
+<li>"Write Yourself a Scheme in 48 Hours":http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours: Now that I'm slowly getting the hang of this functional programming thing, why not write an interpreter for one functional language in another? "Along the way, you'll learn Haskell's I/O, mutable state, dynamic typing, error handling, and parsing features. By the time you finish, you should be fairly fluent in both Haskell and Scheme". Sounds good to me! :)</li>
+</ul>

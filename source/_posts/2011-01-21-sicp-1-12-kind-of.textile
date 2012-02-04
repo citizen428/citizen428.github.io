@@ -1,0 +1,31 @@
+---
+layout: post
+title: SICP 1.12, kind of...
+date: 2011-1-21
+comments: true
+categories:
+- programming
+---
+When working through "SICP":http://en.wikipedia.org/wiki/Structure_and_Interpretation_of_Computer_Programs while you are tired, you might end up solving the wrong problems. This happened to me today with exercise 1.12, which asks the reader to "<em>[w]rite a procedure that computes elements of Pascal's triangle by means of a recursive process</em>". I somehow missed the "computes elements" part, and instead wrote a program which generates <a href="http://en.wikipedia.org/wiki/Pascal's_triangle">Pascal's triangle</a> up to a certain row. Anyway, here it is as a reference for the next guy who can't read:
+
+{% codeblock lang:scheme %}
+(define (pascal-sums lst)
+  (if (empty? (cdr lst))
+      '()
+      (cons (+ (car lst) (cadr lst))
+            (pascal-sums (cdr lst)))))
+
+(define (pascal-triangle depth)
+  (define (triangle-iter lst n acc)
+    (cond ((zero? n)
+           (reverse acc))
+          (else
+           (triangle-iter `(1 ,@(pascal-sums lst) 1)
+                          (sub1 n)
+                          (cons lst acc)))))
+  (triangle-iter '(1) depth '()))
+
+;; > (time (pascal-triangle 7))
+;; cpu time: 0 real time: 0 gc time: 0
+;; ((1) (1 1) (1 2 1) (1 3 3 1) (1 4 6 4 1) (1 5 10 10 5 1) (1 6 15 20 15 6 1))
+{% endcodeblock %}

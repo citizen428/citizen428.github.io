@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: Ruby, Liferea, What the Hack
+date: 2005-7-25
+comments: true
+categories: 
+- gentoo
+- personal
+- ruby
+---
+Last Saturday I went to a really nice "release party":http://5uper.net/post/116 at the Viennese "Museumsquartier":http://www.mqw.at/. It didn't only feature free Caipirinhas, but also attracted a somewhat techy crowd, which not only gave me ample opportunity to advertise Gentoo and Ruby ("Ruby on Rails":http://www.rubyonrails.org/ in particular, as most people seem very interested in it), but also to discuss some interesting stuff with a package maintainer for the "Trustix":http://www.rubyonrails.org/ distribution. As there seems to be quitre some interest, I will probably give an introduction to Ruby at the very same location in August or September! :)
+
+Next thing on my list is a pretty neat tip for all you "Liferea":http://liferea.sourceforge.net/ lovers out there: If you want to subscribe to the "Atom":http://www.atomenabled.org/ feed Google provides for your Gmail inbox, all you have to do is to add a new feed, where you choose "Command" as source type. In the dialog that pops up just enter this line {% codeblock %}curl -s -u username:password https://mail.google.com/mail/feed/atom{% endcodeblock %} and from now on you can follow your Gmail account from your favourite newsreader! <I>Disclaimer: Yes, this tip was blatantly stolen from the "Liferea FAQ":http://liferea.sourceforge.net/faq.htm. Speaking from experience most people don't read documentation, so I thought this might be useful here.</i>
+
+Finally I just wanted to say that I'll be at "What The Hack":http://www.whatthehack.org/ from Wednesday evening to Sunday, where I hope to meet lots of fellow Gentooists, especially the guys from the "German conspiracy" I already know!
+
+

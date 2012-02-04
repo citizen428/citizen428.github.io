@@ -1,0 +1,20 @@
+--- 
+layout: post
+title: Free speech or bust
+date: 2006-1-22
+comments: true
+categories: 
+- censorship
+- discordia
+- disobey
+- freedom
+---
+Today when I talked with a non-techy friend from the Midde East on IM, the topic of free speech on the net came up. I then started telling him about "Tor":http://tor.eff.org/overview.html.en and how hidden services could be a solution to this. But when I sent him the links, he couldn't open them, but instead saw the following: 
+
+_We apologize the site you are attempting to visit has been blocked due to its content being inconsistent with the religious, cultural, political and moral values of [insert country here]_. 
+
+I guess it should have been obvious that countries which censor the net wouldn't easily give their citizens the information needed to circumvent this censorship, but still I was pretty baffled by this. 
+
+So please everyone, spread the word about Tor and consider if you want to "volunteer":http://tor.eff.org/volunteer.html.en or "donate":http://tor.eff.org/donate.html.en something to the effort! 
+
+Boomtime, Chaos 22, 3172 YOLD

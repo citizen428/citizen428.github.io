@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: RubyLearning Git and GitHub course review
+date: 2009-2-24
+comments: true
+categories: 
+- git
+- github
+- ruby
+- rubylearning
+---
+Today I finished the *free* "Git and GitHub course":http://rubylearning.org/class/course/category.php?id=11 at "RubyLearning":http://rubylearning.org and I have to say I'm really happy with it! Since its creation "GitHub":http://github.com has become a kind of de facto standard for Ruby-related projects (and probably also for FOSS development in general), so knowing it is quite essential if you want to contribute to any of them. That being said it's not really hard to get up to speed with the technology, there are "good tutorials":http://b.lesseverything.com/2008/3/25/got-git-howto-git-and-github and other "useful sites":http://www.gitready.com/ out there. But if you are just starting out with Git or "revision control systems":http://en.wikipedia.org/wiki/Revision_Control_System in general, this course is definitely a great way to learn all the basics and much more in a fun and collaborative way! And since the course covers quite a wide range of topics (including automatic gem creation, GH pages, Gists etc.), you'll probably also find it useful if you already have some previous Git/GitHub experience. The next batch will start on March 28th, make sure you don't miss it!
+
+_Note: Actually the current batch is still going on for 2 more days, but I finished with the eBook today. One of the joys of RubyLearning is that you can do all the courses at your own speed, while still having the motivational and other effects of learning with a group of like-minded people._
+

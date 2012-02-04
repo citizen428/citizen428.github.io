@@ -1,0 +1,46 @@
+---
+layout: post
+title: Vim goodness
+date: 2005-9-4
+comments: true
+categories:
+- FOSS
+- tips
+---
+"Vim":http://www.vim.org rocks! We all know that. It's a really great editor and its various features make it great for programming ("Screenshot editing LaTeX":http://gallery.symbion.at/ides/gvim_latex).
+
+Now wouldn't it be cool if you also could use Vim to view your man pages, syntax highlighting included? If you answered this question with "yes", here are some good news, you really can do that!
+
+<p align="center"><a href="http://gallery.symbion.at/Misc/man_vith_vim"><img src="http://gallery.symbion.at/albums/Misc/man_vith_vim.thumb.png" alt="Vim as man pager" target="_blank" /></a></p><!--more-->I got this idea from a screenshot I saw somewhere else. Some googling led me to "Vim Tip #167":http://www.vim.org/tips/tip.php?tip_id=167, which explains how to set up Vim as your $MANPAGER. Make sure you also add the vimscript posted there to your ~/.vim/after/syntax/man.vim, it really makes for some cool syntax highlighting and you can set extra options there (for example I use it to disable line numbers and code folding which I set in my default ".vimrc":http://dev.gentoo.org/~citizen428/configs/vimrc but which I don't need in manual pages).
+
+Now wouldn't it be even cooler if you also had Vim's syntax highlighting in less? Well, you can, and it's not even hard (inspired by "Vim tip #121":http://www.vim.org/tips/tip.php?tip_id=121)!
+
+{% codeblock %}
+$ ln -s $VIMRUNTIME/macros/less.sh /usr/local/bin/less
+$ chmod +x /usr/local/bin/less
+{% endcodeblock %}
+
+Now that you have this symlink, you need to edit your ~/.vim/scripts.vim and put the following into it:
+
+{% codeblock %}
+if did_filetype()       " filetype already set..
+elseif getline(1) =~ '^\(.\+\)(\d\{1}).\+\1(\d\{1})$'
+    set filetype=man
+endif
+{% endcodeblock %}
+
+Finally you have to export the the correct PAGER value to your environment (my example uses the bash shell, insert the following code either in your ~/.bashrc or your ~/.bash_profile):
+
+{% codeblock %}
+if [[ -x /usr/local/bin/vless && -x /usr/bin/col ]] ; then
+    export PAGER="col -b | vless"
+    alias less="vless"
+    alias more="vless"
+else
+    export PAGER="less"
+    export LESS="-e"
+    alias more="less"
+fi
+{% endcodeblock %}
+
+Enjoy!

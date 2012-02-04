@@ -1,0 +1,21 @@
+--- 
+layout: post
+title: Getting brainf*cked
+date: 2005-4-12
+comments: true
+categories: 
+- brainfuck
+- programming
+---
+After knowing "Brainfuck":http://en.wikipedia.org/wiki/Brainfuck for quite a while alreay, I today have decided to write my very first "program" in this funny little language. It does nothing more than displaying the string ""CARGAL":http://www.cargal.org!" followed by a newline, but nonetheless it was good excercise for getting used to BF.
+<!--more-->Here we go for the source:
+{% codeblock %}
+>++++++++[<++++++++>-]<+++.
+--.
+>++++++++[<++>-]<+.
+>+++++[<-->-]<-.
+------.
+>++[<+++++>-]<+.
+>[-]+++++++[<------>-]<-.
+[-]++++++++++.{% endcodeblock %}
+Programming in BF gives me a rewarding feeling in a very strange way, which makes me fear that I will spend more time with it, especially now that I know about "app-vim/brainfuck-syntax":http://www.vim.org/scripts/script.php?script_id=716... ;) However, I still wonder how "Markus Schaber":http://www.ulm.ccc.de/~schabi/ had the patience to implement a multi-threading library for (and of course in) BF.

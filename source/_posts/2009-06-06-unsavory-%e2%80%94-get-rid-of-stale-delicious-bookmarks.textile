@@ -1,0 +1,36 @@
+---
+layout: post
+title: "unsavory — get rid of stale Delicious bookmarks"
+date: 2009-6-6
+comments: true
+categories:
+- links
+- programming
+- ruby
+- web
+---
+While browsing through "my Delicious bookmarks":http://delicious.com/citizen428 the other day, I realized that over time I had accumulated quite a few dead links (about 5% of my collection). I then looked for a *simple* tool to automatically remove them, but couldn't find one that appealed to me, so I wrote my own script called _unsavory_ which you can find on GitHub:
+
+"http://github.com/citizen428/unsavory/tree/master":http://github.com/citizen428/unsavory/tree/master
+
+It uses HTTParty to generate a list of all your bookmarks, which then get checked individually with Net::HTTP. Every link that returns an HTTP status code of 404 will automatically be removed (no questions asked, no undo), links with a status code other than 200 (OK) won't be changed but will display some information in case you want to fix them manually. Here's some example output (links anonymized for this post):
+
+{% codeblock %}
+  Enter Delicious username: citizen428
+  Enter Delicious password: *********
+
+  citizen428 has 664 bookmarks.
+  Processing URL #0001: OK
+  Processing URL #0002: OK
+  Processing URL #0003: OK
+  Processing URL #0004: OK
+  Processing URL #0005: OK
+  ...
+  Processing URL #0013: 405: http://...
+  ...
+  Processing URL #0074: 302: http://...
+  ...
+  Processing URL #0086: Connection reset by peer - https://...
+{% endcodeblock %}
+
+Not bad for under 60 lines of code. :-) I hope this is useful to some of you, I do have some features I plan on adding to this in the future.

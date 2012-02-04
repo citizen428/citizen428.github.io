@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: Aloha he!
+date: 2005-4-12
+comments: true
+categories: 
+- FOSS
+- gentoo
+---
+First off I have to say sorry for being missing in action most of last week without prior notice. But I had to write an article about "Hula":http://hula-project.org/Hula_Server for an Austrian IT magazine.
+
+So far I'm really impressed by this easy to set up and use webmail and calendaring solution, which is exactly what I've been looking for over the last few months. There's a guy called Lachlan Gunn who provides "ebuilds":http://www.users.on.net/~flynne/linux/hula/ for Hula, and who has quickly incorporated the changes I suggested to him. I'm sure he'll also quickly take care of the one I sent him today.
+
+I'm really looking forward to integrate this in our main tree once it matures a little more.

@@ -1,0 +1,69 @@
+---
+layout: post
+title: "2011 reading list"
+date: 2011-12-28 20:50
+comments: true
+categories:
+    - books
+---
+A list of the books I read in 2011, sorted by finishing date (oldest to newest). According to [Goodreads](http://goodreads.com) that’s roughly 16.2k pages, less than the last few years. I also have a couple of unfinished books, read several [papers](http://citizen428.net/blog/categories/papers/) and a couple of chapters of a book on Ruby and MongoDB that I'm the technical reviewer for.
+
+Terry Pratchett: **Hogfather**<br/>
+Michael Köhlmeier: **Sunrise**<br/>
+Terry Pratchett: **Eric**<br/>
+Audrey Niffenegger: **Her Fearful Symmetry**<br/>
+Conrad Barski: **Land of Lisp**<br/>
+Arthur Nersesian: **The Fuck-Up**<br/>
+Ryszard Kapuściński: **The Shadow of the Sun**<br/>
+Jacqueline Rayner: **Doctor Who: The Sontaran Games**<br/>
+Gregory Brown: **Ruby Best Practices**<br/>
+L. Frank Baum: **The Wonderful Wizard of Oz**<br/>
+Paolo Bacigalupi: **The Windup Girl**<br/>
+Cory Doctorow: **Eastern Standard Tribe**<br/>
+Canol Gökel: **Computer Programming using GNU Smalltalk**<br/>
+Jeremy Leipzig: **Data Mashups with R**<br/>
+Lana Citron: **Transit**<br/>
+Suzanne Skublics: **Smalltalk With Style**<br/>
+Russ Olsen: **Eloquent Ruby**<br/>
+Dennis Lehane: **Shutter Island**<br/>
+Terrance Dicks: **Doctor Who: Made of Steel**<br/>
+Christian Bök: **Eunoia**<br/>
+Chuck Palahniuk: **Invisible Monsters**<br/>
+Radek Knapp: **Franio**<br/>
+Michael Fogus: **The Joy of Clojure**<br/>
+Terry Pratchett: **Mort**<br/>
+Dan Cederholm: **Handcrafted CSS: More Bulletproof Web Design**<br/>
+Paolo Perrotta: **Metaprogramming Ruby**<br/>
+Mark Bowden: **Killing Pablo: The Hunt for the World's Greatest Outlaw**<br/>
+Cormac McCarthy: **The Road**<br/>
+Charles Stross: **Accelerando**<br/>
+Gautam Malkani: **Londonstani**<br/>
+Armin Risi: **Vegetarisch leben - Die Vorteile einer fleischlosen Ernährung**<br/>
+Miran Lipovača: **Learn You a Haskell for Great Good!: A Guide for Beginners**<br/>
+Robert J. Chassell: **An Introduction to Programming in Emacs Lisp**<br/>
+Hunter S. Thompson: **Hell's Angels**<br/>
+Lauren Beukes: **Moxyland**<br/>
+Raphael Selbourne: **Beauty**<br/>
+Zed A. Shaw: **Learn Python The Hard Way**<br/>
+David Kennedy: **Metasploit: The Penetration Tester's Guide**<br/>
+Paolo Bacigalupi: **Pump Six**<br/>
+Michael Moorcock: **The Nomad of Time**<br/>
+Russ Olsen: **Design Patterns in Ruby**<br/>
+David Mark: **Beginning iPhone 4 Development: Exploring the iOS SDK**<br/>
+Reijo Mäki: **Tango Negro**<br/>
+David Sedaris: **Me Talk Pretty One Day**<br/>
+Kurt Vonnegut: **Breakfast of Champions**<br/>
+Mario Vargas Llosa: **Der Geschichtenerzähler**<br/>
+Kyle Banker: **MongoDB in Action**<br/>
+Scott Kenemore: **Zombie, Ohio: A Tale of the Undead**<br/>
+Leopold Kohr: **The Breakdown of Nations**<br/>
+Carlos Bueno: **Lauren Ipsum**<br/>
+Henning Mankell: **Mannen på stranden**<br/>
+Garrison Keillor: **Was ist eigentlich Anarchie?**<br/>
+Thomas Pynchon: **Gravity's Rainbow**<br/>
+Norman Matloff: **The Art of R Programming**<br/>
+Stéphane Hessel: **Empört Euch!**<br/>
+Fabian Kruse: **Beyond Rules**<br/>
+Dario Tonani: **Cardanica (A Steampunk Nightmare)**<br/>
+Ryū Murakami: **In The Miso Soup**<br/>
+Kaaron Warren: **The Grinding House**<br/>

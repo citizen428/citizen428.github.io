@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: So true
+date: 2006-9-2
+comments: true
+categories: 
+- cartoon
+- love
+- personal
+---
+<img src="http://xkcd.com/comics/useless.jpg" border="1" />
+Source: "http://xkcd.com/c55.html":http://xkcd.com/c55.html
+
+Setting Orange, Bureaucracy 26, 3172 YOLD

@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: unsavory now available as gem
+date: 2009-9-8
+comments: true
+categories: 
+- github
+- ruby
+---
+<a href="http://github.com/citizen428/unsavory/tree/master">unsavory</a> is now available as a gem, which means that you can comfortably install it like this:
+{% codeblock %}
+$ gem sources -a http://gems.github.com 
+$ sudo gem install citizen428-unsavory
+{% endcodeblock %}
+Rubygems will automatically create a wrapper-script named "unsavory", which you can use to start the program so you finally can get rid of all these outdated bookmarks.

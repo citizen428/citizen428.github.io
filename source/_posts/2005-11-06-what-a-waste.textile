@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: What a waste
+date: 2005-11-6
+comments: true
+categories: 
+- rants
+- software
+---
+I just wasted two hours fixing a problem that maybe wasn't one to begin with. Don't you just love it when software starts acting strange for no obvious reason, and you have nfc what's going on? And then suddenly, when you're about to finally throw that frigging PC out of the window so you can once and for all start your new career as buddhist mendicant, it just starts working again as if nothing ever happened. 
+
+Given that my free time is currently rather limited, I'm pretty pissed at the moment, as I've tried really hard to have some spare hours this afternoon to spend on some personal projects of mine. Ok, I'm talking about software projects, and maybe I also would have wasted hours chasing some stupid bug. But at least it would have been *MY* bug, and I would even have considered it to be fun. Strange, eh?
+
+Setting Orange, The Aftermath 18, 3171 YOLD

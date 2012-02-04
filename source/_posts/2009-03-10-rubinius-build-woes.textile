@@ -1,0 +1,24 @@
+--- 
+layout: post
+title: Rubinius build woes
+date: 2009-3-10
+comments: true
+categories: 
+- osx
+- rubinius
+- ruby
+---
+A couple of days ago I decided that I want to play around with "Rubinius":http://rubini.us, so I cloned the "source":http://github.com/evanphx/rubinius/tree/master from GitHub and thought I was ready to go. As it turned out that wasn't quite the case, since my first attempt to build it ended in the second error can see here:
+
+<script src="http://gist.github.com/77119.js"></script>
+
+I hopped into #rubinius to find out if more people have this problem, but that doesn't seem to be the case. At least I learnt that most active develop is going into the 'stackfull' branch, so I did a 'git checkout origin/stackfull' and gave the build another try, which resulted in the first error message you see above.
+
+Determined not to give up, I decided to try one last time with 'rake vm:clean' and 'rake build:debug' and to my surprise ended up with a working Rubinius install :-)
+
+{% codeblock %}
+$ bin/rbx -v
+rubinius 0.11.0-dev (ruby 1.8.6) (f5260b581 12/31/2009) [i686-apple-darwin9.6.0]
+{% endcodeblock %}
+
+That made me somewhat curious, so I tried 'rake vm:clean' and 'rake build' which now also worked (still can't build master though). I have to admit that I'm slightly confused, but at least I have a working Rubinius version to play around with for the time being.

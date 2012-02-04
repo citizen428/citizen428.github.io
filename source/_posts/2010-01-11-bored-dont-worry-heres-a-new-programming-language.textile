@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: Bored? Don't worry, here's a new programming language...
+date: 2010-1-11
+comments: true
+categories: 
+- programming
+---
+Recently - for various degrees of recent that is - people really seem to be into programming language design and development. You've probably all heard about <a href="http://www.scala-lang.org/">Scala</a>, <a href="http://clojure.org/">Clojure</a> and <a href="http://golang.org/">Go</a> already, but here are some more new languages which may be new to you (descriptions taken from the projects' websites):
+<ul>
+<li><a href="http://code.google.com/p/anic/">ANI</a>, <i>the experimental, high-performance, statically-safe, fully implicitly parallel, object-oriented, general-purpose dataflow programming language.</i></li><br />
+<li><a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> <i>is a little language that compiles into JavaScript. [...] it compiles into clean JavaScript (the good parts) that can use existing JavaScript libraries seamlessly, and passes through JSLint without warnings. The compiled output is quite readable — pretty-printed, with comments preserved intact.</i></li><br />
+<li><a href="http://www.factorcode.org/">Factor</a> <i>is a concatenative programming language where references to dynamically-typed values are passed between words (functions) on a stack. [It] is expressive, fast, supports interactive development and has a full-featured library. </i></li><br />
+<li><a href="http://ooc-lang.org/">ooc</a>, <i>a modern, object-oriented, functional-ish, high-level, low-level, sexy programming language. It&#8217;s translated to pure C with a source-to-source compiler. It strives to be powerful, modular, extensible, portable, yet simple and fast.</i></li><br />
+<li><a href="http://mth.github.com/yeti/">Yeti</a>, <i>ML style functional programming language, that runs on the JVM.</i></li><br />
+</ul>

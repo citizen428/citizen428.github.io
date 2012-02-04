@@ -1,0 +1,72 @@
+---
+layout: post
+title: "RoR: 'call': Cannot yield from a Proc type filter."
+date: 2010-8-20
+comments: true
+categories:
+- programming
+- rails
+- ruby
+---
+As we all know, there are 2 main differences between procs and lambdas in Ruby.
+
+1. Argument checking:
+
+{% codeblock lang:ruby %}
+>> p = Proc.new { |name| "Hello #{name}" }
+=> #<Proc:0x000001008dc600@(irb):3>
+>> l = lambda { |name| "Hello #{name}" }
+=> #<Proc:0x000001008d3c08@(irb):4 (lambda)>
+>> p.call
+=> "Hello "
+>> l.call
+ArgumentError: wrong number of arguments (0 for 1)
+	from (irb):4:in `block in irb_binding'
+	from (irb):6:in `call'
+	from (irb):6
+	from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `<main>'
+{% endcodeblock %}
+
+2. The possibility to return from within the closure:
+{% codeblock lang:ruby %}
+>> p = Proc.new { return }
+=> #<Proc:0x000001008c83a8@(irb):7>
+>> l = lambda { return }
+=> #<Proc:0x000001008c4050@(irb):8 (lambda)>
+>> p.call
+LocalJumpError: unexpected return
+	from (irb):7:in `block in irb_binding'
+	from (irb):9:in `call'
+	from (irb):9
+	from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `<main>'
+>> l.call
+=> nil
+{% endcodeblock %}
+
+I've known about this for a while, but as a Rubyists who until quite recently happily ignored Rails, I didn't know that ActiveSupport changes the "LocalJumpError" from the second example into
+
+{% codeblock lang:ruby %}
+`call': Cannot yield from a Proc type filter.
+   The Proc must take two arguments and execute
+   #call on the second argument. (ArgumentError)
+{% endcodeblock %}
+
+when you try to return from callbacks like "before_save". I spent quite some time debugging this before I finally found the solution in this "blog post":http://obosan.blogspot.com/2008/11/blocksclosures-and-return.html. Instead of
+
+{% codeblock lang:ruby %}
+after_save do |foo|
+  return if ...
+  ...
+end
+{% endcodeblock %}
+
+you have to do
+
+{% codeblock lang:ruby %}
+after_save(lambda { |foo|
+  return if...
+  ...
+})
+{% endcodeblock %}
+
+Probably obvious to more experienced Rails developers, but I really got thrown off by the "ArgumentError" that replaced the "LocalJumpError".

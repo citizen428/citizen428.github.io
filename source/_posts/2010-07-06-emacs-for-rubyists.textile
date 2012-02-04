@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: Emacs for Rubyists
+date: 2010-7-6
+comments: true
+categories: 
+- emacs
+- ruby
+---
+If you are interested in using Emacs for Ruby development, here are the relevant parts from my config file with some additional comments:
+
+<script src="http://gist.github.com/465950.js?file=gistfile1.cl"></script>
+
+I use this setup at work every day and am very happy with it, but if you have any additional suggestions please leave a comment!

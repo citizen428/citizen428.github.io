@@ -1,0 +1,19 @@
+--- 
+layout: post
+title: Fixing MacPorts on Snow Leopard
+date: "2009-10-19"
+comments: true
+categories: 
+- mac
+- osx
+- tip
+---
+	<p>After upgrading to Snow Leopard I had quite a bit of trouble with my <a href="http://www.macports.org/">MacPorts</a> installation, since most builds just failed with configure errors. After the obvious first steps of installing a newer version for SL and making sure I have the most recent XCode, I was a bit stumped until I finally found this site:</p>
+
+	<p><a href="http://trac.macports.org/wiki/Migration">Migrating a MacPorts install to a new major OS version or CPU architecture</a></p>
+
+	<p>After finding this guide &#8211; which btw really solved my problems &#8211; I felt a bit stupid, but since I didn&#8217;t have to do anything after the Tiger->Leopard upgrade, I really didn&#8217;t expect this.</p>
+
+
+
+ 

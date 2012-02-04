@@ -1,0 +1,25 @@
+--- 
+layout: post
+title: Information Overload 2011-04-17
+date: 2011-4-17
+comments: true
+categories: 
+- informationoverload
+- language
+- math
+- programming
+- science
+- society
+---
+<ul>
+<li>"How I got a blank book to the top of the Amazon charts":http://realbusiness.co.uk/news/how-i-got-a-blank-book-to-the-top-of-the-amazon-charts<br/>A good example of what marketing can do for you.</li>
+<li>"The Grand Tour":http://www.newyorker.com/reporting/2011/04/18/110418fa_fact_osnos?currentPage=all<br/>Very interesting insight into a Chinese tour group in Europe.</li>
+<li>"The mathematics of being nice":http://www.newscientist.com/article/mg20928045.200-the-mathematics-of-being-nice.html?full=true<br/>An interview with Martin Nowak professor of mathematics and biology at Harvard University (and Austrian btw) about evolutionary biology, mathematics and his beliefs.</li>
+<li>"The Lisp Curse":http://www.winestockwebdesign.com/Essays/Lisp_Curse.html<br/>While I don't necessarily agree on all points, this is still a pretty interesting read.</li>
+<li>"Why is one man primarily responsible for the existence of the letter 'J' and what letter did it split off from? ":http://hotword.dictionary.com/j/<br/>The language nerd in me like this a lot.</li>
+<li>"This Tech Bubble Is Different":http://www.businessweek.com/print/magazine/content/11_17/b4225060960537.htm<br/>Let me sum up this article with an actual quote from it: <i>"The best minds of my generation are thinking about how to make people click ads," he says. "That sucks."</i></li>
+<li>"The road to being a kick-ass public speaker":http://www.wait-till-i.com/2011/04/11/the-road-to-being-a-kick-ass-public-speaker/<br/>This should be mandatory reading for anyone speaking at (tech) conferences.</li>
+<li>"What happens when an air traffic controller is asleep?":http://blogs.law.harvard.edu/philg/2011/04/14/what-happens-when-an-air-traffic-controller-is-asleep/<br/>I really like insights into the aviation industry, so I found this quite interesting.</li>
+<li>"The Worst Mistake in the History of the Human Race":http://www.ditext.com/diamond/mistake.html<br/>Was adopting agriculture the worst mistake we ever made? According to this article, probably yes, but as always you are invited to form your own opinion.</li>
+<li>"When Did Girls Start Wearing Pink?":http://www.smithsonianmag.com/arts-culture/When-Did-Girls-Start-Wearing-Pink.html<br/>A closer look at yet another gender stereotype.</li>
+</ul>

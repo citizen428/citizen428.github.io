@@ -1,0 +1,18 @@
+--- 
+layout: post
+title: Power users?
+date: 2006-4-27
+comments: true
+categories: 
+- hardware
+- rants
+---
+I'm really interested to get some opinions on this particular topic: is there a conncection between how people perceive their own knowledge of computers and what kind of hardware they buy?
+
+I'm wondering because I've just been reading a discussion about the new Intel based notebooks, especially the new Mac Books which will be released in June. With 13,3" it will be the smallest of Apple's new offerings, and a lot of people have cried loud for a MacBook Pro - ok, the name really sounds stupid - with the same form factor. But will they really feel a difference? Or do they just want them because the "Pro" makes them feel better (no insult intended)? My own hardware almost always has been pretty old, and I have never much felt the need to own something better just because I'm a "power user" (periods of "decadence kills depression" excluded of course ;) ). And what's a power user anyway? 
+
+When my last notebook broke, I ressurected my old desktop machine (an Athlon 650 with 320MB RAM). Although not blazingly fast, I was able to do everything I wanted. My computing needs may be really simple, but given that I was able to read my mails, surf the web and working/coding in several terminal windows while listening to my MP3s or web radio, why should I bother buying new hardware? The same goes for the Mac Mini which will hopefully get delivered next week: why pay a lot more money for a Core Duo, when the Core Solo is already way better than the machine I had before that and which did everything I wanted? With all the money I have already saved by not buying computers I won't really use to their full potential anyway, I can easily buy complete new systems when I don't want to upgrade the current ones anymore...
+
+How about you guys out there? Do you buy fancy new hardware because it makes you feel "1337"? Or are you still using your 486 because as a real hacker you know how to squeeze out every percent of performance possible?
+
+Boomtime, Discord 44, 3172 YOLD

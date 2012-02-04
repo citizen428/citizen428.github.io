@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: Old blog is back
+date: "2007-10-22"
+comments: true
+categories: []
+
+---
+Don't get me wrong, "Soup":http://soup.io really is great! But it's just not the tool for writing longer posts, and I'm missing the opportunity to get comments on my musings. So here's how I'll handle things from now on:
+<ul>
+<li>"citizen428.soup()":http://soup.citizen428.net: The whole package, including <a href="http://en.wikipedia.org/wiki/Tumblelog">tumblelog</a>, "Flickr pics":http://www.flickr.com/photos/citizen428/, "del.icio.us bookmarks":http://del.icio.us/citizen428 and my <a href="http://blog.citizen428.net">blog</a>.</li> 
+<li>"citizen428.blog()":http://blog.citizen428.net: Giving in to popular demand (viz. two people) this is the no frills, blog posts only side of me. I've also created "a different RSS feed":http://feeds.feedburner.com/citizen428-blog for this, so you don't have to go through loads of pics and URLs if you are only interested in my ramblings.</li>
+</ul>
+
+Setting Orange, The Aftermath 3, 3173 YOLD

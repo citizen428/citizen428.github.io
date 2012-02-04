@@ -1,0 +1,19 @@
+---
+layout: post
+title: Werbefrei
+date: 2009-1-22
+comments: true
+categories:
+- FOSS
+- mac
+- review
+- software
+- tip
+---
+Werbung in Webseiten ist lästig, da sie nicht nur die Ladezeit der aufgerufenen Seite unnötig erhöht, sondern - besonders im Fall großer animierter Flashbanner - auch von der Benutzung der Seite ablenkt bzw. den eigentlichen Inhalt manchmal sogar gänzlich verdeckt. Aus diesem Grund gibt es auch diverse Tools um sich ihrer zu entledigen, so zum Beispiel das bekannte Firefox-Plugin <a href="https://addons.mozilla.org/en-US/firefox/addon/1865">Adblock Plus</a>. Anders sah es da bisher bei Safari aus, wo diverse Werbeblocker gemeinhin als Hacks implementiert wurden, welche einerseits die Stabilität des Browsers beeinträchtigen konnten und andererseits nach Updates auch oft den Dienst verweigerten. Damit ist jetzt aber Schluss, denn mit <a title="GlimmerBlocker" href="http://glimmerblocker.org/">GlimmerBlocker</a> gibt es endlich eine stabile und zukunftssichere Lösung, welche darüber hinaus auch noch browserunabhängig ist.
+
+GlimmerBlocker ist als HTTP-Proxy implementiert, welcher bequem über ein PrefPane konfiguriert wird. Bei der Installation werden auch die Netzwerkeinstellungen automatisch angepasst, so dass alle Applikationen welche ihre Proxykonfiguration von dort beziehen von nun an den neuen Proxy verwenden (Firefox oder der Windows Messenger müssen manuell konfiguriert werden). Diese Architektur erlaubt es GlimmerBlocker und den eingesetzten Browser unabhängig voneinander aktualisieren zu können ohne Wechselwirkungen befürchten zu müssen. Allerdings hat dies auch zur Folge, dass gewisse Funktionen die man von anderen Werbeblockern kennt nicht zur Verfügung stehen, so z.B. das Blockieren eines Bildes per Rechtsklick oder das Filtern von Drittanbieter-Cookies. Durch seine vielfältigen Konfigurationsmöglichkeiten und Flexibilität (CSS-Regeln, JavaScript und HTML-Transformation) macht GlimmerBlocker dieses Manko aber durchaus wett, besonders nett ist dabei die Funktion den Proxy-Server im Netz freizugeben, so dass dieser auch von eventuell vorhandenen iPhones, iPods und anderen Computern verwendet werden kann.
+
+GlimmerBlocker ist freie Software und steht unter der <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>.
+
+(Originally published by me on "open.source.mac":http://www.opensourcemac.de/2009/01/14/werbefrei/ on Jan 14th 2009.)

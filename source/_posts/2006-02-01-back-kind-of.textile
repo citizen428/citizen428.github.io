@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: Back. Kind of.
+date: 2006-2-1
+comments: true
+categories: 
+- gentoo
+- personal
+- work
+---
+Just a little info for the people who may wonder about my lack of activity lately (mainly the Ruby herd and some guys of the Gentoo/ALT project): I've started a new job as a Junior Systems Engineer for a company providing open source solutions for enterprise customers, which means I've recently been playing around with stuff like Linux Heartbeat and other cool technologies. It's quite stressful, but also pretty interesting so far and I quite like it (despite my constant rambling about having a regular job).
+
+However, in January I also had to finish the last few classes of my college career, so there actually was nearly no time left for Gentoo, as the measly 4 commits I did demonstrate pretty well. I still have a seminar this Friday where I'll present the concept of my diploma thesis, but starting from next week I'll try to do more Gentoo related things again. :)

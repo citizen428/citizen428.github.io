@@ -1,0 +1,70 @@
+--- 
+layout: post
+title: 2010 reading list
+date: 2011-1-1
+comments: true
+categories: 
+- books
+- personal
+---
+A list of the books I read in 2010, sorted by finishing date. According to "Goodreads":http://www.goodreads.com/ that's roughly 18.5k pages, not bad considering I worked full-time and also studied on the side:
+
+<strong>The Disaster Area:</strong> J.G. Ballard
+<strong>Balkan Blues:</strong> Petros Markaris
+<strong>The Ministry of Special Cases:</strong> Nathan Englander
+<strong>Diary:</strong> Chuck Palahniuk
+<strong>Mathematik Fuer Das Bachelorstudium I: Grundlagen, Lineare Algebra Und Analysis:</strong> Mike Scherfner
+<strong>A Case of Two Cities:</strong> Qiu Xiaolong
+<strong>Strangers:</strong> Taichi Yamada
+<strong>Goedel, Escher, Bach: An Eternal Golden Braid:</strong> Douglas R. Hofstadter
+<strong>Haroun and the Sea of Stories:</strong> Salman Rushdie
+<strong>Journey through Genius: The Great Theorems of Mathematics:</strong> William Dunham
+<strong>Fight Club:</strong> Chuck Palahniuk
+<strong>The Man Who Loved Only Numbers:</strong> Paul Hoffman
+<strong>Vernon God Little:</strong> D.B.C. Pierre
+<strong>Fermat's Last Theorem:</strong> Simon Singh
+<strong>The Bell Jar:</strong> Sylvia Plath
+<strong>Prime Obsession: Bernhard Riemann and the Greatest Unsolved Problem in Mathematics:</strong> John Derbyshire
+<strong>Suite Francaise:</strong> Irene Nemirovsky
+<strong>A Monk Swimming:</strong> Malachy McCourt
+<strong>South of the Border, West of the Sun:</strong> Haruki Murakami
+<strong>Dynamic Web Development with Seaside:</strong> Michael Davies
+<strong>Wie der Soldat das Grammofon repariert:</strong> Sasa Stanisic
+<strong>What I Talk About When I Talk About Running:</strong> Haruki Murakami
+<strong>Learn Prolog Now!:</strong> Patrick Blackburn
+<strong>Reise in die Nacht:</strong> Gianrico Carofiglio
+<strong>Compiler Construction:</strong> Niklaus Wirth
+<strong>All Families Are Psychotic:</strong> Douglas Coupland
+<strong>The Little Schemer:</strong> Daniel P. Friedman
+<strong>Shantaram:</strong> Gregory David Roberts
+<strong>Zwei von zwei:</strong> Andrea De Carlo
+<strong>Number Freak: From 1 to 200- The Hidden Language of Numbers Revealed:</strong> Derrick Niederman
+<strong>Refactoring: Ruby Edition:</strong> Jay Fields
+<strong>Practical Clojure:</strong> Luke VanderHart
+<strong>Flatland: A Romance of Many Dimensions:</strong> Edwin Abbott Abbott
+<strong>House of Leaves:</strong> Mark Z. Danielewski
+<strong>What Happens Now:</strong> Jeremy Dyson
+<strong>Maramba:</strong> Paula Koehlmeier
+<strong>A Carrion Death:</strong> Michael Stanley
+<strong>Little Brother:</strong> Cory Doctorow
+<strong>Programming Erlang: Software for a Concurrent World:</strong> Joe Armstrong
+<strong>The Hacker Crackdown: Law and Disorder on the Electronic Frontier:</strong> Bruce Sterling
+<strong>Submarine:</strong> Joe Dunthorne
+<strong>Holy Cow: An Indian Adventure:</strong> Sarah Macdonald
+<strong>Der Gourmet. Leben und Leidenschaft eines chinesischen Feinschmeckers:</strong> Lu Wenfu
+<strong>Sandman Slim:</strong> Richard Kadrey
+<strong>Tod im April:</strong> Jose Luis Correa
+<strong>How To Create Your Own Freaking Awesome Programming Language:</strong> Marc-Andre Cournoyer
+<strong>A Case of Exploding Mangoes:</strong> Mohammed Hanif
+<strong>Gute Macht:</strong> Fabian Faltin
+<strong>Practical Common Lisp:</strong> Peter Seibel
+<strong>The Book Thief:</strong> Markus Zusak
+<strong>Eloquent JavaScript:</strong> Marijn Haverbeke
+<strong>Programming in Haskell:</strong> Graham Hutton
+<strong>The Half-Made World:</strong> Felix Gilman
+<strong>Twitterature: The World's Greatest Books Retold Through Twitter:</strong> Alexander Aciman
+<strong>Stupid History: Tales of Stupidity, Strangeness, and Mythconceptions Throughout the Ages:</strong> Leland Gregory
+<strong>John the Revelator:</strong> Peter Murphy
+<strong>MetaGame:</strong> Sam Landstrom
+
+I also read the first 100 or so pages of "Land of Lisp" by Conrad Barski, but this will be in next year's reading list.

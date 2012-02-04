@@ -1,0 +1,19 @@
+--- 
+layout: post
+title: Read these links and enlarge... whatever
+date: 2005-9-28
+comments: true
+categories: 
+- books
+- freedom
+- links
+---
+"Trusted computing":http://www.lafkon.net/tc/: A great animated short film by Benjamin Stephan and Lutz Vogel. It talks about why TC is a bad idea in a way even your non-nerdy friends and family members will understand, which is really great (via "Chaos Update":http://www.ccc.de/updates/).
+
+"Against TCPA":http://www.antitcpa.com/: Old but still good. Learn more about TCPA and why you should be opposed to it if you value your personal freedom.
+
+"The Cluetrain Manifesto":http://www.cluetrain.com/book/: teemow was "blogging about this":http://www.teemow.com/2005/09/14/ebay-cluetrain/, so I found that interesting looking book. "Amazon reviews":http://www.amazon.com/exec/obidos/tg/detail/-/B0001OOTN4/qid=1127911172/sr=8-1/ref=pd_bbs_1/102-7151777-9291303?v=glance&s=books&n=507846 tend to agree that the book is a bit repetitive but well worth a read. Now let's put this on the huge pile of books which has a sign in front of it that reads "Things to read later".
+
+"The C Book":http://publications.gbdirect.co.uk/c_book/: I found a free C book on the web which seems to be pretty good. Not that I'm into C again, but I discovered this while I was looking for something else and thought someone might find it useful...
+
+"NYC2123":http://nyc2123.com/: Interested in well-written and drawn cyberpunk comic under a CC license which can be read on the web for free? Honestly, who wouldn't be? (via "BoingBoing":http://www.boingboing.net/2005/09/27/cyberpunk_cc_comic_f.html)

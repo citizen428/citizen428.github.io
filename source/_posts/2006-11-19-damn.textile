@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: Damn...
+date: "2006-11-19"
+comments: true
+categories: 
+- games
+- webculture
+---
+I just lost the <a href="http://losethegame.com/">game</a>.
+
+RULE 1: You are playing The Game.
+RULE 2: Whenever you think about The Game, you lose.
+RULE 3: Loss must be announced.
+
+Pungenday, The Aftermath 31, 3172 YOLD

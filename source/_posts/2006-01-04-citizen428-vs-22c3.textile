@@ -1,0 +1,51 @@
+--- 
+layout: post
+title: citizen428 vs 22C3
+date: 2006-1-4
+comments: true
+categories: 
+- 22C3
+- FOSS
+- freedom
+- people
+- personal
+- tips
+- travelling
+---
+"22C3":http://events.ccc.de/congress/2005/ is over since last Friday, but I needed some time to let everything sink in. Besides that I just came home from Germany this morning... Here's a list of all the talks I saw:
+
+*Day 1:*
+Private Investigations
+Understanding buffer overflow exploitations
+Hacking CCTV
+Hacking Data Retention
+Bad TRIPs
+We lost the war
+VoIP Phreaking
+
+*Day 2:*
+AJAX Based Web Applications
+Anonymous Data Broadcasting by Misuse of Satellite ISPs
+Digital Identity and the Ghost in the Machine
+Literarisches Code-Quartett
+
+*Day 3:*
+COMPLETE Hard Disk Encryption with FreeBSD
+How to construct Utopia
+The truth about Nanotechnology
+Fnord JahresrÃ¼ckblick
+Hacker Jeoparday
+
+*Day 4:*
+A discussion about modern disk encryption systems
+
+*People:*
+"berq":http://www.berq.net/blog/, lippi and Manuel were really great company and we had a damn good time together! Thanks guys! :) "teemow":http://teemow.de/ also was at the congress, and once again we had some interesting conversations. I've also met some fellow Gentoo devs, but unfortunately we didn't talk that much. Maybe next year we once again should try to organize a more formal get-together. I've also met some nice people to play Go with, and although I still suck at this game, I really enjoyed playing it.
+
+*Misc:*
+Get rich, because using busses for long-distance travel sucks, at least if you want to sleep. Luckily our hostel ("CityStay Berlin Mitte":http://citystay.de/) did great in that regard, and I only can recommend this place to anyone looking for a clean and cheap accomodation in Berlin.
+
+*Conclusion:*
+22C3 definitely was good fun. I've seen interesting talks, met a lot of nice people and generally had a good time. However, I found the overall quality of the lectures not that impressive and I tried to express this sentiments via the feedback forms...
+
+Prickle-Prickle, Chaos 4, 3172 YOLD

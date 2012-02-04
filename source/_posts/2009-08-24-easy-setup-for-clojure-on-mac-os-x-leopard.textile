@@ -1,0 +1,32 @@
+--- 
+layout: post
+title: Easy setup for Clojure on Mac OS X Leopard
+date: 2009-8-24
+comments: true
+categories: 
+- clojure
+- development
+- emacs
+- github
+- osx
+- textmate
+---
+"Clojure":http://clojure.org/ definitely is one of the hottest new programming languages around and just recently hit a "very important milestone":http://clojure.blogspot.com/2009/05/clojure-10.html. Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand "one of those":http://github.com/carlism/Clojure-MacOSX/tree into "ClojureX":http://github.com/citizen428/ClojureX/tree/master, which I believe is the easiest way to get up to speed with Clojure development on Leopard. 
+
+ClojureX can 
+
+<ul>
+<li> download and build the source code for Clojure, "clojure-contrib":http://github.com/richhickey/clojure-contrib/tree/master and "JLine":http://jline.sourceforge.net/ (a readline like library for Java)</li>
+
+<li> download editor support packages for TextMate and Emacs</li>
+
+<li> create a symlink for the Clojure startup script in /usr/local/bin</li>
+
+<li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
+
+<li> configure Emacs to use "clojure-mode":http://github.com/jochu/clojure-mode/tree/master, "Slime":http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
+
+<li> keep your Clojure installation up to date via a simple "git submodule update && ant"</li>
+</ul>
+
+I hope this will come in handy for other people interested in trying out Clojure on Mac OS X, if you have any feedback please post it in the comment section.

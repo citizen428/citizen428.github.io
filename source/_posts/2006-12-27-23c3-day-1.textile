@@ -1,0 +1,37 @@
+--- 
+layout: post
+title: "23C3: Day 1"
+date: "2006-12-27"
+comments: true
+categories: 
+- 23c3
+- events
+- personal
+---
+Lectures seen on day 1:
+
+"_Who can you trust?_":http://events.ccc.de/congress/2006/Fahrplan/events/1256.de.html
+Business as usual: introduction by Tim Pritlove, followed by the keynote. This year's speaker was "EFF's":http://www.eff.org/~barlow/ "John Perry Barlow":http://en.wikipedia.org/wiki/John_Perry_Barlow, who talked about ethics and responsibility in the hacker community. Quite nice, although I wasn't all too fond of the way he encouraged people to police their fellow hackers. But for me the most interesting thing possibly was the confirmation of a Chaos Communication Camp in August 2007!
+
+"_Design and Implementation of an object-oriented, secure TCP/IP Stack_":http://events.ccc.de/congress/2006/Fahrplan/events/1656.de.html
+Quite interesting and despite Andreas Bogk's involvement it didn't include too much "Dylan":http://www.opendylan.org/ advocacy.
+
+"_The Grim Meathook Future_":http://events.ccc.de/congress/2006/Fahrplan/events/1461.en.html
+Despite not really having a concept, this lecture wasn't all bad. The speaker was a quite funny and opinionated guy, as were the people who joined the discussion in the end. Nothing great, but quite entertaining.
+
+"_Dylan Introduction_":http://events.ccc.de/congress/2006/Fahrplan/events/1761.en.html 
+No concept, terrible English, and altogether not really informative - at least if this wasn't your first contact with Dylan.
+
+"_Drones_":http://events.ccc.de/congress/2006/Fahrplan/events/1402.en.html
+My personal highlight for the day: interesting topic, good and funny presentation, motivating people to go out and have fun. That's how talks at the CCC should be.
+
+"_Know Your Citizens_":http://events.ccc.de/congress/2006/Fahrplan/events/1537.de.html
+"_Hacking the Electoral Law_":http://events.ccc.de/congress/2006/Fahrplan/events/1692.en.html
+"_We don't trust voting computers_":http://events.ccc.de/congress/2006/Fahrplan/events/1423.en.html
+"_Revenge of the Female Nerds_":http://events.ccc.de/congress/2006/Fahrplan/events/1555.en.html
+Since I've been to this talks but haven't payed close attention (IRC, surfing, working on a MySQL problem with berq etc.), I can't really say much about them. I picked up the occasional interesting fact, but other than that I don't think I really missed much.
+
+See also:
+"23C3 day one":http://blog.red667.org/?p=38
+
+Sweetmorn, The Aftermath 69, 3172 YOLD

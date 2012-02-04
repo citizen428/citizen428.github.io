@@ -1,0 +1,28 @@
+---
+layout: post
+title: Haskell like "zip_with" for Ruby
+date: 2011-3-9
+comments: true
+categories:
+- programming
+- ruby
+---
+I always liked Haskell's "zipWith":http://hackage.haskell.org/packages/archive/base/latest/doc/html/Prelude.html#v:zipWith and sometimes miss it in Ruby, so I wrote my own a couple of weeks ago. I also submitted a pull request to "Facets":http://rubyworks.github.com/facets/, but since it's still not included I decided to post the code here in case it's useful for anyone:
+{% codeblock lang:ruby %}
+def zip_with(other, op=nil)
+  return [] if self.empty? || other.empty?
+  clipped = self[0..other.length-1]
+  zipped = clipped.zip(other)
+  if op
+    zipped.map { |a, b| a.send(op, b) }
+  else
+    zipped.map { |a, b| yield(a,b) }
+  end
+end
+{% endcodeblock %}
+
+Usage examples:
+{% codeblock lang:ruby %}
+[1,2,3].zip_with([6,5,4], :+) #=> [7, 7, 7]
+[1,2,3].zip_with([6,5,4]) { |a,b| 3*a+2*b } #=> [15, 16, 17]
+{% endcodeblock %}

@@ -1,0 +1,24 @@
+---
+layout: post
+title: Information Overload 2011-06-26
+date: 2011-6-26
+comments: true
+categories:
+- education
+- informationoverload
+- math
+- politics
+- science
+---
+<ul>
+<li>"Fish don't know they're in water":http://sivers.org/fish<br/>This is something I also learned while traveling, the further you go away from home, the more you realize that many things you take as granted are just part of your own culture.</li>
+<li>"Don't Know Much About History":http://online.wsj.com/article/SB10001424052702304432304576369421525987128.html?mod=WSJ_hps_sections_opinion<br/>While I hope that history lessons in Europe aren't as bad as they apparently are in the US, I remember from my own high-school days that the subject is often taught in awful ways.</li>
+<li>"The story of the G&ouml;mb&ouml;c":http://en.wikipedia.org/wiki/G%C3%B6mb%C3%B6c#Name<br/>This is why math is cool: what starts as a weird theory, is later discovered to actually exist in nature.</li>
+<li>"How do magnets work?":http://www.coolmagnetman.com/maghow.htm<br/>A very nice explanation of magnetism.</li>
+<li>"Why numbering should start at zero":http://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF<br/>A letter by Edsger W. Dykstra gives a reason for why array indexing should start with 0 ("an element's ordinal (subscript) equals the number of elements preceding it in the sequence").</li>
+<li>"New Japanese Pop Idol Shocks Fans With News &mdash; She's Not Real":http://singularityhub.com/2011/06/22/new-japanese-pop-idol-shocks-fans-with-news%E2%80%93shes-not-real-video/<br/>With the amount of crazy news coming out of Japan, it's surprising the country doesn't feature here more regularly.</li>
+<li>"An Indian summary":http://www.economist.com/content/indian-summary<br/>Great visualization of Indian states compared to countries. Maharashtra for example has the GDP of Singapore, but a per head roughly like Sri Lanka.</li>
+<li>"How European Elites Lost a Generation":http://www.spiegel.de/international/europe/0,1518,769831,00.html<br/>A good article to understand some of the motivations behind the protests of young people everywhere in Europe.</li>
+<li>"Lucky Yingluck":http://www.economist.com/node/18866885<br/>With the Thai elections around the corner, this article provides some insights into the current election campaign.</li>
+<li>"Criminalizing free speech":http://www.salon.com/news/opinion/glenn_greenwald/2011/06/01/free_speech<br/>On free speech and extra-legal killings.</li>
+</ul>

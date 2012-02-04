@@ -1,0 +1,26 @@
+--- 
+layout: post
+title: Chaos Communication Camp 2011
+date: 2011-8-15
+comments: true
+categories: 
+- private
+- review
+---
+After "What the Hack":http://en.wikipedia.org/wiki/What_the_Hack in 2005 and the "Chaos Communication Camp 2007":http://events.ccc.de/camp/2007/Intro/ this was my third hacker camp and once again it was an inspiring, funny, chaotic and productive week of talks, hacking, partying, networking and more.
+
+Monday was mostly spent driving to the camp, which all in all went rather smoothly. All hail to Tesco where we picked up a lot of equipment, including the super awesome tent we slept in. Tuesday was a good opportunity to get a first impression of the camp, see who's there, starting to socialize and having a party. 
+
+On Wednesday the talks started and I saw three of them. "Strong encryption of credit card information":https://events.ccc.de/camp/2011/Fahrplan/events/4421.en.html was really quite interesting and once again I was shocked by how insecure some very important aspects of our lives are. "Strahlung im Weltall":https://events.ccc.de/camp/2011/Fahrplan/events/4505.en.html dealt with space radiation and was part of the "Hackers in Space":http://events.ccc.de/camp/2011/Fahrplan/events/4551.en.html track of the conference. When you think web development is difficult, how about dealing with radiation that might randomly flip a bit? Last but not least "GPRS Intercept":https://events.ccc.de/camp/2011/Fahrplan/events/4504.en.html was another rather shocking talk, showing that GPRS security is as bad as GSM's. 
+
+Thursday I started with "Die psychologischen Grundlagen des Social Engineerings":https://events.ccc.de/camp/2011/Fahrplan/events/4478.en.html, which was a really good and interesting talk by Stefan Schumacher, who's a really nice guy who spent quite a bit of time at our "village":http://leiwandville.soup.io/. "Steal Everything, Kill Everyone, Cause Total Financial Ruin!":https://events.ccc.de/camp/2011/Fahrplan/events/4488.en.html was another social engineering related talk and very entertaining. I got to talk to Jayson later that night and he really is as adorable as he says ;-) One of the talks I was most looking forward to was "Hacking DNA":https://events.ccc.de/camp/2011/Fahrplan/events/4472.en.html and I wasn't disappointed. As an added bonus Marc took some time on Saturday to come over to our village and help us with some really useful information on how to get a biohacking group going at a hackerspace. 
+
+Friday I spent mostly socializing, but I also went to see 2 talks. "She-Hackers: Millennials and Gender in European F/LOSS Subculture":https://events.ccc.de/camp/2011/Fahrplan/events/4487.en.html unfortunately was the worst lecture I saw at this camp, which is a real shame considering that the topic at hand was very interesting. In the evening I watched "Certified programming with dependent types":https://events.ccc.de/camp/2011/Fahrplan/events/4426.en.html, which was a fairly interesting introduction to the "Coq Proof Assistant":http://coq.inria.fr/. As often with Andreas's talks the title and abstract suggested slightly more, but it still was a solid and interesting presentation.
+
+Saturday started rather late for me due to Friday night's party, but I still woke up in time for "Moonbounce Radio Communication":https://events.ccc.de/camp/2011/Fahrplan/events/4597.en.html, held by members of Metalab's amateur radio crew. Later that day the Metalab was on stage again, this time in the form of "Rethinking online news":https://events.ccc.de/camp/2011/Fahrplan/events/4491.en.html, which was an awesome presentation that led to a nice little meetup of interested parties the next afternoon. Stay tuned on this front, there might be interesting things happening in the not too distant future! The most amazing part of the day for me though was taking a 20 minute flight in an "Antonov An-2":http://en.wikipedia.org/wiki/Antonov_An-2 from 1968, which was really cool and worth every cent of the 45 Euro it cost.
+
+On Sunday I watched "Data Mining Your City":https://events.ccc.de/camp/2011/Fahrplan/events/4445.en.html, which was not as interesting as I'd hoped for. It sadly also was the day where we had to say goodbye to the camp :-(
+
+Random thoughts: It's super inspiring to spend an entire week around several thousand intelligent and creative people and like always after such an event I feel invigorated and full of ideas. I also finally should learn not to count on getting any work on one of my projects done at the camp, it never really works. Sometimes I wonder why I even bother bringing my laptop, an iPad or Netbook would probably be sufficient. But then why would I sit in front of my computer working on the same stuff I'm working on for the rest of the year when I'm surrounded by loads of interesting things and people I haven't met yet?
+
+I <3 you, Chaos Communication Camp!

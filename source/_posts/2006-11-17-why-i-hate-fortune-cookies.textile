@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: Why I hate fortune cookies
+date: "2006-11-17"
+comments: true
+categories: 
+- personal
+- rants
+---
+On nearly every system I use, my ~/.bashrc calls "fortune -se". When I logged in right now I just got the following:
+
+<b>"You will be successful in love."</b>
+
+I won't go into any details, but getting this exact quote today is about as ironic as it gets. Or maybe fortune just has a very strange interpretation of "succesful".
+
+Sweetmorn, The Aftermath 29, 3172 YOLD

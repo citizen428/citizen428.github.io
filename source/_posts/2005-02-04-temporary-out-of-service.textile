@@ -1,0 +1,13 @@
+---
+layout: post
+title: Temporary out of service
+date: 2005-2-4
+comments: true
+categories:
+- gentoo
+---
+Today I've learned a valuable lesson the hard way: don't, I repeat, don't type <b>anything</b> in a shell while your mind is occupied with something else. I've seriously screwed up my system today because of this exact reason† and it took me quite a while to get everything back in a more or less working state.
+
+I will have to use my limited time over the next few days to iron out the last few glitches, before I'm able to do something useful again.
+
+† For all the curious ones: the incident involved <i>rm</i> and a wrong parameter. You can figure out what that means by yourself, once you stop laughing...

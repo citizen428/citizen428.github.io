@@ -1,0 +1,23 @@
+--- 
+layout: post
+title: Information Overload 2010-11-28
+date: "2010-11-28"
+comments: true
+categories: 
+- informationoverload
+- programming
+- science
+- technology
+---
+<ul>
+<li>"Hard-Coding Bias in Google 'Algorithmic' Search Results":http://www.benedelman.org/hardcoding/<br/>I always thought that this is rather obvious, but some facts never hurt. I'm currently experimenting with using "Duck Duck Go":http://duckduckgo.com/ as my default search engine.</li>
+<li>"Facebook 'threatens' web future":http://www.theregister.co.uk/2010/11/20/berners_lee_says_facebook_a_thret_to_web/<br/>"Tim Burners-Lee":http://en.wikipedia.org/wiki/Tim_Berners-Lee about Facebook, mobile apps, net neutrality and the future of the web.</li>
+<li>"How much are startup options worth?":http://www.danshapiro.com/blog/2010/11/how-much-are-startup-options-worth/<br/>Some help on guesstimating the worth of your startup shares.</li>
+<li>"Letting your mind wander is a major cause of unhappiness":http://io9.com/5687282/<br/>Many religions and philosophies teach that a wandering mind is an unhappy mind and that we should learn to live in the moment. Now there's some scientific evidence to back this up.</li>
+<li>"The Mexican Drug War in One Lesson: Know Your Zetas!":http://exiledonline.com/the-mexican-drug-war-in-one-lesson-know-your-zetas/<br/>Very interesting background information on the ongoing Mexican drug war.</li>
+<li>"Kostenlose Zeitschriften für Wissenschaft und Forschung":http://www.scienceblogs.de/astrodicticum-simplex/2010/11/kostenlose-zeitschriften-uber-wissenschaft.php<br/>A list of freely available science and research magazines (in German).</li>
+<li>"VBS meets...Issei Sagawa":http://www.vbs.tv/watch/vbs-meets/vbs-meets-issei-sagawa-part-1<br/>A half hour documentary on Japanese cannibal Iseei Sagawa. Not for the faint of heart, but very interesting.</li>
+<li>"15-minute writing exercise closes the gender gap in university-level physics":http://blogs.discovermagazine.com/notrocketscience/2010/11/25/15-minute-writing-exercise-closes-the-gender-gap-in-university-level-physics/<br/></li>
+<li>"Rails for Zombies":http://railsforzombies.org/<br/>A new take on programming tutorials, "E nvy Labs'":http://envylabs.com/ Rails for Zombies consists of videos, slides and labs. It's entirely browser-based, including the exercises, so you don't even have to install Ruby or Rails on your own machine.</li>
+<li>"Brian Beckman: Don't fear the Monad":http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads<br/>Great introduction to <a href="http://en.wikipedia.org/wiki/Monad_(category_theory)">Monads</a></li>
+</ul>

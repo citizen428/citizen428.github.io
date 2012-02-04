@@ -1,0 +1,19 @@
+---
+layout: post
+title: Some more movie recommendations
+date: 2007-7-9
+comments: true
+categories:
+- movies
+- tips
+---
+Some more good movies I've recently (re-)watched:
+
+"American Hardcore":http://www.imdb.com/title/tt0419434/
+"Choyonghan kajok":http://www.imdb.com/title/tt0188503/
+"Bijitâ Q":http://www.imdb.com/title/tt0290329/
+"Katakuri-ke no kôfuku":http://www.imdb.com/title/tt0304262/
+"Herz aus Glas":http://www.imdb.com/title/tt0074626/
+"Tideland":http://www.imdb.com/title/tt0410764/
+
+Setting Orange, Confusion 44, 3173 YOLD

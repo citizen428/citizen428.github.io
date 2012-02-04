@@ -1,0 +1,37 @@
+--- 
+layout: post
+title: A tiring week
+date: 2007-3-1
+comments: true
+categories: []
+
+---
+<b>Thursday</b>
+Got bored at work, so I ordered an "ASUS WL-500GP":http://www.asus.com/products4.aspx?modelmenu=2&model=1121&l1=12&l2=43&l3=0 to finally replace my trusty old Netgear MR314. It's supported by "OpenWrt":http://openwrt.org/ and "DD-WRT":http://www.dd-wrt.com/dd-wrtv2/index.php, features 2 USB Ports and is pretty cheap. What more could I possibly ask for?
+
+In the evening I met "parasew":http://parasew.net/blog/ whom I haven't seen in a long time and who really should take up blogging again! Alas it was a little too nice, which made me stay for way too long (around 3:30am) given that I had to get up at 6:30am on Friday.
+
+<b>Friday</b>
+Tired, tired, tired! Work wasn't supposed to be stressful, since a "Brocade":http://www.brocade.com/index.jsp fibre channel workshop was scheduled for the whole day. But of course one of our customers had a problem which needed fixing, so "Christian":http://www.luchmhor.net and me had to go there to prove our ninja-like problem solving abilities. 
+
+<b>Saturday</b>
+Attended a Taekwondo seminar from 2pm until around 7:15pm, which was really cool but quite exhausting. I also took my first grading (including "breaking":http://en.wikipedia.org/wiki/Breaking_%28martial_arts%29) and promoted to 9th "kup":http://en.wikipedia.org/wiki/Taekwondo#Kup_ranks_and_belt_colors.
+
+<b>Sunday</b>
+Didn't do much for most of the day since I had quite a bad hangover (hey, at least this time I had an excuse for getting drunk), but then decided to attend the pretty nice "XHTML+CSS workshop":http://metalab.at/wiki/Client-side_web_workshop at the "Metalab":http://metalab.at. 
+
+<b>Monday</b>
+Since I couldn't really sleep the night before, I was pretty tired for most of the day... Nonetheless I attended a friend's birthday party in the evening, where I stayed until around 2am. 
+
+<b>Tuesday</b>
+Deciding that I don't want to waste my evening with lying around in front of the TV, I dragged my tired body to the Metalab. "Unfortunately" it was way too interesting there, which made me come home way later than I expected (around 2:30am).
+
+<b>Wednesday</b>
+After three nighta with less than 6 hours of sleep, I was quite afraid of the evening, where "red667's":http://blog.red667.org/ birthday party was scheduled. Surprisingly it wasn't as devastating as last year's, but still was really good fun. Happy Birthday again you punk! 
+
+<b>Today</b>
+Since I took that day off, I finally managed to get some sleep. I wasn't all lazy though, and rearranged my apartment to adjust to my living alone again. I now have a real living room, so my bed room isn't jammed with electronic equipment anymore. 
+
+I've also received an invitation to become a beta tester for "Joost":http://joost.com/ (formerly know as The Venice Project), and judging from my short fiddling around with it, this thing is really hot. Expect to hear more about Joost, as soon as I have a little time to play around with it. 
+
+Setting Orange, Chaos 60, 3173 YOLD

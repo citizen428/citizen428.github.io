@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: Unsavory updates
+date: 2009-6-15
+comments: true
+categories: 
+- programming
+- ruby
+---
+Today I felt like playing around with "unsavory":http://github.com/citizen428/unsavory/tree/master a bit more, which led to some minor improvements: 
+<ul>
+<li>code reorganization: the delicious class got moved to a separate file in lib/ and got a new method for easier retrieval of the URLs array</li>
+<li>login credentials can now be read from a config file, thus making HighLine optional</li>
+</ul>
+Next on my list is packaging this up as a gem so people can simply install it with 'gem install unsavory'.

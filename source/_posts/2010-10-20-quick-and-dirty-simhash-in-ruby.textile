@@ -1,0 +1,56 @@
+---
+layout: post
+title: Quick and dirty simhash in Ruby
+date: "2010-10-20"
+comments: true
+categories:
+- ruby
+---
+Today at work we ended up talking about simhashing (a hash function which generates similar hashes for similar inputs) and I found "this nice article":http://matpalm.com/resemblance/simhash/ with a step by step explanation of the algorithm, so I wrote a quick Ruby version (needs 1.9):
+
+{% codeblock lang:ruby %}
+class String
+
+  def shingles
+    self.split(//).each_cons(2).map(&:join).uniq
+  end
+
+  def simhash
+    v = Array.new(64, 0)
+    hashes = shingles.map(&:hash)
+    hashes.each do |hash|
+      hash.to_s(2).chars.each_with_index do |bit, i|
+        bit.to_i & 1 == 1 ? v[i] += 1 : v[i] -= 1
+      end
+    end
+    v.map{ |i| i >= 0 ? 1 : 0 }.join
+  end
+
+  def hamming_distance(other)
+    other_sh = other.simhash
+    self.simhash.chars.each_with_index.inject(0) do |total, (bit, i)|
+      total += 1 if bit != other_sh[i]
+      total
+    end
+  end
+
+end
+{% endcodeblock %}
+
+Getting the "features" of a string:
+{% codeblock lang:ruby %}
+>> "This is a test string".shingles
+#=> ["Th", "hi", "is", "s ", " i", " a", "a ", " t", "te", "es", ...]
+{% endcodeblock %}
+
+Simhashing a string:
+{% codeblock lang:ruby %}
+>> "This is a test string".simhash
+#=> "0100110001100001001100010000000010001001001000110110000010101100"
+{% endcodeblock %}
+
+Calculating the "Hamming distance":http://en.wikipedia.org/wiki/Hamming_distance between the symhashes of two strings (higher numbers mean less similar, with 64 being the highest possible score):
+{% codeblock lang:ruby %}
+"This is a test string".hamming_distance("This is another test string")
+#=> 8
+{% endcodeblock %}

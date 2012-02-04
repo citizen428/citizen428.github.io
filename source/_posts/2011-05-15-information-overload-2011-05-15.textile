@@ -1,0 +1,24 @@
+--- 
+layout: post
+title: Information Overload 2011-05-15
+date: 2011-5-15
+comments: true
+categories: 
+- informationoverload
+- math
+- netculture
+- politics
+- technology
+---
+<ul>
+<li>"Crunching the numbers: How many people have ever lived?":http://1000memories.com/blog/75-number-of-people-who-have-ever-lived<br/>Why is math awesome? Because it answers questions like this one. Don't worry, no spoilers ;-)</li>
+<li>"The Pirate Bay: 'The Battle of Internets is About to Begin'":http://torrentfreak.com/the-pirate-bay-the-battle-of-internets-is-about-to-begin-110509/<br/>TPB's answer to the threat of a "Great Firewall" in Europe.</li>
+<li>"2011 Trends":http://www.logolounge.com/article.asp?aid=lnPf<br/><a href="http://www.logolounge.com/default.asp">LongoLounge.com</a>'s annual logo design trends.</li>
+<li>"How to Stop Worrying and Learn to Love the Internet":http://www.douglasadams.com/dna/19990901-00-a.html<br/>Wow, Douglas Adams already had a better grasp of the internet in 1999 than a lot of the people in decision-making positions have today.</li>
+<li>"Silver Needle in the Skype":http://www.blackhat.com/presentations/bh-europe-06/bh-eu-06-biondi/bh-eu-06-biondi-up.pdf<br/>Since everyone was talking about Skype this week, I thought I'd include this very interesting presentation from Black Hat 2006.</li>
+<li>"The History of Pretty Much Everything":http://scienceblogs.com/startswithabang/2011/04/the_history_of_pretty_much_eve.php<br/>If you like astronomy and/or physics, you'll probably like this too.</li>
+<li>"Anonymous: peering behind the mask":http://www.guardian.co.uk/technology/2011/may/11/anonymous-behind-the-mask<br/>Pretty good article by "Jana Herwig":http://twitter.com/#!/digiom on Anonymous.</li>
+<li>"Kill Math":http://worrydream.com/KillMath/<br/>While I don't agree with everything said, this article does have some interesting points and a great visualization of integration.</li>
+<li>"Satellite Images of North Korea Prison Camps Find 200,000 Living as Slaves":http://singularityhub.com/2011/05/12/satellite-images-of-north-korea-prison-camps-find-200000-living-as-slaves/<br/>A follow-up to last week's article by Amnesty International, because this is something we shouldn't forget about.</li>
+<li>"Are you living in a computer simulation?":http://www.simulation-argument.com/simulation.html<br/>That's exactly the kind of question I want answered by Oxford's philosophy department.</li>
+</ul>

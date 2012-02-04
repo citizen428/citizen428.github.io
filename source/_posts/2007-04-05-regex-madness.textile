@@ -1,0 +1,21 @@
+--- 
+layout: post
+title: RegEx madness
+date: 2007-4-5
+comments: true
+categories: 
+- development
+- regex
+---
+Today at work we needed to find a regular expression to extract the name of a backup job from an SNMP trap. The trap looks as follows:
+
+"[beginning garbage]job name[more garbage]"
+
+The job name can consist of several words containing alphanumeric characters, separated by either a space, an underscore or a dash. Here's the crucial part of the final solution I came up with:
+
+<b>((?:\\w+[- ]?)*\\w*)</b>
+
+
+When you use this in a longer regex that also filters out the beginning garbage, this works like a charm even for strange job names as "foo-bar_baz qux_ madness".
+
+Setting Orange, Discord 22, 3173 YOLD

@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: Kiva - Loans that change lives
+date: 2007-6-8
+comments: true
+categories: []
+
+---
+"Kiva":http://www.kiva.org/
+
+<i>Kiva lets you connect with and loan money to unique small businesses in the developing world. By choosing a business on Kiva.org, you can "sponsor a business" and help the world's working poor make great strides towards economic independence. Throughout the course of the loan (usually 6-12 months), you can receive email journal updates from the business you've sponsored. As loans are repaid, you get your loan money back.</i>
+
+Prickle-Prickle, Confusion 13, 3173 YOLD

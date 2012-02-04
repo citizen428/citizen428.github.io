@@ -1,0 +1,23 @@
+--- 
+layout: post
+title: "Review: Create Your Own Programming Language"
+date: 2010-11-8
+comments: true
+categories: 
+- book
+- programming
+- review
+---
+<strong>Synopsis:</strong>
+"Create Your Own Programming Language":http://createyourproglang.com/ by Marc-Andre Cournoyer is a guide on - surprise - creating your own programming language, consisting of a 53 page PDF, exercises and solutions, a toy language written in Ruby and a more full-featured one hosted on the JVM. There's also a 10 minute long screencast on extending the latter, as well as an "online community":http://createyourproglang.com/community/.
+
+<strong>The author:</strong>
+Hailing from Montreal, Marc-Andre is no stranger, especially if you are a Rubyist. Some of his notable projects include the web server "Thin":http://code.macournoyer.com/thin/, the Ruby interpreter "tinyrb":http://code.macournoyer.com/tinyrb/ and the web site "Refactor My Code":RefactorMyCode.com. He also co-founded a company and is now CTO of another one.
+
+<strong>The book:</strong>
+Obviously 53 pages are not enough to teach you everything about writing your own production-ready programming language, but that's also not what the author advertises. What you do get is a quite well-made little PDF, explaining all the important components - lexer, parser, interpreter, runtime model, compiler and virtual machine - of a toy language called "Awesome", which is basically a subset of Ruby with Python-style indentation. 
+
+After the introduction, all chapters follow the same basic structure. First a brief introduction of the topic at hand, including pointers to well established projects like "Flex":http://flex.sourceforge.net/manual/, "Ragel":http://www.complang.org/ragel/, "Bison":http://www.gnu.org/software/bison/ or "LLVM":http://llvm.org/. After that you'll find some well-documented and easy to understand Ruby code, implementing what you just learned about. Chapters finish with small exercises, e.g. implementing the WhileNode in the interpreter or adding inheritance to the runtime. In the end there are some parting thoughts on topics like homoiconicity and self-hosting, as well as a resources section including pointers to events, forums, blogs and notable languages. If you are a language geek there's probably not much new here, but it's a nice addition. Last but not least you'll find solutions to the exercises. Once you came this far you can dive into the JVM language and experiment with extending it.
+
+<strong>Summary:</strong>
+Would I recommend this book? That depends on what you are looking for. If you want a detailed academic text, "Create Your Own Programming language":http://createyourproglang.com/ is definitely not for you. Likewise if you already implemented your own language or have a good idea about what's involved in doing so, there are also better books to spend your money on. If however you are looking for a fun quick intro to the topic, including easy to understand and well-document code, as well as the right terms to feed into your preferred search engine, this might just be what you are looking for, but you'll have to decide if you are willing to spend US$40 on that, which I personally find a bit too steep. 

@@ -1,0 +1,19 @@
+--- 
+layout: post
+title: So, you want to learn Haskell?
+date: "2010-12-29"
+comments: true
+categories: 
+- haskell
+- programming
+---
+<a href="http://en.wikipedia.org/wiki/Haskell_(programming_language)">Haskell</a> is a great language and well worth your time. Here are some freely available learning resources for the aspiring Haskeller:
+
+<ul>
+<li>The excellent "Learn You a Haskell for Great Good":http://learnyouahaskell.com/ by Miran Lipovaca is probably the best free Haskell resource on the web. It will "soon be available in print":http://nostarch.com/lyah.htm, but the author told me that the website will be updated to reflect the changes made for the book!</li>
+<li>O'Reilly's "Real World Haskell":http://book.realworldhaskell.org/read/ also has a an online version. I've only read the first few chapters of this, but people told me it's quite good.</li>
+	<li>The "Haskell tutorial":http://lisperati.com/haskell/ by "Conrad Barski":http://lisperati.com/, author of "Land of Lisp":http://landoflisp.com/ and "Casting SPELs in Lisp":http://lisperati.com/casting.html.</li>
+	<li>In "Write Yourself a Scheme in 48 Hours":http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours you'll implement a small Scheme in Haskell, which is a nice introduction to "Parsec":http://legacy.cs.uu.nl/daan/parsec.html.</li>
+</ul>
+
+If you don't mind spending money to dive into Haskell, I can really recommend "Programming in Haskell":http://www.cs.nott.ac.uk/~gmh/book.html, which is an excellent introduction to the language. Last but not least I also want to point out "Haskellers":http://www.haskellers.com/, a networking site for finding/offering Haskell-related jobs.

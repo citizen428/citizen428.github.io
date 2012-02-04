@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: Mommy, look what I found...
+date: 2005-7-27
+comments: true
+categories: 
+- blogs
+- links
+---
+"This":http://www.hanttula.com/exhibits/freakyfood/
+"is":http://geekz.co.uk/lovesraymond/
+"just":http://www.officeguns.com/
+"another":http://www.hanzismatter.com/
+"linkdump":http://www.supermemo.com/articles/sleep.htm

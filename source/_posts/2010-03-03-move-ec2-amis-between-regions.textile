@@ -1,0 +1,23 @@
+--- 
+layout: post
+title: Move EC2 AMIs between regions
+date: 2010-3-3
+comments: true
+categories: 
+- aws
+---
+Today I spent some time figuring out how to move <a href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/index.html?creating-an-ami-ebs.html">EBS-backed AMIs</a> between different EC2 regions. To save you the effort, here&#8217;s a quick summary:
+<ul>
+<li> create a volume from the snapshot backing the AMI</li>
+<li> attach this volume to a running instance and mount it</li>
+<li> create a new volume in the target region</li>
+<li> attach to a running instance, format and mount</li>
+<li> in the source region, connect to your instance</li>
+<li> rsync (over ssh, so no messing with security groups) the mounted volume to the target volume</li>
+<li> once the rsync is done, create a snapshot in the target region</li>
+<li> register this snapsho as new AMI with <a href="http://docs.amazonwebservices.com/AmazonEC2/dg/2007-01-03/CLTRG-register.html">ec2-register</a></li>
+</ul>
+
+Not rocket science, but definitely not as good as just being able to share your own AMIs between regions...
+
+<strong>Update:</strong> Robert J. Berger wrote this <a href="http://blog.ibd.com/scalable-deployment/copy-an-ebs-ami-image-to-another-amazon-ec2-region/">detailed step by step guide</a> based on my short summary, you should go check it out!

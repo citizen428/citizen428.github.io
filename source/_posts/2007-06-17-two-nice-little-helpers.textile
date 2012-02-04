@@ -1,0 +1,19 @@
+--- 
+layout: post
+title: Two nice little helpers
+date: 2007-6-17
+comments: true
+categories: 
+- backup
+- google
+- mac
+- software
+- sync
+---
+"Mozy Online Backup: Mac Mozy":https://mozy.com/mozy/macmozy
+Been using this for around 2 weeks now, really sweet! If you want to sign up, please use this "referal link":https://mozy.com/?ref=ABK655 which gives both of us more space (of course this also works when you're going to sign up to use the Windows version).
+
+"Spanning Sync":http://spanningsync.com/
+_Synchronize Google Calendar and Apple iCal. Share calendars between multiple Macs. Share calendars with your coworkers, family, and friends. And while you're at it, connect Google Calendar to your iPod, mobile phone, and other devices._ Finally a tool I can use to sync iCal and Google Calendar in *both* directions!
+
+Pungenday, Confusion 22, 3173 YOLD

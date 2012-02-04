@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: Catching up
+date: 2005-3-12
+comments: true
+categories: 
+- gentoo
+---
+This semester seems to be even worse than the last one, although I wouldn't have thought that possible. This means time for Gentoo may be less than what I'd want it to be, but I fear that can't be avoided when one's studies are in their final year.
+
+Anyway, today I finally found some time to do a lot of long overdue stable marking and also created an <a href="http://dev.gentoo.org/~citizen428/hypermail/gentoo-bsd/">archive</a> of the gentoo-bsd mailing list, which I will host until Gmane picks up the list. I hope that I will be able to do some "real" work next week.
+
+Oh, and thanks to dsd and all the involved -infra guys for finally making <a href="http://planet.gentoo.org/">Planet Gentoo</a> a reality!

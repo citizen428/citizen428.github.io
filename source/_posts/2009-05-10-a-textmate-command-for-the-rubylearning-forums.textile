@@ -1,0 +1,25 @@
+---
+layout: post
+title: A TextMate command for the RubyLearning forums
+date: 2009-5-10
+comments: true
+categories:
+- osx
+- ruby
+- rubylearning
+- textmate
+---
+As we all know posting code to "Moodle":http://moodle.org/ (the software that powers "RubyLearning":http://rubylearning.org) can be a bit cumbersome. I therefore created a TextMate command which will
+
+<ul>
+<li> take the currently active file</li>
+<li> replace all occurrences of < with the HTML-entity</li>
+<li> wrap all of that in [code ruby] tags and</li>
+<li> copy it to the clipboard, ready to be pasted into the forums.</li>
+</ul>
+
+Source:
+<script src="http://gist.github.com/109576.js"></script>
+
+Download:
+<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a>

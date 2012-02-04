@@ -1,0 +1,23 @@
+--- 
+layout: post
+title: A Ruby reading list
+date: 2010-6-8
+comments: true
+categories: 
+- programming
+- ruby
+---
+Since I just compiled this list for the RubyLearning forums, I might as well post it here. Below you'll find articles I often recommend to our students, plus some personal favorites:
+<ul>
+<li><a href="http://www.caliban.org/ruby/rubyguide.shtml">The Unofficial Ruby Usage Guide</a> </li><br />
+<li><a href="http://www.hokstad.com/ruby-object-model.html">The Ruby Object Model &#8211; Structure and Semantics</a> </li><br />
+<li><a href="http://viewsourcecode.org/why/hacking/seeingMetaclassesClearly.html">Seeing Metaclasses Clearly</a> </li><br />
+<li><a href="http://ola-bini.blogspot.com/2006/09/ruby-singleton-class.html">The Ruby Singleton Class</a> </li><br />
+<li><a href="http://practicalruby.blogspot.com/2007/02/ruby-metaprogramming-introduction.html">A Ruby Metaprogramming Introduction</a> </li><br />
+<li><a href="http://viewsourcecode.org/why/hacking/theFullyUpturnedBin.html">The Fully Upturned Bin</a> </li><br />
+<li><a href="http://coaxialhost.com/tutorials/writing_ruby_extensions.html">Writing Ruby extensions</a> </li><br />
+<li><a href="http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers/">Untangling Evented Code with Ruby Fibers</a> </li><br />
+<li><a href="http://judofyr.net/posts/tailin-ruby.html" title="faking tail call optimization in Ruby">Tailin&#8217; Ruby</a> </li><br />
+<li><a href="http://tagaholic.me/2009/05/11/demystifying-irb-commands.html">Demistifying IRB&#8217;s Commands</a> </li><br />
+<li><a href="http://www.engineyard.com/blog/2010/everything-you-need-to-know-about-unicorn/">Everything You Need to Know About Unicorn</a> </li><br />
+</ul>

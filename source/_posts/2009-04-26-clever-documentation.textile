@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: Clever documentation
+date: 2009-4-26
+comments: true
+categories: 
+- programming
+- smalltalk
+---
+Playing with <a href="http://www.squeak.org/">Squeak</a>'s Method Finder, I discovered a really neat feature that I wish would be available for Ruby documentation. Here's the description from the built-in help:
+
+<i>[...] use an example to find a method in the system.  Type receiver, args, and answer in the top pane with periods between the items.  3. 4. 7</i>
+
+Yes, this means that if you want to know how to do modulo in Smalltalk, you can open the Method Finder, type <i>7. 3. 1</i> and see that the answer is <i>Number>>\\</i>, whereas <I>'abc' . 'ABC'</i> will tell us about <i>String>>asUppercase</i>.

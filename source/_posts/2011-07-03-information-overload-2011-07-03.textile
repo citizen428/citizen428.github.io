@@ -1,0 +1,24 @@
+--- 
+layout: post
+title: Information Overload 2011-07-03
+date: 2011-7-3
+comments: true
+categories: 
+- informationoverload
+- math
+- medicine
+- politics
+- technology
+---
+<ul>
+<li>"New Car Engine Sends Shock Waves Through Auto Industry":http://news.discovery.com/autos/new-car-engine-sends-shockwaves-through-auto-industry-110405.html<br/>Interesting new concept for an energy-efficient engine, with a possible prototype by the end of the year.</li>
+<li>"Sugar rush":http://www.economist.com/blogs/dailychart/2011/06/diabetes<br/>Interesting info graphic on the increase of diabetes around the world. In Austria the last 30 years saw an increase of 30-46% for women and over 60% for men.</li>
+<li>"What Google+ Learned from Buzz and Wave":http://smarterware.org/8248/what-google-learned-from-buzz-and-wave<br/>Since Google+ is all the hype this week, I had to include an article on it. At least this one has some actual content.</li>
+<li>"Pruney fingers grip better":http://www.nature.com/news/2011/110628/full/news.2011.388.html<br/>The wringly fingers we get when bathing? There actually might be a good reason for that.</li>
+<li>"Time to Close the Security Theater":http://blogs.forbes.com/artcarden/2011/06/30/time-to-close-the-security-theater/<br/>This is Forbes quoting Bruce Schneier and calling for abolishing the TSA, while also suggesting "a competitive market for air travel in which the airports, the airways, and the airliners are in private hands". I agree with one of the above two points, can you guess which? ;-)</li>
+<li>"A Party that smiles to the world, but tightens its grip at home":http://www.information.dk/272094<br/>Having lived in China, I'm always interested in what's going on in the country. From what I saw on Twitter over the last few month, the document cited in this article may well be real.</li>
+<li>"Pharmageddon: how America got hooked on killer prescription drugs":http://www.guardian.co.uk/world/2011/jun/09/us-drugs-oxycodone-painkillers-florida<br/>While the headline is terrible, the article tackles a very real problem, prescription drug abuse in the US.</li>
+<li>"The Kempner Series - A modified harmonic series":http://hippomath.blogspot.com/2011/07/kempner-series-modified-harmonic-series.html<br/>Interesting how little it takes to make the harmonic series convergent.</li>
+<li>"Dasein unter Plastikm&uuml;ll":http://derstandard.at/1308679612170/Suedspanien-Dasein-unter-Plastikmuell<br/>An interview about the situation of migrant workers in Almeria. Is this what the European Union wants to stand for? (in German)</li>
+<li>"Is Sugar Toxic?":http://www.nytimes.com/2011/04/17/magazine/mag-17Sugar-t.html?_r=3&pagewanted=all<br/>Now that people are getting wary of H.F.C.S., some scientists start suspecting that "normal" sugar isn't much better.</li>
+</ul>

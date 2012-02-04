@@ -1,0 +1,9 @@
+--- 
+layout: post
+title: FilterableEnumerable
+date: 2009-4-5
+comments: true
+categories: 
+- ruby
+---
+My recent post on "Enumerable#filter":http://citizen428.net/archives/372-Enumerablefilter.html created a bit of discussion on RubyFlow, which led to a "much nicer implementation than mine":http://gist.github.com/89491. Enjoy!

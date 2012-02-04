@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: Dawn of the Dead, Ruby Monday, Doc FreeBSD
+date: 2005-8-15
+comments: true
+categories: 
+- FOSS
+- gentoo
+- ruby
+---
+The wonders of FOSS: jabber4r is a Jabber library for Ruby, which has seen its last release in early March 2004. As the package seemed to have problems with newer (>=1.8.2) versions of Ruby, I refrained from adding it to the tree. Well, at least until today, when my Rubyforge tracker informed me that jabber4r-0.8.0 has just been released. It's in CVS already, so it soon should be available on a mirror near you. Enjoy!
+
+Also new to the tree is PDF::Writer, a library that allows you to create PDFs from Ruby. Sounds cool? It sure is! Go check out the "demos":http://ruby-pdf.rubyforge.org/pdf-writer/demos/index.html if you don't believe me...
+
+Also some "kind soul":http://www.leyrer.priv.at/martin/ informed me that yesterday I posted a wrong link to my Gentoo related ta-da list, so here's the correct URL: "http://citizen428.tadalist.com/lists/public/95952":http://citizen428.tadalist.com/lists/public/95952. I also updated my original post with the correct address.
+
+The last paragraph of this blog goes out to all the Gentoo/FreeBSD developers, especially "Flameeyes":http://dev.gentoo.org/~flameeyes/ who submitted a comment to my last entry: if you need anything added to the "Gentoo/FreeBSD guide":http://dev.gentoo.org/~citizen428/doc/gentoo-freebsd.html, just send me an email with the desired content and I'll update the doc ASAP. Really. ;)

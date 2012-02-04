@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: Wouldn't it be nice if Ruby...?
+date: 2010-4-13
+comments: true
+categories: 
+- programming
+- ruby
+---
+I love questions that start with "Wouldn't it be nice if Ruby &lt;insert perceived missing feature&gt;?" because more often than not the answer is: "Just tell it to!"
+
+Something like this happened on RubyLearning today, when fellow mentor José asked "<i>Wouldn't it be nice if Ruby was smart enough to realize that when a division has a remainder then it should use a floating result?</i>" and once again the answer was "You mean like this?":
+
+<script src="http://gist.github.com/365000.js?file=gistfile1.ru"></script>
+
+I'm definitely not saying monkey-patching core classes with unexpected behavior is a smart idea (it's NOT), but I always like how you can add behavior to Ruby if you really feel it's necessary (and once again, I don't in this case).

@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: Happy Fair Use Day!
+date: 2007-7-11
+comments: true
+categories: 
+- copyright
+- disobey
+- web
+---
+"Fair Use Day":http://www.fairuseday.com/index.php/about-fairuse/
+
+Boomtime, Confusion 46, 3173 YOLD

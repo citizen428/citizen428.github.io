@@ -1,0 +1,26 @@
+--- 
+layout: post
+title: Fun with Twitter and Ruby
+date: "2009-11-23"
+comments: true
+categories: 
+- programming
+- ruby
+- twitter
+---
+I'm currently toying around with some ideas for Twitter bots etc. so I had a look at some of the available gems out there. Sometimes Ruby makes stuff almost too simple... ;-) Here are a few nice snippets of what you could do with a couple of minutes time and some Ruby:
+
+_Automatically translate all tweets for a given keyword:_ 
+<script src="http://gist.github.com/241437.js?file=gistfile1.rb"></script>
+
+_Daemonize the above:_
+Alternatively you can also follow a userid instead of a keyword and daemonize the whole thing, thus making it super easy to create a bot which posts translations of Matz's tweets:
+
+<script src="http://gist.github.com/241437.js?file=gistfile2.rb"></script>
+
+If you put this into a file like transbot.rb,  the command ruby transbot.rb will give you all the regular daemon commands like start, stop, etc.
+
+_Ruby is trendy:_
+Curious of getting a list of current trends on Twitter, without hashtags? There you go:
+<script src="http://gist.github.com/241437.js?file=gistfile3.rb"></script>
+Combining all these ideas you could easily write a bot that follows the current Twitter trends and posts translations of them in only a couple of lines. :-)

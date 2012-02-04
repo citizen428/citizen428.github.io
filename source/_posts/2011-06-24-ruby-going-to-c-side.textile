@@ -1,0 +1,101 @@
+---
+layout: post
+title: "Ruby: Going to the C side"
+date: 2011-6-24
+comments: true
+categories:
+- programming
+- ruby
+---
+Yesterday afternoon I decided it's about time I finally learn how to write Ruby C extensions, so I went ahead and rewrote one of our <a href="http://www.rubylearning.org/class/">RubyLearning.org</a> exercises in C. Here's the exercise description:
+
+{% blockquote %}
+Write a class called Person, that has balance as an instance variable and
+the following public method: show_balance.
+
+I shall create the Person object as follows:
+
+p = Person.new(40000)
+puts p.show_balance # calling the method
+{% endblockquote %}
+
+Here's the program in C, with relevant function signatures included as comments:
+
+{% codeblock lang:c %}
+#include <ruby.h>
+
+static VALUE initialize(VALUE self, VALUE amount) {
+  // VALUE rb_iv_set(VALUE obj, char *name, VALUE value)
+  rb_iv_set(self, "@balance", amount);
+  return self;
+}
+
+static VALUE show_balance(VALUE self) {
+  // VALUE rb_iv_get(VALUE obj, char *name)
+  return rb_iv_get(self, "@balance");
+}
+
+void Init_person() {
+  // VALUE rb_define_class(char *name, VALUE superclass)
+  VALUE cPerson = rb_define_class("Person", rb_cObject);
+
+  // void rb_define_method(VALUE classmod, char *name, VALUE(*func)(), int argc)
+  rb_define_method(cPerson, "initialize", initialize, 1);
+  rb_define_method(cPerson, "show_balance", show_balance, 0);
+}
+{% endcodeblock %}
+
+I think the code is very self-explanatory, almost like writing Ruby in C. As you can see we define a class called "Person" in the "Init_person" function (which is called by Ruby when it loads our module), where we add the functions as instance methods with "rb_define_method". To compile this, we need an extconf.rb, which contains the following:
+
+{% codeblock lang:c %}
+require 'mkmf'
+
+extension_name = 'person'
+create_makefile(extension_name)
+{% endcodeblock %}
+
+Now we can build and run it:
+
+{% codeblock lang:bash %}
+→ ruby extconf.rb
+creating Makefile
+→ make
+gcc -I. [output snipped]
+→ irb
+>> $:<<'.' #=> [..., '.']
+>> require 'person' #=> true
+>> p = Person.new(3000) #=> #<Person:0x00000100a01940 @balance=3000>
+>> p.show_balance #=> 3000
+{% endcodeblock %}
+
+As you can see everything works as if we had defined the class in Ruby. Let's add another method to deposit some money, which gives us a chance to demonstrate "rb_funcall":
+
+{% codeblock lang:c %}
+static VALUE deposit(VALUE self, VALUE amount) {
+  // VALUE rb_funcall(VALUE recv, ID id, int argc, ... )
+  VALUE result = rb_funcall(rb_iv_get(self, "@balance"), rb_intern("+"), 1, amount);
+  rb_iv_set(self, "@balance", result);
+  return result;
+}
+{% endcodeblock %}
+
+We also need to add this function as a method in "Init_person":
+
+{% codeblock lang:c %}
+ rb_define_method(cPerson, "deposit", deposit, 1);
+{% endcodeblock %}
+
+Does it work?
+
+{% codeblock lang:ruby %}
+>> p.deposit(400) #=> 3400
+{% endcodeblock %}
+
+It does and we've successfully created a Ruby class from C. Probably not the type of class you'd really implement this way, but good enough as an example.
+
+Recommended reading:
+
+<ul>
+<li>"Extending Ruby":http://www.ruby-doc.org/docs/ProgrammingRuby/html/ext_ruby.html from the PickAxe</li>
+<li>Mark Volkmann's presentation "Ruby C Extensions":http://java.ociweb.com/mark/NFJS/RubyCExtensions.pdf</li>
+</ul>

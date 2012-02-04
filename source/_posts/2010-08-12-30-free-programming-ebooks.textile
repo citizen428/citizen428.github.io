@@ -1,0 +1,103 @@
+---
+layout: post
+title: 30 free programming eBooks
+date: 2010-8-12
+comments: true
+categories:
+- links
+- programming
+- books
+---
+<i>Since this post got quite popular I decided to incorporate some of the excellent suggestions posted in the comments, so this list now has more than 50 books in it. BTW: I'm not very strict on the definition of "ebook", some of them are really just HTML versions of books. [UPDATED: 2012-01-18]</i>
+
+Learning a new programming language always is fun and there are many great books legally available for free online. Here's a selection of 30 of them:
+
+<p><strong>Lisp/Scheme:</strong><br/>
+<a href="http://www.cs.cmu.edu/~dst/LispBook/">Common Lisp: A Gentle Introduction to Symbolic Computation</a>
+<a href="http://www.htdp.org/">How to Design Programs</a>
+<a href="http://www.civilized.com/files/lispbook.pdf">Interpreting Lisp</a> (PDF, suggested by "Gary Knott":http://civilized.com)
+<a href="http://letoverlambda.com/index.cl">Let Over Lambda</a>
+<a href="http://www.paulgraham.com/onlisptext.html">On Lisp</a>
+<a href="http://www.gigamonkeys.com/book/">Practical Common Lisp</a>
+<a href="http://www.gnu.org/software/emacs/emacs-lisp-intro/html_mono/emacs-lisp-intro.html">Programming in Emacs Lisp</a>
+<a href="http://www.cs.brown.edu/~sk/Publications/Books/ProgLangs/">Programming Languages. Application and Interpretation</a> (suggested by <a href="http://alexott.blogspot.com/">Alex Ott</a>)
+<a href="http://www.cs.berkeley.edu/~bh/ss-toc2.html">Simply Scheme: Introducing Computer Science</a> (suggested by Peter Aronoff
+<a href="http://psg.com/~dlamkins/sl/">Successful Lisp: How to Understand and Use Common Lisp</a> (suggested by Juanito)
+<a href="http://mitpress.mit.edu/sicp/">Structure and Interpretation of Computer Programs</a>
+<a href="http://www.ccs.neu.edu/home/dorai/t-y-scheme/t-y-scheme.html">Teach Yourself Scheme in Fixnum Days</a>
+</p>
+
+	<p><strong>Ruby:</strong><br />
+<a href="http://ruby.bastardsbook.com/">The Bastards Book of Ruby</a> (suggested by Dan Nguyen)
+<a href="http://www.cleveralgorithms.com/">Clever Algorithms</a> (suggested by Tales Arvelos)
+<a href="http://www.brpreiss.com/books/opus8/">Data Structures and Algorithms with Object-Oriented Design Patterns in Ruby</a>
+<a href="http://ruby.learncodethehardway.org/">Learn Ruby the Hard Way</a>
+<a href="http://pine.fm/LearnToProgram/">Learn to Program</a>
+<a href="http://macruby.labs.oreilly.com/">MacRuby: The Definitive Guide</a>
+<a href="http://humblelittlerubybook.com/">Mr. Neighborly's Humble Little Ruby Book</a> (suggested by <a href="http://twitter.com/tundal45">tundal45</a>)
+<a href="http://ruby-doc.org/docs/ProgrammingRuby/">Programming Ruby</a>
+<a href="http://ruby.runpaint.org/">Read Ruby 1.9</a>
+<a href="http://rubybestpractices.com/">Ruby Best Practices</a>
+<a href="http://railstutorial.org/book">Ruby on Rails Tutorial Book</a> (suggested by <a href="http://twitter.com/tundal45">tundal45</a>)</p>
+
+	<p><strong>Javascript:</strong><br />
+<a href="http://building-iphone-apps.labs.oreilly.com/">Building iPhone Apps with HTML, CSS, and JavaScript</a>
+<a href="http://eloquentjavascript.net/">Eloquent Javascript</a>
+<a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">Essential JavaScript Design Patterns For Beginners</a> (suggested by Rajaseelan)
+<a href="http://jqfundamentals.com/book/book.html">jQuery Fundamentals</a>
+<a href="http://visionmedia.github.com/masteringnode/">Mastering Node</a>
+<a href="http://www.nodebeginner.org/">The Node Beginner Book</a> (suggested by alessio alex)</p>
+
+	<p><strong>Haskell:</strong><br />
+<a href="http://research.microsoft.com/en-us/um/people/simonpj/papers/pj-lester-book/">Implementing functional languages: a tutorial</a>
+<a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good</a>
+<a href="http://book.realworldhaskell.org/read/">Real World Haskell</a>
+<a href="http://fldit-www.cs.uni-dortmund.de/~peter/PS07/HR.pdf">The Haskell Road to Logic, Maths and Programming</a></p>
+
+	<p><strong>Erlang:</strong><br />
+<a href="http://carpanta.dc.fi.udc.es/pf/erlang/doc/concurrent_programming_in_erlang.pdf">Concurrent Programming in Erlang</a>
+<a href="http://learnyousomeerlang.com/">Learn You Some Erlang for Great Good</a></p>
+
+        <p><strong>Perl:</strong><br />
+<a href="http://www.perl.org/books/beginning-perl/">Beginning Perl</a>
+<a href="http://hop.perl.plover.com/">Higher-Order Perl</a>
+<a href="http://www.perl.org/books/impatient-perl/">Impatient Perl</a>
+<a href="http://www.onyxneon.com/books/modern_perl/">Modern Perl</a> (suggested by Gregory Brown)</p>
+
+	<p><strong>Python:</strong><br />
+<a href="http://www.swaroopch.com/notes/Python">A Byte of Python</a> (suggested by Raoul Snyman)
+<a href="http://ccn.ucla.edu/tutorials/diveintopython/toc/index.html">Dive Into Python</a>
+<a href="http://diveintopython3.ep.io/">Dive Into Python 3</a> (suggested by Rajaseelan)
+<a href="http://www.greenteapress.com/thinkpython/thinkCSpy/">How to Think Like a Computer Scientist &#8211; Learning with Python</a>
+<a href="http://inventwithpython.com/">Invent Your Own Computer Games with Python</a> (suggested by D)
+<a href="http://learnpythonthehardway.org">Learn Python The Hard Way</a> (suggested by <a href="http://stephenwyattbush.com/">Stephen Wyatt Bush</a>)
+<a href="http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3">Non-Programmer's Tutorial for Python 3</a> (suggested by WMN Trivia)</p>
+
+	<p><strong>Smalltalk:</strong><br />
+<a href="http://book.seaside.st/book">Dynamic Web Development with Seaside</a>
+<a href="http://pharobyexample.org">Pharo by Example</a> (based on the next book in this list, suggested by Anonymous)
+<a href="http://squeakbyexample.org/">Squeak by Example</a></p>
+
+	<p><strong>Misc:</strong><br />
+<a href="http://guideme.itgo.com/atozofc/">A to Z of C</a> (sugested by Kevin)
+<a href="http://compgeom.cs.uiuc.edu/~jeffe/teaching/algorithms/">Algorithms</a>
+<a href="http://homepage.mac.com/randyhyde/webster.cs.ucr.edu/www.artofasm.com/index.html">The Art of Assembly Language</a>
+<a href="http://joeclark.org/book/">Building Accessible Websites</a> (suggested by <a href="http://joeclark.org/">Joe Clark</a>)
+<a href="http://publications.gbdirect.co.uk/c_book/">The C Book</a>
+<a href="http://www.robmiles.com/c-yellow-book/">C# Yellow Book</a> (suggested by "Joe Wyatt":http://jbwyatt.com)
+<a href="http://www.ethoberon.ethz.ch/WirthPubl/CBEAll.pdf">Compiler Construction</a>
+<a href="http://diveintohtml5.ep.io/">Dive Into HTML 5</a> (suggested by <a href="http://twitter.com/til/">@til</a>)
+<a href="http://research.microsoft.com/en-us/um/people/simonpj/papers/slpj-book-1987/">The Implementation of Functional Programming Languages</a> (suggested by "Def")
+<a href="http://cran.r-project.org/doc/manuals/R-intro.pdf">An Introduction to R</a>
+<a href="http://www.learnprolognow.org/">Learn Prolog Now!</a>
+<a href="http://miek.nl/files/go/">Learning Go</a>
+<a href="https://github.com/karlseguin/the-little-mongodb-book">The Little MongoDB Book</a> (suggested by Francesca Krihely)
+<a href="http://openmymind.net/2012/1/23/The-Little-Redis-Book/">The Little Redis Book</a> (suggested by Juan Fatas Huang)
+<a href="http://www.techotopia.com/index.php/Objective-C_2.0_Essentials">Objective-C 2.0 Essentials</a>
+<a href="http://www.dickgrune.com/Books/PTAPG_1st_Edition/">Parsing Techniques</a> (suggested by "IronScheme":http://ironscheme.codeplex.com/)
+<a href="http://programming-scala.labs.oreilly.com/">Programming Scala</a>
+<a href="http://autotelicum.github.com/Smooth-CoffeeScript/">Smooth CoffeeScript</a>
+<a href="http://home.iae.nl/users/mhx/sf.html">Starting FORTH</a>
+<a href="http://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">Type Theory and Functional Programming</a></p>
+
+This is far from comprehensive and languages that are completely missing are mostly left out on purpose (e.g. PHP, C++, Java). I'm sure somebody else made a list for them somewhere.

@@ -1,0 +1,14 @@
+---
+layout: post
+title: Some quick Ruby tips
+date: 2009-2-9
+comments: true
+categories:
+- rails
+- ruby
+---
+Good news for OS X users: "Priit Haamer":http://www.priithaamer.com/ provides documentation for Ruby 1.9 and Rails as dictionaries for Dictionary.app, which makes them searchable by Spotlight ("Ruby documentation":http://www.priithaamer.com/blog/ruby-dictionary-for-mac-os-x, "Rails documentation":http://www.priithaamer.com/blog/updated-ruby-on-rails-dictionary)!
+
+There also was a nice discussion over the last few days on "Ruby's Most Underused Keyword":http://www.rubyrailways.com/rubys-most-underused-keyword/, which is quite an interesting read (make sure you don't skip the comments).
+
+Last but not least I want to point out "isitruby19.com":http://isitruby19.com/, a website that tests gems for their compatibility with the newest Ruby release.

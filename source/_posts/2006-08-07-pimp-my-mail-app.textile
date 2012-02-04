@@ -1,0 +1,26 @@
+--- 
+layout: post
+title: Pimp my Mail.app!
+date: 2006-8-7
+comments: true
+categories: 
+- apple
+- gpg
+- mail
+- productivity
+- tips
+---
+I always found Apple's "Mail.app":http://www.apple.com/macosx/features/mail/ in its Tiger incarnation be a really neat MUA because of the nice interface and the good spam filter it offers. Unfortunately it lacks a little when you have to deal with large amounts of mail or want to use some of the more advanced features other MUAs have to offer, so I started looking around for some plug-ins. I soon found "Hawk Wings":http://www.hawkwings.net/, a site dedicated entirely to "Tips and add-ons to make Apple Mail even better".
+
+Here's a list of the plug-ins I'm using so far:
+<ul>
+<li>"GPGMailBundle":http://www.sente.ch/software/GPGMail/English.lproj/GPGMail.html ("Review":http://www.hawkwings.net/2005/09/15/gpg-encrypting-messages-in-apple-mail/): Lacking support for "GPG":http://gnupg.org/ in the default installation is IMHO one of the greatest shortcomings of Apple Mail. Fortunately enough there's GPGMailBundle to remedy this situation. This nice little plug-in of course needs a working GPG installtion to function properly and I recommend "MacGPG":http://macgpg.sourceforge.net/ in combination with GPGKeychainAccess from the same site for this. Once you're set up and ready to go, GPGMailBundle can easily be configured from Mail's preferences panel. A great plug-in, which makes Mail.app a lot more useful to me!</li>
+<li>"Letterbox":http://harnly.net/software/letterbox/letterbox_0.16.html ("Review":http://www.hawkwings.net/2006/06/02/three-pane-mailapp-hack-that-works/): If you too own a widescreen display, Letterbox may just be the plug-in you've been waiting for if you're trying to make the most out of your screen real estate. What it does is arranging the interface into three vertical columns by putting the message preview right of the message pane instead of below it (as known from "Entourage":http://www.microsoft.com/mac/products/entourage2004/entourage2004.aspx). This definitely depends on personal preference and reading habits, but so far I really like this layout, especially with all the additional information GPGMailBundle adds to the message preview.</li>
+<li>"Mail Act-On":http://www.indev.ca/MailActOn.html ("Review":http://www.hawkwings.net/2005/08/08/mail-act-on-getting-sorted-saving-time/): A cool plug-in which allows you to create a plethorea of different mail rules and to assign them to keystrokes, therefore making your mail sorting a whole lot faster and more efficient.</li>
+<li>"MailTags":http://www.indev.ca/MailTags.html ("Review":http://www.hawkwings.net/2005/08/24/managing-email-with-mailtags/): Coming from the same author, MailTags does for managing mails what Mail Act-On does for sorting them. It adds a little tag to all messages, which lets you add keywords, notes, due dates, priorities and other useful infos to them. And as if that's not cool enough already, you can also build smart mail boxes from this metadata (which btw can be used and changed from Apple Mail rules). Now consider that this great plug-in also allows you to link messages to iCal to do items, and you'll immediately see how useful this thing really is. The only thing that annoys me a little is the "begging" for donations. Not because I don't think it's worth the money - I'm probably going to donate something too - but because I think the PayPal button on the web site would have sufficed, since I really don't want to see it all the time...</li>
+</ul>
+
+That's it for today, but since there are a lot of other nice and useful looking plug-ins for Apple Mail, I'm pretty sure there'll be a followup post to this in the near future.
+
+Setting Orange, Bureaucracy 1, 3172 YOLD
+

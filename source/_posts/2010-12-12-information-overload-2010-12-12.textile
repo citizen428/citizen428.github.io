@@ -1,0 +1,25 @@
+--- 
+layout: post
+title: Information Overload 2010-12-12
+date: "2010-12-12"
+comments: true
+categories: 
+- books
+- informationoverload
+- media
+- politics
+- programming
+- science
+---
+<ul>
+<li>"What to know before debating type systems":http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html<br/>Now that I started to get more into Haskell, I'm reading up on type systems.</li>
+<li>"Kleider machen Leute":http://www.datum.at/0910/stories/6471209<br/>Interesting piece on "Humana":http://de.wikipedia.org/wiki/Humana_People_To_People and "Tvind":http://en.wikipedia.org/wiki/Tvind (in German).</li>
+<li>"Tony Porter: A call to men":http://www.ted.com/talks/tony_porter_a_call_to_men.html<br/>Nice "TED":http://en.wikipedia.org/wiki/TED_(conference) talk by Tony Porter about gender stereotypes and the "man box".</li>
+<li>"Inside GitHub with Chris Wanstrath":http://www.slideshare.net/rubymeetup/inside-github-with-chris-wanstrath<br/>Slides of defunkt's presentation on GitHub internals. Very informative, especially if you are also trying to scale a Rails environment.</li>
+<li>"Oriental hornets powered by 'solar energy'":http://news.bbc.co.uk/earth/hi/earth_news/newsid_9254000/9254445.stm<br/>So there's a type of hornet that can use the sun to produce energy. Evolution never ceases to amaze me.</li>
+<li>"I, Reader":http://www.themorningnews.org/archives/personal_essays/i_reader.php<br/>On books, online reading habits and ebooks.</li>
+<li>"National Geographic's Photography Contest 2010":http://www.boston.com/bigpicture/2010/11/national_geographics_photograp.html<br/>Nice selection of 47 pictures from this year's "National Geographic Photo Contest":http://ngm.nationalgeographic.com/ngm/photo-contest/.</li>
+<li>"Why spreadable doesn’t equal viral":http://www.niemanlab.org/2010/11/why-spreadable-doesnt-equal-viral-a-conversation-with-henry-jenkins/<br/>On journalism, new media, spreadable and viral content.</li>
+<li>"The Shadow Scholar":http://chronicle.com/article/article-content/125329/<br/>A ghost writer for academic papers tells about his job. This is as interesting as it is sad.</li>
+<li>"The Suffering of Fallujah":http://www.huffingtonpost.com/robert-koehler/the-suffering-of-fallujah_b_663545.html<br/>There have been comparatively little news from Iraq lately, so I decided to include this article from last summer in this week's Information Overload.</li>
+</ul>

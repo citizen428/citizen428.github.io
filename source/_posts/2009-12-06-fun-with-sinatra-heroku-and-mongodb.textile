@@ -1,0 +1,22 @@
+--- 
+layout: post
+title: Fun with Sinatra, Heroku and MongoDB
+date: 2009-12-6
+comments: true
+categories: 
+- heroku
+- mongodb
+- mongohq
+- programming
+- ruby
+- sinatra
+---
+I've been toying around with the idea for a small website lately, but never actually got around to do it. In an attempt to clear out my personal to do list I finally motivated myself to start yesterday, and I have to say the following combination of tools is not only insanely efficient, but also really fun to work with:
+<ul>
+<li><a href="http://www.sinatrarb.com/">Sinatra</a>, <i>&#8220;a DSL for quickly creating web applications in Ruby with minimal effort&#8221;</i>. I recommend using it in combination with <a href="http://mongrel.rubyforge.org/">Mongrel</a>, <a href="http://github.com/rtomayko/shotgun">Shotgun</a> and <a href="http://haml-lang.com/">Haml</a>.</li><br />
+<li><a href="http://heroku.com/">Heroku</a>, a Ruby cloud hosting platform. Small sites are for free and Heroku&#8217;s git-based workflow just feels so natural. You can also <a href="http://docs.heroku.com/gems">manage your gem dependencies</a> and <a href="http://docs.heroku.com/config-vars">set up environment variables</a>, which made my life a whole lot easier.</li><br />
+<li><a href="http://www.mongodb.org">MongoDB</a>, <i>&#8220;a scalable, high-performance, open source, schema-free, document-oriented database&#8221;</i>. In this specific case I used <a href="http://www.mongohq.com/home">MongoHQ</a> for the database hosting, since they were nice enough to provide me with a beta account. I stored all the connection information for MongoHQ in environment variables as described above:</p>
+<script src="http://gist.github.com/250193.js?file=mongohq.rb"></script>
+</ul>
+
+With this combination I was able to go from zero to mostly finished (I still need to write some of the content and make/steal a stylesheet) in very little time, while actually having fun! Thanks everybody for providing the Ruby community which such awesome tools! :-)

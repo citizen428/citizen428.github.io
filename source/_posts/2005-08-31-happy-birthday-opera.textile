@@ -1,0 +1,10 @@
+--- 
+layout: post
+title: Happy Birthday Opera!
+date: 2005-8-31
+comments: true
+categories: 
+- links
+- webculture
+---
+Although I really like my "Mozilla Firefox":http://www.mozilla.org/products/firefox/, I still have a sentimental feeling about "Opera":http://www.opera.com, a browser I've used quite a lot some years ago. That's why I want to invite you to join the "Opera 10-year online anniversary party":http://my.opera.com/community/party/, where you can read chat transcripts with Opera's developers, listen to Podcasts by Opera employees or see a slideshow of Opera's history. And best of all, for the time the party lasts, you can register Opera for free! Yeah, that's right, get rid of that annoying ads banner legally without paying anything!

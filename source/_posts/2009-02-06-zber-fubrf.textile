@@ -1,0 +1,12 @@
+--- 
+layout: post
+title: Zber Fubrf!
+date: 2009-2-6
+comments: true
+categories: 
+- ruby
+- shoes
+---
+Playing with "Shoes":http://shoooes.net/ is kinda addictive, so I wrote my "third little app":http://the-shoebox.org/apps/131 for the "Shoebox":http://the-shoebox.org/. This little experiment does "ROT13":http://en.wikipedia.org/wiki/ROT13 which in itself is lame, but it was a good way to see how to read from and write to the system clipboard. Altogether this has 20 lines of code, of which 4 only consist of the word "end", so I think Shoes really succeeded in providing us with a tiny and easy to use cross-platform toolkit :) 
+
+_Hint: If you don't understand the title of this blog post, the little app mentioned above might be helpful..._

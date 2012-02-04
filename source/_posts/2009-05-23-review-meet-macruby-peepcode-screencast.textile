@@ -1,0 +1,18 @@
+--- 
+layout: post
+title: "Review: Meet MacRuby (PeepCode screencast)"
+date: 2009-5-23
+comments: true
+categories: 
+- programming
+- review
+- ruby
+- screencast
+---
+This afternoon I had the time to finally watch the "PeepCode":http://peepcode.com/ "Meet MacRuby":http://peepcode.com/products/meet-macruby screencast.
+
+In case you don't know "MacRuby":http://www.macruby.com/, it's a Ruby interpreter sitting on top of "Objective-C":http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/ and OS X core technologies (see also "here":http://citizen428.net/archives/365-Ruby-implementations-and-why-we-should-care.html).
+
+During the 74 minute screencast you will build a basic but functional Twitter client, and in the process learn about MacRuby and "Cocoa":http://developer.apple.com/cocoa/ basics, using "Xcode":http://developer.apple.com/tools/macosxtools.html and "InterfaceBuilder":http://developer.apple.com/tools/interfacebuilder.html to develop and bundle your application and many other interesting topics.
+
+The screencast is very well structured, easy to follow and full of good and practical information, including perks and rough edges of the current MacRuby version. All in all a really enjoyable and informative video, which is well worth US$9 (or less if you buy packs of credits)!

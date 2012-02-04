@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: KDE vs. GNOME. Round 1, fight!
+date: 2006-2-1
+comments: true
+categories: 
+- FOSS
+---
+This will probably result in a flamewar, but I'm really interested in hearing all your opinions here: after a long time of avoiding any desktop related software looking even remotely like it might have to do with KDE/QT and following GNOME development pretty closely, I've finally decided to have a look at KDE again. 
+
+To my surprise I quite like what I see. Especially Kontact looks like a spiffy piece of software, but other applications seem to be pretty cool too. 
+
+I soon should get a work laptop, and I'll only install KDE on it to see how I like it for perfoming my day to day tasks. Everyone deserves a fair chance, I've once even tried Emacs for a few days to see why I love Vim ;) Once I start this little experiment, I'll try to ocassionally blog about my experiences. Any KDE fans out there, please post some comments and tell me about cool stuff you think I should try/know about/whatever...
+
+BTW: E17 also seems to have improved quite a lot since I've last installed it, and it looks really sweet. 
+
+BTW2: I've recently also rediscovered my love for Ion3, so here's right another contestor for the "citizen428's preffered GUI" competition...

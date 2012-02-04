@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: happynerds.net is online!
+date: "2009-12-13"
+comments: true
+categories: 
+- kids
+- programming
+- webtips
+---
+In my <a href="http://citizen428.net/archives/404-Fun-with-Sinatra,-Heroku-and-MongoDB.html">previous blog post</a> I mentioned how much fun I have in creating a small web project with Sinatra, Heroku and MongoHQ and today said project finally went online:
+
+<a href="http://www.happynerds.net/">Happynerds &#8211; Programming Links for Kids</a>
+
+f you wonder why I'm doing this, RailsBridge has a <a href="http://teachingkids.railsbridge.org/">good summary</a> on the topic.
+

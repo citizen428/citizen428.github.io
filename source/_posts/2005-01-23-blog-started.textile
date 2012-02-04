@@ -1,0 +1,10 @@
+--- 
+layout: post
+title: Blog started
+date: 2005-1-23
+comments: true
+categories: 
+- blogs
+---
+After having waited for way too long, I now have decided to finally start adding content to this site. As soon as we manage to update our <a href="http://drupal.org/">Drupal</a> installation at <a href="http://www.cargal.org">cargal.org</a> so that it finally generates valid RSS, I will import my old blogs from there. Most of the new messages will be dual-feeded for your reading pleasure, so you can follow them wherever you want.
+<!--more-->This blog will be in German as well as English, mostly depending on my mood and what kind of audience I want to reach. There's one exception though: all my blogs regarding Gentoo development will strictly be in English, as they will be feeded to <a href="http://www.gentoo.org/proj/en/glep/glep-0030.html">Planet Gentoo</a> once it got set up.
