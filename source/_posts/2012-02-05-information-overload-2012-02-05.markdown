@@ -5,6 +5,11 @@ date: 2012-02-05 00:00
 comments: true
 categories:
   - informationoverload
+  - freedom
+  - learning
+  - science
+  - politics
+  - society
 ---
 {% blockquote William Gibson http://www.theverge.com/2012/1/24/2724370/william-gibson-intervie An interview with William Gibson %}
 [T]oday's strangeness, while only a few mouse-clicks away from anyone, becomes difficult to find because it has to occur to you to Google it. You may be able to Google everything, but the trick is figuring what you need to Google.
@@ -19,7 +24,7 @@ categories:
 * [The Myth of Europe](http://www.foreignpolicy.com/articles/2012/01/03/the_myth_of_europe?page=full)<br/>A very thorough and interesting take on the EU and European identity. I for one would be sad if the Union failed, because I really enjoy a Europe with almost no borders, the right to work and live in any of the 27 member states and so on. I don't think that the level of centralization this has reached is the way to go though...
 * [To My Old Master](http://www.lettersofnote.com/2012/01/to-my-old-master.html)<br/>A letter from a former slave to his old "master".
 * [Four Difficult Questions Regarding Bullying and Youth Suicide](http://www.zephoria.org/thoughts/archives/2011/12/12/questions-bullying-suicide.html)<br/>Intersting questions for a necessary debate.
-* [You Will Never Kill Piracy, and Piracy Will Never Kill You](http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/)<br/>Despite the headline, this has been published by Forbes.
+* [You Will Never Kill Piracy, and Piracy Will Never Kill You](http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/)<br/>Despite the headline, this has been published by Forbes. BTW: I think the proposed "Movie Steam" is a fantastic idea and I'd love to use something like that.
 
 {% blockquote Paul Tassi http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/ You Will Never Kill Piracy, and Piracy Will Never Kill You %}
 The only other thing you could get the internet to agree on was if they tried to institute a ban on cat pictures.
