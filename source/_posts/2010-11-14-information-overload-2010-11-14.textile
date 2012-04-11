@@ -12,14 +12,14 @@ categories:
 - programming
 ---
 <ul>
-<li>"JVM Bytecode for Dummies":http://www.slideshare.net/CharlesNutter/redev-2010-jvm-bytecode-for-dummies<br/>Awesome presentation by "Charles Nutter":http://blog.headius.com/ on JVM Bytecode. No matter if you are just curious or want to write your own programming language, this is interesting!</li>
-<li>"Cutting out the middle men":http://www.economist.com/node/17420321?story_id=17420321&fsrc=scn/tw/te/rss/pe<br/>Great pilot project in the UK, empowering homeless people instead by directly giving them money.</li>
-<li>"Can't play, won't play":http://www.hideandseek.net/cant-play-wont-play/<br/>Lots of websites and incentive programs nowadays try to "gamify" themselves by adding badges and point systems. Read why in most cases this has nothing to do with real games.</li>
-<li>"Obscene Losses":http://www.portfolio.com/culture-lifestyle/culture-inc/arts/2007/10/15/YouPorn-Vivid-Entertainment-Profile/index.html<br/>Very detailed article on how YouPorn and other amateur sites damage the business of established adult movie producers.</li>
-<li>"Mystery of how cats lap is revealed":http://www.bbc.co.uk/news/science-environment-11717510<br/>Cats even drink in cool ways.</li>
-<li>"10 centuries in 5 minutes":http://www.youtube.com/watch?v=DrZvn1qckIs<br/>Absolutely fantastic 5 minute video of 1000 years of European history. This is fascinating and a good reminder that today's empires may very well be tomorrow's ashes.</li>
-<li>"20 Awesomely Untranslatable Words from Around the World":http://matadornetwork.com/abroad/20-awesomely-untranslatable-words-from-around-the-world/2/<br/>Interesting collection of untranslatable words from around the world. This made the language geek in me very happy.</li>
-<li>"What I Would Do With This: Groceries":http://blog.mrmeyer.com/?p=4646<br/>The mathematics of grocery shopping.</li>
-<li>"Skateistan: To live and skate Kabul":http://vimeo.com/15841377<br/>Short movie about a co-educational Skateboarding school in Kabul, Afghanistan.</li>
-<li>"Hubris Versus Humility: The $15 billion Difference":http://steveblank.com/2010/11/08/hubris-versus-humility-the-15-billion-difference/<br/>While I think that the comparison in this article is a bit apples and oranges, it's an interesting take on initial market positioning.</li>
+<li>"JVM Bytecode for Dummies":http://www.slideshare.net/CharlesNutter/redev-2010-jvm-bytecode-for-dummies<br>Awesome presentation by "Charles Nutter":http://blog.headius.com/ on JVM Bytecode. No matter if you are just curious or want to write your own programming language, this is interesting!</li>
+<li>"Cutting out the middle men":http://www.economist.com/node/17420321?story_id=17420321&fsrc=scn/tw/te/rss/pe<br>Great pilot project in the UK, empowering homeless people instead by directly giving them money.</li>
+<li>"Can't play, won't play":http://www.hideandseek.net/cant-play-wont-play/<br>Lots of websites and incentive programs nowadays try to "gamify" themselves by adding badges and point systems. Read why in most cases this has nothing to do with real games.</li>
+<li>"Obscene Losses":http://www.portfolio.com/culture-lifestyle/culture-inc/arts/2007/10/15/YouPorn-Vivid-Entertainment-Profile/index.html<br>Very detailed article on how YouPorn and other amateur sites damage the business of established adult movie producers.</li>
+<li>"Mystery of how cats lap is revealed":http://www.bbc.co.uk/news/science-environment-11717510<br>Cats even drink in cool ways.</li>
+<li>"10 centuries in 5 minutes":http://www.youtube.com/watch?v=DrZvn1qckIs<br>Absolutely fantastic 5 minute video of 1000 years of European history. This is fascinating and a good reminder that today's empires may very well be tomorrow's ashes.</li>
+<li>"20 Awesomely Untranslatable Words from Around the World":http://matadornetwork.com/abroad/20-awesomely-untranslatable-words-from-around-the-world/2/<br>Interesting collection of untranslatable words from around the world. This made the language geek in me very happy.</li>
+<li>"What I Would Do With This: Groceries":http://blog.mrmeyer.com/?p=4646<br>The mathematics of grocery shopping.</li>
+<li>"Skateistan: To live and skate Kabul":http://vimeo.com/15841377<br>Short movie about a co-educational Skateboarding school in Kabul, Afghanistan.</li>
+<li>"Hubris Versus Humility: The $15 billion Difference":http://steveblank.com/2010/11/08/hubris-versus-humility-the-15-billion-difference/<br>While I think that the comparison in this article is a bit apples and oranges, it's an interesting take on initial market positioning.</li>
 </ul>

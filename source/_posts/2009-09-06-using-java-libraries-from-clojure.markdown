@@ -74,5 +74,5 @@ Last but not least we display our frame to let the fun begin.
 {% codeblock lang:clojure %}
       (.setVisible true))))
 {% endcodeblock %}
-<a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/interactive.clj">Full source for the second example</a><br/>
+<a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/interactive.clj">Full source for the second example</a><br>
 I hope this article helped to illustrate how easy it is to use the plethora of existing Java libraries from Clojure. In case you have any feedback or questions, please feel free to leave a comment!

@@ -16,8 +16,8 @@ For people new to Ruby, there are 3 books I consider absolute must reads:
 <ul>
 	<li>"The Well-Grounded Rubyist":http://www.manning.com/black2/ by David A. Black:
 This book really lives up to its title and gives the reader a solid grounding that will be a great basis for diving deeper into the language (I wrote a longer review "here":http://citizen428.net/archives/386). Alternatively you might want to consider "Programming Ruby":http://pragprog.com/titles/ruby3/programming-ruby-1-9 by Dave Thomas, with Chad Fowler and Andy Hunt, which is also an excellent book and a standard recommendation for Ruby newbies.</li>
-	<li>"Eloquent Ruby":http://www.pearsonhighered.com/educator/product/Eloquent-Ruby/9780321584106.page by Russ Olsen:<br/>This book is a true gem! Mostly written for people coming to Ruby from other programming languages, Russ Olsen doesn't dwell on banalities, but instead teaches you good, idiomatic Ruby. The presented material is excellent and the writing is witty and clever. If you are new to programming this is probably not the best book for you, but if you have experience in some other language or "just" want to get more fluent in Ruby, "Eloquent Ruby" is hard to beat.</li>
-	<li>"Ruby Best Practices":http://rubybestpractices.com/ by Gregory T. Brown:<br/>
+	<li>"Eloquent Ruby":http://www.pearsonhighered.com/educator/product/Eloquent-Ruby/9780321584106.page by Russ Olsen:<br>This book is a true gem! Mostly written for people coming to Ruby from other programming languages, Russ Olsen doesn't dwell on banalities, but instead teaches you good, idiomatic Ruby. The presented material is excellent and the writing is witty and clever. If you are new to programming this is probably not the best book for you, but if you have experience in some other language or "just" want to get more fluent in Ruby, "Eloquent Ruby" is hard to beat.</li>
+	<li>"Ruby Best Practices":http://rubybestpractices.com/ by Gregory T. Brown:<br>
 Once you worked your way to the other two books or have already coded in Ruby for a while, you definitely should check out "Ruby Best Practices". As the title suggests this is not about learning Ruby, it's about getting the most out of the language, for yourself as well as for potential collaborators and colleagues. No matter how long you've been doing Ruby, I'm almost certain you'll still pick up a little trick here and there. </li>
 </ul>
 
@@ -26,9 +26,9 @@ Now obviously you can't just sit down, read those 3 books and become a great Rub
 <strong>Advanced Rubyists</strong>
 
 <ul>
-	<li>"The Ruby Programming Language":http://oreilly.com/catalog/9780596516178 by David Flanagan, Yukihiro Matsumoto:<br/>
+	<li>"The Ruby Programming Language":http://oreilly.com/catalog/9780596516178 by David Flanagan, Yukihiro Matsumoto:<br>
 I guess this wouldn't really need to be mentioned, but for completeness' sake I'll include it here. While I don't think it's a great book for learning the language, it's something every serious Ruby developer should own as a reference.</li>
-<li>"Refactoring: Ruby Edition":http://www.pearsonhighered.com/educator/product/Refactoring-Ruby-Edition/9780321603500.page by Jay Fields:<br/>Granted, this may not sound exciting, but "Refactoring Ruby" is a really good book, that will come in handy once you have to work on a somewhat significant Ruby codebase. Think of it as design patterns for refactoring.</li>
+<li>"Refactoring: Ruby Edition":http://www.pearsonhighered.com/educator/product/Refactoring-Ruby-Edition/9780321603500.page by Jay Fields:<br>Granted, this may not sound exciting, but "Refactoring Ruby" is a really good book, that will come in handy once you have to work on a somewhat significant Ruby codebase. Think of it as design patterns for refactoring.</li>
 </ul>
 
 Of course "Ruby Best Practices" also falls in this category, but I already mentioned it in the first section.

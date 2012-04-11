@@ -10,14 +10,14 @@ categories:
 - technology
 ---
 <ul>
-<li>"Red Bull's Billionaire Maniac":http://www.businessweek.com/print/magazine/content/11_22/b4230064852768.htm<br/>Interesting article about Austrian entrepreneur and founder of Red Bull, Dietrich Mateschitz.</li>
-<li>"Prophecy Fail":http://www.slate.com/id/2295099/pagenum/all/<br/>How the human mind deals with failed prophecies.</li>
-<li>"The Only Way to Get Important Things Done":http://blogs.hbr.org/schwartz/2011/05/the-only-way-to-get-important.html<br/>That's interesting, I noticed a similar pattern of ritual building in myself and it works really quite well.</li>
-<li>"5-Year-Old Girl Makes Video Game":http://www.untoldentertainment.com/blog/2011/05/24/sissys-magical-ponycorn-adventure/<br/>Awesome parenting, this is great!</li>
-<li>"Depixelizing Pixel Art: Upscaling Retro 8-bit Games":http://www.untoldentertainment.com/blog/2011/05/24/sissys-magical-ponycorn-adventure/<br/>There are some amazing results in there, I'll definitely have to read the paper.</li>
-<li>"Ads Implant False Memories":http://www.wired.com/wiredscience/2011/05/ads-implant-false-memories/<br/>This is pretty fascinating, the human brain is full of wonder. On a side note I realized how few ads I'm exposed to due to not having a TV and mainly consuming newspapers and magazines through their web sites (with an ad blocker).</li>
-<li>"Heinz-Christian Strache - Aufstieg eines Hasspredigers":http://www.zeit.de/politik/ausland/2011-05/fpoe-oesterreich-umfragen/seite-1<br/>If you are not Austrian but can read German, this might be an interesting article about Austria's right wing party which is currently leading the opinion polls.</li>
-<li>"Why Nerds Are Unpolular":http://www.paulgraham.com/nerds.html<br/>Very good article by Paul Graham. While my school was far (in fact very far) from perfect, I'm still glad I didn't have to go to a US high-school.</li>
-<li>"Scientists suggest spacetime has no time dimension":http://www.physorg.com/news/2011-04-scientists-spacetime-dimension.html<br/>And this is why I like physics so much as a subject.</li>
-<li>"DNA From The Beginning":http://www.dnaftb.org/<br/>Interested in genetics? You'll love this site!</li>
+<li>"Red Bull's Billionaire Maniac":http://www.businessweek.com/print/magazine/content/11_22/b4230064852768.htm<br>Interesting article about Austrian entrepreneur and founder of Red Bull, Dietrich Mateschitz.</li>
+<li>"Prophecy Fail":http://www.slate.com/id/2295099/pagenum/all/<br>How the human mind deals with failed prophecies.</li>
+<li>"The Only Way to Get Important Things Done":http://blogs.hbr.org/schwartz/2011/05/the-only-way-to-get-important.html<br>That's interesting, I noticed a similar pattern of ritual building in myself and it works really quite well.</li>
+<li>"5-Year-Old Girl Makes Video Game":http://www.untoldentertainment.com/blog/2011/05/24/sissys-magical-ponycorn-adventure/<br>Awesome parenting, this is great!</li>
+<li>"Depixelizing Pixel Art: Upscaling Retro 8-bit Games":http://www.untoldentertainment.com/blog/2011/05/24/sissys-magical-ponycorn-adventure/<br>There are some amazing results in there, I'll definitely have to read the paper.</li>
+<li>"Ads Implant False Memories":http://www.wired.com/wiredscience/2011/05/ads-implant-false-memories/<br>This is pretty fascinating, the human brain is full of wonder. On a side note I realized how few ads I'm exposed to due to not having a TV and mainly consuming newspapers and magazines through their web sites (with an ad blocker).</li>
+<li>"Heinz-Christian Strache - Aufstieg eines Hasspredigers":http://www.zeit.de/politik/ausland/2011-05/fpoe-oesterreich-umfragen/seite-1<br>If you are not Austrian but can read German, this might be an interesting article about Austria's right wing party which is currently leading the opinion polls.</li>
+<li>"Why Nerds Are Unpolular":http://www.paulgraham.com/nerds.html<br>Very good article by Paul Graham. While my school was far (in fact very far) from perfect, I'm still glad I didn't have to go to a US high-school.</li>
+<li>"Scientists suggest spacetime has no time dimension":http://www.physorg.com/news/2011-04-scientists-spacetime-dimension.html<br>And this is why I like physics so much as a subject.</li>
+<li>"DNA From The Beginning":http://www.dnaftb.org/<br>Interested in genetics? You'll love this site!</li>
 </ul>

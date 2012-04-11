@@ -12,10 +12,10 @@ categories:
 This week's Information Overload is slightly shorter due to a trip I took, hope it's still interesting though.
 
 <ul>
-<li>"What would it be like walking around on a cube-shaped planet?":http://www.straightdope.com/columns/read/3011/what-would-it-be-like-walking-around-on-a-cube-shaped-planet<br/>Ah, nothing like a good old useless thought experiment.</li>
-<li>"A Galactic Challenge: How Would You Teach Left from Right to an Alien Civilization?":http://blogs.scientificamerican.com/degrees-of-freedom/2011/08/28/handedness-galactic-challenge/<br/>Speaking of thought experiments, here's another interesting one.</li>
-<li>"The Dictator's Survival Guide":http://www.foreignpolicy.com/articles/2011/08/22/the_dictators_survival_guide?page=full<br/>Nice tongue-in-cheek piece by Foreign Policy on how to stay in power as a dictator.</li>
-<li>"Ten years after 9/11: A lasting impact on the world":http://hosted.ap.org/interactives/2011/sept11-10years/index.html<br/>Great collection of 9/11 related videos, photographs and infographics by Associated Press. I wish more news agencies would do stuff like this.</li>
-<li>"&quot;Geek girls&quot; and the problem of self-objectification":http://geekfeminism.org/2011/08/23/geek-girls-and-the-problem-of-self-objectification/<br/>I quite regularly post stuff about sexism in geek communities, so this is no exception.</li>
-<li>"India Measures Itself Against a China That Doesn’t Notice":http://www.nytimes.com/2011/09/01/business/global/india-looks-to-china-as-an-economic-model.html?_r=1&pagewanted=all<br/>Interesting NYT article on how the world's 2 most populous countries perceive each other.</li>
+<li>"What would it be like walking around on a cube-shaped planet?":http://www.straightdope.com/columns/read/3011/what-would-it-be-like-walking-around-on-a-cube-shaped-planet<br>Ah, nothing like a good old useless thought experiment.</li>
+<li>"A Galactic Challenge: How Would You Teach Left from Right to an Alien Civilization?":http://blogs.scientificamerican.com/degrees-of-freedom/2011/08/28/handedness-galactic-challenge/<br>Speaking of thought experiments, here's another interesting one.</li>
+<li>"The Dictator's Survival Guide":http://www.foreignpolicy.com/articles/2011/08/22/the_dictators_survival_guide?page=full<br>Nice tongue-in-cheek piece by Foreign Policy on how to stay in power as a dictator.</li>
+<li>"Ten years after 9/11: A lasting impact on the world":http://hosted.ap.org/interactives/2011/sept11-10years/index.html<br>Great collection of 9/11 related videos, photographs and infographics by Associated Press. I wish more news agencies would do stuff like this.</li>
+<li>"&quot;Geek girls&quot; and the problem of self-objectification":http://geekfeminism.org/2011/08/23/geek-girls-and-the-problem-of-self-objectification/<br>I quite regularly post stuff about sexism in geek communities, so this is no exception.</li>
+<li>"India Measures Itself Against a China That Doesn’t Notice":http://www.nytimes.com/2011/09/01/business/global/india-looks-to-china-as-an-economic-model.html?_r=1&pagewanted=all<br>Interesting NYT article on how the world's 2 most populous countries perceive each other.</li>
 </ul>

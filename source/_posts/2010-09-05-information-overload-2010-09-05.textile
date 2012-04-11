@@ -13,12 +13,12 @@ categories:
 - science
 ---
 <ul>
-<li>"Clojure or: How I Learned to Stop Worrying and Love the Parentheses":http://nathanmarz.com/blog/clojure-or-how-i-learned-to-stop-worrying-and-love-the-paren.html<br/>Blog post explaining what draws the author - and many others - to Clojure.</li>
-<li>"tactics, tactics, tactics":http://dlowe-wfh.blogspot.com/2007/06/tactics-tactics-tactics.html<br/>How to get better at programming. And chess.</li>
-<li>"Die Sankore-Schriften":http://www.wissenslogs.de/wblogs/blog/die-sankore-schriften/wissenschaftsgeschichte/2010-08-19/die-sankor-schriften<br/>Little history of the Sankore university in Timbuktu, Mali (in German).</li>
-<li>"The Making Of: Little Computer People":http://www.next-gen.biz/features/the-making-of-little-computer-people<br/>I love video game history, especially when it deals with games who influenced very successful titles later on.</li>
-<li>"Sleep Deprivation May Spur Serious Mental Problems, Study Finds":http://www.bloomberg.com/news/2010-08-31/sleep-deprivation-may-trigger-mental-problems-in-young-people-study-finds.html<br/>A little reminder to all us geeks, nerds and hackers that sleep does play an important role in our overall well-being.</li>
-<li>"Experience: I spent 29 years in solitary confinement":http://www.guardian.co.uk/lifeandstyle/2010/aug/28/29-years-solitary-confinement-robert-king<br/>Robert Kind who spent 29 years in solitary confinement for crimes he didn't commit talks about his experience.</li>
-<li>"Why can you turn clothing right-side-out?":http://math.stackexchange.com/questions/2755/why-can-you-turn-clothing-right-side-out<br/>Math is everywhere.</li>
-<li>"Brazilian agriculture:The miracle of the cerrado":http://www.economist.com/node/16886442?story_id=16886442&CFID=142315524&CFTOKEN=99196615<br/>Very interesting article on how Brazil transformed itself into one of the world's biggest food exporters.</li>
+<li>"Clojure or: How I Learned to Stop Worrying and Love the Parentheses":http://nathanmarz.com/blog/clojure-or-how-i-learned-to-stop-worrying-and-love-the-paren.html<br>Blog post explaining what draws the author - and many others - to Clojure.</li>
+<li>"tactics, tactics, tactics":http://dlowe-wfh.blogspot.com/2007/06/tactics-tactics-tactics.html<br>How to get better at programming. And chess.</li>
+<li>"Die Sankore-Schriften":http://www.wissenslogs.de/wblogs/blog/die-sankore-schriften/wissenschaftsgeschichte/2010-08-19/die-sankor-schriften<br>Little history of the Sankore university in Timbuktu, Mali (in German).</li>
+<li>"The Making Of: Little Computer People":http://www.next-gen.biz/features/the-making-of-little-computer-people<br>I love video game history, especially when it deals with games who influenced very successful titles later on.</li>
+<li>"Sleep Deprivation May Spur Serious Mental Problems, Study Finds":http://www.bloomberg.com/news/2010-08-31/sleep-deprivation-may-trigger-mental-problems-in-young-people-study-finds.html<br>A little reminder to all us geeks, nerds and hackers that sleep does play an important role in our overall well-being.</li>
+<li>"Experience: I spent 29 years in solitary confinement":http://www.guardian.co.uk/lifeandstyle/2010/aug/28/29-years-solitary-confinement-robert-king<br>Robert Kind who spent 29 years in solitary confinement for crimes he didn't commit talks about his experience.</li>
+<li>"Why can you turn clothing right-side-out?":http://math.stackexchange.com/questions/2755/why-can-you-turn-clothing-right-side-out<br>Math is everywhere.</li>
+<li>"Brazilian agriculture:The miracle of the cerrado":http://www.economist.com/node/16886442?story_id=16886442&CFID=142315524&CFTOKEN=99196615<br>Very interesting article on how Brazil transformed itself into one of the world's biggest food exporters.</li>
 </ul>

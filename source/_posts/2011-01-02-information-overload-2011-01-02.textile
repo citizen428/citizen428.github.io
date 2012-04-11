@@ -12,14 +12,14 @@ categories:
 - science
 ---
 <ul>
-<li>"Why the Internet Is a Great Tool for Totalitarians":http://www.wired.com/magazine/2010/12/st_essay_totalitarians/<br/>It's always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
-<li>"Caring for Your Introvert":http://www.theatlantic.com/magazine/archive/2003/03/caring-for-your-introvert/2696/<br/>While I think the author's overly satirical tone actually does a disservice to the content of the article, as an introvert I still urge you to read this.</li>
-<li>"Understanding Pac-Man Ghost Behavior":http://gameinternals.com/post/2072558330/understanding-pac-man-ghost-behavior<br/>This is a great example how a few simple rules can create complex looking behavior patterns in AI opponents.</li>
-<li>"Abandon resolutions. Stop looking for a soulmate. Reject positive thinking":http://www.guardian.co.uk/science/2011/jan/01/how-to-better-person-2011<br/>For once somebody managed to write a sensible article regarding new year's resolutions.</li>
-<li>"Farmer-scientist group wants to 'hack society' through open-source technology":http://www.grist.org/article/food-2010-12-29-farmer-scientists-want-to-hack-society<br/>About "Open Source Ecology":http://openfarmtech.org/wiki/ and the "Global Village Construction Set":http://openfarmtech.org/wiki/Global_Village_Construction_Set. Awesome!</li>
-<li>"The New Year in Snowflakes":http://chouser.github.com/snow/<br/>Very nice little Clojure doodle by Chris Houser.</li>
-<li>"Monads Are Not Metaphors":http://www.codecommit.com/blog/ruby/monads-are-not-metaphors<br/>A pretty good explanation of monads for everyone struggling with the concept. It should be easy to follow even if your Scala is less than fluent (like mine is).</li>
-<li>"Spacecraft escaping the Solar System":http://heavens-above.com/solar-escape.asp<br/>Positions and other data of the 5 spacecraft leaving our solar system on escape trajectories. The space geek in me likes this a lot.</li>
-<li>"Wem gehoert der Brokkoli?":http://www.zeit.de/2011/01/Gentechnik-Patent-Nahrungsmittel?page=all<br/>Companies are trying to get patents on vegetables, fruits and even animals (in German).</li>
-<li>"7 Billion":http://ngm.nationalgeographic.com/7-billion<br/>A National Geographic special series about the world's population reaching 7 billion in 2011.</li>
+<li>"Why the Internet Is a Great Tool for Totalitarians":http://www.wired.com/magazine/2010/12/st_essay_totalitarians/<br>It's always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
+<li>"Caring for Your Introvert":http://www.theatlantic.com/magazine/archive/2003/03/caring-for-your-introvert/2696/<br>While I think the author's overly satirical tone actually does a disservice to the content of the article, as an introvert I still urge you to read this.</li>
+<li>"Understanding Pac-Man Ghost Behavior":http://gameinternals.com/post/2072558330/understanding-pac-man-ghost-behavior<br>This is a great example how a few simple rules can create complex looking behavior patterns in AI opponents.</li>
+<li>"Abandon resolutions. Stop looking for a soulmate. Reject positive thinking":http://www.guardian.co.uk/science/2011/jan/01/how-to-better-person-2011<br>For once somebody managed to write a sensible article regarding new year's resolutions.</li>
+<li>"Farmer-scientist group wants to 'hack society' through open-source technology":http://www.grist.org/article/food-2010-12-29-farmer-scientists-want-to-hack-society<br>About "Open Source Ecology":http://openfarmtech.org/wiki/ and the "Global Village Construction Set":http://openfarmtech.org/wiki/Global_Village_Construction_Set. Awesome!</li>
+<li>"The New Year in Snowflakes":http://chouser.github.com/snow/<br>Very nice little Clojure doodle by Chris Houser.</li>
+<li>"Monads Are Not Metaphors":http://www.codecommit.com/blog/ruby/monads-are-not-metaphors<br>A pretty good explanation of monads for everyone struggling with the concept. It should be easy to follow even if your Scala is less than fluent (like mine is).</li>
+<li>"Spacecraft escaping the Solar System":http://heavens-above.com/solar-escape.asp<br>Positions and other data of the 5 spacecraft leaving our solar system on escape trajectories. The space geek in me likes this a lot.</li>
+<li>"Wem gehoert der Brokkoli?":http://www.zeit.de/2011/01/Gentechnik-Patent-Nahrungsmittel?page=all<br>Companies are trying to get patents on vegetables, fruits and even animals (in German).</li>
+<li>"7 Billion":http://ngm.nationalgeographic.com/7-billion<br>A National Geographic special series about the world's population reaching 7 billion in 2011.</li>
 </ul>

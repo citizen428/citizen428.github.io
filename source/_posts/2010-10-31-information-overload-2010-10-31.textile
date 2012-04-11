@@ -13,14 +13,14 @@ categories:
 - science
 ---
 <ul>
-<li>"Designing For Jedi":http://theferrett.livejournal.com/1534590.html<br/>On libertarians and the Victorian Era.</li>
-<li>"Full-body scanners are waste of money, Israeli expert says":http://www.vancouversun.com/travel/2941610/story.html<br/>The former chief security officer of Tel Aviv's Ben Gurion airport explains why he thinks full-body scanner are a waste of money.</li>
-<li>"Sweet bypass for student finger scanner":http://www.zdnet.com.au/sweet-bypass-for-student-finger-scanner-339306878.htm<br/>Australian school's plan to use fingerprint readers to track students' attendance might be foiled by the good old "gummy bear attack":http://www.theregister.co.uk/2002/05/16/gummi_bears_defeat_fingerprint_sensors/?</li>
-<li>"Scale of Universe":http://primaxstudio.com/stuff/scale_of_universe/<br/>An interactive tool to visualize the scale of the universe from "quantum foam":http://en.wikipedia.org/wiki/Quantum_foam to beyond the observable universe. Mind-boggling!</li>
-<li>"What a Rotten World It Can Be: Report Says Three-Fourths of World Is Corrupt":http://newsfeed.time.com/2010/10/26/what-a-rotten-world-it-can-be-report-says-three-fourths-of-world-is-corrupt/<br/> Transparency International's Corruption Perceptions Index 2010 is out, once again with depressing results.</li>
-<li>"Composing J in my mind":http://kaleidic.com/2009/composing-j-in-my-mind/<br/>Also over a year old, this post by "@kaleidic":http://twitter.com/#!/kaleidic on "J":http://www.jsoftware.com/ is a good reminder why it's such an awesome language that I want to spend more time with.</li>
-<li>"Peter Bossman becomes Eastern Europe's first black mayor":http://www.guardian.co.uk/world/2010/oct/25/peter-bossman-first-black-major-eastern-europe-slovenia<br/>After many depressing elections in Europe, it's good to have some positive news at last.</li>
-<li>"Andrew Horner: The reverse job applicant":http://www.reversejobapplication.com/<br/>An interesting way to look for a job, good luck to the author!</li>
-<li>"Think Again: Global Aging":http://www.foreignpolicy.com/articles/2010/10/11/think_again_global_aging?page=full<br/>Awesome article on global aging and the reasons for and consequences of demographic shifts.</li>
-<li>"Super Mario Bros.' 25th: Miyamoto Reveals All":http://www.1up.com/news/super-mario-bros-25th-miyamoto<br/>Happy birthday Super Mario Bros!</li>
+<li>"Designing For Jedi":http://theferrett.livejournal.com/1534590.html<br>On libertarians and the Victorian Era.</li>
+<li>"Full-body scanners are waste of money, Israeli expert says":http://www.vancouversun.com/travel/2941610/story.html<br>The former chief security officer of Tel Aviv's Ben Gurion airport explains why he thinks full-body scanner are a waste of money.</li>
+<li>"Sweet bypass for student finger scanner":http://www.zdnet.com.au/sweet-bypass-for-student-finger-scanner-339306878.htm<br>Australian school's plan to use fingerprint readers to track students' attendance might be foiled by the good old "gummy bear attack":http://www.theregister.co.uk/2002/05/16/gummi_bears_defeat_fingerprint_sensors/?</li>
+<li>"Scale of Universe":http://primaxstudio.com/stuff/scale_of_universe/<br>An interactive tool to visualize the scale of the universe from "quantum foam":http://en.wikipedia.org/wiki/Quantum_foam to beyond the observable universe. Mind-boggling!</li>
+<li>"What a Rotten World It Can Be: Report Says Three-Fourths of World Is Corrupt":http://newsfeed.time.com/2010/10/26/what-a-rotten-world-it-can-be-report-says-three-fourths-of-world-is-corrupt/<br> Transparency International's Corruption Perceptions Index 2010 is out, once again with depressing results.</li>
+<li>"Composing J in my mind":http://kaleidic.com/2009/composing-j-in-my-mind/<br>Also over a year old, this post by "@kaleidic":http://twitter.com/#!/kaleidic on "J":http://www.jsoftware.com/ is a good reminder why it's such an awesome language that I want to spend more time with.</li>
+<li>"Peter Bossman becomes Eastern Europe's first black mayor":http://www.guardian.co.uk/world/2010/oct/25/peter-bossman-first-black-major-eastern-europe-slovenia<br>After many depressing elections in Europe, it's good to have some positive news at last.</li>
+<li>"Andrew Horner: The reverse job applicant":http://www.reversejobapplication.com/<br>An interesting way to look for a job, good luck to the author!</li>
+<li>"Think Again: Global Aging":http://www.foreignpolicy.com/articles/2010/10/11/think_again_global_aging?page=full<br>Awesome article on global aging and the reasons for and consequences of demographic shifts.</li>
+<li>"Super Mario Bros.' 25th: Miyamoto Reveals All":http://www.1up.com/news/super-mario-bros-25th-miyamoto<br>Happy birthday Super Mario Bros!</li>
 </ul>

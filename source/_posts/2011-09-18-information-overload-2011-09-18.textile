@@ -13,14 +13,14 @@ categories:
 - society
 ---
 <ul>
-<li>"My history with Forth & stack machines":http://www.yosefk.com/blog/my-history-with-forth-stack-machines.html<br/>I haven't included a proper programming article in a while, but this one is a really good read, even though it "only" covers one person's experience with Forth.</li>
-<li>"Behind the scenes at the death squads of Chechnya":http://www.opendemocracy.net/od-russia/svetlana-reiter-igor-kalyapin/behind-scenes-at-death-squads-of-chechnya<br/>A shocking account of the goings-on in Chechnya.</li>
-<li>"Uberdata: How prostitution and alcohol make Uber better":http://blog.uber.com/2011/09/13/uberdata-how-prostitution-and-alcohol-make-uber-better/<br/>You know I like cool posts about math/statistics. This is one.</li>
-<li>"How to Beat Terrorism: Refuse to Be Terrorized":http://www.wired.com/dangerroom/2011/09/end-911-era/<br/>I agree with the headline and the general position in the article, but find some things in it a bit strange.</li>
-<li>"In China, what you eat tells who you are":http://www.latimes.com/news/nationworld/world/la-fg-china-elite-farm-20110917,0,7521747,full.story<br/>In a country stricken with food scandals, the rich and powerful establish their own supplies.</li>
-<li>"Johann Hari: Cheap meat, MRSA and deadly greed":http://www.independent.co.uk/opinion/commentators/johann-hari/johann-hari-cheap-meat-mrsa-and-deadly-greed-2298567.html<br/>Another article on food safety and once again I don't really understand how we as a species seem so keen on wiping ourselves out.</li>
-<li>"Flipping the classroom":http://www.economist.com/node/21529062<br/>How online-based learned tools are changing the classroom.</li>
-<li>"Stand up against the anti-technology terrorists":http://www.nature.com/news/2011/110822/full/476373a.html<br/>In Mexico scientists working in nano-technology and related fields are apparently becoming targets for letter/package bombs.</li>
-<li>"Are Genes Our Destiny? Scientists Discover 'Hidden' Code in DNA Evolves More Rapidly Than Genetic Code":http://www.sciencedaily.com/releases/2011/09/110916152401.htm<br/>Interesting new results on the role of epigenetics.</li>
-<li>"How to get $12 billion of gold to Venezuela":http://blogs.reuters.com/felix-salmon/2011/08/23/how-to-get-12-billion-of-gold-to-venezuela/<br/>This is a bit older, but still interesting. How could Hugo Chavez get all the gold from the UK to Venezuela?</li>
+<li>"My history with Forth & stack machines":http://www.yosefk.com/blog/my-history-with-forth-stack-machines.html<br>I haven't included a proper programming article in a while, but this one is a really good read, even though it "only" covers one person's experience with Forth.</li>
+<li>"Behind the scenes at the death squads of Chechnya":http://www.opendemocracy.net/od-russia/svetlana-reiter-igor-kalyapin/behind-scenes-at-death-squads-of-chechnya<br>A shocking account of the goings-on in Chechnya.</li>
+<li>"Uberdata: How prostitution and alcohol make Uber better":http://blog.uber.com/2011/09/13/uberdata-how-prostitution-and-alcohol-make-uber-better/<br>You know I like cool posts about math/statistics. This is one.</li>
+<li>"How to Beat Terrorism: Refuse to Be Terrorized":http://www.wired.com/dangerroom/2011/09/end-911-era/<br>I agree with the headline and the general position in the article, but find some things in it a bit strange.</li>
+<li>"In China, what you eat tells who you are":http://www.latimes.com/news/nationworld/world/la-fg-china-elite-farm-20110917,0,7521747,full.story<br>In a country stricken with food scandals, the rich and powerful establish their own supplies.</li>
+<li>"Johann Hari: Cheap meat, MRSA and deadly greed":http://www.independent.co.uk/opinion/commentators/johann-hari/johann-hari-cheap-meat-mrsa-and-deadly-greed-2298567.html<br>Another article on food safety and once again I don't really understand how we as a species seem so keen on wiping ourselves out.</li>
+<li>"Flipping the classroom":http://www.economist.com/node/21529062<br>How online-based learned tools are changing the classroom.</li>
+<li>"Stand up against the anti-technology terrorists":http://www.nature.com/news/2011/110822/full/476373a.html<br>In Mexico scientists working in nano-technology and related fields are apparently becoming targets for letter/package bombs.</li>
+<li>"Are Genes Our Destiny? Scientists Discover 'Hidden' Code in DNA Evolves More Rapidly Than Genetic Code":http://www.sciencedaily.com/releases/2011/09/110916152401.htm<br>Interesting new results on the role of epigenetics.</li>
+<li>"How to get $12 billion of gold to Venezuela":http://blogs.reuters.com/felix-salmon/2011/08/23/how-to-get-12-billion-of-gold-to-venezuela/<br>This is a bit older, but still interesting. How could Hugo Chavez get all the gold from the UK to Venezuela?</li>
 </ul>

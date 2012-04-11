@@ -12,7 +12,7 @@ categories:
 
 Learning a new programming language always is fun and there are many great books legally available for free online. Here's a selection of 30 of them:
 
-<p><strong>Lisp/Scheme:</strong><br/>
+<p><strong>Lisp/Scheme:</strong><br>
 <a href="http://www.cs.cmu.edu/~dst/LispBook/">Common Lisp: A Gentle Introduction to Symbolic Computation</a>
 <a href="http://www.htdp.org/">How to Design Programs</a>
 <a href="http://www.civilized.com/files/lispbook.pdf">Interpreting Lisp</a> (PDF, suggested by "Gary Knott":http://civilized.com)

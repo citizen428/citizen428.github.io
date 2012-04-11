@@ -11,14 +11,14 @@ categories:
 - technology
 ---
 <ul>
-<li>"Understanding the Fourier transform by Stuart Riffle":http://altdevblogaday.org/2011/05/17/understanding-the-fourier-transform/<br/>You know I'm a big fan of good (math) explanations and this is no exception. I really like the color coded formula!</li>
-<li>"The Complete Guide to Not Giving a Fuck":http://inoveryourhead.net/the-complete-guide-to-not-giving-a-fuck/<br/>Some good advice in there, but like with most things in life, the right balance is the key.</li>
-<li>"You can increase your intelligence: 5 ways to maximize your cognitive potential":http://www.scientificamerican.com/blog/post.cfm?id=you-can-increase-your-intelligence-2011-03-07<br/>Interesting article in the Scientific American. Funny tidbit: I regularly observe all the described behaviors in the hacker community, seems we are doing well in this regard.</li>
-<li>"On TermKit":http://acko.net/blog/on-termkit<br/>While I'm not sure I'd use this, it's interesting to see the Unix terminal re-imagined.</li>
-<li>"The People vs. Goldman Sachs":http://www.rollingstone.com/politics/news/the-people-vs-goldman-sachs-20110511<br/>To get an idea what this is about, here's a quote from the article: "This is America: Corporate stealing is practically the national pastime, and Goldman Sachs is far from the only company to get away with doing it".</li>
-<li>"How Food Explains the World":http://www.foreignpolicy.com/articles/2011/04/25/how_food_explains_the_world?page=full<br/>I really like this Foreign Policy article on food, a topic we should really tackle on a global scale.</li>
-<li>"First 'habitable' exoplanet confirmed":http://www.cosmosmagazine.com/news/4321/first-habitable-exoplanet-confirmed<br/>Don't pack your bags just yet, but this is still cool.</li>
-<li>"Ein Job zum Davonlaufen":http://sz-magazin.sueddeutsche.de/texte/anzeigen/35651<br/>Police officer, a job to run away from? (in German)</li>
-<li>"Life is a cosmic giggle on the breath of the universe":http://www.viceland.com/int/v18n5/htdocs/life-is-a-cosmic-giggle-803.php?page=1<br/>Wow, once again real life is much more screwed up than TV. If you think "Breaking Bad":http://en.wikipedia.org/wiki/Breaking_Bad is hardcore, read this article/interview.</li>
-<li>"NASA Announces Results Of Epic Space-Time Experiment":http://science.nasa.gov/science-news/science-at-nasa/2011/04may_epic/<br/>47 years in the making, this experiment proves the existence of a space-time vortex around Earth.</li>
+<li>"Understanding the Fourier transform by Stuart Riffle":http://altdevblogaday.org/2011/05/17/understanding-the-fourier-transform/<br>You know I'm a big fan of good (math) explanations and this is no exception. I really like the color coded formula!</li>
+<li>"The Complete Guide to Not Giving a Fuck":http://inoveryourhead.net/the-complete-guide-to-not-giving-a-fuck/<br>Some good advice in there, but like with most things in life, the right balance is the key.</li>
+<li>"You can increase your intelligence: 5 ways to maximize your cognitive potential":http://www.scientificamerican.com/blog/post.cfm?id=you-can-increase-your-intelligence-2011-03-07<br>Interesting article in the Scientific American. Funny tidbit: I regularly observe all the described behaviors in the hacker community, seems we are doing well in this regard.</li>
+<li>"On TermKit":http://acko.net/blog/on-termkit<br>While I'm not sure I'd use this, it's interesting to see the Unix terminal re-imagined.</li>
+<li>"The People vs. Goldman Sachs":http://www.rollingstone.com/politics/news/the-people-vs-goldman-sachs-20110511<br>To get an idea what this is about, here's a quote from the article: "This is America: Corporate stealing is practically the national pastime, and Goldman Sachs is far from the only company to get away with doing it".</li>
+<li>"How Food Explains the World":http://www.foreignpolicy.com/articles/2011/04/25/how_food_explains_the_world?page=full<br>I really like this Foreign Policy article on food, a topic we should really tackle on a global scale.</li>
+<li>"First 'habitable' exoplanet confirmed":http://www.cosmosmagazine.com/news/4321/first-habitable-exoplanet-confirmed<br>Don't pack your bags just yet, but this is still cool.</li>
+<li>"Ein Job zum Davonlaufen":http://sz-magazin.sueddeutsche.de/texte/anzeigen/35651<br>Police officer, a job to run away from? (in German)</li>
+<li>"Life is a cosmic giggle on the breath of the universe":http://www.viceland.com/int/v18n5/htdocs/life-is-a-cosmic-giggle-803.php?page=1<br>Wow, once again real life is much more screwed up than TV. If you think "Breaking Bad":http://en.wikipedia.org/wiki/Breaking_Bad is hardcore, read this article/interview.</li>
+<li>"NASA Announces Results Of Epic Space-Time Experiment":http://science.nasa.gov/science-news/science-at-nasa/2011/04may_epic/<br>47 years in the making, this experiment proves the existence of a space-time vortex around Earth.</li>
 </ul>

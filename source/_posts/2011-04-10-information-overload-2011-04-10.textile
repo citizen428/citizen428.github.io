@@ -12,14 +12,14 @@ categories:
 - technology
 ---
 <ul>
-<li>"A few of my Git tricks, tips and workflows":http://nuclearsquid.com/writings/git-tricks-tips-workflows.html<br/>Really nice collection of Git tricks by "Markus Prinz":http://twitter.com/cypher.</li>
-<li>"Booted - What really ails Italy?":http://www.newyorker.com/arts/critics/atlarge/2011/04/11/110411crat_atlarge_parks?currentPage=all<br/>Great New Yorker article by "Tim Parks":http://tim-parks.com/ on Italy and Silvio Berlusconi.</li>
-<li>"The Future Of Libraries In The E-Book Age":http://www.npr.org/2011/04/04/135117829/the-future-of-libraries-in-the-e-book-age<br/>A follow-up to last week's post on ebooks. I hope we'll eventually have sane policies for digital media.</li>
-<li>"The Writer's Handbook":http://writing.wisc.edu/Handbook/index.html<br/>Prepared by the University of Wisconsin - Madison this has some good tips for writing English (a lot of which also apply to German).</li>
-<li>"Interview With Albert Graef":http://blueparen.com/node/6<br/>An interview with the inventor of "Pure":http://code.google.com/p/pure-lang/, an unfortunately rather unknown functional programming language I used to play around with a bit last year (there's also a "second part":http://blueparen.com/node/7).</li>
-<li>"Why You Should Care About Cricket":http://sports.espn.go.com/espn/eticket/story?page=110329/Cricket<br/>This is a very good read not only about Cricket, but also about India.</li>
-<li>"Detecting Cheaters":http://www.schneier.com/blog/archives/2011/04/detecting_cheat_2.html<br/>Interesting as always, this article by Bruce Schneier covers cheating, evolutionary psychology and formal logic.</li>
-<li>"The Story of Emily and Control":http://squid314.livejournal.com/293753.html<br/>Here we go, for once I'm linking to some fiction in "Information Overload". This is a very nice short story, don't let yourself be turned away by the fact that it was posted on LJ.</li>
-<li>"The world can be powered by alternative energy in 20-40 years, Stanford researcher says":http://news.stanford.edu/news/2011/january/jacobson-world-energy-012611.html<br/>While this is interesting, I'm still somewhat doubtful that there'll be enough political will to make this happen.</li>
-<li>"The Cicada Principle and Why It Matters to Web Designers":http://designfestival.com/the-cicada-principle-and-why-it-matters-to-web-designers/<br/>When math helps design.</li>
+<li>"A few of my Git tricks, tips and workflows":http://nuclearsquid.com/writings/git-tricks-tips-workflows.html<br>Really nice collection of Git tricks by "Markus Prinz":http://twitter.com/cypher.</li>
+<li>"Booted - What really ails Italy?":http://www.newyorker.com/arts/critics/atlarge/2011/04/11/110411crat_atlarge_parks?currentPage=all<br>Great New Yorker article by "Tim Parks":http://tim-parks.com/ on Italy and Silvio Berlusconi.</li>
+<li>"The Future Of Libraries In The E-Book Age":http://www.npr.org/2011/04/04/135117829/the-future-of-libraries-in-the-e-book-age<br>A follow-up to last week's post on ebooks. I hope we'll eventually have sane policies for digital media.</li>
+<li>"The Writer's Handbook":http://writing.wisc.edu/Handbook/index.html<br>Prepared by the University of Wisconsin - Madison this has some good tips for writing English (a lot of which also apply to German).</li>
+<li>"Interview With Albert Graef":http://blueparen.com/node/6<br>An interview with the inventor of "Pure":http://code.google.com/p/pure-lang/, an unfortunately rather unknown functional programming language I used to play around with a bit last year (there's also a "second part":http://blueparen.com/node/7).</li>
+<li>"Why You Should Care About Cricket":http://sports.espn.go.com/espn/eticket/story?page=110329/Cricket<br>This is a very good read not only about Cricket, but also about India.</li>
+<li>"Detecting Cheaters":http://www.schneier.com/blog/archives/2011/04/detecting_cheat_2.html<br>Interesting as always, this article by Bruce Schneier covers cheating, evolutionary psychology and formal logic.</li>
+<li>"The Story of Emily and Control":http://squid314.livejournal.com/293753.html<br>Here we go, for once I'm linking to some fiction in "Information Overload". This is a very nice short story, don't let yourself be turned away by the fact that it was posted on LJ.</li>
+<li>"The world can be powered by alternative energy in 20-40 years, Stanford researcher says":http://news.stanford.edu/news/2011/january/jacobson-world-energy-012611.html<br>While this is interesting, I'm still somewhat doubtful that there'll be enough political will to make this happen.</li>
+<li>"The Cicada Principle and Why It Matters to Web Designers":http://designfestival.com/the-cicada-principle-and-why-it-matters-to-web-designers/<br>When math helps design.</li>
 </ul>

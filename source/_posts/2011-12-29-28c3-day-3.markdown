@@ -7,9 +7,9 @@ categories:
     - private
     - review
 ---
-* [Security Log Visualization with a Correlation Engine](http://events.ccc.de/congress/2011/Fahrplan/events/4767.en.html)<br/>Nothing too special, but still rather interesting, especially since I need this for work at the moment.
-* [Bitcoin - An Analysis](http://events.ccc.de/congress/2011/Fahrplan/events/4746.en.html)<br/>This was a great talk about the current state of Bitcoin, highly recommended if you have any interest in the topic.
-* [Cellular protocol stacks for Internet](http://events.ccc.de/congress/2011/Fahrplan/events/4663.en.html)<br/>Harald Welte's talks on mobile related stuff are usually great, but I didn't get much out of this one, which felt a bit like acronym bullshit bingo (which is not Harald's fault of course).
-* [Print Me If You Dare](http://events.ccc.de/congress/2011/Fahrplan/events/4780.en.html)<br/>One of my favorite talks of this year's congress, you definitely want to watch this. Update your printer firmware first though ;-)
-* [Behind the scenes of a C64 demo](http://events.ccc.de/congress/2011/Fahrplan/events/4814.en.html)<br/>The C64 is the reason I became a software developer, so obviously I really enjoyed this talk. [The demo](http://www.youtube.com/watch?v=LH6_1dEVWds) is really good too!
-* [Fnord-Jahresrückblick](http://events.ccc.de/congress/2011/Fahrplan/events/4866.en.html)<br/>Fun as always.
+* [Security Log Visualization with a Correlation Engine](http://events.ccc.de/congress/2011/Fahrplan/events/4767.en.html)<br>Nothing too special, but still rather interesting, especially since I need this for work at the moment.
+* [Bitcoin - An Analysis](http://events.ccc.de/congress/2011/Fahrplan/events/4746.en.html)<br>This was a great talk about the current state of Bitcoin, highly recommended if you have any interest in the topic.
+* [Cellular protocol stacks for Internet](http://events.ccc.de/congress/2011/Fahrplan/events/4663.en.html)<br>Harald Welte's talks on mobile related stuff are usually great, but I didn't get much out of this one, which felt a bit like acronym bullshit bingo (which is not Harald's fault of course).
+* [Print Me If You Dare](http://events.ccc.de/congress/2011/Fahrplan/events/4780.en.html)<br>One of my favorite talks of this year's congress, you definitely want to watch this. Update your printer firmware first though ;-)
+* [Behind the scenes of a C64 demo](http://events.ccc.de/congress/2011/Fahrplan/events/4814.en.html)<br>The C64 is the reason I became a software developer, so obviously I really enjoyed this talk. [The demo](http://www.youtube.com/watch?v=LH6_1dEVWds) is really good too!
+* [Fnord-Jahresrückblick](http://events.ccc.de/congress/2011/Fahrplan/events/4866.en.html)<br>Fun as always.

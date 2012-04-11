@@ -13,13 +13,13 @@ categories:
 The web is full of wonderful information. In fact there's so much of it, it almost feels intimidating at times. I therefore plan to start a series of blog posts about articles/screencasts/lectures/etc. I enjoyed during the week (they may have been published at a totally different time though).
 
 <ul>
-<li>"The Philosophy of Punk Rock Mathematics":http://technoccult.net/archives/2010/02/25/the-punk-rock-philosophy-of-mathematics-technoccult-interviews-tom-henderson/<br/>An interview with Tom Henderson, aka "@mathpunk":http://twitter.com/mathpunk.</li>
-<li>"Augmented Reality: The Nightmare Scenario":http://www.fastcodesign.com/1661871/augmented-reality-the-nightmare-scenario<br/>Short video by a Japanese architecture student about advertising in an augmented (hyper-)reality.</li>
-<li>"The origins of abc":http://ilovetypography.com/2010/08/07/where-does-the-alphabet-come-from/<br/>Where does our alphabet come from?</li>
-<li>"Beyond City Limits":http://www.foreignpolicy.com/articles/2010/08/16/beyond_city_limits?page=full<br/>Is the age of nations over and are we entering the age of cities?</li>
-<li>"Clojure 1.2 and Beyond":http://fogus.me/static/preso/clj1.2+/<br/>A presentation by "@fogus":http://twitter.com/fogus about the newly released Clojure 1.2. Covers everything that's important and has some wild speculation about the future too.</li>
-<li>"Cauchy Curves":http://www.vector.org.uk/?vol=24&no=1&art=jonesreiter<br/>Drawing Cauchy curves with "J":http://www.jsoftware.com/.</li>
-<li>"Digital copycats":http://mdn.mainichi.jp/features/news/20100820p2a00m0na019000c.html<br/>People in Japan are starting to digitize their books.</li>
-<li>"Hydrogen bombshell: Rewriting life's history":http://www.newscientist.com/article/mg20727721.400-hydrogen-bombshell-rewriting-lifes-history.html<br/>Animals who don't need oxygen for survival.</li>
-<li>"An Implausibly Illustrated Introduction to HTML5 Web Workers":http://wearehugh.com/public/2010/08/html5-web-workers/<br/>Exactly what the title promises. </li>
-<li>"Urlaub ohne Ende":http://www.spiegel.de/unispiegel/jobundberuf/0,1518,711917,00.html<br/>Netflix employees can take as many holidays as they want. Working models for the post-industrial age? (German)</Ii></ul>
+<li>"The Philosophy of Punk Rock Mathematics":http://technoccult.net/archives/2010/02/25/the-punk-rock-philosophy-of-mathematics-technoccult-interviews-tom-henderson/<br>An interview with Tom Henderson, aka "@mathpunk":http://twitter.com/mathpunk.</li>
+<li>"Augmented Reality: The Nightmare Scenario":http://www.fastcodesign.com/1661871/augmented-reality-the-nightmare-scenario<br>Short video by a Japanese architecture student about advertising in an augmented (hyper-)reality.</li>
+<li>"The origins of abc":http://ilovetypography.com/2010/08/07/where-does-the-alphabet-come-from/<br>Where does our alphabet come from?</li>
+<li>"Beyond City Limits":http://www.foreignpolicy.com/articles/2010/08/16/beyond_city_limits?page=full<br>Is the age of nations over and are we entering the age of cities?</li>
+<li>"Clojure 1.2 and Beyond":http://fogus.me/static/preso/clj1.2+/<br>A presentation by "@fogus":http://twitter.com/fogus about the newly released Clojure 1.2. Covers everything that's important and has some wild speculation about the future too.</li>
+<li>"Cauchy Curves":http://www.vector.org.uk/?vol=24&no=1&art=jonesreiter<br>Drawing Cauchy curves with "J":http://www.jsoftware.com/.</li>
+<li>"Digital copycats":http://mdn.mainichi.jp/features/news/20100820p2a00m0na019000c.html<br>People in Japan are starting to digitize their books.</li>
+<li>"Hydrogen bombshell: Rewriting life's history":http://www.newscientist.com/article/mg20727721.400-hydrogen-bombshell-rewriting-lifes-history.html<br>Animals who don't need oxygen for survival.</li>
+<li>"An Implausibly Illustrated Introduction to HTML5 Web Workers":http://wearehugh.com/public/2010/08/html5-web-workers/<br>Exactly what the title promises. </li>
+<li>"Urlaub ohne Ende":http://www.spiegel.de/unispiegel/jobundberuf/0,1518,711917,00.html<br>Netflix employees can take as many holidays as they want. Working models for the post-industrial age? (German)</Ii></ul>

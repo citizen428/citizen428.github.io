@@ -10,16 +10,16 @@ categories:
 - society
 ---
 <ul>
-<li>"Anarchists should be reported, advises Westminster anti-terror police":http://www.guardian.co.uk/uk/2011/jul/31/westminster-police-anarchist-whistleblower-advice<br/>Yeah, let's all spy on our neighbors, that always worked out well...</li>
-<li>"Not so gullible after all":http://languagelog.ldc.upenn.edu/nll/?p=3336<br/>Interesting piece about psychological studies on how we react to advertising logos and slogans.</li>
-<li>"How A 21-Year-Old Design Student's Sleeping-Bag Coat Could Break The Cycle Of Homelessnes":http://www.fastcompany.com/1765168/the-detroit-empowerment-project-homeless-sleeping-bag-coats-veronika-scott<br/>I love projects that are about empowering and really helping people in need.</li>
-<li>"Geschlecht unbekannt":http://diestandard.at/1311802514847/Erziehung-Geschlecht-unbekannt<br/>A Canadian couple is keeping the gender of their third child a secret, because they "want to let the kid decide". They also are quite unconventional in bringing up the 2 older siblings (in German).</li>
-<li>"Executions Should Be Televised":http://www.nytimes.com/2011/07/31/opinion/sunday/executions-should-be-televised.html?_r=3<br/>Wow, if you seriously start thinking about this, there are lots of ethical considerations to be made. I'll try to get over my initial gut reaction and to ponder the arguments of both sides.</li>
-<li>"The 40-year mystery of America's greatest skyjacking":http://www.telegraph.co.uk/culture/8667855/The-40-year-mystery-of-Americas-greatest-skyjacking.html<br/>The crazy story of the USA's only unsolved skyjacking. How have I never heard about this before?</li>
-<li>"Kenya's ambitions for an outsourced future":http://www.bbc.co.uk/news/technology-12004815<br/>Kenya is trying to establish itself as an outsourcing destination to establish a second line of income next to tourism.</li>
-<li>"8 Reasons Young Americans Don't Fight Back: How the US Crushed Youth Resistance":http://www.alternet.org/module/printversion/151850<br/>Although this was originally written for the US, some if it applies all over the world.</li>
-<li>"Felicia Day: Mogul In The Making":http://blogs.forbes.com/davidewalt/2011/08/03/felicia-day-dragon-age-redemption/<br/>A little look at the work of Felicia Day, author and main character of the web series "The Guild":http://www.watchtheguild.com.</li>
-<li>"The Singularity is Far: A Neuroscientist's View":http://boingboing.net/2011/07/14/far.html<br/>So the singularity might not be around the corner, what a surprise.</li>
+<li>"Anarchists should be reported, advises Westminster anti-terror police":http://www.guardian.co.uk/uk/2011/jul/31/westminster-police-anarchist-whistleblower-advice<br>Yeah, let's all spy on our neighbors, that always worked out well...</li>
+<li>"Not so gullible after all":http://languagelog.ldc.upenn.edu/nll/?p=3336<br>Interesting piece about psychological studies on how we react to advertising logos and slogans.</li>
+<li>"How A 21-Year-Old Design Student's Sleeping-Bag Coat Could Break The Cycle Of Homelessnes":http://www.fastcompany.com/1765168/the-detroit-empowerment-project-homeless-sleeping-bag-coats-veronika-scott<br>I love projects that are about empowering and really helping people in need.</li>
+<li>"Geschlecht unbekannt":http://diestandard.at/1311802514847/Erziehung-Geschlecht-unbekannt<br>A Canadian couple is keeping the gender of their third child a secret, because they "want to let the kid decide". They also are quite unconventional in bringing up the 2 older siblings (in German).</li>
+<li>"Executions Should Be Televised":http://www.nytimes.com/2011/07/31/opinion/sunday/executions-should-be-televised.html?_r=3<br>Wow, if you seriously start thinking about this, there are lots of ethical considerations to be made. I'll try to get over my initial gut reaction and to ponder the arguments of both sides.</li>
+<li>"The 40-year mystery of America's greatest skyjacking":http://www.telegraph.co.uk/culture/8667855/The-40-year-mystery-of-Americas-greatest-skyjacking.html<br>The crazy story of the USA's only unsolved skyjacking. How have I never heard about this before?</li>
+<li>"Kenya's ambitions for an outsourced future":http://www.bbc.co.uk/news/technology-12004815<br>Kenya is trying to establish itself as an outsourcing destination to establish a second line of income next to tourism.</li>
+<li>"8 Reasons Young Americans Don't Fight Back: How the US Crushed Youth Resistance":http://www.alternet.org/module/printversion/151850<br>Although this was originally written for the US, some if it applies all over the world.</li>
+<li>"Felicia Day: Mogul In The Making":http://blogs.forbes.com/davidewalt/2011/08/03/felicia-day-dragon-age-redemption/<br>A little look at the work of Felicia Day, author and main character of the web series "The Guild":http://www.watchtheguild.com.</li>
+<li>"The Singularity is Far: A Neuroscientist's View":http://boingboing.net/2011/07/14/far.html<br>So the singularity might not be around the corner, what a surprise.</li>
 </ul>
 
 There won't be an "Information Overload" next week as I'll be attending the "Chaos Communication Camp":http://events.ccc.de/camp/2011/.

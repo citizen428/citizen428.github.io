@@ -7,7 +7,7 @@ categories:
     - private
     - review
 ---
-* [Antiforensik](http://events.ccc.de/congress/2011/Fahrplan/events/4828.en.html)<br/>How to work against forensics. Nothing revolutionary, but a solid talk.
-* [bup: Git for backups](http://events.ccc.de/congress/2011/Fahrplan/events/4587.en.html)<br/>An interesting backup project using git, this is open source and still needs help in case you are looking for something to work on.
-* [The engineering part of social engineering](http://events.ccc.de/congress/2011/Fahrplan/events/4856.en.html)<br/>I wasn't entirely convinced by this talk. While there were some interesting points, the speaker was quite full of himself and frankly the talk wasn't so different from other SE talks that I've seen before.
-* [Smart Hacking For Privacy](http://events.ccc.de/congress/2011/Fahrplan/events/4754.en.html)<br/>This started off rather bad when  one of the 2 speakers couldn't get over this nervousness, but ended up being a really funny and interesting talk, which was later joined by the CEO of the company whose product got hacked.
+* [Antiforensik](http://events.ccc.de/congress/2011/Fahrplan/events/4828.en.html)<br>How to work against forensics. Nothing revolutionary, but a solid talk.
+* [bup: Git for backups](http://events.ccc.de/congress/2011/Fahrplan/events/4587.en.html)<br>An interesting backup project using git, this is open source and still needs help in case you are looking for something to work on.
+* [The engineering part of social engineering](http://events.ccc.de/congress/2011/Fahrplan/events/4856.en.html)<br>I wasn't entirely convinced by this talk. While there were some interesting points, the speaker was quite full of himself and frankly the talk wasn't so different from other SE talks that I've seen before.
+* [Smart Hacking For Privacy](http://events.ccc.de/congress/2011/Fahrplan/events/4754.en.html)<br>This started off rather bad when  one of the 2 speakers couldn't get over this nervousness, but ended up being a really funny and interesting talk, which was later joined by the CEO of the company whose product got hacked.
