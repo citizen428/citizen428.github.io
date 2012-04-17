@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-04-15T15:13:37+02:00</updated>
+  <updated>2012-04-18T00:39:54+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[No Tor, no more customer]]></title>
+    <link href="http://citizen428.net/blog/2012/04/18/no-tor/"/>
+    <updated>2012-04-18T00:10:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/04/18/no-tor</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve been running a <a href="https://www.torproject.org/">Tor</a> relay since sometime in early 2006. There&#8217;s many good reasons for doing so, but what motivated me personally was my experience of studying in China for one year and experiencing a censored Internet connection firsthand. Alas our system hasn&#8217;t been an exit node in a while, but it&#8217;s still better than nothing.</p>
+
+<p>Today I was contacted by my <a href="http://server4you.de">hosting provider</a>&#8217;s abuse team, telling me that my server has been shut down because of a ToS violation. I <a href="https://twitter.com/#!/citizen428/status/192189329177718784">immediately was afraid</a> that they might complain about the Tor relay, but still had hope that I might be wrong. Ten hours later, after I got no reply to about five support requests, I decided to call their hotline. The employee first told me that he has no way to see why the abuse team blocked my server, but then said that running a Tor node may have been the reason. What ensued was a five minute conversation full of WTFs, facepalms and headdesks on my part, but the bottom line is that Server4You is of the opinion that it is illegal to run a Tor relay in Germany because of the <a href="http://de.wikipedia.org/wiki/Hackerparagraf">&#8220;Hackerparagraf&#8221;</a>. If you don&#8217;t know what that is, <a href="http://hackingexpose.blogspot.com/2012/04/watch-out-white-hats-european-union_3977.html">read up</a> on recent pushes to enforce similar legislation EU wide.</p>
+
+<p>After a fruitless discussion of said law, the — admittely nice — guy on the phone reassured me that my server will be restarted if I agree to disable the Tor node. I politely told him that I have no interest in using their services at all if I can&#8217;t use them the way I want to, so I&#8217;ll cancel my contract with Server4You as soon as possible. For the time being I donated some money to Tor, moved my blog over to <a href="http://www.heroku.com/">Heroku</a> (yay <a href="http://octopress.org/">Octopress</a>) and started evaluating hosting providers in countries with saner legislation (as long as there still are some).</p>
+
+<p>Sure, there&#8217;s probably a lot of really bad things happening over the Tor network, but those shouldn&#8217;t be used to discredit the tool&#8217;s legitimate uses. If we start blaming technology instead of people, we might as well turn of the Internet.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-04-15]]></title>
@@ -488,27 +503,6 @@ Fabian Kruse: <strong>Beyond Rules</strong><br>
 Dario Tonani: <strong>Cardanica (A Steampunk Nightmare)</strong><br>
 Ryū Murakami: <strong>In The Miso Soup</strong><br>
 Kaaron Warren: <strong>The Grinding House</strong><br></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[28C3 day 1]]></title>
-    <link href="http://citizen428.net/blog/2011/12/27/28c3-day-1/"/>
-    <updated>2011-12-27T16:19:00+01:00</updated>
-    <id>http://citizen428.net/blog/2011/12/27/28c3-day-1</id>
-    <content type="html"><![CDATA[<p>Just a quick summary of the talks I saw on day 1 (powered by <a href="http://www.flora-power.de/">Flora Power</a>, since I already started this year&#8217;s congress with a lack of sleep).</p>
-
-<ul>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4897.en.html">Marriage From Hell</a><br> Authoritarian governments using surveillance technologies provided by Western companies is not exactly news. Not a bad talk, although it was a bit from the &#8220;No shit, Sherlock&#8221; department. Not worthy of a keynote in my opinion.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4711.en.html">The Atari 2006 Video Computer System</a><br>Since I love hearing about old hardware and its limitations, this was an awesome talk. The speaker definitely knew what he was talking about and the presentation was very solid.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4799.en.html">Can trains be hacked?</a><br>Another good talk, but understandably there was no information on actually hacking the train system. If you want more info on this topic, listen to <a href="http://cre.fm/cre171">Chaos Radio Express #171</a> from December last year.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4661.en.html">SCADA and PLC Vulnerabilities in Correctional Facilities</a><br>Since I wanted to charge my notebook, I watched this one as a stream. This of course led to web surfing and IRC, so I didn&#8217;t pay as much attention as this talk would have deserved.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4913.en.html">Almighty DNA?</a><br>Why collecting DNA is also a form of data retention. If you&#8217;ve been to similar talks before you probable knew most of the stories they told, if not the video and <a href="http://cre.fm/cre143">Chaos Radio Express #143</a> should be good resources to catch up.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4713.en.html">What is in a name?</a><br>The history of names and identity regimes from 1500 until today. Pretty interesting, but unfortunately I was in a bit of a post-dinner food coma.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4736.en.html">Defending mobile phones</a><br>This talk was really full and unfortunately the stream didn&#8217;t work either, so I ended up watching the second half of  <a href="Macro%20dragnets:%20Why%20trawl%20the%20river%20when%20you%20can%20do%20the%20whole%20ocean">Macro dragnets: Why trawl the river when you can do the whole ocean</a> which had some interesting info on avoiding face recognition and other things.<br></li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4817.en.html">String Oriented Programming</a><br>A talk about evading ASLR, DEP and other security measures with <code>printf</code> exploits.</li>
-</ul>
-
 ]]></content>
   </entry>
   
