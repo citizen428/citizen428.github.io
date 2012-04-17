@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: arts | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/arts/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-06-03]]></title>
+    <link href="http://citizen428.net/blog/2011/06/03/information-overload-2011-06-03/"/>
+    <updated>2011-06-03T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/06/03/information-overload-2011-06-03</id>
+    <content type="html"><![CDATA[<p>Information Overload is a bit early this week and may be skipped altogether next Sunday. After that it should be back to the regular schedule.</p>
+
+<ul>
+<li>"A Hyperturtle Monad Makes Pretty Pictures":http://dorophone.blogspot.com/2011/05/hyperturtle-monad-makes-pretty-pictures.html<br>This article on monads isn't only awesome because it develops a novel one instead of reiterating one of the well-known simple monads, but also because it does so using "Racket":http://racket-lang.org/.</li>
+<li>"Iran Vows to Unplug Internet":http://online.wsj.com/article/SB10001424052748704889404576277391449002016.html<br>Not that it's that suprising, but the amount of world wide censorship efforts we saw recently is shocking.</li>
+<li>"How to spot a psychopath":http://www.guardian.co.uk/books/2011/may/21/jon-ronson-how-to-spot-a-psychopath<br>In case you ever wondered, you'll find answers in this interesting article. As always, things are not really black and white, there's a lot of gray in between.</li>
+<li>"The Case&mdash;Please Hear Me Out&mdash;Against the Em Dash":http://www.slate.com/id/2295413/<br>What a delightful read, especially thanks to the ironic overuse of em-dashes. Personally I'm more of a parenthesis man.</li>
+<li>"How the long-gone Habsburg Empire is still visible in Eastern European bureaucracies today":http://www.voxeu.org/index.php?q=node/6596<br>This is quite an interesting result, I want to read more on this.</li>
+<li>"Researchers track the secret lives of feral and free-roaming house cats":http://www.physorg.com/news/2011-05-track-secret-feral-free-roaming-house.html<br>Cats are cool.</li>
+<li>"Hacking Museums: Our Retrospective of Interventionists and Crashers":http://flavorwire.com/180906/hacking-museums-our-retrospective-of-interventionists-and-crashers<br>Stirring up emotion, provoking, pushing the limits, isn't this what art really is about?</li>
+<li>"Action and habit":http://lesswrong.com/lw/60y/action_and_habit/<br>Sometimes "This is just what I do" is a good answer after all. This is in the same vain as the article about ritualizing I posted not too long ago and is something I've observed in many smart people as a basically subconscious action.</li>
+<li>"Humans: Why They Triumphed":http://online.wsj.com/article/SB10001424052748703691804575254533386933138.html<br>While it makes me somewhat wary when an economics magazine identifies trade as most important aspect of human evolution, the argument presented seems to have some merit, so I'll let you make up your own mind.</li>
+<li>"Eine neue Hackerethik":http://the-gay-bar.com/2011/06/01/eine-neue-hackerethik/<br>Trying to establish a new hacker ethic (in German).</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

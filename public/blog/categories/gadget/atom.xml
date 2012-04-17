@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gadget | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/gadget/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My first week with the Kindle 3]]></title>
+    <link href="http://citizen428.net/blog/2010/09/14/my-first-week-with-the-kindle-3/"/>
+    <updated>2010-09-14T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2010/09/14/my-first-week-with-the-kindle-3</id>
+    <content type="html"><![CDATA[<p>tl;dr: Kindle 3 == teh awesum.</p>
+
+<p>One week ago I finally got my "Kindle 3":http://www.amazon.com/Kindle-Wireless-Reader-Wifi-Graphite/dp/B002Y27P3M and it's about time for a review. Here we go: Awesome! That's it, 'nuff said. In all seriousness, the Kindle may well be my favorite gadget and that comes from somebody who owns a MacBook Pro, an Android phone, an iPod Touch and a Nintendo DS.</p>
+
+<p>First off, at around 180 Euro for the WiFi+3G version it's quite a bargain. I love the form factor, and the software is quite ok too, especially after the latest update. The built-in dictionary has already proven to be useful on several occasions and I'm sure I'll start using the annotation feature rather sooner than later. But now for the most important part, the "e-paper":http://en.wikipedia.org/wiki/Electronic_paper display. It's an absolute pleasure to read on, I find the experience to be highly immersive. Since Saturday I read most of Cory Doctorow's novel "Little Brother":http://craphound.com/littlebrother/download/ on it, and am surprised how the Kindle just seems to disappear while I read. Hands-free reading without the need to keep the book open is pretty sweet too.</p>
+
+<p>As a book nerd and regular reader (I usually read between 50-60 books a year) I still can't entirely abandon paper books though, there's just something magical about their feel and smell. I also tend to pick up a lot of my reading material from second-hand shops, "Bookcrossing":http://www.bookcrossing.com/ or "Offener Buecherschrank":http://www.offener-buecherschrank.at/, something which is not possible for eBooks (yet). However, the Kindle is great for reading all the great freely available books like Peter Watt's "Rifters":http://www.rifters.com/real/shorts.htm trilogy, or the "Project Gutenberg":http://www.gutenberg.org/wiki/Main_Page texts which I mostly ignored so far because I find it too annoying to read them on a computer screen (programming eBooks are a different matter, I <em>want</em> to read them on my screen so I can easily switch to an editor and try out things).</p>
+
+<p>As should be obvious by now, I'm pretty stoked by my new toy. There is however one app that makes it even more awesome, "Calibre":http://calibre-ebook.com/. While it has a pretty ugly UI, it's jam-packed with "useful features":http://calibre-ebook.com/demo every eBook user will appreciate. I especially love the ability to fetch RSS feeds and convert them into Kindle "magazines": every morning Calibre fetches the feeds of several of my favorite online publications, converts them and emails them to my Kindle where I can later read them. Users can contribute their own recipes for this and some of them are just amazing (e.g. the one for Austrian newspaper "Der Standard":http://derstandard.at/ is basically of equal - or better - quality as the commercial offers in the Kindle store). Of course the program also can deal with authentication, so it's no problem to access my subscription of the English edition of "Le Monde diplomatique":http://mondediplo.com/ or my unread "Instapaper":http://www.instapaper.com/ items. Recipes are Python scripts by the way, so it's easy to modify or create them. All in all an absolutely fantastic piece of software, which I happily donated money to! :-)</p>
+
+<p>If you are looking for an eBook reader, it's probably hard to find better value for money than the new Kindle. I've been wanting to buy one for the last 6 month or so, but am very happy that I waited until now. It's everything I expected from such a device, plus a bit more.</p>
+]]></content>
+  </entry>
+  
+</feed>

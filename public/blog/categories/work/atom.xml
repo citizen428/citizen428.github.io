@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: work | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/work/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Comprehensive list of cloud-related links]]></title>
+    <link href="http://citizen428.net/blog/2010/02/25/comprehensive-list-of-cloud-related-links/"/>
+    <updated>2010-02-25T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2010/02/25/comprehensive-list-of-cloud-related-links</id>
+    <content type="html"><![CDATA[<p>Lately a lot of my working time is spent on cloud technologies, most notably the <a href="http://aws.amazon.com/">Amazon Web Services</a>. In recent month I compiled a rather comprehensive list of cloud-related links which I now decided to share with you all.</p>
+
+<p><a href="http://gist.github.com/314445">Cloud Links</a></p>
+
+<p>It's just a markdown file copied into a Gist, so if you want to add any links just fork away! :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What's new pussycat?]]></title>
+    <link href="http://citizen428.net/blog/2009/10/06/whats-new-pussycat/"/>
+    <updated>2009-10-06T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/10/06/whats-new-pussycat</id>
+    <content type="html"><![CDATA[<p>Quite a bit actually:<ul>
+<li>I live in Vienna again. Seriously.</li>
+<li>I started my new job as IT systems engineer at <a href="http://www.nessus.at/">Nessus</a>. <b>Update</b>: That was October. In November I changed job and now work for <a href="http://matrixware.com">Matrixware</a> </li>
+<li><a href="http://github.com/citizen428/ClojureX">ClojureX</a> got mentioned in the <a href="http://github.com/citizen428/ClojureX">latest GitHub rebase</a>, yeah!</li>
+<li><a href="http://github.com/citizen428/unsavory">unsavory</a> is now also available on <a href="http://gemcutter.org/">Gemcutter</a>, so get it while it&#8217;s hot (Disclaimer: product may not be as hot as advertised, YMMV).</li>
+<li><a href="http://rubylearning.org">RubyLearning</a> started a <a href="http://rubylearning.com/blog/2009/09/20/rpcfn-ruby-programming-challenge-for-newbies/">Ruby Programming Challenge for Newbies</a> and I&#8217;m part of the jury. The <a href="http://rubylearning.com/blog/2009/09/24/rpcfn-shift-subtitle-1/">first challenge</a> was provided by <a href="http://www.akitaonrails.com/">Fabio Akita</a> and saw quite a lot of participants. I also wrote a quick <a href="http://github.com/citizen428/rubylearning/blob/master/rpcfn/01subtitles/subtitles.rb">example solution</a>.</li>
+</ul></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Breaking news: Update to citizen428.blog(), situation unclear!]]></title>
+    <link href="http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
+    <updated>2006-07-01T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
+    <content type="html"><![CDATA[<p>June was pretty busy, so I only managed to blog once. So here's a little update of what happened during the past few weeks:</p>
+
+<p><em>Work:</em>
+Still the same old bullsh*t, except that I spent 7 days at a customer's site in Upper Austria, where we set up several virtual "Heartbeat":http://linux-ha.org/ clusters in "VMware Server":http://www.vmware.com/products/server/. Summary: the scenery and people in Upper Austria are pretty nice, VMware is one of the coolest things since the invention of sliced bread and Heartbeat really can be a bitch to set up correctly (no surprises here I guess).</p>
+
+<p><em>Capitalism:</em>
+Got myself a <a href="http://www.viewsonic.com/products/desktopdisplays/lcddisplays/valueseries/va1912wb/">nice widescreen 19" LCD</a>  for my beloved Mac Mini. I also decided that it's about time to get a new digital camera, since my old one broke ages ago. I finally settled on an "Olympus SP-700":http://www.dpreview.com/news/0510/05100401oly_sp700.asp, which Amazon sold for a really good price. The camera arrived last Thursday, and from what I've seen so far I'm really impressed with my new gadget. Today I once again went on a DVD buying spree and bought "Ken Park":http://imdb.com/title/tt0209077/, "Romper Stomper":http://imdb.com/title/tt0105275/, "Bad Taste":http://imdb.com/title/tt0092610/ and the first season of "The Sopranos":http://imdb.com/title/tt0141842/. Next on my list are an external Mac Mini HD like the "miniStack":http://www.newertech.com/ministack and a new notebook. Unfortunately neither the MacBook nor the MacBook Pro does really cut it for me (no 12" version, too heavy, too hot and far too many issues reported by early adopters), so I will probably settle for an "X60s":http://www5.pc.ibm.com/de/products.nsf/$wwwPartNumLookup/_UK15LGE?OpenDocument running Gentoo. I'd really would have loved to buy a portable Mac, but I'm not enough of an Apple fanboy to buy a product which doesn't really fit my needs...</p>
+
+<p><em>Books:</em>
+If you want to read a really good book by a Cuban author, you definitely should try "The Insatiable Spiderman":http://www.amazon.com/gp/product/0786716657/ref=sr_11_1/103-1901030-1131048?ie=UTF8 by Pedro Juan GutiÃ©rrez. Next on my list is "Playing the Moldovans at Tennis ":http://www.amazon.com/gp/product/0753152142/qid=1151763922/sr=1-1/ref=sr_1_1/103-1901030-1131048?s=books&amp;v=glance&amp;n=283155, which I'll start reading tomorrow. I also got myself a copy of "Mac OS X Tiger: Missing Manual":http://www.amazon.com/gp/product/0596009410/qid=1151763999/sr=2-1/ref=pd_bbs_b_2_1/103-1901030-1131048?s=books&amp;v=glance&amp;n=283155, which has shown me some neat tricks although it mainly targets a non-techy audience.</p>
+
+<p><em>Geek stuff:</em>
+I've always been a great fan of tiling window managers like "Ion3":http://www.modeemi.fi/~tuomov/ion/. However, lately I fell in love with "wmii":http://wmii.de/, which I think is an absolutely amazing WM. I'm using version 3, which features dynamic window management as known from "acme":http://en.wikipedia.org/wiki/Acme_%28text_editor%29 or "Oberon":http://en.wikipedia.org/wiki/Oberon_operating_system. Reading the "guide":http://wmii.de/index.php?page=guide doesn't take longer than about 15 minutes, after which I was already able to conviniently work with wmii. So far the experience is really great, and I haven't even started using the scripting capapilites "9P":http://en.wikipedia.org/wiki/9P offers... Additionally using wmii once again made me play around with "Plan 9":http://cm.bell-labs.com/plan9/, an operating system I've been strangely interested in ever since I first heard about it around 6 years ago. Note to self: spend some time with the "9fans":https://lists.cse.psu.edu/mailman/listinfo/9fans at "23C3":http://events.ccc.de/congress/2006/!</p>
+
+<p><em>Gentoo:</em>
+Another month spent without doing anything Gentoo related. To be completely honest, my Gentoo box has only been started twice since I moved into my new apartment in early March. Given that I'll be on holidays for around 10 days in July, you once again shouldn't expect too much activity from me... :( I'm really thinking about leaving the project, as I'm currently not doing anything which warrants my developer status. Probably the only alternative to that would be dropping all the ebuilds I'm currently working on, and to focus solely on "Gentoo-alt":http://www.gentoo.org/proj/en/gentoo-alt/, maintaining the Gentoo/FreeBSD and Gentoo/NetBSD docs, while also working on "Gentoo for Mac OS X":http://www.gentoo.org/proj/en/gentoo-alt/macos/index.xml (although Fink works really well for me). Input wanted!</p>
+
+<p><em>Random:</em>
+September 19th is International Talk Like A Pirate Day. Yarr!</p>
+
+<p><a href="http://www.talklikeapirate.com/"><img src="http://www.talklikeapirate.com/partykit/tlapdbanner2.gif" align="center" border="1"></a></p>
+
+<p>Boomtime, Confusion 36, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Back. Kind of.]]></title>
+    <link href="http://citizen428.net/blog/2006/02/01/back-kind-of/"/>
+    <updated>2006-02-01T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/02/01/back-kind-of</id>
+    <content type="html"><![CDATA[<p>Just a little info for the people who may wonder about my lack of activity lately (mainly the Ruby herd and some guys of the Gentoo/ALT project): I've started a new job as a Junior Systems Engineer for a company providing open source solutions for enterprise customers, which means I've recently been playing around with stuff like Linux Heartbeat and other cool technologies. It's quite stressful, but also pretty interesting so far and I quite like it (despite my constant rambling about having a regular job).</p>
+
+<p>However, in January I also had to finish the last few classes of my college career, so there actually was nearly no time left for Gentoo, as the measly 4 commits I did demonstrate pretty well. I still have a seminar this Friday where I'll present the concept of my diploma thesis, but starting from next week I'll try to do more Gentoo related things again. :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mini update]]></title>
+    <link href="http://citizen428.net/blog/2006/01/10/mini-update/"/>
+    <updated>2006-01-10T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/01/10/mini-update</id>
+    <content type="html"><![CDATA[<p>Yesterday evening "m3's":http://www.leyrer.priv.at/martin/ girlfriend "Susanne":http://www.webcave.at/ organized a little surprise dinner at "mas":http://www.pancho.at/mas/index.htm to celebrate Martin's 35th birthday, which was really relaxing and entertaing. :) It was just what I needed after a rather unnerving day at university, and it really made me look forward to my other "social events" this week (the monthly "AGLUG":http://www.aglug.net/ meeting on Thursday and another "Pardus":http://pardus.at/ meetup on Saturday).</p>
+
+<p>Today was my second day in my new job, which I mostly spent on heartbeat scripts and a "funny" server which shows some irritating behavior. I also had to build my first deb package for the deployment of some in-house software, and I have to say that I now love Portage more than ever... ;)</p>
+
+<p>Setting Orange, Chaos 10, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

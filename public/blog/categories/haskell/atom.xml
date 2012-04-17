@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: haskell | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/haskell/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Haskell: A summary of the "Typeclassopedia"]]></title>
+    <link href="http://citizen428.net/blog/2011/07/23/haskell-a-summary-of-the-typeclassopedia/"/>
+    <updated>2011-07-23T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/07/23/haskell-a-summary-of-the-typeclassopedia</id>
+    <content type="html"><![CDATA[<p>In my current effort of trying to really learn and master Haskell, I spent the last two or so weeks reading the excellent "Typeclassopedia":http://www.haskell.org/haskellwiki/Typeclassopedia by Brent Yorgey. Since I probably will have to go through it a couple more times, I took notes in Emacs "org-mode":http://orgmode.org/ and exported them to HTML. You can find the summary either on GitHub or here:</p>
+
+<ul>
+<li>"GitHub repo":https://github.com/citizen428/study-notes/tree/master/typeclassopedia</li>
+<li>"Typeclassopedia on citizen428.net":http://typeclassopedia.citizen428.net/</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Learn You a Haskell for Great Good]]></title>
+    <link href="http://citizen428.net/blog/2011/07/07/review-learn-you-a-haskell-for-great-good/"/>
+    <updated>2011-07-07T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/07/07/review-learn-you-a-haskell-for-great-good</id>
+    <content type="html"><![CDATA[<p><em>Disclaimer: <a href="http://www.nostarch.com/">No Starch Press</a> were nice enough to provide me with a free copy of the book reviewed here but what I'm about to write has not been influenced by this.</em></p>
+
+<p>Properly learning Haskell has been on my todo list for years. One of my first more serious attempts was in 2009, when I found "a weird little book with lots of cartoons online":http://learnyouahaskell.com/. As you may have guessed that was Miran Lipovaca's "Learn You a Haskell for Great Good" and I was immediately intrigued by the writing style and cute cartoons. However back then the book was still a work in progress and I eventually stopped reading it before Miran got around to adding the last chapters. I always promised myself to eventually revisit this later, so I was delighted when I found out that No Starch Press is actually releasing an offline version of the book! Here you can see the cover in its full cartoony glory:
+<img class="aligncenter" style="border-width: 2px; border-color: black; border-style: solid;" title="Learn You A Haskell cover" src="http://s3.amazonaws.com/files.posterous.com/teddythebear/1XvdQkcaG7iWYJB8XYQeLVwwt5VGYAcxGPa1PNdigVpx60HxVtEQphHTlXEI/LearnYouAHaskell.jpg?AWSAccessKeyId=AKIAJFZAE65UYRT34AOQ&Expires=1319408436&Signature=woTKJQqeEIU9zs1Ib3AfV64gtfY%3D" alt="Learn You A Haskell cover" width="170" height="225" align="centre" border="1" /></p>
+
+<p>Before you think this book is all about funny drawings, lets talk about the real star, the content. LYAH definitely is among the top programming books I read so far. Due to the author's easy-going and funny style &mdash; though I'm sure there will be some readers who won't appreciate his humor &mdash; you might not even notice at first how choke-full of good content this book is, but once you are done with it you realize that you actually learned a lot. This would be an amazing feat for any technical book, but is even more impressive considering Haskell's reputation as being a very academical and arcane language. Sure, not everything is covered here &mdash; Arrows or CPS come to mind &mdash; but every book is finite and the selection of topics is absolutely appropriate for beginning Haskell enthusiasts. The only chapter I wasn't so happy with was the last one on "Zippers":http://en.wikipedia.org/wiki/Zipper, not because it wasn't well written or interesting, but more because it felt a bit tucked on.</p>
+
+<p>What can you expect from this book? Will you be a Haskell guru after reading it? Most likely not, because that takes a long time of practice and actually writing code. Maybe that's one of the few weak points of LYAH, the code examples are usually rather short and focussed on getting the point across, not "real-world" tasks you are likely to encounter in day to day programming. They still are great for introducing the reader to Haskell's way of abstracting problems, which I find immensely beautiful and well thought out. Still, a chapter or two on "programming in the large" and how to structure a big Haskell project would have been nice additions, but there are other places for learning more about the language, e.g. the "Haskell wiki":http://www.haskell.org/haskellwiki/Haskell or the "Haskell Wikibook":https://encrypted.google.com/#hl=en&amp;q=haskell%20wikibook&amp;aq=f&amp;aqi=&amp;aql=&amp;oq=&amp;gs_rfai=&amp;fp=1&amp;bav=on.2,or.r_gc.r_pw.&amp;cad=b. What the book will do for you is that once you are done with it, you should have a good basic understanding of the language's key concepts and type system and will be comfortable around terms like "monoid", "applicative functor" and "monad". There still we be a long way to go before you can consider yourself a Haskell expert, but you'll have a very solid grounding to build on.</p>
+
+<p>All in all this is a remarkable book and maybe just what this beautiful language was missing, an easy to read, entertaining yet still thorough introduction to the language, that gives you an idea that Haskell is not only a research subject for computer scientists but a useful tool that can be used to build software.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tom and Michael vs The Monad]]></title>
+    <link href="http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad/"/>
+    <updated>2011-05-18T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad</id>
+    <content type="html"><![CDATA[<p>So, over the last few weeks "Tom Crinson":http://mrjaba.posterous.com/ and I read another paper, this time "The essence of functional programming" (available "here":http://homepages.inf.ed.ac.uk/wadler/topics/monads.html) by Philip Wadler, one of the principal designers of Haskell. Tom's post is "here":http://mrjaba.posterous.com/michael-and-tom-vs-the-monad.</p>
+
+<p><strong>The paper</strong></p>
+
+<p>Don't let yourself be fooled by the title, this is <strong>not</strong> an introduction to functional programming or lambda calculus. Instead it talks about monads, a topic one reads a lot about and that's often made out to be a lot more complicated than it really is.</p>
+
+<p>The whole paper is 23 pages long, so I won't really summarize it all, but rather try to give you an idea if it might be an interesting read for you. Section 1 lays out some basics and explains the difference between pure and impure code. In section 2 the reader finally encounters the monad, defined using the usual triple <em>(M, unitM, bindM)</em>. After that we see several versions of a simple call-by-value interpreter, demonstrating various well-known monads (identity, state, error, list etc), as well as a rewrite of the interpreter to implement call-by-name semantics. For some more theory Wadler lays down the monadic laws and provides a definition of monads in terms of <em>mapM</em> and <em>joinM</em>.  He also mentions that list comprehension notation generalizes to arbitrary monads, which I found to be quite interesting. Section 3 introduces continuation passing style (CPS) and its relation to monads, before section 4 talks about the influence of monads on Haskell, including some cool info tidbits about early Haskell versions that seem to lack do-notation and the bind operator (the paper is from 1992 after all). Last but not least there's the wrap-up and the work is put in context of other research.</p>
+
+<p><strong>Takeaway</strong></p>
+
+<p>Monads are not rocket science, they are just another tool in a programmer's toolbox, especially of a programmer in a pure functional language. In the end, a monad really isn't much more than a formalized computation, following certain rules like "I put in an A and get out a B, so what ever comes next has to take a B". Ok, maybe that was a bit oversimplified, but it's definitely not magic. In fact I wrote up an explanation for Tom, trying to get the basic idea across:</p>
+
+<blockquote>
+
+If you imagine a Monad as some sort of box, UnitM is what puts an item into the box. Bind extracts such a value (M a), processes it with a function (a -> M b) and returns another item in a box (M b). Why is that cool, because you can't leave the box! If you think about it - and that's an oversimplification - it's a bit like aligning your types so you can chain method calls (just that Unit and Bind have to follow the Monadic laws). Imagine in Ruby you have an intermediary result but instead of returning a plain value OR an array, you always make sure to return [*values]. This way you can chain anything that expects an array, no matter how many intermediary values there were. That's a bit like having an item wrapped up in some sort of array monad (once again, we are in oversimplification land here, but maybe the analogy helps).
+
+</blockquote>
+
+
+<p><strong>Difficulty of the paper</strong></p>
+
+<p>The author states that he assumes no previous knowledge of category theory or Haskell (the language used in the examples), but judging Tom's reaction to the paper, I'm not convinced by that. For somebody who has seen Haskell before and/or has a basic understanding of Monads already this is a pretty good and easy to follow read though.</p>
+
+<p><strong>Q&amp;A</strong></p>
+
+<p>Since Tom had some trouble with the paper - but bravely fought his way through it - we exchanged quite some emails on the actual content. This is cool, because it's exactly the reason we are doing this! First we needed to get some Haskell syntax out of the way:</p>
+
+<blockquote>
+
+Let's do it slow with actual Haskell (this is a stupid function though, you could just do add = (+)):
+
+add :: Int -> Int -> Int
+add x y = x + y
+
+This means that "add" is a function that takes two "Ints" and returns an "Int". The value after the last -> is the actual return value of the function. If you wonder about the intermediate arrows, that's because Haskell functions technically only take one argument and return a new function which takes another argument etc.
+
+So what happens when you call
+
+add 5 6
+
+is that "add" gets applied to the argument 5, which returns another function that looks roughly like (add y = 5 + y) which in the end returns the number 11. This is a result of Haskell being based on the lambda calculus, where the equivalent expression would be \x.\y.x+y. For practical purposes it's enough to remember the following though: whatever goes before the last -> are the arguments to the function, the thing after the last -> is the return type.
+
+What about polymorphic functions? Easy:
+
+add :: (Num a) => a -> a -> a
+add x y = x + y
+
+Here we just say that we take 2 arguments of type "a" and return another "a", with the constraint that "a" has to be numeric. 
+
+Since it also is covered in the paper, here's an example of a higher order function, good old map (that's the same as Ruby's map):
+
+map :: (a -> b) -> [a] -> [b]
+map f []     = []
+map f (x:xs) = f x : map f xs
+
+This basically tells us that "map" takes two arguments. The first is itself a one-argument function ((a -> b)) the second a list of values ([a]) and we return another list of values ([b]). Note that "a" and "b" can be the same type, but don't have to be.
+
+</blockquote>
+
+
+<p><em>Could you please, as simply as possible, define a Monad?</em>
+I have to quote Brian Beckman on that, "Monads are a theory for interacting things". Or to paraphrase, Monads are an abstraction that allows you to define how the various stages of a computation interact. It's a sequence of operations, put into context.</p>
+
+<p><em>What would you use a Monad for?</em>
+As seen in the paper, Monads are quite a flexible abstraction and can be used for many different things (take for example the "MapReduce Monad":http://haskell.org/haskellwiki/MapReduce_as_a_monad). Personally I've never used one outside of my limited Haskell experience, but .Net developers may find it interesting to know that "LINQ":http://msdn.microsoft.com/en-us/library/bb397926.aspx is a monad (more on that "here":http://devhawk.net/2008/07/30/monadic-philosophy-part-2-the-linq-monad/).</p>
+
+<p><em>Can I use them in Ruby?</em>
+You can, in fact there's a link listed below that shows simple Monads implemented in Ruby. It's more a question of how useful they actually are in a mostly object oriented language that allows for side-effects.</p>
+
+<p><em>If I wanted to learn more about this sort of thing where should I go?</em>
+Brian Beckman recorded an "awesome 67 minute video":http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads on the topic, which is probably the best introduction I ever saw.</p>
+
+<p><strong>Links</strong></p>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Monad_(functional_programming)">Wikipedia: Monad (functional programming)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Continuation-passing_style">Wikipedia: Continuation-passing style</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Call-with-current-continuation">Call-with-current-continuation</a></li>
+<li><a href="http://www.ruby-doc.org/core/classes/Kernel.html#M001422">call/cc in Ruby</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_comprehension">Wikipedia: List comprehension</a></li>
+<li><a href="http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads">Brian Beckman: Don't fear the Monad</a></li>
+<li><a href="http://moonbase.rydia.net/mental/writings/programming/monads-in-ruby/00introduction.html">Monads in Ruby</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[So, you want to learn Haskell?]]></title>
+    <link href="http://citizen428.net/blog/2010/12/29/so-you-want-to-learn-haskell/"/>
+    <updated>2010-12-29T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2010/12/29/so-you-want-to-learn-haskell</id>
+    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Haskell_(programming_language)">Haskell</a> is a great language and well worth your time. Here are some freely available learning resources for the aspiring Haskeller:</p>
+
+<ul>
+<li>The excellent "Learn You a Haskell for Great Good":http://learnyouahaskell.com/ by Miran Lipovaca is probably the best free Haskell resource on the web. It will "soon be available in print":http://nostarch.com/lyah.htm, but the author told me that the website will be updated to reflect the changes made for the book!</li>
+<li>O'Reilly's "Real World Haskell":http://book.realworldhaskell.org/read/ also has a an online version. I've only read the first few chapters of this, but people told me it's quite good.</li>
+    <li>The "Haskell tutorial":http://lisperati.com/haskell/ by "Conrad Barski":http://lisperati.com/, author of "Land of Lisp":http://landoflisp.com/ and "Casting SPELs in Lisp":http://lisperati.com/casting.html.</li>
+    <li>In "Write Yourself a Scheme in 48 Hours":http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours you'll implement a small Scheme in Haskell, which is a nice introduction to "Parsec":http://legacy.cs.uu.nl/daan/parsec.html.</li>
+</ul>
+
+
+<p>If you don't mind spending money to dive into Haskell, I can really recommend "Programming in Haskell":http://www.cs.nott.ac.uk/~gmh/book.html, which is an excellent introduction to the language. Last but not least I also want to point out "Haskellers":http://www.haskellers.com/, a networking site for finding/offering Haskell-related jobs.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Haskell]]></title>
+    <link href="http://citizen428.net/blog/2009/04/09/learning-haskell/"/>
+    <updated>2009-04-09T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/04/09/learning-haskell</id>
+    <content type="html"><![CDATA[<p>To get my mind off Ruby I recently started dabbling in Haskell. I really like what I've seen so far and it seems I'm finally starting to understand functional programming (my two attempts with "Practical Common Lisp":http://www.gigamonkeys.com/book/ never got past the first few chapters).</p>
+
+<p>In case you are interested in Haskell too, here's a list of the resources I use:</p>
+
+<ul>
+<li>"Haskell :: Functional Programming with Types":http://en.wikibooks.org/wiki/Haskell: A very nice "Wikibook":http://wikibooks.org covering a wide range of topics from the very basics to Monads, Arrows and Zippers.</li>
+<li>"Learn You a Haskell for Great Good":http://learnyouahaskell.com/: A nice and colorful tutorial in the spirit of <a href="http://poignantguide.net/ruby/">Why's (Poignant) Guide to Ruby</a></li>
+<li>"Real World Haskell":http://book.realworldhaskell.org/: Yes, the entire book can be read online (including per paragraph comments!) for free! I've only just started reading this, since I first want to brush up my basic Haskell a bit, but once I'm past the "Project Euler":http://projecteuler.net/ stage this is probably gonna be very nice.</li>
+<li>"Write Yourself a Scheme in 48 Hours":http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours: Now that I'm slowly getting the hang of this functional programming thing, why not write an interpreter for one functional language in another? "Along the way, you'll learn Haskell's I/O, mutable state, dynamic typing, error handling, and parsing features. By the time you finish, you should be fairly fluent in both Haskell and Scheme". Sounds good to me! :)</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

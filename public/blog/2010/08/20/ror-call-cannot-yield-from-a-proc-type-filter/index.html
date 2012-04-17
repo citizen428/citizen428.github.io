@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>RoR: 'call': Cannot yield from a Proc type filter. - citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="As we all know, there are 2 main differences between procs and lambdas in Ruby.
+1. Argument checking: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&gt;&gt; p = Proc. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.net/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+<meta name="verify-postrank" content="q9zqqyw" />
+<link rel="openid.server" href="http://www.myopenid.com/server" />
+<link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">RoR: 'Call': Cannot Yield From a Proc Type Filter.</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-20T00:00:00+02:00" pubdate data-updated="true">Aug 20<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>As we all know, there are 2 main differences between procs and lambdas in Ruby.</p>
+<p>1. Argument checking:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008dc600@(irb):3&gt;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008d3c08@(irb):4 (lambda)&gt;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span><span class="o">.</span><span class="n">call</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="s2">&quot;Hello &quot;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">call</span>
+</span><span class='line'><span class="no">ArgumentError</span><span class="p">:</span> <span class="n">wrong</span> <span class="n">number</span> <span class="n">of</span> <span class="n">arguments</span> <span class="p">(</span><span class="mi">0</span> <span class="k">for</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">4</span><span class="ss">:in</span> <span class="sb">`block in irb_binding&#39;</span>
+</span><span class='line'><span class="sb">	from (irb):6:in `</span><span class="n">call</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">	from (irb):6</span>
+</span><span class='line'><span class="s1">	from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&lt;main&gt;&#39;</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>2. The possibility to return from within the closure:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008c83a8@(irb):7&gt;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008c4050@(irb):8 (lambda)&gt;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span><span class="o">.</span><span class="n">call</span>
+</span><span class='line'><span class="no">LocalJumpError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="k">return</span>
+</span><span class='line'>	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">7</span><span class="ss">:in</span> <span class="sb">`block in irb_binding&#39;</span>
+</span><span class='line'><span class="sb">	from (irb):9:in `</span><span class="n">call</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">	from (irb):9</span>
+</span><span class='line'><span class="s1">	from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&lt;main&gt;&#39;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">call</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>I&#8217;ve known about this for a while, but as a Rubyists who until quite recently happily ignored Rails, I didn&#8217;t know that ActiveSupport changes the &#8220;LocalJumpError&#8221; from the second example into</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="sb">`call&#39;: Cannot yield from a Proc type filter.</span>
+</span><span class='line'><span class="sb">   The Proc must take two arguments and execute</span>
+</span><span class='line'><span class="sb">   #call on the second argument. (ArgumentError)</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>when you try to return from callbacks like &#8220;before_save&#8221;. I spent quite some time debugging this before I finally found the solution in this <a href="http://obosan.blogspot.com/2008/11/blocksclosures-and-return.html">blog post</a>. Instead of</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">after_save</span> <span class="k">do</span> <span class="o">|</span><span class="n">foo</span><span class="o">|</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">if</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>you have to do</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">after_save</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">foo</span><span class="o">|</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">if</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Probably obvious to more experienced Rails developers, but I really got thrown off by the &#8220;ArgumentError&#8221; that replaced the &#8220;LocalJumpError&#8221;.</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Kohl</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-20T00:00:00+02:00" pubdate data-updated="true">Aug 20<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+    <a class="FlattrButton" style="display:none;"
+    title="RoR: 'call': Cannot yield from a Proc type filter."
+    data-flattr-uid="citizen428"
+    data-flattr-tags=""
+    data-flattr-button="compact"
+    data-flattr-category="text"
+    href="http://citizen428.net/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter/">
+    
+</a>
+
+  
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/08/16/rewiring-my-brain-apl-and-j/" title="Previous Post: Rewiring my brain: APL and J">&laquo; Rewiring my brain: APL and J</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/08/22/information-overload-2010-08-22/" title="next Post: Information Overload 2010-08-22">Information Overload 2010-08-22 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I'm Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+<h1>Top Posts</h1>
+<div class="postrank-widget theDarkSide">
+<script type="text/javascript" src="http://api.postrank.com/static/widget-v2.js"></script>
+<script type="text/javascript">
+var options = {
+	"feed_hash": "a424fafe1edf439bb33fd235b75bd2a5",
+	"num":        5 ,
+	"theme":     "theDarkSide",
+	"hasLink":   true
+};
+new PostRankWidget(options);
+</script>
+<div class="powered-by-postrank-wrapper">
+<div class="powered-by-postrank">
+<p class="poweredByPostRank"><a href="http://www.postrank.com/?utm_source=topposts&utm_medium=widget&utm_content=topposts&utm_campaign=pr-1"><span>Powered by Postrank</span></a></p>
+</div>
+<div class="pr_bottomCornerSet"><div class="pr_clearBottomLeft"></div><div class="pr_solidSpecialMiddle"></div><div class="pr_clearBottomRight"></div></div>
+</div>
+</div>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://citizen428.net/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter/';
+        var disqus_url = 'http://citizen428.net/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,788 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="While browsing through my Delicious bookmarks the other day, I realized that over time I had accumulated quite a few dead links (about 5% of my &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.net/blog/page/19">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+<meta name="verify-postrank" content="q9zqqyw" />
+<link rel="openid.server" href="http://www.myopenid.com/server" />
+<link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/06/unsavory-%25e2%2580%2594-get-rid-of-stale-delicious-bookmarks/">Unsavory — Get Rid of Stale Delicious Bookmarks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-06T00:00:00+02:00" pubdate data-updated="true">Jun 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>While browsing through <a href="http://delicious.com/citizen428">my Delicious bookmarks</a> the other day, I realized that over time I had accumulated quite a few dead links (about 5% of my collection). I then looked for a <strong>simple</strong> tool to automatically remove them, but couldn&#8217;t find one that appealed to me, so I wrote my own script called <em>unsavory</em> which you can find on GitHub:</p>
+<p><a href="http://github.com/citizen428/unsavory/tree/master">http://github.com/citizen428/unsavory/tree/master</a></p>
+<p>It uses HTTParty to generate a list of all your bookmarks, which then get checked individually with Net::<span class="caps">HTTP</span>. Every link that returns an <span class="caps">HTTP</span> status code of 404 will automatically be removed (no questions asked, no undo), links with a status code other than 200 (OK) won&#8217;t be changed but will display some information in case you want to fix them manually. Here&#8217;s some example output (links anonymized for this post):</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Enter Delicious username: citizen428
+</span><span class='line'>  Enter Delicious password: *********
+</span><span class='line'>
+</span><span class='line'>  citizen428 has 664 bookmarks.
+</span><span class='line'>  Processing URL #0001: OK
+</span><span class='line'>  Processing URL #0002: OK
+</span><span class='line'>  Processing URL #0003: OK
+</span><span class='line'>  Processing URL #0004: OK
+</span><span class='line'>  Processing URL #0005: OK
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0013: 405: http://...
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0074: 302: http://...
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0086: Connection reset by peer - https://...</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Not bad for under 60 lines of code. :-) I hope this is useful to some of you, I do have some features I plan on adding to this in the future.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/25/review-functional-programming-with-clojure-peepcode-screencast/">Review: Functional Programming With Clojure (PeepCode Screencast)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-25T00:00:00+02:00" pubdate data-updated="true">May 25<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A couple of month ago I first heard about <a href="http://clojure.org/">Clojure</a>, a <a href="http://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a>-like language sitting on top of the <a href="http://en.wikipedia.org/wiki/Java_virtual_machine"><span class="caps">JVM</span></a>. Alas I didn&#8217;t yet have time to have a closer look at it, so I decided to get myself the <a href="https://peepcode.com/products/functional-programming-with-clojure">PeepCode screencast</a>.</p>
+<p>This 65 minute video is the first to use PeepCode&#8217;s new post-production workflow, and it&#8217;s very well done! In just a little over an hour you go from learning about Clojure&#8217;s basic concepts and syntax to writing a <a href="http://github.com/technomancy/mire/tree/master">multi-user text based adventure game</a>, tackling topics such as data structures, thread safety, lazy collections, unit testing and packaging of Clojure apps. All of that is clearly presented and easy to follow, which makes for an ideal first overview of the language. If you are curious about Clojure but have little time, consider investing the money for this screencast!</p>
+<p>On a more general note it&#8217;s interesting to see that more and more languages seem to target the <span class="caps">JVM</span>. I never really had any interest in Java and also totally ignored <a href="http://groovy.codehaus.org/">Groovy</a>, but now that <a href="http://jruby.codehaus.org/">JRuby</a>, <a href="http://www.scala-lang.org/">Scala</a> and Clojure entered the stage, I might start looking into the Java platform a bit more. Especially Scala with its mixed Ruby/Haskell feel appeals to me, but as <a href="http://boinkor.net/">antifuchs</a> showed, there&#8217;s also <a href="http://boinkor.net/archives/2009/03/clojure_and_art_of_illusion_bf.html">pretty neat stuff</a> (<a href="http://github.com/antifuchs/aoi-swank-plugin/">GitHub project</a>) one can do with Clojure.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/25/most-used-shell-commands/">Most Used Shell Commands</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-25T00:00:00+02:00" pubdate data-updated="true">May 25<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Although there was no real point in doing so, I felt the need to write a short Ruby script to do the same:</p>
+<script src="http://gist.github.com/117571.js"></script><p>Here&#8217;s the output on my MacBook:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>command_stats | head
+</span><span class='line'><span class="nb">time</span>: 75
+</span><span class='line'><span class="nb">cd</span>: 68
+</span><span class='line'>ls: 66
+</span><span class='line'>git: 35
+</span><span class='line'>cat: 32
+</span><span class='line'>irb: 20
+</span><span class='line'>awk: 17
+</span><span class='line'>ruby: 15
+</span><span class='line'>scala: 15
+</span><span class='line'>vim: 12
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>If you are surprised by how many times (no pun intended) I called <em>time</em>, it&#8217;s just because I was benchmarking <a href="http://projecteuler.net/">Project Euler</a> solutions in several languages, everything else is quite regular (and suggests I don&#8217;t use the Finder much ;) ).</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/23/review-meet-macruby-peepcode-screencast/">Review: Meet MacRuby (PeepCode Screencast)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-23T00:00:00+02:00" pubdate data-updated="true">May 23<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This afternoon I had the time to finally watch the <a href="http://peepcode.com/">PeepCode</a> <a href="http://peepcode.com/products/meet-macruby">Meet MacRuby</a> screencast.</p>
+<p>In case you don&#8217;t know <a href="http://www.macruby.com/">MacRuby</a>, it&#8217;s a Ruby interpreter sitting on top of <a href="http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/">Objective-C</a> and OS X core technologies (see also <a href="http://citizen428.net/archives/365-Ruby-implementations-and-why-we-should-care.html">here</a>).</p>
+<p>During the 74 minute screencast you will build a basic but functional Twitter client, and in the process learn about MacRuby and <a href="http://developer.apple.com/cocoa/">Cocoa</a> basics, using <a href="http://developer.apple.com/tools/macosxtools.html">Xcode</a> and <a href="http://developer.apple.com/tools/interfacebuilder.html">InterfaceBuilder</a> to develop and bundle your application and many other interesting topics.</p>
+<p>The screencast is very well structured, easy to follow and full of good and practical information, including perks and rough edges of the current MacRuby version. All in all a really enjoyable and informative video, which is well worth US$9 (or less if you buy packs of credits)!</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/18/review-ruby-in-practice-manning-publications/">Review: Ruby in Practice (Manning Publications)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-18T00:00:00+02:00" pubdate data-updated="true">May 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I read <a href="http://www.manning.com/mcanally/">Ruby in Practice</a> for the <a href="http://rubylearning.com/blog/2009/05/12/book-promotion-ruby-in-practice/">upcoming book promotion</a> on <a href="http://www.rubylearning.org">RubyLearning</a>, and I have to say it&#8217;s a pretty neat book which will be well worth your time and money. Over the course of 360 pages Jeremy McAnally and Assaf Arkin tackle lots of different topics of interest to developers. The book is structured in 3 main parts:</p>
+<ul>
+<li>Ruby techniques: Gives a general introduction to Ruby&#8217;s strength (which sometimes reads as a bit of a sales pitch), <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development"><span class="caps">BDD</span></a> and <a href="http://en.wikipedia.org/wiki/Test-driven_development"><span class="caps">TDD</span></a>, as well as scripting with Ruby (including <a href="http://en.wikipedia.org/wiki/Object_Linking_and_Embedding"><span class="caps">OLE</span></a> and <a href="http://en.wikipedia.org/wiki/AppleScript"><span class="caps">OSA</span></a>).</li>
+<li>Integration and communication: This part covers Rails, web services in general (<span class="caps">HTTP</span>, <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer"><span class="caps">REST</span></a>, <a href="http://en.wikipedia.org/wiki/SOAP_(protocol)"><span class="caps">SOAP</span></a>), automating communication with email and IM, asynchronous messaging and deployment options.</li>
+<li>Data and document techniques: This part talks about databases, structured text, authentication, searching, indexing and document processing.</li>
+</ul>
+<p>Chapters usually present the reader with a problem, then show an example solution which usually makes good use of existing libraries and then finish with further discussion on the topic (alternative ways to implement it, pitfalls in using the shown solution in &#8220;real life&#8221; scenarios etc.). For people with previous knowledge of Ruby this book is a good read, which shows how the dynamic nature of the language combined with the quite big amount of readily available libraries enable developers to quickly and efficiently find solutions to common problems. I sometimes do have minor quirks with some of the code, but that&#8217;s just personal preferences and being nitpicky. All in all it&#8217;s a very solid book which I enjoy quite a lot.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps/">Create Your Own (Ruby) API Browser in 3 Easy Steps</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-17T00:00:00+02:00" pubdate data-updated="true">May 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+  <li><b>Step 1:</b> Download <a href="http://fluidapp.com/">Fluid</a>, an awesome little application to create site specific browsers.</li>
+  <li><b>Step 2:</b> Find some online <span class="caps">API</span> documentation. For Ruby I recommend <a href="railsapi.com">railsapi.com</a> or <a href="http://rubybrains.com">RubyBrains</a>. </li>
+  <li><b>Step 3:</b> Create your app in Fluid:</li>
+<p><img src="http://citizen428.net/uploads/fluid.png" alt="Fluid" /></p>
+</ul>
+<p>Here&#8217;s an example screenshot of a site specific browser for RubyBrain.com:</p>
+<p><img src="http://citizen428.net/uploads/fluid_rubybrain.png" alt="Fluid RubyBrain" /></p>
+<p>Of course this still requires you to have a working internet connection, but you could always use a local version of the <span class="caps">API</span> docs when creating the app. On a related note you should also check out <a href="http://www.robinlu.com/blog/goo">Goo</a> which is a nice alternative to gem server on OS X.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/">A TextMate Command for the RubyLearning Forums</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-10T00:00:00+02:00" pubdate data-updated="true">May 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As we all know posting code to <a href="http://moodle.org/">Moodle</a> (the software that powers <a href="http://rubylearning.org">RubyLearning</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
+<ul>
+<li> take the currently active file</li>
+<li> replace all occurrences of &lt; with the <span class="caps">HTML</span>-entity</li>
+<li> wrap all of that in [code ruby] tags and</li>
+<li> copy it to the clipboard, ready to be pasted into the forums.</li>
+</ul>
+<p>Source:<br />
+<script src="http://gist.github.com/109576.js"></script></p>
+<p>Download:<br />
+<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/03/im-in-your-pi-crunching-your-numbers/">I&#8217;m in Your Pi, Crunching Your Numbers ;-)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-03T00:00:00+02:00" pubdate data-updated="true">May 3<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>From <a href="http://rubyquiz.strd6.com/quizzes/202">Ruby Quiz #202</a>:</p>
+<p><em>And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#8217;s solution:</em></p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;hpricot&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Hpricot</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;http://www.eveandersson.com/pi/digits/100000&#39;</span><span class="p">))</span>
+</span><span class='line'><span class="nb">puts</span> <span class="p">(</span><span class="n">doc</span><span class="o">/</span><span class="s1">&#39;pre&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">inner_html</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p><em>It finishes in less than one second for the entire 100,000 digits!</em></p>
+<p>And no, this wasn&#8217;t a serious submission&#8230; :-)</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/26/clever-documentation/">Clever Documentation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-26T00:00:00+02:00" pubdate data-updated="true">Apr 26<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Playing with <a href="http://www.squeak.org/">Squeak</a>&#8216;s Method Finder, I discovered a really neat feature that I wish would be available for Ruby documentation. Here&#8217;s the description from the built-in help:</p>
+<p><i>[&#8230;] use an example to find a method in the system.  Type receiver, args, and answer in the top pane with periods between the items.  3. 4. 7</i></p>
+<p>Yes, this means that if you want to know how to do modulo in Smalltalk, you can open the Method Finder, type <i>7. 3. 1</i> and see that the answer is <i>Number&gt;&gt;&#92;</i>, whereas <I>&#8216;abc&#8217; . &#8216;<span class="caps">ABC</span>&#8217;</i> will tell us about <i>String&gt;&gt;asUppercase</i>.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/23/reading-frenzy/">Reading Frenzy</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-23T00:00:00+02:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Since my reading time wasn&#8217;t influenced by distracting things like work or studies last year, I managed to read 69 books since end of April 2008, which quite likely is a new personal record for one year. Here&#8217;s the complete list, some of this books I had wanted to read forever, some others were just lucky finds and yet others were just&#8230;finds. ;-)</p>
+<p><b>Marion Molteno:</b> &#8220;A Language in Common&#8221;<br />
+<b>James Frey:</b> &#8220;A Million Little Pieces&#8221;<br />
+<b>Haruki Murakami:</b> &#8220;After Dark&#8221;<br />
+<b>Haruki Murakami:</b> &#8220;After the Quake: Stories&#8221;<br />
+<b>Ali Smith:</b> &#8220;Ali Smith&#8217;s Supersonic 70s&#8221;<br />
+<b>Lewis Carroll:</b> &#8220;Alice&#8217;s Adventures in Wonderland&#8221;<br />
+<b>Neil Gaiman:</b> &#8220;American Gods&#8221;<br />
+<b>Heinrich Böll:</b> &#8220;Ansichten Eines Clowns&#8221;<br />
+<b>Anita Desai:</b> &#8220;Baumgartner&#8217;s Bombay&#8221;<br />
+<b>Achmat Dangor:</b> &#8220;Bitter Fruit&#8221;<br />
+<b>Monica Ali:</b> &#8220;Brick Lane&#8221;<br />
+<b>Heinz Peter Schwerfel:</b> &#8220;Buenos Aires intensiv.: Tango urbano &#8211; Stadt im Aufbruch&#8221;<br />
+<b>Ines Rieder:</b> &#8220;Cosmopolis: Urban Stories by Women&#8221;<br />
+<b>Andrea Camilleri:</b> &#8220;Der Hund aus Terracotta&#8221;<br />
+<b>Peter Handke:</b> &#8220;Die Angst des Tormanns beim Elfmeter&#8221;<br />
+<b>Thomas Mann:</b> &#8220;Die Betrogene. Erzählungen 1940 &#8211; 1953.&#8221;<br />
+<b>Helge Schneider:</b> &#8220;Die Memoiren des Rodriguez Fazantas&#8221;<br />
+<b>Stanislaw Lem:</b> &#8220;Eine Minute der Menschheit.&#8221;<br />
+<b>Orson Scott Card:</b> &#8220;Ender&#8217;s Game&#8221;<br />
+<b>Terry Pratchett:</b> &#8220;Equal Rites&#8221;<br />
+<b>Jonathan Safran Foer:</b> &#8220;Everything Is Illuminated&#8221;<br />
+<b>Feridun Zaimoglu:</b> &#8220;German Amok.&#8221;<br />
+<b>Terry Pratchett &amp; Neil Gaiman</b> &#8220;Good Omens&#8221;<br />
+<b>Haruki Murakami:</b> &#8220;Hard-Boiled Wonderland and the End of the World&#8221;<br />
+<b>Irvine Welsh:</b> &#8220;If You Liked School, You&#8217;ll Love Work&#8221;<br />
+<b>Andre Brink:</b> &#8220;Imaginings of Sand&#8221;<br />
+<b>Orhan Pamuk:</b> &#8220;Istanbul&#8221;<br />
+<b>Gene Brewer:</b> &#8220;K-Pax&#8221;<br />
+<b>Haruki Murakami:</b> &#8220;Kafka on the Shore&#8221;<br />
+<b>Peter Handke:</b> &#8220;Kali&#8221;<br />
+<b>Feridun Zaimoglu:</b> &#8220;Leinwand&#8221;<br />
+<b>Yann Martel:</b> &#8220;Life of Pi&#8221;<br />
+<b>William Golding:</b> &#8220;Lord of the Flies&#8221;<br />
+<b>Elfriede Jelinek:</b> &#8220;Lust&#8221;<br />
+<b>Ryszard Kapuscinski:</b> &#8220;Meine Reisen mit Herodot&#8221;<br />
+<b>Saul Bellow:</b> &#8220;Mosby&#8217;s Memoirs and Other Stories&#8221;<br />
+<b>Howard Marks:</b> &#8220;Mr. Nice: An Autobiography&#8221;<br />
+<b>Orhan Pamuk:</b> &#8220;My Name Is Red&#8221;<br />
+<b>Eli Gottlieb:</b> &#8220;Now You See Him: A Novel&#8221;<br />
+<b>John Steinbeck:</b> &#8220;Of Mice and Men&#8221;<br />
+<b>Amit Gilboa</b> &#8220;Off the Rails in Phnom Penh&#8221;<br />
+<b>Terry Pratchett:</b> &#8220;Pyramids&#8221;<br />
+<b>Paul Torday:</b> &#8220;Salmon Fishing in the Yemen&#8221;<br />
+<b>Woody Allen:</b> &#8220;Side Effects&#8221;<br />
+<b>Miriam Tzali:</b> &#8220;Soweto Stories&#8221;<br />
+<b>Helen Oyeyemi:</b> &#8220;The Icarus Girl&#8221;<br />
+<b>John Updike:</b> &#8220;Terrorist: A Novel&#8221;<br />
+<b>Jorge Luis Borges:</b> &#8220;The Aleph&#8221;<br />
+<b>Zadie Smith:</b> &#8220;The Autograph Man&#8221;<br />
+<b>Alex Garland:</b> &#8220;The Beach&#8221;<br />
+<b>Iain M. Banks:</b> &#8220;The Crow Road&#8221;<br />
+<b>John Case:</b> &#8220;The Eighth Day&#8221;<br />
+<b>Paul Theroux:</b> &#8220;The Elephanta Suite: Three Novellas&#8221;<br />
+<b>Shan Sa:</b> &#8220;The Girl Who Played Go&#8221;<br />
+<b>Leon Uris:</b> &#8220;The Haj&#8221;<br />
+<b>Michael Cunningham:</b> &#8220;The Hours&#8221;<br />
+<b>Miguel de Cervantes:</b> &#8220;The Jealous Extremaduran&#8221;<br />
+<b>Terry Pratchett:</b> &#8220;The Last Continent&#8221;<br />
+<b>A. B. Yehoshua:</b> &#8220;The Lover&#8221;<br />
+<b>Ernest Hemingway:</b> &#8220;The Old Man and The Sea&#8221;<br />
+<b>M. C. Beaton:</b> &#8220;The Quiche of Death&#8221;<br />
+<b>Audrey Niffenegger:</b> &#8220;The Time Traveler&#8217;s Wife&#8221;<br />
+<b>Roddy Doyle:</b> &#8220;The Van&#8221;<br />
+<b>H.G. Wells:</b> &#8220;The War of the Worlds (Penguin Classics)&#8221;<br />
+<b>Iain M. Banks:</b> &#8220;The Wasp Factory: A Novel&#8221;<br />
+<b>Aravind Adiga:</b> &#8220;The White Tiger: A Novel&#8221;<br />
+<b>Terry Pratchett:</b> &#8220;Thud!&#8221;<br />
+<b>Zadie Smith:</b> &#8220;White Teeth: A Novel&#8221;<br />
+<b>Florian Weber:</b> &#8220;You&#8217;ll Never Walk Alone. Ein Fussballmusikroman&#8221;</p>
+<p>And that&#8217;s the 2 books I&#8217;m currently reading:</p>
+<p><b>Nancy L. Clark:</b> &#8220;South Africa: The Rise and Fall of Apartheid&#8221;<br />
+<b>Will Ferguson:</b> &#8220;Hokkaido Highway Blues&#8221;</p></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/20/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/18/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I&#8217;m Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+<h1>Top Posts</h1>
+<div class="postrank-widget theDarkSide">
+<script type="text/javascript" src="http://api.postrank.com/static/widget-v2.js"></script>
+<script type="text/javascript">
+var options = {
+	"feed_hash": "a424fafe1edf439bb33fd235b75bd2a5",
+	"num":        5 ,
+	"theme":     "theDarkSide",
+	"hasLink":   true
+};
+new PostRankWidget(options);
+</script>
+<div class="powered-by-postrank-wrapper">
+<div class="powered-by-postrank">
+<p class="poweredByPostRank"><a href="http://www.postrank.com/?utm_source=topposts&utm_medium=widget&utm_content=topposts&utm_campaign=pr-1"><span>Powered by Postrank</span></a></p>
+</div>
+<div class="pr_bottomCornerSet"><div class="pr_clearBottomLeft"></div><div class="pr_solidSpecialMiddle"></div><div class="pr_clearBottomRight"></div></div>
+</div>
+</div>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

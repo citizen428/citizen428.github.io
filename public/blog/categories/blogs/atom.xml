@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: blogs | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/blogs/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Blog moved from Serendipity to Wordpress]]></title>
+    <link href="http://citizen428.net/blog/2010/08/13/blog-moved-from-serendipity-to-wordpress/"/>
+    <updated>2010-08-13T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2010/08/13/blog-moved-from-serendipity-to-wordpress</id>
+    <content type="html"><![CDATA[<p>Ever since I started this blog in January 2005 it was powered by <a href="http://s9y.org/">Serendipity</a> (aka S9Y). Lately however I became more and more dissatisfied with it for various reasons, so I finally took the plunge and moved it over to Wordpress. The whole process was surprisingly painless, but did have some caveats, so I decided to post a short description of what I did:</p>
+
+<p>There is a script for migrating S9Y to Wordpress that has been floating around for a while and has been patched/modified by various people. Luckily I found version <a href="http://snowulf.com/2010/06/11/serendipity-to-wordpress-post-import/">1.4</a>, which got updated very recently (June 2010). For some reason it didn't work for me when I tried to migrate between S9Y 1.5.3 and Wordpress 3.0.1 directly, so I installed Wordpress 2.9.2 first, migrated the content and then upgraded to the most recent version. The import itself was very smooth and successful, categories (which I stopped using a long time ago), users, posts and comments all made it to the new blog! Once you are done importing, you can run several SQL statements provided in <a href="http://code.google.com/p/snowulf/source/browse/trunk/wordpress/s9y-to-wp/readme.txt">readme.txt</a>, so that your new posts will have the same IDs as the old ones, which is necessary for redirecting. For that purpose I added some <a href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html">Apache mod_rewrite </a> rules, so that old post URLs will redirect to the new locations (and so will the RSS and Atom feed so subscriptions don't get interrupted):
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RewriteEngine on
+</span><span class='line'>RewriteRule ^/archives/([0-9]+)-.*$ /archives/$1 [R,L]
+</span><span class='line'>RewriteRule ^/feeds/index.rss2 /feed [R,L]
+</span><span class='line'>RewriteRule ^/feeds/atom.xml /feed/atom [R,L]</span></code></pre></td></tr></table></div></figure></notextile></div>
+There's still quite a bit to do though: first I need to find a theme I like (I might even stick with the one I'm using now and just tweak it a bit), then lots of posts need fixes to their formatting because they were written in <a href="http://www.textism.com/tools/textile/">Textile</a> (I fixed the most recent 2 so far, it's rather quick and painless). There are also some widgets and static pages I want to move over from the old blog, so I guess this site will be a work in progress for a while. I am however very satisfied with Wordpress and glad I finally did this move I put off for so long.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Blog tweaking]]></title>
+    <link href="http://citizen428.net/blog/2006/12/10/blog-tweaking/"/>
+    <updated>2006-12-10T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/12/10/blog-tweaking</id>
+    <content type="html"><![CDATA[<p>This evening I found some time to work on my blog again, so here's a quick rundown of things that changed:</p>
+
+<ul>
+<li>*Share and save:* After reading the templates used by "Serendipity":http://s9y.org to get a hang of "Smarty":http://smarty.php.net/, I've edited entries.tpl to include a mailto link to share entries, as well as the possibility to digg posts or add them to del.icio.us. There ya go, Web 2.0 lovers.</li>
+<li>*Feed love:* Syndication rocks, especially when using "Feedburner":http://www.feedburner.com which offers great features like the Link Splicer which automatically creates this "Links for the day" entries out of my del.icio.us bookmarks. But since I also got an account on "SuprGlu":http://citizen428.suprglu.com/, I've decided to additionally provide you with the "citizen428stalker":http://feeds.feedburner.com/citizen428stalker feed, which additionally contains my flickr photos, my Plazes traze, info from 43 Things and 43 Places and much more. So if you're up for the whole citizen428 package, you might want to give this new feed a try.</li>
+</ul>
+
+
+<p>I haven't come around to do any more CSS changes yet, but that's next on my list.</p>
+
+<p>Prickle-Prickle, The Aftermath 52, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[citizen428.blog() Update - Part I]]></title>
+    <link href="http://citizen428.net/blog/2006/11/12/citizen428-blog-update-part-i/"/>
+    <updated>2006-11-12T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/11/12/citizen428-blog-update-part-i</id>
+    <content type="html"><![CDATA[<p>After using it for quite a while, I got bored with the old look of my blog and so I started to update it today. Here's a quick rundown of things that changed:</p>
+
+<ul>
+<li>*Added various links:* I've updated the sidebar to include links to "my MySpace profile":http://myspace.com/citizen428 (resistance really is futile) and "my SuprGlu site":http://citizen428.suprglu.com/ (making it easier for you stalkers). I've also readded the links to my profiles on "43 Things":http://www.43things.com/person/citizen428 and "43 Plazes":http://www.43places.com/person/citizen428, so it's a happy day for all you buzzword loving Web 2.0 fans out there.</li>
+<li>*Advanced syndication:* I got rid of my blog's own syndication features in favor of "FeedBurner":http://feeds.feedburner.com/citizen428/. Why? Because it offers really cool stuff like "SmartFeeds" which create the right RSS/Atom feeds for the reader you use on the fly, "link slicing" (a daily entry of links I add to "my del.icio.us account":http://del.icio.us/citizen428 gets generated and added to the feed) and the possibility to subscribe to this blog via email. If you are among my true fans who have  subscribed to this site long ago don't despair, I'm 301 redirecting most of the old syndication links to FeedBurner (the RSS 0.91 feed is used to push data to FeedBurner).</li>
+<li>*More syndication features:* I've signed up for "Talkr":http://talkr.com so you lazy folks have the chance to get this site as a Podcast, without me having to go through the hassle of actually recording one. Nifty, eh? Besides that I get US$ 7 for everyone who signs up to Talkr for at least 30 days, and since Christmas is near that just sounds like the perfect opportunity to make yours truly happy, doesn't it? ;) Apart from the Podcast goodness there's now also a convenient link to add this site to your "Technorati":http://del.icio.us/citizen428 favorites with just a single click of your mouse, which means lazyness finally is no longer an excuse for not doing so.</li>
+<li>*Sidebar reorganization:* Dropped some plugins, added, rearranged and reconfigured some others.</li>
+</ul>
+
+
+<p>As you can see I've also changed the theme from my tweaked version of "Joshua" to the Serendipity port of "Modern World". I like the overall look of the theme quite a lot, but there are various changes I want to apply to the CSS as soon as I can be bothered to do so. Until now I've only changed some of the colors, but once I'm done it would be pretty cool if this site wouldn't only look good, but also validate as XHMTL. I'm also in need of a logo sized 220x128 pixels, so if you're feeling creative and want to surprise me, send your work of art to my Gmail address. Once I finally take over leadership of the world, I'm sure you'll be pretty happy to say "I did the logo for this guy's website".</p>
+
+<p>Sweetmorn, The Aftermath 24, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Finally...]]></title>
+    <link href="http://citizen428.net/blog/2006/11/05/finally/"/>
+    <updated>2006-11-05T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/11/05/finally</id>
+    <content type="html"><![CDATA[<p>...some random stuff I wanted to blog about for quite some time already:</p>
+
+<ul>
+<li>*Pearl Jam concert (September 25th@Wiener Stadthalle):* I have to admit that I'm not the biggest "PJ":http://pearljam.com/ fan, but since Silvia was nice enough to invite me (thanks by the way!), I went to see one of the best concerts in a long time! The band and the atmosphere was great and I was quite surprised to see the traditionally rather lame crowd in Vienna so excited! (<a href="http://www.flickr.com/photos/citizen428/sets/72157594302284739">pics@flickr</a>)</li>
+
+<li>*Internet Explorer on Linux:* As we all know, IE sucks donkey balls. But some sites who don't care about standards - and whose developers definitely should be first against the wall when the revolution comes - only work with Microsoft's browser. But don't despair, help is available in form of "IEs4Linux":http://www.tatanka.com.br/ies4linux/page/Main_Page, a shellscript which downloads IE and automatically configures Wine for it. Flash 9 is also included and if you really insist on it, you can run 3 different versions of IE at the same time (5, 5.5 and 6), which is pretty handy for web developers. I have IE6 installed on my Kubuntu system for quite a while now, and in the rare cases I really need it, it works like a charm.</li>
+
+<li>*Pokerstars client on Linux:* Most online Poker sites don't seem to be interested in Linux users, since the clients they offer are mostly only available for Windows. Some of them at least offer Java clients, but with my general dislike for most things Java and my strong preference of "Pokerstars":http://www.pokerstars.com/ over other Poker sites, I gave the client a shot under Wine and was really pleased to find out that it just works (tm). Of course it would be much nicer to have a native client, but for the time being I'm happy enough with this workaround.</li>
+
+<li>*UEFA cup Pasching vs. Livorno@Pasching:* Went with some other Sportclub fans to see the UEFA cup match Pasching vs. Livorno in Pasching. It was a great day, and I still laugh my ass off when I think about the policemen and -women who found our little group of around 25 people rooting for the away team  (as Austrian you were only able to buy tickets for the home sectors) so frightening, that they not only surrounded us for the whole match, but even put on their riot gear. And there I was, thinking every policeman in Austria already knows that we are only dangerous to ourselves. ;)</li>
+
+<li>*man pages:* Read them! You know you should! Even if you believe you know an application. E.g.: "man sshd", section "AUTHORIZED_KEYS FILE FORMAT". Or am I really the only person who didn't know about all the useful options like "from", "command", "no-port-forwarding", "no-pty" etc.?
+
+<li>*Mac stuff:* Here's some cool widgets and plugins which make the OS X experience even nicer: "iTunesShut":http://homepage.mac.com/WebObjects/FileSharing.woa/wa/iTunesShut.zip.zip?a=downloadFile&user=gugulino1&path=.Public/iTunesShut.zip, "VI Input Manager":http://www.corsofamily.net/jcorso/vi/, "Application Update Widget":http://www.dashboardwidgets.com/showcase/details.php?wid=1510 (thanks Moose!), "AppleScript Shell":http://hayne.net/MacDev/Ash/, "Doug's AppleScripts for iTunes":http://www.dougscripts.com/itunes/index.php
+</ul>
+
+
+
+
+<br />
+
+
+<p>Last but not least here are some funny/interesting things I found over the past few weeks:</p>
+
+<ul>
+<li>"Programming Language Inventor or Serial Killer":http://www.malevole.com/mv/misc/killerquiz (via <a href="http://metalab.at/wiki/Hauptseite">metalab-members</a>)</li>
+
+<li>*Robot chicken:* Great stop motion animation. Examples: "1":http://video.google.com/videoplay?docid=-2660802447916665129&q=robot+chicken, "2":http://video.google.com/videoplay?docid=4651757054772769361&q=robot+chicken, "3":http://video.google.com/videoplay?docid=5395083952125133994&q=robot+chicken (thanks <a href="http://gnulords.org/~colo/serendipity/">colo</a>!)</li>
+
+<li>"ELP Laser Turntable":http://elpj.com/: "bonki":http://bonki.net/blog/ posted this a while back, but I never came around to post it here.</li>
+
+<li>"Bruce Schreier facts":http://geekz.co.uk/schneierfacts/fact/128: 'cause Chuck Norris isn't as cool as Bruce! And as we all know: Bruce Schneier tapdances in Morse Code. (via <a href="http://berq.net/">berq</a>)</li>
+
+<li>"China Makes a Sexy, Slutty Robot":http://www.gizmodo.com/gadgets/robots/china-makes-a-sexy-slutty-robot-210802.php: What can I say... (thanks <a href="http://www.leyrer.priv.at/martin/">m3</a>)</li>
+</ul>
+
+
+<p>Prickle-Prickle, The Aftermath 17, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Delusions of grandeur]]></title>
+    <link href="http://citizen428.net/blog/2006/08/12/delusions-of-grandeur/"/>
+    <updated>2006-08-12T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2006/08/12/delusions-of-grandeur</id>
+    <content type="html"><![CDATA[<p>As my PR manager told me, large numbers of fans have already complained about the recent lack of updates. Since I'm only my reader's humble servant, I of course have to comply with this wishes, so here are the long awaited news about yours truly:</p>
+
+<p><em>Gentoo:</em>
+After being a "Gentoo":http://www.gentoo.org developer for 2 years, I finally decided to leave the project. Since I haven't really been active for the past 4 month anyway for several reasons (e.g. work), this was long overdue anyway. I've met a lot of nice and interesting people in the Gentoo community and working with you guys has really been a pleasure! Thanks for that, I really appreciate what I have learned from all of you during that time!</p>
+
+<p><em>Mac:</em>
+Today I've joined the team of "Open.Source.Mac":http://opensourcemac.de/ and have already published "my first little article":http://www.opensourcemac.de/2006/08/12/machtgeil/ on the site. Enjoy!</p>
+
+<p><em>Personal:</em>
+On the 2nd of August I celebrated my 27th birthday at "Xeno":http://www.xeno.co.at/. A lot of "friends":http://red667.org/ showed up, whereas "certain people":http://berq.net/ decided to get drunk somewhere else and then blamed innocent squirrels for their not showing up. It was a cool evening which I really enjoyed, but working on the next day didn't exactly qualify as a good cure against the headaches...</p>
+
+<p><em>Capitalism:</em>
+I have to admit that I love portable consoles, especially when they are as sexy as the black Nintendo DS Lite I bought three weeks ago. So far I own "Advance Wars: Dual Strike":http://ds.ign.com/articles/643/643656p1.html, "Brain Age: Train Your Brain in Minutes a Day":http://ds.ign.com/articles/702/702057p1.html, "Feel The Magic XY/XX":http://ds.ign.com/articles/567/567496p1.html and "Castlevania: Dawn of Sorrow":http://ds.ign.com/articles/655/655830p1.html. All of them are really great and I can hardly wait until my copy of "Mario Kart DS":http://ds.ign.com/articles/666/666125p1.html finally arrives.</p>
+
+<p>I also got myself a nice "M9 DX enclosure":http://www.macpower.com.tw/products/hdd3/m9/m9dx with a 250GB Samsung HD as a backup disk for the Mac Mini. Overall it's pretty neat, although it could match the color of the Mini a little better.</p>
+
+<p><em>Misc</em>
+Found an "article":http://www.explosm.net/articles/6135/4/ about "Habbo Hotel":http://www.habbohotel.co.uk/ on the "Pardus":http://www.pardus.at forums and just had "to try it out":http://flickr.com/photos/citizen428/sets/72157594226374139/. Like the author of the article I most likely won't visit the site again, but I had a lot of fun during the hour I spent there.</p>
+
+<p>"teemow":http://teemow.com recently blogged about "BumpTop":http://honeybrown.ca/Pubs/BumpTop.html, a new take at the desktop metaphor we all grew used to. The video is quite impressive and I'd really like to try out such an interface myself, as I'm interested in how well it works for everyday usage.</p>
+
+<p>Prickle-Prickle, Bureaucracy 5, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

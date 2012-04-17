@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: animation | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/animation/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The brave new world of surveillance]]></title>
+    <link href="http://citizen428.net/blog/2007/01/28/the-brave-new-world-of-surveillance/"/>
+    <updated>2007-01-28T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2007/01/28/the-brave-new-world-of-surveillance</id>
+    <content type="html"><![CDATA[<p>Today I found this excellent Flash animation on the "Metalab":http://www.metalab.at members mailing list, which may prove to be a great help in raising your non-techy friends awareness of privacy issues. Unfortunately it's in German only...</p>
+
+<p>"http://www.trashhero.ch/redirect/1881.html":http://www.trashhero.ch/redirect/1881.html</p>
+
+<p>Pungenday, Chaos 28, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

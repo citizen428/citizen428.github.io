@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: clojure | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/clojure/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[So you want to learn Clojure?]]></title>
+    <link href="http://citizen428.net/blog/2011/05/04/so-you-want-to-learn-clojure/"/>
+    <updated>2011-05-04T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/05/04/so-you-want-to-learn-clojure</id>
+    <content type="html"><![CDATA[<p>For last Monday's <a href="http://metalab.at/wiki/Lambdaheads">Lambdaheads</a> meeting I prepared a list of resources for people interested in learning Clojure, so I thought I'll share it here. The actual presentation had a lot of comments, but I'm afraid I'm too lazy to repeat them in writing. Maybe the list is still useful for some people though:</p>
+
+<h1>Books</h1>
+
+<ul>
+<li><a href="http://pragprog.com/titles/shcloj/programming-clojure">Programming Clojure</a></li>
+<li><a href="http://www.apress.com/9781430272311">Practical Clojure</a></li>
+<li><a href="http://joyofclojure.com/">The Joy of Clojure</a></li>
+</ul>
+
+
+<h1>Books WIP</h1>
+
+<ul>
+<li><a href="http://www.manning.com/rathore/">Clojure in Action</a></li>
+<li><a href="http://oreilly.com/catalog/0636920013754">Clojure Programming</a></li>
+<li><a href="http://daly.axiom-developer.org/clojure.pdf">Clojure in Small Pieces</a></li>
+</ul>
+
+
+<h1>Online reading</h1>
+
+<ul>
+<li><a href="http://clojure.org/Reference">Clojure Reference</a></li>
+<li><a href="http://clojure.org/cheatsheet">Clojure Cheat Sheet</a></li>
+<li><a href="http://clojure.github.com/clojure/">Clojure API</a></li>
+<li><a href="http://clojuredocs.org/">Clojure Docs</a></li>
+<li><a href="http://java.ociweb.com/mark/clojure/article.html">Clojure - Functional Programming for the JVM</a></li>
+<li><a href="http://clojure-notes.rubylearning.org/">Clojure Notes</a></li>
+<li><a href="http://devcheatsheet.com/tag/clojure/">Clojure Cheat Sheets</a></li>
+<li><a href="http://www.clojureatlas.com/">Clojure Atlas</a> (WIP)</li>
+</ul>
+
+
+<h1>Coding</h1>
+
+<ul>
+<li><a href="https://www.4clojure.com/">4Clojure</a></li>
+<li><a href="https://github.com/functional-koans/clojure-koans">clojure-koans</a></li>
+<li><a href="https://github.com/relevance/labrepl">labrepl</a></li>
+<li><a href="http://try-clojure.org/">Try Clojure</a></li>
+</ul>
+
+
+<h1>Screencasts / Videos</h1>
+
+<ul>
+<li><a href="http://peepcode.com/products/functional-programming-with-clojure">Functional Programming with Clojure</a></li>
+<li><a href="http://www.learnivore.com/search/source/full_disclojure">Full Disclojure</a></li>
+<li><a href="http://www.infoq.com/clojure/">Clojure Content on InfoQ</a></li>
+<li><a href="http://alexott.net/en/clojure/video.html">Collection of video links</a></li>
+<li><a href="http://www.pluralsight-training.net/microsoft/OLT/Course/Toc.aspx?n=clojure-concurrency-tutorial">Clojure Concurrency</a></li>
+</ul>
+
+
+<h1>Community</h1>
+
+<ul>
+<li><a href="http://groups.google.com/group/clojure">Clojure Google Group</a></li>
+<li><a href="http://planet.clojure.in/">Planet Clojure</a></li>
+<li><a href="http://disclojure.org/">disclojure</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ClojureX is back]]></title>
+    <link href="http://citizen428.net/blog/2011/04/14/clojurex-is-back/"/>
+    <updated>2011-04-14T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/04/14/clojurex-is-back</id>
+    <content type="html"><![CDATA[<p>Considering how many tools for getting up and running with Clojure are available nowadays (e.g. "cljr":https://github.com/liebke/cljr, "cake":http://github.com/ninjudd/cake or "Dejour":https://github.com/russolsen/dejour) I'm not sure if anyone still cares, but as of today I'm actively working on "ClojureX":https://github.com/citizen428/ClojureX again.</p>
+
+<p>There's not really a good reason for that, but I noticed I've been absent from the Clojure community for way too long and would like to change that again, so see this as a first step.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-02-06]]></title>
+    <link href="http://citizen428.net/blog/2011/02/06/information-overload-2011-02-06/"/>
+    <updated>2011-02-06T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/02/06/information-overload-2011-02-06</id>
+    <content type="html"><![CDATA[<ul>
+<li>"Plenty Of Fish Hacked":http://grumomedia.com/plenty-of-fish-hacked-chris-russos-explains-how-he-did-it/<br>Once again a security researcher gets into trouble for reporting a vulnerability. Will people never learn?</li>
+<li>"Sourceforge Attack: Full Report":http://sourceforge.net/blog/sourceforge-attack-full-report/<br>Speaking of security, here's the full report of the recent Sourceforge hack.</li>
+<li>"Broken sticks puzzle, and a seemingly paradoxical ratio":http://mindyourdecisions.com/blog/2011/02/01/broken-sticks-puzzle-and-a-seemingly-paradoxical-ratio/<br>A nice little math puzzle, solved with the help of Wolfram Alpha.</li>
+<li>"Die wahre Online-Revolution: Ungeduld":http://leyrer.wikosophy.org/blog/2011/02/die-wahre-online-revolution-ungeduld/<br>I often had the same thought about "Twitter revolutions", but Georg actually bothered to sum it up and write it down (in German).</li>
+<li>"On Omar Suleiman":http://www.arabist.net/blog/2011/2/4/on-omar-suleiman.html<br>If you wnat to find out more about the Egyptian Vice President, this is an interesting profile of the man.</li>
+<li>"The Afghan Bank Heist":http://www.newyorker.com/reporting/2011/02/14/110214fa_fact_filkins?currentPage=all<br>A very sobering article about the Afghan government's involvement in large-scale corruption.</li>
+<li>"A tour of the Clojure landscape":http://ericlavigne.wordpress.com/2011/01/30/a-tour-of-the-clojure-landscape/<br>I quite like this map of Clojure projects on GitHub.</li>
+<li>"How To Identify Good Clients (and Avoid Bad Ones)":http://www.smashingmagazine.com/2011/01/14/how-to-identify-good-clients-avoid-bad-ones/<br>Good advice, not only for freelancers.</li>
+<li>"Adsense, no sense at all - what it's like being sacked by a computer...":http://www.duckworksmagazine.com/11/columns/guest/winter/index.htm<br>This is a bit older, but still a good reminder on why it's dangerous to rely on something like Adwords for your income.</li>
+<li>"Sit. Stay. Parse. Good Girl!":http://www.nytimes.com/2011/01/18/science/18dog.html?_r=2&pagewanted=all<br>A dog with a "vocabulary" of over 1000 words.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-01-02]]></title>
+    <link href="http://citizen428.net/blog/2011/01/02/information-overload-2011-01-02/"/>
+    <updated>2011-01-02T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/01/02/information-overload-2011-01-02</id>
+    <content type="html"><![CDATA[<ul>
+<li>"Why the Internet Is a Great Tool for Totalitarians":http://www.wired.com/magazine/2010/12/st_essay_totalitarians/<br>It's always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
+<li>"Caring for Your Introvert":http://www.theatlantic.com/magazine/archive/2003/03/caring-for-your-introvert/2696/<br>While I think the author's overly satirical tone actually does a disservice to the content of the article, as an introvert I still urge you to read this.</li>
+<li>"Understanding Pac-Man Ghost Behavior":http://gameinternals.com/post/2072558330/understanding-pac-man-ghost-behavior<br>This is a great example how a few simple rules can create complex looking behavior patterns in AI opponents.</li>
+<li>"Abandon resolutions. Stop looking for a soulmate. Reject positive thinking":http://www.guardian.co.uk/science/2011/jan/01/how-to-better-person-2011<br>For once somebody managed to write a sensible article regarding new year's resolutions.</li>
+<li>"Farmer-scientist group wants to 'hack society' through open-source technology":http://www.grist.org/article/food-2010-12-29-farmer-scientists-want-to-hack-society<br>About "Open Source Ecology":http://openfarmtech.org/wiki/ and the "Global Village Construction Set":http://openfarmtech.org/wiki/Global_Village_Construction_Set. Awesome!</li>
+<li>"The New Year in Snowflakes":http://chouser.github.com/snow/<br>Very nice little Clojure doodle by Chris Houser.</li>
+<li>"Monads Are Not Metaphors":http://www.codecommit.com/blog/ruby/monads-are-not-metaphors<br>A pretty good explanation of monads for everyone struggling with the concept. It should be easy to follow even if your Scala is less than fluent (like mine is).</li>
+<li>"Spacecraft escaping the Solar System":http://heavens-above.com/solar-escape.asp<br>Positions and other data of the 5 spacecraft leaving our solar system on escape trajectories. The space geek in me likes this a lot.</li>
+<li>"Wem gehoert der Brokkoli?":http://www.zeit.de/2011/01/Gentechnik-Patent-Nahrungsmittel?page=all<br>Companies are trying to get patents on vegetables, fruits and even animals (in German).</li>
+<li>"7 Billion":http://ngm.nationalgeographic.com/7-billion<br>A National Geographic special series about the world's population reaching 7 billion in 2011.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Clojure: Deriving the Y Combinator in 7 Stolen Steps ]]></title>
+    <link href="http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/"/>
+    <updated>2010-12-14T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps</id>
+    <content type="html"><![CDATA[<p>"Fixed point combinators":http://en.wikipedia.org/wiki/Fixed_point_combinator are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that don't explicitly support it. This might be slightly academic, but that doesn't make it less fun.</p>
+
+<p>The most well-known fixed point combinator is probably "Haskell B. Curry's":http://en.wikipedia.org/wiki/Haskell_Curry "Y combinator":http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator, which will be the topic of this post. If you read "The Little Schemer":http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825 - which I whole-heartedly recommend doing by the way - you already implemented it once, but if you are like me chances are you didn't entirely get it the first time around. So when I found this nice post on "Deriving the Y Combinator in 7 Easy Steps":http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html, I decided to "translate" it from JavaScript to Clojure.</p>
+
+<p><em>Step 1</em></p>
+
+<p>Let's start with a "classical" recursive factorial function (while we are at it, I think factorial is a way better example for a fold than for recursion, but everybody seems to do this):</p>
+
+<script src="https://gist.github.com/741070.js?file=ycombinator-step1.clj"></script>
+
+
+<p><em>Step 2</em></p>
+
+<p>Now if we wouldn't have explicit recursion, what could we do? One solution would be to call a function with itself as an argument, then call this argument with itself as an argument and on and on until the stack blows. Not so useful. To avoid this, we write a "higher-order function":http://en.wikipedia.org/wiki/Higher-order_function which will return a function taking a numeric argument, which will then be used to calculate the factorial:</p>
+
+<script src="https://gist.github.com/741070.js?file=ycombinator-step2.clj"></script>
+
+
+<p><em>Step 3</em></p>
+
+<p>While the above code works, all that duplicated code is really quite ugly, don't you think? Let's write a little helper to avoid that (I was too lazy for a proper "refer-clojure":http://richhickey.github.com/clojure/clojure.core-api.html#clojure.core/refer-clojure statement, so I decided to name the helper "yrecur" instead of "recur"):</p>
+
+<script src="https://gist.github.com/741070.js?file=ycombinator-step3.clj"></script>
+
+
+<p><em>Step 4</em></p>
+
+<p>This is better, but the double function call in the body of "fact" is still kinda ugly. Let's hide this within another helper function called "g",  which has to be definied inside the closure of "f" in order to be able to call this function:</p>
+
+<script src="https://gist.github.com/741070.js?file=ycombinator-step4.clj"></script>
+
+
+<p><em>Step 5</em></p>
+
+<p>Now we are getting somewhere! To make our factorial function look almost like the original recursive version, we can factor out some code to a separate wrapper:</p>
+
+<script src="https://gist.github.com/741070.js?file=ycombinator-step5.clj"></script>
+
+
+<p><em>Step 6</em></p>
+
+<p>Instead of actually binding our helper from step 4 to "g", we just inline it since it's only called once anyway:</p>
+
+<script src="https://gist.github.com/741070.js?file=ycombinator-step6.clj"></script>
+
+
+<p><em>Step 7</em></p>
+
+<p>Last but not least we also inline the wrapper from step 5, et voila, the Y combinator:</p>
+
+<script src="https://gist.github.com/741070.js?file=ycombinator-step7.clj"></script>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

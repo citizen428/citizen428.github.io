@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: git | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My way: Ruby, Sinatra, Heroku]]></title>
+    <link href="http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku/"/>
+    <updated>2009-03-25T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku</id>
+    <content type="html"><![CDATA[<p>"RubyLearning":http://rubylearning.org just had a nice one week introductory course on "Sinatra":http://www.sinatrarb.com/, a "DSL":http://en.wikipedia.org/wiki/Domain-specific_programming_language for easily creating web applications. The next batch will start on May 2nd (and I'll probably be around as a mentor again), you can "join here":http://rubylearning.org/class/course/enrol.php?id=32 if you are interested.</p>
+
+<p>Anyway, since it's so easy to write applications with Sinatra, you probably don't want to waste time deploying them. That's where "Heroku":http://heroku.com/ comes into play, a Ruby hosting platform which modeled it's workflow around "git":http://git-scm.com/. In my - still somewhat limited - experience working with Heroku is painless and feels very natural, kudos to the team for providing us with such a nice option for hosting "Rack":http://rack.rubyforge.org/ based apps! In fact I liked Heroku so much, that I wrote a patch for <a href="http://quirkey.com/">Aaron Quint</a>'s "sinatra-gen":http://github.com/quirkey/sinatra-gen/tree/master which will initialize git and create your app on Heroku for you. It's not in the main branch yet, but Aaron said he likes the idea and that he will include it. Up until then you can get my version from "here":http://github.com/citizen428/sinatra-gen/tree/master.</p>
+
+<p><em>Update: Said patch - in slightly modified form - is now part of mainline sinatra-gen, so I recommend getting the "official" version, not mine.</em></p>
+
+<p>Oh yeah, once you are done creating all this shiny new webapps in Sinatra, don't forget to take some snapshots of them with "snapurl":http://github.com/jurisgalang/snapurl/tree/master, another nifty little app I recently wrote a small patch for.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RubyLearning Git and GitHub course review]]></title>
+    <link href="http://citizen428.net/blog/2009/02/24/rubylearning-git-and-github-course-review/"/>
+    <updated>2009-02-24T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2009/02/24/rubylearning-git-and-github-course-review</id>
+    <content type="html"><![CDATA[<p>Today I finished the <em>free</em> "Git and GitHub course":http://rubylearning.org/class/course/category.php?id=11 at "RubyLearning":http://rubylearning.org and I have to say I'm really happy with it! Since its creation "GitHub":http://github.com has become a kind of de facto standard for Ruby-related projects (and probably also for FOSS development in general), so knowing it is quite essential if you want to contribute to any of them. That being said it's not really hard to get up to speed with the technology, there are "good tutorials":http://b.lesseverything.com/2008/3/25/got-git-howto-git-and-github and other "useful sites":http://www.gitready.com/ out there. But if you are just starting out with Git or "revision control systems":http://en.wikipedia.org/wiki/Revision_Control_System in general, this course is definitely a great way to learn all the basics and much more in a fun and collaborative way! And since the course covers quite a wide range of topics (including automatic gem creation, GH pages, Gists etc.), you'll probably also find it useful if you already have some previous Git/GitHub experience. The next batch will start on March 28th, make sure you don't miss it!</p>
+
+<p><em>Note: Actually the current batch is still going on for 2 more days, but I finished with the eBook today. One of the joys of RubyLearning is that you can do all the courses at your own speed, while still having the motivational and other effects of learning with a group of like-minded people.</em></p>
+]]></content>
+  </entry>
+  
+</feed>

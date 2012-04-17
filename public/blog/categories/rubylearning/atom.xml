@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rubylearning | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/rubylearning/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[What's new pussycat?]]></title>
+    <link href="http://citizen428.net/blog/2009/10/06/whats-new-pussycat/"/>
+    <updated>2009-10-06T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/10/06/whats-new-pussycat</id>
+    <content type="html"><![CDATA[<p>Quite a bit actually:<ul>
+<li>I live in Vienna again. Seriously.</li>
+<li>I started my new job as IT systems engineer at <a href="http://www.nessus.at/">Nessus</a>. <b>Update</b>: That was October. In November I changed job and now work for <a href="http://matrixware.com">Matrixware</a> </li>
+<li><a href="http://github.com/citizen428/ClojureX">ClojureX</a> got mentioned in the <a href="http://github.com/citizen428/ClojureX">latest GitHub rebase</a>, yeah!</li>
+<li><a href="http://github.com/citizen428/unsavory">unsavory</a> is now also available on <a href="http://gemcutter.org/">Gemcutter</a>, so get it while it&#8217;s hot (Disclaimer: product may not be as hot as advertised, YMMV).</li>
+<li><a href="http://rubylearning.org">RubyLearning</a> started a <a href="http://rubylearning.com/blog/2009/09/20/rpcfn-ruby-programming-challenge-for-newbies/">Ruby Programming Challenge for Newbies</a> and I&#8217;m part of the jury. The <a href="http://rubylearning.com/blog/2009/09/24/rpcfn-shift-subtitle-1/">first challenge</a> was provided by <a href="http://www.akitaonrails.com/">Fabio Akita</a> and saw quite a lot of participants. I also wrote a quick <a href="http://github.com/citizen428/rubylearning/blob/master/rpcfn/01subtitles/subtitles.rb">example solution</a>.</li>
+</ul></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review: The Well-Grounded Rubyist (Manning Publications)]]></title>
+    <link href="http://citizen428.net/blog/2009/06/09/review-the-well-grounded-rubyist-manning-publications/"/>
+    <updated>2009-06-09T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/06/09/review-the-well-grounded-rubyist-manning-publications</id>
+    <content type="html"><![CDATA[<p>As part of "Rubylearning's":http://www.rubylearning.org/class/ "current book promotion":http://rubylearning.com/blog/2009/05/29/book-promotion-the-well-grounded-rubyist/ I'm reading "The Well-Grounded Rubyist":http://www.manning.com/black2/ by David A. Black. Here are my thoughts on the book:</p>
+
+<p>If you are new to Ruby, this may very well be the book you are looking for, since the author was really serious about the "well-grounded" in the title. Together the first six chapters form Part 1, aptly called "Ruby Foundations". Here you'll learn about objects, modules, classes, self and control-flow techniques. Although this part may not be the most interesting for more experienced Rubyists, it's certainly well-written and manages to present a lot of very fundamental Ruby right at the beginning. True, at first I was a bit surprised to see that singleton methods were - implicitly - introduced before classes, but when you follow the author's logic, it all makes a lot of sense. What I really like about this approach is that it exposes the reader to concepts needed for some quite advanced Ruby coding right away, and in a very light-hearted and "natural" manner. Well done!</p>
+
+<p>Part 2 ("Built-in classes and modules") covers everything from strings, over symbols to regular expressions and file I/O. What I really like about this part is that the author dedicated two whole chapters to collections and iterators/enumerators, which are essential for everyone striving to become fluent in Ruby.</p>
+
+<p>Last but not least Part 3 ("Ruby dynamics") talks about singleton methods, procs, lambdas, Symbol#to_proc, the various eval methods, bindings and introspection, thus equipping the reader with all the necessary tools for metaprogramming, one of the many things that make Ruby that sexy little beast it is.</p>
+
+<p>Oh yeah, since I didn't mention this before, "The Well-Grounded" Rubyist" covers Ruby 1.9.1, which means you'll learn about the coolest Ruby around. Don't worry though, most of what you read will also apply to 1.8.6, but isn't it about time that we all slowly moved on?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Ruby in Practice (Manning Publications)]]></title>
+    <link href="http://citizen428.net/blog/2009/05/18/review-ruby-in-practice-manning-publications/"/>
+    <updated>2009-05-18T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/05/18/review-ruby-in-practice-manning-publications</id>
+    <content type="html"><![CDATA[<p>I read "Ruby in Practice":http://www.manning.com/mcanally/ for the "upcoming book promotion":http://rubylearning.com/blog/2009/05/12/book-promotion-ruby-in-practice/ on "RubyLearning":http://www.rubylearning.org, and I have to say it's a pretty neat book which will be well worth your time and money. Over the course of 360 pages Jeremy McAnally and Assaf Arkin tackle lots of different topics of interest to developers. The book is structured in 3 main parts:</p>
+
+<ul>
+<li>Ruby techniques: Gives a general introduction to Ruby's strength (which sometimes reads as a bit of a sales pitch), "BDD":http://en.wikipedia.org/wiki/Behavior_Driven_Development and "TDD":http://en.wikipedia.org/wiki/Test-driven_development, as well as scripting with Ruby (including "OLE":http://en.wikipedia.org/wiki/Object_Linking_and_Embedding and "OSA":http://en.wikipedia.org/wiki/AppleScript).</li>
+<li>Integration and communication: This part covers Rails, web services in general (HTTP, "REST":http://en.wikipedia.org/wiki/Representational_State_Transfer, <a href="http://en.wikipedia.org/wiki/SOAP_(protocol)">SOAP</a>), automating communication with email and IM, asynchronous messaging and deployment options.</li>
+<li>Data and document techniques: This part talks about databases, structured text, authentication, searching, indexing and document processing.</li>
+</ul>
+
+
+<p></p>
+
+<p>Chapters usually present the reader with a problem, then show an example solution which usually makes good use of existing libraries and then finish with further discussion on the topic (alternative ways to implement it, pitfalls in using the shown solution in "real life" scenarios etc.). For people with previous knowledge of Ruby this book is a good read, which shows how the dynamic nature of the language combined with the quite big amount of readily available libraries enable developers to quickly and efficiently find solutions to common problems. I sometimes do have minor quirks with some of the code, but that's just personal preferences and being nitpicky. All in all it's a very solid book which I enjoy quite a lot.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A TextMate command for the RubyLearning forums]]></title>
+    <link href="http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/"/>
+    <updated>2009-05-10T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums</id>
+    <content type="html"><![CDATA[<p>As we all know posting code to "Moodle":http://moodle.org/ (the software that powers "RubyLearning":http://rubylearning.org) can be a bit cumbersome. I therefore created a TextMate command which will</p>
+
+<ul>
+<li> take the currently active file</li>
+<li> replace all occurrences of < with the HTML-entity</li>
+<li> wrap all of that in [code ruby] tags and</li>
+<li> copy it to the clipboard, ready to be pasted into the forums.</li>
+</ul>
+
+
+<p>Source:</p>
+
+<script src="http://gist.github.com/109576.js"></script>
+
+
+<p>Download:
+<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My way: Ruby, Sinatra, Heroku]]></title>
+    <link href="http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku/"/>
+    <updated>2009-03-25T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku</id>
+    <content type="html"><![CDATA[<p>"RubyLearning":http://rubylearning.org just had a nice one week introductory course on "Sinatra":http://www.sinatrarb.com/, a "DSL":http://en.wikipedia.org/wiki/Domain-specific_programming_language for easily creating web applications. The next batch will start on May 2nd (and I'll probably be around as a mentor again), you can "join here":http://rubylearning.org/class/course/enrol.php?id=32 if you are interested.</p>
+
+<p>Anyway, since it's so easy to write applications with Sinatra, you probably don't want to waste time deploying them. That's where "Heroku":http://heroku.com/ comes into play, a Ruby hosting platform which modeled it's workflow around "git":http://git-scm.com/. In my - still somewhat limited - experience working with Heroku is painless and feels very natural, kudos to the team for providing us with such a nice option for hosting "Rack":http://rack.rubyforge.org/ based apps! In fact I liked Heroku so much, that I wrote a patch for <a href="http://quirkey.com/">Aaron Quint</a>'s "sinatra-gen":http://github.com/quirkey/sinatra-gen/tree/master which will initialize git and create your app on Heroku for you. It's not in the main branch yet, but Aaron said he likes the idea and that he will include it. Up until then you can get my version from "here":http://github.com/citizen428/sinatra-gen/tree/master.</p>
+
+<p><em>Update: Said patch - in slightly modified form - is now part of mainline sinatra-gen, so I recommend getting the "official" version, not mine.</em></p>
+
+<p>Oh yeah, once you are done creating all this shiny new webapps in Sinatra, don't forget to take some snapshots of them with "snapurl":http://github.com/jurisgalang/snapurl/tree/master, another nifty little app I recently wrote a small patch for.</p>
+]]></content>
+  </entry>
+  
+</feed>

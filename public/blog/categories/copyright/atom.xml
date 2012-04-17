@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: copyright | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/copyright/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Happy Fair Use Day!]]></title>
+    <link href="http://citizen428.net/blog/2007/07/11/happy-fair-use-day/"/>
+    <updated>2007-07-11T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2007/07/11/happy-fair-use-day</id>
+    <content type="html"><![CDATA[<p>"Fair Use Day":http://www.fairuseday.com/index.php/about-fairuse/</p>
+
+<p>Boomtime, Confusion 46, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Consumers Digital Rights - Support this Campaign]]></title>
+    <link href="http://citizen428.net/blog/2005/11/10/consumers-digital-rights-support-this-campaign/"/>
+    <updated>2005-11-10T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2005/11/10/consumers-digital-rights-support-this-campaign</id>
+    <content type="html"><![CDATA[<p align="center"><a href="http://www.consumersdigitalrights.org/cms/petition_en.php"><img src="http://www.consumersdigitalrights.org/media/logo_24567.PNG" /></a></p>
+
+
+<p>"<i>The time has come to guarantee consumers certain basic rights in the digital world, and to tell them what they can do with their digital hardware/content. This is our message in this campaign.</i>"</p>
+
+<p>(via "CARGAL":http://www.cargal.org/drupal/index.php)</p>
+
+<p>Prickle-Prickle, The Aftermath 22, 3171 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

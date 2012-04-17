@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ruby: All your web are belong to us - citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="When it comes to Ruby, I&#8217;ve recently mostly been blogging about Nitro, which I think will be a really great framework for writing web &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+<meta name="verify-postrank" content="q9zqqyw" />
+<link rel="openid.server" href="http://www.myopenid.com/server" />
+<link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Ruby: All Your Web Are Belong to Us</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-11-06T00:00:00+01:00" pubdate data-updated="true">Nov 6<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>When it comes to Ruby, I&#8217;ve recently mostly been blogging about <a href="http://www.nitrohq.com/">Nitro</a>, which I think will be a really great framework for writing web applications once it matures a little more. For the next version (0.25.0) the developers plan to concentrate on bug fixing, code cleanup and refactoring, as well as documentation. The current development version &#8211; which following my suggestion is now called Glycerin &#8211; can be fetched from a <a href="http://repo.nitrohq.com/">Darcs repository</a>, so there shouldn&#8217;t be anything stopping you from valuable contributions! ;)</p>
+<p>Ok, after my usual Nitro evangelism, it&#8217;s time to finally talk about the other excellent web framework Ruby has to offer: <a href="http://www.rubyonrails.com/">Ruby on Rails</a>. I haven&#8217;t used it for quite some time now, but when I got bored a few days ago, I decided to once again start playing around with it. I&#8217;ve done some googling and found some nice articles, so here&#8217;s my suggested reading list for the aspiring Rails programmer (please note that this list doesn&#8217;t include docs from the official site, because they&#8217;re easy enough to find):</p>
+<p>1. <a href="http://www.slash7.com/articles/2005/02/22/mvc-the-most-vexing-conundrum"><span class="caps">MVC</span>: The Most Vexing Conundrum</a>: Befrore you do anything with Rails, head over to Amy Hoy&#8217;s blog, and read her explanation of <a href="http://en.wikipedia.org/wiki/MVC"><span class="caps">MVC</span></a>, the <a href="http://en.wikipedia.org/wiki/Software_design_pattern">design pattern</a> Rails is following. I think it&#8217;s really important to wrap your head around the underlying principles of a framework before you start to use it, so make sure you really understand what Amy&#8217;s trying to tell you.</p>
+<p>2. <a href="http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html">Rolling with Ruby on Rails</a>: Once you got the basic principles, it&#8217;s time to visit <a href="http://www.onlamp.com/">ONLamp</a> to read Curt  Hibbs nice introductory article. It doesn&#8217;t really go into much detail, but I&#8217;m sure it will wet your appetite&#8230;</p>
+<p>3. <a href="http://www.slash7.com/articles/2005/01/24/really-getting-started-in-rails">Really Getting Started in Rails</a>: Now that you&#8217;re rolling with Rails, it&#8217;s time to go back to Amy&#8217;s site. There you&#8217;ll find this nice article that is meant as an addition to the previously mentioned &#8220;Rolling with Ruby on Rails&#8221;, explaining some of the whys and hows Curt had to leave out to keep his text short and to the point.</p>
+<p>4. <a href="http://www.onlamp.com/pub/a/onlamp/2005/03/03/rails.html">Rolling with Ruby on Rails, Part 2</a>: Do you start to see a pattern here? Correct, it&#8217;s Curt&#8217;s turn again. In the second part of his introductory Rails article, he finishes off the cookbook application from the first part, before giving pointers to some of the more interesting features of Rails, like caching, transactions, testing, generators and so on.</p>
+<p>5. <a href="http://rails.homelinux.org/">Four Days on Rails</a>: Now that you should have a basic understanding of how Rails works, you should definitely check out this excellent <span class="caps">HOWTO</span> by John McCreesh: &#8220;<i>It&#8217;s about 40 pages formatted for double-sided printing on A4, and by the time you&#8217;ve read it, you should have a useful toolbox of Rails techniques and a good idea of where to look on the web for more information</i>&#8221;.</p>
+<p>If you take your time to carefully read this stuff, you should be pretty much up to speed in Rails development in less than a week! Don&#8217;t be passive while reading the articles, but start writing you own little app and constantly improve it while you learn. Once you feel comfortable with the basic principles, you can read some of the more advanced stuff, like <a href="http://www.onlamp.com/pub/a/onlamp/2005/06/09/rails_ajax.html">Ajax on Rails</a>, <a href="http://www.xml.com/pub/a/2005/11/02/rest-on-rails.html"><span class="caps">REST</span> on Rails</a>, <a href="http://www.slash7.com/articles/2005/08/13/ajaxariffic-autocomplete-with-scriptaculous">Ajaxariffic Autocomplete with Scriptaculous</a>  or the Rails articles <a href="http://whytheluckystiff.net/">why the lucky stuff</a> publishes on <a href="http://redhanded.hobix.com/">RedHanded</a>. Have fun!</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Kohl</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-11-06T00:00:00+01:00" pubdate data-updated="true">Nov 6<span>th</span>, 2005</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ajax/'>ajax</a>, <a class='category' href='/blog/categories/nitro/'>nitro</a>, <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+    <a class="FlattrButton" style="display:none;"
+    title="Ruby: All your web are belong to us"
+    data-flattr-uid="citizen428"
+    data-flattr-tags=""
+    data-flattr-button="compact"
+    data-flattr-category="text"
+    href="http://citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us/">
+    
+</a>
+
+  
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2005/11/01/javascriptalertnothing-to-see-here-please-move-on/" title="Previous Post: javascript:alert("Nothing to see here, please move on!")">&laquo; javascript:alert("Nothing to see here, please move on!")</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2005/11/06/what-a-waste/" title="next Post: What a waste">What a waste &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I'm Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+<h1>Top Posts</h1>
+<div class="postrank-widget theDarkSide">
+<script type="text/javascript" src="http://api.postrank.com/static/widget-v2.js"></script>
+<script type="text/javascript">
+var options = {
+	"feed_hash": "a424fafe1edf439bb33fd235b75bd2a5",
+	"num":        5 ,
+	"theme":     "theDarkSide",
+	"hasLink":   true
+};
+new PostRankWidget(options);
+</script>
+<div class="powered-by-postrank-wrapper">
+<div class="powered-by-postrank">
+<p class="poweredByPostRank"><a href="http://www.postrank.com/?utm_source=topposts&utm_medium=widget&utm_content=topposts&utm_campaign=pr-1"><span>Powered by Postrank</span></a></p>
+</div>
+<div class="pr_bottomCornerSet"><div class="pr_clearBottomLeft"></div><div class="pr_solidSpecialMiddle"></div><div class="pr_clearBottomRight"></div></div>
+</div>
+</div>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us/';
+        var disqus_url = 'http://citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

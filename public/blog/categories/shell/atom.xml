@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: shell | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/shell/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-05-22]]></title>
+    <link href="http://citizen428.net/blog/2011/05/22/information-overload-2011-05-22/"/>
+    <updated>2011-05-22T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/05/22/information-overload-2011-05-22</id>
+    <content type="html"><![CDATA[<ul>
+<li>"Understanding the Fourier transform by Stuart Riffle":http://altdevblogaday.org/2011/05/17/understanding-the-fourier-transform/<br>You know I'm a big fan of good (math) explanations and this is no exception. I really like the color coded formula!</li>
+<li>"The Complete Guide to Not Giving a Fuck":http://inoveryourhead.net/the-complete-guide-to-not-giving-a-fuck/<br>Some good advice in there, but like with most things in life, the right balance is the key.</li>
+<li>"You can increase your intelligence: 5 ways to maximize your cognitive potential":http://www.scientificamerican.com/blog/post.cfm?id=you-can-increase-your-intelligence-2011-03-07<br>Interesting article in the Scientific American. Funny tidbit: I regularly observe all the described behaviors in the hacker community, seems we are doing well in this regard.</li>
+<li>"On TermKit":http://acko.net/blog/on-termkit<br>While I'm not sure I'd use this, it's interesting to see the Unix terminal re-imagined.</li>
+<li>"The People vs. Goldman Sachs":http://www.rollingstone.com/politics/news/the-people-vs-goldman-sachs-20110511<br>To get an idea what this is about, here's a quote from the article: "This is America: Corporate stealing is practically the national pastime, and Goldman Sachs is far from the only company to get away with doing it".</li>
+<li>"How Food Explains the World":http://www.foreignpolicy.com/articles/2011/04/25/how_food_explains_the_world?page=full<br>I really like this Foreign Policy article on food, a topic we should really tackle on a global scale.</li>
+<li>"First 'habitable' exoplanet confirmed":http://www.cosmosmagazine.com/news/4321/first-habitable-exoplanet-confirmed<br>Don't pack your bags just yet, but this is still cool.</li>
+<li>"Ein Job zum Davonlaufen":http://sz-magazin.sueddeutsche.de/texte/anzeigen/35651<br>Police officer, a job to run away from? (in German)</li>
+<li>"Life is a cosmic giggle on the breath of the universe":http://www.viceland.com/int/v18n5/htdocs/life-is-a-cosmic-giggle-803.php?page=1<br>Wow, once again real life is much more screwed up than TV. If you think "Breaking Bad":http://en.wikipedia.org/wiki/Breaking_Bad is hardcore, read this article/interview.</li>
+<li>"NASA Announces Results Of Epic Space-Time Experiment":http://science.nasa.gov/science-news/science-at-nasa/2011/04may_epic/<br>47 years in the making, this experiment proves the existence of a space-time vortex around Earth.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ XML diffs with bash and awk]]></title>
+    <link href="http://citizen428.net/blog/2010/10/01/xml-diffs-with-bash-and-awk/"/>
+    <updated>2010-10-01T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2010/10/01/xml-diffs-with-bash-and-awk</id>
+    <content type="html"><![CDATA[<p><i>Slightly modified version of a "post":http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/ I originally wrote for our "company blog":http://tupalo.com/en/blog/.</i></p>
+
+<p>When importing data at work, we often have to deal with XML. This generally works fine, but the format's structured nature also means that you can't just treat it like any old text file.</p>
+
+<p>That's something we recently had to work around when we wanted to generate a daily XML diff, which only contains elements which changed since the previous feed. Of course there are several open source tools for diff-ing XML (e.g. <a href="http://diffxml.sourceforge.net/">diffxml</a> or <a href="http://www.logilab.org/859">xmldiff</a>) but since we didn't get them to do what we want in a reasonable amount of time, we just decided to roll our own.</p>
+
+<p>The final solution is a 71 line bash script, which downloads a zip, extracts it, generates <a href="http://en.wikipedia.org/wiki/MD5">MD5</a> sums for every element and then creates a diff between this new file and the previous list of MD5 sums. Once we know which elements have changed we merge them into a new feed which then gets handed to our importer. The awesome <a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> was a great help in this, as was battle-tested old <a href="http://en.wikipedia.org/wiki/AWK">awk</a>.</p>
+
+<p>Let's look at an interesting snippet from the script:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>xmlstarlet sel -I -t -m <span class="s2">&quot;//item&quot;</span> -v <span class="s2">&quot;./guid&quot;</span> -o <span class="s2">&quot;|&quot;</span> -c <span class="s2">&quot;.&quot;</span> -n - |
+</span><span class='line'>  sed -e <span class="s1">&#39;...&#39;</span> |
+</span><span class='line'>  awk <span class="se">\&lt;</span>/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;pre&gt;&lt;code&gt;<span class="s1">&#39;BEGIN {</span>
+</span><span class='line'><span class="s1">  FS=&quot;|&quot;</span>
+</span><span class='line'><span class="s1">  RS=&quot;\n&quot;</span>
+</span><span class='line'><span class="s1">}</span>
+</span><span class='line'><span class="s1">{</span>
+</span><span class='line'><span class="s1">  id=$1</span>
+</span><span class='line'><span class="s1">  command=&quot;printf \&quot;%s\&quot; \&quot;&quot; $2 &quot;\&quot; | md5sum | cut -d\&quot; \&quot; -f1&quot;</span>
+</span><span class='line'><span class="s1">  command | getline md5</span>
+</span><span class='line'><span class="s1">  close(command)</span>
+</span><span class='line'><span class="s1">  print id&quot;:&quot;md5</span>
+</span><span class='line'><span class="s1">}&#39;</span> &amp;gt;&amp;gt; <span class="nv">$MD5_DIR</span>/vendor-md5-<span class="nv">$TODAY</span>
+</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Here we use xmlstarlet to iterate over all the items in the feed (the <a href="http://www.w3.org/TR/xpath/">XPath</a> "//item"), print the value of the "guid" element (-v "./guid"), output a pipe character (-o "|") and then copy the current element followed by a newline (-c "." -n) . This then gets piped through sed for some cleaning up (which I omitted here for brevity's sake) before awk takes the part after each "|", generates an MD5 sum and finally produces a file that looks like this:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rKKTZ:4012fced7c4cd77da607d294fbb8b5b6
+</span><span class='line'>hC7Jr:39245a0f9a976e6d47c0e2d76abf6238
+</span><span class='line'>...</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Now that we are able to create a daily list of MD5 sums, it's easy to generate the diff feed:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">if</span> <span class="o">[</span> -e <span class="nv">$MD5_DIR</span>/vendor-md5-last <span class="o">]</span> ; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nv">changed</span><span class="o">=</span><span class="sb">`</span>diff <span class="nv">$MD5_DIR</span>/vendor-md5-last <span class="nv">$MD5_DIR</span>/vendor-md5-<span class="nv">$TODAY</span> |&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;pre&gt;&lt;code&gt;   grep <span class="s2">&quot;^&amp;gt;&quot;</span> |
+</span><span class='line'>       cut -d<span class="s2">&quot;:&quot;</span> -f 1 |
+</span><span class='line'>       cut -b 1-2 --complement<span class="sb">`</span>
+</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;for record in <span class="nv">$changed</span> ; <span class="k">do</span>
+</span><span class='line'><span class="k">  </span><span class="nv">f</span><span class="o">=</span>&lt;code&gt;fgrep -l <span class="s2">&quot;&amp;lt;guid&amp;gt;$record&amp;lt;/guid&amp;gt;&quot;</span> <span class="nv">$FILE_PATTERN</span>&lt;/code&gt;
+</span><span class='line'>  xmlstarlet sel -I -t -c <span class="s2">&quot;/rss/channel/item[guid=&#39;$record&#39;]&quot;</span> <span class="nv">$f</span> &gt;&gt; vendor-import-<span class="nv">$TODAY</span>.xml
+</span><span class='line'><span class="k">done</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Here we create an array with the id of the changed elements over which we then iterate. In the loop we once again use xmlstarlet to extract the current item from the feed which contains the right guid.</p>
+
+<p>I'm quite happy with the result, it does exactly what we want it to do and is also reasonably fast. This is a good example of how familiar Unix tools can be combined to create fairly concise solutions for non-trivial problem.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Most used shell commands]]></title>
+    <link href="http://citizen428.net/blog/2009/05/25/most-used-shell-commands/"/>
+    <updated>2009-05-25T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/05/25/most-used-shell-commands</id>
+    <content type="html"><![CDATA[<p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Although there was no real point in doing so, I felt the need to write a short Ruby script to do the same:</p>
+
+<script src="http://gist.github.com/117571.js"></script>
+
+
+<p>Here's the output on my MacBook:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>command_stats | head
+</span><span class='line'><span class="nb">time</span>: 75
+</span><span class='line'><span class="nb">cd</span>: 68
+</span><span class='line'>ls: 66
+</span><span class='line'>git: 35
+</span><span class='line'>cat: 32
+</span><span class='line'>irb: 20
+</span><span class='line'>awk: 17
+</span><span class='line'>ruby: 15
+</span><span class='line'>scala: 15
+</span><span class='line'>vim: 12
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>If you are surprised by how many times (no pun intended) I called <em>time</em>, it's just because I was benchmarking "Project Euler":http://projecteuler.net/ solutions in several languages, everything else is quite regular (and suggests I don't use the Finder much ;) ).</p>
+]]></content>
+  </entry>
+  
+</feed>

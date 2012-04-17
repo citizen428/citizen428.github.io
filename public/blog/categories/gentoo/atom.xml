@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gentoo | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/gentoo/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Delusions of grandeur]]></title>
+    <link href="http://citizen428.net/blog/2006/08/12/delusions-of-grandeur/"/>
+    <updated>2006-08-12T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2006/08/12/delusions-of-grandeur</id>
+    <content type="html"><![CDATA[<p>As my PR manager told me, large numbers of fans have already complained about the recent lack of updates. Since I'm only my reader's humble servant, I of course have to comply with this wishes, so here are the long awaited news about yours truly:</p>
+
+<p><em>Gentoo:</em>
+After being a "Gentoo":http://www.gentoo.org developer for 2 years, I finally decided to leave the project. Since I haven't really been active for the past 4 month anyway for several reasons (e.g. work), this was long overdue anyway. I've met a lot of nice and interesting people in the Gentoo community and working with you guys has really been a pleasure! Thanks for that, I really appreciate what I have learned from all of you during that time!</p>
+
+<p><em>Mac:</em>
+Today I've joined the team of "Open.Source.Mac":http://opensourcemac.de/ and have already published "my first little article":http://www.opensourcemac.de/2006/08/12/machtgeil/ on the site. Enjoy!</p>
+
+<p><em>Personal:</em>
+On the 2nd of August I celebrated my 27th birthday at "Xeno":http://www.xeno.co.at/. A lot of "friends":http://red667.org/ showed up, whereas "certain people":http://berq.net/ decided to get drunk somewhere else and then blamed innocent squirrels for their not showing up. It was a cool evening which I really enjoyed, but working on the next day didn't exactly qualify as a good cure against the headaches...</p>
+
+<p><em>Capitalism:</em>
+I have to admit that I love portable consoles, especially when they are as sexy as the black Nintendo DS Lite I bought three weeks ago. So far I own "Advance Wars: Dual Strike":http://ds.ign.com/articles/643/643656p1.html, "Brain Age: Train Your Brain in Minutes a Day":http://ds.ign.com/articles/702/702057p1.html, "Feel The Magic XY/XX":http://ds.ign.com/articles/567/567496p1.html and "Castlevania: Dawn of Sorrow":http://ds.ign.com/articles/655/655830p1.html. All of them are really great and I can hardly wait until my copy of "Mario Kart DS":http://ds.ign.com/articles/666/666125p1.html finally arrives.</p>
+
+<p>I also got myself a nice "M9 DX enclosure":http://www.macpower.com.tw/products/hdd3/m9/m9dx with a 250GB Samsung HD as a backup disk for the Mac Mini. Overall it's pretty neat, although it could match the color of the Mini a little better.</p>
+
+<p><em>Misc</em>
+Found an "article":http://www.explosm.net/articles/6135/4/ about "Habbo Hotel":http://www.habbohotel.co.uk/ on the "Pardus":http://www.pardus.at forums and just had "to try it out":http://flickr.com/photos/citizen428/sets/72157594226374139/. Like the author of the article I most likely won't visit the site again, but I had a lot of fun during the hour I spent there.</p>
+
+<p>"teemow":http://teemow.com recently blogged about "BumpTop":http://honeybrown.ca/Pubs/BumpTop.html, a new take at the desktop metaphor we all grew used to. The video is quite impressive and I'd really like to try out such an interface myself, as I'm interested in how well it works for everyday usage.</p>
+
+<p>Prickle-Prickle, Bureaucracy 5, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Breaking news: Update to citizen428.blog(), situation unclear!]]></title>
+    <link href="http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
+    <updated>2006-07-01T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
+    <content type="html"><![CDATA[<p>June was pretty busy, so I only managed to blog once. So here's a little update of what happened during the past few weeks:</p>
+
+<p><em>Work:</em>
+Still the same old bullsh*t, except that I spent 7 days at a customer's site in Upper Austria, where we set up several virtual "Heartbeat":http://linux-ha.org/ clusters in "VMware Server":http://www.vmware.com/products/server/. Summary: the scenery and people in Upper Austria are pretty nice, VMware is one of the coolest things since the invention of sliced bread and Heartbeat really can be a bitch to set up correctly (no surprises here I guess).</p>
+
+<p><em>Capitalism:</em>
+Got myself a <a href="http://www.viewsonic.com/products/desktopdisplays/lcddisplays/valueseries/va1912wb/">nice widescreen 19" LCD</a>  for my beloved Mac Mini. I also decided that it's about time to get a new digital camera, since my old one broke ages ago. I finally settled on an "Olympus SP-700":http://www.dpreview.com/news/0510/05100401oly_sp700.asp, which Amazon sold for a really good price. The camera arrived last Thursday, and from what I've seen so far I'm really impressed with my new gadget. Today I once again went on a DVD buying spree and bought "Ken Park":http://imdb.com/title/tt0209077/, "Romper Stomper":http://imdb.com/title/tt0105275/, "Bad Taste":http://imdb.com/title/tt0092610/ and the first season of "The Sopranos":http://imdb.com/title/tt0141842/. Next on my list are an external Mac Mini HD like the "miniStack":http://www.newertech.com/ministack and a new notebook. Unfortunately neither the MacBook nor the MacBook Pro does really cut it for me (no 12" version, too heavy, too hot and far too many issues reported by early adopters), so I will probably settle for an "X60s":http://www5.pc.ibm.com/de/products.nsf/$wwwPartNumLookup/_UK15LGE?OpenDocument running Gentoo. I'd really would have loved to buy a portable Mac, but I'm not enough of an Apple fanboy to buy a product which doesn't really fit my needs...</p>
+
+<p><em>Books:</em>
+If you want to read a really good book by a Cuban author, you definitely should try "The Insatiable Spiderman":http://www.amazon.com/gp/product/0786716657/ref=sr_11_1/103-1901030-1131048?ie=UTF8 by Pedro Juan GutiÃ©rrez. Next on my list is "Playing the Moldovans at Tennis ":http://www.amazon.com/gp/product/0753152142/qid=1151763922/sr=1-1/ref=sr_1_1/103-1901030-1131048?s=books&amp;v=glance&amp;n=283155, which I'll start reading tomorrow. I also got myself a copy of "Mac OS X Tiger: Missing Manual":http://www.amazon.com/gp/product/0596009410/qid=1151763999/sr=2-1/ref=pd_bbs_b_2_1/103-1901030-1131048?s=books&amp;v=glance&amp;n=283155, which has shown me some neat tricks although it mainly targets a non-techy audience.</p>
+
+<p><em>Geek stuff:</em>
+I've always been a great fan of tiling window managers like "Ion3":http://www.modeemi.fi/~tuomov/ion/. However, lately I fell in love with "wmii":http://wmii.de/, which I think is an absolutely amazing WM. I'm using version 3, which features dynamic window management as known from "acme":http://en.wikipedia.org/wiki/Acme_%28text_editor%29 or "Oberon":http://en.wikipedia.org/wiki/Oberon_operating_system. Reading the "guide":http://wmii.de/index.php?page=guide doesn't take longer than about 15 minutes, after which I was already able to conviniently work with wmii. So far the experience is really great, and I haven't even started using the scripting capapilites "9P":http://en.wikipedia.org/wiki/9P offers... Additionally using wmii once again made me play around with "Plan 9":http://cm.bell-labs.com/plan9/, an operating system I've been strangely interested in ever since I first heard about it around 6 years ago. Note to self: spend some time with the "9fans":https://lists.cse.psu.edu/mailman/listinfo/9fans at "23C3":http://events.ccc.de/congress/2006/!</p>
+
+<p><em>Gentoo:</em>
+Another month spent without doing anything Gentoo related. To be completely honest, my Gentoo box has only been started twice since I moved into my new apartment in early March. Given that I'll be on holidays for around 10 days in July, you once again shouldn't expect too much activity from me... :( I'm really thinking about leaving the project, as I'm currently not doing anything which warrants my developer status. Probably the only alternative to that would be dropping all the ebuilds I'm currently working on, and to focus solely on "Gentoo-alt":http://www.gentoo.org/proj/en/gentoo-alt/, maintaining the Gentoo/FreeBSD and Gentoo/NetBSD docs, while also working on "Gentoo for Mac OS X":http://www.gentoo.org/proj/en/gentoo-alt/macos/index.xml (although Fink works really well for me). Input wanted!</p>
+
+<p><em>Random:</em>
+September 19th is International Talk Like A Pirate Day. Yarr!</p>
+
+<p><a href="http://www.talklikeapirate.com/"><img src="http://www.talklikeapirate.com/partykit/tlapdbanner2.gif" align="center" border="1"></a></p>
+
+<p>Boomtime, Confusion 36, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mac Mini ordered]]></title>
+    <link href="http://citizen428.net/blog/2006/04/09/mac-mini-ordered/"/>
+    <updated>2006-04-09T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2006/04/09/mac-mini-ordered</id>
+    <content type="html"><![CDATA[<p>I've done it. I decided to finally get my first Mac and ordered one of those nifty new Intel Mac Minis. Since it will mainly be used for mailing, surfing the web and other things which don't need lots of CPU cycles, I've decided to go for the Core Solo, which should be more than enough for my needs.</p>
+
+<p>I'm really looking forward to have a new machine to play around with, and I think I'll have lots of fun installing Gentoo on the Mac Mini (dual boot) and giving "Gentoo for MacOS X":http://www.gentoo.org/proj/en/gentoo-alt/macos/ a try.</p>
+
+<p>Prickle-Prickle, Discord 26, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Look, it's still alive...]]></title>
+    <link href="http://citizen428.net/blog/2006/03/24/look-its-still-alive/"/>
+    <updated>2006-03-24T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/03/24/look-its-still-alive</id>
+    <content type="html"><![CDATA[<p>After a pretty long period of not doing any work related to Gentoo (blame my boss) I've finally come around to put together the upgrade of the "Gentoo/FreeBSD documentation":http://www.gentoo.org/doc/en/gentoo-freebsd.xml I promised "Diego":http://dev.gentoo.org/~flameeyes/ quite some time ago. I'm sure that our nice documentation developers will commit this soon!</p>
+
+<p>Next week will again be rather busy because my girlfriend and me are moving to a new apartment, but after that I hope I'll be able to regularly contribute to Gentoo again.</p>
+
+<p>Pungenday, Discord 10, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Back. Kind of.]]></title>
+    <link href="http://citizen428.net/blog/2006/02/01/back-kind-of/"/>
+    <updated>2006-02-01T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/02/01/back-kind-of</id>
+    <content type="html"><![CDATA[<p>Just a little info for the people who may wonder about my lack of activity lately (mainly the Ruby herd and some guys of the Gentoo/ALT project): I've started a new job as a Junior Systems Engineer for a company providing open source solutions for enterprise customers, which means I've recently been playing around with stuff like Linux Heartbeat and other cool technologies. It's quite stressful, but also pretty interesting so far and I quite like it (despite my constant rambling about having a regular job).</p>
+
+<p>However, in January I also had to finish the last few classes of my college career, so there actually was nearly no time left for Gentoo, as the measly 4 commits I did demonstrate pretty well. I still have a seminar this Friday where I'll present the concept of my diploma thesis, but starting from next week I'll try to do more Gentoo related things again. :)</p>
+]]></content>
+  </entry>
+  
+</feed>

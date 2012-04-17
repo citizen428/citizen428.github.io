@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: economics | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/economics/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-04-01]]></title>
+    <link href="http://citizen428.net/blog/2012/04/01/information-overload-2012-04-01/"/>
+    <updated>2012-04-01T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/04/01/information-overload-2012-04-01</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.bbc.co.uk/news/magazine-17429786">Which is the world's biggest employer?</a><br>If you are too lazy to read the article, it's the US Department of Defense.</li>
+<li><a href="http://resources.infosecinstitute.com/mexican-cartels-infosec/">Mexican Drug Cartels and Cyberspace: Opportunity and Threat</a><br>Very interesting piece on the role of the Internet in the Mexican drug wars.</li>
+<li><a href="http://www.nytimes.com/2012/03/27/science/emmy-noether-the-most-significant-mathematician-youve-never-heard-of.html?_r=2&amp;pagewanted=all">The Mighty Mathematician You’ve Never Heard Of</a><br>...was of course a woman. Why not change that and read about Amalie Noether?</li>
+<li><a href="http://www.mit.edu/newsoffice/2012/why-nations-fail-0323.html">All the difference in the world</a><br>Why do some countries get rich, while others stay poor? According to two scientists, the openness of their political systems plays a huge part in that.</li>
+<li><a href="http://science.nasa.gov/science-news/science-at-nasa/2012/27mar_enceladus/">Is It Snowing Microbes On Enceladus?</a><br>There might be a habitable (by microbes) zone on this Saturn moon.</li>
+<li><a href="http://arstechnica.com/science/news/2012/03/hot-crowded-and-running-out-of-fuel-earth-of-2050-a-scary-place.ars">Hot, crowded, and running out of fuel: Earth of 2050 a scary place</a><br>This OECD study doesn't paint a rosy picture of the future.</li>
+<li><a href="http://www.justiceonline.org/commentary/dhs.html">How Homeland Security Is Hiding the Feds' Role in Occupy Crackdown</a><br>How the DHS deals with the Occupy movement. While I'm not from the US or involved with the movement, I still find this rather scary.</li>
+<li><a href="http://www.techdirt.com/articles/20120326/08360818246/patents-threaten-to-silence-little-girl-literally.shtml">Patents Threaten To Silence A Little Girl, Literally</a><br>The patent system at work again...</li>
+<li><a href="http://raganwald.posterous.com/a-womans-story">A Woman's Story</a><br>How a young black woman in 1950s Canada fought to be a computer programmer.</li>
+<li><a href="http://www.bbc.co.uk/news/magazine-17474967">Proving you're gay to the Turkish army</a><br>If you are gay, you don't have to serve in the Turkish army. But proving that you are may be a humilating experience.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-11-06]]></title>
+    <link href="http://citizen428.net/blog/2011/11/06/information-overload-2011-11-06/"/>
+    <updated>2011-11-06T20:36:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/11/06/information-overload-2011-11-06</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://motherjones.com/kevin-drum/2011/10/climate-skepticism-takes-another-hit">Climate Skeptics Take Another Hit</a><br>A scientist who was skeptical about climate change set out to prove others wrong and found out that they actually were right.</li>
+<li><a href="http://www.geekwire.com/2011/gates-tells-uw-students-billionaire-overrated">Gates to students: Don’t try to be a billionaire, it’s overrated</a><br>Shorthand notes from a Q&amp;A session with Bill Gates at the University of Washington.</li>
+<li><a href="http://www.infoq.com/presentations/Simple-Made-Easy">Simple Made Easy</a><br>Another excellent presentation by Clojure's Rich Hickey. This is not really Clojure specific, but something most programmers should watch!</li>
+<li><a href="http://online.wsj.com/article/SB10001424052970203476804576613284007315072.html">Secret Orders Target Email</a><br>Since it's harder to get search warrants for property or postal mail, US law enforcements seems to target electronic communications more and more. Maybe the Electronics Communication Privacy Act is due for an update, it's been a while since 1986...</li>
+<li><a href="http://www.slaveryfootprint.org/">Slavery Footprint</a><br>Find out how many slaves work for you. Great campaign for raising awareness about human trafficking and slave labor worldwide.</li>
+<li><a href="http://blogs.discovermagazine.com/notrocketscience/2011/10/31/man-with-schizophrenia-has-out-of-body-experience-in-lab-gains-knowledge-controls-his-psychosis/">Man with schizophrenia has out-of-body experience in lab, gains knowledge, controls his psychosis</a><br>The title is maybe a bit dramatic, but the article itself is still interesting.</li>
+<li><a href="http://sourcefabric.org/en/community/blog/788">TagesWoche portrays new future for Swiss media </a><br>A great new publication from Switzerland: online journalism with user participation, version history, micro payments etc., as well as an accompanying weekly magazine.</li>
+<li><a href="http://www.businessweek.com/magazine/apples-supplychain-secret-hoard-lasers-11032011.html">Apple's Supply-Chain Secret? Hoard Lasers</a><br>Interesting piece on Apple's supply chain management. Like so many things related to Apple, this triggered a mix of awe and unease in me.</li>
+<li><a href="http://www.businessweek.com/magazine/todd-rider-has-a-kill-switch-for-viruses-11032011.html">Todd Rider Has a Kill Switch for Viruses</a><br>A scarily clever man — look at his academic credentials in the article — may have revolutionized who we treat virus-caused illnesses.</li>
+<li><a href="http://idlewords.com/2011/08/why_arabic_is_terrific.htm">Why Arabic is Terrific</a><br>The language nerd in me loved this article.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-10-30]]></title>
+    <link href="http://citizen428.net/blog/2011/10/30/information-overload-2011-10-30/"/>
+    <updated>2011-10-30T15:30:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/10/30/information-overload-2011-10-30</id>
+    <content type="html"><![CDATA[<p><blockquote><p>The individual has become more conscious than ever of his dependence upon society. But he does not experience this dependence as a positive asset, as an organic tie, as a protective force, but rather as a threat to his natural rights, or even to his economic existence.</p><footer><strong>Albert Einstein</strong> <cite><a href='http://monthlyreview.org/2009/05/01/why-socialism'>Why Socialism?</a></cite></footer></blockquote></p>
+
+<ul>
+<li><a href="http://torrentfreak.com/security-flaw-links-bittorrent-users-to-skype-accounts-111020/">Security Flaw Links BitTorrent Users to Skype Accounts</a><br>I never was a big Skype fan in the first place, but it's articles like this one that make me even more wary about using the service.</li>
+<li><a href="http://www.guardian.co.uk/commentisfree/2011/sep/25/crisis-bigness-leopold-kohr">This economic collapse is a 'crisis of bigness'</a><br>Nice intro to the writings of <a href="http://en.wikipedia.org/wiki/Leopold_Kohr">Leopold Kohr</a> who already predicted the collapse of growth-driven systems in the 1950s.</li>
+<li><a href="http://derstandard.at/1318726181852/Thema-Cannabis-Das-Cannabisverbot-wird-fallen-wie-der-Eiserne-Vorhang">"Das Cannabisverbot wird fallen wie der Eiserne Vorhang"</a><br>Interview with an Austrian lawyer, who predicts that Cannabis may be decriminalized in a lot of countries in the near to medium future (in German).</li>
+<li><a href="http://monthlyreview.org/2009/05/01/why-socialism">Why Socialism?</a><br>One of Albert Einstein's most well-known political works, which in some regards still seems pretty up to date, despite being written in 1949.</li>
+<li><a href="http://techcrunch.com/2011/05/15/the-chilling-story-of-genius-in-a-land-of-chronic-unemployment/">The Chilling Story of Genius in a Land of Chronic Unemployment</a><br>A somewhat older article, that may give you a different perspective on the spammers and scammers commonly associated with Nigeria.</li>
+<li><a href="http://www.monbiot.com/2011/08/29/the-lairds-of-learning/">The Lairds of Learning</a><br>I posted some articles on academic publishing lately, this is another one.</li>
+<li><a href="http://www.welt.de/vermischtes/article13679586/Katholische-Kirche-macht-mit-Pornos-ein-Vermoegen.html">Katholische Kirche macht mit Pornos ein Vermögen</a><br>The Catholic Church in Germany owns one of the country's largest publishing houses, which also sells a lot of pornographic literature and other things that her followers don't approve of. But when people complain, the usually get ignored (in German, <a href="http://www.worldcrunch.com/catholic-church-makes-fortune-german-porn-business/3995">short summary in English</a>).</li>
+<li><a href="http://scienceblog.com/48584/your-dna-may-carry-a-%E2%80%98memory%E2%80%99-of-your-living-conditions-in-childhood/">Your DNA may carry a 'memory' of your living conditions in childhood</a><br>An interesting result from an epigentic study shows that early childhood living conditions influence DNA methylation.</li>
+<li><a href="https://www.eff.org/deeplinks/2011/10/how-secure-https-today">How secure is HTTPS today? How often is it attacked?</a><br>The <a href="https://www.eff.org">EFF</a>'s contribution to the current "SSL is broken" disucssions.</li>
+<li><a href="http://www.stanfordalumni.org/news/magazine/2005/julaug/features/cool.html">Just Cool It</a><br>Interesting device that regulates the core temperature of our bodies with — for me — surprising results.</li>
+</ul>
+
+
+<p><blockquote><p>Sometimes the hardest thing about committing the perfect crime can be keeping your genius to yourself.</p><footer><strong>Sarah Lacy</strong> <cite><a href='http://techcrunch.com/2011/05/15/the-chilling-story-of-genius-in-a-land-of-chronic-unemployment/'>The Chilling Story of Genius in a Land of Chronic Unemployment</a></cite></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-09-25]]></title>
+    <link href="http://citizen428.net/blog/2011/09/25/information-overload-2011-09-25/"/>
+    <updated>2011-09-25T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/09/25/information-overload-2011-09-25</id>
+    <content type="html"><![CDATA[<p>This week's issue is shorter than usual since I spent 4 days in Helsinki to attend "Frozen Rails":https://frozenrails.eu/ and then had to prepare my talk for "Linuxwochenende 2011":http://linuxwochenende2011.luga.at/. I also had to deal with a non-functioning hard-disk in my MacBook Pro, it still remains to be seen if the disk failed or if it's just the SATA cable.</p>
+
+<ul>
+<li>"Running a startup on Haskell":http://bos.github.com/strange-loop-2011/talk/talk.html<br>Unfortunately the slides are missing some bits that were in the actual talk, but they are still interesting.</li>
+<li>"The case of the 500-mile email":http://www.ibiblio.org/harris/500milemail.html<br>An old story by now that's been posted all over the interent, but still a good piece of sysadmin lore.</li>
+<li>"Defending jobs":http://www.economist.com/blogs/dailychart/2011/09/employment<br>Of the world's 10 biggest employers, 7 are state run.</li>
+<li>"Lost: Wired's Guide to Pop Culture's Buried Treasure":http://www.wired.com/magazine/2011/08/ff_lost_basementtapes/<br>No matter if it's movies, TV shows, music albums or video games, some of pop cultures greatest treasures seem to be lost forever.</li>
+<li>"The Rust Programming Language":http://dl.dropbox.com/u/4186469/rust-all-hands-w2011/assets/fallback/index.html<br>More slides from a presentation related to programming, this time on Mozilla's new systems programming language "Rust":http://www.rust-lang.org/, which is starting to shape up.</li>
+<li>"&quot;Da bleibt mir die Spucke weg&quot;":http://www.falter.at/web/print/detail.php?id=1460<br>An interview with "SZ":http://www.sueddeutsche.de/ journalist Michael Frank about democracy and the political system in Austria (in German).</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-09-18]]></title>
+    <link href="http://citizen428.net/blog/2011/09/18/information-overload-2011-09-18/"/>
+    <updated>2011-09-18T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/09/18/information-overload-2011-09-18</id>
+    <content type="html"><![CDATA[<ul>
+<li>"My history with Forth & stack machines":http://www.yosefk.com/blog/my-history-with-forth-stack-machines.html<br>I haven't included a proper programming article in a while, but this one is a really good read, even though it "only" covers one person's experience with Forth.</li>
+<li>"Behind the scenes at the death squads of Chechnya":http://www.opendemocracy.net/od-russia/svetlana-reiter-igor-kalyapin/behind-scenes-at-death-squads-of-chechnya<br>A shocking account of the goings-on in Chechnya.</li>
+<li>"Uberdata: How prostitution and alcohol make Uber better":http://blog.uber.com/2011/09/13/uberdata-how-prostitution-and-alcohol-make-uber-better/<br>You know I like cool posts about math/statistics. This is one.</li>
+<li>"How to Beat Terrorism: Refuse to Be Terrorized":http://www.wired.com/dangerroom/2011/09/end-911-era/<br>I agree with the headline and the general position in the article, but find some things in it a bit strange.</li>
+<li>"In China, what you eat tells who you are":http://www.latimes.com/news/nationworld/world/la-fg-china-elite-farm-20110917,0,7521747,full.story<br>In a country stricken with food scandals, the rich and powerful establish their own supplies.</li>
+<li>"Johann Hari: Cheap meat, MRSA and deadly greed":http://www.independent.co.uk/opinion/commentators/johann-hari/johann-hari-cheap-meat-mrsa-and-deadly-greed-2298567.html<br>Another article on food safety and once again I don't really understand how we as a species seem so keen on wiping ourselves out.</li>
+<li>"Flipping the classroom":http://www.economist.com/node/21529062<br>How online-based learned tools are changing the classroom.</li>
+<li>"Stand up against the anti-technology terrorists":http://www.nature.com/news/2011/110822/full/476373a.html<br>In Mexico scientists working in nano-technology and related fields are apparently becoming targets for letter/package bombs.</li>
+<li>"Are Genes Our Destiny? Scientists Discover 'Hidden' Code in DNA Evolves More Rapidly Than Genetic Code":http://www.sciencedaily.com/releases/2011/09/110916152401.htm<br>Interesting new results on the role of epigenetics.</li>
+<li>"How to get $12 billion of gold to Venezuela":http://blogs.reuters.com/felix-salmon/2011/08/23/how-to-get-12-billion-of-gold-to-venezuela/<br>This is a bit older, but still interesting. How could Hugo Chavez get all the gold from the UK to Venezuela?</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

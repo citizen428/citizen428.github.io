@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: textmate | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/textmate/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Easy setup for Clojure on Mac OS X Leopard]]></title>
+    <link href="http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
+    <updated>2009-08-24T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
+    <content type="html"><![CDATA[<p>"Clojure":http://clojure.org/ definitely is one of the hottest new programming languages around and just recently hit a "very important milestone":http://clojure.blogspot.com/2009/05/clojure-10.html. Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand "one of those":http://github.com/carlism/Clojure-MacOSX/tree into "ClojureX":http://github.com/citizen428/ClojureX/tree/master, which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
+
+<p>ClojureX can</p>
+
+<ul>
+<li> download and build the source code for Clojure, "clojure-contrib":http://github.com/richhickey/clojure-contrib/tree/master and "JLine":http://jline.sourceforge.net/ (a readline like library for Java)</li>
+
+<li> download editor support packages for TextMate and Emacs</li>
+
+<li> create a symlink for the Clojure startup script in /usr/local/bin</li>
+
+<li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
+
+<li> configure Emacs to use "clojure-mode":http://github.com/jochu/clojure-mode/tree/master, "Slime":http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
+
+<li> keep your Clojure installation up to date via a simple "git submodule update && ant"</li>
+</ul>
+
+
+<p>I hope this will come in handy for other people interested in trying out Clojure on Mac OS X, if you have any feedback please post it in the comment section.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A TextMate command for the RubyLearning forums]]></title>
+    <link href="http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/"/>
+    <updated>2009-05-10T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums</id>
+    <content type="html"><![CDATA[<p>As we all know posting code to "Moodle":http://moodle.org/ (the software that powers "RubyLearning":http://rubylearning.org) can be a bit cumbersome. I therefore created a TextMate command which will</p>
+
+<ul>
+<li> take the currently active file</li>
+<li> replace all occurrences of < with the HTML-entity</li>
+<li> wrap all of that in [code ruby] tags and</li>
+<li> copy it to the clipboard, ready to be pasted into the forums.</li>
+</ul>
+
+
+<p>Source:</p>
+
+<script src="http://gist.github.com/109576.js"></script>
+
+
+<p>Download:
+<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p>
+]]></content>
+  </entry>
+  
+</feed>

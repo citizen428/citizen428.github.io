@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[citizen428.blog()]]></title>
+  <link href="http://citizen428.net/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-04-15]]></title>
+    <link href="http://citizen428.net/blog/2012/04/15/information-overload-2012-04-15/"/>
+    <updated>2012-04-15T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/04/15/information-overload-2012-04-15</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.insidehighered.com/views/2011/05/02/slavoj_zizek_essay_on_cloud_computing_and_privacy">Corporate Rule of Cyberspace</a><br>Philosopher <a href="http://en.wikipedia.org/wiki/Slavoj_%C5%BDi%C5%BEek">Slavoj Žižek</a> offers some thoughts on cloud computing. Some of the comments are interesting too.</li>
+<li><a href="http://www.slate.com/articles/technology/future_tense/2012/03/narrative_science_robot_journalists_customized_news_and_the_danger_to_civil_discourse_.single.html">http://www.slate.com/articles/technology/future_tense/2012/03/narrative_science_robot_journalists_customized_news_and_the_danger_to_civil_discourse_.single.html</a><br>On automated journalism and the potential consequences for society.</li>
+<li><a href="https://groups.google.com/group/comp.lang.forth/browse_thread/thread/4e15a2197c0aaafe/95c3f82d1c681296?#95c3f82d1c681296">A Forth Story&#8230;</a><br>This long text from 1995 is not only interesting because it talks about Forth, but also because of the history of programming in the 70s, 80s and 90s.</li>
+<li><a href="http://www.economist.com/node/21552581">Giving divorce a bad name</a><br>South Sudan invaded an oil field in Sudan, which could lead to a fierce war. Make sure to read the comments too, there&#8217;s some good stuff in there.</li>
+<li><a href="http://www.wired.com/threatlevel/2012/04/code-not-physical-property/">Code Not Physical Property, Court Rules in Goldman Sachs Espionage Case</a><br>An update on the Aleynikov vs Goldman Sachs case.</li>
+<li><a href="http://www.technologyreview.com/blog/arxiv/27730">Computer Scientists Build Computer Using Swarms of Crabs</a><br>A computer exploiting the swarming behavior of soldier crabs. Ok, maybe just a function OR gate, but still rather cool.</li>
+<li><a href="http://www.physicscentral.com/buzz/blog/index.cfm?postid=4656335810518469535">Physicist Uses Math to Beat Traffic Ticket</a><br>Who says math can&#8217;t be useful in your daily life? ;-)</li>
+<li><a href="http://derstandard.at/1334132541612/Strassengangs-Rosen-aus-dem-Beton">Rosen aus dem Beton</a><br>About street gangs and gang related violence in Los Angeles (in German).</li>
+<li><a href="http://www.antipope.org/charlie/blog-static/2012/04/understanding-amazons-strategy.html">What Amazon&#8217;s ebook strategy means</a><br>Wether you agree with Charlie Stross or not, his posts are usually well written and provide food for thought.</li>
+<li><a href="http://www.guardian.co.uk/sport/2012/apr/13/olympics-2012-branding-police-sponsors">Olympics 2012: branding &#8216;police&#8217; to protect sponsors&#8217; exclusive rights</a><br>Brave new corporate world.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-04-08]]></title>
+    <link href="http://citizen428.net/blog/2012/04/08/information-overload-2012-04-08/"/>
+    <updated>2012-04-08T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/04/08/information-overload-2012-04-08</id>
+    <content type="html"><![CDATA[<blockquote><p>Ich habe also mit meiner Aktion das alteingesessene Bild instituitionalisierter Brauchtums-Macht performativ dekonstruiert. Würde ich aus heutiger Sicht vielleicht sagen. Damals am Christkindlmarkt sagte ich nur “Esmeralda!” und humpelte wie Igor durch die Fleischberge an Touristen.</p><footer><strong>Markus Lust</strong> <cite><a href='http://www.viceland.com/blogs/at/2012/01/05/auf-lsd-am-christkindlmarkt/'>Auf LSD Am Christkindlmarkt</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://www.antipope.org/charlie/blog-static/2012/03/not-an-april-fool-1.html">Not an April Fool</a><br>An article by Charlie Stross on privacy in regard to social media, stalking apps and more.</li>
+<li><a href="http://www.viceland.com/blogs/at/2012/01/05/auf-lsd-am-christkindlmarkt/">Auf LSD am Christkindlmarkt</a><br>Now that we all had sufficient time to get over Christmas, I can finally post this article by a Vice reporter who took some LSD before going to a Christmas market (in German).</li>
+<li><a href="http://www.extremetech.com/computing/123929-just-how-big-are-porn-sites">Just how big are porn sites?</a><br>Interesting, I always thought that from a system engineering/devops perspective it&#8217;d be very interesting to work for a porn site.</li>
+<li><a href="http://peak5390.wordpress.com/2012/03/25/a-simple-commitment/">A Simple Commitment</a><br>A potentially interesting idea regarding sexism in tech-related fields.</li>
+<li><a href="http://www.slate.com/articles/health_and_science/science/2008/06/how_smart_is_the_octopus.html">How Smart Is the Octopus?</a><br>I often like articles on animal intelligence and this one is no exception.</li>
+<li><a href="http://techcitement.com/culture/the-best-birth-control-in-the-world-is-for-men/#.T38iCb-olUi">The Best Birth Control In The World Is For Men</a><br>This sounds very interesting.</li>
+<li><a href="http://www.slate.com/articles/health_and_science/future_tense/2012/04/agro_ecology_lessons_from_cuba_on_agriculture_food_and_climate_change_.single.html">What Cuba Can Teach Us About Food and Climate Change</a><br>Forced by a lack of oil-based products, Cuba had to develop a form of agriculture that could prove useful to the rest of the world.</li>
+<li><a href="http://www.nytimes.com/2012/04/08/world/americas/us-alert-as-chinas-cash-buys-inroads-in-caribbean.html?_r=1&amp;hp">China Buys Inroads in the Caribbean, Catching U.S. Notice</a><br>While the US are preoccupied elsewhere, China is making its presence felt in the Carribean.</li>
+<li><a href="http://www.guardian.co.uk/world/2012/apr/07/war-drugs-latin-american-leaders">&#8216;War on drugs&#8217; has failed, say Latin American leaders</a><br>Since Latin America suffers most from the war on drugs, it&#8217;s about time that politicians there start exploring alternatives.</li>
+<li><a href="http://mondediplo.com/2012/04/05sahel">The Sahel falls apart</a><br>Some background on the current situation in Mali.</li>
+</ul>
+
+
+<blockquote><p>It’s probably not unrealistic to say that porn makes up 30% of the total data transferred across the internet.</p><footer><strong>Sebastian Anthony</strong> <cite><a href='http://www.extremetech.com/computing/123929-just-how-big-are-porn-sites'>Just How Big Are Porn Sites?</a></cite></footer></blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-04-01]]></title>
+    <link href="http://citizen428.net/blog/2012/04/01/information-overload-2012-04-01/"/>
+    <updated>2012-04-01T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/04/01/information-overload-2012-04-01</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.bbc.co.uk/news/magazine-17429786">Which is the world&#8217;s biggest employer?</a><br>If you are too lazy to read the article, it&#8217;s the US Department of Defense.</li>
+<li><a href="http://resources.infosecinstitute.com/mexican-cartels-infosec/">Mexican Drug Cartels and Cyberspace: Opportunity and Threat</a><br>Very interesting piece on the role of the Internet in the Mexican drug wars.</li>
+<li><a href="http://www.nytimes.com/2012/03/27/science/emmy-noether-the-most-significant-mathematician-youve-never-heard-of.html?_r=2&amp;pagewanted=all">The Mighty Mathematician You’ve Never Heard Of</a><br>&#8230;was of course a woman. Why not change that and read about Amalie Noether?</li>
+<li><a href="http://www.mit.edu/newsoffice/2012/why-nations-fail-0323.html">All the difference in the world</a><br>Why do some countries get rich, while others stay poor? According to two scientists, the openness of their political systems plays a huge part in that.</li>
+<li><a href="http://science.nasa.gov/science-news/science-at-nasa/2012/27mar_enceladus/">Is It Snowing Microbes On Enceladus?</a><br>There might be a habitable (by microbes) zone on this Saturn moon.</li>
+<li><a href="http://arstechnica.com/science/news/2012/03/hot-crowded-and-running-out-of-fuel-earth-of-2050-a-scary-place.ars">Hot, crowded, and running out of fuel: Earth of 2050 a scary place</a><br>This OECD study doesn&#8217;t paint a rosy picture of the future.</li>
+<li><a href="http://www.justiceonline.org/commentary/dhs.html">How Homeland Security Is Hiding the Feds&#8217; Role in Occupy Crackdown</a><br>How the DHS deals with the Occupy movement. While I&#8217;m not from the US or involved with the movement, I still find this rather scary.</li>
+<li><a href="http://www.techdirt.com/articles/20120326/08360818246/patents-threaten-to-silence-little-girl-literally.shtml">Patents Threaten To Silence A Little Girl, Literally</a><br>The patent system at work again&#8230;</li>
+<li><a href="http://raganwald.posterous.com/a-womans-story">A Woman&#8217;s Story</a><br>How a young black woman in 1950s Canada fought to be a computer programmer.</li>
+<li><a href="http://www.bbc.co.uk/news/magazine-17474967">Proving you&#8217;re gay to the Turkish army</a><br>If you are gay, you don&#8217;t have to serve in the Turkish army. But proving that you are may be a humilating experience.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-03-25]]></title>
+    <link href="http://citizen428.net/blog/2012/03/25/information-overload-2012-03-25/"/>
+    <updated>2012-03-25T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/03/25/information-overload-2012-03-25</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.guardian.co.uk/music/2012/mar/17/punk-rock-state-oppression-burma">Punk rock … alive and kicking in a repressive state near you</a><br>On the state of punk music in Iraq, Russia, Burma and Indonesia.</li>
+<li><a href="http://www.slate.com/articles/technology/technology/2012/03/ruby_ruby_on_rails_and__why_the_disappearance_of_one_of_the_world_s_most_beloved_computer_programmers_.html?tid=sm_p1_button_toolbar">Where’s _why?</a><br>An article on _why and Ruby in Slate. Hello, mainstream. :-)</li>
+<li><a href="http://www.aljazeera.com/indepth/opinion/2012/03/201231284336601364.html">Dangerous ignorance: The hysteria of Kony 2012</a><br>More negative feedback on the Kony 2012 campaign.</li>
+<li><a href="http://www.forbes.com/sites/matthewherper/2012/02/10/the-truly-staggering-cost-of-inventing-new-drugs/">The Truly Staggering Cost Of Inventing New Drugs</a><br>Make sure to also read the comments, some good stuff in there.</li>
+<li><a href="http://theradicalantfarm.blogspot.com/2009/07/russian-prison-tattoos-implied-in-ink.html">Russian Prison Tattoos - Implied In Ink</a><br>I first read this a couple of years ago, but it came up in conversation today, so I decided to include it.</li>
+<li><a href="http://libcom.org/library/%E2%80%98bout-explode-day-life-precarious-worker">&#8216;Bout to explode: a day in the life of a precarious worker</a><br>What precarious working conditions do to people&#8230;</li>
+<li><a href="http://www.theregister.co.uk/2012/03/21/how_to_get_paid_more/">You&#8217;re crap and paid too much for the little work you actually do</a><br>I don&#8217;t really like this article and the author doesn&#8217;t sound like someone I&#8217;d want to have a beer with, but maybe some of you find this interesting.</li>
+<li><a href="http://therealkatie.net/blog/2012/mar/21/lighten-up/">Lighten Up</a><br>About the subtle sexism female programmers have to endure, although I&#8217;m sure that&#8217;s true in most professions.</li>
+<li><a href="http://www.physorg.com/news/2011-10-microbes-inherit-earth.html">And the microbes shall inherit the Earth</a><br>Looking at the past to predict what consequences global warming could have in the future.</li>
+<li><a href="http://www.zeit.de/politik/ausland/2012-03/fotografie-journalismus-ruben-salvadori/komplettansicht">Wie Pressefotos die Wirklichkeit manipulieren</a><br>Italian photographer Ruben Salvadori shows the truth behind press photos (in German).</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-03-18]]></title>
+    <link href="http://citizen428.net/blog/2012/03/18/information-overload-2012-03-18/"/>
+    <updated>2012-03-18T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/03/18/information-overload-2012-03-18</id>
+    <content type="html"><![CDATA[<blockquote><p>Nor are introverts necessarily shy. Shyness is the fear of social disapproval or humiliation, while introversion is a preference for environments that are not overstimulating. Shyness is inherently painful; introversion is not.</p><footer><strong>Susan Cain</strong> <cite><a href='http://www.guardian.co.uk/science/2012/mar/13/why-the-world-needs-introverts'>Why the World Needs Introverts</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://denisdutton.com/cold_reading.htm">The Cold Reading Technique</a><br/>A long and very informative article on <a href="http://en.wikipedia.org/wiki/Cold_reading">cold reading</a>.</li>
+<li><a href="http://www.theatlantic.com/technology/archive/2012/03/how-human-engineering-could-be-the-solution-to-climate-change/253981/">How Engineering the Human Body Could Combat Climate Change</a><br/>Interesting ideas that could spark very controversial ethical debates.</li>
+<li><a href="http://www.mikesblender.com/indexblog88.htm">Kit Kat!</a><br/>On the role of Kit Kat in the Japanse education system and why there are over 45 different versions of it in Japan.</li>
+<li><a href="http://www.nature.com/news/cyborg-snails-power-up-1.10210">Cyborg snails power up</a><br/>I guess implanted biofuel cells could lead to controversial debates too.</li>
+<li><a href="http://www.guardian.co.uk/politics/reality-check-with-polly-curtis/2012/mar/13/reality-check-kony-2012-reaction">Kony 2012: the reaction</a><br/>The Guardian summarizes the various reactions to the <a href="http://www.kony2012.com/">Kony 2012</a> campaign.</li>
+<li><a href="http://tauday.com/tau-manifesto">The Tau Manifesto</a><br/>Since <a href="http://en.wikipedia.org/wiki/Pi_Day">Pi Day</a> was celebrated during this week, it&#8217;s time for me to post the Tau Manifesto again. All hail the superior circle constant! ;-)</li>
+<li><a href="http://www.guardian.co.uk/science/2012/mar/13/why-the-world-needs-introverts">Why the world needs introverts</a><br/>Articles like this one are important to us introverts (I&#8217;m an <a href="http://en.wikipedia.org/wiki/INTJ">INTJ</a> according to the Myers-Briggs personality test). It&#8217;s getting kinda tiring to explain that one can be open and sociable and still an introvert at the same time.</li>
+<li><a href="http://www.mnn.com/green-tech/research-innovations/stories/scientist-creates-lifelike-cells-out-of-metal">Scientist creates lifelike cells out of metal</a><br/>This article on abiogenesis is a little older, but I finally got around to read it.</li>
+<li><a href="http://fm4.orf.at/stories/1695606/">Phänomen „Fakenger“</a><br>Interesting article about the bike messenger subculture and copycats (in German).</li>
+<li><a href="http://au.news.yahoo.com/today-tonight/latest/article/-/12905379/australia-s-child-labour-camp/">Australia&#8217;s &#8216;child labour camp&#8217;</a><br>Run by Scientology.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-02-26]]></title>
+    <link href="http://citizen428.net/blog/2012/02/26/information-overload-2012-02-26/"/>
+    <updated>2012-02-26T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/02/26/information-overload-2012-02-26</id>
+    <content type="html"><![CDATA[<blockquote><p>To us, the Web is a sort of shared external memory. We do not have to remember unnecessary details: dates, sums, formulas, clauses, street names, detailed definitions. It is enough for us to have an abstract, the essence that is needed to process the information and relate it to others.</p><footer><strong>Piotr Czerski (translated by Marta Szreder)</strong> <cite><a href='http://pastebin.com/0xXV8k7k'>We, the Web Kids</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://pastebin.com/0xXV8k7k">We, the Web Kids</a><br>While I&#8217;m probably a bit too old to qualify as a &#8220;web kid&#8221;, I agree with most of this post.</li>
+<li><a href="http://www.newyorker.com/reporting/2009/03/09/090309fa_fact_max?currentPage=all">The Unfinished</a><br>This very long article on David Foster Wallace is not only interesting, but also serves as a reminder to myself to finally read <a href="http://www.amazon.com/gp/product/0316066524/ref=as_li_ss_tl?ie=UTF8&amp;tag=citizen4blog-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0316066524">Infinite Jest</a> (affiliate link).</li>
+<li><a href="http://www.antipope.org/charlie/blog-static/2012/02/life-with-and-without-animated.html">Life With and Without Animated Ducks: The Future Is Gender Distributed</a><br>Sexism shows in many ways, I hadn&#8217;t really considered this angle before.</li>
+<li><a href="http://www.mercurynews.com/ci_16291970">Craig Silverstein, Google&#8217;s first employee</a><br>An interview with Google&#8217;s first employee. This is a bit older, but still interesting.</li>
+<li><a href="http://www.wired.com/wiredscience/2011/10/why-do-some-people-learn-faster-2/">Why Do Some People Learn Faster?</a><br>Articles about the brain and/or learning make a regular appearance in this blog series, here we go for another one.</li>
+<li><a href="http://grist.org/living/dont-hate-the-player-how-fun-and-games-can-encourage-sustainable-choices/">Don’t hate the player: How fun and games can encourage sustainable choices</a><br>I like the example encouragements shown in this article.</li>
+<li><a href="http://www.zeit.de/wissen/gesundheit/2012-02/geboren-2012-ernaehrung">Essen 2032: Da sagt der Kühlschrank etwas anderes </a><br>One thing I like about articles trying to predict the future is imagining how naive they will look later (in German).</li>
+<li><a href="http://techcrunch.com/2012/02/13/bittorrent-live/">BitTorrent Live: Cheap, Real-Time P2P Video Streaming That Will Kill TV</a><br>In case you missed this last week.</li>
+<li><a href="http://exclaim.ca/Features/Timeline/leonard_cohen-beautiful_loser">Leonard Cohen — Beautiful Loser</a><br>A timeline of Leonard Cohen&#8217;s life.</li>
+<li><a href="http://www.good.is/post/regulators-mount-up-what-happens-to-the-coke-in-coca-cola/">What Happens to the Coke in Coca-Cola?</a><br>Coca-Cola is still made with coca leaves, but happens to the cocaine in them? Read this article to find out.</li>
+</ul>
+
+
+<blockquote><p>The future is not evenly distributed. Not along cultural lines, along language lines, along political, economic, class, or generational lines. And most certainly not along gender lines.</p><footer><strong>Cat Valente</strong> <cite><a href='http://www.antipope.org/charlie/blog-static/2012/02/life-with-and-without-animated.html'>Life With and Without Animated Ducks: The Future Is Gender Distributed</a></cite></footer></blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-02-19]]></title>
+    <link href="http://citizen428.net/blog/2012/02/19/information-overload-2012-02-19/"/>
+    <updated>2012-02-19T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/02/19/information-overload-2012-02-19</id>
+    <content type="html"><![CDATA[<blockquote><p>You could run an entire campaign if you’re Barack Obama with ads using nothing but Republicans saying things about finance that you’d never hear two months ago. It’s an amazing thing.</p><footer><strong>Dick Bove quoted by Gabriel Sherman</strong> <cite><a href='http://nymag.com/news/features/wall-street-2012-2/'>The End of Wall Street as They Knew It</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1119282/">Instinctive sleeping and resting postures</a><br>Is it just me, or is there something weird about this article? It&#8217;s rather interesting either way&#8230;</li>
+<li><a href="http://www.codinghorror.com/blog/2012/02/meetings-where-work-goes-to-die.html">Meetings: Where Work Goes to Die</a><br>I couldn&#8217;t agree more. Sometimes meetings are necessary, but please keep them short, to the point and clearly scoped.</li>
+<li><a href="http://www.newyorker.com/reporting/2012/01/30/120130fa_fact_lehrer?currentPage=all">Groupthink — The brainstorming myth</a><br>Several studies show that brainstorming doesn&#8217;t work, but there are other ways to unlock people&#8217;s creative potential.</li>
+<li><a href="http://nymag.com/news/features/wall-street-2012-2/">The End of Wall Street As They Knew It</a><br>A very long article on post-crisis Wall Street.</li>
+<li><a href="http://www.bloomberg.com/news/2012-02-15/google-as-benevolent-dictator-yanks-smartphone-apps-with-kill-switch-tech.html">Google as Benevolent Dictator Yanks Apps</a><br>A good summary of remote kill switches on smart phones and computers.</li>
+<li><a href="http://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/">How Target Figured Out A Teen Girl Was Pregnant Before Her Father Did</a><br>This is how much some companies track their customers. But don&#8217;t pay cash instead, you could be suspected of <a href="http://boingboing.net/2012/02/14/fbi-says-paying-cash-for-coffe.html">being a terrorist</a>.</li>
+<li><a href="http://www.bbc.co.uk/news/magazine-16681630">The man who hears colour</a><br>A British artist with a rare vision disorder wears a device that allows him to hear colors.</li>
+<li><a href="http://www.datapointed.net/2009/09/distance-to-nearest-mcdonalds/">Where The Buffalo Roamed</a><br>How far can you get from a McDonald&#8217;s in the contiguous United States?</li>
+<li><a href="http://www.theatlantic.com/magazine/archive/2012/03/how-your-cat-is-making-you-crazy/8873/?single_page=true">How Your Cat Is Making You Crazy</a><br>Are bacteria transmitted by cats messing with our brains? This one is a fascinating read.</li>
+<li><a href="http://online.wsj.com/article/SB10001424052970204795304577223200657284394.html">How Habits Hold Us</a><br>On the importance of habits for humans.</li>
+</ul>
+
+
+<blockquote><p>As he pointed out, the intelligence of humans is inseparable from our reliance on habits, the most mindless of behaviors. That&#8217;s because they let us reserve brainpower for those things that can&#8217;t be predicted in advance, those situations without relevant cues.</p><footer><strong>Jonah Lehrer</strong> <cite><a href='http://online.wsj.com/article/SB10001424052970204795304577223200657284394.html'>How Habits Hold Us</a></cite></footer></blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-02-12]]></title>
+    <link href="http://citizen428.net/blog/2012/02/12/information-overload-2012-02-12/"/>
+    <updated>2012-02-12T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/02/12/information-overload-2012-02-12</id>
+    <content type="html"><![CDATA[<blockquote><p>In a nation that celebrates freedom of religion like no other, freedom not to be religious at all can be as hard to exercise as the right to swim the Atlantic.</p><footer><strong>Julian Baggini</strong> <cite><a href='http://www.ft.com/intl/cms/s/2/d2239780-4d4e-11e1-8741-00144feabdc0.html'>Atheism in America</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://www.economist.com/node/21542763">The magic number</a><br>While I don&#8217;t share some of the author&#8217;s opinions, the new Indian identity scheme certainly could have a positive influence on many people&#8217;s lives.</li>
+<li><a href="http://www.ft.com/intl/cms/s/2/d2239780-4d4e-11e1-8741-00144feabdc0.html">Atheism in America</a><br>Interesting article about the lives of atheists in the United States. I&#8217;m afraid there are parts of Austria where it wouldn&#8217;t be too different.</li>
+<li><a href="http://blog.ioactive.com/2012/02/ssl-traffic-analysis-on-google-maps.html">I can still see your actions on Google Maps over SSL</a><br>A proof of concept for SSL traffic analyses/side channel-attacks, with an easy to understand video for your less security-aware friends.</li>
+<li><a href="http://www.independent.co.uk/news/uk/crime/government-may-sanction-nerveagent-use-on-rioters-scientists-fear-6612084.html">Government &#8216;may sanction nerve-agent use on rioters&#8217;, scientists fear</a><br>Brave new world, UK style.</li>
+<li><a href="http://www.universityobserver.ie/2012/02/08/the-man-who/">The Man Who</a><br>An article about Steven Moffat, writer of some of my favorite TV shows.</li>
+<li><a href="http://skeptoid.com/episodes/4219">Stalin&#8217;s Human-Ape Hybrids</a><br>Skeptoid debunks the myth that Stalin tried to create an army of human-ape hybrids.</li>
+<li><a href="http://www.good.is/post/a-happy-flourishing-city-with-no-advertising">A Happy, Flourishing City With No Advertising</a><br>In 2006, the mayor of São Paulo banned all billboards and similar forms of advertising, in order to reduce &#8220;visual pollution&#8221;.</li>
+<li><a href="http://www.theatlantic.com/magazine/archive/1977/10/the-gentle-art-of-poverty/8241/?single_page=true/">The Gentle Art of Poverty</a><br>This article from 1977 tells the story of an old man dealing with poverty in Southern California. An intense read, despite the bad copy editing.</li>
+<li><a href="http://www.wired.com/epicenter/2012/02/perpetual-window-into-gmail/">Wired Opinion: The Perpetual, Invisible Window Into Your Gmail Inbox</a><br>Personally I regularly check all app permissions. I also have a Gmail label &#8220;Registrations&#8221; where I store signup mails and occasionally work through that and close/delete all accounts I don&#8217;t use regularly.</li>
+<li><a href="http://derstandard.at/1328507315096/Ich-empfand-eine-unbaendige-Wut">&#8220;Ich empfand eine unbändige Wut&#8221;</a><br>Interview with a former member of El Salvador&#8217;s guerilla movement, who was part of the first unit to discover the <a href="http://en.wikipedia.org/wiki/El_Mozote_massacre">El Mozote massacre</a>.</li>
+</ul>
+
+
+<blockquote><p>Doctor Who, for the uninitiated, is a show featuring an “eleven-hundred-and-three-year-old” alien who travels through space and time in a police box (called the TARDIS – Time and Relative Dimension in Space), fighting monsters and finding friends to take along with him, only ninety per cent of which have been very attractive women.</p><footer><strong>Emer Sugrue</strong> <cite><a href='http://www.universityobserver.ie/2012/02/08/the-man-who/'>The Man Who</a></cite></footer></blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-02-05]]></title>
+    <link href="http://citizen428.net/blog/2012/02/05/information-overload-2012-02-05/"/>
+    <updated>2012-02-05T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/02/05/information-overload-2012-02-05</id>
+    <content type="html"><![CDATA[<blockquote><p>[T]oday&#8217;s strangeness, while only a few mouse-clicks away from anyone, becomes difficult to find because it has to occur to you to Google it. You may be able to Google everything, but the trick is figuring what you need to Google.</p><footer><strong>William Gibson</strong> <cite><a href='http://www.theverge.com/2012/1/24/2724370/william-gibson-intervie'>An Interview With William Gibson</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://www.wired.com/geekdad/2012/01/everything-about-learning/">Everything You Thought You Knew About Learning Is Wrong</a><br>I like articles on learning, this one has a few good tips.</li>
+<li><a href="http://www.theverge.com/2012/1/24/2724370/william-gibson-interview">An interview with William Gibson</a><br>Title says it all.</li>
+<li><a href="http://www.bbc.co.uk/news/technology-13886440">Netherlands makes net neutrality a law</a><br>This is not the first sensible law the Netherlands pass.</li>
+<li><a href="http://arstechnica.com/tech-policy/news/2012/01/internet-awash-in-inaccurate-anti-acta-arguments.ars">As Anonymous protests, Internet drowns in inaccurate anti-ACTA arguments</a><br>If you are following the current ACTA debate (and you should be), this one is a must read.</li>
+<li><a href="http://www.wired.com/magazine/2011/12/ff_riots/all/1">#Riot: Self-Organized, Hyper-Networked Revolts&mdash;Coming to a City Near You</a><br>The second Wired article in this week&#8217;s issue, a very interesting piece on crowds, flash mobs and riots in connection with Social Media.</li>
+<li><a href="http://www.vice.com/read/interview-with-ketamine-chemist-704-v18n2">Interview With A Ketamine Chemist</a><br>Fascinating interview with the creator of some <a href="http://en.wikipedia.org/wiki/Dissociative">dissociative drugs</a>.</li>
+<li><a href="http://www.foreignpolicy.com/articles/2012/01/03/the_myth_of_europe?page=full">The Myth of Europe</a><br>A very thorough and interesting take on the EU and European identity. I for one would be sad if the Union failed, because I really enjoy a Europe with almost no borders, the right to work and live in any of the 27 member states and so on. I don&#8217;t think that the level of centralization this has reached is the way to go though&#8230;</li>
+<li><a href="http://www.lettersofnote.com/2012/01/to-my-old-master.html">To My Old Master</a><br>A letter from a former slave to his old &#8220;master&#8221;.</li>
+<li><a href="http://www.zephoria.org/thoughts/archives/2011/12/12/questions-bullying-suicide.html">Four Difficult Questions Regarding Bullying and Youth Suicide</a><br>Interesting questions for a necessary debate.</li>
+<li><a href="http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/">You Will Never Kill Piracy, and Piracy Will Never Kill You</a><br>Despite the headline, this has been published by Forbes. BTW: I think the proposed &#8220;Movie Steam&#8221; is a fantastic idea and I&#8217;d love to use something like that.</li>
+</ul>
+
+
+<blockquote><p>The only other thing you could get the internet to agree on was if they tried to institute a ban on cat pictures.</p><footer><strong>Paul Tassi</strong> <cite><a href='http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/'>You Will Never Kill Piracy, and Piracy Will Never Kill You</a></cite></footer></blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review: A Bug Hunter's Diary]]></title>
+    <link href="http://citizen428.net/blog/2012/02/01/review-a-bug-hunters-diary/"/>
+    <updated>2012-02-01T22:03:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/02/01/review-a-bug-hunters-diary</id>
+    <content type="html"><![CDATA[<p>This was a very good read! In each chapter the author introduces one bug he found in a popular software package, always following the same structure: discovery, exploitation, remediation, lessons learned from the bug and a timeline of the bug&#8217;s lifetime (disclosure, fix, etc).</p>
+
+<p>The writing is engaging and to the point, but still contains a lot of technical detail. Be warned though, if reading C and disassembly is not your type of thing, you probably won&#8217;t enjoy this too much. The author tries hard to make everything as easy to understand as possible, but there&#8217;s only so much you can do with limited space.</p>
+
+<p>If there&#8217;s anything to criticize about this book, it&#8217;s that the chapters are fairly repetitive, so I never really felt like reading more than one in a single sitting. But then it&#8217;s also not the type of book that needs to be read cover to cover as fast as possible.</p>
+
+<p>Link: <a href="http://www.amazon.com/gp/product/1593273851/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1593273851">Tobias Klein: A Bug Hunter&#8217;s Diary</a> (Amazon affiliate link)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-01-29]]></title>
+    <link href="http://citizen428.net/blog/2012/01/29/information-overload-2012-01-29/"/>
+    <updated>2012-01-29T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/01/29/information-overload-2012-01-29</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://benwerd.com/blog/2012/01/22/die-hollywood-die/">Die, Hollywood, die!</a><br>A voice of reason in the <a href="http://ycombinator.com/rfs9.html">&#8220;Kill Hollywood&#8221;</a> discussion.</li>
+<li><a href="http://www.wired.com/magazine/2012/01/ff_ux/all/1">The New French Hacker-Artist Underground</a><br>The French group UX sneaks into places to restore them (or the art inside them). A fascinating read.</li>
+<li><a href="http://www.wienerzeitung.at/nachrichten/kultur/medien/?em_cnt=427905">Die Opfer von Niklaas und Perrine</a><br>Granted, this article makes most sense if you were born in the 1970s (or early 1980s) and grew up in Austria, but I still wanted to include it here (in German).</li>
+<li><a href="https://blog.torproject.org/blog/tale-new-censors-vodafone-uk-t-mobile-uk-o2-uk-and-t-mobile-usa">A tale of new censors - Vodafone UK, T-Mobile UK, O2 UK, and T-Mobile USA</a><br>If you think only China and dictatorships in the Middle East censor the internet, think again.</li>
+<li><a href="http://www.humbledmba.com/public-speaking-for-normal-people">Public speaking for normal people</a><br>Public speaking is a difficult topic for me. I like doing it, but tend to be rather nervous. Once I&#8217;m done I always feel like my talks were horrible, but feedback usually suggests they weren&#8217;t. This post has some interesting ideas which I&#8217;m eager to try out.</li>
+<li><a href="http://whorulesamerica.net/power/investment_manager.html">An Investment Manager&#8217;s View on the Top 1%</a><br>Seems like the &#8220;Occupy&#8221; movement should have adopted we are the 99.9% as a slogan.</li>
+<li><a href="http://danielmiessler.com/study/infosec_interview_questions/">Information Security Interview Questions</a><br>If you want to get into information security, you should read this article for a little self assessment.</li>
+<li><a href="http://arstechnica.com/tech-policy/news/2012/01/mega-man-the-bizarre-rise-and-sudden-downfall-of-kim-dotcom.ars/1">Mega-man: The fast, fabulous, fraudulent life of Megaupload&#8217;s Kim Dotcom</a><br>Interesting portrait of <a href="http://en.wikipedia.org/wiki/Kim_Dotcom">Kim Dotcom</a>, the man who&#8217;s all over the news again.</li>
+<li><a href="http://lists.busybox.net/pipermail/busybox/2010-December/074114.html">Understanding the bin, sbin, usr/bin , usr/sbin split</a><br>This mailing list post is an interesting bit of Unix trivia.</li>
+<li><a href="http://reason.com/archives/2012/01/26/how-much-is-an-astronauts-life-worth">How Much Is an Astronaut’s Life Worth?</a><br>Some interesting points on a controversial topic.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-01-22]]></title>
+    <link href="http://citizen428.net/blog/2012/01/22/information-overload-2012-01-22/"/>
+    <updated>2012-01-22T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/01/22/information-overload-2012-01-22</id>
+    <content type="html"><![CDATA[<blockquote><p>We defeat SOPA today, only to face it again tomorrow. It&#8217;s like trying to stop a cold by blowing your nose. It&#8217;s time we go after the virus.</p><footer><strong>Maddox</strong> <cite><a href='http://maddox.xmission.com/'>I Hope SOPA Passes</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="https://werebuild.eu/wiki/Blue_cabinet">Blue cabinet</a><br>A project that wants &#8220;to name, shame and expose those who profit on selling the surveillance equipment that enables the intimidation, harassment and killing of innocent people&#8221;.</li>
+<li><a href="http://acko.net/blog/making-love-to-webkit/">Making Love To WebKit</a><br><a href="http://acko.net">Acko.net</a> always had awesome design, but his newest one is absolutely mindblowing.</li>
+<li><a href="http://www.tangledwilderness.org/pdfs/saidthepottothekettle-web.pdf">said the pot to the kettle</a><br>This PDf subtitled &#8220;feminist theory for anarchist men&#8221; is a good read for everyone who&#8217;s interested in overcoming antiquated gender stereotypes, be they male or female.</li>
+<li><a href="http://maddox.xmission.com/">I hope SOPA passes</a><br>Typical Maddox style.</li>
+<li><a href="http://jeffdechambeau.com/friending-fast-and-slow.html">Behavioral economics and facebook conspiracy theories</a><br>While the author talks about a conspiracy theory, I think it&#8217;s fair to assume that the big web companies do use behavioral psychology when trying to get us to click on ads.</li>
+<li><a href="http://www.guardian.co.uk/world/2012/jan/20/iran-war-brewing-simon-tisdall">An Iran war is brewing from mutual ignorance and chronic miscalculation</a><br>I still have the naive hope that war is evitable.</li>
+<li><a href="http://www.spiegel.de/netzwelt/netzpolitik/0,1518,773495,00.html">US-Copyright-Cops greifen weltweit zu</a><br>If you have German speaking friends who you want to educate about SOPA/PIPA, point them to this article by &#8220;Der Spiegel&#8221;.</li>
+<li><a href="http://prezi.com/2lanmqb0nnkj/paredit-emacs-minor-mode/">Paredit - emacs minor mode</a><br>A neat presentation on Paredit, a great Emacs minor mode for Lisp hackers.</li>
+<li><a href="http://www.mcsweeneys.net/articles/in-which-i-fix-my-girlfriends-grandparents-wifi-and-am-hailed-as-a-conquering-hero">In Which I Fix My Girlfriend’s Grandparents’ WIFI And Am Hailed As A Conquering Hero.</a><br>We&#8217;ve all been there, but this is brilliantly told.</li>
+<li><a href="http://www.good.is/post/people-are-awesome-the-south-carolina-coffee-shop-where-everyone-pays-for-everyone-else-s-drinks">People Are Awesome: The Coffee Shop Where Everyone Pays for Everyone Else&#8217;s Drinks</a><br>It&#8217;s not often enough that I get to post something nice here.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-01-15]]></title>
+    <link href="http://citizen428.net/blog/2012/01/15/information-overload-2012-01-15/"/>
+    <updated>2012-01-15T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/01/15/information-overload-2012-01-15</id>
+    <content type="html"><![CDATA[<blockquote><p>As Reuters points out, diplomats are particularly upset by assassination plots against &#8230; diplomats.</p><footer><strong>Juan Cole</strong> <cite><a href='http://www.juancole.com/2012/01/a-murder-in-tehran.html'>A Murder in Tehran</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://owni.eu/2012/01/10/twitter-the-new-frontline-in-global-cyber-jihad-al-qaeda-somalia/">Twitter: The New Frontline In Global Cyber Jihad&#8221;</a><br>I despise terminology like &#8220;cyber war&#8221; and &#8220;cyber jihad&#8221;, but the article is still rather interesting.</li>
+<li><a href="http://gravityandlevity.wordpress.com/2009/07/08/your-body-wasnt-built-to-last-a-lesson-from-human-mortality-rates/">Your body wasn’t built to last: a lesson from human mortality rates</a><br>I&#8217;ve never heard of Gompertz&#8217; law before, but it&#8217;s rather intriguing.</li>
+<li><a href="http://www.juancole.com/2012/01/a-murder-in-tehran.html">A Murder in Tehran</a><br>Being a scientist in Iran can be dangerous if you work in the &#8220;wrong&#8221; field.</li>
+<li><a href="http://boingboing.net/2012/01/13/google-fraudulently-solicits-f.html">The Google-Kenya ripoff</a><br>I can&#8217;t believe that Google would be this stupid, but I&#8217;ll keep an eye on this. Here&#8217;s the <a href="http://blog.mocality.co.ke/2012/01/13/google-what-were-you-thinking/">blog post</a> by the company that raised the allegations.</li>
+<li><a href="http://www.chinaafricarealstory.com/2012/01/zambezi-valley-chinas-first.html">&#8220;The Zambezi Valley: China&#8217;s First Agricultural Colony?&#8221; Fiction or Fact?</a><br>I don&#8217;t know all the research, but this seems like an interesting topic to investigate.</li>
+<li><a href="http://www.sueddeutsche.de/leben/ethik-in-der-ernaehrung-nicht-fisch-nicht-fleisch-1.53590">Nicht Fisch! Nicht Fleisch!</a><br>This article about the various problems related to meat consumption is 2 years old and at least as relevant today as it was back then (in German).</li>
+<li><a href="http://www.dailymail.co.uk/news/article-2086392/Syria-Secrets-city-siege.html">Secrets from the city under siege</a><br>Smuggled pictures from the Syrian city of Homs and an interesting article to go with them.</li>
+<li><a href="http://www.guardian.co.uk/law/2012/jan/13/tvshack-student-founder-extradition">TVShack&#8217;s student founder can be extradited to US, court rules</a><br>Whatever became of protecting your citizens? If he broke UK law try him there.</li>
+<li><a href="http://news.travel.aol.com/2011/02/28/why-did-tsa-pat-down-kids-adults-getting-off-train/">Why Did TSA Pat Down Kids, Adults Getting Off Train?</a><br>Welcome to the police state. Terrorists win.</li>
+<li><a href="http://www.nytimes.com/2012/01/15/opinion/sunday/the-rise-of-the-new-groupthink.html?_r=3&amp;hp=&amp;pagewanted=all">The Rise of the New Groupthink</a><br>I&#8217;m always in favor of pro-introvert artciles.</li>
+</ul>
+
+
+<blockquote><p>[I]ntroverts are comfortable working alone — and solitude is a catalyst to innovation.</p><footer><strong>Susan Cain</strong> <cite><a href='http://www.nytimes.com/2012/01/15/opinion/sunday/the-rise-of-the-new-groupthink.html?_r=3&hp=&pagewanted=all'>The Rise of the New Groupthink</a></cite></footer></blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-01-08]]></title>
+    <link href="http://citizen428.net/blog/2012/01/08/information-overload-2012-01-08/"/>
+    <updated>2012-01-08T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/01/08/information-overload-2012-01-08</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="https://www.eff.org/deeplinks/2011/12/newyears-resolution-full-disk-encryption-every-computer-you-own">New Year&#8217;s Resolution: Full Disk Encryption on Every Computer You Own</a><br>The <a href="https://www.eff.org">EFF</a> has a great suggestion for a New Year&#8217;s resolution.</li>
+<li><a href="http://scienceblogs.com/goodmath/2008/12/my_favorite_strange_number_cla.php">My Favorite Strange Number: Ω</a><br>Yeah for obscure math.</li>
+<li><a href="http://www.osnews.com/story/25469/Richard_Stallman_Was_Right_All_Along">Richard Stallman Was Right All Along</a><br>It&#8217;s not often enough that one reads something positive about RMS, which frankly speaking is a shame.</li>
+<li><a href="http://www.taz.de/Armenviertel-in-Caracas/!84778/">Zukunft in Selbstverwaltung</a><br>People in Venezuela&#8217;s capital are organising themselves in order to take care of things the state fails to provide (in German).</li>
+<li><a href="http://www.orgnet.com/slumlords.html">Uncloaking a Slumlord Conspiracy with Social Network Analysis</a><br>Using social network analysis for social justice.</li>
+<li><a href="https://www.eff.org/deeplinks/2012/01/us-government-calls-censor-twitter-threaten-free-speech">U.S. Government Calls to Censor Twitter Threaten Free Speech</a><br>Yes, that&#8217;s 2 articles by the EFF in one issue of the Information Overload. It&#8217;s not my fault they write so much sensible stuff&#8230;</li>
+<li><a href="http://www.gamasutra.com/view/feature/6582/learning_from_the_masters_level_.php">Learning From The Masters: Level Design In The Legend Of Zelda</a><br>See this as a kind of follow-up to another Zelda related article I posted not so long ago.</li>
+<li><a href="http://www.technologyreview.com/blog/arxiv/27469/">Mathematicians Solve Minimum Sudoku Problem</a><br>Unfortunately this was proven by using a computer to brute force the problem space, much like the <a href="http://en.wikipedia.org/wiki/Four_color_theorem">Four Color Theorem</a>. A &#8220;proper&#8221; proof would be nice and I&#8217;m sure it would make for an interesting read.</li>
+<li><a href="http://io9.com/5873485/an-optimistic-history-of-the-next-40-years">An Optimistic History of the Next 40 Years</a><br>That&#8217;s certainly a more optimistic guess than anything I can come up with. Unfortunately I&#8217;m afraid this will stay the stuff for SciFi novels&#8230;</li>
+<li><a href="http://www.salon.com/2012/01/03/david_lynch_why_brutality_makes_me_laugh/singleton/">David Lynch: Why brutality makes me laugh</a><br>An interview with David Lynch about his latest musical project.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-01-01]]></title>
+    <link href="http://citizen428.net/blog/2012/01/01/information-overload-2012-01-01/"/>
+    <updated>2012-01-01T18:08:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/01/01/information-overload-2012-01-01</id>
+    <content type="html"><![CDATA[<p>The <a href="http://citizen428.net/blog/categories/informationoverload/">Information Overload</a> series started in August 2010 and I&#8217;m surprised that I really managed to keep it going on a weekly basis (I only skipped a couple of issues because of traveling). So here we go for the first post of 2012.</p>
+
+<blockquote><p>As for accountability of teachers and administrators, Sahlberg shrugs. &#8220;There&#8217;s no word for accountability in Finnish,&#8221; he later told an audience at the Teachers College of Columbia University. &#8220;Accountability is something that is left when responsibility has been subtracted.&#8221;</p><footer><strong>Anu Partanen</strong> <cite><a href='http://www.theatlantic.com/national/archive/2011/12/what-americans-keep-ignoring-about-finlands-school-success/250564/'>What Americans Keep Ignoring About Finland&#8217;s School Success</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://www.virgin.com/richard-branson/blog/time-to-end-the-war-on-drugs">Time to end the war on drugs</a><br>Richard Branson. Founder of Virgin Group, speaks out against the war on drugs.</li>
+<li><a href="http://www.tagesspiegel.de/zeitung/korruption-in-wien-wo-war-mei-leistung/5980516.html">„Wo war mei Leistung?“</a><br>If you are not from Austria but can read German, this is a good summary of the rampant corruption in our country.</li>
+<li><a href="http://www.foreignpolicy.com/articles/2011/12/19/a_few_of_kims_favorite_things?page=full">A Few of Kim&#8217;s Favorite Things</a><br>Foreign Policy published this article on Kim Jong-Il&#8217;s special tastes.</li>
+<li><a href="http://www.nytimes.com/2011/12/14/technology/shunning-facebook-and-living-to-tell-about-it.htm">The Facebook Resisters</a><br>Some people live fine without Facebook, who&#8217;d have thought?</li>
+<li><a href="http://www.grist.org/list/2011-12-29-how-india-is-winning-the-future-with-solar-energy">How India is winning the future with solar energy</a><br>A summary of India&#8217;s plan to generate lots of solar power by 2020, including links to the source articles for further reading.</li>
+<li><a href="http://www.aclu.org/blog/national-security/president-obama-signs-indefinite-detention-law">President Obama Signs Indefinite Detention Into Law</a><br>Not the best news to start a new year with.</li>
+<li><a href="http://www.theatlantic.com/national/archive/2011/12/what-americans-keep-ignoring-about-finlands-school-success/250564/">What Americans Keep Ignoring About Finland&#8217;s School Success</a><br>Not only Americans keep ignoring this&#8230;</li>
+<li><a href="http://www.antimon.org/code/Linus/">An Introduction to Programming C-64 Demos</a><br>The C-64 is the first computer I programed on, and since I just saw an awesome presentation about writing <a href="http://en.wikipedia.org/wiki/Demoscene">demos</a> for it, I&#8217;m getting a bit sentimental.</li>
+<li><a href="http://www.wired.com/threatlevel/2011/12/civil-liberties-ip/">2011: The Year Intellectual Property Trumped Civil Liberties</a><br>Unfortunately this is a trend that can be seen world-wide, not only in the US.</li>
+<li><a href="http://www.economist.com/node/21542227">Grief and fear</a><br>Some thoughts on Korea after Kim Jong-Il&#8217;s death.</li>
+</ul>
+
+
+<blockquote><p>China, the only power with much influence over the country, is less troubled by the long-term grinding suffering of the North Koreans than by the prospect of a leadership vacuum leading suddenly to economic collapse and a flood of refugees. Such a prospect threatens to cause wider instability.</p><footer><strong>The Economist</strong> <cite><a href='http://www.economist.com/node/21542227'>Grief and Fear</a></cite></footer></blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[28C3 day 4]]></title>
+    <link href="http://citizen428.net/blog/2011/12/30/28c3-day-4/"/>
+    <updated>2011-12-30T13:01:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/12/30/28c3-day-4</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4828.en.html">Antiforensik</a><br>How to work against forensics. Nothing revolutionary, but a solid talk.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4587.en.html">bup: Git for backups</a><br>An interesting backup project using git, this is open source and still needs help in case you are looking for something to work on.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4856.en.html">The engineering part of social engineering</a><br>I wasn&#8217;t entirely convinced by this talk. While there were some interesting points, the speaker was quite full of himself and frankly the talk wasn&#8217;t so different from other SE talks that I&#8217;ve seen before.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4754.en.html">Smart Hacking For Privacy</a><br>This started off rather bad when  one of the 2 speakers couldn&#8217;t get over this nervousness, but ended up being a really funny and interesting talk, which was later joined by the CEO of the company whose product got hacked.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[28C3 day 3]]></title>
+    <link href="http://citizen428.net/blog/2011/12/29/28c3-day-3/"/>
+    <updated>2011-12-29T16:24:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/12/29/28c3-day-3</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4767.en.html">Security Log Visualization with a Correlation Engine</a><br>Nothing too special, but still rather interesting, especially since I need this for work at the moment.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4746.en.html">Bitcoin - An Analysis</a><br>This was a great talk about the current state of Bitcoin, highly recommended if you have any interest in the topic.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4663.en.html">Cellular protocol stacks for Internet</a><br>Harald Welte&#8217;s talks on mobile related stuff are usually great, but I didn&#8217;t get much out of this one, which felt a bit like acronym bullshit bingo (which is not Harald&#8217;s fault of course).</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4780.en.html">Print Me If You Dare</a><br>One of my favorite talks of this year&#8217;s congress, you definitely want to watch this. Update your printer firmware first though ;-)</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4814.en.html">Behind the scenes of a C64 demo</a><br>The C64 is the reason I became a software developer, so obviously I really enjoyed this talk. <a href="http://www.youtube.com/watch?v=LH6_1dEVWds">The demo</a> is really good too!</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4866.en.html">Fnord-Jahresrückblick</a><br>Fun as always.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[28C3 day 2]]></title>
+    <link href="http://citizen428.net/blog/2011/12/29/28c3-day-2/"/>
+    <updated>2011-12-29T14:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/12/29/28c3-day-2</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4770.en.html">Don&#8217;t scan, just ask</a><br>This sounded a lot more interesting than it actually was, especially since the tool that was introduced is not publicly available (as far as I know that is).</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4680.en.html">Effective Denial of Service attacks against web application platforms</a><br>Great talk, solid presentation, this is the type of talk you want to download the video for.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4763.en.html">The Science of Insecurity</a><br>Another great presentation, another definite recommendation.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4800.en.html">How governments have tried to block Tor</a><br>An inspiring and insightful presentation about government surveillance and Tor.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4676.en.html">Apple vs. Google Client Platforms</a><br>A security comparison of iOS and Android and the repective vendor&#8217;s app markets.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4756.en.html">Quantified-Self and OpenBCI Neurofeedback Mind-Hacking</a><br>One big WTF and I definitely would have left, but unfortunately one of the 2 speakers had to borrow my ThinkPad power supply so I was stuck in this talk until the bitter end.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4775.en.html">Hacker Jeopardy</a><br>Fun as always, but this year&#8217;s questions seemed a lot easier than the ones I remember from previous years.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[2011 reading list]]></title>
+    <link href="http://citizen428.net/blog/2011/12/28/2011-reading-list/"/>
+    <updated>2011-12-28T20:50:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/12/28/2011-reading-list</id>
+    <content type="html"><![CDATA[<p>A list of the books I read in 2011, sorted by finishing date (oldest to newest). According to <a href="http://goodreads.com">Goodreads</a> that’s roughly 16.2k pages, less than the last few years. I also have a couple of unfinished books, read several <a href="http://citizen428.net/blog/categories/papers/">papers</a> and a couple of chapters of a book on Ruby and MongoDB that I&#8217;m the technical reviewer for.</p>
+
+<p>Terry Pratchett: <strong>Hogfather</strong><br>
+Michael Köhlmeier: <strong>Sunrise</strong><br>
+Terry Pratchett: <strong>Eric</strong><br>
+Audrey Niffenegger: <strong>Her Fearful Symmetry</strong><br>
+Conrad Barski: <strong>Land of Lisp</strong><br>
+Arthur Nersesian: <strong>The Fuck-Up</strong><br>
+Ryszard Kapuściński: <strong>The Shadow of the Sun</strong><br>
+Jacqueline Rayner: <strong>Doctor Who: The Sontaran Games</strong><br>
+Gregory Brown: <strong>Ruby Best Practices</strong><br>
+L. Frank Baum: <strong>The Wonderful Wizard of Oz</strong><br>
+Paolo Bacigalupi: <strong>The Windup Girl</strong><br>
+Cory Doctorow: <strong>Eastern Standard Tribe</strong><br>
+Canol Gökel: <strong>Computer Programming using GNU Smalltalk</strong><br>
+Jeremy Leipzig: <strong>Data Mashups with R</strong><br>
+Lana Citron: <strong>Transit</strong><br>
+Suzanne Skublics: <strong>Smalltalk With Style</strong><br>
+Russ Olsen: <strong>Eloquent Ruby</strong><br>
+Dennis Lehane: <strong>Shutter Island</strong><br>
+Terrance Dicks: <strong>Doctor Who: Made of Steel</strong><br>
+Christian Bök: <strong>Eunoia</strong><br>
+Chuck Palahniuk: <strong>Invisible Monsters</strong><br>
+Radek Knapp: <strong>Franio</strong><br>
+Michael Fogus: <strong>The Joy of Clojure</strong><br>
+Terry Pratchett: <strong>Mort</strong><br>
+Dan Cederholm: <strong>Handcrafted CSS: More Bulletproof Web Design</strong><br>
+Paolo Perrotta: <strong>Metaprogramming Ruby</strong><br>
+Mark Bowden: <strong>Killing Pablo: The Hunt for the World&#8217;s Greatest Outlaw</strong><br>
+Cormac McCarthy: <strong>The Road</strong><br>
+Charles Stross: <strong>Accelerando</strong><br>
+Gautam Malkani: <strong>Londonstani</strong><br>
+Armin Risi: <strong>Vegetarisch leben - Die Vorteile einer fleischlosen Ernährung</strong><br>
+Miran Lipovača: <strong>Learn You a Haskell for Great Good!: A Guide for Beginners</strong><br>
+Robert J. Chassell: <strong>An Introduction to Programming in Emacs Lisp</strong><br>
+Hunter S. Thompson: <strong>Hell&#8217;s Angels</strong><br>
+Lauren Beukes: <strong>Moxyland</strong><br>
+Raphael Selbourne: <strong>Beauty</strong><br>
+Zed A. Shaw: <strong>Learn Python The Hard Way</strong><br>
+David Kennedy: <strong>Metasploit: The Penetration Tester&#8217;s Guide</strong><br>
+Paolo Bacigalupi: <strong>Pump Six</strong><br>
+Michael Moorcock: <strong>The Nomad of Time</strong><br>
+Russ Olsen: <strong>Design Patterns in Ruby</strong><br>
+David Mark: <strong>Beginning iPhone 4 Development: Exploring the iOS SDK</strong><br>
+Reijo Mäki: <strong>Tango Negro</strong><br>
+David Sedaris: <strong>Me Talk Pretty One Day</strong><br>
+Kurt Vonnegut: <strong>Breakfast of Champions</strong><br>
+Mario Vargas Llosa: <strong>Der Geschichtenerzähler</strong><br>
+Kyle Banker: <strong>MongoDB in Action</strong><br>
+Scott Kenemore: <strong>Zombie, Ohio: A Tale of the Undead</strong><br>
+Leopold Kohr: <strong>The Breakdown of Nations</strong><br>
+Carlos Bueno: <strong>Lauren Ipsum</strong><br>
+Henning Mankell: <strong>Mannen på stranden</strong><br>
+Garrison Keillor: <strong>Was ist eigentlich Anarchie?</strong><br>
+Thomas Pynchon: <strong>Gravity&#8217;s Rainbow</strong><br>
+Norman Matloff: <strong>The Art of R Programming</strong><br>
+Stéphane Hessel: <strong>Empört Euch!</strong><br>
+Fabian Kruse: <strong>Beyond Rules</strong><br>
+Dario Tonani: <strong>Cardanica (A Steampunk Nightmare)</strong><br>
+Ryū Murakami: <strong>In The Miso Soup</strong><br>
+Kaaron Warren: <strong>The Grinding House</strong><br></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[28C3 day 1]]></title>
+    <link href="http://citizen428.net/blog/2011/12/27/28c3-day-1/"/>
+    <updated>2011-12-27T16:19:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/12/27/28c3-day-1</id>
+    <content type="html"><![CDATA[<p>Just a quick summary of the talks I saw on day 1 (powered by <a href="http://www.flora-power.de/">Flora Power</a>, since I already started this year&#8217;s congress with a lack of sleep).</p>
+
+<ul>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4897.en.html">Marriage From Hell</a><br> Authoritarian governments using surveillance technologies provided by Western companies is not exactly news. Not a bad talk, although it was a bit from the &#8220;No shit, Sherlock&#8221; department. Not worthy of a keynote in my opinion.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4711.en.html">The Atari 2006 Video Computer System</a><br>Since I love hearing about old hardware and its limitations, this was an awesome talk. The speaker definitely knew what he was talking about and the presentation was very solid.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4799.en.html">Can trains be hacked?</a><br>Another good talk, but understandably there was no information on actually hacking the train system. If you want more info on this topic, listen to <a href="http://cre.fm/cre171">Chaos Radio Express #171</a> from December last year.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4661.en.html">SCADA and PLC Vulnerabilities in Correctional Facilities</a><br>Since I wanted to charge my notebook, I watched this one as a stream. This of course led to web surfing and IRC, so I didn&#8217;t pay as much attention as this talk would have deserved.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4913.en.html">Almighty DNA?</a><br>Why collecting DNA is also a form of data retention. If you&#8217;ve been to similar talks before you probable knew most of the stories they told, if not the video and <a href="http://cre.fm/cre143">Chaos Radio Express #143</a> should be good resources to catch up.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4713.en.html">What is in a name?</a><br>The history of names and identity regimes from 1500 until today. Pretty interesting, but unfortunately I was in a bit of a post-dinner food coma.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4736.en.html">Defending mobile phones</a><br>This talk was really full and unfortunately the stream didn&#8217;t work either, so I ended up watching the second half of  <a href="Macro%20dragnets:%20Why%20trawl%20the%20river%20when%20you%20can%20do%20the%20whole%20ocean">Macro dragnets: Why trawl the river when you can do the whole ocean</a> which had some interesting info on avoiding face recognition and other things.<br></li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4817.en.html">String Oriented Programming</a><br>A talk about evading ASLR, DEP and other security measures with <code>printf</code> exploits.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -10,6 +10,7 @@ I use Emacs' awesome [org-mode](http://orgmode.org/) for taking notes when I wor
 
 * [Commodore 64 Hacking](http://c64.citizen428.net/)
 * [Debugging Ruby Performance](http://rubyperformance.citizen428.net)
+* [Emacs](http://emacs.citizen428.net)
 * [Monads](http://monads.citizen428.net/)
 * [MySQL Performance Tuning](http://mysql.citizen428.net/)
 * [Postgres Performance Tuning](http://postgres.citizen428.net/)

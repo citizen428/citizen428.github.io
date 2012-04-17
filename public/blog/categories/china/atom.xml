@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: china | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/china/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2010-11-21]]></title>
+    <link href="http://citizen428.net/blog/2010/11/21/information-overload-2010-11-21/"/>
+    <updated>2010-11-21T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2010/11/21/information-overload-2010-11-21</id>
+    <content type="html"><![CDATA[<ul>
+<li>"An Awesome Book!":http://veryawesomeworld.com/awesomebook/inside.html<br>Dallas Clayton wrote a book for his son and it also "changed his life":http://veryawesomeworld.com/about.html. </li>
+<li>"NASA Scientist Discover Huge Bubbles of Energy in Galaxy":http://thetechjournal.com/science/nasa-scientist-discover-huge-bubbles-of-energy-in-galaxy.xhtml<br>Two giant gamma ray bubbles erupt from the center of the Milky Way.</li>
+<li>"Why Zappos Offers New Hires $2,000 to Quit":http://www.businessweek.com/smallbiz/content/sep2008/sb20080916_288698.htm<br>"Zappos":http://www.zappos.com/ is known for their commitment to a good customer experience, and they start by trying to hire outstanding people, which can also be seen from the hiring practice described in this article.</li>
+<li>"citizen map":http://citizenmap.scmp.com/<br>Interesting project by the "South China Morning Post":http://www.scmp.com/portal/site/SCMP/, _"aggregating local citizen reports, Hong Kong community media and other relevant news and information_". Also made me realize how much I'd like to go back to Hong Kong one day...</li>
+<li>"Cyber Experts Have Proof That China Has Hijacked U.S.-Based Internet Traffic":http://www.nationaldefensemagazine.org/blog/Lists/Posts/Post.aspx?ID=249<br>Allegedly China routed 15% of the world's internet traffic through the People's Republic for 18 minutes last April. Ah, the wonders of "BGP":http://en.wikipedia.org/wiki/Border_Gateway_Protocol.</li>
+<li>"China's 18-Minute Mystery":http://www.renesys.com/blog/2010/11/chinas-18-minute-mystery.shtml<br>Someone actually took a proper look at what happened and gave a neutral and balanced account on the BGP issue from above. This is refreshingly different from the "ZOMG the Chinese are gonna eat us alive!" articles found elsewhere.</li>
+<li>"Why should you care about currency wars?":http://www.bbc.co.uk/news/business-11722578<br>In time for the "G20":http://en.wikipedia.org/wiki/G-20_major_economies summit, the BBC has an article and a video on a topic that should interest us all.</li>
+<li>"How to Say Nothing in 500 Words":http://www.apostate.com/how-say-nothing-500-words<br>Very entertaining essay on writing, this should be mandatory reading for college freshmen.</li>
+<li>"New Facebook Messaging Continues to Block Some Links":http://www.wired.com/epicenter/2010/11/facebook-link-blocking/<br>Facebook censors the content of user messages. That's great advertisement for the new messaging system. Not. </li>
+<li>"China's educated youth face a tough future":http://cmp.hku.hk/2010/11/03/8508/<br>Translation of an article on China's so-called "educated youth".</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A closer look at Google.cn filtering]]></title>
+    <link href="http://citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering/"/>
+    <updated>2006-01-27T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering</id>
+    <content type="html"><![CDATA[<p>While reading "netzpolitik.org":netzpolitik.org yesterday, I found a link to an article on the "OpenNet Initiative Blog":http://opennetinitiative.net/blog/, explaining "how the filtering of Google.cn works":http://www.opennetinitiative.net/blog/?p=87. Now let's have a closer look at some of the blocked sites:</p>
+
+<p>site:hrw.org
+site:hrichina.org</p>
+
+<p>Human Rights Watch and Human Rights in China. Who is surprised that they get blocked? Nobody? Guessed so...</p>
+
+<p>site:rfa.org</p>
+
+<p>Radio Free Asia describes itself in the following way: "<em>RFA is a private, nonprofit corporation that broadcasts news and information in nine native Asian languages to listeners who do not have access to full and free news media. The purpose of RFA is to provide a forum for a variety of opinions and voices from within these Asian countries.</em>"</p>
+
+<p>site:tsquare.tv</p>
+
+<p>A pretty informative site about the incident on Tiananmen Square in 1989. You really should try to see the "documentary":http://tsquare.tv/film/, it's probably the best I've seen so far on this topic.</p>
+
+<p>http://64memo.com/</p>
+
+<p>The Tianmen Massacre Memorial Museum. I haven't read any of the articles on this site yet, so it's hard to tell how exactly they are dealing with the subject.</p>
+
+<p>site:news.bbc.co.uk
+site:voa.gov</p>
+
+<p>Ok, the BBC and Voice of America may not be the most objective news sources one can find in the world, but blocking them seems a little harsh.</p>
+
+<p>site:boxun.com
+site:peacehall.com</p>
+
+<p>Both domains will lead you to the Boxun News Network, a site writing a lot about censorship, free speech and similar topics.</p>
+
+<p>site:freechina.net</p>
+
+<p>After having a look at the "goals":http://www.freechina.net/goal/index_en.htm of The Free China Movement, it should be pretty obvious why the Chinese government wants this site blocked.</p>
+
+<p>site:geocities.com</p>
+
+<p>Free web hosting == free expression? It seems so...</p>
+
+<p>site:falundafa.org
+site:epochtimes.com</p>
+
+<p>After having been at a conference with participants from these groups I have to say that I don't feel any sympathy for them, but that definitely isn't an excuse for locking them up and censoring their sites.</p>
+
+<p>site:savetibet.org</p>
+
+<p>It should be pretty obvious why this got blocked.</p>
+
+<p>site:topforum.com</p>
+
+<p>A dynamic index of Chinese forums websites.</p>
+
+<p>site:laogai.org</p>
+
+<p>Since 1992 the Laogai Research Foundation is trying to gather information on Chinese penal camps and other "<em>systemic human rights violations in China, including public executions, organ harvesting from executed prisoners, the coercive enforcement of China's population control policy, and persecution of religious believers.</em>"</p>
+
+<p>I guess that sites like the "China Labour Bulletin":http://www.china-labour.org.hk/public/main and related worker's movements get filtered as well, but I can't personally confirm this currently.</p>
+
+<p>Boomtime, Chaos 27, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

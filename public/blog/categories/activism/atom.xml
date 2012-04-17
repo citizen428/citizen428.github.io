@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: activism | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/activism/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2010-10-02]]></title>
+    <link href="http://citizen428.net/blog/2010/10/03/information-overload-2010-10-02/"/>
+    <updated>2010-10-03T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2010/10/03/information-overload-2010-10-02</id>
+    <content type="html"><![CDATA[<p>On a weekend trip again, but managed to squeeze in quite a bit of reading during the week.</p>
+
+<ul>
+<li>"Friends Without Benefits":http://www.newsweek.com/2010/09/24/the-sad-truth-about-the-facebook-movie.html<br>Was there a paradigm shift in Silicon Valley from hard science to pointless web 2.0 startups?</li>
+<li>"How Universities Work":http://jseliger.com/2010/09/26/how-universities-work-or-what-i-wish-i%E2%80%99d-known-freshman-year-a-guide-to-american-university-life-for-the-uninitiated/<br>As the title implies this is about universities in the US, but a lot of it also holds true for academic institutions in Europe.</li>
+<li>"First World War officially ends":http://www.telegraph.co.uk/news/worldnews/europe/germany/8029948/First-World-War-officially-ends.html<br>92 years after the end of the war, Germany will pay the last chunk of reparations imposed by the Treaty of Versailles.</li>
+<li>"The Shell Hater's Handbook":http://shellhaters.heroku.com/#1<br>Despite the name, this presentation by GitHubber "Ryan Tomyako":http://tomayko.com/ is a nice intro to shell scripting. If you know a shell hater, send him a link to this presentation.</li>
+<li>"Virtual vs. Real Protests":http://www.nytimes.com/roomfordebate/2010/09/29/can-twitter-lead-people-to-the-streets/virtual-vs-real-protests<br>Twitter "revolutions" and the confusion between "mobilization" and "organization".</li>
+<li>"Small Change":http://www.newyorker.com/reporting/2010/10/04/101004fa_fact_gladwell<br>Very much in the same vain as the previous article, Malcolm Gladwell talks about hierarchies vs. networks, strong vs. weak ties and why joining a Facebook group is not the same sort of activism as putting your life at risk in a real world conflict.</li>
+<li>"Pay The Bills":http://bendauphinee.com/paythebills<br>Interesting experiment in earning some money while looking for a job.</li>
+<li>"Software Development for Developing Regions: Another Hat for Hackers":http://tier.cs.berkeley.edu/drupal/node/148<br>Interesting idea about using skills like reversee engineering, code injection etc. for making software better suited to third world demands.</li>
+<li>"India's surprising economic miracle":http://www.economist.com/node/17147648<br>Will India's economy thrive when the global economy becomes more knowledge-intensive?</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

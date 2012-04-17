@@ -1,0 +1,919 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="unsavory has reached maturity (meaning I can&#8217;t really come up with any more stuff I want to add), so i decided it&#8217;s enough with the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.net/blog/page/10">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+<meta name="verify-postrank" content="q9zqqyw" />
+<link rel="openid.server" href="http://www.myopenid.com/server" />
+<link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/11/unsavory-1-0-0-and-methodfinder-1-0-1/">Unsavory 1.0.0 and Methodfinder 1.0.1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-11T00:00:00+01:00" pubdate data-updated="true">Mar 11<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://github.com/citizen428/unsavory">unsavory</a> has reached maturity (meaning I can&#8217;t really come up with any more stuff I want to add), so i decided it&#8217;s enough with the conservative versioning and jumped from 0.3.3 to 1.0.0 :-) Right before Christmas I had changed it from Delicious to <a href="http://pinboard.in">Pinboard</a> and today I replaced the previous - rather verbose - output with a nice little <a href="http://0xcc.net/ruby-progressbar/index.html.en">progressbar</a> and a log file.</p>
+
+<p>I also did a mini update to <a href="https://github.com/citizen428/methodfinder">methodfinder</a>, which now uses <a href="http://www.ruby-doc.org/stdlib/libdoc/stringio/rdoc/index.html">StringIO</a> objects instead of <code>/dev/null</code> for output redirection, which should make the Windows users out there happy.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/09/haskell-like-zip_with-for-ruby/">Haskell Like &#8220;Zip_with&#8221; for Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-09T00:00:00+01:00" pubdate data-updated="true">Mar 9<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I always liked Haskell&#8217;s <a href="http://hackage.haskell.org/packages/archive/base/latest/doc/html/Prelude.html#v:zipWith">zipWith</a> and sometimes miss it in Ruby, so I wrote my own a couple of weeks ago. I also submitted a pull request to <a href="http://rubyworks.github.com/facets/">Facets</a>, but since it&#8217;s still not included I decided to post the code here in case it&#8217;s useful for anyone:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">zip_with</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="kp">nil</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="o">[]</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">empty?</span> <span class="o">||</span> <span class="n">other</span><span class="o">.</span><span class="n">empty?</span>
+</span><span class='line'>  <span class="n">clipped</span> <span class="o">=</span> <span class="nb">self</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.other</span><span class="o">.</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">zipped</span> <span class="o">=</span> <span class="n">clipped</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">op</span>
+</span><span class='line'>    <span class="n">zipped</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="n">zipped</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="k">yield</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Usage examples:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">].</span><span class="n">zip_with</span><span class="p">(</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="ss">:+</span><span class="p">)</span> <span class="c1">#=&gt; [7, 7, 7]</span>
+</span><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">].</span><span class="n">zip_with</span><span class="p">(</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span> <span class="p">}</span> <span class="c1">#=&gt; [15, 16, 17]</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/09/smalltalks-method-finder-in-ruby/">Smalltalk&#8217;s Method Finder in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-09T00:00:00+01:00" pubdate data-updated="true">Feb 9<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Update: The code is on Github now - <a href="https://github.com/citizen428/MethodFinder">https://github.com/citizen428/MethodFinder</a></p>
+
+<p>I changed the argument order (so you don&#8217;t have to always specify empty arrays), added support for blocks, do some method filtering based on arity and ensure that the streams get properly restored. I left the original code in this post for reference though.
+</em></p>
+
+<p>I always was quite fond of Squeak&#8217;s Method Finder, which let&#8217;s you enter a receiver, arguments and the desired result and will show you all methods that will return this result when sent to the receiver with the provided arguments. Since I started mentoring courses at RubyLearning 2 years ago I often thought that something like this might be nice for the students of our core course.</p>
+
+<p>Last night I was about to start looking for an implementation of Method Finder in Ruby I found some years ago, but then decided to just write my own, which is more fun and doesn&#8217;t take long. Here we go:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">MethodFinder</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">find</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">redirect_streams</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">found</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">select</span> <span class="k">do</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">o</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Numeric</span><span class="p">)</span> <span class="p">?</span> <span class="n">obj</span> <span class="p">:</span> <span class="n">obj</span><span class="o">.</span><span class="n">dup</span>
+</span><span class='line'>      <span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="k">rescue</span> <span class="kp">nil</span><span class="p">)</span> <span class="o">==</span> <span class="n">res</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">restore_streams</span>
+</span><span class='line'>    <span class="n">found</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">redirect_streams</span>
+</span><span class='line'>    <span class="vi">@orig_stdout</span> <span class="o">=</span> <span class="vg">$stdout</span>
+</span><span class='line'>    <span class="vi">@orig_stderr</span> <span class="o">=</span> <span class="vg">$stderr</span>
+</span><span class='line'>    <span class="vg">$stdout</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;/dev/null&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="vg">$stderr</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;/dev/null&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">restore_streams</span>
+</span><span class='line'>    <span class="vg">$stdout</span> <span class="o">=</span> <span class="vi">@orig_stdout</span>
+</span><span class='line'>    <span class="vg">$stderr</span> <span class="o">=</span> <span class="vi">@orig_stderr</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nb">private_class_method</span> <span class="ss">:redirect_streams</span><span class="p">,</span> <span class="ss">:restore_streams</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&#8217;s how you use it:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;divmod&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span><span class="o">[/.</span><span class="n">/</span><span class="o">]</span><span class="p">,</span><span class="sx">%w(a b c)</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;scan&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;aBc&quot;</span><span class="p">,</span><span class="o">[]</span><span class="p">,</span><span class="s2">&quot;AbC&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;swapcase!&quot;</span><span class="p">,</span> <span class="s2">&quot;swapcase&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;**&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">6</span><span class="o">]</span><span class="p">,</span><span class="o">[]</span><span class="p">,</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;compact&quot;</span><span class="p">,</span> <span class="s2">&quot;compact!&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I think I&#8217;ll pack this up as a gem for our course participants to install and use in their IRBs, but before that I might add/change a couple of things:</p>
+
+<ul>
+    <li>Exclude method&#8217;s based on arity to reduce the number of message sends. <em>Done.</em></li>
+    <li>Add support for blocks which is trivial. <em>Done.</em></li>
+    <li>Maybe switch the order of arguments and expected result, so you don&#8217;t always have to specify an empty array for the arguments. I am a bit torn on this one though, since I like having the argument list explicit. <em>Done.</em></li>
+    <li>Redirect <code>stdout</code> and <code>stderr</code> to a StringIO object instead of <code>/dev/null</code> unless someone tells me that the latter works on Windows. <em>Done.</em></li>
+    <li>Maybe add some sort of method blacklist so they won&#8217;t get tried in the block. <em>Done.</em></i>
+</ul>
+
+
+<p>This shouldn&#8217;t take long, but still may have to wait for a couple of weeks because of a trip I&#8217;m taking.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/06/information-overload-2011-02-06/">Information Overload 2011-02-06</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-06T00:00:00+01:00" pubdate data-updated="true">Feb 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://grumomedia.com/plenty-of-fish-hacked-chris-russos-explains-how-he-did-it/">Plenty Of Fish Hacked</a><br>Once again a security researcher gets into trouble for reporting a vulnerability. Will people never learn?</li>
+<li><a href="http://sourceforge.net/blog/sourceforge-attack-full-report/">Sourceforge Attack: Full Report</a><br>Speaking of security, here&#8217;s the full report of the recent Sourceforge hack.</li>
+<li><a href="http://mindyourdecisions.com/blog/2011/02/01/broken-sticks-puzzle-and-a-seemingly-paradoxical-ratio/">Broken sticks puzzle, and a seemingly paradoxical ratio</a><br>A nice little math puzzle, solved with the help of Wolfram Alpha.</li>
+<li><a href="http://leyrer.wikosophy.org/blog/2011/02/die-wahre-online-revolution-ungeduld/">Die wahre Online-Revolution: Ungeduld</a><br>I often had the same thought about &#8220;Twitter revolutions&#8221;, but Georg actually bothered to sum it up and write it down (in German).</li>
+<li><a href="http://www.arabist.net/blog/2011/2/4/on-omar-suleiman.html">On Omar Suleiman</a><br>If you wnat to find out more about the Egyptian Vice President, this is an interesting profile of the man.</li>
+<li><a href="http://www.newyorker.com/reporting/2011/02/14/110214fa_fact_filkins?currentPage=all">The Afghan Bank Heist</a><br>A very sobering article about the Afghan government&#8217;s involvement in large-scale corruption.</li>
+<li><a href="http://ericlavigne.wordpress.com/2011/01/30/a-tour-of-the-clojure-landscape/">A tour of the Clojure landscape</a><br>I quite like this map of Clojure projects on GitHub.</li>
+<li><a href="http://www.smashingmagazine.com/2011/01/14/how-to-identify-good-clients-avoid-bad-ones/" title="and Avoid Bad Ones">How To Identify Good Clients</a><br>Good advice, not only for freelancers.</li>
+<li><a href="http://www.duckworksmagazine.com/11/columns/guest/winter/index.htm">Adsense, no sense at all &#8211; what it&#8217;s like being sacked by a computer&#8230;</a><br>This is a bit older, but still a good reminder on why it&#8217;s dangerous to rely on something like Adwords for your income.</li>
+<li><a href="http://www.nytimes.com/2011/01/18/science/18dog.html?_r=2&amp;pagewanted=all">Sit. Stay. Parse. Good Girl!</a><br>A dog with a &#8220;vocabulary&#8221; of over 1000 words.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/03/review-land-of-lisp/">Review: Land of Lisp</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-03T00:00:00+01:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><i>Disclaimer: The awesome folks at <a href="http://www.nostarch.com/">No Starch Press</a> were nice enough to provide me with a free copy of the book reviewed here, but what I&#8217;m about to write has not been influenced by this. I just wanted to get this out of the way&#8230;</i></p>
+<p>Ever since I first learned about it, I was eagerly awaiting the release of <a href="http://landoflisp.com/">Land of Lisp</a>. If you have never heard about the book before, have a look at this promotional cartoon music video. Yes, that&#8217;s right, this book comes with its very own promotional cartoon music video!</p>
+<p><iframe width="420" height="315" src="http://www.youtube.com/embed/HM1Zb3xmvMc" frameborder="0" allowfullscreen></iframe></p>
+<p>Your reaction to this video is actually a pretty good indicator on wether or not you are likely to enjoy this book. If you can&#8217;t take the cartoons and strange humor, &#8220;Land of Lisp&#8221; will probably not be for you. If you do however, you&#8217;ll be relieved that the book is at least as awesome as the video and probably even more.</p>
+<p>People believing that <a href="http://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a> has been dead since the <a href="http://en.wikipedia.org/wiki/AI_winter">AI winter</a> may be surprised by the release of new book on the language in 2010. They may however have missed the release of Peter Seibel&#8217;s <a href="http://www.gigamonkeys.com/book/">Practical Common Lisp</a> in 2005, which managed to expose the language to a wider audience again, a feat I think &#8220;LoL&#8221; might achieve too.</p>
+<p>For me the best part about <a href="http://www.lisperati.com/">Conrad Barski</a>&#8216;s book is its very readable and entertaining style,  combined with cartoons and the use of small games as demonstrations of the techniques introduced in the book. I think this is what makes &#8220;LoL&#8221; really stand out from the other Lisp books: it&#8217;s neither as academic as most of the texts focussed on Scheme (with <a href="http://www.ccs.neu.edu/home/matthias/BTLS/">The Little Schemer</a> being an obvious exception), nor is it as dry as Seibel&#8217;s book (which otherwise is a pretty good read) or as dated as Paul Graham&#8217;s <a href="http://www.paulgraham.com/onlisp.html">On Lisp</a> which was written while Common Lisp was still in the process of being standardized. For many people &#8220;Land of Lisp&#8221; may very well be there first contact with the language, and I think with its funny and easy to follow style it may get quite a few people hooked.</p>
+<p>The book is structured in 4 main parts, the first of which &#8211; called &#8220;Lisp Is Power&#8221; &#8211; serves as a general introduction to the language, explaing the basic syntax and so on. The second part (&#8220;Lisp Is Symmetry&#8221;) introduces the reader to flow control, data structures, input and output, <a href="http://en.wikipedia.org/wiki/Lambda_calculus">lambda expressions</a> and more. In the process you&#8217;ll write the first part of a game engine for text based games, a great little version of <a href="http://en.wikipedia.org/wiki/Hunt_the_Wumpus">Hunt the Wumpus</a> called &#8220;Grand Theft Wumpus&#8221; and &#8220;Orc Battle&#8221;, a small strategy game played in the <a href="http://en.wikipedia.org/wiki/REPL"><span class="caps">REPL</span></a>. The third part (&#8220;Lisp Is Hacking&#8221;) introduces us to the powerful and sometimes disputed &#8220;format&#8221; and &#8220;loop&#8221; commands, as well as streams. Game-wise you&#8217;ll encounter a little simulation of an evolving world as well as &#8220;Attack of the Robots&#8221;, a retro game where your aim is to get rid of some robots by making them collide with each other.  The last part (&#8220;Lisp Is Science&#8221;) introduces functional programming techniques, macros, <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSLs</a> and <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Lazy_evaluation">laziness</a>. Besides finishing the text adventure started in an earlier chapter, you&#8217;ll also write &#8220;Dice Of Doom&#8221;, a <a href="http://www.gamedesign.jp/flash/dice/dice.html">Dice Wars</a> clone that&#8217;s the most complex program of the whole book. Last but not least there&#8217;s an epilogue, where the author gives a brief overview of several important topics that got little or no exposure up to that point, like <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Common_Lisp_Object_System"><span class="caps">CLOS</span></a> or the condition system.</p>
+<p>As a final summary I&#8217;d say that &#8220;Land of Lisp&#8221; is a truly great achievement. It&#8217;s fun to read and does a good job of introducing the reader to the most important concepts of Lisp, by giving a taste of the language&#8217;s power, without being overwhelming. For more experienced Lispers this might make the book significantly less interesting, since some really nifty things only get mentioned in the epilogue. If you are among them, Seibel&#8217;s book is probably what you want to read (if you haven&#8217;t already, which would be surprising).  I&#8217;d also advise you to not get too excited about the &#8220;game development&#8221; part of the book, except for the last one all the games are rather minimal and simple, so don&#8217;t expect writing 3d shooters or anything like that. They are however awesome examples of the concepts introduced in the individual chapters and way more fun than the contrived examples one finds in way too many programming books. For new Lispers or people who need to brush up on their Common Lisp skills (e.g. when migrating from some other Lisp) this comes highly recommend, but even more senior Lispers might want to get a copy, even if it&#8217;s only for the odd cartoons.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/30/information-overload-2011-01-30/">Information Overload 2011-01-30</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-30T00:00:00+01:00" pubdate data-updated="true">Jan 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.engineyard.com/blog/2011/chicks-who-rip-amy-chen/">Chicks Who Rip: Amy Chen</a><br>Every initiative that wants to get more women into programming should get our support as male developers. It&#8217;s frickin 2011, can we get over gender stereotypes and finally accept female steel-workers and male nurses?</li>
+<li><a href="http://mises.org/daily/4985">Mauritius: A Glimmer of African Freedom</a><br>We don&#8217;t get good news about Africa often enough, so when they are there, we should share them despite the slightly liberterian undercurrent.</li>
+<li><a href="http://aidwatchers.com/2011/01/cool-maps-measuring-growth-from-outer-space/">Cool maps: Measuring growth from outer space</a><br>Interesting idea: measuring economic with satellite images analyzing light distribution in a country.</li>
+<li><a href="http://cleancoder.posterous.com/individuals-and-interactions">Bringing Balance to the Force</a><br>Since I like balanced and balancing opinions, I also like Uncle Bob&#8217;s post on software craftsmanship.</li>
+<li><a href="http://www.zeit.de/zeit-wissen/2007/01/Titel-Frauen-Maenner?page=all">Frauen sind auch nur Männer</a><br>Is the real difference between men and women just a resulted of being trained in stereotypes? That&#8217;s what it looks like (in German).</li>
+<li><a href="http://www.alistapart.com/articles/neveruseawarning/">Never Use a Warning When you Mean Undo</a><br>Even though I&#8217;m no designer, I have a soft spot for articles on UI/UX design and this one is no exception.</li>
+<li><a href="http://www.newyorker.com/online/blogs/newsdesk/2011/01/mubarak-and-the-generals.html">News Desk: Mubarak and the Generals</a><br>What role will the army play in the current Egyptian protests?</li>
+<li><a href="http://www.zdnet.com/blog/networking/how-the-internet-went-out-in-egypt/620">How the Internet went out in Egypt</a><br>If you want to explain to non-techy friends how Egypt &#8220;turned off the internet&#8221;, this is a good resource.</li>
+<li><a href="http://www.loeser.us/flags/hate.html">Political Flags of Extremism</a><br>Comprehensive collection of flags of far right and extremist groups. Also has a <a href="http://www.loeser.us/flags/hate2.html">second part</a>. Contains interesting information on some pretty obscure groups.</li>
+<li><a href="http://www.theatlantic.com/technology/archive/2011/01/the-inside-story-of-how-facebook-responded-to-tunisian-hacks/70044/">The Inside Story of How Facebook Responded to Tunisian Hacks</a><br>Facebook&#8217;s role in the Tunisian revolution. More interesting for understanding how Facebook was used by the Tunisians than for the technical content, but still&#8230;</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/23/information-overload-2011-01-23/">Information Overload 2011-01-23</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-23T00:00:00+01:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.wired.com/dangerroom/2011/01/all-seeing-blimp/">All-Seeing Blimp Could Be Afghanistan&#8217;s Biggest Brain</a><br>The US military has plans to deploy a giant <a href="http://en.wikipedia.org/wiki/Blimp">blimp</a> over Afghanistan. While kinda cool from a technological perspective, this is also quite scary.</li>
+<li><a href="http://kswizz.com/post/2785664228/hacking-mac-apps" title="And How To Stop Me">I Can Crack Your App With Just A Shell</a><br>If you like <span class="caps">OSX</span>, assembler and security, you&#8217;ll probably find this interesting. Also contains hints for developers on how to make their apps harder to crack.</li>
+<li><a href="http://www.foreignpolicy.com/articles/2011/01/19/the_china_paradox?page=full">The China Paradox</a><br>All the paradoxes are exactly what makes China so interesting. I still find it to be a baffling place, even after 5 years of Sinology at uni and having lived there for a year.</li>
+<li><a href="http://www.bbc.co.uk/news/world-africa-12216095">Key figures in new Tunisia government</a><br>Short biographies of some of the key figures of the new Tunisian government. Interesting side note: Slim Amamou, Secretary of state for sport and youth is a member of the Tunisian Pirate Party.</li>
+<li><a href="http://framethink.wordpress.com/2011/01/17/how-facebook-ships-code/">How Facebook Ships Code</a><br>Very interesting insights into Facebook&#8217;s developer driven culture.</li>
+<li><a href="http://www.zeit.de/2009/06/N-Milch?page=all">Natur aus der Fabrik</a><br>Since we all should be more aware of what we put into our bodies, here&#8217;s an article about modern milk production (in German).</li>
+<li><a href="http://www.guardian.co.uk/science/blog/2011/jan/19/manifesto-simple-scribe-commandments-journalists">A manifesto for the simple scribe</a><br>25 commandments for journalists by <a href="http://www.guardian.co.uk/profile/timradford">Tim Radford</a>.</li>
+<li><a href="http://www.newyorker.com/reporting/2010/12/13/101213fa_fact_lehrer?currentPage=all">The decline effect and the scientific method</a><br>The scientific method also has to hold up to scientific scrutiny.</li>
+<li><a href="http://www.well.com/conf/inkwell.vue/topics/400/State-of-the-World-2011-Bruce-St-page02.html">State of the World 2011: Bruce Sterling and Jon Lebkowsky</a><br>I know I&#8217;m a bit late to the party, but maybe this is useful for people who missed it the first time around. Includes lots of good links.</li>
+<li><a href="https://blog.torproject.org/blog/update-internet-censorship-iran">Update on Internet censorship in Iran</a><br>From the <a href="https://www.torproject.org/">Tor</a> blog.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/21/sicp-1-12-kind-of/">SICP 1.12, Kind Of&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-21T00:00:00+01:00" pubdate data-updated="true">Jan 21<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When working through <a href="http://en.wikipedia.org/wiki/Structure_and_Interpretation_of_Computer_Programs"><span class="caps">SICP</span></a> while you are tired, you might end up solving the wrong problems. This happened to me today with exercise 1.12, which asks the reader to &#8220;<em>[w]rite a procedure that computes elements of Pascal&#8217;s triangle by means of a recursive process</em>&#8221;. I somehow missed the &#8220;computes elements&#8221; part, and instead wrote a program which generates <a href="http://en.wikipedia.org/wiki/Pascal's_triangle">Pascal&#8217;s triangle</a> up to a certain row. Anyway, here it is as a reference for the next guy who can&#8217;t read:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='scheme'><span class='line'><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">pascal-sums</span> <span class="nv">lst</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">empty?</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">lst</span><span class="p">))</span>
+</span><span class='line'>      <span class="o">&#39;</span><span class="p">()</span>
+</span><span class='line'>      <span class="p">(</span><span class="nb">cons </span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">car </span><span class="nv">lst</span><span class="p">)</span> <span class="p">(</span><span class="nb">cadr </span><span class="nv">lst</span><span class="p">))</span>
+</span><span class='line'>            <span class="p">(</span><span class="nf">pascal-sums</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">lst</span><span class="p">)))))</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">pascal-triangle</span> <span class="nv">depth</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">triangle-iter</span> <span class="nv">lst</span> <span class="nv">n</span> <span class="nv">acc</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">zero? </span><span class="nv">n</span><span class="p">)</span>
+</span><span class='line'>           <span class="p">(</span><span class="nb">reverse </span><span class="nv">acc</span><span class="p">))</span>
+</span><span class='line'>          <span class="p">(</span><span class="nf">else</span>
+</span><span class='line'>           <span class="p">(</span><span class="nf">triangle-iter</span> <span class="o">`</span><span class="p">(</span><span class="mi">1</span> <span class="o">,@</span><span class="p">(</span><span class="nf">pascal-sums</span> <span class="nv">lst</span><span class="p">)</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>                          <span class="p">(</span><span class="nf">sub1</span> <span class="nv">n</span><span class="p">)</span>
+</span><span class='line'>                          <span class="p">(</span><span class="nb">cons </span><span class="nv">lst</span> <span class="nv">acc</span><span class="p">)))))</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">triangle-iter</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="nv">depth</span> <span class="o">&#39;</span><span class="p">()))</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">;; &gt; (time (pascal-triangle 7))</span>
+</span><span class='line'><span class="c1">;; cpu time: 0 real time: 0 gc time: 0</span>
+</span><span class='line'><span class="c1">;; ((1) (1 1) (1 2 1) (1 3 3 1) (1 4 6 4 1) (1 5 10 10 5 1) (1 6 15 20 15 6 1))</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/21/emacs-twittering-mode/">Emacs Twittering-mode</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-21T00:00:00+01:00" pubdate data-updated="true">Jan 21<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When my <a href="http://nambu.com/">usual Twitter client</a> stopped working last Tuesday, I got inspired by <a href="http://www.mostlymaths.net/2010/12/emacs-30-day-challenge.html">Ruben&#8217;s Emacs 30 Day Challenge</a> and decided to look what Emacs had to offer in terms of Twitter clients. On the always helpful EmacsWiki I found a <a href="http://emacswiki.org/emacs/Twitter">list of available options</a> and after some browsing settled on <a href="http://twmode.sourceforge.net/">twittering-mode</a>. I got hooked really fast, so even after getting Nambu to work again (somehow authentication got screwed up), I decided to stay with Emacs for my Twitter needs.</p>
+
+<p>Here&#8217;s a screenshot from the Emacs wiki (although I usually have the avatars turned off):</p>
+
+<p><img src="http://www.emacswiki.org/pics/static/TwitteringModeScreenshot.jpg" alt="Emacs twittering-mode" title="TwitteringMode" /></p>
+
+<p>If you also want to give this awesome mode a spin, I recommend starting at <a href="http://www.emacswiki.org/emacs/TwitteringMode">this EmacsWiki page</a>, which has installation instructions, a summary of key-bindings and options and some discussion by users.</p>
+
+<p>Here are the relevant parts of my Emacs config, with extra comments added for this post:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class='scheme'><span class='line'><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;twittering-mode</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; update every 10 minutes</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-timer-interval</span> <span class="mi">600</span><span class="p">)</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-url-show-status</span> <span class="nv">nil</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; Show character count in compose buffer</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-show-minibuffer-length</span> <span class="nv">t</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; I added is.gd support myself, pull request sent.</span>
+</span><span class='line'><span class="c1">; standard options are tinyurl and toly</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-tinyurl-service</span> <span class="ss">&#39;is</span><span class="o">.</span><span class="nv">gd</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; See http://www.reverttoconsole.com/blog/nix/twitter-mode-for-emacs-with-oauth/</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-master-password</span> <span class="nv">t</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">; This tells twittering-mode which time line buffers</span>
+</span><span class='line'><span class="c1">; to open when starting</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-initial-timeline-spec-string</span>
+</span><span class='line'>      <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;:friends&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:replies&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:direct_messages&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:search/clojure/&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:search/#jlang/&quot;</span>
+</span><span class='line'>        <span class="s">&quot;citizen428/tupaleros&quot;</span><span class="p">))</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">; some key bindings</span>
+</span><span class='line'><span class="p">(</span><span class="nf">add-hook</span> <span class="ss">&#39;twittering-mode-hook</span>
+</span><span class='line'>          <span class="p">(</span><span class="k">lambda </span><span class="p">()</span>
+</span><span class='line'>            <span class="p">(</span><span class="nf">mapc</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">pair</span><span class="p">)</span>
+</span><span class='line'>                    <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">key</span> <span class="p">(</span><span class="nb">car </span><span class="nv">pair</span><span class="p">))</span>
+</span><span class='line'>                          <span class="p">(</span><span class="nf">func</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">pair</span><span class="p">)))</span>
+</span><span class='line'>                      <span class="p">(</span><span class="nf">define-key</span> <span class="nv">twittering-mode-map</span>
+</span><span class='line'>                        <span class="p">(</span><span class="nf">read-kbd-macro</span> <span class="nv">key</span><span class="p">)</span> <span class="nv">func</span><span class="p">)))</span>
+</span><span class='line'>                  <span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;R&quot;</span> <span class="o">.</span> <span class="nv">twittering-native-retweet</span><span class="p">)</span>
+</span><span class='line'>                    <span class="p">(</span><span class="s">&quot;l&quot;</span> <span class="o">.</span> <span class="nv">twittering-goto-next-thing</span><span class="p">)))))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>TImelines</strong></p>
+
+<p>As you can see <code>twittering-initial-timeline-spec-string</code> defines which timeline buffers get opened when starting. This is really convenient, since you can use <code>f</code> and <code>b</code> to cycle through them. If you want to see only the timeline of the author of the currently active tweet hit <code>v</code>, <code>C-c C-v</code> will open the profile in a web browser. <code>V</code> gives you access to all pre-defined timelines like <code>:public</code> or <code>:retweets_of_me</code>.</p>
+
+<p><strong>Tweets</strong></p>
+
+<p>Inside a timeline <code>j</code> and <code>k</code> let you jump from tweet to tweet, whereas <code>p</code> and <code>n</code> go to the previous or next tweet by the same author. Replying to a tweet is as easy as pressing enter. I&#8217;ve rebound <code>twittering-native-retweet</code> (for &#8220;new style&#8221; retweets) to <code>R</code> instead of the somewhat unwieldy <code>C-u C-c Enter</code>, &#8220;organic&#8221; retweets are possible with <code>C-c Enter</code>. <code>r</code> opens related tweets, so it&#8217;s easy to follow conversations and <code>u</code> let&#8217;s you post a new tweet.  My favorite function is probably <code>twittering-goto-next-thing</code> (bound to <code>l</code> in my setup), which  jumps to the next username (to make it easy to visit the profile), URI, or timeline symbol (like a hashtag).</p>
+
+<p>There are many more useful functions and key combinations (like <code>i</code> for showing/hiding avatars), it&#8217;s best to look them up on the EmacsWiki page. I&#8217;m very impressed by and happy with my new Twitter client, browsing through my update stream has never been so fast and efficient.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/16/information-overload-2011-01-16/">Information Overload 2011-01-16</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-16T00:00:00+01:00" pubdate data-updated="true">Jan 16<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.sfgate.com/cgi-bin/blogs/rheingold/detail?entry_id=42805">Crap Detection 101</a><br>The next time you want to help improve someone&#8217;s information literacy, point them to this article. It may even have some interesting links for more senior sceptics.</li>
+<li><a href="http://techfemme.wordpress.com/2011/01/05/vanessa-hurst/">Vanessa Hurst, Destroying the Female Programmer Stereotype</a><br>There should be more articles like this to close the gender gap in IT. </li>
+<li><a href="http://kyrah.net/work/shades-of-grey.html" title="a Fragment">Shades of Grey</a><br>Another text asking or a more differentiated discussion of the whole Wikileaks situation. I couldn&#8217;t agree more.</li>
+<li><a href="http://dannorth.net/2011/01/11/programming-is-not-a-craft/">Programming is not a craft</a><br>Since I&#8217;m a big fan of balanced opinions, here&#8217;s an interesting contribution to the software craftsmanship discussion, as well as an <a href="http://gilesbowkett.blogspot.com/2011/01/dan-north-blah-blah-blah-blah-horseshit.html">answer</a> to that article.</li>
+<li><a href="http://www.daemonology.net/blog/2011-01-10-inequality-in-equalland.html">Inequality in Equalland</a><br>To stay with the topic of this issue here&#8217;s more food for though, this time on economic inequality.</li>
+<li><a href="http://blog.blprnt.com/blog/blprnt/your-random-numbers-getting-started-with-processing-and-data-visualization">Your Random Numbers &#8211; Getting Started with Processing and Data Visualization</a><br>With so much data out there, why not start visualizing it yourself. <a href="http://processing.org/">Processing</a> is a neat tool for that and this tutorial gives a first taste.</li>
+<li><a href="http://tbwa.com/#lsi121ci5b0q"><span class="caps">THE</span> <span class="caps">ZIMBABWEAN</span> Trillion Dollar</a><br>Awesome campaign by newspaper <a href="http://www.thezimbabwean.co.uk/">The Zimbabwean</a> </li>
+<li><a href="http://www.newyorker.com/arts/critics/atlarge/2011/01/10/110110crat_atlarge_acocella?currentPage=all">Man of Mistery</a><br>Interesting article on the success of Stieg Larsson&#8217;s &#8220;Millennium Trilogy&#8221;. Contains lots of spoilers, so don&#8217;t read this if you still want to read the books.</li>
+<li><a href="http://blog.okcupid.com/index.php/the-mathematics-of-beauty/">The Mathematics Of Beauty</a><br>Entertaining post on the OkCupid blog about male messaging behavior in regard to women&#8217;s attractiveness.</li>
+<li><a href="http://medcrun.ch/2011/01/why-physicians-don%E2%80%99t-cry/">Why Physicians Don&#8217;t Cry</a><br>Former colleague and M.D. <a href="http://twitter.com/zinnaglism">Lukas</a> published this in his new online magazine <a href="http://medcrun.ch/">MedCrunch</a>.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/11/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/9/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I&#8217;m Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+<h1>Top Posts</h1>
+<div class="postrank-widget theDarkSide">
+<script type="text/javascript" src="http://api.postrank.com/static/widget-v2.js"></script>
+<script type="text/javascript">
+var options = {
+	"feed_hash": "a424fafe1edf439bb33fd235b75bd2a5",
+	"num":        5 ,
+	"theme":     "theDarkSide",
+	"hasLink":   true
+};
+new PostRankWidget(options);
+</script>
+<div class="powered-by-postrank-wrapper">
+<div class="powered-by-postrank">
+<p class="poweredByPostRank"><a href="http://www.postrank.com/?utm_source=topposts&utm_medium=widget&utm_content=topposts&utm_campaign=pr-1"><span>Powered by Postrank</span></a></p>
+</div>
+<div class="pr_bottomCornerSet"><div class="pr_clearBottomLeft"></div><div class="pr_solidSpecialMiddle"></div><div class="pr_clearBottomRight"></div></div>
+</div>
+</div>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

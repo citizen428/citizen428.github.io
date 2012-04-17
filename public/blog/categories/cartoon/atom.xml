@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cartoon | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/cartoon/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[So true]]></title>
+    <link href="http://citizen428.net/blog/2006/09/02/so-true/"/>
+    <updated>2006-09-02T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2006/09/02/so-true</id>
+    <content type="html"><![CDATA[<p><img src="http://xkcd.com/comics/useless.jpg" border="1" />
+Source: "http://xkcd.com/c55.html":http://xkcd.com/c55.html</p>
+
+<p>Setting Orange, Bureaucracy 26, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

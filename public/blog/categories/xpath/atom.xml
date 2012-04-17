@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: xpath | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/xpath/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[XPath (good|mad)ness]]></title>
+    <link href="http://citizen428.net/blog/2007/01/04/xpath-goodmadness/"/>
+    <updated>2007-01-04T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2007/01/04/xpath-goodmadness</id>
+    <content type="html"><![CDATA[<p>Today I started writing a useful little "Greasemonkey":http://greasemonkey.mozdev.org/ "userscript":http://userscripts.org/ for a "browser-based MMRPG":http://www.pardus.at I'm playing. Although I'm no JavaScript guru I feel somewhat confident in the language and am quite fond of "XPath":http://www.w3.org/TR/xpath ever since I joined the "hoodwink.d":http://hoodwinkd.hobix.com/ community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. "funky") from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here's the working result:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var xpath = "/html/frameset/frame[@name='main']";
+</span><span class='line'>var frameResult = document.evaluate(xpath, document, null,
+</span><span class='line'>   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
+</span><span class='line'>var document2 = frameResult.contentDocument;
+</span><span class='line'>var imgResult = document2.evaluate("//img[contains(@src,'funky')]", document2, null,
+</span><span class='line'>  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Of course if any of you know sbout a better way to achieve the same result, please don't hesitate to post a comment, thanks!</p>
+
+<p>On a completely unrelated note: I'm probably the last person to find out that "Slashdot":http://sladhdot.org features random Futurama quotes in its HTTP headers, but nonetheless I find it pretty cool to find stuff like "X-Fry: The less fortunate get all the breaks!" in there!</p>
+
+<p>Setting Orange, Chaos 5, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

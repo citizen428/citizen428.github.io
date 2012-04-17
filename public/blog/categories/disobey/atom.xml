@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: disobey | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/disobey/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Irrepressible - An Amnesty International campaign]]></title>
+    <link href="http://citizen428.net/blog/2007/07/14/irrepressible-an-amnesty-international-campaign/"/>
+    <updated>2007-07-14T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2007/07/14/irrepressible-an-amnesty-international-campaign</id>
+    <content type="html"><![CDATA[<p><em>The web is a great tool for sharing ideas and freedom of expression. However, efforts to try and control the Internet are growing. Internet repression is reported in countries like China, Vietnam, Tunisia, Iran, Saudi Arabia and Syria. People are persecuted and imprisoned simply for criticising their government, calling for democracy and greater press freedom, or exposing human rights abuses, online.</em></p>
+
+<p><em>But Internet repression is not just about governments. IT companies have helped build the systems that enable surveillance and censorship to take place. Yahoo! have supplied email usersâ€™ private data to the Chinese authorities, helping to facilitate cases of wrongful imprisonment. Microsoft and Google have both complied with government demands to actively censor Chinese users of their services.</em></p>
+
+<p><em>Freedom of expression is a fundamental human right. It is one of the most precious of all rights. We should fight to protect it.</em>
+"http://irrepressible.info/about":http://irrepressible.info/about</p>
+
+<p>I've "signed the pledge":http://irrepressible.info/pledge and have "added irrepressible content":http://irrepressible.info/addcontent to this blog (in the sidebar on the left) and I encourage you to do so too!</p>
+
+<p>There are also two other petitions which I deem worthy of your support:
+"Flucht is kein Verbrechen":http://www.fluchtistkeinverbrechen.at/index.htm - Keine Schubhaft für AsylwerberInnen (in German)
+"Protect the Baltic Sea":http://www.balticsea.lt/en/ while it's still not too late!</p>
+
+<p>Setting Orange, Confusion 49, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Happy Fair Use Day!]]></title>
+    <link href="http://citizen428.net/blog/2007/07/11/happy-fair-use-day/"/>
+    <updated>2007-07-11T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2007/07/11/happy-fair-use-day</id>
+    <content type="html"><![CDATA[<p>"Fair Use Day":http://www.fairuseday.com/index.php/about-fairuse/</p>
+
+<p>Boomtime, Confusion 46, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tor mirror set up!]]></title>
+    <link href="http://citizen428.net/blog/2006/09/24/tor-mirror-set-up/"/>
+    <updated>2006-09-24T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2006/09/24/tor-mirror-set-up</id>
+    <content type="html"><![CDATA[<p>After running a "Tor":http://tor.eff.org server for more than half a year already and having donated some money to support Tor's development, I was looking for new ways to help out the project. That's why I decided to set up a mirror, which can be reached "here":http://tor.blingblingsquad.net ("dist/ mirror":http://tor.blingblingsquad.net). The initial sync is still running, but the site should be fully functional soon. Once this is finished, I'll also try to set up another mirror on the Vienna based server hosting this domain.</p>
+
+<p>Boomtime, Bureaucracy 48, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tor servers confiscated in Germany]]></title>
+    <link href="http://citizen428.net/blog/2006/09/10/tor-servers-confiscated-in-germany/"/>
+    <updated>2006-09-10T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2006/09/10/tor-servers-confiscated-in-germany</id>
+    <content type="html"><![CDATA[<p>Since I was pretty busy with personal stuff during the last few days, I hadn't noticed that two days ago German authorities started confiscating "Tor":http://tor.eff.org/ middleman servers. That changed when earlier today I received an email from the owner of a confiscated system, who wants to get in touch with other Tor admins, in order to start a kind of "Knowledge Base" for people who were affected by the recent confiscations or who (still) want to set up their own Tor server. Since I'm also running "such a baby":http://serifos.eecs.harvard.edu/cgi-bin/desc.pl?q=blingblingserver (which never was an exit node though) on a virtual server in Germany, I'm of course interested in this recent development, so I want to share the informative links provided in his mail with you.</p>
+
+<p><em>Articles/postings about the confiscations:</em>
+"Anonymisierungsserver bei Razzia beschlagnahmt":http://www.heise.de/newsticker/meldung/77915 (German)
+"Staatsanwaltschaft beschlagnahmt Anonymisierungs-Server":http://www.golem.de/0609/47702.html (German)
+"Erfolgreicher Schlag gegen die PrivatsphÃ¤re":http://de.indymedia.org/2006/09/156671.shtml (German)
+"Wie man die Anonymisierung kriminalisiert":http://rabe.supersized.org/comment.php?type=trackback&amp;entry_id=810 (German)
+Re: confiscating middleman-tor-nodes "[1]":http://archives.seul.org/or/talk/Sep-2006/msg00116.html, "[2]":http://archives.seul.org/or/talk/Sep-2006/msg00117.html &amp; "[3]":http://archives.seul.org/or/talk/Sep-2006/msg00126.html (English)
+"Staatsanwaltschaft geht gegen Tor-Server vor":http://forums.gentoo.org/viewtopic-t-496214.html (German)</p>
+
+<p><em>General info on Tor/anonymity:</em>
+"TOR web site":http://tor.eff.org/ (English, German and more)
+Wikipedia article on Tor ("English":http://en.wikipedia.org/wiki/Tor<em>%28anonymity_network%29, "German":http://de.wikipedia.org/wiki/Tor</em>%28Netzwerk%29)
+"Sicher und anonym im Internet mit Proxys":http://kai.iks-jena.de/bigb/asurf.html (German)
+"Onion Routing und Tor":http://wiki.chaostreff.ch/index.php/Onion_Routing_und_Tor (German)
+"TheOnionRouter/OperationalSecurity":http://wiki.noreply.org/noreply/TheOnionRouter/OperationalSecurity (English)</p>
+
+<p><em>Tor network overview:</em>
+"Tor Network Status":http://serifos.eecs.harvard.edu/cgi-bin/exit.pl
+"Current Tor routers":http://www.noreply.org/tor-running-routers/current.html</p>
+
+<p>Don't get me wrong, child pornography is one of the worst crimes I can think of, and I wish the German authorities all the best in finding the people they are after. I do however feel that the route taken here wasn't ideal, as it may well lead to a negative perception of Tor in the general public.</p>
+
+<p>That's why I've tripled the total amount of traffic Tor is allowed to serve on my system and "donated some money":http://tor.eff.org/donate.html.en to the project. I would advise you to do the same! Besides that I also encourage you to use Tor and promote it to other people, because anonymity is something that can't be gained, only lost.</p>
+
+<p>Pungenday, Bureaucracy 34, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Interesting times indeed...]]></title>
+    <link href="http://citizen428.net/blog/2006/04/13/interesting-times-indeed/"/>
+    <updated>2006-04-13T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2006/04/13/interesting-times-indeed</id>
+    <content type="html"><![CDATA[<p>"Jennifer Government":http://www.amazon.com/gp/product/1400030927/sr=8-1/qid=1144962014/ref=pd_bbs_1/002-7034558-6000856?%5Fencoding=UTF8 for "real":http://www.cbsnews.com/stories/2005/03/30/earlyshow/living/caught/main683960.shtml?</p>
+
+<p>Pungenday, Discord 30, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: people | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/people/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Athens is a riot!]]></title>
+    <link href="http://citizen428.net/blog/2008/01/31/athens-is-a-riot/"/>
+    <updated>2008-01-31T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2008/01/31/athens-is-a-riot</id>
+    <content type="html"><![CDATA[<p>After quitting my job and my apartment I finally left Austria last Friday. Since I found a really cheap flight with Sky Europe (22 Euro), I made Athens my first destination. For the first 4 nights I stayed at Kostas' place in Kipseli and we had loads of fun! Among the highlights were eating in tradtional taverns, going out in Psiiri (pretty cool drum'n'bass party on the first night), drinking my first "Rakomelo":http://en.wikipedia.org/wiki/Rakomelo at the CouchSurfing meeting before watching anarchists attacking police with molotows in "Exarcheia":http://en.wikipedia.org/wiki/Exarcheia, going to a party till 7.15am the next morning (and going back home in a way too crowded car), playing Go at cafes and other places, having Suvlaki on the roof of a house on the way up to Acropolis overlooking the city and smoking shisha and drinking Raki in a small Turkish bar.</p>
+
+<p>On Tuesday I moved to Natalia's and Dinos' place, where we had a really fun game evening accompanied by quite some Rakomelo (I love this drink by the way, Christmas markets in Austria better sell this once I get back!). Yesterday I finally did some touristy stuff and went to the Acropolis. To be honest the 12 Euro admission fee seems a bit much, but the stunning views over the city make up for it. After that I bumped into an Italian guy who seems to be a pretty well known scammer in the area. He is trying to lure tourists into a somewhat dodgy place called "Love Pub". Although my ingenious plan to use his own weapons against him so he would pay for my drink didn't work out, a good Ouzo and his disappointed face when I left without buying any drinks for him and the prosti...girls we "met" at this bar were definitely worth the 45 minutes I invested. There's another CS meeting tomorrow and I guess it will become a late night out again. I'm glad my flight to Istanbul isn't before 7pm on Saturday!</p>
+
+<p>Anyway, Athens is a kickass place, with good nightlife, awesome food (go eat the Tandoori chicken wraps with freshly baked bread the Indian guy in Exarcheia sells!) and attractive people in every possible demographic group you might be interested in! I've only been here for a week, but I already know that I'm going to miss this place...</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[citizen428 vs 22C3]]></title>
+    <link href="http://citizen428.net/blog/2006/01/04/citizen428-vs-22c3/"/>
+    <updated>2006-01-04T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/01/04/citizen428-vs-22c3</id>
+    <content type="html"><![CDATA[<p>"22C3":http://events.ccc.de/congress/2005/ is over since last Friday, but I needed some time to let everything sink in. Besides that I just came home from Germany this morning... Here's a list of all the talks I saw:</p>
+
+<p><em>Day 1:</em>
+Private Investigations
+Understanding buffer overflow exploitations
+Hacking CCTV
+Hacking Data Retention
+Bad TRIPs
+We lost the war
+VoIP Phreaking</p>
+
+<p><em>Day 2:</em>
+AJAX Based Web Applications
+Anonymous Data Broadcasting by Misuse of Satellite ISPs
+Digital Identity and the Ghost in the Machine
+Literarisches Code-Quartett</p>
+
+<p><em>Day 3:</em>
+COMPLETE Hard Disk Encryption with FreeBSD
+How to construct Utopia
+The truth about Nanotechnology
+Fnord JahresrÃ¼ckblick
+Hacker Jeoparday</p>
+
+<p><em>Day 4:</em>
+A discussion about modern disk encryption systems</p>
+
+<p><em>People:</em>
+"berq":http://www.berq.net/blog/, lippi and Manuel were really great company and we had a damn good time together! Thanks guys! :) "teemow":http://teemow.de/ also was at the congress, and once again we had some interesting conversations. I've also met some fellow Gentoo devs, but unfortunately we didn't talk that much. Maybe next year we once again should try to organize a more formal get-together. I've also met some nice people to play Go with, and although I still suck at this game, I really enjoyed playing it.</p>
+
+<p><em>Misc:</em>
+Get rich, because using busses for long-distance travel sucks, at least if you want to sleep. Luckily our hostel ("CityStay Berlin Mitte":http://citystay.de/) did great in that regard, and I only can recommend this place to anyone looking for a clean and cheap accomodation in Berlin.</p>
+
+<p><em>Conclusion:</em>
+22C3 definitely was good fun. I've seen interesting talks, met a lot of nice people and generally had a good time. However, I found the overall quality of the lectures not that impressive and I tried to express this sentiments via the feedback forms...</p>
+
+<p>Prickle-Prickle, Chaos 4, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

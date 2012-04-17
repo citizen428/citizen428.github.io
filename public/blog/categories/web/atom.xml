@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: web | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/web/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[unsavory — get rid of stale Delicious bookmarks]]></title>
+    <link href="http://citizen428.net/blog/2009/06/06/unsavory-%25e2%2580%2594-get-rid-of-stale-delicious-bookmarks/"/>
+    <updated>2009-06-06T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/06/06/unsavory-%e2%80%94-get-rid-of-stale-delicious-bookmarks</id>
+    <content type="html"><![CDATA[<p>While browsing through "my Delicious bookmarks":http://delicious.com/citizen428 the other day, I realized that over time I had accumulated quite a few dead links (about 5% of my collection). I then looked for a <em>simple</em> tool to automatically remove them, but couldn't find one that appealed to me, so I wrote my own script called <em>unsavory</em> which you can find on GitHub:</p>
+
+<p>"http://github.com/citizen428/unsavory/tree/master":http://github.com/citizen428/unsavory/tree/master</p>
+
+<p>It uses HTTParty to generate a list of all your bookmarks, which then get checked individually with Net::HTTP. Every link that returns an HTTP status code of 404 will automatically be removed (no questions asked, no undo), links with a status code other than 200 (OK) won't be changed but will display some information in case you want to fix them manually. Here's some example output (links anonymized for this post):</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Enter Delicious username: citizen428
+</span><span class='line'>  Enter Delicious password: *********&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  citizen428 has 664 bookmarks.
+</span><span class='line'>  Processing URL #0001: OK
+</span><span class='line'>  Processing URL #0002: OK
+</span><span class='line'>  Processing URL #0003: OK
+</span><span class='line'>  Processing URL #0004: OK
+</span><span class='line'>  Processing URL #0005: OK
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0013: 405: http://...
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0074: 302: http://...
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0086: Connection reset by peer - https://...</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Not bad for under 60 lines of code. :-) I hope this is useful to some of you, I do have some features I plan on adding to this in the future.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Create your own (Ruby) API browser in 3 easy steps]]></title>
+    <link href="http://citizen428.net/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps/"/>
+    <updated>2009-05-17T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps</id>
+    <content type="html"><![CDATA[<ul>
+  <li><b>Step 1:</b> Download "Fluid":http://fluidapp.com/, an awesome little application to create site specific browsers.</li>
+  <li><b>Step 2:</b> Find some online API documentation. For Ruby I recommend "railsapi.com":railsapi.com or "RubyBrains":http://rubybrains.com. </li>
+  <li><b>Step 3:</b> Create your app in Fluid:</li>
+
+<img src="http://citizen428.net/uploads/fluid.png" alt="Fluid" />
+</ul>
+
+
+<p>Here's an example screenshot of a site specific browser for RubyBrain.com:</p>
+
+<p><img src="http://citizen428.net/uploads/fluid_rubybrain.png" alt="Fluid RubyBrain" /></p>
+
+<p>Of course this still requires you to have a working internet connection, but you could always use a local version of the API docs when creating the app. On a related note you should also check out "Goo":http://www.robinlu.com/blog/goo which is a nice alternative to gem server on OS X.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Happy Fair Use Day!]]></title>
+    <link href="http://citizen428.net/blog/2007/07/11/happy-fair-use-day/"/>
+    <updated>2007-07-11T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2007/07/11/happy-fair-use-day</id>
+    <content type="html"><![CDATA[<p>"Fair Use Day":http://www.fairuseday.com/index.php/about-fairuse/</p>
+
+<p>Boomtime, Confusion 46, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[XPath (good|mad)ness]]></title>
+    <link href="http://citizen428.net/blog/2007/01/04/xpath-goodmadness/"/>
+    <updated>2007-01-04T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2007/01/04/xpath-goodmadness</id>
+    <content type="html"><![CDATA[<p>Today I started writing a useful little "Greasemonkey":http://greasemonkey.mozdev.org/ "userscript":http://userscripts.org/ for a "browser-based MMRPG":http://www.pardus.at I'm playing. Although I'm no JavaScript guru I feel somewhat confident in the language and am quite fond of "XPath":http://www.w3.org/TR/xpath ever since I joined the "hoodwink.d":http://hoodwinkd.hobix.com/ community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. "funky") from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here's the working result:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var xpath = "/html/frameset/frame[@name='main']";
+</span><span class='line'>var frameResult = document.evaluate(xpath, document, null,
+</span><span class='line'>   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
+</span><span class='line'>var document2 = frameResult.contentDocument;
+</span><span class='line'>var imgResult = document2.evaluate("//img[contains(@src,'funky')]", document2, null,
+</span><span class='line'>  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Of course if any of you know sbout a better way to achieve the same result, please don't hesitate to post a comment, thanks!</p>
+
+<p>On a completely unrelated note: I'm probably the last person to find out that "Slashdot":http://sladhdot.org features random Futurama quotes in its HTTP headers, but nonetheless I find it pretty cool to find stuff like "X-Fry: The less fortunate get all the breaks!" in there!</p>
+
+<p>Setting Orange, Chaos 5, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Loads of links]]></title>
+    <link href="http://citizen428.net/blog/2005/12/10/loads-of-links/"/>
+    <updated>2005-12-10T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2005/12/10/loads-of-links</id>
+    <content type="html"><![CDATA[<p>I haven't blogged for quite some time now, so I decided I could at least entertain you with one of my semi-regular link dumps until I'm motivated enough to write a proper entry again...</p>
+
+<p><em><em>Ruby</em></em></p>
+
+<p>"RadRails":http://www.radrails.org/: From a rather recent mail on "ruby-talk":http://blade.nagaokaut.ac.jp/ruby/ruby-talk/index.shtml I learned about RadRails, an IDE for (who would've guessd) "Ruby on Rails":http://www.rubyonrails.org/ which was built using the <a href="http://www.eclipse.org/rcp">Eclipse RCP</a>. Unfortunately I didn't have too much time to play with it yet, but so far it seems to be quite nice and if you're into Rails you maybe should have a look at this project.</p>
+
+<p>"eigenclass":http://eigenclass.org/: Recently "RedHanded":http://redhanded.hobix.com/ kept talking about Mauricio Fernandez' new blog called "eigenclass", which talks about a lot of really interesting and advanced Ruby stuff. Definitely an interesting read for every serious Ruby programmer and everyone who wants to become one.</p>
+
+<p>"try ruby!":http://tryruby.hobix.com/: As I found out on "poignant-stiffs":http://rubyforge.org/pipermail/poignant-stiffs/ <a href="http://whytheluckystiff.net/">why</a> is at it again, which means there's something cool coming up. Despite not involving cartoon foxes or chunky bacon, "try ruby":http://tryruby.hobix.com/ is still a really neat project, giving you the opportunity to interactively test Ruby from within your web browser. There's also a little tutorial, so this site may very well become the first stop to send Nubies to...</p>
+
+<p><em><em>Disobey</em></em></p>
+
+<p>"The Hacktivist":http://www.thehacktivist.com/: Instead of summing up what the Hacktivist is all about, I'll just give you the self-description of the project: "<i>The Hacktivist is dedicated to examining the theory and practice of hacktivism and electronic civil disobedience while contributing to the evolution of hacktivism by promoting constructive debate, effective direct action, and creative solutions to complex problems in order to facilitate positive change.</i>" - Involve yourself!</p>
+
+<p>"The World's Most Populated Countries":http://www.odt.org/Pictures/poplcart.jpg: Sometimes a new look on things helps changing your perspective in a positive way. That's why it's important to take a minute or two to think about this map of the Earth, where all the countries got resized in relation to their population.</p>
+
+<p>"Church of the Flying Spaghetti Monster":http://www.venganza.org/index.htm: This comes from an open letter to the Kansas school board: "<i> I am writing you with much concern after having read of your hearing to decide whether the alternative theory of Intelligent Design should be taught along with the theory of Evolution. [...]  Let us remember that there are multiple theories of Intelligent Design. I and many others around the world are of the strong belief that the universe was created by a Flying Spaghetti Monster. It was He who created all that we see and all that we feel. We feel strongly that the overwhelming scientific evidence pointing towards evolutionary processes is nothing but a coincidence, put in place by Him</i>". Ramen!</p>
+
+<div align="center"><a href="http://www.venganza.org"><img src="http://www.venganza.org/images/spreadword/th_jollyfish.jpg" alt="Do you believe?" /></a></div>
+
+
+<p><em><em>Relax</em></em></p>
+
+<p>"Unintentionally sexual comic book covers: Part 1":http://www.thebestpageintheuniverse.net/c.cgi?u=uscc_part1: If you know "The Best Page In The Universe":http://maddox.xmission.com/ you either love or hate Maddox. No matter to which group you belong, check out this collection of unintentionally sexual comic book covers and have a good laugh! (via <a href="http://hoodwink.d/onslaught/">hoodwink.d onslaught</a>)</p>
+
+<p>"The Website Development Process":http://www.pingmag.jp/2005/12/09/the-website-development-process/: Learn everything important there is to know about the process of developing a professional website from platic figurines. (via <a href="http://www.boingboing.net/2005/12/09/plastic_figurines_gu.html">BoingBoing</a>)</p>
+
+<p>"Squidoo":http://www.squidoo.com/: The developers of Squidoo thought that "Everyone's an expert on something", so they decided to give all of us the opportunity to share our knowledge in the form of "lenses". For all of you who are to lazy to look at the "FAQ":http://www.squidoo.com/pages/faq to find out what a lense is, here's the answer: "<I> A lens is one person's (lensmaster's) view on a topic he cares about. More specifically, a lens is a single web page filled with information and links that point to other web pages, to continually updated RSS feeds, or to relevant advertising. It's a place to start, not finish. </i>". Interesting concept, and there are some pretty cool lenses already. (via <a href="http://www.teemow.com/2005/12/07/squidoo/">teemow</a>).</p>
+
+<p>Setting Orange, The Aftermath 53, 3171 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

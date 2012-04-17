@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="To get my mind off Ruby I recently started dabbling in Haskell. I really like what I&#8217;ve seen so far and it seems I&#8217;m finally starting to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.net/blog/page/20">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+<meta name="verify-postrank" content="q9zqqyw" />
+<link rel="openid.server" href="http://www.myopenid.com/server" />
+<link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/09/learning-haskell/">Learning Haskell</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-09T00:00:00+02:00" pubdate data-updated="true">Apr 9<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To get my mind off Ruby I recently started dabbling in Haskell. I really like what I&#8217;ve seen so far and it seems I&#8217;m finally starting to understand functional programming (my two attempts with <a href="http://www.gigamonkeys.com/book/">Practical Common Lisp</a> never got past the first few chapters).</p>
+<p>In case you are interested in Haskell too, here&#8217;s a list of the resources I use:<br />
+<ul><br />
+<li><a href="http://en.wikibooks.org/wiki/Haskell">Haskell :: Functional Programming with Types</a>: A very nice <a href="http://wikibooks.org">Wikibook</a> covering a wide range of topics from the very basics to Monads, Arrows and Zippers.</li><br />
+<li><a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good</a>: A nice and colorful tutorial in the spirit of <a href="http://poignantguide.net/ruby/">Why&#8217;s (Poignant) Guide to Ruby</a></li><br />
+<li><a href="http://book.realworldhaskell.org/">Real World Haskell</a>: Yes, the entire book can be read online (including per paragraph comments!) for free! I&#8217;ve only just started reading this, since I first want to brush up my basic Haskell a bit, but once I&#8217;m past the <a href="http://projecteuler.net/">Project Euler</a> stage this is probably gonna be very nice.</li><br />
+<li><a href="http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours">Write Yourself a Scheme in 48 Hours</a>: Now that I&#8217;m slowly getting the hang of this functional programming thing, why not write an interpreter for one functional language in another? &#8220;Along the way, you&#8217;ll learn Haskell&#8217;s I/O, mutable state, dynamic typing, error handling, and parsing features. By the time you finish, you should be fairly fluent in both Haskell and Scheme&#8221;. Sounds good to me! :)</li></p>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/05/filterableenumerable/">FilterableEnumerable</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-05T00:00:00+02:00" pubdate data-updated="true">Apr 5<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My recent post on <a href="http://citizen428.net/archives/372-Enumerablefilter.html">Enumerable#filter</a> created a bit of discussion on RubyFlow, which led to a <a href="http://gist.github.com/89491">much nicer implementation than mine</a>. Enjoy!</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/01/enumerablefilter/">Enumerable#filter</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-01T00:00:00+02:00" pubdate data-updated="true">Apr 1<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>Update:</strong> Thanks to some feedback I rewrote Enumberable#filter so it doesn&#8217;t use &#8216;eval&#8217;. It&#8217;s a bit less flexible now and I also like the syntax less, but at least it doesn&#8217;t eat puppies for breakfast. As the disclaimer said, maybe it was a bad idea to begin with.</p>
+<p>As much as I like Ruby, some constructs I just don&#8217;t find too sexy, e.g.:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="o">].</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>That&#8217;s why I came up with an alternative solution which I find reads nicer than the above code:</p>
+<script src="http://gist.github.com/88836.js"></script><p>(Sorry, I really don&#8217;t care much about having this for strings)</p>
+<p>I kinda got inspired by Martin Aumont&#8217;s <a href="http://mynyml.com/15-enumerableevery/">every</a>, which allows us to use</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">enum</span><span class="o">.</span><span class="n">every</span><span class="o">.</span><span class="n">floor</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>instead of</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">enum</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span><span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">n</span><span class="o">.</span><span class="n">floor</span> <span class="p">}</span>
+</span><span class='line'><span class="ow">or</span> <span class="k">in</span> <span class="mi">1</span><span class="o">.</span><span class="mi">8</span><span class="o">.</span><span class="mi">7</span> <span class="ow">or</span> <span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">1</span>
+</span><span class='line'><span class="n">enum</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:floor</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p><i>Disclaimer: Today this seems like a pretty good idea, but I also haven&#8217;t slept much. In case this breaks in horrible ways, already exists in some other form or is stupid for some other reason I&#8217;m too tired to consider, please let me know.</i></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/27/rock-paper-scissors-in-sinatra/">Rock-paper-scissors in Sinatra</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-27T00:00:00+01:00" pubdate data-updated="true">Mar 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Just a stupid little example to demonstrate why Sinatra is cool:</p>
+<script src="http://gist.github.com/86780.js"></script></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/25/my-way-ruby-sinatra-heroku/">My Way: Ruby, Sinatra, Heroku</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-25T00:00:00+01:00" pubdate data-updated="true">Mar 25<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://rubylearning.org">RubyLearning</a> just had a nice one week introductory course on <a href="http://www.sinatrarb.com/">Sinatra</a>, a <a href="http://en.wikipedia.org/wiki/Domain-specific_programming_language"><span class="caps">DSL</span></a> for easily creating web applications. The next batch will start on May 2nd (and I&#8217;ll probably be around as a mentor again), you can <a href="http://rubylearning.org/class/course/enrol.php?id=32">join here</a> if you are interested.</p>
+<p>Anyway, since it&#8217;s so easy to write applications with Sinatra, you probably don&#8217;t want to waste time deploying them. That&#8217;s where <a href="http://heroku.com/">Heroku</a> comes into play, a Ruby hosting platform which modeled it&#8217;s workflow around <a href="http://git-scm.com/">git</a>. In my &#8211; still somewhat limited &#8211; experience working with Heroku is painless and feels very natural, kudos to the team for providing us with such a nice option for hosting <a href="http://rack.rubyforge.org/">Rack</a> based apps! In fact I liked Heroku so much, that I wrote a patch for <a href="http://quirkey.com/">Aaron Quint</a>&#8216;s <a href="http://github.com/quirkey/sinatra-gen/tree/master">sinatra-gen</a> which will initialize git and create your app on Heroku for you. It&#8217;s not in the main branch yet, but Aaron said he likes the idea and that he will include it. Up until then you can get my version from <a href="http://github.com/citizen428/sinatra-gen/tree/master">here</a>.</p>
+<p><em>Update: Said patch &#8211; in slightly modified form &#8211; is now part of mainline sinatra-gen, so I recommend getting the &#8220;official&#8221; version, not mine.</em></p>
+<p>Oh yeah, once you are done creating all this shiny new webapps in Sinatra, don&#8217;t forget to take some snapshots of them with <a href="http://github.com/jurisgalang/snapurl/tree/master">snapurl</a>, another nifty little app I recently wrote a small patch for.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/18/rubyosa-google-lyrics-for-current-itunes-track/">RubyOSA: Google Lyrics for Current iTunes Track</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-18T00:00:00+01:00" pubdate data-updated="true">Mar 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><script src="http://gist.github.com/81399.js"></script><p>Adjust to your liking. :)</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/18/create-script-from-irb-session/">Create Script From IRB Session</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-18T00:00:00+01:00" pubdate data-updated="true">Mar 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We all know the feeling: before starting a new script you hack around in <span class="caps">IRB</span> to try out some things, but once you&#8217;re done you realize that now you either have to type everything again or copy/paste from the <span class="caps">IRB</span> session (or the history file if you keep one). So I set out on my search for a solution and found an <a href="http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results">old ruby-talk post by Gavin Sinclair</a>, which implemented a method called <b>dumphist</b>, which I modified to my needs and put in my ~/.irbrc:</p>
+<script src="http://gist.github.com/71624.js"></script><p>Let&#8217;s look at the following <span class="caps">IRB</span> session:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;hello&quot;</span>
+</span><span class='line'><span class="n">hello</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;world&quot;</span>
+</span><span class='line'><span class="n">world</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="k">def</span> <span class="nf">foo</span>
+</span><span class='line'><span class="o">.</span><span class="n">.</span>   <span class="nb">puts</span> <span class="s1">&#39;bar&#39;</span>
+</span><span class='line'><span class="o">.</span><span class="n">.</span>   <span class="k">end</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">dumphist</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;test.rb&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;def foo&quot;</span><span class="p">,</span> <span class="s2">&quot;puts &#39;bar&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;end&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>The last command created a file named test.rb for us, which contains only the method foo. :-)</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/12/ruby-implementations-and-why-we-should-care/">Ruby Implementations and Why We Should Care</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-12T00:00:00+01:00" pubdate data-updated="true">Mar 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Not too lang ago our <a href="http://www.ruby-lang.org/en/">favorite language</a> had only implementation, the one made by <a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">Matz</a> (now commonly referred to as MatzRuby or <span class="caps">MRI</span>). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
+<ul>
+<li>Ruby 1.8.6: This is your trusted old Ruby 1.8.6, and while it may not be the most spectacular of the implementations listed here, it&#8217;s the most widely used Ruby interpreter around and the current de facto standard of the language.</li>
+<li>Ruby 1.9.1: Featuring the new bytecode interpreter <a href="http://en.wikipedia.org/wiki/YARV"><span class="caps">YARV</span></a>, this is the newest &#8216;official&#8217; Ruby version which gives us interesting features like improved speed, block local variables, a <a href="http://pragdave.blogs.pragprog.com/pragdave/2008/05/new-lambda-synt.html">new lambda syntax</a>, native threads and some other niceties. So while we are waiting for 1.9.1 to replace 1.8.6 as the standard Ruby interpreter (which probably will take quite a while), my advice is to install it now, play around with it, get used to the new things and <a href="http://isitruby19.com/">help the community in porting gems to 1.9</a>.</li>
+<li><a href="http://jruby.codehaus.org/">JRuby</a>: A Java implementation of Ruby, which allows developers to interact with Java classes or define them from within Ruby. It&#8217;s fast, it works well, and is a big driving force in the filed of alternative Ruby interpreters. As of now I mostly used JRuby from within &#8220;ruby-processing&#8221;:, but eventually want to have a look at <a href="http://monkeybars.rubyforge.org/">Monkeybars</a>, which  was created in order to simplify the development of <a href="http://en.wikipedia.org/wiki/Swing_(Java)">Swing</a> apps with JRuby.</li>
+<li><a href="http://rubini.us/">Rubinius</a>: Here is what the project itself has to say about its relevance for Ruby developers: <i>&#8220;A spec driven Ruby implementation. A core library written in Ruby. More first class objects than you can shake a stick at. Super easy to contribute. Low barrier to entry. If you can breathe, you can commit</i>&#8221;. So far I only used Rubinius to test some of my own scripts, but eventually would like to find the time to contribute to the project by writing new specs or trying to fix failing ones. I encourage you to do the same, since this is not only a great chance to learn more about Ruby&#8217;s internals, but also to help the Ruby community at large.</li>
+<li><a href="http://www.macruby.org/trac/wiki/MacRuby">MacRuby</a>: MacRuby is a port of Ruby 1.9 which sits directly on top of OS X core technologies. This means that when you e.g. create an Array, you get an NSMutableArray (see the output of Array.ancestors in macirb: [NSMutableArray, NSArray, Enumerable, NSObject, Kernel]). It also features <a href="http://www.macruby.org/trac/wiki/HotCocoa">HotCocoa</a> which provides mappings for common Cocoa methods thus making your MacRuby programs a lot more idiomatic. This together with the interactive way of development provided by macirb make MacRuby an interesting tool not only for Ruby developers, but also for people who want to prototype their OS X apps.</li> 
+<li><a href="http://shoooes.net/">Shoes</a>: Some people may be surprised to see Shoes in this list, and technically they are right. Shoes is not a distinct Ruby implementation, but it is a Ruby distribution (which will <a href="http://www.mail-archive.com/shoes@code.whytheluckystiff.net/msg03168.html">switch to 1.9.1 in Shoes 3</a>), which lives separated from your other Ruby interpreters, installs gems in its own location and so on. The main thing though is that Shoes provides us with an easy to learn and use, cross-platform <span class="caps">GUI</span> toolkit that makes developing in it fun! Granted, it may not be suitable for everything, but with a bit of creativity you can push it quite far. Have a look at the <a href="http://the-shoebox.org/">Shoebox</a> to see what people are doing with it.</li>
+</ul>
+<p>There are of course other Ruby implementations like <a href="http://cardinal2.rubyforge.org/">Cardinal</a> (a Ruby interpreter for <a href="http://www.parrot.org/">Parrot</a>), <a href="http://www.ironruby.net/">IronRuby</a> (Ruby for the .<span class="caps">NET</span> environment) and <a href="http://github.com/macournoyer/tinyrb/tree/master">tinyrb</a> (a tiny and fast subset of Ruby), which I won&#8217;t describe here in more detail, since I haven&#8217;t yet had time to play around with them.</p>
+<p>So why should we care? Because the various implementations create a sort of competitive spirit, therefore pushing the limits of Ruby and driving it forward, by making it faster or running on top of other VMs (JRuby, IronRuby), thus letting it leverage a plethora of established technologies and also exposing it to potential new developers. Plus we also got <a href="http://rubyspec.org/">RubySpec</a>, so potential Ruby implementors have a standard to follow.</p>
+<p>I hope you enjoyed this post, please leave comments in case you disagree with something or want to add some information!</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/10/rubinius-build-woes/">Rubinius Build Woes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-10T00:00:00+01:00" pubdate data-updated="true">Mar 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A couple of days ago I decided that I want to play around with <a href="http://rubini.us">Rubinius</a>, so I cloned the <a href="http://github.com/evanphx/rubinius/tree/master">source</a> from GitHub and thought I was ready to go. As it turned out that wasn&#8217;t quite the case, since my first attempt to build it ended in the second error can see here:</p>
+<script src="http://gist.github.com/77119.js"></script><p>I hopped into #rubinius to find out if more people have this problem, but that doesn&#8217;t seem to be the case. At least I learnt that most active develop is going into the &#8216;stackfull&#8217; branch, so I did a &#8216;git checkout origin/stackfull&#8217; and gave the build another try, which resulted in the first error message you see above.</p>
+<p>Determined not to give up, I decided to try one last time with &#8216;rake vm:clean&#8217; and &#8216;rake build:debug&#8217; and to my surprise ended up with a working Rubinius install :-)</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ bin/rbx -v
+</span><span class='line'>rubinius 0.11.0-dev (ruby 1.8.6) (f5260b581 12/31/2009) [i686-apple-darwin9.6.0]</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>That made me somewhat curious, so I tried &#8216;rake vm:clean&#8217; and &#8216;rake build&#8217; which now also worked (still can&#8217;t build master though). I have to admit that I&#8217;m slightly confused, but at least I have a working Rubinius version to play around with for the time being.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/02/27/tweet-active-safari-tab-from-command-line/">Tweet Active Safari Tab From Command Line</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-27T00:00:00+01:00" pubdate data-updated="true">Feb 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Tweeting the <span class="caps">URL</span> of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn&#8217;t already running, copy  the <span class="caps">URL</span>, shorten it, paste it into the client&#8230;</p>
+<p>I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It&#8217;s just a quick and dirty hack, feel free to change it according to your needs&#8230; :-)</p>
+<script src="http://gist.github.com/71559.js"></script></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/21/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/19/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I&#8217;m Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+<h1>Top Posts</h1>
+<div class="postrank-widget theDarkSide">
+<script type="text/javascript" src="http://api.postrank.com/static/widget-v2.js"></script>
+<script type="text/javascript">
+var options = {
+	"feed_hash": "a424fafe1edf439bb33fd235b75bd2a5",
+	"num":        5 ,
+	"theme":     "theDarkSide",
+	"hasLink":   true
+};
+new PostRankWidget(options);
+</script>
+<div class="powered-by-postrank-wrapper">
+<div class="powered-by-postrank">
+<p class="poweredByPostRank"><a href="http://www.postrank.com/?utm_source=topposts&utm_medium=widget&utm_content=topposts&utm_campaign=pr-1"><span>Powered by Postrank</span></a></p>
+</div>
+<div class="pr_bottomCornerSet"><div class="pr_clearBottomLeft"></div><div class="pr_solidSpecialMiddle"></div><div class="pr_clearBottomRight"></div></div>
+</div>
+</div>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

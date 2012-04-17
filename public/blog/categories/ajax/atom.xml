@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ajax | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/ajax/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby: All your web are belong to us]]></title>
+    <link href="http://citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us/"/>
+    <updated>2005-11-06T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us</id>
+    <content type="html"><![CDATA[<p>When it comes to Ruby, I've recently mostly been blogging about "Nitro":http://www.nitrohq.com/, which I think will be a really great framework for writing web applications once it matures a little more. For the next version (0.25.0) the developers plan to concentrate on bug fixing, code cleanup and refactoring, as well as documentation. The current development version - which following my suggestion is now called Glycerin - can be fetched from a "Darcs repository":http://repo.nitrohq.com/, so there shouldn't be anything stopping you from valuable contributions! ;)</p>
+
+<p>Ok, after my usual Nitro evangelism, it's time to finally talk about the other excellent web framework Ruby has to offer: "Ruby on Rails":http://www.rubyonrails.com/. I haven't used it for quite some time now, but when I got bored a few days ago, I decided to once again start playing around with it. I've done some googling and found some nice articles, so here's my suggested reading list for the aspiring Rails programmer (please note that this list doesn't include docs from the official site, because they're easy enough to find):</p>
+
+<ol>
+<li><p>"MVC: The Most Vexing Conundrum":http://www.slash7.com/articles/2005/02/22/mvc-the-most-vexing-conundrum: Befrore you do anything with Rails, head over to Amy Hoy's blog, and read her explanation of "MVC":http://en.wikipedia.org/wiki/MVC, the "design pattern":http://en.wikipedia.org/wiki/Software_design_pattern Rails is following. I think it's really important to wrap your head around the underlying principles of a framework before you start to use it, so make sure you really understand what Amy's trying to tell you.</p></li>
+<li><p>"Rolling with Ruby on Rails":http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html: Once you got the basic principles, it's time to visit "ONLamp":http://www.onlamp.com/ to read Curt  Hibbs nice introductory article. It doesn't really go into much detail, but I'm sure it will wet your appetite...</p></li>
+<li><p>"Really Getting Started in Rails":http://www.slash7.com/articles/2005/01/24/really-getting-started-in-rails: Now that you're rolling with Rails, it's time to go back to Amy's site. There you'll find this nice article that is meant as an addition to the previously mentioned "Rolling with Ruby on Rails", explaining some of the whys and hows Curt had to leave out to keep his text short and to the point.</p></li>
+<li><p>"Rolling with Ruby on Rails, Part 2":http://www.onlamp.com/pub/a/onlamp/2005/03/03/rails.html: Do you start to see a pattern here? Correct, it's Curt's turn again. In the second part of his introductory Rails article, he finishes off the cookbook application from the first part, before giving pointers to some of the more interesting features of Rails, like caching, transactions, testing, generators and so on.</p></li>
+<li><p>"Four Days on Rails":http://rails.homelinux.org/: Now that you should have a basic understanding of how Rails works, you should definitely check out this excellent HOWTO by John McCreesh: "<i>It's about 40 pages formatted for double-sided printing on A4, and by the time you've read it, you should have a useful toolbox of Rails techniques and a good idea of where to look on the web for more information</i>".</p></li>
+</ol>
+
+
+<p>If you take your time to carefully read this stuff, you should be pretty much up to speed in Rails development in less than a week! Don't be passive while reading the articles, but start writing you own little app and constantly improve it while you learn. Once you feel comfortable with the basic principles, you can read some of the more advanced stuff, like "Ajax on Rails":http://www.onlamp.com/pub/a/onlamp/2005/06/09/rails_ajax.html, "REST on Rails":http://www.xml.com/pub/a/2005/11/02/rest-on-rails.html, "Ajaxariffic Autocomplete with Scriptaculous":http://www.slash7.com/articles/2005/08/13/ajaxariffic-autocomplete-with-scriptaculous  or the Rails articles "why the lucky stuff":http://whytheluckystiff.net/ publishes on "RedHanded":http://redhanded.hobix.com/. Have fun!</p>
+]]></content>
+  </entry>
+  
+</feed>

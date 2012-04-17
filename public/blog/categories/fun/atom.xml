@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: fun | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/fun/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Links for free]]></title>
+    <link href="http://citizen428.net/blog/2006/01/22/links-for-free/"/>
+    <updated>2006-01-22T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/01/22/links-for-free</id>
+    <content type="html"><![CDATA[<p>I just noticed that I haven't blogged much lately, so the least I can do is put together one of my random link dumps for you:</p>
+
+<p><em>Tech Stuff:</em></p>
+
+<ul>
+<li>"FLPR":http://flpr.org/: 
+Sure, LAMP (Linux, Apache, MySQL, PHP) has proven itself to be a pretty neat platform for web development. However, there are people who disagree with one or more of the choices implied by the acronym, and yours truly is one of them. If you want to learn a little more about alternative technologies head over to FLPR to read up on web development with FreeBSD, lighttpd, PostgreSQL and Ruby on Rails.</li>
+
+<li>"Speaking the Lingo":http://onestepback.org/articles/lingo/index.html: 
+A nice presentation on creating "domain specific languages":http://en.wikipedia.org/wiki/Domain_Specific_Language with Ruby</li>
+
+<li>"Why Good Programmer's Are Lazy and Dumb":http://blog.outer-court.com/archive/2005-08-24-n14.html: 
+Ok, almost everybody already knows that good programmers exactly know when to be lazy and dumb, but the article is still a good read for poor folks like me who are lazy and dumb without being overly good programmers...</li>
+</ul>
+
+
+<p><em>Fun:</em></p>
+
+<ul>
+<li>"Semapedia":http://semapedia.org/: 
+Hyperlinking Wikipedia articles in meatspace is what this cool project is doing. Interesting stuff, as soon as time permits I'll have to play around with this a little more!</li>
+
+<li>"What's My Pirate Name?":http://www.fidius.org/quiz/pirate/:
+Everyone should have his own pirate name...</li>
+
+<li>"ColdPizza":http://www.groklaw.net/article.php?story=20060104161112858: 
+A nice parody of Coldplay's recent "DRM-EULA":http://itch.in/journal/bad-bad-coldplay.
+</li>
+</ul>
+
+
+<p>Boomtime, Chaos 22, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let me entertain you]]></title>
+    <link href="http://citizen428.net/blog/2005/11/07/let-me-entertain-you/"/>
+    <updated>2005-11-07T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2005/11/07/let-me-entertain-you</id>
+    <content type="html"><![CDATA[<p>Once again I try to avoid doing the things I'm actually supposed to do, so here's another issue of "citizen428's random tidbits".</p>
+
+<ul>
+<li>"Principia Discordia":http://www.principiadiscordia.com/: "<i>How I Found Goddess And What I Did To Her When I Found Her. Wherein is Explained Absolutely Everything Worth Knowing About Absolutely Anything</i>". I'm maybe the last person to find this decent online edition of the Principia, but stuff like this happens when you get abducted by time-travelling dolphins before being right in the middle of a government conspiracy. Or was it just the anual meeting of the "Rodeo Clown":http://www.salary.com/careers/layouthtmls/crel_display_Cat10_Ser185_Par284.html Society? Fnord!</li>
+
+<li>"1000 Blank White Cards":http://www.geocities.com/nconner23/bwcards.html: "<I>1000 Blank White Cards is a card game, the purpose of which is to create the cards you're playing with.</i>". Personally I find this really cool: you start out with white cards, and everybody has to draw his or her own cards. I want to try out this game as soon as possible, and I'll make sure to tell you about it afterwards...</li>
+
+<li>"Writing Science Fiction and Fantasy":http://www.writesf.com/: This guide on writing decent SciFi and Fantasy stories is for free, but the author requested that if you like it, you should tell another aspiring writer about it, and buy two of his books. As I currently don't have the money for the latter, I thought I can at least use my blog to reach some more aspiring writers. (via <a href="http://www.boingboing.net/2005/11/03/free_online_sf_writi.html">BoingBoing</a>)</li>
+
+<li>"MouseHole":http://mousehole.rubyforge.org/wiki/wiki.pl?MouseHole: "<i>MouseHole is a personal web proxy written in Ruby designed to be simple to script. Scripts can rewrite the web as you view it, altering content and behavior as you browse. Basically, it's an alternative to Greasemonkey, which does similar things from inside the Firefox web browser</i>". I've been playing around with this for around a week now, and I have to say that I really like it. Don't be afraid, "why":http://whytheluckystiff.net/ is involved, so there's chunky bacon for all!</li>
+
+<li>"The Kawasaki Method":http://presentationzen.blogs.com/presentationzen/2005/09/the_kawasaki_me.html and "The Takahashi Method":http://presentationzen.blogs.com/presentationzen/2005/09/living_large_ta.html: Uncle  Lecture needs you! And he surely doesn't want your average PowerPoint food soldier, but instead he's looking for highly trained and deadly presentation ninjas. (via I-can't-remember-but-if-in-doubt-blame-BoingBoing) </i>
+
+<li>Random geeky stuff: "moo.fx":http://www2.meebo.com/ - <I>" a superlightweight, ultratiny, megasmall javascript effects library, written with prototype.js</i>"; "meebo":http://www2.meebo.com/ - Web 2.0 Instant Messaging. Buzzwordy, but looking nice; "Selenium":http://selenium.thoughtworks.com/ - <i> a test tool for web applications. Selenium tests run directly in a browsers, just as real users do</i></li>
+
+<li>Update on cool stuff (tm): The "third episode of NCY2123":http://www.nyc2123.com/issue3/ has been released and part two of "When Sysadmins Ruled the World":http://craphound.com/000549.html is up on Cory's web site. Both rock as usual.</li>
+</ul>
+
+
+<p>Well, that's it for today, don't kill any puppets while I'm away.</p>
+
+
+<p>Sweetmorn, The Aftermath 19, 3171 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

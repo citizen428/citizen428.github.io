@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Clojure: Deriving the Y Combinator in 7 Stolen Steps  - citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Fixed point combinators are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+<meta name="verify-postrank" content="q9zqqyw" />
+<link rel="openid.server" href="http://www.myopenid.com/server" />
+<link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Clojure: Deriving the Y Combinator in 7 Stolen Steps</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-14T00:00:00+01:00" pubdate data-updated="true">Dec 14<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/Fixed_point_combinator">Fixed point combinators</a> are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that don&#8217;t explicitly support it. This might be slightly academic, but that doesn&#8217;t make it less fun.</p>
+<p>The most well-known fixed point combinator is probably <a href="http://en.wikipedia.org/wiki/Haskell_Curry">Haskell B. Curry&#8217;s</a> <a href="http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator">Y combinator</a>, which will be the topic of this post. If you read <a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825">The Little Schemer</a> &#8211; which I whole-heartedly recommend doing by the way &#8211; you already implemented it once, but if you are like me chances are you didn&#8217;t entirely get it the first time around. So when I found this nice post on <a href="http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html">Deriving the Y Combinator in 7 Easy Steps</a>, I decided to &#8220;translate&#8221; it from JavaScript to Clojure.</p>
+<p><strong>Step 1</strong></p>
+<p>Let&#8217;s start with a &#8220;classical&#8221; recursive factorial function (while we are at it, I think factorial is a way better example for a fold than for recursion, but everybody seems to do this):<br />
+<script src="https://gist.github.com/741070.js?file=ycombinator-step1.clj"></script></p>
+<p><strong>Step 2</strong></p>
+<p>Now if we wouldn&#8217;t have explicit recursion, what could we do? One solution would be to call a function with itself as an argument, then call this argument with itself as an argument and on and on until the stack blows. Not so useful. To avoid this, we write a <a href="http://en.wikipedia.org/wiki/Higher-order_function">higher-order function</a> which will return a function taking a numeric argument, which will then be used to calculate the factorial:</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step2.clj"></script><p><strong>Step 3</strong></p>
+<p>While the above code works, all that duplicated code is really quite ugly, don&#8217;t you think? Let&#8217;s write a little helper to avoid that (I was too lazy for a proper <a href="http://richhickey.github.com/clojure/clojure.core-api.html#clojure.core/refer-clojure">refer-clojure</a> statement, so I decided to name the helper &#8220;yrecur&#8221; instead of &#8220;recur&#8221;):</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step3.clj"></script><p><strong>Step 4</strong></p>
+<p>This is better, but the double function call in the body of &#8220;fact&#8221; is still kinda ugly. Let&#8217;s hide this within another helper function called &#8220;g&#8221;,  which has to be definied inside the closure of &#8220;f&#8221; in order to be able to call this function:</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step4.clj"></script><p><strong>Step 5</strong></p>
+<p>Now we are getting somewhere! To make our factorial function look almost like the original recursive version, we can factor out some code to a separate wrapper:</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step5.clj"></script><p><strong>Step 6</strong></p>
+<p>Instead of actually binding our helper from step 4 to &#8220;g&#8221;, we just inline it since it&#8217;s only called once anyway:</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step6.clj"></script><p><strong>Step 7</strong></p>
+<p>Last but not least we also inline the wrapper from step 5, et voila, the Y combinator:</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step7.clj"></script></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Kohl</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-14T00:00:00+01:00" pubdate data-updated="true">Dec 14<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/clojure/'>clojure</a>, <a class='category' href='/blog/categories/programming/'>programming</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+    <a class="FlattrButton" style="display:none;"
+    title="Clojure: Deriving the Y Combinator in 7 Stolen Steps "
+    data-flattr-uid="citizen428"
+    data-flattr-tags=""
+    data-flattr-button="compact"
+    data-flattr-category="text"
+    href="http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/">
+    
+</a>
+
+  
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/12/12/information-overload-2010-12-12/" title="Previous Post: Information Overload 2010-12-12">&laquo; Information Overload 2010-12-12</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/12/19/information-overload-2010-12-19/" title="next Post: Information Overload 2010-12-19">Information Overload 2010-12-19 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I'm Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+<h1>Top Posts</h1>
+<div class="postrank-widget theDarkSide">
+<script type="text/javascript" src="http://api.postrank.com/static/widget-v2.js"></script>
+<script type="text/javascript">
+var options = {
+	"feed_hash": "a424fafe1edf439bb33fd235b75bd2a5",
+	"num":        5 ,
+	"theme":     "theDarkSide",
+	"hasLink":   true
+};
+new PostRankWidget(options);
+</script>
+<div class="powered-by-postrank-wrapper">
+<div class="powered-by-postrank">
+<p class="poweredByPostRank"><a href="http://www.postrank.com/?utm_source=topposts&utm_medium=widget&utm_content=topposts&utm_campaign=pr-1"><span>Powered by Postrank</span></a></p>
+</div>
+<div class="pr_bottomCornerSet"><div class="pr_clearBottomLeft"></div><div class="pr_solidSpecialMiddle"></div><div class="pr_clearBottomRight"></div></div>
+</div>
+</div>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/';
+        var disqus_url = 'http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

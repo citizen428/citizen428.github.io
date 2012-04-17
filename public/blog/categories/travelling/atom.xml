@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: travelling | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/travelling/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[HOWTO: Discover a country you never planned seeing]]></title>
+    <link href="http://citizen428.net/blog/2007/03/02/howto-discover-a-country-you-never-planned-seeing/"/>
+    <updated>2007-03-02T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2007/03/02/howto-discover-a-country-you-never-planned-seeing</id>
+    <content type="html"><![CDATA[<p>Step 1. Be bored at worked.
+Step 2. Get attracted by a <a href="http://www1.skyeurope.com/en/ commercial">discount airline</a>'s commercial in your favorite online newspaper.
+Step 3. Discover that flights to "Bucharest":http://en.wikipedia.org/wiki/Bucharest are incredibly cheap and decide to go there for a weekend in April.
+Step 4. This is the crucial step: Don't pay attention while booking the flight and choose the wrong date for your return flight, so you end up booking 1,5 weeks in Romania.</p>
+
+<p>Summary: "Christian":http://luchmhor.net and me will go to Romania from April 20th until April 30th. Wish us luck/fun/whatever.</p>
+
+<p>Sweetmorn, Chaos 61, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Summer Chaos]]></title>
+    <link href="http://citizen428.net/blog/2007/01/25/summer-chaos/"/>
+    <updated>2007-01-25T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2007/01/25/summer-chaos</id>
+    <content type="html"><![CDATA[<p>The date and location for the "Chaos Communication Camp 2007":http://events.ccc.de/camp/ have now been confirmed! Hope to see you all there!</p>
+
+<p>Setting Orange, Chaos 25, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[citizen428 vs 22C3]]></title>
+    <link href="http://citizen428.net/blog/2006/01/04/citizen428-vs-22c3/"/>
+    <updated>2006-01-04T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2006/01/04/citizen428-vs-22c3</id>
+    <content type="html"><![CDATA[<p>"22C3":http://events.ccc.de/congress/2005/ is over since last Friday, but I needed some time to let everything sink in. Besides that I just came home from Germany this morning... Here's a list of all the talks I saw:</p>
+
+<p><em>Day 1:</em>
+Private Investigations
+Understanding buffer overflow exploitations
+Hacking CCTV
+Hacking Data Retention
+Bad TRIPs
+We lost the war
+VoIP Phreaking</p>
+
+<p><em>Day 2:</em>
+AJAX Based Web Applications
+Anonymous Data Broadcasting by Misuse of Satellite ISPs
+Digital Identity and the Ghost in the Machine
+Literarisches Code-Quartett</p>
+
+<p><em>Day 3:</em>
+COMPLETE Hard Disk Encryption with FreeBSD
+How to construct Utopia
+The truth about Nanotechnology
+Fnord JahresrÃ¼ckblick
+Hacker Jeoparday</p>
+
+<p><em>Day 4:</em>
+A discussion about modern disk encryption systems</p>
+
+<p><em>People:</em>
+"berq":http://www.berq.net/blog/, lippi and Manuel were really great company and we had a damn good time together! Thanks guys! :) "teemow":http://teemow.de/ also was at the congress, and once again we had some interesting conversations. I've also met some fellow Gentoo devs, but unfortunately we didn't talk that much. Maybe next year we once again should try to organize a more formal get-together. I've also met some nice people to play Go with, and although I still suck at this game, I really enjoyed playing it.</p>
+
+<p><em>Misc:</em>
+Get rich, because using busses for long-distance travel sucks, at least if you want to sleep. Luckily our hostel ("CityStay Berlin Mitte":http://citystay.de/) did great in that regard, and I only can recommend this place to anyone looking for a clean and cheap accomodation in Berlin.</p>
+
+<p><em>Conclusion:</em>
+22C3 definitely was good fun. I've seen interesting talks, met a lot of nice people and generally had a good time. However, I found the overall quality of the lectures not that impressive and I tried to express this sentiments via the feedback forms...</p>
+
+<p>Prickle-Prickle, Chaos 4, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

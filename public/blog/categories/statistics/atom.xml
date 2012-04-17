@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: statistics | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/statistics/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-03-27]]></title>
+    <link href="http://citizen428.net/blog/2011/03/27/information-overload-2011-03-27/"/>
+    <updated>2011-03-27T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/03/27/information-overload-2011-03-27</id>
+    <content type="html"><![CDATA[<ul>
+<li>"60 Worst Countries in the World":http://www.news-world.us/pics/2010/08/22/60-worst-countries-in-the-world/<br>Although I find the name of this article a bit unfortunate, this is a sobering list of the world's worst off countries.</li>
+<li>"Europe by numbers: the complete interactive guide":http://www.guardian.co.uk/world/interactive/2011/mar/14/new-europe-statistics-interactive<br>Great interactive statistics about various aspects of life in Europe.</li>
+<li>"Timeboxing: You Will Work Like Never Before":http://www.mostlymaths.net/2010/06/timeboxing-you-will-work-like-never.html<br>Ruben from "Mostly Maths":http://www.mostlymaths.net/ explains his time management strategy.</li>
+<li>"How Carrots Became the New Junk Food":http://www.fastcompany.com/node/1739774/print<br>On how a US marketing company tries to market baby carrots as junk food to increase sales.</li>
+<li>"Why defend freedom of icky speech?":http://journal.neilgaiman.com/2008/12/why-defend-freedom-of-icky-speech.html<br>Excellent post by Neil Gaiman on why defending of free speech also has to mean defending the rights of things you don't agree with.</li>
+<li>"A Conversation between Two Chat Bots":http://www.yiransheng.com/2010/03/bot<br>This makes for some hilarious dialogue and I really hope "Your conversation skills should be shot." catches on as an internet meme. ;-)</li>
+<li>"How to Feed the World by 2050: Biotech Isn't the Answer":http://www.theatlantic.com/life/archive/2011/03/how-to-feed-the-world-by-2050-biotech-isnt-the-answer/72768/<br>I like it when people can talk rationally about emotionally charged subjects.</li>
+<li>"Do Not Touch the Frog":http://wsf.tv/videos/spotlight_do_not_touch_the_frog<br>Very funny talk from World Science Festival about <a href="http://wsf.tv/participants/mark_moffett">Mark Moffet</a>'s search for an elusive poison dart frog.</li>
+<li>"The editorial search engine":http://jonathanstray.com/the-editorial-search-engine<br>Journalist Jonathan Stray thinks about the future role of algorithmic curation in the newsroom.</li>
+<li>"A Practical Guide to Protecting Your Identity and Security Online and When Using Mobile Phones.":https://www.accessnow.org/pages/protecting-your-security-online<br>Originally written for the people in the Middle East and North Africa, this document is a good resource for many people (available in English and Arabic).</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

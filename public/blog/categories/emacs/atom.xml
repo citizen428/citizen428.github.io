@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: emacs | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/emacs/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Emacs twittering-mode]]></title>
+    <link href="http://citizen428.net/blog/2011/01/21/emacs-twittering-mode/"/>
+    <updated>2011-01-21T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/01/21/emacs-twittering-mode</id>
+    <content type="html"><![CDATA[<p>When my <a href="http://nambu.com/">usual Twitter client</a> stopped working last Tuesday, I got inspired by <a href="http://www.mostlymaths.net/2010/12/emacs-30-day-challenge.html">Ruben's Emacs 30 Day Challenge</a> and decided to look what Emacs had to offer in terms of Twitter clients. On the always helpful EmacsWiki I found a <a href="http://emacswiki.org/emacs/Twitter">list of available options</a> and after some browsing settled on <a href="http://twmode.sourceforge.net/">twittering-mode</a>. I got hooked really fast, so even after getting Nambu to work again (somehow authentication got screwed up), I decided to stay with Emacs for my Twitter needs.</p>
+
+<p>Here's a screenshot from the Emacs wiki (although I usually have the avatars turned off):</p>
+
+<p><img src="http://www.emacswiki.org/pics/static/TwitteringModeScreenshot.jpg" alt="Emacs twittering-mode" title="TwitteringMode" /></p>
+
+<p>If you also want to give this awesome mode a spin, I recommend starting at <a href="http://www.emacswiki.org/emacs/TwitteringMode">this EmacsWiki page</a>, which has installation instructions, a summary of key-bindings and options and some discussion by users.</p>
+
+<p>Here are the relevant parts of my Emacs config, with extra comments added for this post:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='scheme'><span class='line'><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;twittering-mode</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; update every 10 minutes</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-timer-interval</span> <span class="mi">600</span><span class="p">)</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-url-show-status</span> <span class="nv">nil</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; Show character count in compose buffer</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-show-minibuffer-length</span> <span class="nv">t</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; I added is.gd support myself, pull request sent.</span>
+</span><span class='line'><span class="c1">; standard options are tinyurl and toly</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-tinyurl-service</span> <span class="ss">&#39;is</span><span class="o">.</span><span class="nv">gd</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; See http://www.reverttoconsole.com/blog/nix/twitter-mode-for-emacs-with-oauth/</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-master-password</span> <span class="nv">t</span><span class="p">)</span><span class="nv">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">&lt;p&gt;</span><span class="c1">; This tells twittering-mode which time line buffers</span>
+</span><span class='line'><span class="c1">; to open when starting</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-initial-timeline-spec-string&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">&lt;pre&gt;&lt;code&gt;</span>  <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;:friends&quot;</span>
+</span><span class='line'>    <span class="s">&quot;:replies&quot;</span>
+</span><span class='line'>    <span class="s">&quot;:direct_messages&quot;</span>
+</span><span class='line'>    <span class="s">&quot;:search/clojure/&quot;</span>
+</span><span class='line'>    <span class="s">&quot;:search/#jlang/&quot;</span>
+</span><span class='line'>    <span class="s">&quot;citizen428/tupaleros&quot;</span><span class="p">))</span>
+</span><span class='line'><span class="nv">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">&lt;p&gt;</span><span class="c1">; some key bindings</span>
+</span><span class='line'><span class="p">(</span><span class="nf">add-hook</span> <span class="ss">&#39;twittering-mode-hook&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">&lt;pre&gt;&lt;code&gt;</span>      <span class="p">(</span><span class="k">lambda </span><span class="p">()</span>
+</span><span class='line'>        <span class="p">(</span><span class="nf">mapc</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">pair</span><span class="p">)</span>
+</span><span class='line'>                <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">key</span> <span class="p">(</span><span class="nb">car </span><span class="nv">pair</span><span class="p">))</span>
+</span><span class='line'>                      <span class="p">(</span><span class="nf">func</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">pair</span><span class="p">)))</span>
+</span><span class='line'>                  <span class="p">(</span><span class="nf">define-key</span> <span class="nv">twittering-mode-map</span>
+</span><span class='line'>                    <span class="p">(</span><span class="nf">read-kbd-macro</span> <span class="nv">key</span><span class="p">)</span> <span class="nv">func</span><span class="p">)))</span>
+</span><span class='line'>              <span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;R&quot;</span> <span class="o">.</span> <span class="nv">twittering-native-retweet</span><span class="p">)</span>
+</span><span class='line'>                <span class="p">(</span><span class="s">&quot;l&quot;</span> <span class="o">.</span> <span class="nv">twittering-goto-next-thing</span><span class="p">)))))</span>
+</span><span class='line'><span class="nv">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><strong>TImelines</strong></p>
+
+<p>As you can see <code>twittering-initial-timeline-spec-string</code> defines which timeline buffers get opened when starting. This is really convenient, since you can use <code>f</code> and <code>b</code> to cycle through them. If you want to see only the timeline of the author of the currently active tweet hit <code>v</code>, <code>C-c C-v</code> will open the profile in a web browser. <code>V</code> gives you access to all pre-defined timelines like <code>:public</code> or <code>:retweets_of_me</code>.</p>
+
+<p><strong>Tweets</strong></p>
+
+<p>Inside a timeline <code>j</code> and <code>k</code> let you jump from tweet to tweet, whereas <code>p</code> and <code>n</code> go to the previous or next tweet by the same author. Replying to a tweet is as easy as pressing enter. I've rebound <code>twittering-native-retweet</code> (for "new style" retweets) to <code>R</code> instead of the somewhat unwieldy <code>C-u C-c Enter</code>, "organic" retweets are possible with <code>C-c Enter</code>. <code>r</code> opens related tweets, so it's easy to follow conversations and <code>u</code> let's you post a new tweet.  My favorite function is probably <code>twittering-goto-next-thing</code> (bound to <code>l</code> in my setup), which  jumps to the next username (to make it easy to visit the profile), URI, or timeline symbol (like a hashtag).</p>
+
+<p>There are many more useful functions and key combinations (like <code>i</code> for showing/hiding avatars), it's best to look them up on the EmacsWiki page. I'm very impressed by and happy with my new Twitter client, browsing through my update stream has never been so fast and efficient.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[emacsclient on OS X]]></title>
+    <link href="http://citizen428.net/blog/2010/09/22/emacsclient-on-os-x/"/>
+    <updated>2010-09-22T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2010/09/22/emacsclient-on-os-x</id>
+    <content type="html"><![CDATA[<p>If you are running a non-system Emacs on OS X and have tried to use "emacsclient", you may have seen the following error message despite having started the Emacs server:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>emacsclient: can't find socket; have you started the server?
+</span><span class='line'>To start the server in Emacs, type "M-x server-start".
+</span><span class='line'>emacsclient: No socket or alternate editor.  Please use:&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>--socket-name
+</span><span class='line'>--server-file      (or environment variable EMACS_SERVER_FILE)
+</span><span class='line'>--alternate-editor (or environment variable ALTERNATE_EDITOR)
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This doesn't work because you are invoking "/usr/bin/emacsclient" which came with the OS, instead of "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient". This can easily be fixed by symlinking the latter to "/usr/local/bin/emacsclient" and making sure that "/usr/local/bin" is listed in your path before "/usr/bin".</p>
+
+<p>Not a big deal, but it took me a couple of minutes to figure out and I thought I might as well save others some time...</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Emacs for Rubyists]]></title>
+    <link href="http://citizen428.net/blog/2010/07/06/emacs-for-rubyists/"/>
+    <updated>2010-07-06T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2010/07/06/emacs-for-rubyists</id>
+    <content type="html"><![CDATA[<p>If you are interested in using Emacs for Ruby development, here are the relevant parts from my config file with some additional comments:</p>
+
+<script src="http://gist.github.com/465950.js?file=gistfile1.cl"></script>
+
+
+<p>I use this setup at work every day and am very happy with it, but if you have any additional suggestions please leave a comment!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fullscreen Emacs on MacOS X]]></title>
+    <link href="http://citizen428.net/blog/2010/06/26/fullscreen-emacs-on-macos-x/"/>
+    <updated>2010-06-26T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2010/06/26/fullscreen-emacs-on-macos-x</id>
+    <content type="html"><![CDATA[<p>After years of being an avid Vim user, I recently succumbed to the temptation of Emacs and haven't looked back since. Now that I slowly understand the concept of "living in Emacs", I also wanted a fullscreen mode. Turns out you'll have to patch and build Emacs yourself for that if you are on OSX, so here's a step by step guide on what I did to build the current Git HEAD ("About Emacs" reports the version as 24.0.50 by the way) with fullscreen support, based on <a href="http://www.sanityinc.com/full-screen-support-for-cocoa-emacs-on-osx">Steve Purcell's post</a> from last January:</p>
+
+<script src="http://gist.github.com/454018.js?file=gistfile1.sh"></script>
+
+
+<p>To toggle fullscreen mode call "M-x ns-toggle-fullscreen", which I have bound to "M-RET". Looking forward to try this on 1920x1080 at work on Monday!</p>
+
+<p>If you can't be bothered to build Emacs yourself, you can <a href="http://dl.dropbox.com/u/8492251/Emacs.zip">download the version I built</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Easy setup for Clojure on Mac OS X Leopard]]></title>
+    <link href="http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
+    <updated>2009-08-24T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
+    <content type="html"><![CDATA[<p>"Clojure":http://clojure.org/ definitely is one of the hottest new programming languages around and just recently hit a "very important milestone":http://clojure.blogspot.com/2009/05/clojure-10.html. Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand "one of those":http://github.com/carlism/Clojure-MacOSX/tree into "ClojureX":http://github.com/citizen428/ClojureX/tree/master, which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
+
+<p>ClojureX can</p>
+
+<ul>
+<li> download and build the source code for Clojure, "clojure-contrib":http://github.com/richhickey/clojure-contrib/tree/master and "JLine":http://jline.sourceforge.net/ (a readline like library for Java)</li>
+
+<li> download editor support packages for TextMate and Emacs</li>
+
+<li> create a symlink for the Clojure startup script in /usr/local/bin</li>
+
+<li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
+
+<li> configure Emacs to use "clojure-mode":http://github.com/jochu/clojure-mode/tree/master, "Slime":http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
+
+<li> keep your Clojure installation up to date via a simple "git submodule update && ant"</li>
+</ul>
+
+
+<p>I hope this will come in handy for other people interested in trying out Clojure on Mac OS X, if you have any feedback please post it in the comment section.</p>
+]]></content>
+  </entry>
+  
+</feed>

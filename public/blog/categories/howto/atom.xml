@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: howto | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/howto/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[HOWTO: Become a Mac bitch in 3 easy steps]]></title>
+    <link href="http://citizen428.net/blog/2007/01/05/howto-become-a-mac-bitch-in-3-easy-steps/"/>
+    <updated>2007-01-05T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2007/01/05/howto-become-a-mac-bitch-in-3-easy-steps</id>
+    <content type="html"><![CDATA[<ol>
+<li>Get intrigued by the low prices of the Intel based Mac Minis and use them as an excuse to finally buy your first Mac.</li>
+<li>While on holidays in Hong Kong (or any place else without a VAT), get yourself a black 8GB iPod Nano to go along with the Mini. Again, use the comparatively cheap price as an excuse.</li>
+<li>When your boss offers you a bonus, insist on getting payed in hardware and choose a black MacBook.</li>
+</ol>
+
+
+<p>Been there, done that, loving it! ;)</p>
+
+<p>Sweetmorn, Chaos 6, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

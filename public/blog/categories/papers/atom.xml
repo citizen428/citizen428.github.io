@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: papers | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/papers/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tom and Michael vs. John Von Neumann]]></title>
+    <link href="http://citizen428.net/blog/2011/10/23/tom-and-michael-vs-john-von-neumann/"/>
+    <updated>2011-10-23T19:55:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/10/23/tom-and-michael-vs-john-von-neumann</id>
+    <content type="html"><![CDATA[<p>In case you wonder if <a href="http://mrjaba.posterous.com/">Tom</a> and I gave up on <a href="http://citizen428.net/blog/categories/versus/">reading papers</a>, the answer is a resounding no! In fact there's one we finished sometime around mid-September, which for various reasons hasn't been summarized yet. This is about to change.</p>
+
+<p><strong>The paper</strong></p>
+
+<p>The paper in questions was <a href="http://www.stanford.edu/class/cs242/readings/backus.pdf">"Can Programming Be Liberated from the von Neumann Style?"</a>, a <a href="http://en.wikipedia.org/wiki/Turing_Award">Turing Award</a> lecture by <a href="http://en.wikipedia.org/wiki/John_Backus">John Backus</a>.</p>
+
+<p><strong> A very brief summary</strong></p>
+
+<p>At the core of his lecture, Backus argues in favor of functional/applicative programming. This is done by first exploring shortcomings and bottlenecks in the <a href="http://en.wikipedia.org/wiki/Von_Neumann_architecture">von Neumann architecture</a>, followed by an exploration of concepts from his own <a href="http://en.wikipedia.org/wiki/FP_(programming_language">FP</a>) (Function Programming) language.</p>
+
+<p><strong> Difficulty of the paper</strong></p>
+
+<p>Generally this is very easy to read, and provides good food for thought, even today. The more mathematical parts in the middle might deter some readers, but aren't really that important.</p>
+
+<p><strong>Takeaway</strong></p>
+
+<p>Alas the age of the paper shows a bit. While some of the points are still valid, there undoubtedly is a much wider appreciation of the benefits of applicative style programming nowadays, as can be seen by various functional languages slowly finding their way into the mainstream. It's still very interesting to see how early Backus already thought about all of this though, and also that the language he envisioned seemed to be more in line with the <a href="http://en.wikipedia.org/wiki/Apl">APL</a> school of thought that e.g. Haskell, which in all fairness wasn't around back then. I wonder how Backus felt about the latter,  which can be very declarative (see <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a>). For example, here is the inner product function from section 5 of the paper translated to Haskell:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="nf">ip</span> <span class="ow">::</span> <span class="p">[[</span><span class="kt">Integer</span><span class="p">]]</span> <span class="ow">-&gt;</span> <span class="kt">Integer</span>
+</span><span class='line'><span class="nf">ip</span> <span class="ow">=</span> <span class="n">sum</span> <span class="o">.</span> <span class="n">map</span> <span class="n">product</span> <span class="o">.</span> <span class="n">transpose</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>If you like programming languages and also like to think about them, and learn about their history, this is an interesting paper to read. Also it's quite ironic that Backus actually won in large parts for his contributions to Fortran, a language that influenced so many other imperative languages.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tom and Michael vs The Good Grief Algorithm]]></title>
+    <link href="http://citizen428.net/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm/"/>
+    <updated>2011-07-30T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm</id>
+    <content type="html"><![CDATA[<p>This week "Tom":http://mrjaba.posterous.com/ &mdash; who is now a happily married man :-) &mdash; and yours truly finally read another paper and since I'm sick and barely left bed for the last 2 days I decided to fight my boredom by writing about it.</p>
+
+<p><em>The paper</em>
+"Multiple Aspect Ranking using the Good Grief Algorithm" by Benjamin Snyder and Regina Barzilay from the MIT CS and AI Lab.</p>
+
+<ul>
+<li>"Paper":http://people.csail.mit.edu/regina/my_papers/ggranker.ps</li>
+<li>"Presentation":http://pages.cs.wisc.edu/~bsnyder/presentations/naacl07.pdf</li>
+<li>"Data and code":http://people.csail.mit.edu/bsnyder/naacl07/</li>
+</ul>
+
+
+<p><em>Summary</em>
+The paper is in the field of sentiment analysis &mdash; extracting opinions from a text &mdash; and uses restaurant reviews as a corpus. The prime assumption is that such texts will contain more than one opinion (e.g. quality of food, price range, interior, quality of service), which the authors believe is not properly reflected by previous work in this area, where one opinion per text is assumed.</p>
+
+<p>The problem the authors try to solve is assigning a rank from a fixed scale (e.g. 1-5) to several related aspects. They dismiss the easy approach of treating every aspect as a separate ranking problem, since they believe that a real text relates the different aspects in a coherent way (e.g. through phrases like "but", "one problem was" etc.).</p>
+
+<p>They built on previous work in the natural language processing field, namely linear models trained with <a href="http://en.wikipedia.org/wiki/Perceptron">"Perceptron"</a> and extended this framework with a sort of "meta-model" that predicts relations (agreement or disagreement) between the individually ranked aspects. By relating the different aspects in such a way, it's easier to reflect the contrasting views in real text like "good BUT pricey" in a meaningful way.</p>
+
+<p>What follows is some math, where each input (a review) gets assigned an m-dimensional ranking vector (reflecting m aspects). For example if you try to rank 3 different aspects (food, service, price) on a scale of 1-5 a ranking vector might look like &lt;5,5,3> ("food and service were great, but it was a bit pricey"). The joint ranking model then combines the individual ranks with an "agreement model" to introduce "grief terms" which express dissatisfaction in a certain aspect. The algorithm than tries to minimize the sum of this "grief" &mdash; which is what gave the algorithm its name &mdash; in a joint rank. This step then gets incorporated into the training of the individual rankers (there's some pseudo-code for the joint training), where features of an aspect get represented through presence or absence of words and word "bigrams":http://en.wikipedia.org/wiki/Bigram. This is obviously a very simplified description of the algorithm, but it seems moot to repeat the entire math here, which is very well laid out in the presentation. There's also a very nice illustration about decoding and relating the various aspects at the end of the PDF.</p>
+
+<p>What then follows is a comparison of the Good Grief algorithm with similar algorithms on a corpus of 4500 restaurant reviews ranking restaurants on 5 different aspects, where it outperforms the "competition" in a statistically relevant way.</p>
+
+<p><em>Takeaway</em>
+As someone who works in an area where sentiment analyses could come in handy I do have an interest in the topic, but alas we don't have the time and resources to develop our own system to do this properly. I once hacked something together with JRuby and the OpenNLP library, which wasn't really sentiment analysis but an attempt to extract useful phrases from reviews. It was crude and had its faults, but worked surprisingly well for the amount of time it took to write. It did however get abandoned in a prototype stage and after reading the paper it's quite clear to me that that probably was a good choice. Sentiment analysis is a non-trivial problem that can't properly be tackled in the ad-hoc fashion we tried. Should this topic ever resurface at my company I'll definitely try to go for a more elaborate and scientific approach.</p>
+
+<p><em>Difficulty of the paper</em>
+I know that for some people the math might look scary, but if you take some time and look at it carefully you'll notice that it's actually rather simple. It probably doesn't hurt to be acquainted with some basic concepts of NLP and machine learning, but if you have those it's quite an enjoyable paper even if you are not an absolute crack in the field.</p>
+
+<p><em>Further reading</em></p>
+
+<ul>
+    <li>"Natural language processing":http://en.wikipedia.org/wiki/Natural_language_processing</li>
+
+    <li>"Sentiment analysis":http://en.wikipedia.org/wiki/Sentiment_analysis</li>
+
+    <li>"OpenNLP":http://incubator.apache.org/opennlp/</li>
+
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tom and Michael vs Prototypical Inheritance]]></title>
+    <link href="http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/"/>
+    <updated>2011-07-11T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance</id>
+    <content type="html"><![CDATA[<p>"Tom":http://mrjaba.posterous.com/ and I read another paper, this time on prototypical inheritance: "Organizing Programs Without Classes":http://selflanguage.org/documentation/published/organizing-programs.html. You can find his post "here":http://mrjaba.posterous.com/organizing-programs-without-classes and I have to admit that he also did almost the entire summary this time whereas I only added some minor things and code examples.</p>
+
+<p><strong>Summary</strong></p>
+
+<p>OOP is a paradigm which uses "objects" to encapsulate behavior and state in a programming language. This can be accomplished in a few ways, two of the more popular being class based and prototype based object orientation. In class based object models (e.g. Java) a class will be written to define the behavior and state that the object will embody. A class can be inherited from and extended to provide new functionality. In prototype based object models (e.g. ECMAScript, Io), there are no classes, only objects which can be cloned and altered to provide new features. Here's a quick comparison of the two approaches in Ruby and ECMAScript:</p>
+
+<p>Ruby:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;define a class&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">Hello</span>
+</span><span class='line'>   <span class="k">def</span> <span class="nf">hello</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt; puts &quot;Hello&quot;</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;   end</span>
+</span><span class='line'><span class="sr">end #=&gt; nil&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">create</span> <span class="n">an</span> <span class="n">object</span> <span class="n">instance</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;h = Hello.new #=&gt; #&amp;lt;Hello:0x00000100a2f520&gt;&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">call</span> <span class="n">a</span> <span class="nb">method</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;h.hello #=&gt; nil</span>
+</span><span class='line'><span class="sr">Hello</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>ECMAScript:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// create object using a function</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">Hello</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">hello</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span> <span class="p">}</span> <span class="p">};</span>
+</span><span class='line'><span class="c1">// create instance</span>
+</span><span class='line'><span class="nx">h</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Hello</span><span class="p">();</span>
+</span><span class='line'><span class="nx">h</span><span class="p">.</span><span class="nx">hello</span><span class="p">();</span> <span class="c1">// pops up an alert</span>
+</span><span class='line'><span class="c1">// alternatively we can use an object literal</span>
+</span><span class='line'><span class="nx">h</span> <span class="o">=</span> <span class="p">{</span><span class="nx">hello</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span> <span class="p">}</span> <span class="p">};</span>
+</span><span class='line'><span class="nx">h</span><span class="p">.</span><span class="nx">hello</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Class based inheritance purports many organizational benefits. Do prototype based languages share them? The paper looks at each benefit in turn and shows approaches to add these features into classless languages or even improve upon them.</p>
+
+<p><em>Behaviour Sharing:
+</em>In class based programming languages code re-use is easy, you can inherit from a class and you'll get access to that class's methods and member variables.</p>
+
+<p>In prototype based languages a clone/copy method is written on a prototypical object which can define which data members and methods are copied to the new object. This idea can be refined to an object whose sole purpose is to supply behavior, a trait. This can be a parent object of the new object to provide its functionality. As this trait object is shared amongst all clones, any changes to it affect the clones, just as with the class and subclass of class based programming. Here's an example on behavior sharing in a prototype based language (Io):</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">A</span> <span class="o">:=</span> <span class="nb">Object</span> <span class="nx">clone</span>
+</span><span class='line'><span class="nx">A</span> <span class="nx">m</span> <span class="o">:=</span> <span class="nx">method</span><span class="p">(</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;in A\n&quot;</span><span class="p">))</span>
+</span><span class='line'><span class="nx">A</span> <span class="nx">m</span>
+</span><span class='line'><span class="nx">B</span> <span class="o">:=</span> <span class="nx">A</span> <span class="nx">clone</span>
+</span><span class='line'><span class="nx">B</span> <span class="nx">m</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This will print:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>in A
+</span><span class='line'>in B
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><em>Representation Sharing:</em>
+In class based languages, subclassing gives the child class access to the member variables of the parent, its representation. In prototype based languages, a trait object provides only behavior, not data. This job is performed by a prototype instance of the object, one every other object will be cloned from. Its clone method will copy across its data slots (member variables) with any default values the programmer has provided. This is called a "Data Parent".</p>
+
+<p>In Ruby:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">A</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;@member = &quot;fred&quot;</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
+</span><span class='line'><span class="sr"> def method_a</span>
+</span><span class='line'><span class="sr">   puts &quot;in A with </span><span class="si">#{</span><span class="vi">@member</span><span class="si">}</span><span class="sr">&quot;</span>
+</span><span class='line'><span class="sr"> end</span>
+</span><span class='line'><span class="sr">end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">B</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">A</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">method_b</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;puts &quot;in B with </span><span class="si">#{</span><span class="vi">@member</span><span class="si">}</span><span class="sr">&quot;</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
+</span><span class='line'><span class="sr">end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">A</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">method_a</span>
+</span><span class='line'><span class="n">B</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">method_b</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;in A with fred&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="k">in</span> <span class="n">B</span> <span class="n">with</span> <span class="n">fred</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>In IO:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Food</span> <span class="o">:=</span> <span class="nb">Object</span> <span class="nx">clone</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">pizza</span> <span class="o">:=</span> <span class="nx">Food</span> <span class="nx">clone</span>
+</span><span class='line'><span class="nx">pizza</span> <span class="nx">name</span> <span class="o">:=</span> <span class="s2">&quot;Meat Feast&quot;</span>
+</span><span class='line'><span class="nx">pizza</span> <span class="nx">price</span> <span class="o">:=</span> <span class="mi">10</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">pasta</span> <span class="o">:=</span> <span class="nx">pizza</span> <span class="nx">clone</span>
+</span><span class='line'><span class="nx">pasta</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Macaroni Cheese&quot;</span>
+</span><span class='line'><span class="nx">pasta</span> <span class="nx">price</span> <span class="o">=</span> <span class="mi">5</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<em>Dynamic Behaviour Changes - Changing an instance's class and dynamic inheritance:
+</em><em>Tom:</em> This was a section of particular interest, mainly because I think it's not quite as skewed as they portray it. The idea is that because in a prototype based model the reference to the parent object (traits, data) is simply a reference it can be changed very easily depending on the state the object is in. This provides new functionality as the object goes through its life. In a class based model, changing an instance's class is difficult at best and not a good idea, however the idea of changing behavior based on state is still a useful concept. The authors however seem to miss the concept of composition and delegation, it's next to trivial to change the behavior of an object simply by changing the object that is providing a function, just take a look at the Strategy Pattern for an example.
+<em>Michael:</em> This paper is from 1991, the "Gang of Four book on Design Patterns":http://en.wikipedia.org/wiki/Design_Patterns from 1994, so I guess you're blaming the authors for not knowing about something that hasn't been published when they wrote their paper.
+<em>Tom:</em> Fair point! I wonder when the concept of delegation was first coined?
+<em>Michael:</em> According to <a href="http://en.wikipedia.org/wiki/Delegation_(programming)">Wikipedia</a> in a paper from 1986, "Using Prototypical Objects to Implement Shared Behavior in Object-Oriented Systems".</p>
+
+<p>In ECMAScript:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">circle</span><span class="p">(){}</span>
+</span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">circle</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">ellipse</span><span class="p">(){}</span>
+</span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">ellipse</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Changing the prototype can entirely change the behavior of an object.</p>
+
+<p><em>Naming and Categorising:
+</em>This feature is vital in any nontrivial system, without being able to find code to serve its purpose the programmer would be constantly rewriting the same code over and over. Class based languages tend to provide a globally accessible name for a set of functions. They also tend to provide namespaces to prevent naming collisions or categorisation. Prototype based languages need to be able to access the prototype anywhere in the system to be cloned, but as they are just regular objects, they have no internal names. The authors of the paper propose that namespace objects can be used to fill this need. Essentially a globally accessible hash map, which can contain nested namespace objects to provide categorisation. This later emerged as a fairly common pattern in ECMAScript.</p>
+
+<p>In Ruby:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">A</span><span class="p">;</span> <span class="k">end</span>
+</span><span class='line'><span class="n">A</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;A&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+A is a globally defined constant which points to an Object.</p>
+
+<p>In ECMAScript:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">TopLevel</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">TopLevel</span> <span class="o">||</span> <span class="p">{}</span>
+</span><span class='line'><span class="nx">TopLevel</span><span class="p">.</span><span class="nx">SecondLevel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">member</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">function</span> <span class="nx">memberMethod</span><span class="p">(){</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Note that TopLevel is simply an object literal.</p>
+
+<p>The naming of these type of systems is highly dependent on the structure of the system, this type of naming is called Extensional naming. Intensional naming is the term given to systems where the name of classes is defined by the programmer and not necessarily related to the structure of the system. The authors claim that Extensional naming has a few key advantages:</p>
+
+<p>1) It's free with a classless language; no other constructs are required for this behaviour to work.
+2) The names are also expressions, and as this is code it can have additional interpretations.
+3) Intensional naming can become inconsistent quite easily.</p>
+
+<p>Tom's not convinced any of these reasons are actually advantages: 1) just because a system comes with a feature doesn't mean you should use it if there is a better alternative available - prototype based models don't seem to have much of an alternative. 2) because it is code and not a simple lookup this is more complicated and has more potential for error. 3) this is probably valid. Changing a class name does require it to be updated everywhere in the system, but with refactoring tools this is mitigated.</p>
+
+<p><strong>Conclusion:
+</strong>This was a pretty interesting paper. Personally I've always been drawn to Io, but never got past the "playing around" stage with it. Checking out Self also is on my todo list. I think there's a certain elegance to prototype based object orientation and I'd like to research it a bit more.</p>
+
+<p><strong>Further reading:</strong></p>
+
+<ul><li><a href="http://en.wikipedia.org/wiki/Self_(programming_language)" title="Self">Self</a></li><li><a href="http://en.wikipedia.org/wiki/Javascript" title="Javascript">Javascript</a></li><li><a href="http://en.wikipedia.org/wiki/Io_(programming_language)" title="Io">Io</a></li><li><a href="http://en.wikipedia.org/wiki/Prototype_based" title="Protoype based object orientation">Protoype based object orientation</a></li><li><a href="http://en.wikipedia.org/wiki/Trait_(computer_programming)" title="Trait">Trait</a></li></ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tom and Michael vs The Monad]]></title>
+    <link href="http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad/"/>
+    <updated>2011-05-18T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad</id>
+    <content type="html"><![CDATA[<p>So, over the last few weeks "Tom Crinson":http://mrjaba.posterous.com/ and I read another paper, this time "The essence of functional programming" (available "here":http://homepages.inf.ed.ac.uk/wadler/topics/monads.html) by Philip Wadler, one of the principal designers of Haskell. Tom's post is "here":http://mrjaba.posterous.com/michael-and-tom-vs-the-monad.</p>
+
+<p><strong>The paper</strong></p>
+
+<p>Don't let yourself be fooled by the title, this is <strong>not</strong> an introduction to functional programming or lambda calculus. Instead it talks about monads, a topic one reads a lot about and that's often made out to be a lot more complicated than it really is.</p>
+
+<p>The whole paper is 23 pages long, so I won't really summarize it all, but rather try to give you an idea if it might be an interesting read for you. Section 1 lays out some basics and explains the difference between pure and impure code. In section 2 the reader finally encounters the monad, defined using the usual triple <em>(M, unitM, bindM)</em>. After that we see several versions of a simple call-by-value interpreter, demonstrating various well-known monads (identity, state, error, list etc), as well as a rewrite of the interpreter to implement call-by-name semantics. For some more theory Wadler lays down the monadic laws and provides a definition of monads in terms of <em>mapM</em> and <em>joinM</em>.  He also mentions that list comprehension notation generalizes to arbitrary monads, which I found to be quite interesting. Section 3 introduces continuation passing style (CPS) and its relation to monads, before section 4 talks about the influence of monads on Haskell, including some cool info tidbits about early Haskell versions that seem to lack do-notation and the bind operator (the paper is from 1992 after all). Last but not least there's the wrap-up and the work is put in context of other research.</p>
+
+<p><strong>Takeaway</strong></p>
+
+<p>Monads are not rocket science, they are just another tool in a programmer's toolbox, especially of a programmer in a pure functional language. In the end, a monad really isn't much more than a formalized computation, following certain rules like "I put in an A and get out a B, so what ever comes next has to take a B". Ok, maybe that was a bit oversimplified, but it's definitely not magic. In fact I wrote up an explanation for Tom, trying to get the basic idea across:</p>
+
+<blockquote>
+
+If you imagine a Monad as some sort of box, UnitM is what puts an item into the box. Bind extracts such a value (M a), processes it with a function (a -> M b) and returns another item in a box (M b). Why is that cool, because you can't leave the box! If you think about it - and that's an oversimplification - it's a bit like aligning your types so you can chain method calls (just that Unit and Bind have to follow the Monadic laws). Imagine in Ruby you have an intermediary result but instead of returning a plain value OR an array, you always make sure to return [*values]. This way you can chain anything that expects an array, no matter how many intermediary values there were. That's a bit like having an item wrapped up in some sort of array monad (once again, we are in oversimplification land here, but maybe the analogy helps).
+
+</blockquote>
+
+
+<p><strong>Difficulty of the paper</strong></p>
+
+<p>The author states that he assumes no previous knowledge of category theory or Haskell (the language used in the examples), but judging Tom's reaction to the paper, I'm not convinced by that. For somebody who has seen Haskell before and/or has a basic understanding of Monads already this is a pretty good and easy to follow read though.</p>
+
+<p><strong>Q&amp;A</strong></p>
+
+<p>Since Tom had some trouble with the paper - but bravely fought his way through it - we exchanged quite some emails on the actual content. This is cool, because it's exactly the reason we are doing this! First we needed to get some Haskell syntax out of the way:</p>
+
+<blockquote>
+
+Let's do it slow with actual Haskell (this is a stupid function though, you could just do add = (+)):
+
+add :: Int -> Int -> Int
+add x y = x + y
+
+This means that "add" is a function that takes two "Ints" and returns an "Int". The value after the last -> is the actual return value of the function. If you wonder about the intermediate arrows, that's because Haskell functions technically only take one argument and return a new function which takes another argument etc.
+
+So what happens when you call
+
+add 5 6
+
+is that "add" gets applied to the argument 5, which returns another function that looks roughly like (add y = 5 + y) which in the end returns the number 11. This is a result of Haskell being based on the lambda calculus, where the equivalent expression would be \x.\y.x+y. For practical purposes it's enough to remember the following though: whatever goes before the last -> are the arguments to the function, the thing after the last -> is the return type.
+
+What about polymorphic functions? Easy:
+
+add :: (Num a) => a -> a -> a
+add x y = x + y
+
+Here we just say that we take 2 arguments of type "a" and return another "a", with the constraint that "a" has to be numeric. 
+
+Since it also is covered in the paper, here's an example of a higher order function, good old map (that's the same as Ruby's map):
+
+map :: (a -> b) -> [a] -> [b]
+map f []     = []
+map f (x:xs) = f x : map f xs
+
+This basically tells us that "map" takes two arguments. The first is itself a one-argument function ((a -> b)) the second a list of values ([a]) and we return another list of values ([b]). Note that "a" and "b" can be the same type, but don't have to be.
+
+</blockquote>
+
+
+<p><em>Could you please, as simply as possible, define a Monad?</em>
+I have to quote Brian Beckman on that, "Monads are a theory for interacting things". Or to paraphrase, Monads are an abstraction that allows you to define how the various stages of a computation interact. It's a sequence of operations, put into context.</p>
+
+<p><em>What would you use a Monad for?</em>
+As seen in the paper, Monads are quite a flexible abstraction and can be used for many different things (take for example the "MapReduce Monad":http://haskell.org/haskellwiki/MapReduce_as_a_monad). Personally I've never used one outside of my limited Haskell experience, but .Net developers may find it interesting to know that "LINQ":http://msdn.microsoft.com/en-us/library/bb397926.aspx is a monad (more on that "here":http://devhawk.net/2008/07/30/monadic-philosophy-part-2-the-linq-monad/).</p>
+
+<p><em>Can I use them in Ruby?</em>
+You can, in fact there's a link listed below that shows simple Monads implemented in Ruby. It's more a question of how useful they actually are in a mostly object oriented language that allows for side-effects.</p>
+
+<p><em>If I wanted to learn more about this sort of thing where should I go?</em>
+Brian Beckman recorded an "awesome 67 minute video":http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads on the topic, which is probably the best introduction I ever saw.</p>
+
+<p><strong>Links</strong></p>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Monad_(functional_programming)">Wikipedia: Monad (functional programming)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Continuation-passing_style">Wikipedia: Continuation-passing style</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Call-with-current-continuation">Call-with-current-continuation</a></li>
+<li><a href="http://www.ruby-doc.org/core/classes/Kernel.html#M001422">call/cc in Ruby</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_comprehension">Wikipedia: List comprehension</a></li>
+<li><a href="http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads">Brian Beckman: Don't fear the Monad</a></li>
+<li><a href="http://moonbase.rydia.net/mental/writings/programming/monads-in-ruby/00introduction.html">Monads in Ruby</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tom and Michael vs Google's MapReduce]]></title>
+    <link href="http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce/"/>
+    <updated>2011-05-02T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce</id>
+    <content type="html"><![CDATA[<p>The other day on Twitter I complained about my own laziness when it comes to reading academic papers, and "Tom Crinson":http://mrjaba.posterous.com/ chimed in to let me know that he'd also like to read more of them. That's how we decided to set up a sort of online based reading group for this type of thing, where we'll choose a paper to read, discuss it via email and then blog about it ("Tom's post is here":http://mrjaba.posterous.com/mapreduce-simplified-data-processing-on-large).</p>
+
+<p>The first in this series of blog posts is about Google's "MapReduce":http://en.wikipedia.org/wiki/MapReduce framework:</p>
+
+<p><strong>MapReduce: Simplified Data Processing on Large Clusters</strong></p>
+
+<p>"The paper":http://labs.google.com/papers/mapreduce.html and "a presentation based on the paper":http://labs.google.com/papers/mapreduce-osdi04-slides/index.html</p>
+
+<p><strong>Summary (by Tom Crinson)</strong></p>
+
+<p>This is a paper on an architectural software paradigm and framework that Google uses to process or generate vast amounts of data on commodity hardware.</p>
+
+<p>The basic elements are that each task is split into two stages:</p>
+
+<ul>
+<li>Mapping - a user defined processing task is applied to each job and converted to an intermediate key value format.</li>
+
+<li>Reducing - a second stage of processing takes in the intermediate output from the mapping stage and performs user defined aggregation functions to generate the desired output.</li>
+</ul>
+
+
+<p>The paper indicates that many different types of tasks can be split up in this way. Obvious ones for Google are processing pages, indexes and links etc, but people are also using the framework to do artificial intelligence tasks. This variety proofs the flexibility of the paradigm.</p>
+
+<p>The idea itself is pretty simple, we do it a lot in day to day programming: get a set of data, do some operation on all of the elements and then perform some kind of aggregation; sum for example. Google just took it one step further and on a huge scale. They talk about setting up clusters of thousands of machines to do the processing. This is where their framework comes in.</p>
+
+<p>The framework takes all of the pain out of distributing the tasks, setting workers onto individual jobs and handling input and output from each. It also takes care of the nitty gritty of fault tolerance, so for example if a worker dies the master process will notice and assign another worker to re-execute all of the tasks that the dead worker had done. The master will also take care of dealing with de-duplicating the jobs so your results are as they should be. It also has a pretty nice feature to handle "stragglers" (slow tasks): the framework preemptively sets another set of workers to duplicate the effort on the last few jobs just in case there is an issue with a worker machine that is slowing the process down. This was shown to have a huge effect in task completion time, an increase of something like 44% was seen without the backup processing.</p>
+
+<p>In case of master failure the whole process stops, but as it goes along the master has been setting "checkpoints" so in case of a crash, a new master can be started up and can continue on from the last checkpoint. This is a manual process though as the user should probably check to see if any of the input caused the failure.</p>
+
+<p>Another very handy feature is bad record detection. If there is a spurious data element that for some reason causes a worker to hang repeatedly, the master is notified and on the next attempt to process that record set, the bad record is skipped.</p>
+
+<p>There are some other key elements to the system, like splitting he input so it can be assigned to the different workers. This has a default hash function on the key, but can be user specified if you don't simply want hash(key) mod numWorkers as this is quite simplistic. See an article on consistent hashing for alternatives and why it's bad. The input data tends to consist of just input files, however an API is exposed to allow custom data providers which is a nice feature.</p>
+
+<p><strong>Takeaway</strong></p>
+
+<p>For me the key takeaway was the following sentence: <em>"[it] allows programmers who have no experience with distributed and/or parallel systems to exploit large amounts of resources easily"</em>, which basically means that MapReduce tries to take an inherently complex task and abstracts all the difficult bits away, so that programmers can focus solely on the data manipulation/transformation aspects.</p>
+
+<p><strong>Difficulty of the paper</strong></p>
+
+<p>Very easy. It's a simple textual description of MapReduce including good examples. There's basically no math and the language is easy to understand and not full of computer science jargon, so even less technical oriented people should be able to understand most of it. The presentation also serves an excellent summary.</p>
+
+<p><strong>Examples and further reading, food for thought</strong></p>
+
+<p>I hacked together a little something in IRB to illustrate the basic workings of the algorithm (it's not perfect, but good enough for our purposes):</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;words = &quot;foo bar baz qux foo bar lala&quot;&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;=&gt;</span> <span class="s2">&quot;foo bar baz qux foo bar lala&quot;</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;map (user-supplied)&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;.</span><span class="n">.</span>   <span class="n">mapped</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/ /</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="o">|</span> <span class="o">[</span><span class="n">w</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; [[&quot;foo&quot;, 1], [&quot;bar&quot;, 1], [&quot;baz&quot;, 1], [&quot;qux&quot;, 1], [&quot;foo&quot;, 1], [&quot;bar&quot;, 1], [&quot;lala&quot;, 1]]&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">aggregate</span> <span class="p">(</span><span class="n">built</span><span class="o">-</span><span class="k">in</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;..   aggregated = mapped.group_by { |w, c| w }&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;=&gt;</span> <span class="p">{</span><span class="s2">&quot;foo&quot;</span><span class="o">=&gt;[[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="o">=&gt;[[</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">,</span> <span class="s2">&quot;baz&quot;</span><span class="o">=&gt;[[</span><span class="s2">&quot;baz&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">,</span> <span class="s2">&quot;qux&quot;</span><span class="o">=&gt;[[</span><span class="s2">&quot;qux&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">,</span> <span class="s2">&quot;lala&quot;</span><span class="o">=&gt;[[</span><span class="s2">&quot;lala&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;reduce (user-supplied)&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">aggregated</span><span class="o">.</span><span class="n">each_with_object</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">),</span> <span class="n">h</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="ss">:last</span><span class="p">)</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; {&quot;foo&quot;=&gt;2, &quot;bar&quot;=&gt;2, &quot;baz&quot;=&gt;1, &quot;qux&quot;=&gt;1, &quot;lala&quot;=&gt;1}&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote>
+
+<p>When thinking about the algorithm a bit more, it also dawned on me that MapReduce sounds a lot like a "Monad":http://en.wikipedia.org/wiki/Monad. When I started searching for this, it soon turned out that someone else had the same idea:</p>
+
+<p>"MapReduce as a monad":http://haskell.org/haskellwiki/MapReduce_as_a_monad</p>
+
+<p>Then there's also a nice article I found on this last week, more or less by accident:</p>
+
+<p>"Map / Reduce - A visual explanation":http://ayende.com/Blog/archive/2010/03/14/map-reduce-ndash-a-visual-explanation.aspx</p>
+
+<p>Last but not least some links to MapReduce related frameworks and libraries:</p>
+
+<p>"Hadoop":http://hadoop.apache.org/
+"BashReduce":https://github.com/erikfrey/bashreduce
+"Skynet":http://skynet.rubyforge.org/
+"Cascalog":https://github.com/nathanmarz/cascalog</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ruby implementations and why we should care - citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Not too lang ago our favorite language had only implementation, the one made by Matz (now commonly referred to as MatzRuby or MRI). This has changed &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+<meta name="verify-postrank" content="q9zqqyw" />
+<link rel="openid.server" href="http://www.myopenid.com/server" />
+<link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Ruby Implementations and Why We Should Care</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-12T00:00:00+01:00" pubdate data-updated="true">Mar 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Not too lang ago our <a href="http://www.ruby-lang.org/en/">favorite language</a> had only implementation, the one made by <a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">Matz</a> (now commonly referred to as MatzRuby or <span class="caps">MRI</span>). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
+<ul>
+<li>Ruby 1.8.6: This is your trusted old Ruby 1.8.6, and while it may not be the most spectacular of the implementations listed here, it&#8217;s the most widely used Ruby interpreter around and the current de facto standard of the language.</li>
+<li>Ruby 1.9.1: Featuring the new bytecode interpreter <a href="http://en.wikipedia.org/wiki/YARV"><span class="caps">YARV</span></a>, this is the newest &#8216;official&#8217; Ruby version which gives us interesting features like improved speed, block local variables, a <a href="http://pragdave.blogs.pragprog.com/pragdave/2008/05/new-lambda-synt.html">new lambda syntax</a>, native threads and some other niceties. So while we are waiting for 1.9.1 to replace 1.8.6 as the standard Ruby interpreter (which probably will take quite a while), my advice is to install it now, play around with it, get used to the new things and <a href="http://isitruby19.com/">help the community in porting gems to 1.9</a>.</li>
+<li><a href="http://jruby.codehaus.org/">JRuby</a>: A Java implementation of Ruby, which allows developers to interact with Java classes or define them from within Ruby. It&#8217;s fast, it works well, and is a big driving force in the filed of alternative Ruby interpreters. As of now I mostly used JRuby from within &#8220;ruby-processing&#8221;:, but eventually want to have a look at <a href="http://monkeybars.rubyforge.org/">Monkeybars</a>, which  was created in order to simplify the development of <a href="http://en.wikipedia.org/wiki/Swing_(Java)">Swing</a> apps with JRuby.</li>
+<li><a href="http://rubini.us/">Rubinius</a>: Here is what the project itself has to say about its relevance for Ruby developers: <i>&#8220;A spec driven Ruby implementation. A core library written in Ruby. More first class objects than you can shake a stick at. Super easy to contribute. Low barrier to entry. If you can breathe, you can commit</i>&#8221;. So far I only used Rubinius to test some of my own scripts, but eventually would like to find the time to contribute to the project by writing new specs or trying to fix failing ones. I encourage you to do the same, since this is not only a great chance to learn more about Ruby&#8217;s internals, but also to help the Ruby community at large.</li>
+<li><a href="http://www.macruby.org/trac/wiki/MacRuby">MacRuby</a>: MacRuby is a port of Ruby 1.9 which sits directly on top of OS X core technologies. This means that when you e.g. create an Array, you get an NSMutableArray (see the output of Array.ancestors in macirb: [NSMutableArray, NSArray, Enumerable, NSObject, Kernel]). It also features <a href="http://www.macruby.org/trac/wiki/HotCocoa">HotCocoa</a> which provides mappings for common Cocoa methods thus making your MacRuby programs a lot more idiomatic. This together with the interactive way of development provided by macirb make MacRuby an interesting tool not only for Ruby developers, but also for people who want to prototype their OS X apps.</li> 
+<li><a href="http://shoooes.net/">Shoes</a>: Some people may be surprised to see Shoes in this list, and technically they are right. Shoes is not a distinct Ruby implementation, but it is a Ruby distribution (which will <a href="http://www.mail-archive.com/shoes@code.whytheluckystiff.net/msg03168.html">switch to 1.9.1 in Shoes 3</a>), which lives separated from your other Ruby interpreters, installs gems in its own location and so on. The main thing though is that Shoes provides us with an easy to learn and use, cross-platform <span class="caps">GUI</span> toolkit that makes developing in it fun! Granted, it may not be suitable for everything, but with a bit of creativity you can push it quite far. Have a look at the <a href="http://the-shoebox.org/">Shoebox</a> to see what people are doing with it.</li>
+</ul>
+<p>There are of course other Ruby implementations like <a href="http://cardinal2.rubyforge.org/">Cardinal</a> (a Ruby interpreter for <a href="http://www.parrot.org/">Parrot</a>), <a href="http://www.ironruby.net/">IronRuby</a> (Ruby for the .<span class="caps">NET</span> environment) and <a href="http://github.com/macournoyer/tinyrb/tree/master">tinyrb</a> (a tiny and fast subset of Ruby), which I won&#8217;t describe here in more detail, since I haven&#8217;t yet had time to play around with them.</p>
+<p>So why should we care? Because the various implementations create a sort of competitive spirit, therefore pushing the limits of Ruby and driving it forward, by making it faster or running on top of other VMs (JRuby, IronRuby), thus letting it leverage a plethora of established technologies and also exposing it to potential new developers. Plus we also got <a href="http://rubyspec.org/">RubySpec</a>, so potential Ruby implementors have a standard to follow.</p>
+<p>I hope you enjoyed this post, please leave comments in case you disagree with something or want to add some information!</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Kohl</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-12T00:00:00+01:00" pubdate data-updated="true">Mar 12<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/jruby/'>jruby</a>, <a class='category' href='/blog/categories/macruby/'>macruby</a>, <a class='category' href='/blog/categories/rubinius/'>rubinius</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/shoes/'>shoes</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+    <a class="FlattrButton" style="display:none;"
+    title="Ruby implementations and why we should care"
+    data-flattr-uid="citizen428"
+    data-flattr-tags=""
+    data-flattr-button="compact"
+    data-flattr-category="text"
+    href="http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/">
+    
+</a>
+
+  
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/03/10/rubinius-build-woes/" title="Previous Post: Rubinius build woes">&laquo; Rubinius build woes</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/03/18/create-script-from-irb-session/" title="next Post: Create script from IRB session">Create script from IRB session &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I'm Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+<h1>Top Posts</h1>
+<div class="postrank-widget theDarkSide">
+<script type="text/javascript" src="http://api.postrank.com/static/widget-v2.js"></script>
+<script type="text/javascript">
+var options = {
+	"feed_hash": "a424fafe1edf439bb33fd235b75bd2a5",
+	"num":        5 ,
+	"theme":     "theDarkSide",
+	"hasLink":   true
+};
+new PostRankWidget(options);
+</script>
+<div class="powered-by-postrank-wrapper">
+<div class="powered-by-postrank">
+<p class="poweredByPostRank"><a href="http://www.postrank.com/?utm_source=topposts&utm_medium=widget&utm_content=topposts&utm_campaign=pr-1"><span>Powered by Postrank</span></a></p>
+</div>
+<div class="pr_bottomCornerSet"><div class="pr_clearBottomLeft"></div><div class="pr_solidSpecialMiddle"></div><div class="pr_clearBottomRight"></div></div>
+</div>
+</div>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/';
+        var disqus_url = 'http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

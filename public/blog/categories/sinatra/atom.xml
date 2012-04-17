@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sinatra | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/sinatra/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fun with Sinatra, Heroku and MongoDB]]></title>
+    <link href="http://citizen428.net/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb/"/>
+    <updated>2009-12-06T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb</id>
+    <content type="html"><![CDATA[<p>I've been toying around with the idea for a small website lately, but never actually got around to do it. In an attempt to clear out my personal to do list I finally motivated myself to start yesterday, and I have to say the following combination of tools is not only insanely efficient, but also really fun to work with:</p>
+
+<ul>
+<li><a href="http://www.sinatrarb.com/">Sinatra</a>, <i>&#8220;a DSL for quickly creating web applications in Ruby with minimal effort&#8221;</i>. I recommend using it in combination with <a href="http://mongrel.rubyforge.org/">Mongrel</a>, <a href="http://github.com/rtomayko/shotgun">Shotgun</a> and <a href="http://haml-lang.com/">Haml</a>.</li><br />
+<li><a href="http://heroku.com/">Heroku</a>, a Ruby cloud hosting platform. Small sites are for free and Heroku&#8217;s git-based workflow just feels so natural. You can also <a href="http://docs.heroku.com/gems">manage your gem dependencies</a> and <a href="http://docs.heroku.com/config-vars">set up environment variables</a>, which made my life a whole lot easier.</li><br />
+<li><a href="http://www.mongodb.org">MongoDB</a>, <i>&#8220;a scalable, high-performance, open source, schema-free, document-oriented database&#8221;</i>. In this specific case I used <a href="http://www.mongohq.com/home">MongoHQ</a> for the database hosting, since they were nice enough to provide me with a beta account. I stored all the connection information for MongoHQ in environment variables as described above:</p>
+<script src="http://gist.github.com/250193.js?file=mongohq.rb"></script>
+</ul>
+
+
+<p>With this combination I was able to go from zero to mostly finished (I still need to write some of the content and make/steal a stylesheet) in very little time, while actually having fun! Thanks everybody for providing the Ruby community which such awesome tools! :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rock-paper-scissors in Sinatra]]></title>
+    <link href="http://citizen428.net/blog/2009/03/27/rock-paper-scissors-in-sinatra/"/>
+    <updated>2009-03-27T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2009/03/27/rock-paper-scissors-in-sinatra</id>
+    <content type="html"><![CDATA[<p>Just a stupid little example to demonstrate why Sinatra is cool:</p>
+
+<script src="http://gist.github.com/86780.js"></script>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My way: Ruby, Sinatra, Heroku]]></title>
+    <link href="http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku/"/>
+    <updated>2009-03-25T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku</id>
+    <content type="html"><![CDATA[<p>"RubyLearning":http://rubylearning.org just had a nice one week introductory course on "Sinatra":http://www.sinatrarb.com/, a "DSL":http://en.wikipedia.org/wiki/Domain-specific_programming_language for easily creating web applications. The next batch will start on May 2nd (and I'll probably be around as a mentor again), you can "join here":http://rubylearning.org/class/course/enrol.php?id=32 if you are interested.</p>
+
+<p>Anyway, since it's so easy to write applications with Sinatra, you probably don't want to waste time deploying them. That's where "Heroku":http://heroku.com/ comes into play, a Ruby hosting platform which modeled it's workflow around "git":http://git-scm.com/. In my - still somewhat limited - experience working with Heroku is painless and feels very natural, kudos to the team for providing us with such a nice option for hosting "Rack":http://rack.rubyforge.org/ based apps! In fact I liked Heroku so much, that I wrote a patch for <a href="http://quirkey.com/">Aaron Quint</a>'s "sinatra-gen":http://github.com/quirkey/sinatra-gen/tree/master which will initialize git and create your app on Heroku for you. It's not in the main branch yet, but Aaron said he likes the idea and that he will include it. Up until then you can get my version from "here":http://github.com/citizen428/sinatra-gen/tree/master.</p>
+
+<p><em>Update: Said patch - in slightly modified form - is now part of mainline sinatra-gen, so I recommend getting the "official" version, not mine.</em></p>
+
+<p>Oh yeah, once you are done creating all this shiny new webapps in Sinatra, don't forget to take some snapshots of them with "snapurl":http://github.com/jurisgalang/snapurl/tree/master, another nifty little app I recently wrote a small patch for.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sinatra course at RubyLearning announced!]]></title>
+    <link href="http://citizen428.net/blog/2009/02/25/sinatra-course-at-rubylearning-announced/"/>
+    <updated>2009-02-25T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2009/02/25/sinatra-course-at-rubylearning-announced</id>
+    <content type="html"><![CDATA[<p>For a lot of people, Ruby became almost equivalent to "Rails":http://rubyonrails.org/, but this doesn't mean that Rubyists can't choose from a wider selection of web frameworks. One of them is the microframework "Sinatra":http://www.sinatrarb.com/, for which "RubyLearning":http://rubylearning.org will start a "course":http://rubylearning.com/blog/2009/02/25/introduction-to-sinatra-a-new-course/ on March 21st. Registration is open now, the price is a reasonable US$3 for the first 15 people to sign up, US$4 for the next 25 and finally US$5 for everyone after that. Yours truly will also be a mentor for this course and would be happy to see some of you there!</p>
+]]></content>
+  </entry>
+  
+</feed>

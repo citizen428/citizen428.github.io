@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: economy | citizen428.blog()]]></title>
+  <link href="http://citizen428.net/blog/categories/economy/atom.xml" rel="self"/>
+  <link href="http://citizen428.net/"/>
+  <updated>2012-04-15T15:13:37+02:00</updated>
+  <id>http://citizen428.net/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-02-19]]></title>
+    <link href="http://citizen428.net/blog/2012/02/19/information-overload-2012-02-19/"/>
+    <updated>2012-02-19T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/02/19/information-overload-2012-02-19</id>
+    <content type="html"><![CDATA[<p><blockquote><p>You could run an entire campaign if you’re Barack Obama with ads using nothing but Republicans saying things about finance that you’d never hear two months ago. It’s an amazing thing.</p><footer><strong>Dick Bove quoted by Gabriel Sherman</strong> <cite><a href='http://nymag.com/news/features/wall-street-2012-2/'>The End of Wall Street as They Knew It</a></cite></footer></blockquote></p>
+
+<ul>
+<li><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1119282/">Instinctive sleeping and resting postures</a><br>Is it just me, or is there something weird about this article? It's rather interesting either way...</li>
+<li><a href="http://www.codinghorror.com/blog/2012/02/meetings-where-work-goes-to-die.html">Meetings: Where Work Goes to Die</a><br>I couldn't agree more. Sometimes meetings are necessary, but please keep them short, to the point and clearly scoped.</li>
+<li><a href="http://www.newyorker.com/reporting/2012/01/30/120130fa_fact_lehrer?currentPage=all">Groupthink — The brainstorming myth</a><br>Several studies show that brainstorming doesn't work, but there are other ways to unlock people's creative potential.</li>
+<li><a href="http://nymag.com/news/features/wall-street-2012-2/">The End of Wall Street As They Knew It</a><br>A very long article on post-crisis Wall Street.</li>
+<li><a href="http://www.bloomberg.com/news/2012-02-15/google-as-benevolent-dictator-yanks-smartphone-apps-with-kill-switch-tech.html">Google as Benevolent Dictator Yanks Apps</a><br>A good summary of remote kill switches on smart phones and computers.</li>
+<li><a href="http://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/">How Target Figured Out A Teen Girl Was Pregnant Before Her Father Did</a><br>This is how much some companies track their customers. But don't pay cash instead, you could be suspected of <a href="http://boingboing.net/2012/02/14/fbi-says-paying-cash-for-coffe.html">being a terrorist</a>.</li>
+<li><a href="http://www.bbc.co.uk/news/magazine-16681630">The man who hears colour</a><br>A British artist with a rare vision disorder wears a device that allows him to hear colors.</li>
+<li><a href="http://www.datapointed.net/2009/09/distance-to-nearest-mcdonalds/">Where The Buffalo Roamed</a><br>How far can you get from a McDonald's in the contiguous United States?</li>
+<li><a href="http://www.theatlantic.com/magazine/archive/2012/03/how-your-cat-is-making-you-crazy/8873/?single_page=true">How Your Cat Is Making You Crazy</a><br>Are bacteria transmitted by cats messing with our brains? This one is a fascinating read.</li>
+<li><a href="http://online.wsj.com/article/SB10001424052970204795304577223200657284394.html">How Habits Hold Us</a><br>On the importance of habits for humans.</li>
+</ul>
+
+
+<p><blockquote><p>As he pointed out, the intelligence of humans is inseparable from our reliance on habits, the most mindless of behaviors. That's because they let us reserve brainpower for those things that can't be predicted in advance, those situations without relevant cues.</p><footer><strong>Jonah Lehrer</strong> <cite><a href='http://online.wsj.com/article/SB10001424052970204795304577223200657284394.html'>How Habits Hold Us</a></cite></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-12-18]]></title>
+    <link href="http://citizen428.net/blog/2011/12/18/information-overload-2011-12-18/"/>
+    <updated>2011-12-18T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/12/18/information-overload-2011-12-18</id>
+    <content type="html"><![CDATA[<p><blockquote><p>An entrepreneur can have the most brilliant idea in the world and plenty of funding to develop and sell it, but if customers can't afford to buy the company's products, the entrepreneur and his or her investors won't create a single permanent job.</p><footer><strong>Henry Blodget</strong> <cite><a href='http://www.businessinsider.com/no-steve-jobs-did-not-create-jobs-by-inventing-the-iphone-2011-12'>No, Entrepreneurs Like Steve Jobs Do Not 'Create Jobs' by Inventing Products Like the iPhone</a></cite></footer></blockquote></p>
+
+<ul>
+<li><a href="http://arstechnica.com/tech-policy/news/2011/12/oblivious-supreme-court-poised-to-legalize-medical-patents.ars">Oblivious Supreme Court poised to legalize medical patents</a><br>As if software patents weren't bad enough already.</li>
+<li><a href="http://online.wsj.com/article/SB10001424052970204770404577082933921432686.html">Find the Best Checkout Line</a><br>I always found the psychology of queuing rather interesting.</li>
+<li><a href="http://mondediplo.com/2011/12/04libya">Libya still under arms</a><br>An article by Le Monde diplomatique on the situation in post-Gadaffi Lybia.</li>
+<li><a href="http://channel9.msdn.com/posts/MDCC-TechTalk-Classes-Jim-but-not-as-we-know-them">MDCC TechTalk - Classes, Jim, but not as we know them</a><br>A talk by Simon Peyton Jones on type classes in Haskell, geared at OO programmers. Make sure not to miss part 2, <a href="http://channel9.msdn.com/posts/MDCC-TechTalk-Fun-with-type-functions">Fun with type functions</a>.</li>
+<li><a href="http://www.businessinsider.com/rich-people-do-not-create-jobs-2011-12">Finally, A Rich American Destroys The Fiction That Rich People Create The Jobs</a><br>This article sparked an intense debate and led to a follow-up called <a href="http://www.businessinsider.com/no-steve-jobs-did-not-create-jobs-by-inventing-the-iphone-2011-12">No, Entrepreneurs Like Steve Jobs Do Not 'Create Jobs' By Inventing Products Like The iPhone</a>.</li>
+<li><a href="https://www.eff.org/deeplinks/2011/12/carrier-iq-architecture">Some Facts About Carrier IQ</a><br>Amidst all the Carrier IQ panic, the EFF tries to focus on the facts.</li>
+<li><a href="http://www.taz.de/Strassenstrich-in-Wien/!83580/">Den Freiern völlig ausgeliefert</a><br>Good article from TAZ illustrating the bad situation for prostitutes in Vienna since the recent changes to relevant legislation (in German).</li>
+<li><a href="http://www.faz.net/aktuell/feuilleton/das-krisen-ensemble-stellt-endlich-die-systemfrage-11558289.html">Stellt endlich die Systemfrage!</a><br>As German newspaper puts it, it's time to finally question the system (in German).</li>
+<li><a href="http://sinker.tumblr.com/post/14267087602/im-starting-to-think-lego-is-evil">I’m starting to think Lego is evil</a><br>I often thought the same lately, Lego definitely seems to have lost a lot of the appeal that made it the great toy of my childhood.</li>
+<li><a href="http://www.guardian.co.uk/world/2011/dec/15/pakistan-bombs-spies-wild-parties">Pakistan: bombs, spies and wild parties</a><br>Guardian correspondent Declan Walsh describes his experience in a country that's quite high up on my "want to go" list.</li>
+</ul>
+
+
+<p><blockquote><p>Das ist der wichtigste Sieg der Finanzindustrie: dass sie selbst nie auf Gipfeln erscheinen muss, dort aber Regie zu führen versucht, und dass ihre Kriterien bei der Bewertung der dort erzielten Ergebnisse als die vernünftigen gelten.</p><footer><strong>Mils Minkmar</strong> <cite><a href='http://www.faz.net/aktuell/feuilleton/das-krisen-ensemble-stellt-endlich-die-systemfrage-11558289.html'>Stellt Endlich Die Systemfrage!</a></cite></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-12-11]]></title>
+    <link href="http://citizen428.net/blog/2011/12/11/information-overload-2011-12-11/"/>
+    <updated>2011-12-11T18:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/12/11/information-overload-2011-12-11</id>
+    <content type="html"><![CDATA[<p><blockquote><p>As Alan Kay, a major pioneer of today’s software-eaten planet, pointed out recently, the Internet doesn’t have stop, shut down, or rewind buttons. Once it was turned on, history was essentially rebooted.</p><footer><strong>Venkatesh Rao</strong> <cite><a href='http://www.forbes.com/sites/venkateshrao/2011/12/05/the-rise-of-developeronomics/6/'>The Rise of Developeronomics</a></cite></footer></blockquote></p>
+
+<ul>
+<li><a href="http://wakeup-world.com//2011/11/28/the-discovery-of-dolphin-language/">The Discovery of Dolphin Language</a><br>I'm always interested in articles on animal language, not only because I think they are cool from a language perspective, but also because I hope that the more people learn about this, the more respect they'll show for animals.</li>
+<li><a href="http://www.zeit.de/2011/45/NDR-Reportage-Altkleider-Luege/komplettansicht">Das Kilo für 1,20 Dollar</a><br>If you think clothing donations help poor people, you should reconsider. This should be fairly well known by now, but this article (in German) is a good summary of the problems.</li>
+<li><a href="http://www.physorg.com/news/2011-12-voyager-region-solar-edge.html">Voyager 1 hits new region at solar system edge</a><br>Launched in 1977, Voyager 1 is on the edge of our solar system now.</li>
+<li><a href="http://www.butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory-written-by-christine-miserandino/">The Spoon Theory</a><br>A touching article by a Lupus patient on how she explained her illness to her best friend.</li>
+<li><a href="http://www.stefanapfl.com/2011/12/07/der-breivik-aus-traun/">Der Breivik aus Traun</a><br>On the same day as Anders Breivik, there also was an Austrian whose hate for foreigners was so great that he decided to kill (in German).</li>
+<li><a href="http://www.zdnet.com/blog/facebook/facebook-tells-india-it-wont-help-censor-the-web/5848">Facebook tells India it won’t help censor the Web</a><br>For once some good news related to Facebook.</li>
+<li><a href="http://www.popularmechanics.com/technology/aviation/crashes/what-really-happened-aboard-air-france-447-6611877">What Really Happened Aboard Air France 447</a><br>A transcript of the flight recorder with additional information about aviation specifics.</li>
+<li><a href="http://www.geek.com/articles/geek-cetera/17-year-old-wins-100k-for-creating-cancer-killing-nanoparticle-2011128/">17-year-old wins 100k for creating cancer-killing nanoparticle</a><br>Maybe all this cultural pessimism about "today's youth" is unnecessary?</li>
+<li><a href="http://www.forbes.com/sites/venkateshrao/2011/12/05/the-rise-of-developeronomics/6/">The Rise of Developeronomics</a><br>According to this rather long Forbes article, it's a real good moment for being a software developer.</li>
+<li><a href="http://cluborlov.blogspot.com/2011/12/party-of-swindlers-and-thieves.html">Party of Swindlers and Thieves</a><br>For people not entirely up to date on Russian issues, this seems to be a good writeup of the recent elections and their meaning.</li>
+</ul>
+
+
+<p><blockquote><p>The progression is the same everywhere: first the people ask, then they demand, then they come and they take.</p><footer><strong>Dmitry Orlov</strong> <cite><a href='http://cluborlov.blogspot.com/2011/12/party-of-swindlers-and-thieves.html'>Party of Swindlers and Thieves</a></cite></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-11-27]]></title>
+    <link href="http://citizen428.net/blog/2011/11/27/information-overload-2011-11-27/"/>
+    <updated>2011-11-27T19:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/11/27/information-overload-2011-11-27</id>
+    <content type="html"><![CDATA[<p><blockquote><p>Die Reaktion der Politik ist die übliche, nämlich die, sich selber zu helfen.</p><footer><strong>Bernd Wagner</strong> <cite><a href='http://derstandard.at/1319183561778/Aussteiger-werden-als-Volksverraeter-gesehen'>"Aussteiger Werden Als Volksverräter Gesehen"</a></cite></footer></blockquote></p>
+
+<ul>
+<li><a href="http://www.theatlantic.com/business/archive/2011/11/india-the-worlds-secret-silicon-valley/248341/">India: The World's Secret Silicon Valley</a><br>When it's about India and technology, most people immediately think of outsourcing, but in a country this big, there's obviously also real innovation going on.</li>
+<li><a href="http://www.forbes.com/sites/andygreenberg/2011/11/17/chinas-great-firewall-tests-mysterious-scans-on-encrypted-connections/">China's Great Firewall Tests Mysterious Scans On Encrypted Connections</a><br>Apparently China is testing ways to "improve" their censorship systems.</li>
+<li><a href="http://tom.preston-werner.com/2011/11/22/open-source-everything.html">Open Source (Almost) Everything</a><br>Tom Preston-Werner writes about why GitHub open sources almost everything they do.</li>
+<li><a href="http://derstandard.at/1319183561778/Aussteiger-werden-als-Volksverraeter-gesehen">"Aussteiger werden als Volksverräter gesehen"</a><br>Interview with Bernd Wagner, who works for an organization that provides an exit strategy to Neo-Nazis (in German).</li>
+<li><a href="http://porkrind.org/missives/the-core-memory-module-from-my-dads-homebuilt-pdp-1105/">The Core Memory Module from my dad’s homebuilt PDP-11/05</a><br>This guy's dad is building a <a href="http://en.wikipedia.org/wiki/PDP-11">PDP-11</a> clone. This is beyond awesome!</li>
+<li><a href="http://medicalxpress.com/news/2011-11-tuning-brains-benefit-meditation.html">Tuning out: How brains benefit from meditation</a><br>A recent study shows that experienced meditators seem to be able to turn off specific brain regions.</li>
+<li><a href="http://www.wired.com/magazine/2011/11/the-pest-who-shames-companies-into-fixing-security-flaws">The Pest Who Shames Companies Into Fixing Security Flaws</a><br>Christopher Soghoian is relentlessly fighting for our privacy online.</li>
+<li><a href="http://www.spiegel.de/international/europe/0,1518,799237,00.html">A Philosopher's Mission to Save the EU</a><br>Like so many people at the moment, German philosopher Jürgen Habermas is angry.</li>
+<li><a href="http://www.guardian.co.uk/commentisfree/cifamerica/2011/nov/25/shocking-truth-about-crackdown-occupy">The shocking truth about the crackdown on Occupy</a><br>Is this the reason why the "Occupy" protesters gets attacked so violently?</li>
+<li><a href="http://youarenotsosmart.com/2010/02/10/placebo-buttons/">Placebo Buttons</a><br>Like with most placebos, I'd say as long as it works, it's ok.</li>
+</ul>
+
+
+<p><blockquote><p>Your brain doesn’t like randomness, and so it tries to connect a cause to every effect; when it can’t, you make one up.</p><footer><strong>David McRaney</strong> <cite><a href='http://youarenotsosmart.com/2010/02/10/placebo-buttons/'>Placebo Buttons</a></cite></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-11-20]]></title>
+    <link href="http://citizen428.net/blog/2011/11/20/information-overload-2011-11-20/"/>
+    <updated>2011-11-20T12:40:00+01:00</updated>
+    <id>http://citizen428.net/blog/2011/11/20/information-overload-2011-11-20</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.dasbiber.at/content/spontane-demo-am-wiener-g%C3%BCrtel">Spontane Demo am Wiener Gürtel!</a><br>Little recap of the demonstration that followed the eviction of squatters in Vienna last week (in German).</li>
+<li><a href="http://aredletterday.wordpress.com/2011/11/13/who-are-the-ninety-nine-percent/">Who? Are? The Ninety-Nine Percent?</a><br> Or: "We are the 99%, but some of us more so than others".</li>
+<li><a href="http://www.wired.com/magazine/2011/11/ff_bezos/all/1">Jeff Bezos Owns the Web in More Ways Than You Think</a><br>Not only is this Wired article the most sensible analysis of the Kindle Fire I've read so far, the interview with Jeff Bezos is also very interesting.</li>
+<li><a href="http://www.newscientist.com/article/mg21228340.100-steven-pinker-humans-are-less-violent-than-ever.html?full=true">Steven Pinker: Humans are less violent than ever</a><br>This clearly seems to have a certain agenda and I tend to disagree with some of the things said (especially the use of "anarchy"), but I'll let you draw your own conclusions.</li>
+<li><a href="http://news.bbc.co.uk/2/hi/in_depth/uk/2000/newsmakers/2094374.stm">Paul Dirac: The unsung genius</a><br>There's now an exhibition on Paul Dirac, a physicists who gets a lot less exposure than he deserves.</li>
+<li><a href="http://www.guardian.co.uk/lifeandstyle/2011/nov/10/truth-lap-dancer-clubs">The truth about life as a lap-dancer</a><br>Apparently some people consider the lives of lap dancers glamorous, a myth this article and the book it's about try to debunk.</li>
+<li><a href="http://www.globalpost.com/dispatch/news/regions/asia-pacific/china/111109/china-economy-manufacturing-guangdong">Bye-bye cheap, Chinese labor</a><br>It's articles like this one that really demonstrate how a lot of people feel about other countries: stay poor, so we can get cheap stuff.</li>
+<li><a href="http://www.nytimes.com/interactive/2011/11/09/us/ows-grid.html">Public Opinion and the Occupy Movement</a><br>Interesting New York Times visualization of opinions about  the Occupy Wall Street movement.</li>
+<li><a href="http://www.businessinsider.com/the-rise-of-the-technocrat-2011-11">To Save Europe They Had To Kill Democracy</a><br>Read the article, read the comments, what do you think?</li>
+<li><a href="http://englishrussia.com/2011/11/18/declassified-bunker-of-the-ussr/">Declassified Bunker Of the USSR</a><br>Cool photo series of a former Soviet bunker which got declassified.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
