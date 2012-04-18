@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tor | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/tor/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-04-18T19:51:09+02:00</updated>
+  <updated>2012-04-18T21:02:31+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -18,7 +18,7 @@
     <link href="http://citizen428.net/blog/2012/04/18/no-tor/"/>
     <updated>2012-04-18T00:10:00+02:00</updated>
     <id>http://citizen428.net/blog/2012/04/18/no-tor</id>
-    <content type="html"><![CDATA[<p><em>Update:</em> Server4You rebooted the servr into a recovery system for me. I removed the Tor packages and the system is back up again, which means at least the <a href="http://tor.blingblingsquad.net/">mirror</a> is back. I'd also like to know that this whole post is based on a single phone conversation with a Server4You support employee, so it's hard to tell if the company per se really considers Tor to be illegal in Germany. Personally I think it's just a bad excuse for shutting down the service on shared hosts, which is just as bad in my book.</p>
+    <content type="html"><![CDATA[<p><em>Update:</em> Server4You rebooted the server into a recovery system for me. I removed the Tor packages and the system is back up again, which means at least the <a href="http://tor.blingblingsquad.net/">mirror</a> is back. I'd also like to state explicitly that this whole post is based on a single phone conversation with a Server4You support employee, so it's hard to tell if the company per se really considers Tor to be illegal in Germany. Personally I think it's just a bad excuse for shutting down the service on shared hosts, which is just as bad in my book.</p>
 
 <p>I've been running a <a href="https://www.torproject.org/">Tor</a> relay since sometime in early 2006. There's many good reasons for doing so, but what motivated me personally was my experience of studying in China for one year and having to live with a censored Internet connection myself (theoretically, as there was an <a href="http://embraceubuntu.com/2006/12/08/ssh-tunnel-socks-proxy-forwarding-secure-browsing/">easy way around it</a> if you had a server outside of China to SSH to). Alas our system hasn't been an exit node in a while, but it's still better than nothing.</p>
 
