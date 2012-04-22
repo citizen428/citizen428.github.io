@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-04-18T21:02:31+02:00</updated>
+  <updated>2012-04-22T12:47:24+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-04-22]]></title>
+    <link href="http://citizen428.net/blog/2012/04/22/information-overload-2012-04-22/"/>
+    <updated>2012-04-22T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/04/22/information-overload-2012-04-22</id>
+    <content type="html"><![CDATA[<blockquote><p>Economic development and social stability require freedom of expression, and an independent media to report on issues and abuses that government officials want to sweep under the rug.</p><footer><strong>Phil Robertson, deputy Asia director at Human Rights Watch</strong> <cite><a href='http://www.hrw.org/news/2012/04/16/vietnam-immediately-release-rights-bloggers'>Vietnam: Immediately Release Rights Bloggers</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://news.sciencemag.org/sciencenow/2012/04/silly-putty-for-potholes.html">Silly Putty for Potholes</a><br>A practical application for non-Newtonian fluids, great idea.</li>
+<li><a href="http://www.forbes.com/sites/kauffman/2012/04/04/firing-yourself/">Avoiding The BlackBerry Blues: Know When To Fire Yourself</a><br>More startup founders should read this.</li>
+<li><a href="http://www.hrw.org/news/2012/04/16/vietnam-immediately-release-rights-bloggers">Vietnam: Immediately Release Rights Bloggers</a><br>Sometimes I wonder how much longer it will be before we see this kind of article about Europe&#8230;</li>
+<li><a href="http://online.wsj.com/article/SB10001424052702304177104577305780300265926.html">Asia&#8217;s Endangered Species: The Expat</a><br>To quote the article, &#8220;Western companies must approach newly empowered Asian companies and consumers as equals and clients — not just manufacturing partners&#8221;.</li>
+<li><a href="http://techcrunch.com/2012/04/19/an-interview-with-millenium-technology-prize-finalist-linus-torvalds/">An Interview With Linus Torvalds</a><br>I generally like interviews with Linux Torvals and this one is no exception.</li>
+<li><a href="http://www.economist.com/node/21552564">It&#8217;ll cost you</a><br>How much would a Scottish independence cost and how will this influence the <a href="http://en.wikipedia.org/wiki/Scottish_independence_referendum,_2014">referendum</a> in 2014?</li>
+<li><a href="http://www.wired.com/autopia/2012/04/spacex-space-station/">SpaceX Given Green Light for First Launch to Space Station</a><br>Soon the first commercial carrier will deliver cargo to the ISS.</li>
+<li><a href="http://www.slate.com/articles/news_and_politics/politics/2012/04/george_w_bush_and_torture_america_s_highest_officials_are_responsible_for_the_enhanced_interrogation_of_prisoners_.single.html">How America Came To Torture Its Prisoners</a><br>Don&#8217;t blame this on some misguided individuals, this was planned from the top.</li>
+<li><a href="http://www.bunniestudios.com/blog/?p=2269">China: Crowdsourced Tax Enforcement</a><br>Once again China comes up with a clever solution to a problem.</li>
+<li><a href="http://www.ft.com/cms/s/2/87bf2654-89b3-11e1-85af-00144feab49a.html#axzz1se7I7IYx">How do you like your meat?</a><br>Interesting article on lab grown meat.</li>
+</ul>
+
+
+<blockquote><p>Would some kernel people prefer getting tucked in at night instead of being cursed at? I’m sure that would be appreciated. I don’t think I have it in me, though.</p><footer><strong>Linus Torvals</strong> <cite><a href='http://techcrunch.com/2012/04/19/an-interview-with-millenium-technology-prize-finalist-linus-torvalds/'>An Interview With Linus Torvalds</a></cite></footer></blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[No Tor, no more customer]]></title>
@@ -436,75 +463,6 @@
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4775.en.html">Hacker Jeopardy</a><br>Fun as always, but this year&#8217;s questions seemed a lot easier than the ones I remember from previous years.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[2011 reading list]]></title>
-    <link href="http://citizen428.net/blog/2011/12/28/2011-reading-list/"/>
-    <updated>2011-12-28T20:50:00+01:00</updated>
-    <id>http://citizen428.net/blog/2011/12/28/2011-reading-list</id>
-    <content type="html"><![CDATA[<p>A list of the books I read in 2011, sorted by finishing date (oldest to newest). According to <a href="http://goodreads.com">Goodreads</a> that’s roughly 16.2k pages, less than the last few years. I also have a couple of unfinished books, read several <a href="http://citizen428.net/blog/categories/papers/">papers</a> and a couple of chapters of a book on Ruby and MongoDB that I&#8217;m the technical reviewer for.</p>
-
-<p>Terry Pratchett: <strong>Hogfather</strong><br>
-Michael Köhlmeier: <strong>Sunrise</strong><br>
-Terry Pratchett: <strong>Eric</strong><br>
-Audrey Niffenegger: <strong>Her Fearful Symmetry</strong><br>
-Conrad Barski: <strong>Land of Lisp</strong><br>
-Arthur Nersesian: <strong>The Fuck-Up</strong><br>
-Ryszard Kapuściński: <strong>The Shadow of the Sun</strong><br>
-Jacqueline Rayner: <strong>Doctor Who: The Sontaran Games</strong><br>
-Gregory Brown: <strong>Ruby Best Practices</strong><br>
-L. Frank Baum: <strong>The Wonderful Wizard of Oz</strong><br>
-Paolo Bacigalupi: <strong>The Windup Girl</strong><br>
-Cory Doctorow: <strong>Eastern Standard Tribe</strong><br>
-Canol Gökel: <strong>Computer Programming using GNU Smalltalk</strong><br>
-Jeremy Leipzig: <strong>Data Mashups with R</strong><br>
-Lana Citron: <strong>Transit</strong><br>
-Suzanne Skublics: <strong>Smalltalk With Style</strong><br>
-Russ Olsen: <strong>Eloquent Ruby</strong><br>
-Dennis Lehane: <strong>Shutter Island</strong><br>
-Terrance Dicks: <strong>Doctor Who: Made of Steel</strong><br>
-Christian Bök: <strong>Eunoia</strong><br>
-Chuck Palahniuk: <strong>Invisible Monsters</strong><br>
-Radek Knapp: <strong>Franio</strong><br>
-Michael Fogus: <strong>The Joy of Clojure</strong><br>
-Terry Pratchett: <strong>Mort</strong><br>
-Dan Cederholm: <strong>Handcrafted CSS: More Bulletproof Web Design</strong><br>
-Paolo Perrotta: <strong>Metaprogramming Ruby</strong><br>
-Mark Bowden: <strong>Killing Pablo: The Hunt for the World&#8217;s Greatest Outlaw</strong><br>
-Cormac McCarthy: <strong>The Road</strong><br>
-Charles Stross: <strong>Accelerando</strong><br>
-Gautam Malkani: <strong>Londonstani</strong><br>
-Armin Risi: <strong>Vegetarisch leben - Die Vorteile einer fleischlosen Ernährung</strong><br>
-Miran Lipovača: <strong>Learn You a Haskell for Great Good!: A Guide for Beginners</strong><br>
-Robert J. Chassell: <strong>An Introduction to Programming in Emacs Lisp</strong><br>
-Hunter S. Thompson: <strong>Hell&#8217;s Angels</strong><br>
-Lauren Beukes: <strong>Moxyland</strong><br>
-Raphael Selbourne: <strong>Beauty</strong><br>
-Zed A. Shaw: <strong>Learn Python The Hard Way</strong><br>
-David Kennedy: <strong>Metasploit: The Penetration Tester&#8217;s Guide</strong><br>
-Paolo Bacigalupi: <strong>Pump Six</strong><br>
-Michael Moorcock: <strong>The Nomad of Time</strong><br>
-Russ Olsen: <strong>Design Patterns in Ruby</strong><br>
-David Mark: <strong>Beginning iPhone 4 Development: Exploring the iOS SDK</strong><br>
-Reijo Mäki: <strong>Tango Negro</strong><br>
-David Sedaris: <strong>Me Talk Pretty One Day</strong><br>
-Kurt Vonnegut: <strong>Breakfast of Champions</strong><br>
-Mario Vargas Llosa: <strong>Der Geschichtenerzähler</strong><br>
-Kyle Banker: <strong>MongoDB in Action</strong><br>
-Scott Kenemore: <strong>Zombie, Ohio: A Tale of the Undead</strong><br>
-Leopold Kohr: <strong>The Breakdown of Nations</strong><br>
-Carlos Bueno: <strong>Lauren Ipsum</strong><br>
-Henning Mankell: <strong>Mannen på stranden</strong><br>
-Garrison Keillor: <strong>Was ist eigentlich Anarchie?</strong><br>
-Thomas Pynchon: <strong>Gravity&#8217;s Rainbow</strong><br>
-Norman Matloff: <strong>The Art of R Programming</strong><br>
-Stéphane Hessel: <strong>Empört Euch!</strong><br>
-Fabian Kruse: <strong>Beyond Rules</strong><br>
-Dario Tonani: <strong>Cardanica (A Steampunk Nightmare)</strong><br>
-Ryū Murakami: <strong>In The Miso Soup</strong><br>
-Kaaron Warren: <strong>The Grinding House</strong><br></p>
 ]]></content>
   </entry>
   
