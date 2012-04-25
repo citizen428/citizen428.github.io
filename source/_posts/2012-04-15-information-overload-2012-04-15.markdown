@@ -11,7 +11,7 @@ categories:
   - politics
 ---
 * [Corporate Rule of Cyberspace](http://www.insidehighered.com/views/2011/05/02/slavoj_zizek_essay_on_cloud_computing_and_privacy)<br>Philosopher [Slavoj Žižek](http://en.wikipedia.org/wiki/Slavoj_%C5%BDi%C5%BEek) offers some thoughts on cloud computing. Some of the comments are interesting too.
-* [http://www.slate.com/articles/technology/future_tense/2012/03/narrative_science_robot_journalists_customized_news_and_the_danger_to_civil_discourse_.single.html](http://www.slate.com/articles/technology/future_tense/2012/03/narrative_science_robot_journalists_customized_news_and_the_danger_to_civil_discourse_.single.html)<br>On automated journalism and the potential consequences for society.
+* [A Robot Stole My Pulitzer!](http://www.slate.com/articles/technology/future_tense/2012/03/narrative_science_robot_journalists_customized_news_and_the_danger_to_civil_discourse_.single.html)<br>On automated journalism and the potential consequences for society.
 * [A Forth Story...](https://groups.google.com/group/comp.lang.forth/browse_thread/thread/4e15a2197c0aaafe/95c3f82d1c681296?#95c3f82d1c681296)<br>This long text from 1995 is not only interesting because it talks about Forth, but also because of the history of programming in the 70s, 80s and 90s.
 * [Giving divorce a bad name](http://www.economist.com/node/21552581)<br>South Sudan invaded an oil field in Sudan, which could lead to a fierce war. Make sure to read the comments too, there's some good stuff in there.
 * [Code Not Physical Property, Court Rules in Goldman Sachs Espionage Case](http://www.wired.com/threatlevel/2012/04/code-not-physical-property/)<br>An update on the Aleynikov vs Goldman Sachs case.
