@@ -9,7 +9,7 @@ categories:
   - science
   - psychology
 ---
-[{% blockquote G.D. http://www.postbourgie.com/2010/04/30/the-racist-harvard-law-student-and-naming-names The Racist Harvard Law Student and Naming Names. %}
+{% blockquote G.D. http://www.postbourgie.com/2010/04/30/the-racist-harvard-law-student-and-naming-names The Racist Harvard Law Student and Naming Names. %}
 You don't simply get to say you're not a racist; not being racist — or a sexist or a homophobe — is a constant, arduous process of unlearning, of being uncomfortable, of eating crow and being humbled and re-evaluating.
 {% endblockquote %}
 
