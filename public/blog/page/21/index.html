@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="A couple of days ago I decided that I want to play around with Rubinius, so I cloned the source from GitHub and thought I was ready to go. As it &hellip;">
+  <meta name="description" content="Not too lang ago our favorite language had only implementation, the one made by Matz (now commonly referred to as MatzRuby or MRI). This has changed &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,52 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/12/ruby-implementations-and-why-we-should-care/">Ruby Implementations and Why We Should Care</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-12T00:00:00+01:00" pubdate data-updated="true">Mar 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Not too lang ago our <a href="http://www.ruby-lang.org/en/">favorite language</a> had only implementation, the one made by <a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">Matz</a> (now commonly referred to as MatzRuby or <span class="caps">MRI</span>). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
+<ul>
+<li>Ruby 1.8.6: This is your trusted old Ruby 1.8.6, and while it may not be the most spectacular of the implementations listed here, it&#8217;s the most widely used Ruby interpreter around and the current de facto standard of the language.</li>
+<li>Ruby 1.9.1: Featuring the new bytecode interpreter <a href="http://en.wikipedia.org/wiki/YARV"><span class="caps">YARV</span></a>, this is the newest &#8216;official&#8217; Ruby version which gives us interesting features like improved speed, block local variables, a <a href="http://pragdave.blogs.pragprog.com/pragdave/2008/05/new-lambda-synt.html">new lambda syntax</a>, native threads and some other niceties. So while we are waiting for 1.9.1 to replace 1.8.6 as the standard Ruby interpreter (which probably will take quite a while), my advice is to install it now, play around with it, get used to the new things and <a href="http://isitruby19.com/">help the community in porting gems to 1.9</a>.</li>
+<li><a href="http://jruby.codehaus.org/">JRuby</a>: A Java implementation of Ruby, which allows developers to interact with Java classes or define them from within Ruby. It&#8217;s fast, it works well, and is a big driving force in the filed of alternative Ruby interpreters. As of now I mostly used JRuby from within &#8220;ruby-processing&#8221;:, but eventually want to have a look at <a href="http://monkeybars.rubyforge.org/">Monkeybars</a>, which  was created in order to simplify the development of <a href="http://en.wikipedia.org/wiki/Swing_(Java)">Swing</a> apps with JRuby.</li>
+<li><a href="http://rubini.us/">Rubinius</a>: Here is what the project itself has to say about its relevance for Ruby developers: <i>&#8220;A spec driven Ruby implementation. A core library written in Ruby. More first class objects than you can shake a stick at. Super easy to contribute. Low barrier to entry. If you can breathe, you can commit</i>&#8221;. So far I only used Rubinius to test some of my own scripts, but eventually would like to find the time to contribute to the project by writing new specs or trying to fix failing ones. I encourage you to do the same, since this is not only a great chance to learn more about Ruby&#8217;s internals, but also to help the Ruby community at large.</li>
+<li><a href="http://www.macruby.org/trac/wiki/MacRuby">MacRuby</a>: MacRuby is a port of Ruby 1.9 which sits directly on top of OS X core technologies. This means that when you e.g. create an Array, you get an NSMutableArray (see the output of Array.ancestors in macirb: [NSMutableArray, NSArray, Enumerable, NSObject, Kernel]). It also features <a href="http://www.macruby.org/trac/wiki/HotCocoa">HotCocoa</a> which provides mappings for common Cocoa methods thus making your MacRuby programs a lot more idiomatic. This together with the interactive way of development provided by macirb make MacRuby an interesting tool not only for Ruby developers, but also for people who want to prototype their OS X apps.</li> 
+<li><a href="http://shoooes.net/">Shoes</a>: Some people may be surprised to see Shoes in this list, and technically they are right. Shoes is not a distinct Ruby implementation, but it is a Ruby distribution (which will <a href="http://www.mail-archive.com/shoes@code.whytheluckystiff.net/msg03168.html">switch to 1.9.1 in Shoes 3</a>), which lives separated from your other Ruby interpreters, installs gems in its own location and so on. The main thing though is that Shoes provides us with an easy to learn and use, cross-platform <span class="caps">GUI</span> toolkit that makes developing in it fun! Granted, it may not be suitable for everything, but with a bit of creativity you can push it quite far. Have a look at the <a href="http://the-shoebox.org/">Shoebox</a> to see what people are doing with it.</li>
+</ul>
+<p>There are of course other Ruby implementations like <a href="http://cardinal2.rubyforge.org/">Cardinal</a> (a Ruby interpreter for <a href="http://www.parrot.org/">Parrot</a>), <a href="http://www.ironruby.net/">IronRuby</a> (Ruby for the .<span class="caps">NET</span> environment) and <a href="http://github.com/macournoyer/tinyrb/tree/master">tinyrb</a> (a tiny and fast subset of Ruby), which I won&#8217;t describe here in more detail, since I haven&#8217;t yet had time to play around with them.</p>
+<p>So why should we care? Because the various implementations create a sort of competitive spirit, therefore pushing the limits of Ruby and driving it forward, by making it faster or running on top of other VMs (JRuby, IronRuby), thus letting it leverage a plethora of established technologies and also exposing it to potential new developers. Plus we also got <a href="http://rubyspec.org/">RubySpec</a>, so potential Ruby implementors have a standard to follow.</p>
+<p>I hope you enjoyed this post, please leave comments in case you disagree with something or want to add some information!</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -441,50 +487,6 @@
 <p>Some links:<br />
 <a href="http://waveninja.blogspot.com/2009/01/ten-steps-in-shoes-step-2-stack-flow.html">waveninja&#8217;s Ten Steps in Shoes, part 2</a><br />
 <a href="http://github.com/ashbb/shoes_tutorial_html/tree/master">ashbb&#8217;s Shoes Tutorial</a></p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/01/31/the-first-steps-in-new-shoes/">The First Steps in New Shoes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-01-31T00:00:00+01:00" pubdate data-updated="true">Jan 31<span>st</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you haven&#8217;t heard about it yet, <a href="http://shoooes.net/">Shoes</a> is yet another ingenious brainchild of Ruby hacker extraordinaire <a href="http://whytheluckystiff.net/">_why</a>. Here&#8217;s the project description from the website:</p>
-<I>&#8220;Shoes is a tiny graphics toolkit, designed for beginners. But make no mistake: this is real programming. You can make real, colorful apps in Shoes.&#8221;</i><br />
-<br />
-Since I&#8217;m always interested in multi-platform <span class="caps">GUI</span> toolkits (and everything _why does) I finally took some time and wrote my first Shoes application yesterday. So I now proudly present the <a href="http://the-shoebox.org/apps/126">Little Helper</a>, a tiny application for people receiving hourly wages to calculate how much they make a month. To get a few things straight: this is <strong>not</strong> a great program. It&#8217;s not even a necessary program. Ok, it&#8217;s hardly a program, just a quick hack. But it was an excellent way to get a first impression of Shoes, which is as follows: As somebody who never worked with it before, it took me a very small amount of time and exactly 33 lines of code to have a working <span class="caps">GUI</span> application. No need to learn an interface builder or anything. I didn&#8217;t even really have to read the built-in documentation, looking at how other apps do stuff was enough.<br />
-<br />
-So how is my first impression of Shoes? Good, actually very good. While the toolkit is somewhat limited in controls (which is a feature, remember it&#8217;s a  <b>simple</b> toolkit), it&#8217;s straight-forward and easy to pick up, so it&#8217;s definitely something I&#8217;ll consider for writing quick <span class="caps">GUI</span> apps. This blog is likely to see some more Shoes related posts in the near feature, since I signed up for <a href="http://rubylearning.com/blog/2008/10/30/ruby-and-shoes-programming-a-new-course/">RubyLearning&#8217;s upcoming Shoes course</a>.<br />
-<br />
-Links:<br />
-<a href="http://the-shoebox.org/">The Shoebox</a><br />
-<a href="http://waveninja.blogspot.com/2009/01/10-steps-in-shoes-step-1-paras.html">waveninja&#8217;s 10 steps in Shoes</a></div>
   
   
 

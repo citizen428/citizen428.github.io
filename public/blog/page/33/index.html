@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Movie:
-It&#8217;s October, which means that movie enthusiasts in Vienna can watch loads of good movies at the Vienna International Film Festival ( &hellip;">
+  <meta name="description" content="Seems like I haven&#8217;t had a post on Planet for quite some time now, which may have to do with he fact that I&#8217;m officially away in October &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +96,47 @@ It&#8217;s October, which means that movie enthusiasts in Vienna can watch loads
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/10/29/look-whos-back/">Look Who&#8217;s Back&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-29T00:00:00+02:00" pubdate data-updated="true">Oct 29<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Seems like I haven&#8217;t had a post on Planet for quite some time now, which may have to do with he fact that I&#8217;m <a href="http://dev.gentoo.org/devaway/">officially away</a> in October&#8230; However, there are times when I just don&#8217;t want to learn for that frigging exam, so here&#8217;s a little status update on my Gentoo work:<br />
+<ul><br />
+<li><strong>Gentoo/<span class="caps">ALT</span> documentation:</strong> Since we will soon start to recruit Arch Testers for the Gentoo/<span class="caps">ALT</span> project, I converted our old docs to handbook format, moved them around and wrote some new things. This led to the not-quite-finished <a href="http://www.gentoo.org/proj/en/gentoo-alt/contribute/">Gentoo/<span class="caps">ALT</span> Contributor&#8217;s Guide</a>, which is intended to be the one place where people interested in our project should find all the necessary information. I&#8217;ll still need a few more hours to fix typos and check other docs for now deprecated URLs, but other than that it&#8217;s fairly complete, so I hope it&#8217;s useful to you!</li><br />
+<li><strong>Gentoo/<span class="caps">ALT</span> Arch Testers:</strong> As mentioned above the Gentoo/<span class="caps">ALT</span> project will recruit Arch Testers soon. Somehow <a href="http://dev.gentoo.org/~flameeyes/">Flameeyes</a> managed to convince me to become the operational lead for our ATs, and hparker already brought me up to speed on what that task involves. As I think that good documentation is really important before we start bringing anyone on board, I first want to finish the new handbook before recruiting begins. Once we are actually starting to look for fresh blood, you&#8217;ll find announcements in the usual locations (<span class="caps">GWN</span>, gentoo-dev, here).</li><br />
+<li><strong>Nitro:</strong> Yesterday <a href="http://www.gmosx.com">George</a> released version 0.24.0 of his really nice web application framework! There are lots of cool new features, like a complete reworked annotation/property system, support for <a href="http://www.netpromi.com/kirbybase_ruby.html">KirbyBase</a>,  <span class="caps">SCGI</span> support, experimental <span class="caps">HTTP</span> streaming support, improved scaffolding and lots of other great stuff! Seeing how busy George has been, I thought that the ebuilds for all Nitro related packages deserve some extra love, like moving the <span class="caps">DBMS</span> use flags to the og ebuild instead of the nitro one (where they really belong, in case someone wants to use og without Nitro), as well as adding some extra useflags. Given that I already commited <a href="http://cmdparse.rubyforge.org/">cmdparse</a>, KirbyBase and an updated version of <a href="http://www.gentoo.org/doc/en/mysql-upgrading.xml">Facets</a> to <span class="caps">CVS</span>, it shouldn&#8217;t take much longer until an &#8220;emerge nitro&#8221; will get you the new and shiny 0.24.0!</li><br />
+<li><strong>MySQL upgrade guide:</strong> Lately there has been quite a lot of feedback on the <a href="http://www.gentoo.org/doc/en/mysql-upgrading.xml">MySQL upgrade guide</a> vivo and I have written. Please rest assured that we&#8217;re trying to update the doc accordingly <span class="caps">ASAP</span>. Unfortunately last time I checked days still don&#8217;t have more than a measly 24 hours, and this guide isn&#8217;t exactly top of my priority list&#8230;</li></p>
+</ul></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -458,43 +498,6 @@ P.S. Sorry for this pretty unorderly rant, I&#8217;m just in a strange mood toda
 
   <div class="entry-content"><p>Currently I don&#8217;t have that much time for Gentoo stuff, so things are going rather slowly on my end of things. At least I managed to do a version bump of <a href="http://ruby-pdf.rubyforge.org/pdf-writer/index.html">pdf-writer</a> and to finally commit the ebuilds for <a href="http://nitrohq.com">Nitro</a> 0.23.0 that were sitting in my overlay for some time now.</p>
 <p>Today I&#8217;ve been a good boy and submitted patches for the <a href="http://www.gentoo.org/doc/en/mysql-upgrading.xml">MySQL upgrade guide</a> and the <a href="http://www.gentoo.org/doc/en/gentoo-freebsd.xml">Gentoo/FreeBSD documentation</a>. I&#8217;m sure the great folks from the docs team will commit them soon for your reading pleasure. There also was a little update to the unofficial <a href="http://dev.gentoo.org/~citizen428/doc/gentoo-netbsd.html">Gentoo/NetBSD doc</a>, so now there&#8217;s really no excuse for not helping <a href="http://thunder.netbsd.edu.pl/">Damian</a> anymore.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/09/11/ruby-eselect-gfbsd-mysql/">Ruby Eselect, G/FBSD, MySQL</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-09-11T00:00:00+02:00" pubdate data-updated="true">Sep 11<span>th</span>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you haven&#8217;t tried out <a href="http://www.gentoo.org/proj/en/eselect/index.xml">eselect</a> yet, you definitely should do so! Especially if you maintain one of the current foo-config and update-bar tools please consider converting it to an eselect module, to offer our users the benefits of a  consistent and flexible framework, which additionally also has the advantage of fully supporting $<span class="caps">ROOT</span>. Also there&#8217;s good documentation for <a href="http://www.gentoo.org/proj/en/eselect/user-guide.xml">users</a> and <a href="http://www.gentoo.org/proj/en/eselect/dev-guide.xml">developers</a>, so you won&#8217;t have any problems getting started. That said, I&#8217;ve written a replacement for ruby-config that <a href="http://dev.gentoo.org/~kugelfang/">Danny</a> will commit pretty soon, so expect to see it in the next release of eselect.</p>
-<p>There also have been some small updates to the <a href="http://www.gentoo.org/doc/en/gentoo-freebsd.xml">Gentoo/FreeBSD installation instructions</a>, and thanks to <a href="http://dev.gentoo.org/~cardoe/">Cardoe&#8217;s</a> input I&#8217;ve already done another patch that soon will be commited by one of our docs team&#8217;s members.</p>
-<p>Last but not least I&#8217;ve written up a short guide for migrating from MySQL 4.0.x to 4.1.x which can be found <a href="http://dev.gentoo.org/~citizen428/mysql-update.txt">here</a>. It&#8217;s just plain text and based on Francesco&#8217;s mail, but he didn&#8217;t want to write something up himself. It was done late yesterday evening when I was really tired, but it&#8217;s better than nothing and we have a link to give out to our users.</p></div>
   
   
 

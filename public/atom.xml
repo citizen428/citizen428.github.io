@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-04-25T23:30:02+02:00</updated>
+  <updated>2012-04-29T22:35:06+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-04-29]]></title>
+    <link href="http://citizen428.net/blog/2012/04/29/information-overload-2012-04-29/"/>
+    <updated>2012-04-29T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/04/29/information-overload-2012-04-29</id>
+    <content type="html"><![CDATA[<p>[<blockquote><p>You don&#8217;t simply get to say you&#8217;re not a racist; not being racist — or a sexist or a homophobe — is a constant, arduous process of unlearning, of being uncomfortable, of eating crow and being humbled and re-evaluating.</p><footer><strong>G.D.</strong> <cite><a href='http://www.postbourgie.com/2010/04/30/the-racist-harvard-law-student-and-naming-names'>The Racist Harvard Law Student and Naming Names.</a></cite></footer></blockquote></p>
+
+<ul>
+<li><a href="http://www.postbourgie.com/2010/04/30/the-racist-harvard-law-student-and-naming-names">The Racist Harvard Law Student and Naming Names</a><br>The quote above says it all.</li>
+<li><a href="http://www.zeit.de/politik/deutschland/2012-04/delius-piraten-holocaust">Nazi-Vergleich zwingt Berliner Piraten zum Rückzug</a><br>The German Pirate Party currently has problems dealing with rightwing views within their ranks.</li>
+<li><a href="http://www.yesmagazine.org/issues/sustainable-happiness/10-things-science-says-will-make-you">10 Things Science Says Will Make You Happy</a><br>While there are no real surprises on this list, a lot of people — myself included — tend to forget some of the points mentioned in this article.</li>
+<li><a href="http://www.heise.de/tp/artikel/36/36785/1.html">Liquid Constitution</a><br>Island uses <a href="http://www.communitywiki.org/LiquidDemocracy">Liquid Democracy</a> for rewriting the constitution (in German).</li>
+<li><a href="http://www.alfiekohn.org/managing/fbrftb.htm">For Best Results, Forget the Bonus</a><br>Why bonuses don&#8217;t really work as motivation for employees.</li>
+<li><a href="http://arstechnica.com/business/coolest-jobs-in-tech/2012/04/coolest-jobs-in-tech-literally-running-a-south-pole-data-center.ars/1">Coolest jobs in tech (literally): running a South Pole data center</a><br>Literally and figuratively this is a cool job indeed.</li>
+<li><a href="http://chronicle.com/blogs/percolator/is-psychology-about-to-come-undone/29045">Is Psychology About to Come Undone?</a><br>A researcher is trying to replicate resuls from studies published in various magazines to double check their results.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-04-22]]></title>
@@ -443,24 +463,6 @@
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4780.en.html">Print Me If You Dare</a><br>One of my favorite talks of this year&#8217;s congress, you definitely want to watch this. Update your printer firmware first though ;-)</li>
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4814.en.html">Behind the scenes of a C64 demo</a><br>The C64 is the reason I became a software developer, so obviously I really enjoyed this talk. <a href="http://www.youtube.com/watch?v=LH6_1dEVWds">The demo</a> is really good too!</li>
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4866.en.html">Fnord-Jahresrückblick</a><br>Fun as always.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[28C3 day 2]]></title>
-    <link href="http://citizen428.net/blog/2011/12/29/28c3-day-2/"/>
-    <updated>2011-12-29T14:00:00+01:00</updated>
-    <id>http://citizen428.net/blog/2011/12/29/28c3-day-2</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4770.en.html">Don&#8217;t scan, just ask</a><br>This sounded a lot more interesting than it actually was, especially since the tool that was introduced is not publicly available (as far as I know that is).</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4680.en.html">Effective Denial of Service attacks against web application platforms</a><br>Great talk, solid presentation, this is the type of talk you want to download the video for.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4763.en.html">The Science of Insecurity</a><br>Another great presentation, another definite recommendation.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4800.en.html">How governments have tried to block Tor</a><br>An inspiring and insightful presentation about government surveillance and Tor.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4676.en.html">Apple vs. Google Client Platforms</a><br>A security comparison of iOS and Android and the repective vendor&#8217;s app markets.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4756.en.html">Quantified-Self and OpenBCI Neurofeedback Mind-Hacking</a><br>One big WTF and I definitely would have left, but unfortunately one of the 2 speakers had to borrow my ThinkPad power supply so I was stuck in this talk until the bitter end.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4775.en.html">Hacker Jeopardy</a><br>Fun as always, but this year&#8217;s questions seemed a lot easier than the ones I remember from previous years.</li>
 </ul>
 
 ]]></content>

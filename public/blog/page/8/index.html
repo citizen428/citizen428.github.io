@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Yesterday afternoon I decided it&#8217;s about time I finally learn how to write Ruby C extensions, so I went ahead and rewrote one of our &hellip;">
+  <meta name="description" content="Fish don&#8217;t know they&#8217;re in waterThis is something I also learned while traveling, the further you go away from home, the more you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,52 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/26/information-overload-2011-06-26/">Information Overload 2011-06-26</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-26T00:00:00+02:00" pubdate data-updated="true">Jun 26<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://sivers.org/fish">Fish don&#8217;t know they&#8217;re in water</a><br>This is something I also learned while traveling, the further you go away from home, the more you realize that many things you take as granted are just part of your own culture.</li>
+<li><a href="http://online.wsj.com/article/SB10001424052702304432304576369421525987128.html?mod=WSJ_hps_sections_opinion">Don&#8217;t Know Much About History</a><br>While I hope that history lessons in Europe aren&#8217;t as bad as they apparently are in the US, I remember from my own high-school days that the subject is often taught in awful ways.</li>
+<li><a href="http://en.wikipedia.org/wiki/G%C3%B6mb%C3%B6c#Name">The story of the G&ouml;mb&ouml;c</a><br>This is why math is cool: what starts as a weird theory, is later discovered to actually exist in nature.</li>
+<li><a href="http://www.coolmagnetman.com/maghow.htm">How do magnets work?</a><br>A very nice explanation of magnetism.</li>
+<li><a href="http://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF">Why numbering should start at zero</a><br>A letter by Edsger W. Dykstra gives a reason for why array indexing should start with 0 (&#8220;an element&#8217;s ordinal (subscript) equals the number of elements preceding it in the sequence&#8221;).</li>
+<li><a href="http://singularityhub.com/2011/06/22/new-japanese-pop-idol-shocks-fans-with-news%E2%80%93shes-not-real-video/">New Japanese Pop Idol Shocks Fans With News &mdash; She&#8217;s Not Real</a><br>With the amount of crazy news coming out of Japan, it&#8217;s surprising the country doesn&#8217;t feature here more regularly.</li>
+<li><a href="http://www.economist.com/content/indian-summary">An Indian summary</a><br>Great visualization of Indian states compared to countries. Maharashtra for example has the <span class="caps">GDP</span> of Singapore, but a per head roughly like Sri Lanka.</li>
+<li><a href="http://www.spiegel.de/international/europe/0,1518,769831,00.html">How European Elites Lost a Generation</a><br>A good article to understand some of the motivations behind the protests of young people everywhere in Europe.</li>
+<li><a href="http://www.economist.com/node/18866885">Lucky Yingluck</a><br>With the Thai elections around the corner, this article provides some insights into the current election campaign.</li>
+<li><a href="http://www.salon.com/news/opinion/glenn_greenwald/2011/06/01/free_speech">Criminalizing free speech</a><br>On free speech and extra-legal killings.</li>
+</ul></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -687,95 +733,6 @@ Brian Beckman recorded an <a href="http://channel9.msdn.com/Shows/Going+Deep/Bri
 </ul>
 
 </div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce/">Tom and Michael vs Google&#8217;s MapReduce</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-02T00:00:00+02:00" pubdate data-updated="true">May 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The other day on Twitter I complained about my own laziness when it comes to reading academic papers, and <a href="http://mrjaba.posterous.com/">Tom Crinson</a> chimed in to let me know that he&#8217;d also like to read more of them. That&#8217;s how we decided to set up a sort of online based reading group for this type of thing, where we&#8217;ll choose a paper to read, discuss it via email and then blog about it (<a href="http://mrjaba.posterous.com/mapreduce-simplified-data-processing-on-large">Tom&#8217;s post is here</a>).</p>
-<p>The first in this series of blog posts is about Google&#8217;s <a href="http://en.wikipedia.org/wiki/MapReduce">MapReduce</a> framework:</p>
-<p><strong>MapReduce: Simplified Data Processing on Large Clusters</strong></p>
-<p><a href="http://labs.google.com/papers/mapreduce.html">The paper</a> and <a href="http://labs.google.com/papers/mapreduce-osdi04-slides/index.html">a presentation based on the paper</a></p>
-<p><strong>Summary (by Tom Crinson)</strong></p>
-<p>This is a paper on an architectural software paradigm and framework that Google uses to process or generate vast amounts of data on commodity hardware.</p>
-<p>The basic elements are that each task is split into two stages:</p>
-<ul>
-<li>Mapping &#8211; a user defined processing task is applied to each job and converted to an intermediate key value format.</li>
-<li>Reducing &#8211; a second stage of processing takes in the intermediate output from the mapping stage and performs user defined aggregation functions to generate the desired output.</li>
-</ul>
-<p>The paper indicates that many different types of tasks can be split up in this way. Obvious ones for Google are processing pages, indexes and links etc, but people are also using the framework to do artificial intelligence tasks. This variety proofs the flexibility of the paradigm.</p>
-<p>The idea itself is pretty simple, we do it a lot in day to day programming: get a set of data, do some operation on all of the elements and then perform some kind of aggregation; sum for example. Google just took it one step further and on a huge scale. They talk about setting up clusters of thousands of machines to do the processing. This is where their framework comes in.</p>
-<p>The framework takes all of the pain out of distributing the tasks, setting workers onto individual jobs and handling input and output from each. It also takes care of the nitty gritty of fault tolerance, so for example if a worker dies the master process will notice and assign another worker to re-execute all of the tasks that the dead worker had done. The master will also take care of dealing with de-duplicating the jobs so your results are as they should be. It also has a pretty nice feature to handle &#8220;stragglers&#8221; (slow tasks): the framework preemptively sets another set of workers to duplicate the effort on the last few jobs just in case there is an issue with a worker machine that is slowing the process down. This was shown to have a huge effect in task completion time, an increase of something like 44% was seen without the backup processing.</p>
-<p>In case of master failure the whole process stops, but as it goes along the master has been setting &#8220;checkpoints&#8221; so in case of a crash, a new master can be started up and can continue on from the last checkpoint. This is a manual process though as the user should probably check to see if any of the input caused the failure.</p>
-<p>Another very handy feature is bad record detection. If there is a spurious data element that for some reason causes a worker to hang repeatedly, the master is notified and on the next attempt to process that record set, the bad record is skipped.</p>
-<p>There are some other key elements to the system, like splitting he input so it can be assigned to the different workers. This has a default hash function on the key, but can be user specified if you don&#8217;t simply want hash(key) mod numWorkers as this is quite simplistic. See an article on consistent hashing for alternatives and why it&#8217;s bad. The input data tends to consist of just input files, however an <span class="caps">API</span> is exposed to allow custom data providers which is a nice feature.</p>
-<p><strong>Takeaway</strong></p>
-<p>For me the key takeaway was the following sentence: <em>&#8220;[it] allows programmers who have no experience with distributed and/or parallel systems to exploit large amounts of resources easily&#8221;</em>, which basically means that MapReduce tries to take an inherently complex task and abstracts all the difficult bits away, so that programmers can focus solely on the data manipulation/transformation aspects.</p>
-<p><strong>Difficulty of the paper</strong></p>
-<p>Very easy. It&#8217;s a simple textual description of MapReduce including good examples. There&#8217;s basically no math and the language is easy to understand and not full of computer science jargon, so even less technical oriented people should be able to understand most of it. The presentation also serves an excellent summary.</p>
-<p><strong>Examples and further reading, food for thought</strong></p>
-<p>I hacked together a little something in <span class="caps">IRB</span> to illustrate the basic workings of the algorithm (it&#8217;s not perfect, but good enough for our purposes):</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="n">words</span> <span class="o">=</span> <span class="s2">&quot;foo bar baz qux foo bar lala&quot;</span>
-</span><span class='line'><span class="c1">#=&gt; &quot;foo bar baz qux foo bar lala&quot;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># map (user-supplied)</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span>   <span class="n">mapped</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/ /</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="o">|</span> <span class="o">[</span><span class="n">w</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span> <span class="p">}</span>
-</span><span class='line'><span class="c1">#=&gt; [[&quot;foo&quot;, 1], [&quot;bar&quot;, 1], [&quot;baz&quot;, 1], [&quot;qux&quot;, 1], [&quot;foo&quot;, 1], [&quot;bar&quot;, 1], [&quot;lala&quot;, 1]]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># aggregate (built-in)</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span>   <span class="n">aggregated</span> <span class="o">=</span> <span class="n">mapped</span><span class="o">.</span><span class="n">group_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">|</span> <span class="n">w</span> <span class="p">}</span>
-</span><span class='line'><span class="c1">#=&gt; {&quot;foo&quot;=&gt;[[&quot;foo&quot;, 1], [&quot;foo&quot;, 1]], &quot;bar&quot;=&gt;[[&quot;bar&quot;, 1], [&quot;bar&quot;, 1]], &quot;baz&quot;=&gt;[[&quot;baz&quot;, 1]], &quot;qux&quot;=&gt;[[&quot;qux&quot;, 1]], &quot;lala&quot;=&gt;[[&quot;lala&quot;, 1]]}</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># reduce (user-supplied)</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">aggregated</span><span class="o">.</span><span class="n">each_with_object</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">),</span> <span class="n">h</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:last</span><span class="p">)</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span> <span class="p">}</span>
-</span><span class='line'><span class="c1">#=&gt; {&quot;foo&quot;=&gt;2, &quot;bar&quot;=&gt;2, &quot;baz&quot;=&gt;1, &quot;qux&quot;=&gt;1, &quot;lala&quot;=&gt;1}</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>When thinking about the algorithm a bit more, it also dawned on me that MapReduce sounds a lot like a <a href="http://en.wikipedia.org/wiki/Monad">Monad</a>. When I started searching for this, it soon turned out that someone else had the same idea:</p>
-<p><a href="http://haskell.org/haskellwiki/MapReduce_as_a_monad">MapReduce as a monad</a></p>
-<p>Then there&#8217;s also a nice article I found on this last week, more or less by accident:</p>
-<p><a href="http://ayende.com/Blog/archive/2010/03/14/map-reduce-ndash-a-visual-explanation.aspx">Map / Reduce &#8211; A visual explanation</a></p>
-<p>Last but not least some links to MapReduce related frameworks and libraries:</p>
-<p><a href="http://hadoop.apache.org/">Hadoop</a><br />
-<a href="https://github.com/erikfrey/bashreduce">BashReduce</a><br />
-<a href="http://skynet.rubyforge.org/">Skynet</a><br />
-<a href="https://github.com/nathanmarz/cascalog">Cascalog</a></p></div>
   
   
 
