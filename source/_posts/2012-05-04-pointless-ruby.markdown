@@ -52,7 +52,7 @@ While coding along, I thought that I might as well tackle something that always 
   ...
 {% endcodeblock %}
 
-Let's remedy that with yet another version of `fn`:
+Let's remedy that with yet another version of `fn` (which unfortunately doesn't work if you actually want to call a method on the `Enumerable` itself):
 
 {% codeblock lang:ruby %}
 def fn(*funs)
@@ -71,7 +71,7 @@ end
 #=> [4, 6, 8, 10, 12]
 {% endcodeblock %}
 
-Here's the final version that combines everything, the code is not very pretty though:
+Here's the final version that combines everything (including the `Enumerable` problem), the code is not very pretty though:
 
 {% codeblock lang:ruby %}
 def fn(*funs)

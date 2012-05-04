@@ -4,7 +4,7 @@
   <title><![CDATA[Category: freedom | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/freedom/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-05-04T17:06:57+02:00</updated>
+  <updated>2012-05-04T19:03:38+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,23 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[No Tor, no more customer]]></title>
-    <link href="http://citizen428.net/blog/2012/04/18/no-tor+%28citizen428pad%27s+conflicted+copy+2012-04-19%29/"/>
-    <updated>2012-04-18T00:10:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/04/18/no-tor (citizen428pad's conflicted copy 2012-04-19)</id>
-    <content type="html"><![CDATA[<p><em>Update:</em> Server4You rebooted the machine in recovery mode, I removed the Tor packages and the system is back online, which means at least the <a href="http://tor.blingblingsquad.net/">mirror</a> is back online.</p>
-
-<p>I've been running a <a href="https://www.torproject.org/">Tor</a> relay since sometime in early 2006. There's many good reasons for doing so, but what motivated me personally was my experience of studying in China for one year and having to live with a censored Internet connection myself (theoretically, as there was an <a href="http://embraceubuntu.com/2006/12/08/ssh-tunnel-socks-proxy-forwarding-secure-browsing/">easy way around it</a> if you had a server outside of China to SSH to). Alas our system hasn't been an exit node in a while, but it's still better than nothing.</p>
-
-<p>Today I was contacted by my <a href="http://server4you.de">hosting provider</a>'s abuse team, telling me that my server has been shut down because of a ToS violation. I <a href="https://twitter.com/#!/citizen428/status/192189329177718784">immediately was afraid</a> that they might complain about the Tor relay, but still had hope that I might be wrong. Ten hours later, after I got no reply to about five support requests, I decided to call their hotline. The employee first told me that he has no way to see why the abuse team blocked my server, but then said that running a Tor node may have been the reason. What ensued was a five minute conversation full of WTFs, facepalms and headdesks on my part, but the bottom line is that Server4You is of the opinion that it is illegal to run a Tor relay in Germany because of the <a href="http://de.wikipedia.org/wiki/Hackerparagraf">"Hackerparagraf"</a>. If you don't know what that is, <a href="http://hackingexpose.blogspot.com/2012/04/watch-out-white-hats-european-union_3977.html">read up</a> on recent pushes to enforce similar legislation EU wide.</p>
-
-<p>After a fruitless discussion of said law, the — admittely nice — guy on the phone reassured me that my server will be restarted if I agree to disable the Tor node. I politely told him that I have no interest in using their services at all if I can't use them the way I want to, so I'll cancel my contract with Server4You as soon as possible. For the time being I donated some money to Tor, moved my blog over to <a href="http://www.heroku.com/">Heroku</a> (yay <a href="http://octopress.org/">Octopress</a>) and started evaluating hosting providers in countries with saner legislation (as long as there still are some).</p>
-
-<p>Sure, there's probably a lot of really bad things happening over the Tor network, but those shouldn't be used to discredit the tool's legitimate uses. If we start blaming technology instead of people, we might as well turn off the Internet.</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[No Tor, no more customer]]></title>
@@ -113,6 +96,31 @@
 <li><a href="http://www.good.is/post/people-are-awesome-the-south-carolina-coffee-shop-where-everyone-pays-for-everyone-else-s-drinks">People Are Awesome: The Coffee Shop Where Everyone Pays for Everyone Else's Drinks</a><br>It's not often enough that I get to post something nice here.</li>
 </ul>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-01-15]]></title>
+    <link href="http://citizen428.net/blog/2012/01/15/information-overload-2012-01-15/"/>
+    <updated>2012-01-15T00:00:00+01:00</updated>
+    <id>http://citizen428.net/blog/2012/01/15/information-overload-2012-01-15</id>
+    <content type="html"><![CDATA[<p><blockquote><p>As Reuters points out, diplomats are particularly upset by assassination plots against . . . diplomats.</p><footer><strong>Juan Cole</strong> <cite><a href='http://www.juancole.com/2012/01/a-murder-in-tehran.html'>A Murder in Tehran</a></cite></footer></blockquote></p>
+
+<ul>
+<li><a href="http://owni.eu/2012/01/10/twitter-the-new-frontline-in-global-cyber-jihad-al-qaeda-somalia/">Twitter: The New Frontline In Global Cyber Jihad"</a><br>I despise terminology like "cyber war" and "cyber jihad", but the article is still rather interesting.</li>
+<li><a href="http://gravityandlevity.wordpress.com/2009/07/08/your-body-wasnt-built-to-last-a-lesson-from-human-mortality-rates/">Your body wasn’t built to last: a lesson from human mortality rates</a><br>I've never heard of Gompertz' law before, but it's rather intriguing.</li>
+<li><a href="http://www.juancole.com/2012/01/a-murder-in-tehran.html">A Murder in Tehran</a><br>Being a scientist in Iran can be dangerous if you work in the "wrong" field.</li>
+<li><a href="http://boingboing.net/2012/01/13/google-fraudulently-solicits-f.html">The Google-Kenya ripoff</a><br>I can't believe that Google would be this stupid, but I'll keep an eye on this. Here's the <a href="http://blog.mocality.co.ke/2012/01/13/google-what-were-you-thinking/">blog post</a> by the company that raised the allegations.</li>
+<li><a href="http://www.chinaafricarealstory.com/2012/01/zambezi-valley-chinas-first.html">"The Zambezi Valley: China's First Agricultural Colony?" Fiction or Fact?</a><br>I don't know all the research, but this seems like an interesting topic to investigate.</li>
+<li><a href="http://www.sueddeutsche.de/leben/ethik-in-der-ernaehrung-nicht-fisch-nicht-fleisch-1.53590">Nicht Fisch! Nicht Fleisch!</a><br>This article about the various problems related to meat consumption is 2 years old and at least as relevant today as it was back then (in German).</li>
+<li><a href="http://www.dailymail.co.uk/news/article-2086392/Syria-Secrets-city-siege.html">Secrets from the city under siege</a><br>Smuggled pictures from the Syrian city of Homs and an interesting article to go with them.</li>
+<li><a href="http://www.guardian.co.uk/law/2012/jan/13/tvshack-student-founder-extradition">TVShack's student founder can be extradited to US, court rules</a><br>Whatever became of protecting your citizens? If he broke UK law try him there.</li>
+<li><a href="http://news.travel.aol.com/2011/02/28/why-did-tsa-pat-down-kids-adults-getting-off-train/">Why Did TSA Pat Down Kids, Adults Getting Off Train?</a><br>Welcome to the police state. Terrorists win.</li>
+<li><a href="http://www.nytimes.com/2012/01/15/opinion/sunday/the-rise-of-the-new-groupthink.html?_r=3&amp;hp=&amp;pagewanted=all">The Rise of the New Groupthink</a><br>I'm always in favor of pro-introvert artciles.</li>
+</ul>
+
+
+<p><blockquote><p>[I]ntroverts are comfortable working alone — and solitude is a catalyst to innovation.</p><footer><strong>Susan Cain</strong> <cite><a href='http://www.nytimes.com/2012/01/15/opinion/sunday/the-rise-of-the-new-groupthink.html?_r=3&amp;hp=&amp;pagewanted=all'>The Rise of the New Groupthink</a></cite></footer></blockquote></p>
 ]]></content>
   </entry>
   

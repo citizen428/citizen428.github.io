@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Io is a small small, prototype-based OO programming language that&#8217;s fun to play with. Unfortunately there&#8217;s not too much information &hellip;">
+  <meta name="description" content="I&#8217;m currently toying around with some ideas for Twitter bots etc. so I had a look at some of the available gems out there. Sometimes Ruby makes &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,42 +96,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/12/01/gravedigging-why-the-lucky-stiff-io-has-a-very-clean-mirror/">Gravedigging Why the Lucky Stiff: Io Has a Very Clean Mirror</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-12-01T00:00:00+01:00" pubdate data-updated="true">Dec 1<span>st</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.iolanguage.com/">Io</a> is a small small, prototype-based OO programming language that&#8217;s fun to play with. Unfortunately there&#8217;s not too much information about it out there and quite predictably googling for &#8220;io&#8221; gets you lots of results you are <strong>not</strong> looking for. But today I remembered that <a href="http://en.wikipedia.org/wiki/Why_the_lucky_stiff">why</a> once did a nice little article on the language, and thanks to the amazing <a href="http://www.archive.org/">Internet Archive</a> I actually managed to find it! So without further ado, here we go:</p>
-	<p><a href="http://web.archive.org/web/20080106163631/http://hackety.org/2008/01/05/ioHasAVeryCleanMirror.html">Io Has A Very Clean Mirror</a></p></div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -717,6 +681,65 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/29/pascal-vs-ruby/">Pascal vs. Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-29T00:00:00+02:00" pubdate data-updated="true">Jun 29<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>On ruby-talk somebody <a href="http://www.ruby-forum.com/topic/190552">was asking</a> for a method which will be used to generate a random string, by returning either a lowercase letter or one of the digits 0-9 when called. As an example he posted the following Pascal program:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='pascal'><span class='line'><span class="k">function</span> <span class="nf">GetRandomChar</span><span class="o">:</span> <span class="kt">char</span><span class="o">;</span>
+</span><span class='line'><span class="k">var</span>
+</span><span class='line'> <span class="n">r</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+</span><span class='line'><span class="k">begin</span>
+</span><span class='line'> <span class="n">r</span> <span class="o">:=</span> <span class="nb">random</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span><span class="o">;</span>
+</span><span class='line'> <span class="k">case</span> <span class="n">r</span> <span class="k">of</span>
+</span><span class='line'>   <span class="mi">0</span><span class="o">..</span><span class="mi">25</span><span class="o">:</span> <span class="bp">result</span> <span class="o">:=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span><span class="o">;</span>
+</span><span class='line'>   <span class="k">else</span> <span class="o">:</span> <span class="bp">result</span> <span class="o">:=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s">&#39;0&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span><span class="o">;</span>
+</span><span class='line'> <span class="k">end</span><span class="o">;</span>
+</span><span class='line'><span class="k">end</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>&#8220;Translating&#8221; this to Ruby, this is what I got:</p>
+<script src="http://gist.github.com/137675.js"></script><p>In your face, Niklaus Wirth! ;-)</p>
+<p>P.S. Actually I <i>do</i> have fond memories of the good old <a href="http://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a> days.</p></div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/19/">&larr; Older</a>
@@ -742,27 +765,6 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
                                              /></a>
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
-</div>
-</section>
-<section>
-<h1>Top Posts</h1>
-<div class="postrank-widget theDarkSide">
-<script type="text/javascript" src="http://api.postrank.com/static/widget-v2.js"></script>
-<script type="text/javascript">
-var options = {
-	"feed_hash": "a424fafe1edf439bb33fd235b75bd2a5",
-	"num":        5 ,
-	"theme":     "theDarkSide",
-	"hasLink":   true
-};
-new PostRankWidget(options);
-</script>
-<div class="powered-by-postrank-wrapper">
-<div class="powered-by-postrank">
-<p class="poweredByPostRank"><a href="http://www.postrank.com/?utm_source=topposts&utm_medium=widget&utm_content=topposts&utm_campaign=pr-1"><span>Powered by Postrank</span></a></p>
-</div>
-<div class="pr_bottomCornerSet"><div class="pr_clearBottomLeft"></div><div class="pr_solidSpecialMiddle"></div><div class="pr_clearBottomRight"></div></div>
-</div>
 </div>
 </section>
 
