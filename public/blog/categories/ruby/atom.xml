@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-04-30T10:24:04+02:00</updated>
+  <updated>2012-05-04T17:06:57+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,195 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pointless Ruby]]></title>
+    <link href="http://citizen428.net/blog/2012/05/04/pointless-ruby/"/>
+    <updated>2012-05-04T13:03:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/05/04/pointless-ruby</id>
+    <content type="html"><![CDATA[<p>It's no secret that I'm rather fond of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a> and also try to apply it to my Ruby coding, at least as long as it doesn't become too unidiomatic.</p>
+
+<p>Being at home sick I got bored, so I played around a bit in IRB to create a composition function that will allow me to create higher-order functions in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a> (sometimes also referred to as "pointless style", hence the title of this post). I know that <a href="http://rubyworks.github.com/facets/">Facets</a> has <code>Proc#compose</code> and <code>Proc#*</code>, but they only work with <code>Proc</code> objects. Ruby being the flexible beast that it is, it took me about two minutes to come up with a working solution, which I called <code>fn</code> because it basically returns a function and <code>compose</code> was too long for my taste:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
+</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">funs</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">v</span><span class="p">,</span> <span class="n">f</span><span class="o">|</span> <span class="n">v</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Here it is in action:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="s2">&quot;foo bar&quot;</span><span class="p">,</span> <span class="s2">&quot;baz qux&quot;</span><span class="o">].</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:split</span><span class="p">,</span> <span class="ss">:last</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; [&quot;bar&quot;, &quot;qux&quot;]&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>I know that this isn't really shorter than <code>{ |x| x.split.last }</code>, but usefullness isn't really the goal of a pointless exercise ;-)</p>
+
+<p>So far so good, but if one doesn't really care about pointfree style, wouldn't it also be fun to mix and match procs and symbols? It sure would:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
+</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="k">do</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;funs.inject(x) do |v, f|</span>
+</span><span class='line'><span class="sr">  Proc === f ? f.call(v) : v.send(f)</span>
+</span><span class='line'><span class="sr">end</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
+</span><span class='line'><span class="sr">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Let's see this in action:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:next</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="p">},</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">x</span><span class="o">.</span><span class="n">to_f</span> <span class="o">/</span> <span class="mi">2</span> <span class="p">}</span> <span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; [2.0, 4.5, 8.0]&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>While coding along, I thought that I might as well tackle something that always rather annoyed me, being unable to use <code>Symbol#to_proc</code> when you actually get arrays from the <code>Enumerator</code>:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">each_cons</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="ss">:+</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; ArgumentError: wrong number of arguments(0 for 1)&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Let's remedy that with yet another version of <code>fn</code>:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
+</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="k">do</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;funs.inject(x) do |v, f|</span>
+</span><span class='line'><span class="sr">  Enumerable === v ? v.first.send(f, *v[1..-1]) : v.send(f)</span>
+</span><span class='line'><span class="sr">end</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
+</span><span class='line'><span class="sr">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">each_cons</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; [3, 5, 7, 9, 11]&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">each_cons</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:+</span><span class="p">,</span> <span class="ss">:next</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; [4, 6, 8, 10, 12]&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Here's the final version that combines everything, the code is not very pretty though:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
+</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="k">do</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;funs.inject(x) do |v, f|</span>
+</span><span class='line'><span class="sr">  if Proc === f</span>
+</span><span class='line'><span class="sr">    f.call(*v)</span>
+</span><span class='line'><span class="sr">  else</span>
+</span><span class='line'><span class="sr">    if Enumerable === v</span>
+</span><span class='line'><span class="sr">      h, *t = v</span>
+</span><span class='line'><span class="sr">      h.send(f, *t)</span>
+</span><span class='line'><span class="sr">    else</span>
+</span><span class='line'><span class="sr">      v.send(f)</span>
+</span><span class='line'><span class="sr">    end</span>
+</span><span class='line'><span class="sr">  end</span>
+</span><span class='line'><span class="sr">end</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
+</span><span class='line'><span class="sr">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Tara:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">each_cons</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:+</span><span class="p">,</span> <span class="ss">:next</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">x</span><span class="o">.</span><span class="n">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">}</span> <span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; [&quot;100&quot;, &quot;110&quot;, &quot;1000&quot;, &quot;1010&quot;, &quot;1100&quot;]&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Note: I'm sick, all of this is untested, does not take into account corner cases of any kind and may harm your pet. It was however a fun little diversion that showed once again how flexible Ruby is.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby GitHub projects Atom feed]]></title>
@@ -165,145 +354,6 @@ end</p>
 <li><a href="http://judofyr.net/posts/tailin-ruby.html" title="faking tail call optimization in Ruby">Tailin&#8217; Ruby</a> </li><br />
 <li><a href="http://tagaholic.me/2009/05/11/demystifying-irb-commands.html">Demistifying IRB&#8217;s Commands</a> </li><br />
 <li><a href="http://kconrails.com/2010/11/30/ruby-enumerable-primer-part-1-the-basics/">Ruby Enumerable Magic: The Basics</a></li><br />
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ruby: Going to the C side]]></title>
-    <link href="http://citizen428.net/blog/2011/06/24/ruby-going-to-c-side/"/>
-    <updated>2011-06-24T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2011/06/24/ruby-going-to-c-side</id>
-    <content type="html"><![CDATA[<p>Yesterday afternoon I decided it's about time I finally learn how to write Ruby C extensions, so I went ahead and rewrote one of our <a href="http://www.rubylearning.org/class/">RubyLearning.org</a> exercises in C. Here's the exercise description:</p>
-
-<p><blockquote><p>Write a class called Person, that has balance as an instance variable and<br/>the following public method: show_balance.</p></p><p><p>I shall create the Person object as follows:</p></p><p><p>p = Person.new(40000)<br/>puts p.show_balance # calling the method</p></blockquote></p>
-
-<p>Here's the program in C, with relevant function signatures included as comments:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">include</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">ruby</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">static</span> <span class="n">VALUE</span> <span class="n">initialize</span><span class="p">(</span><span class="n">VALUE</span> <span class="n">self</span><span class="p">,</span> <span class="n">VALUE</span> <span class="n">amount</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// VALUE rb_iv_set(VALUE obj, char *name, VALUE value)</span>
-</span><span class='line'>  <span class="n">rb_iv_set</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="s">&quot;@balance&quot;</span><span class="p">,</span> <span class="n">amount</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">return</span> <span class="n">self</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">static</span> <span class="n">VALUE</span> <span class="n">show_balance</span><span class="p">(</span><span class="n">VALUE</span> <span class="n">self</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// VALUE rb_iv_get(VALUE obj, char *name)</span>
-</span><span class='line'>  <span class="k">return</span> <span class="n">rb_iv_get</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="s">&quot;@balance&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kt">void</span> <span class="n">Init_person</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// VALUE rb_define_class(char *name, VALUE superclass)</span>
-</span><span class='line'>  <span class="n">VALUE</span> <span class="n">cPerson</span> <span class="o">=</span> <span class="n">rb_define_class</span><span class="p">(</span><span class="s">&quot;Person&quot;</span><span class="p">,</span> <span class="n">rb_cObject</span><span class="p">);</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="c1">// void rb_define_method(VALUE classmod, char &lt;em&gt;name, VALUE(&lt;/em&gt;func)(), int argc)</span>
-</span><span class='line'>  <span class="n">rb_define_method</span><span class="p">(</span><span class="n">cPerson</span><span class="p">,</span> <span class="s">&quot;initialize&quot;</span><span class="p">,</span> <span class="n">initialize</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-</span><span class='line'>  <span class="n">rb_define_method</span><span class="p">(</span><span class="n">cPerson</span><span class="p">,</span> <span class="s">&quot;show_balance&quot;</span><span class="p">,</span> <span class="n">show_balance</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>I think the code is very self-explanatory, almost like writing Ruby in C. As you can see we define a class called "Person" in the "Init_person" function (which is called by Ruby when it loads our module), where we add the functions as instance methods with "rb_define_method". To compile this, we need an extconf.rb, which contains the following:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">require</span> <span class="err">&#39;</span><span class="n">mkmf</span><span class="err">&#39;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">extension_name</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">person</span><span class="err">&#39;</span>
-</span><span class='line'><span class="n">create_makefile</span><span class="p">(</span><span class="n">extension_name</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Now we can build and run it:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>→ ruby extconf.rb
-</span><span class='line'>creating Makefile
-</span><span class='line'>→ make
-</span><span class='line'>gcc -I. <span class="o">[</span>output snipped<span class="o">]</span>
-</span><span class='line'>→ irb&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;<span class="nv">$:</span>&amp;lt;&amp;lt;<span class="s1">&#39;.&#39;</span> <span class="c">#=&gt; [..., &#39;.&#39;]</span>
-</span><span class='line'>require <span class="s1">&#39;person&#39;</span> <span class="c">#=&gt; true</span>
-</span><span class='line'><span class="nv">p</span> <span class="o">=</span> Person.new<span class="o">(</span>3000<span class="o">)</span> <span class="c">#=&gt; #&amp;lt;Person:0x00000100a01940 @balance=3000&gt;</span>
-</span><span class='line'>p.show_balance <span class="c">#=&gt; 3000</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote>
-
-<p>As you can see everything works as if we had defined the class in Ruby. Let's add another method to deposit some money, which gives us a chance to demonstrate "rb_funcall":</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="k">static</span> <span class="n">VALUE</span> <span class="nf">deposit</span><span class="p">(</span><span class="n">VALUE</span> <span class="n">self</span><span class="p">,</span> <span class="n">VALUE</span> <span class="n">amount</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// VALUE rb_funcall(VALUE recv, ID id, int argc, ... )</span>
-</span><span class='line'>  <span class="n">VALUE</span> <span class="n">result</span> <span class="o">=</span> <span class="n">rb_funcall</span><span class="p">(</span><span class="n">rb_iv_get</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="s">&quot;@balance&quot;</span><span class="p">),</span> <span class="n">rb_intern</span><span class="p">(</span><span class="s">&quot;+&quot;</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">amount</span><span class="p">);</span>
-</span><span class='line'>  <span class="n">rb_iv_set</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="s">&quot;@balance&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>We also need to add this function as a method in "Init_person":</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'> <span class="n">rb_define_method</span><span class="p">(</span><span class="n">cPerson</span><span class="p">,</span> <span class="s">&quot;deposit&quot;</span><span class="p">,</span> <span class="n">deposit</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Does it work?</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;p.deposit(400) #=&gt; 3400</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote>
-
-<p>It does and we've successfully created a Ruby class from C. Probably not the type of class you'd really implement this way, but good enough as an example.</p>
-
-<p>Recommended reading:</p>
-
-<ul>
-<li>"Extending Ruby":http://www.ruby-doc.org/docs/ProgrammingRuby/html/ext_ruby.html from the PickAxe</li>
-<li>Mark Volkmann's presentation "Ruby C Extensions":http://java.ociweb.com/mark/NFJS/RubyCExtensions.pdf</li>
 </ul>
 
 ]]></content>

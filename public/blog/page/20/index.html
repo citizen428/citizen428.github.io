@@ -9,13 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="From Ruby Quiz #202:
-And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#8217;s solution: 1
-2
-3
-4
-5
-require &#39;rubygems &hellip;">
+  <meta name="description" content="Step 1: Download Fluid, an awesome little application to create site specific browsers. Step 2: Find some online API documentation. For Ruby I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -102,6 +96,94 @@ require &#39;rubygems &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps/">Create Your Own (Ruby) API Browser in 3 Easy Steps</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-17T00:00:00+02:00" pubdate data-updated="true">May 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+  <li><b>Step 1:</b> Download <a href="http://fluidapp.com/">Fluid</a>, an awesome little application to create site specific browsers.</li>
+  <li><b>Step 2:</b> Find some online <span class="caps">API</span> documentation. For Ruby I recommend <a href="railsapi.com">railsapi.com</a> or <a href="http://rubybrains.com">RubyBrains</a>. </li>
+  <li><b>Step 3:</b> Create your app in Fluid:</li>
+<p><img src="http://citizen428.net/uploads/fluid.png" alt="Fluid" /></p>
+</ul>
+<p>Here&#8217;s an example screenshot of a site specific browser for RubyBrain.com:</p>
+<p><img src="http://citizen428.net/uploads/fluid_rubybrain.png" alt="Fluid RubyBrain" /></p>
+<p>Of course this still requires you to have a working internet connection, but you could always use a local version of the <span class="caps">API</span> docs when creating the app. On a related note you should also check out <a href="http://www.robinlu.com/blog/goo">Goo</a> which is a nice alternative to gem server on OS X.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/">A TextMate Command for the RubyLearning Forums</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-10T00:00:00+02:00" pubdate data-updated="true">May 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As we all know posting code to <a href="http://moodle.org/">Moodle</a> (the software that powers <a href="http://rubylearning.org">RubyLearning</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
+<ul>
+<li> take the currently active file</li>
+<li> replace all occurrences of &lt; with the <span class="caps">HTML</span>-entity</li>
+<li> wrap all of that in [code ruby] tags and</li>
+<li> copy it to the clipboard, ready to be pasted into the forums.</li>
+</ul>
+<p>Source:<br />
+<script src="http://gist.github.com/109576.js"></script></p>
+<p>Download:<br />
+<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -495,103 +577,6 @@ require &#39;rubygems &hellip;">
 <p>Anyway, since it&#8217;s so easy to write applications with Sinatra, you probably don&#8217;t want to waste time deploying them. That&#8217;s where <a href="http://heroku.com/">Heroku</a> comes into play, a Ruby hosting platform which modeled it&#8217;s workflow around <a href="http://git-scm.com/">git</a>. In my &#8211; still somewhat limited &#8211; experience working with Heroku is painless and feels very natural, kudos to the team for providing us with such a nice option for hosting <a href="http://rack.rubyforge.org/">Rack</a> based apps! In fact I liked Heroku so much, that I wrote a patch for <a href="http://quirkey.com/">Aaron Quint</a>&#8216;s <a href="http://github.com/quirkey/sinatra-gen/tree/master">sinatra-gen</a> which will initialize git and create your app on Heroku for you. It&#8217;s not in the main branch yet, but Aaron said he likes the idea and that he will include it. Up until then you can get my version from <a href="http://github.com/citizen428/sinatra-gen/tree/master">here</a>.</p>
 <p><em>Update: Said patch &#8211; in slightly modified form &#8211; is now part of mainline sinatra-gen, so I recommend getting the &#8220;official&#8221; version, not mine.</em></p>
 <p>Oh yeah, once you are done creating all this shiny new webapps in Sinatra, don&#8217;t forget to take some snapshots of them with <a href="http://github.com/jurisgalang/snapurl/tree/master">snapurl</a>, another nifty little app I recently wrote a small patch for.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/03/18/rubyosa-google-lyrics-for-current-itunes-track/">RubyOSA: Google Lyrics for Current iTunes Track</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-18T00:00:00+01:00" pubdate data-updated="true">Mar 18<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><script src="http://gist.github.com/81399.js"></script><p>Adjust to your liking. :)</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/03/18/create-script-from-irb-session/">Create Script From IRB Session</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-18T00:00:00+01:00" pubdate data-updated="true">Mar 18<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We all know the feeling: before starting a new script you hack around in <span class="caps">IRB</span> to try out some things, but once you&#8217;re done you realize that now you either have to type everything again or copy/paste from the <span class="caps">IRB</span> session (or the history file if you keep one). So I set out on my search for a solution and found an <a href="http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results">old ruby-talk post by Gavin Sinclair</a>, which implemented a method called <b>dumphist</b>, which I modified to my needs and put in my ~/.irbrc:</p>
-<script src="http://gist.github.com/71624.js"></script><p>Let&#8217;s look at the following <span class="caps">IRB</span> session:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;hello&quot;</span>
-</span><span class='line'><span class="n">hello</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;world&quot;</span>
-</span><span class='line'><span class="n">world</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="k">def</span> <span class="nf">foo</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span>   <span class="nb">puts</span> <span class="s1">&#39;bar&#39;</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span>   <span class="k">end</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">dumphist</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;test.rb&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;def foo&quot;</span><span class="p">,</span> <span class="s2">&quot;puts &#39;bar&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;end&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>The last command created a file named test.rb for us, which contains only the method foo. :-)</p></div>
   
   
 

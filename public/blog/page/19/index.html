@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Today I felt like playing around with unsavory a bit more, which led to some minor improvements: code reorganization: the delicious class got moved &hellip;">
+  <meta name="description" content="On ruby-talk somebody was asking for a method which will be used to generate a random string, by returning either a lowercase letter or one of the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,101 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/29/pascal-vs-ruby/">Pascal vs. Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-29T00:00:00+02:00" pubdate data-updated="true">Jun 29<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>On ruby-talk somebody <a href="http://www.ruby-forum.com/topic/190552">was asking</a> for a method which will be used to generate a random string, by returning either a lowercase letter or one of the digits 0-9 when called. As an example he posted the following Pascal program:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='pascal'><span class='line'><span class="k">function</span> <span class="nf">GetRandomChar</span><span class="o">:</span> <span class="kt">char</span><span class="o">;</span>
+</span><span class='line'><span class="k">var</span>
+</span><span class='line'> <span class="n">r</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+</span><span class='line'><span class="k">begin</span>
+</span><span class='line'> <span class="n">r</span> <span class="o">:=</span> <span class="nb">random</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span><span class="o">;</span>
+</span><span class='line'> <span class="k">case</span> <span class="n">r</span> <span class="k">of</span>
+</span><span class='line'>   <span class="mi">0</span><span class="o">..</span><span class="mi">25</span><span class="o">:</span> <span class="bp">result</span> <span class="o">:=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span><span class="o">;</span>
+</span><span class='line'>   <span class="k">else</span> <span class="o">:</span> <span class="bp">result</span> <span class="o">:=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s">&#39;0&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span><span class="o">;</span>
+</span><span class='line'> <span class="k">end</span><span class="o">;</span>
+</span><span class='line'><span class="k">end</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>&#8220;Translating&#8221; this to Ruby, this is what I got:</p>
+<script src="http://gist.github.com/137675.js"></script><p>In your face, Niklaus Wirth! ;-)</p>
+<p>P.S. Actually I <i>do</i> have fond memories of the good old <a href="http://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a> days.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/18/quick-and-dirty-lazy-lists-in-ruby/">Quick and Dirty Lazy Lists in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-18T00:00:00+02:00" pubdate data-updated="true">Jun 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hash.new with a block is a sexy beast: you can specify default hash values and when a key is first used, the value will be calculated and inserted into the Hash. Based on that behavior I took a couple of minutes to hack together a small proof of concept class for <a href="http://en.wikipedia.org/wiki/Lazy_evaluation">lazy lists</a>:</p>
+<script src="http://gist.github.com/131821.js"></script><p>As I said, this is quick and dirty, especially since you have to pass the entire Hash.new block to LazyList.new right now. Other than that I quite like it though. I know there are at least <a href="http://lazylist.rubyforge.org/">two</a> <a href="http://moonbase.rydia.net/software/lazy.rb/">other</a> lazy list implementations for Ruby, but it seems like both haven&#8217;t been updated in a while and I don&#8217;t particularly like their interfaces. Dunno, if I manage to simplify list definition, I may actually try to develop this into something. Don&#8217;t hold your breath though&#8230;</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -453,94 +548,6 @@
 <li>Data and document techniques: This part talks about databases, structured text, authentication, searching, indexing and document processing.</li>
 </ul>
 <p>Chapters usually present the reader with a problem, then show an example solution which usually makes good use of existing libraries and then finish with further discussion on the topic (alternative ways to implement it, pitfalls in using the shown solution in &#8220;real life&#8221; scenarios etc.). For people with previous knowledge of Ruby this book is a good read, which shows how the dynamic nature of the language combined with the quite big amount of readily available libraries enable developers to quickly and efficiently find solutions to common problems. I sometimes do have minor quirks with some of the code, but that&#8217;s just personal preferences and being nitpicky. All in all it&#8217;s a very solid book which I enjoy quite a lot.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps/">Create Your Own (Ruby) API Browser in 3 Easy Steps</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-05-17T00:00:00+02:00" pubdate data-updated="true">May 17<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-  <li><b>Step 1:</b> Download <a href="http://fluidapp.com/">Fluid</a>, an awesome little application to create site specific browsers.</li>
-  <li><b>Step 2:</b> Find some online <span class="caps">API</span> documentation. For Ruby I recommend <a href="railsapi.com">railsapi.com</a> or <a href="http://rubybrains.com">RubyBrains</a>. </li>
-  <li><b>Step 3:</b> Create your app in Fluid:</li>
-<p><img src="http://citizen428.net/uploads/fluid.png" alt="Fluid" /></p>
-</ul>
-<p>Here&#8217;s an example screenshot of a site specific browser for RubyBrain.com:</p>
-<p><img src="http://citizen428.net/uploads/fluid_rubybrain.png" alt="Fluid RubyBrain" /></p>
-<p>Of course this still requires you to have a working internet connection, but you could always use a local version of the <span class="caps">API</span> docs when creating the app. On a related note you should also check out <a href="http://www.robinlu.com/blog/goo">Goo</a> which is a nice alternative to gem server on OS X.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/">A TextMate Command for the RubyLearning Forums</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-05-10T00:00:00+02:00" pubdate data-updated="true">May 10<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>As we all know posting code to <a href="http://moodle.org/">Moodle</a> (the software that powers <a href="http://rubylearning.org">RubyLearning</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
-<ul>
-<li> take the currently active file</li>
-<li> replace all occurrences of &lt; with the <span class="caps">HTML</span>-entity</li>
-<li> wrap all of that in [code ruby] tags and</li>
-<li> copy it to the clipboard, ready to be pasted into the forums.</li>
-</ul>
-<p>Source:<br />
-<script src="http://gist.github.com/109576.js"></script></p>
-<p>Download:<br />
-<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p></div>
   
   
 

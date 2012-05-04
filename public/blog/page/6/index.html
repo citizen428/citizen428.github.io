@@ -9,7 +9,9 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="I spent the first half of this week in Helsinki at the excellent Frozen Rails conference and thought I&#8217;d share some impressions with you: &hellip;">
+  <meta name="description" content="After using Wordpress as my blogging engine
+of choice for over a year (after moving away from S9Y), I decided to switch this site to
+Octopress. Why? &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +98,241 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/26/goodbye-wordpress/">Goodbye Wordpress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-26T21:00:00+02:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After using <a href="http://wordpress.org/">Wordpress</a> as my blogging engine
+of choice for over a year (after moving away from <a href="http://s9y.org/">S9Y</a>), I decided to switch this site to
+<a href="http://octopress.org/">Octopress</a>. Why? Because it&#8217;s cool!
+No, seriously. I was actually quite happy with WP, it just always felt
+like way more than I actually needed. OP on the other hand is super
+lightweight, ritten in Ruby and uses some of my favorite technologies,
+like Sinatra and Markdown. It doesn&#8217;t stop there though: having the site rendered to static
+files means I can get rid of MySQL and PHP on my little VPS, which
+definitely is a plus. And it&#8217;s also very cool to have all your posts
+in a directory on your local file system, so you can use all your
+favorite command line tools to search through or batch modify
+them. Last but not least I&#8217;m now writing my posts in Emacs instead of
+some crappy web input form (ok, granted, I could have done that before
+too).</p>
+
+<p>Now to the actual migration. I started by exporting my WP blog to
+XML. This can be done in the administration backend under &#8220;Tools -
+Export&#8221;. Once I had this XML, I used the following script to convert
+the posts to individual files for Octopress:</p>
+
+<div><script src='https://gist.github.com/1240781.js?file='></script>
+<noscript><pre><code>require 'fileutils'
+require 'date'
+require 'yaml'
+require 'rexml/document'
+
+include REXML
+
+doc = Document.new(File.new(ARGV[0]))
+
+FileUtils.mkdir_p &quot;_posts&quot;
+
+doc.elements.each(&quot;rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']&quot;) do |e|
+  p e.elements['wp:post_name'].text
+  post = e.elements
+  slug = post['wp:post_name'].text
+  date = DateTime.parse(post['wp:post_date'].text)
+  name = &quot;%02d-%02d-%02d-%s.textile&quot; % [date.year, date.month, date.day, slug]
+  date_string = &quot;#{date.year}-#{date.month}-#{date.day}&quot;
+
+  # convert all tags and categories into categories
+  categories = []
+  post.each('category') do |cat|
+    categories &lt;&lt; cat.text
+  end
+
+  content = post['content:encoded'].text.encode(&quot;UTF-8&quot;)
+
+  # convert &lt;code&gt;&lt;/code&gt; blocks to {% codeblock %}{% encodebloc %}
+  #content = content.gsub(/&lt;code&gt;(.*?)&lt;\/code&gt;/, '`\1`')
+  content = content.gsub(/&lt;code&gt;/, '{% codeblock %}')
+  content = content.gsub(/&lt;\/code&gt;/, '{% endcodeblock %}')
+
+  # convert &lt;pre&gt;&lt;/pre&gt; blocks to {% codeblock %}{% encodebloc %}
+  #content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;(.*?)&lt;\/pre&gt;/m, '`\1`')
+  content = content.gsub(/&lt;pre&gt;/, '{% codeblock %}')
+  content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;/, '{% codeblock %}')
+  content = content.gsub(/&lt;\/pre&gt;/m, '{% endcodeblock %}')
+
+  # convert headers
+  (1..3).each do |i|
+    content = content.gsub(/&lt;h#{i}&gt;([^&lt;]*)&lt;\/h#{i}&gt;/, ('#'*i) + ' \1')
+  end
+
+  puts &quot;Converting: #{name}&quot;
+
+  data = {
+    'layout' =&gt; 'post',
+    'title' =&gt; post['title'].text,
+    'date' =&gt; date_string,
+    'comments' =&gt; true,
+    'categories' =&gt; categories,
+  }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
+
+  File.open(&quot;_posts/#{name}&quot;, &quot;w&quot;) do |f|
+    f.puts data
+    f.puts &quot;---&quot;
+    f.puts content
+  end
+
+end
+</code></pre></noscript></div>
+
+
+<p>This was a fork of
+<a href="https://gist.github.com/1240781/ac8a139bf73232c4333f0cc5734151cf8e5d1f87">another script</a>,
+but tailored for my specific needs (e.g. all tags and categories of a
+post were converted to categories and I exported the files to Textile
+instead of Markdown because I used the former in my WP install through
+a plugin).</p>
+
+<p>Since some of my posts are quite popular and get linked to a lot, I
+didn&#8217;t want to loose my old links. I therefore wrote another script
+that created 301 redirects for all of them:</p>
+
+<div><script src='https://gist.github.com/1241762.js?file='></script>
+<noscript><pre><code>require 'date'
+require 'rexml/document'
+
+include REXML
+
+doc = Document.new(File.new(ARGV[0]))
+format = ARGV[1] || &quot;apache&quot;
+
+formats = {
+  :apache =&gt; &quot;RewriteRule ^%s$ /%s [R=301,L]&quot;,
+  :nginx =&gt; &quot;rewrite ^%s /%s permanent;&quot;
+}
+
+File.open(&quot;redirects.txt&quot;, &quot;w&quot;) do |f|
+  doc.elements.each(&quot;rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']&quot;) do |e|
+    post = e.elements
+    date = DateTime.parse(post['wp:post_date'].text)
+    slug = post['wp:post_name'].text
+
+    post['link'].text =~ %r{.*(/archives/\d+)}
+    old_url = $1
+    new_url = &quot;blog/#{date.strftime(&quot;%Y/%m/%d&quot;)}/#{slug}/&quot;
+
+    f.puts formats[format.intern] % [old_url, new_url]
+  end
+end
+</code></pre></noscript></div>
+
+
+<p>The script can generate the necessary directives for Apache or Nginx,
+so all you have to do is copy them into your web server
+configuration. I also added another redirect rule for the RSS feed to
+not annoy my subscribers:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RewriteRule ^/feed /atom.xml [R=301,L]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Of course I also didn&#8217;t want to loose all my comments, so I had to
+come up with a solution for that. I first
+installed the WP <a href="http://disqus.com">Disqus</a> plugin and exported all
+my current comments. I then used some good old Emacs magic to convert
+the list of redirects I had already generated to a CSV for Disqus&#8217;
+<a href="http://docs.disqus.com/help/39/">URL map migration tool</a>. So far this
+has not migrated all comments to the correct location, but it should
+eventually work out (worst case I&#8217;ll have to email Disqus support).</p>
+
+<p>Last but not least I used Octopress&#8217; excellent
+<a href="http://octopress.org/docs/theme/template/index.html">customization suport</a>
+to re-add some stuff to my headers, like the OpenID delegate.</p>
+
+<p>Of course there are still some things that need to be done, some of them more urgently
+then others. First off this site needs a better stylesheet. The
+default is actually quite ok, but I want something with more
+personality. I&#8217;ll also have to go through my old posts and clean them
+up a bit, the automatic conversion did some funny things at
+times. I also want to re-integrate Flattr and PostRank, but I&#8217;m not
+exactly in a hurry when it comes to that.</p>
+
+<p>I hope this post was useful to some of you, I&#8217;m definitely happy with
+my new blogging setup.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/25/information-overload-2011-09-25/">Information Overload 2011-09-25</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-25T00:00:00+02:00" pubdate data-updated="true">Sep 25<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This week&#8217;s issue is shorter than usual since I spent 4 days in Helsinki to attend <a href="https://frozenrails.eu/">Frozen Rails</a> and then had to prepare my talk for <a href="http://linuxwochenende2011.luga.at/">Linuxwochenende 2011</a>. I also had to deal with a non-functioning hard-disk in my MacBook Pro, it still remains to be seen if the disk failed or if it&#8217;s just the <span class="caps">SATA</span> cable.</p>
+<ul>
+<li><a href="http://bos.github.com/strange-loop-2011/talk/talk.html">Running a startup on Haskell</a><br>Unfortunately the slides are missing some bits that were in the actual talk, but they are still interesting.</li>
+<li><a href="http://www.ibiblio.org/harris/500milemail.html">The case of the 500-mile email</a><br>An old story by now that&#8217;s been posted all over the interent, but still a good piece of sysadmin lore.</li>
+<li><a href="http://www.economist.com/blogs/dailychart/2011/09/employment">Defending jobs</a><br>Of the world&#8217;s 10 biggest employers, 7 are state run.</li>
+<li><a href="http://www.wired.com/magazine/2011/08/ff_lost_basementtapes/">Lost: Wired&#8217;s Guide to Pop Culture&#8217;s Buried Treasure</a><br>No matter if it&#8217;s movies, TV shows, music albums or video games, some of pop cultures greatest treasures seem to be lost forever.</li>
+<li><a href="http://dl.dropbox.com/u/4186469/rust-all-hands-w2011/assets/fallback/index.html">The Rust Programming Language</a><br>More slides from a presentation related to programming, this time on Mozilla&#8217;s new systems programming language <a href="http://www.rust-lang.org/">Rust</a>, which is starting to shape up.</li>
+<li><a href="http://www.falter.at/web/print/detail.php?id=1460">&quot;Da bleibt mir die Spucke weg&quot;</a><br>An interview with <a href="http://www.sueddeutsche.de/">SZ</a> journalist Michael Frank about democracy and the political system in Austria (in German).</li>
+</ul></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -457,95 +694,6 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
 <p>Now for the actual content: after a foreword by Metasploit&#8217;s main developer HD Moore, there&#8217;s a little introduction section on penetration testing and the history of the framework. This is followed by the first chapter, which covers some penetration testing basics. After this the authors give a first introduction to the <span class="caps">MSF</span>, before dedicating a chapter each to various phases of pen testing, namely information gathering, vulnerability scanning and the actual exploitation. After this you&#8217;ll find a whole chapter on Meterpreter, covering various aspects of post-exploitation techniques. Once you get to this point, you should have a good idea about how Metasploit works in principle and how capable it is. The authors don&#8217;t stop here though, but use the following chapters to try to teach you about avoiding detection, client-side exploits and  Metasploit&#8217;s auxiliary modules. By this point in the book it felt like I already had learned a lot, but then I realized that I&#8217;m only halfway through the book! There still were chapters on various topics, including the social-engineering toolkit which is built in the <span class="caps">MSF</span> and wireless exploitation with Karmetasploit. As a Ruby developer/dev ops guy I was really interested in the next couple of chapters, which deal with building your own modules and exploits as well as porting existing exploits to Metasploit and Meterpreter scripting. Wow, the authors definitely covered a lot of ground until here, but we are still not done, since there&#8217;s on more chapter on how to simulate your pen tests.</p>
 <p>While the above shows what the book covered, it doesn&#8217;t say much on how it was covered. In my opinion the authors did a very good job, the text is easy to follow and to the point and helped by screenshots and transcripts of &#8220;msfconsole&#8221; sessions. Sure, most of this material is also available on the <a href="http://www.offensive-security.com/metasploit-unleashed/Metasploit_Unleashed_Information_Security_Training">Metasploit Unleashed</a> web site, but I like having it all in the form of one compact book. I noticed 2-3 places where the textual description and the content of the screenshot/transcript didn&#8217;t exactly match, which can lead to brief moments of confusion, but nothing dramatic.</p>
 <p>If you are new to Metasploit and want to get up to speed quickly, it&#8217;s hard to imagine that you&#8217;ll find a better book at the moment. More experienced users of the framework should flip through it in a book store to decide how much they&#8217;ll really get from it, but it&#8217;s probably still a good book to have around, even if it&#8217;s just for the cheat sheet in Appendix B.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/08/21/information-overload-2011-08-21/">Information Overload 2011-08-21</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-21T00:00:00+02:00" pubdate data-updated="true">Aug 21<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.telegraph.co.uk/culture/film/8681025/Saddams-demon-seed.html">Saddam&#8217;s demon seed</a><br>Latif Yahia was forced to work as Uday Hussein&#8217;s (Saddam&#8217;s son) body double, now a movie has been made about his life.</li>
-<li><a href="http://www.hrw.org/news/2011/08/14/indonesia-military-documents-reveal-unlawful-spying-papua">Indonesia: Military Documents Reveal Unlawful Spying in Papua</a><br>Lately I&#8217;ve been quite interested in Indonesia, not least because it&#8217;s a place people don&#8217;t tend to talk about too much, which is kinda odd considering it&#8217;s the 4th biggest country in the world.</li>
-<li><a href="http://zachholman.com/posts/how-github-works-hours/">How GitHub Works: Hours are Bullshit</a><br>A 3 part series of blog posts explaining how GitHub works. This is not about technical stuff, but about working hours, internal communications and so on (<a href="http://zachholman.com/posts/how-github-works-asynchronous/">part 2</a>, <a href="http://zachholman.com/posts/how-github-works-creativity/">part 3</a>).</li>
-<li><a href="http://thegazette.com/2011/08/15/for-first-time-more-corn-to-be-used-for-ethanol-than-livestock/">For first time, more corn used for ethanol than livestock</a><br>While food prices rise and people are starving, more corn is used for ethanol than for feeding animals (and we are not even talking feeding people here).</li>
-<li><a href="http://www.hanselman.com/blog/ImAPhonyAreYou.aspx">I&#8217;m a phony. Are you?</a><br>I too noticed this lack of self-confidence in a lot of IT people and occasionally myself. Do you have any experience with it?</li>
-<li><a href="http://www.economist.com/node/21525851">Don&#8217;t look down</a><br>I&#8217;m always surprised by how many people adhere to the &#8220;as long as someone is worth of than me&#8221; principle.</li>
-<li><a href="http://articles.cnn.com/2011-08-17/tech/finishing.videogames.snow_1_red-dead-redemption-entertainment-software-association-avid-gamers?_s=PM:TECH">Why most people don&#8217;t finish video games</a><br>I barely play video games anymore, but when I do I also prefer short and/or multiplayer ones.</li>
-<li><a href="http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html" title="AES">A Stick Figure Guide to the Advanced Encryption Standard</a><br>Awesome post explaining crypto to the non-techies out there. In related news, a <a href="http://www.net-security.org/secworld.php?id=11474">new potential weakness</a> in <span class="caps">AES</span> as found this week.</li>
-<li><a href="http://www.businessinsider.com/karl-marx-is-hot-2011-8">Karl Marx Is Hot</a><br>When US economists start quoting Marx, I start wondering if the global economy is really screwed?</li>
-<li><a href="http://inhabitat.com/13-year-old-makes-solar-power-breakthrough-by-harnessing-the-fibonacci-sequence/">13-Year-Old Makes Solar Power Breakthrough by Harnessing the Fibonacci Sequence</a><br>A young boy looks at nature, sees a pattern and turns it into something useful. Here&#8217;s an <a href="http://www.amnh.org/nationalcenter/youngnaturalistawards/2011/aidan.html">essay</a></li> <p>he wrote for the Young Naturalist Award. Or maybe this all was a hoax, at least according to one <a href="http://webcache.googleusercontent.com/search?q=cache:JmlMNqVPKlsJ:uvdiv.blogspot.com/2011/08/solar-panel-trees-really-are-inferior.html+http://uvdiv.blogspot.com/2011/08/solar-panel-trees-really-are-inferior.html&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us">removed post on Blogger</a>.</p>
-</ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/08/15/chaos-communication-camp-2011/">Chaos Communication Camp 2011</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-15T00:00:00+02:00" pubdate data-updated="true">Aug 15<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After <a href="http://en.wikipedia.org/wiki/What_the_Hack">What the Hack</a> in 2005 and the <a href="http://events.ccc.de/camp/2007/Intro/">Chaos Communication Camp 2007</a> this was my third hacker camp and once again it was an inspiring, funny, chaotic and productive week of talks, hacking, partying, networking and more.</p>
-<p>Monday was mostly spent driving to the camp, which all in all went rather smoothly. All hail to Tesco where we picked up a lot of equipment, including the super awesome tent we slept in. Tuesday was a good opportunity to get a first impression of the camp, see who&#8217;s there, starting to socialize and having a party.</p>
-<p>On Wednesday the talks started and I saw three of them. <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4421.en.html">Strong encryption of credit card information</a> was really quite interesting and once again I was shocked by how insecure some very important aspects of our lives are. <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4505.en.html">Strahlung im Weltall</a> dealt with space radiation and was part of the <a href="http://events.ccc.de/camp/2011/Fahrplan/events/4551.en.html">Hackers in Space</a> track of the conference. When you think web development is difficult, how about dealing with radiation that might randomly flip a bit? Last but not least <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4504.en.html"><span class="caps">GPRS</span> Intercept</a> was another rather shocking talk, showing that <span class="caps">GPRS</span> security is as bad as GSM&#8217;s.</p>
-<p>Thursday I started with <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4478.en.html">Die psychologischen Grundlagen des Social Engineerings</a>, which was a really good and interesting talk by Stefan Schumacher, who&#8217;s a really nice guy who spent quite a bit of time at our <a href="http://leiwandville.soup.io/">village</a>. <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4488.en.html">Steal Everything, Kill Everyone, Cause Total Financial Ruin!</a> was another social engineering related talk and very entertaining. I got to talk to Jayson later that night and he really is as adorable as he says ;-) One of the talks I was most looking forward to was <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4472.en.html">Hacking <span class="caps">DNA</span></a> and I wasn&#8217;t disappointed. As an added bonus Marc took some time on Saturday to come over to our village and help us with some really useful information on how to get a biohacking group going at a hackerspace.</p>
-<p>Friday I spent mostly socializing, but I also went to see 2 talks. <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4487.en.html">She-Hackers: Millennials and Gender in European F/<span class="caps">LOSS</span> Subculture</a> unfortunately was the worst lecture I saw at this camp, which is a real shame considering that the topic at hand was very interesting. In the evening I watched <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4426.en.html">Certified programming with dependent types</a>, which was a fairly interesting introduction to the <a href="http://coq.inria.fr/">Coq Proof Assistant</a>. As often with Andreas&#8217;s talks the title and abstract suggested slightly more, but it still was a solid and interesting presentation.</p>
-<p>Saturday started rather late for me due to Friday night&#8217;s party, but I still woke up in time for <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4597.en.html">Moonbounce Radio Communication</a>, held by members of Metalab&#8217;s amateur radio crew. Later that day the Metalab was on stage again, this time in the form of <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4491.en.html">Rethinking online news</a>, which was an awesome presentation that led to a nice little meetup of interested parties the next afternoon. Stay tuned on this front, there might be interesting things happening in the not too distant future! The most amazing part of the day for me though was taking a 20 minute flight in an <a href="http://en.wikipedia.org/wiki/Antonov_An-2">Antonov An-2</a> from 1968, which was really cool and worth every cent of the 45 Euro it cost.</p>
-<p>On Sunday I watched <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4445.en.html">Data Mining Your City</a>, which was not as interesting as I&#8217;d hoped for. It sadly also was the day where we had to say goodbye to the camp :-(</p>
-<p>Random thoughts: It&#8217;s super inspiring to spend an entire week around several thousand intelligent and creative people and like always after such an event I feel invigorated and full of ideas. I also finally should learn not to count on getting any work on one of my projects done at the camp, it never really works. Sometimes I wonder why I even bother bringing my laptop, an iPad or Netbook would probably be sufficient. But then why would I sit in front of my computer working on the same stuff I&#8217;m working on for the rest of the year when I&#8217;m surrounded by loads of interesting things and people I haven&#8217;t met yet?</p>
-<p>I &lt;3 you, Chaos Communication Camp!</p></div>
   
   
 

@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-04-30T10:24:04+02:00</updated>
+  <updated>2012-05-04T17:06:57+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,156 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pointless Ruby]]></title>
+    <link href="http://citizen428.net/blog/2012/05/04/pointless-ruby/"/>
+    <updated>2012-05-04T13:03:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/05/04/pointless-ruby</id>
+    <content type="html"><![CDATA[<p>It&#8217;s no secret that I&#8217;m rather fond of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a> and also try to apply it to my Ruby coding, at least as long as it doesn&#8217;t become too unidiomatic.</p>
+
+<p>Being at home sick I got bored, so I played around a bit in IRB to create a composition function that will allow me to create higher-order functions in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a> (sometimes also referred to as &#8220;pointless style&#8221;, hence the title of this post). I know that <a href="http://rubyworks.github.com/facets/">Facets</a> has <code>Proc#compose</code> and <code>Proc#*</code>, but they only work with <code>Proc</code> objects. Ruby being the flexible beast that it is, it took me about two minutes to come up with a working solution, which I called <code>fn</code> because it basically returns a function and <code>compose</code> was too long for my taste:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
+</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">funs</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">v</span><span class="p">,</span> <span class="n">f</span><span class="o">|</span> <span class="n">v</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here it is in action:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="s2">&quot;foo bar&quot;</span><span class="p">,</span> <span class="s2">&quot;baz qux&quot;</span><span class="o">].</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:split</span><span class="p">,</span> <span class="ss">:last</span><span class="p">)</span>
+</span><span class='line'><span class="c1">#=&gt; [&quot;bar&quot;, &quot;qux&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I know that this isn&#8217;t really shorter than <code>{ |x| x.split.last }</code>, but usefullness isn&#8217;t really the goal of a pointless exercise ;-)</p>
+
+<p>So far so good, but if one doesn&#8217;t really care about pointfree style, wouldn&#8217;t it also be fun to mix and match procs and symbols? It sure would:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
+</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">funs</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">v</span><span class="p">,</span> <span class="n">f</span><span class="o">|</span>
+</span><span class='line'>      <span class="no">Proc</span> <span class="o">===</span> <span class="n">f</span> <span class="p">?</span> <span class="n">f</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let&#8217;s see this in action:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:next</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="p">},</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">x</span><span class="o">.</span><span class="n">to_f</span> <span class="o">/</span> <span class="mi">2</span> <span class="p">}</span> <span class="p">)</span>
+</span><span class='line'><span class="c1">#=&gt; [2.0, 4.5, 8.0]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>While coding along, I thought that I might as well tackle something that always rather annoyed me, being unable to use <code>Symbol#to_proc</code> when you actually get arrays from the <code>Enumerator</code>:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">each_cons</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:+</span><span class="p">)</span>
+</span><span class='line'><span class="c1">#=&gt; ArgumentError: wrong number of arguments(0 for 1)</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let&#8217;s remedy that with yet another version of <code>fn</code>:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
+</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">funs</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">v</span><span class="p">,</span> <span class="n">f</span><span class="o">|</span>
+</span><span class='line'>      <span class="no">Enumerable</span> <span class="o">===</span> <span class="n">v</span> <span class="p">?</span> <span class="n">v</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">v</span><span class="o">[</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">each_cons</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span>
+</span><span class='line'><span class="c1">#=&gt; [3, 5, 7, 9, 11]</span>
+</span><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">each_cons</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:+</span><span class="p">,</span> <span class="ss">:next</span><span class="p">)</span>
+</span><span class='line'><span class="c1">#=&gt; [4, 6, 8, 10, 12]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&#8217;s the final version that combines everything, the code is not very pretty though:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
+</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">funs</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">v</span><span class="p">,</span> <span class="n">f</span><span class="o">|</span>
+</span><span class='line'>      <span class="k">if</span> <span class="no">Proc</span> <span class="o">===</span> <span class="n">f</span>
+</span><span class='line'>        <span class="n">f</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="o">*</span><span class="n">v</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">else</span>
+</span><span class='line'>        <span class="k">if</span> <span class="no">Enumerable</span> <span class="o">===</span> <span class="n">v</span>
+</span><span class='line'>          <span class="n">h</span><span class="p">,</span> <span class="o">*</span><span class="n">t</span> <span class="o">=</span> <span class="n">v</span>
+</span><span class='line'>          <span class="n">h</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">t</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">else</span>
+</span><span class='line'>          <span class="n">v</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">end</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tara:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">each_cons</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:+</span><span class="p">,</span> <span class="ss">:next</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">x</span><span class="o">.</span><span class="n">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">}</span> <span class="p">)</span>
+</span><span class='line'><span class="c1">#=&gt; [&quot;100&quot;, &quot;110&quot;, &quot;1000&quot;, &quot;1010&quot;, &quot;1100&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note: I&#8217;m sick, all of this is untested, does not take into account corner cases of any kind and may harm your pet. It was however a fun little diversion that showed once again how flexible Ruby is.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-04-29]]></title>
@@ -58,6 +208,23 @@
 
 <blockquote><p>Would some kernel people prefer getting tucked in at night instead of being cursed at? I’m sure that would be appreciated. I don’t think I have it in me, though.</p><footer><strong>Linus Torvals</strong> <cite><a href='http://techcrunch.com/2012/04/19/an-interview-with-millenium-technology-prize-finalist-linus-torvalds/'>An Interview With Linus Torvalds</a></cite></footer></blockquote>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[No Tor, no more customer]]></title>
+    <link href="http://citizen428.net/blog/2012/04/18/no-tor+%28citizen428pad%27s+conflicted+copy+2012-04-19%29/"/>
+    <updated>2012-04-18T00:10:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/04/18/no-tor (citizen428pad&#8217;s conflicted copy 2012-04-19)</id>
+    <content type="html"><![CDATA[<p><em>Update:</em> Server4You rebooted the machine in recovery mode, I removed the Tor packages and the system is back online, which means at least the <a href="http://tor.blingblingsquad.net/">mirror</a> is back online.</p>
+
+<p>I&#8217;ve been running a <a href="https://www.torproject.org/">Tor</a> relay since sometime in early 2006. There&#8217;s many good reasons for doing so, but what motivated me personally was my experience of studying in China for one year and having to live with a censored Internet connection myself (theoretically, as there was an <a href="http://embraceubuntu.com/2006/12/08/ssh-tunnel-socks-proxy-forwarding-secure-browsing/">easy way around it</a> if you had a server outside of China to SSH to). Alas our system hasn&#8217;t been an exit node in a while, but it&#8217;s still better than nothing.</p>
+
+<p>Today I was contacted by my <a href="http://server4you.de">hosting provider</a>&#8217;s abuse team, telling me that my server has been shut down because of a ToS violation. I <a href="https://twitter.com/#!/citizen428/status/192189329177718784">immediately was afraid</a> that they might complain about the Tor relay, but still had hope that I might be wrong. Ten hours later, after I got no reply to about five support requests, I decided to call their hotline. The employee first told me that he has no way to see why the abuse team blocked my server, but then said that running a Tor node may have been the reason. What ensued was a five minute conversation full of WTFs, facepalms and headdesks on my part, but the bottom line is that Server4You is of the opinion that it is illegal to run a Tor relay in Germany because of the <a href="http://de.wikipedia.org/wiki/Hackerparagraf">&#8220;Hackerparagraf&#8221;</a>. If you don&#8217;t know what that is, <a href="http://hackingexpose.blogspot.com/2012/04/watch-out-white-hats-european-union_3977.html">read up</a> on recent pushes to enforce similar legislation EU wide.</p>
+
+<p>After a fruitless discussion of said law, the — admittely nice — guy on the phone reassured me that my server will be restarted if I agree to disable the Tor node. I politely told him that I have no interest in using their services at all if I can&#8217;t use them the way I want to, so I&#8217;ll cancel my contract with Server4You as soon as possible. For the time being I donated some money to Tor, moved my blog over to <a href="http://www.heroku.com/">Heroku</a> (yay <a href="http://octopress.org/">Octopress</a>) and started evaluating hosting providers in countries with saner legislation (as long as there still are some).</p>
+
+<p>Sure, there&#8217;s probably a lot of really bad things happening over the Tor network, but those shouldn&#8217;t be used to discredit the tool&#8217;s legitimate uses. If we start blaming technology instead of people, we might as well turn off the Internet.</p>
 ]]></content>
   </entry>
   
@@ -433,38 +600,6 @@
 
 
 <blockquote><p>China, the only power with much influence over the country, is less troubled by the long-term grinding suffering of the North Koreans than by the prospect of a leadership vacuum leading suddenly to economic collapse and a flood of refugees. Such a prospect threatens to cause wider instability.</p><footer><strong>The Economist</strong> <cite><a href='http://www.economist.com/node/21542227'>Grief and Fear</a></cite></footer></blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[28C3 day 4]]></title>
-    <link href="http://citizen428.net/blog/2011/12/30/28c3-day-4/"/>
-    <updated>2011-12-30T13:01:00+01:00</updated>
-    <id>http://citizen428.net/blog/2011/12/30/28c3-day-4</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4828.en.html">Antiforensik</a><br>How to work against forensics. Nothing revolutionary, but a solid talk.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4587.en.html">bup: Git for backups</a><br>An interesting backup project using git, this is open source and still needs help in case you are looking for something to work on.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4856.en.html">The engineering part of social engineering</a><br>I wasn&#8217;t entirely convinced by this talk. While there were some interesting points, the speaker was quite full of himself and frankly the talk wasn&#8217;t so different from other SE talks that I&#8217;ve seen before.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4754.en.html">Smart Hacking For Privacy</a><br>This started off rather bad when  one of the 2 speakers couldn&#8217;t get over this nervousness, but ended up being a really funny and interesting talk, which was later joined by the CEO of the company whose product got hacked.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[28C3 day 3]]></title>
-    <link href="http://citizen428.net/blog/2011/12/29/28c3-day-3/"/>
-    <updated>2011-12-29T16:24:00+01:00</updated>
-    <id>http://citizen428.net/blog/2011/12/29/28c3-day-3</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4767.en.html">Security Log Visualization with a Correlation Engine</a><br>Nothing too special, but still rather interesting, especially since I need this for work at the moment.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4746.en.html">Bitcoin - An Analysis</a><br>This was a great talk about the current state of Bitcoin, highly recommended if you have any interest in the topic.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4663.en.html">Cellular protocol stacks for Internet</a><br>Harald Welte&#8217;s talks on mobile related stuff are usually great, but I didn&#8217;t get much out of this one, which felt a bit like acronym bullshit bingo (which is not Harald&#8217;s fault of course).</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4780.en.html">Print Me If You Dare</a><br>One of my favorite talks of this year&#8217;s congress, you definitely want to watch this. Update your printer firmware first though ;-)</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4814.en.html">Behind the scenes of a C64 demo</a><br>The C64 is the reason I became a software developer, so obviously I really enjoyed this talk. <a href="http://www.youtube.com/watch?v=LH6_1dEVWds">The demo</a> is really good too!</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4866.en.html">Fnord-Jahresrückblick</a><br>Fun as always.</li>
-</ul>
 
 ]]></content>
   </entry>
