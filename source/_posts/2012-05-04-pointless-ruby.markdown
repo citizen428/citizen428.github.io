@@ -44,12 +44,4 @@ Let's see this in action:
 #=> [2.0, 4.5, 8.0]
 {% endcodeblock %}
 
-While coding along, I thought that I might as well tackle something that always rather annoyed me, being unable to use `Symbol#to_proc` when you actually get arrays from the `Enumerator`:
-
-{% codeblock lang:ruby %}
-(1..10).each_cons(2).map(&:+)
-#=> ArgumentError: wrong number of arguments(0 for 1)
-  ...
-{% endcodeblock %}
-
 Note: I'm sick, all of this is untested, does not take into account corner cases of any kind and may harm your pet. It was however a fun little diversion that showed once again how flexible Ruby is.
