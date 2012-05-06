@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="The Internet is a radical medium: it mostly reflects polarized positions.Gleb Pavlovsky The Politics of No Alternatives or How Power Works in Russia &hellip;">
+  <meta name="description" content="In case you wonder if Tom and I gave up on reading papers, the answer is a resounding no! In fact there&#8217;s one we finished sometime around mid- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,67 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/10/23/tom-and-michael-vs-john-von-neumann/">Tom and Michael vs. John Von Neumann</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-23T19:55:00+02:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In case you wonder if <a href="http://mrjaba.posterous.com/">Tom</a> and I gave up on <a href="http://citizen428.net/blog/categories/versus/">reading papers</a>, the answer is a resounding no! In fact there&#8217;s one we finished sometime around mid-September, which for various reasons hasn&#8217;t been summarized yet. This is about to change.</p>
+
+<p><strong>The paper</strong></p>
+
+<p>The paper in questions was <a href="http://www.stanford.edu/class/cs242/readings/backus.pdf">&#8220;Can Programming Be Liberated from the von Neumann Style?&#8221;</a>, a <a href="http://en.wikipedia.org/wiki/Turing_Award">Turing Award</a> lecture by <a href="http://en.wikipedia.org/wiki/John_Backus">John Backus</a>.</p>
+
+<p><strong> A very brief summary</strong></p>
+
+<p>At the core of his lecture, Backus argues in favor of functional/applicative programming. This is done by first exploring shortcomings and bottlenecks in the <a href="http://en.wikipedia.org/wiki/Von_Neumann_architecture">von Neumann architecture</a>, followed by an exploration of concepts from his own <a href="http://en.wikipedia.org/wiki/FP_(programming_language">FP</a>) (Function Programming) language.</p>
+
+<p><strong> Difficulty of the paper</strong></p>
+
+<p>Generally this is very easy to read, and provides good food for thought, even today. The more mathematical parts in the middle might deter some readers, but aren&#8217;t really that important.</p>
+
+<p><strong>Takeaway</strong></p>
+
+<p>Alas the age of the paper shows a bit. While some of the points are still valid, there undoubtedly is a much wider appreciation of the benefits of applicative style programming nowadays, as can be seen by various functional languages slowly finding their way into the mainstream. It&#8217;s still very interesting to see how early Backus already thought about all of this though, and also that the language he envisioned seemed to be more in line with the <a href="http://en.wikipedia.org/wiki/Apl">APL</a> school of thought that e.g. Haskell, which in all fairness wasn&#8217;t around back then. I wonder how Backus felt about the latter,  which can be very declarative (see <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a>). For example, here is the inner product function from section 5 of the paper translated to Haskell:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="nf">ip</span> <span class="ow">::</span> <span class="p">[[</span><span class="kt">Integer</span><span class="p">]]</span> <span class="ow">-&gt;</span> <span class="kt">Integer</span>
+</span><span class='line'><span class="nf">ip</span> <span class="ow">=</span> <span class="n">sum</span> <span class="o">.</span> <span class="n">map</span> <span class="n">product</span> <span class="o">.</span> <span class="n">transpose</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you like programming languages and also like to think about them, and learn about their history, this is an interesting paper to read. Also it&#8217;s quite ironic that Backus actually won in large parts for his contributions to Fortran, a language that influenced so many other imperative languages.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -638,198 +699,6 @@
     <footer>
       <a rel="full-article" href="/blog/2011/09/27/octopress-templates/">Read on &rarr;</a>
     </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/26/goodbye-wordpress/">Goodbye Wordpress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-26T21:00:00+02:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After using <a href="http://wordpress.org/">Wordpress</a> as my blogging engine
-of choice for over a year (after moving away from <a href="http://s9y.org/">S9Y</a>), I decided to switch this site to
-<a href="http://octopress.org/">Octopress</a>. Why? Because it&#8217;s cool!
-No, seriously. I was actually quite happy with WP, it just always felt
-like way more than I actually needed. OP on the other hand is super
-lightweight, ritten in Ruby and uses some of my favorite technologies,
-like Sinatra and Markdown. It doesn&#8217;t stop there though: having the site rendered to static
-files means I can get rid of MySQL and PHP on my little VPS, which
-definitely is a plus. And it&#8217;s also very cool to have all your posts
-in a directory on your local file system, so you can use all your
-favorite command line tools to search through or batch modify
-them. Last but not least I&#8217;m now writing my posts in Emacs instead of
-some crappy web input form (ok, granted, I could have done that before
-too).</p>
-
-<p>Now to the actual migration. I started by exporting my WP blog to
-XML. This can be done in the administration backend under &#8220;Tools -
-Export&#8221;. Once I had this XML, I used the following script to convert
-the posts to individual files for Octopress:</p>
-
-<div><script src='https://gist.github.com/1240781.js?file='></script>
-<noscript><pre><code>require 'fileutils'
-require 'date'
-require 'yaml'
-require 'rexml/document'
-
-include REXML
-
-doc = Document.new(File.new(ARGV[0]))
-
-FileUtils.mkdir_p &quot;_posts&quot;
-
-doc.elements.each(&quot;rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']&quot;) do |e|
-  p e.elements['wp:post_name'].text
-  post = e.elements
-  slug = post['wp:post_name'].text
-  date = DateTime.parse(post['wp:post_date'].text)
-  name = &quot;%02d-%02d-%02d-%s.textile&quot; % [date.year, date.month, date.day, slug]
-  date_string = &quot;#{date.year}-#{date.month}-#{date.day}&quot;
-
-  # convert all tags and categories into categories
-  categories = []
-  post.each('category') do |cat|
-    categories &lt;&lt; cat.text
-  end
-
-  content = post['content:encoded'].text.encode(&quot;UTF-8&quot;)
-
-  # convert &lt;code&gt;&lt;/code&gt; blocks to {% codeblock %}{% encodebloc %}
-  #content = content.gsub(/&lt;code&gt;(.*?)&lt;\/code&gt;/, '`\1`')
-  content = content.gsub(/&lt;code&gt;/, '{% codeblock %}')
-  content = content.gsub(/&lt;\/code&gt;/, '{% endcodeblock %}')
-
-  # convert &lt;pre&gt;&lt;/pre&gt; blocks to {% codeblock %}{% encodebloc %}
-  #content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;(.*?)&lt;\/pre&gt;/m, '`\1`')
-  content = content.gsub(/&lt;pre&gt;/, '{% codeblock %}')
-  content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;/, '{% codeblock %}')
-  content = content.gsub(/&lt;\/pre&gt;/m, '{% endcodeblock %}')
-
-  # convert headers
-  (1..3).each do |i|
-    content = content.gsub(/&lt;h#{i}&gt;([^&lt;]*)&lt;\/h#{i}&gt;/, ('#'*i) + ' \1')
-  end
-
-  puts &quot;Converting: #{name}&quot;
-
-  data = {
-    'layout' =&gt; 'post',
-    'title' =&gt; post['title'].text,
-    'date' =&gt; date_string,
-    'comments' =&gt; true,
-    'categories' =&gt; categories,
-  }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
-
-  File.open(&quot;_posts/#{name}&quot;, &quot;w&quot;) do |f|
-    f.puts data
-    f.puts &quot;---&quot;
-    f.puts content
-  end
-
-end
-</code></pre></noscript></div>
-
-
-<p>This was a fork of
-<a href="https://gist.github.com/1240781/ac8a139bf73232c4333f0cc5734151cf8e5d1f87">another script</a>,
-but tailored for my specific needs (e.g. all tags and categories of a
-post were converted to categories and I exported the files to Textile
-instead of Markdown because I used the former in my WP install through
-a plugin).</p>
-
-<p>Since some of my posts are quite popular and get linked to a lot, I
-didn&#8217;t want to loose my old links. I therefore wrote another script
-that created 301 redirects for all of them:</p>
-
-<div><script src='https://gist.github.com/1241762.js?file='></script>
-<noscript><pre><code>require 'date'
-require 'rexml/document'
-
-include REXML
-
-doc = Document.new(File.new(ARGV[0]))
-format = ARGV[1] || &quot;apache&quot;
-
-formats = {
-  :apache =&gt; &quot;RewriteRule ^%s$ /%s [R=301,L]&quot;,
-  :nginx =&gt; &quot;rewrite ^%s /%s permanent;&quot;
-}
-
-File.open(&quot;redirects.txt&quot;, &quot;w&quot;) do |f|
-  doc.elements.each(&quot;rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']&quot;) do |e|
-    post = e.elements
-    date = DateTime.parse(post['wp:post_date'].text)
-    slug = post['wp:post_name'].text
-
-    post['link'].text =~ %r{.*(/archives/\d+)}
-    old_url = $1
-    new_url = &quot;blog/#{date.strftime(&quot;%Y/%m/%d&quot;)}/#{slug}/&quot;
-
-    f.puts formats[format.intern] % [old_url, new_url]
-  end
-end
-</code></pre></noscript></div>
-
-
-<p>The script can generate the necessary directives for Apache or Nginx,
-so all you have to do is copy them into your web server
-configuration. I also added another redirect rule for the RSS feed to
-not annoy my subscribers:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>RewriteRule ^/feed /atom.xml [R=301,L]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Of course I also didn&#8217;t want to loose all my comments, so I had to
-come up with a solution for that. I first
-installed the WP <a href="http://disqus.com">Disqus</a> plugin and exported all
-my current comments. I then used some good old Emacs magic to convert
-the list of redirects I had already generated to a CSV for Disqus&#8217;
-<a href="http://docs.disqus.com/help/39/">URL map migration tool</a>. So far this
-has not migrated all comments to the correct location, but it should
-eventually work out (worst case I&#8217;ll have to email Disqus support).</p>
-
-<p>Last but not least I used Octopress&#8217; excellent
-<a href="http://octopress.org/docs/theme/template/index.html">customization suport</a>
-to re-add some stuff to my headers, like the OpenID delegate.</p>
-
-<p>Of course there are still some things that need to be done, some of them more urgently
-then others. First off this site needs a better stylesheet. The
-default is actually quite ok, but I want something with more
-personality. I&#8217;ll also have to go through my old posts and clean them
-up a bit, the automatic conversion did some funny things at
-times. I also want to re-integrate Flattr and PostRank, but I&#8217;m not
-exactly in a hurry when it comes to that.</p>
-
-<p>I hope this post was useful to some of you, I&#8217;m definitely happy with
-my new blogging setup.</p>
-</div>
-  
   
 
 

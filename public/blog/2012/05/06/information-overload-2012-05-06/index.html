@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Pointless Ruby - citizen428.blog()</title>
+  <title>Information Overload 2012-05-06 - citizen428.blog()</title>
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="It&#8217;s no secret that I&#8217;m rather fond of functional programming and also try to apply it to my Ruby coding, at least as long as it doesn&# &hellip;">
+  <meta name="description" content="Because groups with wildly different perspectives dominate politics, the observation that ninety-nine per cent of Americans are being left behind &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://citizen428.net/blog/2012/05/04/pointless-ruby">
+  <link rel="canonical" href="http://citizen428.net/blog/2012/05/06/information-overload-2012-05-06">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -99,7 +99,7 @@
   
   <header>
     
-      <h1 class="entry-title">Pointless Ruby</h1>
+      <h1 class="entry-title">Information Overload 2012-05-06</h1>
     
     
       <p class="meta">
@@ -115,66 +115,29 @@
   
 
 
-<time datetime="2012-05-04T13:03:00+02:00" pubdate data-updated="true">May 4<span>th</span>, 2012</time>
+<time datetime="2012-05-06T00:00:00+02:00" pubdate data-updated="true">May 6<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>It&#8217;s no secret that I&#8217;m rather fond of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a> and also try to apply it to my Ruby coding, at least as long as it doesn&#8217;t become too unidiomatic.</p>
-
-<p>Being at home sick I got bored, so I played around a bit in IRB to create a composition function that will allow me to create higher-order functions in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a> (sometimes also referred to as &#8220;pointless style&#8221;, hence the title of this post). I know that <a href="http://rubyworks.github.com/facets/">Facets</a> has <code>Proc#compose</code> and <code>Proc#*</code>, but they only work with <code>Proc</code> objects. Ruby being the flexible beast that it is, it took me about two minutes to come up with a working solution, which I called <code>fn</code> because it basically returns a function and <code>compose</code> was too long for my taste:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
-</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">funs</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">v</span><span class="p">,</span> <span class="n">f</span><span class="o">|</span> <span class="n">v</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+<div class="entry-content"><blockquote><p>Because groups with wildly different perspectives dominate politics, the observation that ninety-nine per cent of Americans are being left behind economically isn’t of much use politically. The ninety-nine per cent is too big a category to be an effective political force.</p><footer><strong>Nicholas Lemann</strong> <cite><a href='http://www.newyorker.com/arts/critics/atlarge/2012/04/23/120423crat_atlarge_lemann?currentPage=all'>Evening the Odds</a></cite></footer></blockquote>
 
 
-<p>Here it is in action:</p>
+<ul>
+<li><a href="http://www.forbes.com/sites/andygreenberg/2012/05/01/mozilla-slams-cispa-breaking-silicon-valleys-silence-on-cybersecurity-bill/">Mozilla Slams CISPA, Breaking Silicon Valley&#8217;s Silence On Cybersecurity Bill</a><br>Finally someone in the valley speaks out against CISPA.</li>
+<li><a href="http://www.ctv.ca/generic/generated/static/business/article2418197.html">Sanctions against Syria finding unintended targets</a><br>Every time I read about sanctions against a country, they only seem to affect the wrong people.</li>
+<li><a href="http://www.behind-the-enemy-lines.com/2012/04/google-attack-how-i-self-attacked.html">The Google attack: How I attacked myself using Google Spreadsheets and I ramped up a $1000 bandwidth bill</a><br>Very interesting read. In a previous company we started discussing the idea of &#8220;financial DoS&#8221; using AWS over 2 years ago.</li>
+<li><a href="http://www.newyorker.com/arts/critics/atlarge/2012/04/23/120423crat_atlarge_lemann?currentPage=all">Evening the Odds</a>&lt;brOn inequality in the US.</li>
+<li><a href="http://discovermagazine.com/2009/sep/06-discover-interview-roger-penrose-says-physics-is-wrong-string-theory-quantum-mechanics/">Roger Penrose Says Physics Is Wrong, From String Theory to Quantum Mechanics</a><br>Interesting interview with Roger Penrose. I especially like the part about him and MC Escher.</li>
+<li><a href="http://www.spiegel.de/kultur/musik/nachruf-auf-beastie-boy-gruender-adam-yauch-a-831463.html">Bad Boy aus gutem Hause</a><br>An obituary for MCA by Der Spiegel (in German).</li>
+<li><a href="http://www.cjr.org/behind_the_news/the_bo_scandal_how_we_got_that.php?page=all">The Bo scandal: how we got that story</a><br>Background info on how journalists uncovered the scandal around Bo Xilai.</li>
+<li><a href="http://www.theweek.co.uk/us/46535/when-half-million-americans-died-and-nobody-noticed">When half a million Americans died and nobody noticed</a><br>If this is true, this is a pretty bad pharmaceutical scandal.</li>
+<li><a href="http://www.estherderby.com/2012/05/self-awareness-matters-finding-your-filters.html">Self-Awareness Matters: Finding Your Filters</a><br>This sounds interesting, I may try that out.</li>
+<li><a href="http://mondediplo.com/2012/05/05uganda">Cheap help from Uganda</a><br>US security firms in Iraq exploit workers from Uganda and other &#8220;third countries&#8221;. Unless they are white.</li>
+</ul>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="s2">&quot;foo bar&quot;</span><span class="p">,</span> <span class="s2">&quot;baz qux&quot;</span><span class="o">].</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:split</span><span class="p">,</span> <span class="ss">:last</span><span class="p">)</span>
-</span><span class='line'><span class="c1">#=&gt; [&quot;bar&quot;, &quot;qux&quot;]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I know that this isn&#8217;t really shorter than <code>{ |x| x.split.last }</code>, but usefullness isn&#8217;t really the goal of a pointless exercise ;-)</p>
-
-<p>So far so good, but if one doesn&#8217;t really care about pointfree style, wouldn&#8217;t it also be fun to mix and match procs and symbols? It sure would:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
-</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="k">do</span>
-</span><span class='line'>    <span class="n">funs</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">v</span><span class="p">,</span> <span class="n">f</span><span class="o">|</span>
-</span><span class='line'>      <span class="no">Proc</span> <span class="o">===</span> <span class="n">f</span> <span class="p">?</span> <span class="n">f</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Let&#8217;s see this in action:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:next</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="p">},</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">x</span><span class="o">.</span><span class="n">to_f</span> <span class="o">/</span> <span class="mi">2</span> <span class="p">}</span> <span class="p">)</span>
-</span><span class='line'><span class="c1">#=&gt; [2.0, 4.5, 8.0]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Note: I&#8217;m sick, all of this is untested, does not take into account corner cases of any kind and may harm your pet. It was however a fun little diversion that showed once again how flexible Ruby is.</p>
 </div>
 
 
@@ -197,12 +160,12 @@
   
 
 
-<time datetime="2012-05-04T13:03:00+02:00" pubdate data-updated="true">May 4<span>th</span>, 2012</time>
+<time datetime="2012-05-06T00:00:00+02:00" pubdate data-updated="true">May 6<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ruby/'>ruby</a>
+    <a class='category' href='/blog/categories/informationoverload/'>informationoverload</a>, <a class='category' href='/blog/categories/politics/'>politics</a>, <a class='category' href='/blog/categories/privacy/'>privacy</a>, <a class='category' href='/blog/categories/science/'>science</a>, <a class='category' href='/blog/categories/society/'>society</a>, <a class='category' href='/blog/categories/technology/'>technology</a>
   
 </span>
 
@@ -212,18 +175,18 @@
       <div class="sharing">
   
     <a class="FlattrButton" style="display:none;"
-    title="Pointless Ruby"
+    title="Information Overload 2012-05-06"
     data-flattr-uid="citizen428"
     data-flattr-tags=""
     data-flattr-button="compact"
     data-flattr-category="text"
-    href="http://citizen428.net/blog/2012/05/04/pointless-ruby/">
+    href="http://citizen428.net/blog/2012/05/06/information-overload-2012-05-06/">
     
 </a>
 
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2012/05/04/pointless-ruby/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2012/05/04/pointless-ruby/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2012/05/06/information-overload-2012-05-06/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2012/05/06/information-overload-2012-05-06/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -236,10 +199,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/04/29/information-overload-2012-04-29/" title="Previous Post: Information Overload 2012-04-29">&laquo; Information Overload 2012-04-29</a>
+        <a class="basic-alignment left" href="/blog/2012/05/04/pointless-ruby/" title="Previous Post: Pointless Ruby">&laquo; Pointless Ruby</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/05/06/information-overload-2012-05-06/" title="next Post: Information Overload 2012-05-06">Information Overload 2012-05-06 &raquo;</a>
       
     </p>
   </footer>
@@ -337,8 +298,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://citizen428.net/blog/2012/05/04/pointless-ruby/';
-        var disqus_url = 'http://citizen428.net/blog/2012/05/04/pointless-ruby/';
+        var disqus_identifier = 'http://citizen428.net/blog/2012/05/06/information-overload-2012-05-06/';
+        var disqus_url = 'http://citizen428.net/blog/2012/05/06/information-overload-2012-05-06/';
         var disqus_script = 'embed.js';
       
     (function () {
