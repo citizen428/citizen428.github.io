@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="On ruby-talk somebody was asking for a method which will be used to generate a random string, by returning either a lowercase letter or one of the &hellip;">
+  <meta name="description" content="Clojure definitely is one of the hottest new programming languages around and just recently hit a very important milestone. Setting up a nice Clojure &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,51 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/">Easy Setup for Clojure on Mac OS X Leopard</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-24T00:00:00+02:00" pubdate data-updated="true">Aug 24<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://clojure.org/">Clojure</a> definitely is one of the hottest new programming languages around and just recently hit a <a href="http://clojure.blogspot.com/2009/05/clojure-10.html">very important milestone</a>. Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand <a href="http://github.com/carlism/Clojure-MacOSX/tree">one of those</a> into <a href="http://github.com/citizen428/ClojureX/tree/master">ClojureX</a>, which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
+<p>ClojureX can</p>
+<ul>
+<li> download and build the source code for Clojure, <a href="http://github.com/richhickey/clojure-contrib/tree/master">clojure-contrib</a> and <a href="http://jline.sourceforge.net/">JLine</a> (a readline like library for Java)</li>
+<li> download editor support packages for TextMate and Emacs</li>
+<li> create a symlink for the Clojure startup script in /usr/local/bin</li>
+<li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
+<li> configure Emacs to use <a href="http://github.com/jochu/clojure-mode/tree/master">clojure-mode</a>, <a href="http://common-lisp.net/project/slime/">Slime</a> and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
+<li> keep your Clojure installation up to date via a simple &#8220;git submodule update &amp;&amp; ant&#8221;</li>
+</ul>
+<p>I hope this will come in handy for other people interested in trying out Clojure on Mac OS X, if you have any feedback please post it in the comment section.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -507,47 +552,6 @@
 <p>In case you don&#8217;t know <a href="http://www.macruby.com/">MacRuby</a>, it&#8217;s a Ruby interpreter sitting on top of <a href="http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/">Objective-C</a> and OS X core technologies (see also <a href="http://citizen428.net/archives/365-Ruby-implementations-and-why-we-should-care.html">here</a>).</p>
 <p>During the 74 minute screencast you will build a basic but functional Twitter client, and in the process learn about MacRuby and <a href="http://developer.apple.com/cocoa/">Cocoa</a> basics, using <a href="http://developer.apple.com/tools/macosxtools.html">Xcode</a> and <a href="http://developer.apple.com/tools/interfacebuilder.html">InterfaceBuilder</a> to develop and bundle your application and many other interesting topics.</p>
 <p>The screencast is very well structured, easy to follow and full of good and practical information, including perks and rough edges of the current MacRuby version. All in all a really enjoyable and informative video, which is well worth US$9 (or less if you buy packs of credits)!</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/05/18/review-ruby-in-practice-manning-publications/">Review: Ruby in Practice (Manning Publications)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-05-18T00:00:00+02:00" pubdate data-updated="true">May 18<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I read <a href="http://www.manning.com/mcanally/">Ruby in Practice</a> for the <a href="http://rubylearning.com/blog/2009/05/12/book-promotion-ruby-in-practice/">upcoming book promotion</a> on <a href="http://www.rubylearning.org">RubyLearning</a>, and I have to say it&#8217;s a pretty neat book which will be well worth your time and money. Over the course of 360 pages Jeremy McAnally and Assaf Arkin tackle lots of different topics of interest to developers. The book is structured in 3 main parts:</p>
-<ul>
-<li>Ruby techniques: Gives a general introduction to Ruby&#8217;s strength (which sometimes reads as a bit of a sales pitch), <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development"><span class="caps">BDD</span></a> and <a href="http://en.wikipedia.org/wiki/Test-driven_development"><span class="caps">TDD</span></a>, as well as scripting with Ruby (including <a href="http://en.wikipedia.org/wiki/Object_Linking_and_Embedding"><span class="caps">OLE</span></a> and <a href="http://en.wikipedia.org/wiki/AppleScript"><span class="caps">OSA</span></a>).</li>
-<li>Integration and communication: This part covers Rails, web services in general (<span class="caps">HTTP</span>, <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer"><span class="caps">REST</span></a>, <a href="http://en.wikipedia.org/wiki/SOAP_(protocol)"><span class="caps">SOAP</span></a>), automating communication with email and IM, asynchronous messaging and deployment options.</li>
-<li>Data and document techniques: This part talks about databases, structured text, authentication, searching, indexing and document processing.</li>
-</ul>
-<p>Chapters usually present the reader with a problem, then show an example solution which usually makes good use of existing libraries and then finish with further discussion on the topic (alternative ways to implement it, pitfalls in using the shown solution in &#8220;real life&#8221; scenarios etc.). For people with previous knowledge of Ruby this book is a good read, which shows how the dynamic nature of the language combined with the quite big amount of readily available libraries enable developers to quickly and efficiently find solutions to common problems. I sometimes do have minor quirks with some of the code, but that&#8217;s just personal preferences and being nitpicky. All in all it&#8217;s a very solid book which I enjoy quite a lot.</p></div>
   
   
 
