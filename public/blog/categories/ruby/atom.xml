@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-05-13T14:25:32+02:00</updated>
+  <updated>2012-05-14T23:49:32+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,77 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tap dance]]></title>
+    <link href="http://citizen428.net/blog/2012/05/14/tap-dance/"/>
+    <updated>2012-05-14T23:14:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/05/14/tap-dance</id>
+    <content type="html"><![CDATA[<p>Ruby's <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> is a really nice and useful method. One of my favorite uses is <code>Object#d</code>, which I think I originally saw in <a href="https://github.com/janlelis/irbtools">irbtools</a>. Personally, I'm using the following version in my <code>~/.irbrc</code>:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Object</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">d</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;self.tap { |s| puts s }</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
+</span><span class='line'><span class="sr">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Inserting this in a chain of calls can be very enlightening as to where a value changes unexpectedly.</p>
+
+<p>However, recently I've seen more and more use of <code>tap</code> where I'd traditionally have used <code>inject/reduce</code>. People who know me can attest to the fact that I'm a big fan of the latter, but for some reason there's quite a few developers who seem to find theses methods hard to grok. For this reason recent Ruby versions added <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_with_object">Enumerable#each_with_object</a>, which seems to be easier to use for some people, but which isn't very popular because of it's lengthy name. See for example the following blog post that was written as a result of a discussion I had with the author on StackOverflow: <a href="http://phrogz.net/tap-vs-each_with_object">tap vs. each_with_object: tap is faster and less typing.</a></p>
+
+<p>As I said in the comment there, my main problem is that you have to call <code>tap</code> on what is to become the result, not the data you want to transform. While this is not a problem per se, I somehow don't like the semantics of it. However, once I decided to hide it behind a Pascal-like <a href="http://www.freepascal.org/docs-html/ref/refsu53.html">with statement</a>, I immediately started liking it:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Kernel</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">with</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">blk</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;o.tap(&amp;amp;blk)</span>
+</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
+</span><span class='line'><span class="sr">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Here are the examples from the blog post linked above, including a new version for <code>with</code>. Decide which one you like best:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">nums</span><span class="o">.</span><span class="n">inject</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="p">,</span> <span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">;</span> <span class="n">h</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;nums.each_with_object({}) { |n, h| h[n] = n }&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="p">{}</span><span class="o">.</span><span class="n">tap</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="o">|</span> <span class="n">nums</span><span class="o">.</span><span class="n">each</span><span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">}</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;with({}) { |h| nums.each { |n| h[n]=n } }</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Sure, putting it in <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html">Kernel</a> and therefore calling it without a receiver seems a little strange at first, but I kinda like how it reads. I know this is probably a case of me being anal about semantics, but I really think that <code>with</code> transports the intent a lot better than <code>tap</code> in cases like the one showed here.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Pointless Ruby]]></title>
@@ -215,33 +286,6 @@ end</p>
 <p><em>Wednesday:</em> Despite a lack of sleep I dragged myself to Richard White's ("UserVoice":http://uservoice.com/) "keynote":https://frozenrails.eu/sessions#richard, who talked about startups and entrepreneurship. That was followed by the very interesting "How GitHub Uses GitHub to Build GitHub":https://frozenrails.eu/sessions#zach by Zach Holman ("GitHub":http://github.com, surprise). I then spent some time hacking a little on a bit of Ruby code for my lightning talk, but went to see Ryan Smith's talk on how stuff works at Heroku. After the coffee break I sat in "Joseph Ruscio's" ("Librato":https://silverline.librato.com/) talk "Implementing a RESTful API with Ruby the Right Way":https://frozenrails.eu/sessions#joseph_ruscio, but I must admit that I was a bit tired and didn't pay as much attention as the talk deserved. The last talk was my personal favorite, "Debugging Ruby Performance":https://frozenrails.eu/sessions#aman by GitHub's Aman Gupta (I have some notes as an Emacs org-file "on GitHub":https://github.com/citizen428/study-notes/blob/master/ruby-perfomance/ruby-perfomance.org). The conference ended with some lightning talks, including our own on hack weeks at Tupalo. For dinner Heroku invited some 25 or so people to the expensive "Hotel K&auml;mp":http://www.hotelkamp.fi/, where I spent most of the time talking to Topfunky and his friends. We then went over to "Le Bonk":http://www.lebonk.fi/ to join the GitHub drink up, but due to a non-disclosure agreement with myself no details about this evening will be made public ;-)</p>
 
 <p>All in all a very nice and well organized conference, that for me has the perfect size. Congrats and thanks to the team for organizing such an awesome event! BTW: someone set up a "GitHub repository":https://github.com/i0rek/frozenrails-notes with Frozen Rails slides, photos and notes, check it out!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The updated Ruby reading list]]></title>
-    <link href="http://citizen428.net/blog/2011/08/27/the-updated-ruby-reading-list/"/>
-    <updated>2011-08-27T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2011/08/27/the-updated-ruby-reading-list</id>
-    <content type="html"><![CDATA[<p>A little more than a year ago, I posted a "Ruby reading list":http://citizen428.net/archives/430 consisting of blog posts I often recommend to our students at RubyLearning as well as some interesting articles. It's time for the updated version (some links are the same as last time, some are new, some are gone):</p>
-
-<ul>
-<li><a href="http://www.caliban.org/ruby/rubyguide.shtml">The Unofficial Ruby Usage Guide</a> (tips, tricks and style guidelines)</li><br />
-<li><a href="http://www.hokstad.com/ruby-object-model.html">The Ruby Object Model &#8211; Structure and Semantics</a></li><br />
-<li><a href="http://viewsourcecode.org/why/hacking/seeingMetaclassesClearly.html">Seeing Metaclasses Clearly</a> </li><br />
-<li><a href="http://ola-bini.blogspot.com/2006/09/ruby-singleton-class.html">The Ruby Singleton Class</a> </li><br />
-<li><a href="http://practicalruby.blogspot.com/2007/02/ruby-metaprogramming-introduction.html">A Ruby Metaprogramming Introduction</a> </li><br />
-<li><a href="http://viewsourcecode.org/why/hacking/theFullyUpturnedBin.html">The Fully Upturned Bin</a> (memory management and garbage collection)</li><br />
-<li><a href="http://coaxialhost.com/tutorials/writing_ruby_extensions.html">Writing Ruby extensions</a> </li><br />
-<li><a href="http://devver.wordpress.com/2009/06/30/a-dozen-or-so-ways-to-start-sub-processes-in-ruby-part-1/">A dozen (or so) ways to start sub-processes in Ruby: Part 1</a> ("Part 2":http://devver.wordpress.com/2009/07/13/a-dozen-or-so-ways-to-start-sub-processes-in-ruby-part-2/, "Part 3":http://devver.wordpress.com/2009/10/12/ruby-subprocesses-part_3/)</li><br />
-<li><a href="http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/">Understanding Ruby Blocks, Procs and Lambdas</a></li><br />
-<li><a href="http://railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/">Class and Instance Variables In Ruby</a> (also class instance variables)</li><br />
-<li><a href="http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers/">Untangling Evented Code with Ruby Fibers</a> </li><br />
-<li><a href="http://judofyr.net/posts/tailin-ruby.html" title="faking tail call optimization in Ruby">Tailin&#8217; Ruby</a> </li><br />
-<li><a href="http://tagaholic.me/2009/05/11/demystifying-irb-commands.html">Demistifying IRB&#8217;s Commands</a> </li><br />
-<li><a href="http://kconrails.com/2010/11/30/ruby-enumerable-primer-part-1-the-basics/">Ruby Enumerable Magic: The Basics</a></li><br />
-</ul>
-
 ]]></content>
   </entry>
   

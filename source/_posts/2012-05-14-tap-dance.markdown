@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Tap dance"
+date: 2012-05-14 23:14
+comments: true
+categories:
+    - programming
+    - ruby
+---
+Ruby's [Object#tap](http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap) is a really nice and useful method. One of my favorite uses is `Object#d`, which I think I originally saw in [irbtools](https://github.com/janlelis/irbtools). Personally, I'm using the following version in my `~/.irbrc`:
+
+{% codeblock lang:ruby %}
+class Object
+  def d
+    self.tap { |s| puts s }
+  end
+end
+{% endcodeblock %}
+
+Inserting this in a chain of calls can be very enlightening as to where a value changes unexpectedly.
+
+However, recently I've seen more and more use of `tap` where I'd traditionally have used `inject/reduce`. People who know me can attest to the fact that I'm a big fan of the latter, but for some reason there's quite a few developers who seem to find theses methods hard to grok. For this reason recent Ruby versions added [Enumerable#each\_with\_object](http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_with_object), which seems to be easier to use for some people, but which isn't very popular because of it's lengthy name. See for example the following blog post that was written as a result of a discussion I had with the author on StackOverflow: [tap vs. each\_with\_object: tap is faster and less typing.](http://phrogz.net/tap-vs-each_with_object)
+
+As I said in the comment there, my main problem is that you have to call `tap` on what is to become the result, not the data you want to transform. While this is not a problem per se, I somehow don't like the semantics of it. However, once I decided to hide it behind a Pascal-like [with statement](http://www.freepascal.org/docs-html/ref/refsu53.html), I immediately started liking it:
+
+{% codeblock lang:ruby %}
+module Kernel
+  def with(o, &blk)
+    o.tap(&blk)
+  end
+end
+{% endcodeblock %}
+
+Here are the examples from the blog post linked above, including a new version for `with`. Decide which one you like best:
+
+{% codeblock lang:ruby %}
+nums.inject({}) { |h, n| h[n] = n ; h }
+
+nums.each\_with\_object({}) { |n, h| h[n] = n }
+
+{}.tap { |h| nums.each{ |n| h[n] = n } }
+
+with({}) { |h| nums.each { |n| h[n]=n } }
+{% endcodeblock %}
+
+Sure, putting it in [Kernel](http://www.ruby-doc.org/core-1.9.3/Kernel.html) and therefore calling it without a receiver seems a little strange at first, but I kinda like how it reads. I know this is probably a case of me being anal about semantics, but I really think that `with` transports the intent a lot better than `tap` in cases like the one showed here.
