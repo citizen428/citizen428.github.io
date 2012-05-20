@@ -1,11 +1,19 @@
 {% if site.github_user %}
 <section>
+<<<<<<< HEAD
+  <h1>Github Repos</h1>
+=======
   <h1>GitHub Repos</h1>
+>>>>>>> d71223c675a4c2b0230dee49a941d5e678370b07
   <ul id="gh_repos">
     <li class="loading">Status updating...</li>
   </ul>
   {% if site.github_show_profile_link %}
+<<<<<<< HEAD
+  <a href="https://github.com/{{site.github_user}}">@{{site.github_user}}</a> on Github
+=======
   <a href="https://github.com/{{site.github_user}}">@{{site.github_user}}</a> on GitHub
+>>>>>>> d71223c675a4c2b0230dee49a941d5e678370b07
   {% endif %}
   <script type="text/javascript">
     $.domReady(function(){

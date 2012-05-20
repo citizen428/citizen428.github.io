@@ -13,7 +13,11 @@ body > nav {
     .search {
       padding: .3em .5em 0;
       font-size: .85em;
+<<<<<<< HEAD
+      @extend .sans;
+=======
       font-family: $sans;
+>>>>>>> d71223c675a4c2b0230dee49a941d5e678370b07
       line-height: 1.1em;
       width: 95%;
       @include border-radius(.5em);
@@ -54,7 +58,11 @@ body > nav {
     }
     a {
       @include link-colors($nav-color, $nav-color-hover, $visited: $nav-color);
+<<<<<<< HEAD
+      @extend .sans;
+=======
       font-family: $sans;
+>>>>>>> d71223c675a4c2b0230dee49a941d5e678370b07
       text-shadow: lighten($nav-bg, 12) 0 1px;
       float: left;
       text-decoration: none;
@@ -134,4 +142,7 @@ body > nav {
   a[rel=subscribe-rss]{ @include mask-subscription-nav('rss.png'); }
   a[rel=subscribe-email]{ @include mask-subscription-nav('email.png'); }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> d71223c675a4c2b0230dee49a941d5e678370b07
