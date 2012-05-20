@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="After I recently got interested in Clojure, I decided to use it for a small &#8220;project&#8221;, namely a script which will download all the &hellip;">
+  <meta name="description" content="After reading Scripting Java Libraries With Ruby on the Engine Yard blog, I decided to translate the two example programs to Clojure. Please keep in &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,169 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/06/using-java-libraries-from-clojure/">Using Java Libraries From Clojure</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-06T00:00:00+02:00" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After reading <a href="http://www.engineyard.com/blog/2009/scripting-java-libraries-with-jruby/">Scripting Java Libraries With Ruby</a> on the <a href="http://www.engineyard.com/">Engine Yard blog</a>, I decided to translate the two example programs to Clojure. Please keep in mind though that I&#8217;m pretty much a Clojure newbie myself, so the code shown here might not be very idiomatic. In case you have any suggestions on how to improve the code examples presented here, please leave a comment, thank you! To get the most out of this post, you should probably read the <a href="http://java.ociweb.com/mark/clojure/article.html#JavaInterop">section on Java Interoperability</a> in <a href="http://java.ociweb.com/mark/">Mark Volkmann</a>&#8217;s excellent <a href="http://java.ociweb.com/mark/clojure/article.html">Clojure tutorial</a> first.</p>
+
+<p><b>A MIDI Keyboard</b></p>
+
+
+<p>The first example listens for a line of text which then gets converted into a playable MIDI sequence. Let&#8217;s start with importing the classes we need.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">ns</span> <span class="nv">midi/keyboard</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">:import</span> <span class="p">[</span><span class="nv">javax</span><span class="o">.</span><span class="nv">sound</span><span class="o">.</span><span class="nv">midi</span> <span class="nv">MidiSystem</span> <span class="nv">Sequence</span> <span class="nv">MidiEvent</span> <span class="nv">ShortMessage</span><span class="p">])</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">:use</span> <span class="p">[</span><span class="nv">clojure</span><span class="o">.</span><span class="nv">contrib</span><span class="o">.</span><span class="nv">seq-utils</span> <span class="nv">:only</span> <span class="p">(</span><span class="nf">indexed</span><span class="p">)]))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next we set up a <a href="http://clojure.org/special_forms#toc9">loop</a> and an exit clause.  In case the user enters the word &#8220;exit&#8221;, we call System.exit to shut down all the threads that got started by Java&#8217;s MIDI support.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nb">loop </span><span class="p">[</span><span class="nv">line</span> <span class="p">(</span><span class="nf">read-line</span><span class="p">)]</span>
+</span><span class='line'>  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">re-find </span><span class="o">#</span><span class="s">&quot;exit&quot;</span> <span class="nv">line</span><span class="p">)</span> <span class="p">(</span><span class="nf">System/exit</span> <span class="mi">0</span><span class="p">))</span>
+</span><span class='line'>  <span class="o">...</span> <span class="nv">other</span> <span class="nv">code</span> <span class="nv">snipped</span><span class="o">...</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">recur</span> <span class="p">(</span><span class="nf">read-line</span><span class="p">)))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The main part of the application constructs a new MIDI sequence by creating a NOTE_ON event for every character in the entered text and then finishing the sequence with a STOP event. The original article states that it favors simplicity over efficiency, so the same also holds true for my &#8220;translation&#8221;.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'>  <span class="p">(</span><span class="k">def </span><span class="nv">sq</span> <span class="p">(</span><span class="nf">Sequence</span><span class="o">.</span> <span class="nv">Sequence/PPQ</span> <span class="mi">2</span><span class="p">))</span>
+</span><span class='line'>  <span class="p">(</span><span class="k">def </span><span class="nv">track</span> <span class="p">(</span><span class="o">.</span><span class="nv">createTrack</span> <span class="nv">sq</span><span class="p">))</span>
+</span><span class='line'>  <span class="p">(</span><span class="nb">doseq </span><span class="p">[[</span><span class="nv">idx</span> <span class="nv">note</span><span class="p">]</span> <span class="p">(</span><span class="nf">indexed</span> <span class="nv">line</span><span class="p">)]</span>
+</span><span class='line'>    <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">msg</span> <span class="p">(</span><span class="nf">ShortMessage</span><span class="o">.</span><span class="p">)]</span>
+</span><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">setMessage</span> <span class="nv">msg</span> <span class="nv">ShortMessage/NOTE_ON</span> <span class="p">(</span><span class="nb">int </span><span class="nv">note</span><span class="p">)</span> <span class="mi">64</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">add</span> <span class="nv">track</span> <span class="p">(</span><span class="nf">MidiEvent</span><span class="o">.</span> <span class="nv">msg</span> <span class="nv">idx</span><span class="p">))))</span>
+</span><span class='line'>  <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">msg</span> <span class="p">(</span><span class="nf">ShortMessage</span><span class="o">.</span><span class="p">)]</span>
+</span><span class='line'>    <span class="p">(</span><span class="o">.</span><span class="nv">setMessage</span> <span class="nv">msg</span> <span class="nv">ShortMessage/STOP</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">(</span><span class="o">.</span><span class="nv">add</span> <span class="nv">track</span> <span class="p">(</span><span class="nf">MidiEvent</span><span class="o">.</span> <span class="nv">msg</span> <span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="o">.</span><span class="nv">length</span> <span class="nv">line</span><span class="p">)</span> <span class="mi">1</span><span class="p">))))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To finish off our first program we play the sequence before prompting for more input (see the loop snippet above).</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'>  <span class="p">(</span><span class="nb">doto </span><span class="p">(</span><span class="nf">MidiSystem/getSequencer</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">(</span><span class="o">.</span><span class="nv">open</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">(</span><span class="o">.</span><span class="nv">setSequence</span> <span class="nv">sq</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">(</span><span class="o">.</span><span class="nv">start</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/keyboard.clj">Full source for the first example</a></p>
+
+<p><b>Making It More Interactive</b></p>
+
+
+<p>While the first example was fun, it wasn&#8217;t as interactive as it could be. Therefore the second program launches a GUI window to receive keystroke events, turning a note on or off when a key is pressed or released. Since we don&#8217;t have to create MIDI sequences this time, our import statement becomes a lot shorter:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">ns</span> <span class="nv">midi/interactive</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">:import</span> <span class="p">[</span><span class="nv">javax</span><span class="o">.</span><span class="nv">sound</span><span class="o">.</span><span class="nv">midi</span> <span class="nv">MidiSystem</span><span class="p">]</span>
+</span><span class='line'>           <span class="p">[</span><span class="nv">javax</span><span class="o">.</span><span class="nv">swing</span> <span class="nv">JFrame</span><span class="p">]</span> <span class="p">[</span><span class="nv">java</span><span class="o">.</span><span class="nv">awt</span><span class="o">.</span><span class="nv">event</span> <span class="nv">KeyListener</span><span class="p">]))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This example directly accesses the system synthesizer. The following lines open the default synthesizer&#8217;s channel 0 (and also create a JFrame object which we&#8217;ll use later):</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">synth</span> <span class="p">(</span><span class="nf">MidiSystem/getSynthesizer</span><span class="p">)</span>
+</span><span class='line'>      <span class="nv">frame</span> <span class="p">(</span><span class="nf">JFrame</span><span class="o">.</span> <span class="s">&quot;Music Frame&quot;</span><span class="p">)]</span>
+</span><span class='line'>  <span class="p">(</span><span class="o">.</span><span class="nv">open</span> <span class="nv">synth</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">channel</span> <span class="p">(</span><span class="nb">aget </span><span class="p">(</span><span class="o">.</span><span class="nv">getChannels</span> <span class="nv">synth</span><span class="p">)</span> <span class="mi">0</span><span class="p">)]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We then launch a GUI frame as a simple and cross-platform way to receive keystroke events. The KeyListener interface is implemented using Clojure&#8217;s <a href="http://clojure.org/java_interop#toc26">proxy macro</a>, using keyPressed and keyReleased events to turn notes on or off.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nb">doto </span><span class="nv">frame</span>
+</span><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">setSize</span> <span class="mi">300</span> <span class="mi">300</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">setDefaultCloseOperation</span> <span class="nv">JFrame/EXIT_ON_CLOSE</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">addKeyListener</span>
+</span><span class='line'>       <span class="p">(</span><span class="nb">proxy </span><span class="p">[</span><span class="nv">KeyListener</span><span class="p">]</span> <span class="p">[]</span>
+</span><span class='line'>         <span class="p">(</span><span class="nf">keyPressed</span> <span class="p">[</span><span class="nv">e</span><span class="p">]</span>
+</span><span class='line'>                     <span class="p">(</span><span class="o">.</span><span class="nv">noteOn</span> <span class="nv">channel</span> <span class="p">(</span><span class="nb">int </span><span class="p">(</span><span class="o">.</span><span class="nv">getKeyChar</span> <span class="nv">e</span><span class="p">))</span> <span class="mi">64</span><span class="p">))</span>
+</span><span class='line'>         <span class="p">(</span><span class="nf">keyReleased</span> <span class="p">[</span><span class="nv">e</span><span class="p">]</span>
+</span><span class='line'>                      <span class="p">(</span><span class="o">.</span><span class="nv">noteOff</span> <span class="nv">channel</span> <span class="p">(</span><span class="nb">int </span><span class="p">(</span><span class="o">.</span><span class="nv">getKeyChar</span> <span class="nv">e</span><span class="p">))))</span>
+</span><span class='line'>         <span class="p">(</span><span class="nf">keyTyped</span> <span class="p">[</span><span class="nv">e</span><span class="p">])))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Last but not least we display our frame to let the fun begin.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">setVisible</span> <span class="nv">true</span><span class="p">))))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/interactive.clj">Full source for the second example</a><br>
+I hope this article helped to illustrate how easy it is to use the plethora of existing Java libraries from Clojure. In case you have any feedback or questions, please feel free to leave a comment!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -494,69 +657,6 @@
   <div class="entry-content"><p>A couple of month ago I first heard about <a href="http://clojure.org/">Clojure</a>, a <a href="http://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a>-like language sitting on top of the <a href="http://en.wikipedia.org/wiki/Java_virtual_machine"><span class="caps">JVM</span></a>. Alas I didn&#8217;t yet have time to have a closer look at it, so I decided to get myself the <a href="https://peepcode.com/products/functional-programming-with-clojure">PeepCode screencast</a>.</p>
 <p>This 65 minute video is the first to use PeepCode&#8217;s new post-production workflow, and it&#8217;s very well done! In just a little over an hour you go from learning about Clojure&#8217;s basic concepts and syntax to writing a <a href="http://github.com/technomancy/mire/tree/master">multi-user text based adventure game</a>, tackling topics such as data structures, thread safety, lazy collections, unit testing and packaging of Clojure apps. All of that is clearly presented and easy to follow, which makes for an ideal first overview of the language. If you are curious about Clojure but have little time, consider investing the money for this screencast!</p>
 <p>On a more general note it&#8217;s interesting to see that more and more languages seem to target the <span class="caps">JVM</span>. I never really had any interest in Java and also totally ignored <a href="http://groovy.codehaus.org/">Groovy</a>, but now that <a href="http://jruby.codehaus.org/">JRuby</a>, <a href="http://www.scala-lang.org/">Scala</a> and Clojure entered the stage, I might start looking into the Java platform a bit more. Especially Scala with its mixed Ruby/Haskell feel appeals to me, but as <a href="http://boinkor.net/">antifuchs</a> showed, there&#8217;s also <a href="http://boinkor.net/archives/2009/03/clojure_and_art_of_illusion_bf.html">pretty neat stuff</a> (<a href="http://github.com/antifuchs/aoi-swank-plugin/">GitHub project</a>) one can do with Clojure.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/05/25/most-used-shell-commands/">Most Used Shell Commands</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-05-25T00:00:00+02:00" pubdate data-updated="true">May 25<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>Although there was no real point in doing so, I felt the need to write a short Ruby script to do the same:</p>
-<script src="http://gist.github.com/117571.js"></script><p>Here&#8217;s the output on my MacBook:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>command_stats | head
-</span><span class='line'><span class="nb">time</span>: 75
-</span><span class='line'><span class="nb">cd</span>: 68
-</span><span class='line'>ls: 66
-</span><span class='line'>git: 35
-</span><span class='line'>cat: 32
-</span><span class='line'>irb: 20
-</span><span class='line'>awk: 17
-</span><span class='line'>ruby: 15
-</span><span class='line'>scala: 15
-</span><span class='line'>vim: 12
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>If you are surprised by how many times (no pun intended) I called <em>time</em>, it&#8217;s just because I was benchmarking <a href="http://projecteuler.net/">Project Euler</a> solutions in several languages, everything else is quite regular (and suggests I don&#8217;t use the Finder much ;) ).</p></div>
   
   
 

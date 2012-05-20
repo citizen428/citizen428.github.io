@@ -9,8 +9,9 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="This afternoon I had the time to finally watch the PeepCode Meet MacRuby screencast.
-In case you don&#8217;t know MacRuby, it&#8217;s a Ruby &hellip;">
+  <meta name="description" content="I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:
+1
+history | awk &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +98,69 @@ In case you don&#8217;t know MacRuby, it&#8217;s a Ruby &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/25/most-used-shell-commands/">Most Used Shell Commands</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-25T00:00:00+02:00" pubdate data-updated="true">May 25<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Although there was no real point in doing so, I felt the need to write a short Ruby script to do the same:</p>
+<script src="http://gist.github.com/117571.js"></script><p>Here&#8217;s the output on my MacBook:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>command_stats | head
+</span><span class='line'><span class="nb">time</span>: 75
+</span><span class='line'><span class="nb">cd</span>: 68
+</span><span class='line'>ls: 66
+</span><span class='line'>git: 35
+</span><span class='line'>cat: 32
+</span><span class='line'>irb: 20
+</span><span class='line'>awk: 17
+</span><span class='line'>ruby: 15
+</span><span class='line'>scala: 15
+</span><span class='line'>vim: 12
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>If you are surprised by how many times (no pun intended) I called <em>time</em>, it&#8217;s just because I was benchmarking <a href="http://projecteuler.net/">Project Euler</a> solutions in several languages, everything else is quite regular (and suggests I don&#8217;t use the Finder much ;) ).</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -529,60 +593,6 @@ In case you don&#8217;t know MacRuby, it&#8217;s a Ruby &hellip;">
 
 
   <div class="entry-content"><p>My recent post on <a href="http://citizen428.net/archives/372-Enumerablefilter.html">Enumerable#filter</a> created a bit of discussion on RubyFlow, which led to a <a href="http://gist.github.com/89491">much nicer implementation than mine</a>. Enjoy!</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/04/01/enumerablefilter/">Enumerable#filter</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-04-01T00:00:00+02:00" pubdate data-updated="true">Apr 1<span>st</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>Update:</strong> Thanks to some feedback I rewrote Enumberable#filter so it doesn&#8217;t use &#8216;eval&#8217;. It&#8217;s a bit less flexible now and I also like the syntax less, but at least it doesn&#8217;t eat puppies for breakfast. As the disclaimer said, maybe it was a bad idea to begin with.</p>
-<p>As much as I like Ruby, some constructs I just don&#8217;t find too sexy, e.g.:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="o">].</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>That&#8217;s why I came up with an alternative solution which I find reads nicer than the above code:</p>
-<script src="http://gist.github.com/88836.js"></script><p>(Sorry, I really don&#8217;t care much about having this for strings)</p>
-<p>I kinda got inspired by Martin Aumont&#8217;s <a href="http://mynyml.com/15-enumerableevery/">every</a>, which allows us to use</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">enum</span><span class="o">.</span><span class="n">every</span><span class="o">.</span><span class="n">floor</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>instead of</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">enum</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span><span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">n</span><span class="o">.</span><span class="n">floor</span> <span class="p">}</span>
-</span><span class='line'><span class="ow">or</span> <span class="k">in</span> <span class="mi">1</span><span class="o">.</span><span class="mi">8</span><span class="o">.</span><span class="mi">7</span> <span class="ow">or</span> <span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">1</span>
-</span><span class='line'><span class="n">enum</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:floor</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p><i>Disclaimer: Today this seems like a pretty good idea, but I also haven&#8217;t slept much. In case this breaks in horrible ways, already exists in some other form or is stupid for some other reason I&#8217;m too tired to consider, please let me know.</i></p></div>
   
   
 

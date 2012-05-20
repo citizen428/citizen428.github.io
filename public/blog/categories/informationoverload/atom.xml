@@ -4,7 +4,7 @@
   <title><![CDATA[Category: informationoverload | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/informationoverload/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-05-14T23:57:16+02:00</updated>
+  <updated>2012-05-20T11:28:57+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-05-20]]></title>
+    <link href="http://citizen428.net/blog/2012/05/20/information-overload-2012-05-20/"/>
+    <updated>2012-05-20T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/05/20/information-overload-2012-05-20</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://blogs.nature.com/news/2012/04/hot-spring-yields-hybrid-genome.html">Hot spring yields hybrid genome</a><br>This is about a month old, but I finally got around to reading it. Also: a combined RNA+DNA virus, damn.</li>
+<li><a href="http://gizmodo.com/5909961/kodak-had-a-secret-weapons+grade-nuclear-reactor-hidden-in-a-basement">Kodak Had A Secret Nuclear Reactor Loaded With Enriched Uranium Hidden In A Basement</a><br>While "they could have started their own nuclear war if they wanted" is a terrible exaggeration, this is still interesting.</li>
+<li><a href="http://www.nytimes.com/2012/05/13/magazine/who-wants-to-buy-honduras.html?_r=3&amp;pagewanted=all">Who wants to buy Honduras</a><br>I'm not sure what to think of this proposed "charter city".</li>
+<li><a href="http://gizmodo.com/5909857">The Bizarre History of the Vibrator: From Cleopatra’s Angry Bees to Steam-Powered Dildos</a><br>A Gizmondo article on a different kind of gadget.</li>
+<li><a href="http://www.cracked.com/article_19780_5-gender-stereotypes-that-used-to-be-exact-opposite.html">5 Gender Stereotypes That Used To Be the Exact Opposite</a><br>Since this is from Cracked.com it's rather light-hearted, but still something you may want to send to people who are too stuck on certain gender roles.</li>
+<li><a href="http://inoveryourhead.net/the-short-16-step-guide-to-getting-rid-of-your-crap/">The Short, 16-Step Guide to Getting Rid of Your Crap</a><br>I've also followed this "own less" approach for a few years now, it's quite liberating.</li>
+<li><a href="http://www.wired.com/wiredenterprise/2012/05/google-schmidt-page-damages/">Oracle Goes for Broke in Court Battle With Google</a><br>Interesting. Also: coolest judge ever?</li>
+<li><a href="http://plus.maths.org/content/goumldel-and-limits-logic">Gödel and the limits of logic</a><br>A very nice article on Kurt Gödel.</li>
+<li><a href="http://esciencenews.com/articles/2012/05/18/google.goes.cancer.researchers.use.search.engine.algorithm.find.cancer.biomarkers">Google goes cancer: Researchers use search engine algorithm to find cancer biomarkers</a><br>Nice work by TU Dresden.</li>
+<li><a href="http://www.theatlanticcities.com/neighborhoods/2012/05/why-arent-cities-littered-dead-pigeons/2038/">Why Aren't Cities Littered With Dead Pigeons?</a><br>This is the sort of question that really needs an answer.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-05-13]]></title>
@@ -103,27 +124,6 @@
 
 
 <p><blockquote><p>Would some kernel people prefer getting tucked in at night instead of being cursed at? I’m sure that would be appreciated. I don’t think I have it in me, though.</p><footer><strong>Linus Torvals</strong> <cite><a href='http://techcrunch.com/2012/04/19/an-interview-with-millenium-technology-prize-finalist-linus-torvalds/'>An Interview With Linus Torvalds</a></cite></footer></blockquote></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-04-15]]></title>
-    <link href="http://citizen428.net/blog/2012/04/15/information-overload-2012-04-15/"/>
-    <updated>2012-04-15T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/04/15/information-overload-2012-04-15</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://www.insidehighered.com/views/2011/05/02/slavoj_zizek_essay_on_cloud_computing_and_privacy">Corporate Rule of Cyberspace</a><br>Philosopher <a href="http://en.wikipedia.org/wiki/Slavoj_%C5%BDi%C5%BEek">Slavoj Žižek</a> offers some thoughts on cloud computing. Some of the comments are interesting too.</li>
-<li><a href="http://www.slate.com/articles/technology/future_tense/2012/03/narrative_science_robot_journalists_customized_news_and_the_danger_to_civil_discourse_.single.html">A Robot Stole My Pulitzer!</a><br>On automated journalism and the potential consequences for society.</li>
-<li><a href="https://groups.google.com/group/comp.lang.forth/browse_thread/thread/4e15a2197c0aaafe/95c3f82d1c681296?#95c3f82d1c681296">A Forth Story...</a><br>This long text from 1995 is not only interesting because it talks about Forth, but also because of the history of programming in the 70s, 80s and 90s.</li>
-<li><a href="http://www.economist.com/node/21552581">Giving divorce a bad name</a><br>South Sudan invaded an oil field in Sudan, which could lead to a fierce war. Make sure to read the comments too, there's some good stuff in there.</li>
-<li><a href="http://www.wired.com/threatlevel/2012/04/code-not-physical-property/">Code Not Physical Property, Court Rules in Goldman Sachs Espionage Case</a><br>An update on the Aleynikov vs Goldman Sachs case.</li>
-<li><a href="http://www.technologyreview.com/blog/arxiv/27730">Computer Scientists Build Computer Using Swarms of Crabs</a><br>A computer exploiting the swarming behavior of soldier crabs. Ok, maybe just a function OR gate, but still rather cool.</li>
-<li><a href="http://www.physicscentral.com/buzz/blog/index.cfm?postid=4656335810518469535">Physicist Uses Math to Beat Traffic Ticket</a><br>Who says math can't be useful in your daily life? ;-)</li>
-<li><a href="http://derstandard.at/1334132541612/Strassengangs-Rosen-aus-dem-Beton">Rosen aus dem Beton</a><br>About street gangs and gang related violence in Los Angeles (in German).</li>
-<li><a href="http://www.antipope.org/charlie/blog-static/2012/04/understanding-amazons-strategy.html">What Amazon's ebook strategy means</a><br>Wether you agree with Charlie Stross or not, his posts are usually well written and provide food for thought.</li>
-<li><a href="http://www.guardian.co.uk/sport/2012/apr/13/olympics-2012-branding-police-sponsors">Olympics 2012: branding 'police' to protect sponsors' exclusive rights</a><br>Brave new corporate world.</li>
-</ul>
-
 ]]></content>
   </entry>
   
