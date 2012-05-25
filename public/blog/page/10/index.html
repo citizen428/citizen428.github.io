@@ -9,7 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Considering how many tools for getting up and running with Clojure are available nowadays (e.g. cljr, cake or Dejour) I&#8217;m not sure if anyone &hellip;">
+  <meta name="description" content="How I got a blank book to the top of the Amazon chartsA good example of what marketing can do for you.
+The Grand TourVery interesting insight into a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +97,52 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/04/17/information-overload-2011-04-17/">Information Overload 2011-04-17</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-17T00:00:00+02:00" pubdate data-updated="true">Apr 17<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://realbusiness.co.uk/news/how-i-got-a-blank-book-to-the-top-of-the-amazon-charts">How I got a blank book to the top of the Amazon charts</a><br>A good example of what marketing can do for you.</li>
+<li><a href="http://www.newyorker.com/reporting/2011/04/18/110418fa_fact_osnos?currentPage=all">The Grand Tour</a><br>Very interesting insight into a Chinese tour group in Europe.</li>
+<li><a href="http://www.newscientist.com/article/mg20928045.200-the-mathematics-of-being-nice.html?full=true">The mathematics of being nice</a><br>An interview with Martin Nowak professor of mathematics and biology at Harvard University (and Austrian btw) about evolutionary biology, mathematics and his beliefs.</li>
+<li><a href="http://www.winestockwebdesign.com/Essays/Lisp_Curse.html">The Lisp Curse</a><br>While I don&#8217;t necessarily agree on all points, this is still a pretty interesting read.</li>
+<li>&#8220;Why is one man primarily responsible for the existence of the letter &#8216;J&#8217; and what letter did it split off from? &quot;:http://hotword.dictionary.com/j/<br>The language nerd in me like this a lot.</li>
+<li><a href="http://www.businessweek.com/print/magazine/content/11_17/b4225060960537.htm">This Tech Bubble Is Different</a><br>Let me sum up this article with an actual quote from it: <i>&#8220;The best minds of my generation are thinking about how to make people click ads,&#8221; he says. &#8220;That sucks.&#8221;</i></li>
+<li><a href="http://www.wait-till-i.com/2011/04/11/the-road-to-being-a-kick-ass-public-speaker/">The road to being a kick-ass public speaker</a><br>This should be mandatory reading for anyone speaking at (tech) conferences.</li>
+<li><a href="http://blogs.law.harvard.edu/philg/2011/04/14/what-happens-when-an-air-traffic-controller-is-asleep/">What happens when an air traffic controller is asleep?</a><br>I really like insights into the aviation industry, so I found this quite interesting.</li>
+<li><a href="http://www.ditext.com/diamond/mistake.html">The Worst Mistake in the History of the Human Race</a><br>Was adopting agriculture the worst mistake we ever made? According to this article, probably yes, but as always you are invited to form your own opinion.</li>
+<li><a href="http://www.smithsonianmag.com/arts-culture/When-Did-Girls-Start-Wearing-Pink.html">When Did Girls Start Wearing Pink?</a><br>A closer look at yet another gender stereotype.</li>
+</ul></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -585,68 +632,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/03/09/haskell-like-zip_with-for-ruby/">Haskell Like &#8220;Zip_with&#8221; for Ruby</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-03-09T00:00:00+01:00" pubdate data-updated="true">Mar 9<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I always liked Haskell&#8217;s <a href="http://hackage.haskell.org/packages/archive/base/latest/doc/html/Prelude.html#v:zipWith">zipWith</a> and sometimes miss it in Ruby, so I wrote my own a couple of weeks ago. I also submitted a pull request to <a href="http://rubyworks.github.com/facets/">Facets</a>, but since it&#8217;s still not included I decided to post the code here in case it&#8217;s useful for anyone:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">zip_with</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="kp">nil</span><span class="p">)</span>
-</span><span class='line'>  <span class="k">return</span> <span class="o">[]</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">empty?</span> <span class="o">||</span> <span class="n">other</span><span class="o">.</span><span class="n">empty?</span>
-</span><span class='line'>  <span class="n">clipped</span> <span class="o">=</span> <span class="nb">self</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.other</span><span class="o">.</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span>
-</span><span class='line'>  <span class="n">zipped</span> <span class="o">=</span> <span class="n">clipped</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">op</span>
-</span><span class='line'>    <span class="n">zipped</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">}</span>
-</span><span class='line'>  <span class="k">else</span>
-</span><span class='line'>    <span class="n">zipped</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="k">yield</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="p">}</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>Usage examples:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">].</span><span class="n">zip_with</span><span class="p">(</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="ss">:+</span><span class="p">)</span> <span class="c1">#=&gt; [7, 7, 7]</span>
-</span><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">].</span><span class="n">zip_with</span><span class="p">(</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span> <span class="p">}</span> <span class="c1">#=&gt; [15, 16, 17]</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/11/">&larr; Older</a>
@@ -693,12 +678,12 @@
 
 
 <section>
-  <h1>Github Repos</h1>
+  <h1>GitHub Repos</h1>
   <ul id="gh_repos">
     <li class="loading">Status updating&#8230;</li>
   </ul>
   
-  <a href="https://github.com/citizen428">@citizen428</a> on Github
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
   
   <script type="text/javascript">
     $.domReady(function(){

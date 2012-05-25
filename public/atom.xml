@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-05-20T11:28:57+02:00</updated>
+  <updated>2012-05-25T17:51:05+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-05-27]]></title>
+    <link href="http://citizen428.net/blog/2012/05/27/information-overload-2012-05-25/"/>
+    <updated>2012-05-27T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/05/27/information-overload-2012-05-25</id>
+    <content type="html"><![CDATA[<p>Due to a trip this week&#8217;s Information Overload is a bit earlier and shorter than usual. There won&#8217;t be a new issue next week by the way.</p>
+
+<blockquote><p>You should never want to be average — unless you are below average. This is a cry for normalcy, when so many others wish to be abnormal.</p><footer><strong>David Peter</strong> <cite><a href='http://davidpeter.me/stories/being-deaf'>Being Deaf</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://davidpeter.me/stories/being-deaf">Being deaf</a><br>If you ever wondered how it&#8217;s like to be deaf, you should read this.</li>
+<li><a href="http://www.thefword.org.uk/features/2012/05/its_not_feminism_that_hurts_men">It&#8217;s not feminism that hurts men</a><br>I agree. A lot of men suffer because of how society taught them men ought to be.</li>
+<li><a href="http://is.gd/j4eLHd">Al-Jazeera&#8217;s (R)Evolution</a><br>Interesting article about Al-Jazeera and the role of the Quatari government in the network.</li>
+<li><a href="http://judg.me/blog/first-impressions-count/">First Impressions Count</a><br>Some statistical analysis regarding first impressions.</li>
+<li><a href="http://www.nytimes.com/2012/05/21/world/americas/colombia-says-ex-hostage-helped-farc-plan-capture.html?_r=2">Former Colombian Hostage Is Suspected of Helping Plan His Kidnapping</a><br>Another bizarre story from the Columbian conflict.</li>
+<li><a href="http://magazine.storycollider.org/2012/features/what-science-owes-the-rodeo/view-all/">What Science Owes The Rodeo</a><br>A very personal story about a scientist.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-05-20]]></title>
@@ -526,30 +548,6 @@
 <li><a href="http://arstechnica.com/tech-policy/news/2012/01/mega-man-the-bizarre-rise-and-sudden-downfall-of-kim-dotcom.ars/1">Mega-man: The fast, fabulous, fraudulent life of Megaupload&#8217;s Kim Dotcom</a><br>Interesting portrait of <a href="http://en.wikipedia.org/wiki/Kim_Dotcom">Kim Dotcom</a>, the man who&#8217;s all over the news again.</li>
 <li><a href="http://lists.busybox.net/pipermail/busybox/2010-December/074114.html">Understanding the bin, sbin, usr/bin , usr/sbin split</a><br>This mailing list post is an interesting bit of Unix trivia.</li>
 <li><a href="http://reason.com/archives/2012/01/26/how-much-is-an-astronauts-life-worth">How Much Is an Astronaut’s Life Worth?</a><br>Some interesting points on a controversial topic.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-01-22]]></title>
-    <link href="http://citizen428.net/blog/2012/01/22/information-overload-2012-01-22/"/>
-    <updated>2012-01-22T00:00:00+01:00</updated>
-    <id>http://citizen428.net/blog/2012/01/22/information-overload-2012-01-22</id>
-    <content type="html"><![CDATA[<blockquote><p>We defeat SOPA today, only to face it again tomorrow. It&#8217;s like trying to stop a cold by blowing your nose. It&#8217;s time we go after the virus.</p><footer><strong>Maddox</strong> <cite><a href='http://maddox.xmission.com/'>I Hope SOPA Passes</a></cite></footer></blockquote>
-
-
-<ul>
-<li><a href="https://werebuild.eu/wiki/Blue_cabinet">Blue cabinet</a><br>A project that wants &#8220;to name, shame and expose those who profit on selling the surveillance equipment that enables the intimidation, harassment and killing of innocent people&#8221;.</li>
-<li><a href="http://acko.net/blog/making-love-to-webkit/">Making Love To WebKit</a><br><a href="http://acko.net">Acko.net</a> always had awesome design, but his newest one is absolutely mindblowing.</li>
-<li><a href="http://www.tangledwilderness.org/pdfs/saidthepottothekettle-web.pdf">said the pot to the kettle</a><br>This PDf subtitled &#8220;feminist theory for anarchist men&#8221; is a good read for everyone who&#8217;s interested in overcoming antiquated gender stereotypes, be they male or female.</li>
-<li><a href="http://maddox.xmission.com/">I hope SOPA passes</a><br>Typical Maddox style.</li>
-<li><a href="http://jeffdechambeau.com/friending-fast-and-slow.html">Behavioral economics and facebook conspiracy theories</a><br>While the author talks about a conspiracy theory, I think it&#8217;s fair to assume that the big web companies do use behavioral psychology when trying to get us to click on ads.</li>
-<li><a href="http://www.guardian.co.uk/world/2012/jan/20/iran-war-brewing-simon-tisdall">An Iran war is brewing from mutual ignorance and chronic miscalculation</a><br>I still have the naive hope that war is evitable.</li>
-<li><a href="http://www.spiegel.de/netzwelt/netzpolitik/0,1518,773495,00.html">US-Copyright-Cops greifen weltweit zu</a><br>If you have German speaking friends who you want to educate about SOPA/PIPA, point them to this article by &#8220;Der Spiegel&#8221;.</li>
-<li><a href="http://prezi.com/2lanmqb0nnkj/paredit-emacs-minor-mode/">Paredit - emacs minor mode</a><br>A neat presentation on Paredit, a great Emacs minor mode for Lisp hackers.</li>
-<li><a href="http://www.mcsweeneys.net/articles/in-which-i-fix-my-girlfriends-grandparents-wifi-and-am-hailed-as-a-conquering-hero">In Which I Fix My Girlfriend’s Grandparents’ WIFI And Am Hailed As A Conquering Hero.</a><br>We&#8217;ve all been there, but this is brilliantly told.</li>
-<li><a href="http://www.good.is/post/people-are-awesome-the-south-carolina-coffee-shop-where-everyone-pays-for-everyone-else-s-drinks">People Are Awesome: The Coffee Shop Where Everyone Pays for Everyone Else&#8217;s Drinks</a><br>It&#8217;s not often enough that I get to post something nice here.</li>
 </ul>
 
 ]]></content>

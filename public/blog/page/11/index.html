@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Update: The code is on Github now - https://github.com/citizen428/MethodFinder I changed the argument order (so you don&#8217;t have to always &hellip;">
+  <meta name="description" content="I always liked Haskell&#8217;s zipWith and sometimes miss it in Ruby, so I wrote my own a couple of weeks ago. I also submitted a pull request to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,68 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/09/haskell-like-zip_with-for-ruby/">Haskell Like &#8220;Zip_with&#8221; for Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-09T00:00:00+01:00" pubdate data-updated="true">Mar 9<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I always liked Haskell&#8217;s <a href="http://hackage.haskell.org/packages/archive/base/latest/doc/html/Prelude.html#v:zipWith">zipWith</a> and sometimes miss it in Ruby, so I wrote my own a couple of weeks ago. I also submitted a pull request to <a href="http://rubyworks.github.com/facets/">Facets</a>, but since it&#8217;s still not included I decided to post the code here in case it&#8217;s useful for anyone:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">zip_with</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="kp">nil</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="o">[]</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">empty?</span> <span class="o">||</span> <span class="n">other</span><span class="o">.</span><span class="n">empty?</span>
+</span><span class='line'>  <span class="n">clipped</span> <span class="o">=</span> <span class="nb">self</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.other</span><span class="o">.</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">zipped</span> <span class="o">=</span> <span class="n">clipped</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">op</span>
+</span><span class='line'>    <span class="n">zipped</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="n">zipped</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="k">yield</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Usage examples:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">].</span><span class="n">zip_with</span><span class="p">(</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="ss">:+</span><span class="p">)</span> <span class="c1">#=&gt; [7, 7, 7]</span>
+</span><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">].</span><span class="n">zip_with</span><span class="p">(</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span> <span class="p">}</span> <span class="c1">#=&gt; [15, 16, 17]</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -702,52 +764,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/01/02/information-overload-2011-01-02/">Information Overload 2011-01-02</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-02T00:00:00+01:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.wired.com/magazine/2010/12/st_essay_totalitarians/">Why the Internet Is a Great Tool for Totalitarians</a><br>It&#8217;s always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
-<li><a href="http://www.theatlantic.com/magazine/archive/2003/03/caring-for-your-introvert/2696/">Caring for Your Introvert</a><br>While I think the author&#8217;s overly satirical tone actually does a disservice to the content of the article, as an introvert I still urge you to read this.</li>
-<li><a href="http://gameinternals.com/post/2072558330/understanding-pac-man-ghost-behavior">Understanding Pac-Man Ghost Behavior</a><br>This is a great example how a few simple rules can create complex looking behavior patterns in AI opponents.</li>
-<li><a href="http://www.guardian.co.uk/science/2011/jan/01/how-to-better-person-2011">Abandon resolutions. Stop looking for a soulmate. Reject positive thinking</a><br>For once somebody managed to write a sensible article regarding new year&#8217;s resolutions.</li>
-<li><a href="http://www.grist.org/article/food-2010-12-29-farmer-scientists-want-to-hack-society">Farmer-scientist group wants to &#8216;hack society&#8217; through open-source technology</a><br>About <a href="http://openfarmtech.org/wiki/">Open Source Ecology</a> and the <a href="http://openfarmtech.org/wiki/Global_Village_Construction_Set">Global Village Construction Set</a>. Awesome!</li>
-<li><a href="http://chouser.github.com/snow/">The New Year in Snowflakes</a><br>Very nice little Clojure doodle by Chris Houser.</li>
-<li><a href="http://www.codecommit.com/blog/ruby/monads-are-not-metaphors">Monads Are Not Metaphors</a><br>A pretty good explanation of monads for everyone struggling with the concept. It should be easy to follow even if your Scala is less than fluent (like mine is).</li>
-<li><a href="http://heavens-above.com/solar-escape.asp">Spacecraft escaping the Solar System</a><br>Positions and other data of the 5 spacecraft leaving our solar system on escape trajectories. The space geek in me likes this a lot.</li>
-<li><a href="http://www.zeit.de/2011/01/Gentechnik-Patent-Nahrungsmittel?page=all">Wem gehoert der Brokkoli?</a><br>Companies are trying to get patents on vegetables, fruits and even animals (in German).</li>
-<li><a href="http://ngm.nationalgeographic.com/7-billion">7 Billion</a><br>A National Geographic special series about the world&#8217;s population reaching 7 billion in 2011.</li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/12/">&larr; Older</a>
@@ -794,12 +810,12 @@
 
 
 <section>
-  <h1>Github Repos</h1>
+  <h1>GitHub Repos</h1>
   <ul id="gh_repos">
     <li class="loading">Status updating&#8230;</li>
   </ul>
   
-  <a href="https://github.com/citizen428">@citizen428</a> on Github
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
   
   <script type="text/javascript">
     $.domReady(function(){
