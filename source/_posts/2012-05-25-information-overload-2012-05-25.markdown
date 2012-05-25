@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Information Overload 2012-05-27"
-date: 2012-05-27 00:00
+title: "Information Overload 2012-05-25"
+date: 2012-05-25 00:00
 comments: true
 categories:
   - informationoverload
