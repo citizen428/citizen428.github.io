@@ -5,6 +5,10 @@ date: 2012-05-25 00:00
 comments: true
 categories:
   - informationoverload
+  - society
+  - media
+  - science
+  - politics
 ---
 Due to a trip this week's Information Overload is a bit earlier and shorter than usual. There won't be a new issue next week by the way.
 
