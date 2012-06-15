@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-06-10T15:49:33+02:00</updated>
+  <updated>2012-06-15T19:29:01+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rails — Display branch in development mode]]></title>
+    <link href="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/"/>
+    <updated>2012-06-12T21:33:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode</id>
+    <content type="html"><![CDATA[<p>At work we are building a Rails app that's supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it'd be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn't have been any simpler:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>app/helpers/application_helper.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">version_div</span>
+</span><span class='line'>  <span class="n">version</span> <span class="o">=</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">development?</span> <span class="p">?</span> <span class="o">::</span><span class="no">Grit</span><span class="o">::</span><span class="no">Repo</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="o">::</span><span class="no">OurApp</span><span class="o">::</span><span class="no">Application</span><span class="o">::</span><span class="no">Version</span>
+</span><span class='line'>  <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:span</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;version&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tap dance]]></title>
@@ -146,33 +168,6 @@
 <li><a href="http://www.salon.com/2012/01/03/david_lynch_why_brutality_makes_me_laugh/singleton/">David Lynch: Why brutality makes me laugh</a><br>An interview with David Lynch about his latest musical project.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-01-01]]></title>
-    <link href="http://citizen428.net/blog/2012/01/01/information-overload-2012-01-01/"/>
-    <updated>2012-01-01T18:08:00+01:00</updated>
-    <id>http://citizen428.net/blog/2012/01/01/information-overload-2012-01-01</id>
-    <content type="html"><![CDATA[<p>The <a href="http://citizen428.net/blog/categories/informationoverload/">Information Overload</a> series started in August 2010 and I'm surprised that I really managed to keep it going on a weekly basis (I only skipped a couple of issues because of traveling). So here we go for the first post of 2012.</p>
-
-<p><blockquote><p>As for accountability of teachers and administrators, Sahlberg shrugs. "There's no word for accountability in Finnish," he later told an audience at the Teachers College of Columbia University. "Accountability is something that is left when responsibility has been subtracted."</p><footer><strong>Anu Partanen</strong> <cite><a href='http://www.theatlantic.com/national/archive/2011/12/what-americans-keep-ignoring-about-finlands-school-success/250564/'>What Americans Keep Ignoring About Finland's School Success</a></cite></footer></blockquote></p>
-
-<ul>
-<li><a href="http://www.virgin.com/richard-branson/blog/time-to-end-the-war-on-drugs">Time to end the war on drugs</a><br>Richard Branson. Founder of Virgin Group, speaks out against the war on drugs.</li>
-<li><a href="http://www.tagesspiegel.de/zeitung/korruption-in-wien-wo-war-mei-leistung/5980516.html">„Wo war mei Leistung?“</a><br>If you are not from Austria but can read German, this is a good summary of the rampant corruption in our country.</li>
-<li><a href="http://www.foreignpolicy.com/articles/2011/12/19/a_few_of_kims_favorite_things?page=full">A Few of Kim's Favorite Things</a><br>Foreign Policy published this article on Kim Jong-Il's special tastes.</li>
-<li><a href="http://www.nytimes.com/2011/12/14/technology/shunning-facebook-and-living-to-tell-about-it.htm">The Facebook Resisters</a><br>Some people live fine without Facebook, who'd have thought?</li>
-<li><a href="http://www.grist.org/list/2011-12-29-how-india-is-winning-the-future-with-solar-energy">How India is winning the future with solar energy</a><br>A summary of India's plan to generate lots of solar power by 2020, including links to the source articles for further reading.</li>
-<li><a href="http://www.aclu.org/blog/national-security/president-obama-signs-indefinite-detention-law">President Obama Signs Indefinite Detention Into Law</a><br>Not the best news to start a new year with.</li>
-<li><a href="http://www.theatlantic.com/national/archive/2011/12/what-americans-keep-ignoring-about-finlands-school-success/250564/">What Americans Keep Ignoring About Finland's School Success</a><br>Not only Americans keep ignoring this...</li>
-<li><a href="http://www.antimon.org/code/Linus/">An Introduction to Programming C-64 Demos</a><br>The C-64 is the first computer I programed on, and since I just saw an awesome presentation about writing <a href="http://en.wikipedia.org/wiki/Demoscene">demos</a> for it, I'm getting a bit sentimental.</li>
-<li><a href="http://www.wired.com/threatlevel/2011/12/civil-liberties-ip/">2011: The Year Intellectual Property Trumped Civil Liberties</a><br>Unfortunately this is a trend that can be seen world-wide, not only in the US.</li>
-<li><a href="http://www.economist.com/node/21542227">Grief and fear</a><br>Some thoughts on Korea after Kim Jong-Il's death.</li>
-</ul>
-
-
-<p><blockquote><p>China, the only power with much influence over the country, is less troubled by the long-term grinding suffering of the North Koreans than by the prospect of a leadership vacuum leading suddenly to economic collapse and a flood of refugees. Such a prospect threatens to cause wider instability.</p><footer><strong>The Economist</strong> <cite><a href='http://www.economist.com/node/21542227'>Grief and Fear</a></cite></footer></blockquote></p>
 ]]></content>
   </entry>
   

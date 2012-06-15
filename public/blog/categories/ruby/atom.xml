@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-06-10T15:49:33+02:00</updated>
+  <updated>2012-06-15T19:29:01+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rails — Display branch in development mode]]></title>
+    <link href="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/"/>
+    <updated>2012-06-12T21:33:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode</id>
+    <content type="html"><![CDATA[<p>At work we are building a Rails app that's supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it'd be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn't have been any simpler:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>app/helpers/application_helper.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">version_div</span>
+</span><span class='line'>  <span class="n">version</span> <span class="o">=</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">development?</span> <span class="p">?</span> <span class="o">::</span><span class="no">Grit</span><span class="o">::</span><span class="no">Repo</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="o">::</span><span class="no">OurApp</span><span class="o">::</span><span class="no">Application</span><span class="o">::</span><span class="no">Version</span>
+</span><span class='line'>  <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:span</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;version&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tap dance]]></title>
@@ -269,23 +291,6 @@ end</p>
 ```</p>
 
 <p>Maybe that's useful for someone else too.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Frozen Rails recap]]></title>
-    <link href="http://citizen428.net/blog/2011/09/24/frozen-rails-recap/"/>
-    <updated>2011-09-24T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2011/09/24/frozen-rails-recap</id>
-    <content type="html"><![CDATA[<p>I spent the first half of this week in Helsinki at the excellent "Frozen Rails":https://frozenrails.eu/ conference and thought I'd share some impressions with you:</p>
-
-<p><em>Monday:</em> when we (team "Tupalo":http://tupalo.com that is) finally got to the pre-opening event it was rather empty already, but we managed to collect the leftovers and get a party going that was very fun and helped in getting to know many people quickly. Later that night we picked up a jet lagged Ryan Smith ("Heroku":http://heroku.com) from his hotel and stayed out much longer than we should have... ;-)</p>
-
-<p><em>Tuesday:</em> Arriving at Finlandia hall still a bit hungover, I soon got very excited by what I saw around me. The conference is rather small, which in my opinion is one of its strongest points, since it's very easy to actually get to talk to a lot of the attendees. The overall atmosphere is very amicable, so you barely ever feel like you are intruding on someone when you strike up a random conversation. Talk-wise it started with Geoffrey Grosenbach's ("PeepCode":http://peepcode.com/) "keynote":https://frozenrails.eu/sessions#geoffrey, which was nice but not overly exciting. This was followed by a spontaneous talk by Jeff Kasimir ("Jumpstart Lab":http://jumpstartlab.com/) titled "The Problem Is In Your Ruby", which was absolutely fantastic. I also got a chance to talk to Jeff about potential cooperations with "RubyLearning":http://rubylearning.org later, let's see if that gets anywhere. I then took a couple of hours off for some socializing, before watching Jeff's second talk "Blow Up Your Views":https://frozenrails.eu/sessions#jeff. The last talk I saw that day was by the "Travis CI":http://travis-ci.org/ team and I enjoyed it so much that I immediately switched one of my own projects to Travis. After the conference we had dinner in the excellent "Soul Kitchen":http://www.soulkitchen.fi/, followed by some drinks at "A21":http://www.a21.fi/ and "Bar Loose":http://www.barloose.com/.</p>
-
-<p><em>Wednesday:</em> Despite a lack of sleep I dragged myself to Richard White's ("UserVoice":http://uservoice.com/) "keynote":https://frozenrails.eu/sessions#richard, who talked about startups and entrepreneurship. That was followed by the very interesting "How GitHub Uses GitHub to Build GitHub":https://frozenrails.eu/sessions#zach by Zach Holman ("GitHub":http://github.com, surprise). I then spent some time hacking a little on a bit of Ruby code for my lightning talk, but went to see Ryan Smith's talk on how stuff works at Heroku. After the coffee break I sat in "Joseph Ruscio's" ("Librato":https://silverline.librato.com/) talk "Implementing a RESTful API with Ruby the Right Way":https://frozenrails.eu/sessions#joseph_ruscio, but I must admit that I was a bit tired and didn't pay as much attention as the talk deserved. The last talk was my personal favorite, "Debugging Ruby Performance":https://frozenrails.eu/sessions#aman by GitHub's Aman Gupta (I have some notes as an Emacs org-file "on GitHub":https://github.com/citizen428/study-notes/blob/master/ruby-perfomance/ruby-perfomance.org). The conference ended with some lightning talks, including our own on hack weeks at Tupalo. For dinner Heroku invited some 25 or so people to the expensive "Hotel K&auml;mp":http://www.hotelkamp.fi/, where I spent most of the time talking to Topfunky and his friends. We then went over to "Le Bonk":http://www.lebonk.fi/ to join the GitHub drink up, but due to a non-disclosure agreement with myself no details about this evening will be made public ;-)</p>
-
-<p>All in all a very nice and well organized conference, that for me has the perfect size. Congrats and thanks to the team for organizing such an awesome event! BTW: someone set up a "GitHub repository":https://github.com/i0rek/frozenrails-notes with Frozen Rails slides, photos and notes, check it out!</p>
 ]]></content>
   </entry>
   

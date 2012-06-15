@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Information Overload 2012-06-10 - citizen428.blog()</title>
+  <title>Rails — Display branch in development mode - citizen428.blog()</title>
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="[S]omeone who takes MDPV may find himself feeling extremely paranoid and panicky, but he’s unlikely to believe that a giant lizard wearing a tuxedo &hellip;">
+  <meta name="description" content="At work we are building a Rails app that&#8217;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://citizen428.net/blog/2012/06/10/information-overload-2012-06-10">
+  <link rel="canonical" href="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -99,7 +99,7 @@
   
   <header>
     
-      <h1 class="entry-title">Information Overload 2012-06-10</h1>
+      <h1 class="entry-title">Rails — Display Branch in Development Mode</h1>
     
     
       <p class="meta">
@@ -115,32 +115,28 @@
   
 
 
-<time datetime="2012-06-10T00:00:00+02:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
+<time datetime="2012-06-12T21:33:00+02:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><blockquote><p>[S]omeone who takes MDPV may find himself feeling extremely paranoid and panicky, but he’s unlikely to believe that a giant lizard wearing a tuxedo is about to eat his cat.</p><footer><strong>David DiSalvo</strong> <cite><a href='http://www.forbes.com/sites/daviddisalvo/2012/06/05/the-straight-dope-on-what-bath-salts-do-to-your-brain-and-why-theyre-dangerous/'>The Straight Dope on What Bath Salts Do to Your Brain and Why They&#8217;re Dangerous</a></cite></footer></blockquote>
+<div class="entry-content"><p>At work we are building a Rails app that&#8217;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it&#8217;d be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn&#8217;t have been any simpler:</p>
+
+<figure class='code'><figcaption><span>app/helpers/application_helper.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">version_div</span>
+</span><span class='line'>  <span class="n">version</span> <span class="o">=</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">development?</span> <span class="p">?</span> <span class="o">::</span><span class="no">Grit</span><span class="o">::</span><span class="no">Repo</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="o">::</span><span class="no">OurApp</span><span class="o">::</span><span class="no">Application</span><span class="o">::</span><span class="no">Version</span>
+</span><span class='line'>  <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:span</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;version&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<ul>
-<li><a href="http://www.nytimes.com/2012/06/03/opinion/sunday/we-only-think-we-know-the-truth-about-salt.html?_r=2&amp;pagewanted=all">Salt, We Misjudged You</a><br>Like with many things, I think listening to your body will solve this controversy in a rather natural manner.</li>
-<li><a href="http://www.news.com.au/breaking-news/world/german-teen-shouryya-ray-solves-300-year-old-mathematical-riddle-posed-by-sir-isaac-newton/story-e6frfkui-1226368490521">German teen Shouryya Ray solves 300-year-old mathematical riddle posed by Sir Isaac Newton</a><br>In case that&#8217;s not impresive enough, he solved another mathematical problem (from the 19th century) too.</li>
-<li><a href="http://www.bbc.co.uk/nature/18294324">How tiny insects survive the rain</a><br>Nature definitely has a cool bag of tricks.</li>
-<li><a href="http://www.forbes.com/sites/daviddisalvo/2012/06/05/the-straight-dope-on-what-bath-salts-do-to-your-brain-and-why-theyre-dangerous/">The Straight Dope on What Bath Salts Do to Your Brain and Why They&#8217;re Dangerous</a><br>An informative and rationale article, without the usual cannibal and zombie panic.</li>
-<li><a href="http://www.plausiblydeniable.com/opinion/gsf.html">Five Geek Social Fallacies</a><br>I&#8217;ll try to look more closely for these in the geek communities I&#8217;m a part of.</li>
-<li><a href="http://io9.com/5916970/the-22-rules-of-storytelling-according-to-pixar">The 22 rules of storytelling, according to Pixar</a><br>Seemingly simple rules that make the Pixar movies as great as they are.</li>
-<li><a href="http://henryschwarz.blogspot.co.uk/2012/06/black-hatted.html">Black Hatted</a><br>Interesting post on how an ATM manufacturerer cooperated with a security researcher. More companies should behave this way.</li>
-<li><a href="http://mondediplo.com/2012/06/04poland">The EU’s far frontier</a><br>How joining the Schengen area was detrimental to the development of Eastern Poland.</li>
-<li><a href="http://www.yosefk.com/blog/work-on-unimportant-problems.html">Work on unimportant problems</a><br>While there are things I disagree with in this article, the overall message is something that strikes a chord with me.</li>
-<li><a href="http://www.foreignpolicy.com/articles/2012/06/08/the_cup_and_the_controversy?page=full">The Cup Runneth Over</a><br>Some critical thoughts on Ukraine in light of the Euro Cup.</li>
-</ul>
-
-
-<blockquote><p>Review of Black Hat by Obi-Wan Kenobi: &#8220;You will never find a more wretched hive of scum and villainy.&#8221;</p><footer><strong>Henry Schwarz</strong> <cite><a href='http://henryschwarz.blogspot.co.uk/2012/06/black-hatted.html'>Black Hatted</a></cite></footer></blockquote>
-
+<p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
 </div>
 
 
@@ -163,12 +159,12 @@
   
 
 
-<time datetime="2012-06-10T00:00:00+02:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
+<time datetime="2012-06-12T21:33:00+02:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/informationoverload/'>informationoverload</a>, <a class='category' href='/blog/categories/math/'>math</a>, <a class='category' href='/blog/categories/politics/'>politics</a>, <a class='category' href='/blog/categories/science/'>science</a>, <a class='category' href='/blog/categories/security/'>security</a>, <a class='category' href='/blog/categories/society/'>society</a>
+    <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
   
 </span>
 
@@ -178,18 +174,18 @@
       <div class="sharing">
   
     <a class="FlattrButton" style="display:none;"
-    title="Information Overload 2012-06-10"
+    title="Rails — Display branch in development mode"
     data-flattr-uid="citizen428"
     data-flattr-tags=""
     data-flattr-button="compact"
     data-flattr-category="text"
-    href="http://citizen428.net/blog/2012/06/10/information-overload-2012-06-10/">
+    href="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/">
     
 </a>
 
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2012/06/10/information-overload-2012-06-10/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2012/06/10/information-overload-2012-06-10/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -202,10 +198,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/05/25/information-overload-2012-05-25/" title="Previous Post: Information Overload 2012-05-25">&laquo; Information Overload 2012-05-25</a>
+        <a class="basic-alignment left" href="/blog/2012/06/10/information-overload-2012-06-10/" title="Previous Post: Information Overload 2012-06-10">&laquo; Information Overload 2012-06-10</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/06/12/rails-display-branch-in-development-mode/" title="Next Post: Rails — Display branch in development mode">Rails — Display branch in development mode &raquo;</a>
       
     </p>
   </footer>
@@ -303,8 +297,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://citizen428.net/blog/2012/06/10/information-overload-2012-06-10/';
-        var disqus_url = 'http://citizen428.net/blog/2012/06/10/information-overload-2012-06-10/';
+        var disqus_identifier = 'http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/';
+        var disqus_url = 'http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/';
         var disqus_script = 'embed.js';
       
     (function () {

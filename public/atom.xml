@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-06-10T15:49:33+02:00</updated>
+  <updated>2012-06-15T19:29:01+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rails — Display branch in development mode]]></title>
+    <link href="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/"/>
+    <updated>2012-06-12T21:33:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode</id>
+    <content type="html"><![CDATA[<p>At work we are building a Rails app that&#8217;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it&#8217;d be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn&#8217;t have been any simpler:</p>
+
+<figure class='code'><figcaption><span>app/helpers/application_helper.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">version_div</span>
+</span><span class='line'>  <span class="n">version</span> <span class="o">=</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">development?</span> <span class="p">?</span> <span class="o">::</span><span class="no">Grit</span><span class="o">::</span><span class="no">Repo</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="o">::</span><span class="no">OurApp</span><span class="o">::</span><span class="no">Application</span><span class="o">::</span><span class="no">Version</span>
+</span><span class='line'>  <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:span</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;version&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-06-10]]></title>
@@ -541,21 +564,6 @@
 
 <blockquote><p>The only other thing you could get the internet to agree on was if they tried to institute a ban on cat pictures.</p><footer><strong>Paul Tassi</strong> <cite><a href='http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/'>You Will Never Kill Piracy, and Piracy Will Never Kill You</a></cite></footer></blockquote>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Review: A Bug Hunter's Diary]]></title>
-    <link href="http://citizen428.net/blog/2012/02/01/review-a-bug-hunters-diary/"/>
-    <updated>2012-02-01T22:03:00+01:00</updated>
-    <id>http://citizen428.net/blog/2012/02/01/review-a-bug-hunters-diary</id>
-    <content type="html"><![CDATA[<p>This was a very good read! In each chapter the author introduces one bug he found in a popular software package, always following the same structure: discovery, exploitation, remediation, lessons learned from the bug and a timeline of the bug&#8217;s lifetime (disclosure, fix, etc).</p>
-
-<p>The writing is engaging and to the point, but still contains a lot of technical detail. Be warned though, if reading C and disassembly is not your type of thing, you probably won&#8217;t enjoy this too much. The author tries hard to make everything as easy to understand as possible, but there&#8217;s only so much you can do with limited space.</p>
-
-<p>If there&#8217;s anything to criticize about this book, it&#8217;s that the chapters are fairly repetitive, so I never really felt like reading more than one in a single sitting. But then it&#8217;s also not the type of book that needs to be read cover to cover as fast as possible.</p>
-
-<p>Link: <a href="http://www.amazon.com/gp/product/1593273851/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1593273851">Tobias Klein: A Bug Hunter&#8217;s Diary</a> (Amazon affiliate link)</p>
 ]]></content>
   </entry>
   
