@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Crap Detection 101The next time you want to help improve someone&#8217;s information literacy, point them to this article. It may even have some &hellip;">
+  <meta name="description" content="When my usual Twitter client stopped working last Tuesday, I got inspired by Ruben&#8217;s Emacs 30 Day Challenge and decided to look what Emacs had &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,127 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/21/emacs-twittering-mode/">Emacs Twittering-mode</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-21T00:00:00+01:00" pubdate data-updated="true">Jan 21<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When my <a href="http://nambu.com/">usual Twitter client</a> stopped working last Tuesday, I got inspired by <a href="http://www.mostlymaths.net/2010/12/emacs-30-day-challenge.html">Ruben&#8217;s Emacs 30 Day Challenge</a> and decided to look what Emacs had to offer in terms of Twitter clients. On the always helpful EmacsWiki I found a <a href="http://emacswiki.org/emacs/Twitter">list of available options</a> and after some browsing settled on <a href="http://twmode.sourceforge.net/">twittering-mode</a>. I got hooked really fast, so even after getting Nambu to work again (somehow authentication got screwed up), I decided to stay with Emacs for my Twitter needs.</p>
+
+<p>Here&#8217;s a screenshot from the Emacs wiki (although I usually have the avatars turned off):</p>
+
+<p><img src="http://www.emacswiki.org/pics/static/TwitteringModeScreenshot.jpg" alt="Emacs twittering-mode" title="TwitteringMode" /></p>
+
+<p>If you also want to give this awesome mode a spin, I recommend starting at <a href="http://www.emacswiki.org/emacs/TwitteringMode">this EmacsWiki page</a>, which has installation instructions, a summary of key-bindings and options and some discussion by users.</p>
+
+<p>Here are the relevant parts of my Emacs config, with extra comments added for this post:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class='scheme'><span class='line'><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;twittering-mode</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; update every 10 minutes</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-timer-interval</span> <span class="mi">600</span><span class="p">)</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-url-show-status</span> <span class="nv">nil</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; Show character count in compose buffer</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-show-minibuffer-length</span> <span class="nv">t</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; I added is.gd support myself, pull request sent.</span>
+</span><span class='line'><span class="c1">; standard options are tinyurl and toly</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-tinyurl-service</span> <span class="ss">&#39;is</span><span class="o">.</span><span class="nv">gd</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; See http://www.reverttoconsole.com/blog/nix/twitter-mode-for-emacs-with-oauth/</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-master-password</span> <span class="nv">t</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">; This tells twittering-mode which time line buffers</span>
+</span><span class='line'><span class="c1">; to open when starting</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-initial-timeline-spec-string</span>
+</span><span class='line'>      <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;:friends&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:replies&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:direct_messages&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:search/clojure/&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:search/#jlang/&quot;</span>
+</span><span class='line'>        <span class="s">&quot;citizen428/tupaleros&quot;</span><span class="p">))</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">; some key bindings</span>
+</span><span class='line'><span class="p">(</span><span class="nf">add-hook</span> <span class="ss">&#39;twittering-mode-hook</span>
+</span><span class='line'>          <span class="p">(</span><span class="k">lambda </span><span class="p">()</span>
+</span><span class='line'>            <span class="p">(</span><span class="nf">mapc</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">pair</span><span class="p">)</span>
+</span><span class='line'>                    <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">key</span> <span class="p">(</span><span class="nb">car </span><span class="nv">pair</span><span class="p">))</span>
+</span><span class='line'>                          <span class="p">(</span><span class="nf">func</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">pair</span><span class="p">)))</span>
+</span><span class='line'>                      <span class="p">(</span><span class="nf">define-key</span> <span class="nv">twittering-mode-map</span>
+</span><span class='line'>                        <span class="p">(</span><span class="nf">read-kbd-macro</span> <span class="nv">key</span><span class="p">)</span> <span class="nv">func</span><span class="p">)))</span>
+</span><span class='line'>                  <span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;R&quot;</span> <span class="o">.</span> <span class="nv">twittering-native-retweet</span><span class="p">)</span>
+</span><span class='line'>                    <span class="p">(</span><span class="s">&quot;l&quot;</span> <span class="o">.</span> <span class="nv">twittering-goto-next-thing</span><span class="p">)))))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>TImelines</strong></p>
+
+<p>As you can see <code>twittering-initial-timeline-spec-string</code> defines which timeline buffers get opened when starting. This is really convenient, since you can use <code>f</code> and <code>b</code> to cycle through them. If you want to see only the timeline of the author of the currently active tweet hit <code>v</code>, <code>C-c C-v</code> will open the profile in a web browser. <code>V</code> gives you access to all pre-defined timelines like <code>:public</code> or <code>:retweets_of_me</code>.</p>
+
+<p><strong>Tweets</strong></p>
+
+<p>Inside a timeline <code>j</code> and <code>k</code> let you jump from tweet to tweet, whereas <code>p</code> and <code>n</code> go to the previous or next tweet by the same author. Replying to a tweet is as easy as pressing enter. I&#8217;ve rebound <code>twittering-native-retweet</code> (for &#8220;new style&#8221; retweets) to <code>R</code> instead of the somewhat unwieldy <code>C-u C-c Enter</code>, &#8220;organic&#8221; retweets are possible with <code>C-c Enter</code>. <code>r</code> opens related tweets, so it&#8217;s easy to follow conversations and <code>u</code> let&#8217;s you post a new tweet.  My favorite function is probably <code>twittering-goto-next-thing</code> (bound to <code>l</code> in my setup), which  jumps to the next username (to make it easy to visit the profile), URI, or timeline symbol (like a hashtag).</p>
+
+<p>There are many more useful functions and key combinations (like <code>i</code> for showing/hiding avatars), it&#8217;s best to look them up on the EmacsWiki page. I&#8217;m very impressed by and happy with my new Twitter client, browsing through my update stream has never been so fast and efficient.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -598,52 +719,6 @@ Ruby, Clojure, Bash, Python, JavaScript, Scheme, Haskell, <span class="caps">SQL
 <script src="https://gist.github.com/741070.js?file=ycombinator-step6.clj"></script><p><strong>Step 7</strong></p>
 <p>Last but not least we also inline the wrapper from step 5, et voila, the Y combinator:</p>
 <script src="https://gist.github.com/741070.js?file=ycombinator-step7.clj"></script></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/12/12/information-overload-2010-12-12/">Information Overload 2010-12-12</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-12-12T00:00:00+01:00" pubdate data-updated="true">Dec 12<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html">What to know before debating type systems</a><br>Now that I started to get more into Haskell, I&#8217;m reading up on type systems.</li>
-<li><a href="http://www.datum.at/0910/stories/6471209">Kleider machen Leute</a><br>Interesting piece on <a href="http://de.wikipedia.org/wiki/Humana_People_To_People">Humana</a> and <a href="http://en.wikipedia.org/wiki/Tvind">Tvind</a> (in German).</li>
-<li><a href="http://www.ted.com/talks/tony_porter_a_call_to_men.html">Tony Porter: A call to men</a><br>Nice <a href="http://en.wikipedia.org/wiki/TED_(conference)"><span class="caps">TED</span></a> talk by Tony Porter about gender stereotypes and the &#8220;man box&#8221;.</li>
-<li><a href="http://www.slideshare.net/rubymeetup/inside-github-with-chris-wanstrath">Inside GitHub with Chris Wanstrath</a><br>Slides of defunkt&#8217;s presentation on GitHub internals. Very informative, especially if you are also trying to scale a Rails environment.</li>
-<li><a href="http://news.bbc.co.uk/earth/hi/earth_news/newsid_9254000/9254445.stm">Oriental hornets powered by &#8216;solar energy&#8217;</a><br>So there&#8217;s a type of hornet that can use the sun to produce energy. Evolution never ceases to amaze me.</li>
-<li><a href="http://www.themorningnews.org/archives/personal_essays/i_reader.php">I, Reader</a><br>On books, online reading habits and ebooks.</li>
-<li><a href="http://www.boston.com/bigpicture/2010/11/national_geographics_photograp.html">National Geographic&#8217;s Photography Contest 2010</a><br>Nice selection of 47 pictures from this year&#8217;s <a href="http://ngm.nationalgeographic.com/ngm/photo-contest/">National Geographic Photo Contest</a>.</li>
-<li><a href="http://www.niemanlab.org/2010/11/why-spreadable-doesnt-equal-viral-a-conversation-with-henry-jenkins/">Why spreadable doesn’t equal viral</a><br>On journalism, new media, spreadable and viral content.</li>
-<li><a href="http://chronicle.com/article/article-content/125329/">The Shadow Scholar</a><br>A ghost writer for academic papers tells about his job. This is as interesting as it is sad.</li>
-<li><a href="http://www.huffingtonpost.com/robert-koehler/the-suffering-of-fallujah_b_663545.html">The Suffering of Fallujah</a><br>There have been comparatively little news from Iraq lately, so I decided to include this article from last summer in this week&#8217;s Information Overload.</li>
-</ul></div>
   
   
 

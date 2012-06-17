@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-06-15T19:29:01+02:00</updated>
+  <updated>2012-06-17T21:12:51+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-06-17]]></title>
+    <link href="http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17/"/>
+    <updated>2012-06-17T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17</id>
+    <content type="html"><![CDATA[<blockquote><p>[H]e worries that economic and ecological collapse will come much sooner than we think, and that the time to start behaving in an anarchic way—taking care of ourselves instead of deferring to government and big business—is now. He wants, in his words, for people to have a &#8220;soft landing&#8221; when the global shit hits the global fan.</p><footer><strong>Brendan Kiley</strong> <cite><a href='http://www.thestranger.com/seattle/anarchy-is-boring/Content?oid=13597692'>Anarchy Is Boring</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://esr.ibiblio.org/?p=4386">Why I think RMS is a fanatic, and why that matters.</a><br>The most current &#8220;RMS is a fanatic&#8221; post by ESR. While he may be right that pragmatism sells better, I always admired Stallman&#8217;s approach.</li>
+<li><a href="http://chronicle.com/article/Why-Privacy-Matters-Even-if/127461/">Why Privacy Matters Even if You Have &#8216;Nothing to Hide&#8217;</a><br>Most of the readers of my blog are probably aware of everything written in this article, but it&#8217;s a very good resource for sending to people who don&#8217;t follow the privacy debate much.</li>
+<li><a href="http://arstechnica.com/security/2012/06/flame-crypto-breakthrough/">Crypto breakthrough shows Flame was designed by world-class scientists</a><br>Some more background on <a href="http://en.wikipedia.org/wiki/Flame_(malware)">Flame</a>.</li>
+<li><a href="http://www.thestranger.com/seattle/anarchy-is-boring/Content?oid=13597692">Anarchy Is Boring</a><br>This is a good article a lot of people calling themselves anarchists should read.</li>
+<li><a href="http://www.heise.de/tp/artikel/37/37094/1.html">G8-Gipfel in Genua - Letzter Akt mit hohen Haftstrafen?</a><br>11 years after the <a href="http://en.wikipedia.org/wiki/27th_G8_summit#Protests">protests</a> it seems like several protesters will have to go for a long time (in German).</li>
+<li><a href="http://www.whatwherewhy.me/blog/2012/06/11/the-male-gaze/">The Male Gaze</a><br>I hope that one day I can stop including articles about discrimation against women in tech.</li>
+<li><a href="http://home.tiac.net/~cri/1998/toilet.html">A game theoretic approach to the toilet seat problem</a><br>Mathematics to the rescue.</li>
+<li><a href="http://www-cs-students.stanford.edu/~cale/cs201/apartheid.comp.html">The Use of Computers to Support Oppression</a><br>On the role of computers in the South African apartheid system.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rails — Display branch in development mode]]></title>
@@ -536,33 +558,6 @@
 
 
 <blockquote><p>Doctor Who, for the uninitiated, is a show featuring an “eleven-hundred-and-three-year-old” alien who travels through space and time in a police box (called the TARDIS – Time and Relative Dimension in Space), fighting monsters and finding friends to take along with him, only ninety per cent of which have been very attractive women.</p><footer><strong>Emer Sugrue</strong> <cite><a href='http://www.universityobserver.ie/2012/02/08/the-man-who/'>The Man Who</a></cite></footer></blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-02-05]]></title>
-    <link href="http://citizen428.net/blog/2012/02/05/information-overload-2012-02-05/"/>
-    <updated>2012-02-05T00:00:00+01:00</updated>
-    <id>http://citizen428.net/blog/2012/02/05/information-overload-2012-02-05</id>
-    <content type="html"><![CDATA[<blockquote><p>[T]oday&#8217;s strangeness, while only a few mouse-clicks away from anyone, becomes difficult to find because it has to occur to you to Google it. You may be able to Google everything, but the trick is figuring what you need to Google.</p><footer><strong>William Gibson</strong> <cite><a href='http://www.theverge.com/2012/1/24/2724370/william-gibson-intervie'>An Interview With William Gibson</a></cite></footer></blockquote>
-
-
-<ul>
-<li><a href="http://www.wired.com/geekdad/2012/01/everything-about-learning/">Everything You Thought You Knew About Learning Is Wrong</a><br>I like articles on learning, this one has a few good tips.</li>
-<li><a href="http://www.theverge.com/2012/1/24/2724370/william-gibson-interview">An interview with William Gibson</a><br>Title says it all.</li>
-<li><a href="http://www.bbc.co.uk/news/technology-13886440">Netherlands makes net neutrality a law</a><br>This is not the first sensible law the Netherlands pass.</li>
-<li><a href="http://arstechnica.com/tech-policy/news/2012/01/internet-awash-in-inaccurate-anti-acta-arguments.ars">As Anonymous protests, Internet drowns in inaccurate anti-ACTA arguments</a><br>If you are following the current ACTA debate (and you should be), this one is a must read.</li>
-<li><a href="http://www.wired.com/magazine/2011/12/ff_riots/all/1">#Riot: Self-Organized, Hyper-Networked Revolts&mdash;Coming to a City Near You</a><br>The second Wired article in this week&#8217;s issue, a very interesting piece on crowds, flash mobs and riots in connection with Social Media.</li>
-<li><a href="http://www.vice.com/read/interview-with-ketamine-chemist-704-v18n2">Interview With A Ketamine Chemist</a><br>Fascinating interview with the creator of some <a href="http://en.wikipedia.org/wiki/Dissociative">dissociative drugs</a>.</li>
-<li><a href="http://www.foreignpolicy.com/articles/2012/01/03/the_myth_of_europe?page=full">The Myth of Europe</a><br>A very thorough and interesting take on the EU and European identity. I for one would be sad if the Union failed, because I really enjoy a Europe with almost no borders, the right to work and live in any of the 27 member states and so on. I don&#8217;t think that the level of centralization this has reached is the way to go though&#8230;</li>
-<li><a href="http://www.lettersofnote.com/2012/01/to-my-old-master.html">To My Old Master</a><br>A letter from a former slave to his old &#8220;master&#8221;.</li>
-<li><a href="http://www.zephoria.org/thoughts/archives/2011/12/12/questions-bullying-suicide.html">Four Difficult Questions Regarding Bullying and Youth Suicide</a><br>Interesting questions for a necessary debate.</li>
-<li><a href="http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/">You Will Never Kill Piracy, and Piracy Will Never Kill You</a><br>Despite the headline, this has been published by Forbes. BTW: I think the proposed &#8220;Movie Steam&#8221; is a fantastic idea and I&#8217;d love to use something like that.</li>
-</ul>
-
-
-<blockquote><p>The only other thing you could get the internet to agree on was if they tried to institute a ban on cat pictures.</p><footer><strong>Paul Tassi</strong> <cite><a href='http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/'>You Will Never Kill Piracy, and Piracy Will Never Kill You</a></cite></footer></blockquote>
 
 ]]></content>
   </entry>

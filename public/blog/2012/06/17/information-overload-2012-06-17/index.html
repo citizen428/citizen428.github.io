@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Rails — Display branch in development mode - citizen428.blog()</title>
+  <title>Information Overload 2012-06-17 - citizen428.blog()</title>
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="At work we are building a Rails app that&#8217;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug &hellip;">
+  <meta name="description" content="[H]e worries that economic and ecological collapse will come much sooner than we think, and that the time to start behaving in an anarchic way—taking &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode">
+  <link rel="canonical" href="http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -99,7 +99,7 @@
   
   <header>
     
-      <h1 class="entry-title">Rails — Display Branch in Development Mode</h1>
+      <h1 class="entry-title">Information Overload 2012-06-17</h1>
     
     
       <p class="meta">
@@ -115,28 +115,27 @@
   
 
 
-<time datetime="2012-06-12T21:33:00+02:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+<time datetime="2012-06-17T00:00:00+02:00" pubdate data-updated="true">Jun 17<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>At work we are building a Rails app that&#8217;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it&#8217;d be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn&#8217;t have been any simpler:</p>
-
-<figure class='code'><figcaption><span>app/helpers/application_helper.rb  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">version_div</span>
-</span><span class='line'>  <span class="n">version</span> <span class="o">=</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">development?</span> <span class="p">?</span> <span class="o">::</span><span class="no">Grit</span><span class="o">::</span><span class="no">Repo</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="o">::</span><span class="no">OurApp</span><span class="o">::</span><span class="no">Application</span><span class="o">::</span><span class="no">Version</span>
-</span><span class='line'>  <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:span</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;version&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+<div class="entry-content"><blockquote><p>[H]e worries that economic and ecological collapse will come much sooner than we think, and that the time to start behaving in an anarchic way—taking care of ourselves instead of deferring to government and big business—is now. He wants, in his words, for people to have a &#8220;soft landing&#8221; when the global shit hits the global fan.</p><footer><strong>Brendan Kiley</strong> <cite><a href='http://www.thestranger.com/seattle/anarchy-is-boring/Content?oid=13597692'>Anarchy Is Boring</a></cite></footer></blockquote>
 
 
-<p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
+<ul>
+<li><a href="http://esr.ibiblio.org/?p=4386">Why I think RMS is a fanatic, and why that matters.</a><br>The most current &#8220;RMS is a fanatic&#8221; post by ESR. While he may be right that pragmatism sells better, I always admired Stallman&#8217;s approach.</li>
+<li><a href="http://chronicle.com/article/Why-Privacy-Matters-Even-if/127461/">Why Privacy Matters Even if You Have &#8216;Nothing to Hide&#8217;</a><br>Most of the readers of my blog are probably aware of everything written in this article, but it&#8217;s a very good resource for sending to people who don&#8217;t follow the privacy debate much.</li>
+<li><a href="http://arstechnica.com/security/2012/06/flame-crypto-breakthrough/">Crypto breakthrough shows Flame was designed by world-class scientists</a><br>Some more background on <a href="http://en.wikipedia.org/wiki/Flame_(malware)">Flame</a>.</li>
+<li><a href="http://www.thestranger.com/seattle/anarchy-is-boring/Content?oid=13597692">Anarchy Is Boring</a><br>This is a good article a lot of people calling themselves anarchists should read.</li>
+<li><a href="http://www.heise.de/tp/artikel/37/37094/1.html">G8-Gipfel in Genua - Letzter Akt mit hohen Haftstrafen?</a><br>11 years after the <a href="http://en.wikipedia.org/wiki/27th_G8_summit#Protests">protests</a> it seems like several protesters will have to go for a long time (in German).</li>
+<li><a href="http://www.whatwherewhy.me/blog/2012/06/11/the-male-gaze/">The Male Gaze</a><br>I hope that one day I can stop including articles about discrimation against women in tech.</li>
+<li><a href="http://home.tiac.net/~cri/1998/toilet.html">A game theoretic approach to the toilet seat problem</a><br>Mathematics to the rescue.</li>
+<li><a href="http://www-cs-students.stanford.edu/~cale/cs201/apartheid.comp.html">The Use of Computers to Support Oppression</a><br>On the role of computers in the South African apartheid system.</li>
+</ul>
+
 </div>
 
 
@@ -159,12 +158,12 @@
   
 
 
-<time datetime="2012-06-12T21:33:00+02:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+<time datetime="2012-06-17T00:00:00+02:00" pubdate data-updated="true">Jun 17<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+    <a class='category' href='/blog/categories/informationoverload/'>informationoverload</a>, <a class='category' href='/blog/categories/math/'>math</a>, <a class='category' href='/blog/categories/politics/'>politics</a>, <a class='category' href='/blog/categories/security/'>security</a>, <a class='category' href='/blog/categories/society/'>society</a>
   
 </span>
 
@@ -174,18 +173,18 @@
       <div class="sharing">
   
     <a class="FlattrButton" style="display:none;"
-    title="Rails — Display branch in development mode"
+    title="Information Overload 2012-06-17"
     data-flattr-uid="citizen428"
     data-flattr-tags=""
     data-flattr-button="compact"
     data-flattr-category="text"
-    href="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/">
+    href="http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17/">
     
 </a>
 
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -198,10 +197,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/06/10/information-overload-2012-06-10/" title="Previous Post: Information Overload 2012-06-10">&laquo; Information Overload 2012-06-10</a>
+        <a class="basic-alignment left" href="/blog/2012/06/12/rails-display-branch-in-development-mode/" title="Previous Post: Rails — Display branch in development mode">&laquo; Rails — Display branch in development mode</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/06/17/information-overload-2012-06-17/" title="Next Post: Information Overload 2012-06-17">Information Overload 2012-06-17 &raquo;</a>
       
     </p>
   </footer>
@@ -299,8 +296,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/';
-        var disqus_url = 'http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/';
+        var disqus_identifier = 'http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17/';
+        var disqus_url = 'http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17/';
         var disqus_script = 'embed.js';
       
     (function () {

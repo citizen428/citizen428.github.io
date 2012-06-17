@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="If you are a Ruby developer on MacOS X, you probably love Pow as much as I do. While skimming the fine manual today, I noticed section 3.2, &#8220; &hellip;">
+  <meta name="description" content="The other day I found an interesting post by Lisper extraordinaire Zach Beane on Planet Lisp, where he describes his program to generate a feed for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,109 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/23/ruby-github-projects-atom-feed/">Ruby GitHub Projects Atom Feed</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-23T20:43:00+01:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The other day I found an <a href="http://xach.livejournal.com/298220.html">interesting post</a> by Lisper extraordinaire <a href="http://xach.livejournal.com/">Zach Beane</a> on <a href="http://planet.lisp.org/">Planet Lisp</a>, where he describes his program to generate a feed for the <a href="https://github.com/languages/Common%20Lisp/created">GitHub page about recently created Common Lisp repos</a>.</p>
+
+<p>Since good artists borrow and great artists steal, I decided to do the latter with his idea and implemented something similar for the <a href="https://github.com/languages/Ruby/created">new Ruby repos</a>. It uses <a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/open-uri/rdoc/">open-uri</a> for fetching the page, <a href="http://nokogiri.org/">Nokogiri</a> for parsing it and <a href="http://builder.rubyforge.org/">Builder</a> for generating the Atom feed.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;nokogiri&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;builder&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">html</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;https://github.com/languages/Ruby/created&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">atom</span> <span class="o">=</span> <span class="no">Builder</span><span class="o">::</span><span class="no">XmlMarkup</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:target</span> <span class="o">=&gt;</span> <span class="no">STDOUT</span><span class="p">,</span> <span class="ss">:indent</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">)</span>
+</span><span class='line'><span class="n">atom</span><span class="o">.</span><span class="n">instruct!</span>
+</span><span class='line'><span class="n">atom</span><span class="o">.</span><span class="n">feed</span> <span class="s2">&quot;xmlns&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;http://www.w3.org/2005/Atom&quot;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">atom</span><span class="o">.</span><span class="n">id</span> <span class="s2">&quot;urn:citizen428:github:newrepos&quot;</span>
+</span><span class='line'>  <span class="n">atom</span><span class="o">.</span><span class="n">updated</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">utc</span><span class="o">.</span><span class="n">iso8601</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">atom</span><span class="o">.</span><span class="n">title</span> <span class="s2">&quot;New GitHub Ruby Repos&quot;</span><span class="p">,</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">&quot;text&quot;</span>
+</span><span class='line'>  <span class="n">atom</span><span class="o">.</span><span class="n">link</span> <span class="ss">:rel</span> <span class="o">=&gt;</span> <span class="s2">&quot;self&quot;</span><span class="p">,</span> <span class="ss">:href</span> <span class="o">=&gt;</span> <span class="s2">&quot;/ruby_github.atom&quot;</span>
+</span><span class='line'>  <span class="n">doc</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//table[@class=&#39;repo&#39;]/tr/td[@class=&#39;title&#39;]/a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">title</span><span class="o">|</span>
+</span><span class='line'>    <span class="nb">name</span> <span class="o">=</span> <span class="n">title</span><span class="o">.</span><span class="n">content</span>
+</span><span class='line'>    <span class="n">owner</span> <span class="o">=</span> <span class="n">title</span><span class="o">.</span><span class="n">at_xpath</span><span class="p">(</span><span class="s2">&quot;../../td[@class=&#39;owner&#39;]/a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>
+</span><span class='line'>    <span class="n">desc</span> <span class="o">=</span> <span class="n">title</span><span class="o">.</span><span class="n">at_xpath</span><span class="p">(</span><span class="s2">&quot;../../following-sibling::tr/td[@class=&#39;desc&#39;]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>
+</span><span class='line'>    <span class="n">date</span> <span class="o">=</span> <span class="no">Time</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">title</span><span class="o">.</span><span class="n">at_xpath</span><span class="p">(</span><span class="s2">&quot;../../td[@class=&#39;date&#39;]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">atom</span><span class="o">.</span><span class="n">entry</span> <span class="k">do</span>
+</span><span class='line'>      <span class="n">atom</span><span class="o">.</span><span class="n">title</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">owner</span><span class="si">}</span><span class="s2">: </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>      <span class="n">atom</span><span class="o">.</span><span class="n">author</span> <span class="p">{</span> <span class="n">atom</span><span class="o">.</span><span class="n">name</span> <span class="n">owner</span> <span class="p">}</span>
+</span><span class='line'>      <span class="n">atom</span><span class="o">.</span><span class="n">link</span> <span class="s2">&quot;href&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;https://github.com</span><span class="si">#{</span><span class="n">title</span><span class="o">.</span><span class="n">attributes</span><span class="o">[</span><span class="s2">&quot;href&quot;</span><span class="o">].</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>      <span class="n">atom</span><span class="o">.</span><span class="n">id</span> <span class="s2">&quot;urn:citizen428:github:</span><span class="si">#{</span><span class="n">owner</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>      <span class="n">atom</span><span class="o">.</span><span class="n">published</span> <span class="n">date</span><span class="o">.</span><span class="n">utc</span><span class="o">.</span><span class="n">iso8601</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span><span class='line'>      <span class="n">atom</span><span class="o">.</span><span class="n">updated</span> <span class="n">date</span><span class="o">.</span><span class="n">utc</span><span class="o">.</span><span class="n">iso8601</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span><span class='line'>      <span class="n">atom</span><span class="o">.</span><span class="n">content</span> <span class="n">desc</span><span class="p">,</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">&quot;html&quot;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I&#8217;m hosting <a href="http://citizen428.net/ruby_github.atom">the feed</a> on this blog (updated regularly via cron), add it to your feed reader to discover potentially interesting new Ruby projects.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -617,110 +720,6 @@
     <footer>
       <a rel="full-article" href="/blog/2011/10/21/a-chrome-extension-for-soup-dot-io/">Read on &rarr;</a>
     </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk/">Fixing Grub on a LUKS-encrypted Disk</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-10-17T15:41:00+02:00" pubdate data-updated="true">Oct 17<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I rebooted my new work notebook (a very nice x201s, with a dual-core i7, 8GB RAM and an SSD by the way), it seemed that for whatever reason there was no Grub installed. Strange, but not the only problem I had with the alternate Ubuntu installer that I used for setting up <a href="http://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS-encrypted</a> root and swap partitions. Since this turned out to be more involved than I originally thought, I decided to document what I did to maybe save others the trouble. BTW: You&#8217;ll need a Linux Live-CD for this, I recommend the excellent Debian-based <a href="http://grml.org/">Grml</a>.</p>
-
-<p>First we need to open the LUKS partition, which can be done with <a href="http://linux.die.net/man/8/cryptsetup">cryptsetup</a>.</p>
-
-<figure class='code'><figcaption><span>Step 1: Unlock LUKS </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cryptsetup luksOpen /dev/&lt;device&gt; &lt;name&gt;
-</span><span class='line'><span class="c"># you&#39;ll be asked for your password</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>With that out of the way, you&#8217;ll have to mount your LVM volumes. This took me a bit because my VG wasn&#8217;t active, but thanks to an excellent blog post I found (see sources) this problem was solved quickly.</p>
-
-<figure class='code'><figcaption><span>Step 2: Mounting LVM </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># do a lvm disk scan</span>
-</span><span class='line'><span class="nv">$ </span>lvmdiskscan
-</span><span class='line'><span class="c"># activate the volume group</span>
-</span><span class='line'><span class="nv">$ </span>vgchange -ay
-</span><span class='line'><span class="c"># make sure the VG is active now</span>
-</span><span class='line'><span class="nv">$ </span>lvscan
-</span><span class='line'><span class="c"># mount the actual volume</span>
-</span><span class='line'><span class="nv">$ </span>mount /dev/&lt;volume_group_name&gt;/&lt;volume&gt; /mnt/external
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I then needed to mount the unencrypted <code>/boot</code> partition as well as some special filesystems (with bind mounts) at the appropriate mount points.</p>
-
-<figure class='code'><figcaption><span>Step 3: Preparing for the chroot </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># mount the boot partion</span>
-</span><span class='line'><span class="nv">$ </span>mount /dev/&lt;device&gt; /mnt/external/boot
-</span><span class='line'><span class="c"># bind mount some things we need in the chroot env</span>
-</span><span class='line'><span class="nv">$ </span>mount --bind /dev /mnt/external/dev
-</span><span class='line'><span class="nv">$ </span>mount --bind /proc /mnt/external/proc
-</span><span class='line'><span class="nv">$ </span>mount --bind /sys /mnt/external/sys
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>With everything set up, all that&#8217;s left to do is <code>chroot</code>ing into the system and fixing Grub.</p>
-
-<figure class='code'><figcaption><span>Step 4: chrooting and fixing Grub </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>chroot /mnt/external
-</span><span class='line'>chroot<span class="nv">$ </span> grub-setup <span class="c"># grub-install, whatever you need</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Sources:</p>
-
-<ul>
-<li><a href="http://www.shallowsky.com/blog/linux/luks-encryption.html">Creating and mounting a LUKS encrypted disk</a></li>
-<li><a href="http://pissedoffadmins.com/?p=481">mount: unknown filesystem type ‘LVM2_member’</a></li>
-</ul>
-
-</div>
-  
   
 
 
