@@ -4,7 +4,7 @@
   <title><![CDATA[Category: review | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/review/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-06-17T21:12:51+02:00</updated>
+  <updated>2012-06-20T16:10:52+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Review: The Tangled Web]]></title>
+    <link href="http://citizen428.net/blog/2012/06/20/review-the-tangled-web/"/>
+    <updated>2012-06-20T15:05:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/06/20/review-the-tangled-web</id>
+    <content type="html"><![CDATA[<p><em>Disclaimer 1: The good folks of No Starch Press were kind enough to provide me with a review copy of this book, but this did not influence the following text.</em></p>
+
+<p><em>Disclaimer 2: Links to books are Amazon affiliate links.</em></p>
+
+<p>I've been interested in IT security for a long time, but obviously even more so since I started working professionally in this area. Since web applications have become ubiquitous in recent years, they constitute a big part of our penetration testing work. This is a very broad topic, so <a href="http://www.amazon.com/gp/product/1593273886/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1593273886">The Tangled Web: A Guide to Securing Modern Web Applications</a><img src="http://www.assoc-amazon.com/e/ir?t=citizen4blog-20&l=as2&o=1&a=1593273886" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> by Michal Zalewski is an ambitious project.</p>
+
+<p>The first thing I noticed was that the book is comparatively thin. At around 300 pages it's only about one third of <a href="http://www.amazon.com/gp/product/1118026470/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1118026470">The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws</a><img src="http://www.assoc-amazon.com/e/ir?t=citizen4blog-20&l=as2&o=1&a=1118026470" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. Don't let that fool you though, this book is not a lightweight by any means. It's logically structured in three parts, the first of which explores the various components that constitute the web as we know it today (URLs, HTTP, HTML, CSS etc.) and their security implications. This is followed by a look at the security features — and their shortcomings — of current browsers. After this part 3 deals with current developments and the future of browser and web application security. This is rounded off by a list of common security problems including references to the chapters of the book that cover them, as well as an epilogue with a surprisingly philosophical outlook on IT security and trust in human societies.</p>
+
+<p>The writing was clear and to the point, with tons of footnotes and references to provide the interested reader with the chance to further research the presented topics. The author clearly knows what he's talking about and manages to present it in a very approachable way. Due to it's limited size the book still has to be a bit dense though, so I never really felt like reading more than one chapter at a time, otherwise it'd have been to much information to take in at once.</p>
+
+<p>Whether you work in IT security or are a web application developer, this definitely is a book you don't want to miss.</p>
+
+<div align="center"><iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=000000&IS2=1&npa=1&bg1=F8F8F8&fc1=000000&lc1=FF7100&t=citizen4blog-20&o=1&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=1593273886" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[28C3 day 4]]></title>
@@ -81,23 +103,6 @@
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4817.en.html">String Oriented Programming</a><br>A talk about evading ASLR, DEP and other security measures with <code>printf</code> exploits.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Review: The Art of R Programming]]></title>
-    <link href="http://citizen428.net/blog/2011/12/21/review-the-art-of-r-programming/"/>
-    <updated>2011-12-21T20:06:00+01:00</updated>
-    <id>http://citizen428.net/blog/2011/12/21/review-the-art-of-r-programming</id>
-    <content type="html"><![CDATA[<p><em>Disclaimer: Once again No Starch Press were kind enough to provide me with a review copy of a book, but this does not influence my reviews.</em></p>
-
-<p>Time for another book review, this time <a href="http://nostarch.com/artofr.htm">The Art of R Programming</a> by Norman Matloff. First things first, this book really lives up to its name! It's a thorough introduction to programming in R, aimed at software developers. This is <strong>not</strong> the book for you if you want to learn about the statistics side of R or how to make prettier plots, there are plenty of books about that anyway.</p>
-
-<p>What I really like is that the author never tries to "sell" R to the reader. This is rather refreshing, because I always get turned off when books start with a sales pitch for something I already clearly showed interest in by purchasing the book. R is a rather specialized language and chances are that you know why you want to solve a given problem in it, and if you don't, this might not yet be the book you should be reading anyway. The first few chapters cover the language's basic data structures like vectors, matrices, arrays, lists and tables, before chapter 7 introduces various flow control structures. What follows is a chapter on doing math and simulations in R, which is not overly long but gives some good examples of what the language is useful for. The next chapter is very interesting, it deals with R's object oriented features and describes the differences between S3 and S4 classes as well as their respective up and down sides. After this the author covers input/output, dealing with strings and R's graphing capabilities. He never gets lost in detail, but provides you with enough info to be able to explore these areas on your own. What really makes the book special though are the last few chapters, where Matloff covers debugging (a topic he also wrote an entire book about), performance tradeoffs, interfacing R with other programming languages (using functions written in C/C++ from R, as well as using R in Python) and various approaches to parallelizing R. While none of this may sound super exciting at first — apart from parallelism maybe — these are important issues in the daily lives of software developers and way too many books only gloss over them.</p>
-
-<p>Now for some criticism: personally I don't find the author's style very engaging, it's rather dry and boring at times. Since it's clear that Matloff is an absolute authority on the topic of R this doesn't way too heavily, but still deserves a mention. Also for my personal taste there are slightly too many forward references in the text, although that's hard to avoid if you want to properly cover a language. I also found it rather odd that at one point the author mentions that explicit return statements aren't exactly idiomatic in R, but that he will keep using them for the benefit of readers unaccustomed to the language. Given that this was a few chapters in, it would have been a perfect spot to switch to the more idiomatic style from then on, but maybe that's just me being nitpicky. I also noticed several little typos and misspellings, something I'm not really used to from No Starch Press.</p>
-
-<p>All in all this is a very solid book, which you definitely should pick up if you want to learn programming in R!</p>
 ]]></content>
   </entry>
   

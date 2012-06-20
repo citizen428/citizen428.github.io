@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="As part of Rubylearning&#8217;s current book promotion I&#8217;m reading The Well-Grounded Rubyist by David A. Black. Here are my thoughts on the &hellip;">
+  <meta name="description" content="Today I felt like playing around with unsavory a bit more, which led to some minor improvements: code reorganization: the delicious class got moved &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://citizen428.net/blog/page/20">
+  <link rel="canonical" href="http://citizen428.net/blog/page/20/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -96,6 +96,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/15/unsavory-updates/">Unsavory Updates</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-15T00:00:00+02:00" pubdate data-updated="true">Jun 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I felt like playing around with <a href="http://github.com/citizen428/unsavory/tree/master">unsavory</a> a bit more, which led to some minor improvements: <br />
+<ul><br />
+<li>code reorganization: the delicious class got moved to a separate file in lib/ and got a new method for easier retrieval of the URLs array</li><br />
+<li>login credentials can now be read from a config file, thus making HighLine optional</li></p>
+</ul>
+<p>Next on my list is packaging this up as a gem so people can simply install it with &#8216;gem install unsavory&#8217;.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -501,55 +541,6 @@
 <script src="http://gist.github.com/109576.js"></script></p>
 <p>Download:<br />
 <a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/05/03/im-in-your-pi-crunching-your-numbers/">I&#8217;m in Your Pi, Crunching Your Numbers ;-)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-05-03T00:00:00+02:00" pubdate data-updated="true">May 3<span>rd</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>From <a href="http://rubyquiz.strd6.com/quizzes/202">Ruby Quiz #202</a>:</p>
-<p><em>And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#8217;s solution:</em></p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;hpricot&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
-</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Hpricot</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;http://www.eveandersson.com/pi/digits/100000&#39;</span><span class="p">))</span>
-</span><span class='line'><span class="nb">puts</span> <span class="p">(</span><span class="n">doc</span><span class="o">/</span><span class="s1">&#39;pre&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">inner_html</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p><em>It finishes in less than one second for the entire 100,000 digits!</em></p>
-<p>And no, this wasn&#8217;t a serious submission&#8230; :-)</p></div>
   
   
 
