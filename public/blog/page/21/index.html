@@ -9,13 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="From Ruby Quiz #202:
-And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#8217;s solution: 1
-2
-3
-4
-5
-require &#39;rubygems &hellip;">
+  <meta name="description" content="As we all know posting code to Moodle (the software that powers RubyLearning) can be a bit cumbersome. I therefore created a TextMate command which &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -102,6 +96,51 @@ require &#39;rubygems &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/">A TextMate Command for the RubyLearning Forums</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-10T00:00:00+02:00" pubdate data-updated="true">May 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As we all know posting code to <a href="http://moodle.org/">Moodle</a> (the software that powers <a href="http://rubylearning.org">RubyLearning</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
+<ul>
+<li> take the currently active file</li>
+<li> replace all occurrences of &lt; with the <span class="caps">HTML</span>-entity</li>
+<li> wrap all of that in [code ruby] tags and</li>
+<li> copy it to the clipboard, ready to be pasted into the forums.</li>
+</ul>
+<p>Source:<br />
+<script src="http://gist.github.com/109576.js"></script></p>
+<p>Download:<br />
+<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -530,68 +569,6 @@ require &#39;rubygems &hellip;">
 
 
   <div class="entry-content"><script src="http://gist.github.com/81399.js"></script><p>Adjust to your liking. :)</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/03/18/create-script-from-irb-session/">Create Script From IRB Session</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-18T00:00:00+01:00" pubdate data-updated="true">Mar 18<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We all know the feeling: before starting a new script you hack around in <span class="caps">IRB</span> to try out some things, but once you&#8217;re done you realize that now you either have to type everything again or copy/paste from the <span class="caps">IRB</span> session (or the history file if you keep one). So I set out on my search for a solution and found an <a href="http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results">old ruby-talk post by Gavin Sinclair</a>, which implemented a method called <b>dumphist</b>, which I modified to my needs and put in my ~/.irbrc:</p>
-<script src="http://gist.github.com/71624.js"></script><p>Let&#8217;s look at the following <span class="caps">IRB</span> session:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;hello&quot;</span>
-</span><span class='line'><span class="n">hello</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;world&quot;</span>
-</span><span class='line'><span class="n">world</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="k">def</span> <span class="nf">foo</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span>   <span class="nb">puts</span> <span class="s1">&#39;bar&#39;</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span>   <span class="k">end</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">dumphist</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;test.rb&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;def foo&quot;</span><span class="p">,</span> <span class="s2">&quot;puts &#39;bar&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;end&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>The last command created a file named test.rb for us, which contains only the method foo. :-)</p></div>
   
   
 
