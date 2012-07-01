@@ -9,7 +9,9 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="This week&#8217;s issue is shorter than usual since I spent 4 days in Helsinki to attend Frozen Rails and then had to prepare my talk for &hellip;">
+  <meta name="description" content="After using Wordpress as my blogging engine
+of choice for over a year (after moving away from S9Y), I decided to switch this site to
+Octopress. Why? &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +98,198 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/26/goodbye-wordpress/">Goodbye Wordpress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-26T21:00:00+02:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After using <a href="http://wordpress.org/">Wordpress</a> as my blogging engine
+of choice for over a year (after moving away from <a href="http://s9y.org/">S9Y</a>), I decided to switch this site to
+<a href="http://octopress.org/">Octopress</a>. Why? Because it&#8217;s cool!
+No, seriously. I was actually quite happy with WP, it just always felt
+like way more than I actually needed. OP on the other hand is super
+lightweight, ritten in Ruby and uses some of my favorite technologies,
+like Sinatra and Markdown. It doesn&#8217;t stop there though: having the site rendered to static
+files means I can get rid of MySQL and PHP on my little VPS, which
+definitely is a plus. And it&#8217;s also very cool to have all your posts
+in a directory on your local file system, so you can use all your
+favorite command line tools to search through or batch modify
+them. Last but not least I&#8217;m now writing my posts in Emacs instead of
+some crappy web input form (ok, granted, I could have done that before
+too).</p>
+
+<p>Now to the actual migration. I started by exporting my WP blog to
+XML. This can be done in the administration backend under &#8220;Tools -
+Export&#8221;. Once I had this XML, I used the following script to convert
+the posts to individual files for Octopress:</p>
+
+<div><script src='https://gist.github.com/1240781.js?file='></script>
+<noscript><pre><code>require 'fileutils'
+require 'date'
+require 'yaml'
+require 'rexml/document'
+
+include REXML
+
+doc = Document.new(File.new(ARGV[0]))
+
+FileUtils.mkdir_p &quot;_posts&quot;
+
+doc.elements.each(&quot;rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']&quot;) do |e|
+  p e.elements['wp:post_name'].text
+  post = e.elements
+  slug = post['wp:post_name'].text
+  date = DateTime.parse(post['wp:post_date'].text)
+  name = &quot;%02d-%02d-%02d-%s.textile&quot; % [date.year, date.month, date.day, slug]
+  date_string = &quot;#{date.year}-#{date.month}-#{date.day}&quot;
+
+  # convert all tags and categories into categories
+  categories = []
+  post.each('category') do |cat|
+    categories &lt;&lt; cat.text
+  end
+
+  content = post['content:encoded'].text.encode(&quot;UTF-8&quot;)
+
+  # convert &lt;code&gt;&lt;/code&gt; blocks to {% codeblock %}{% encodebloc %}
+  #content = content.gsub(/&lt;code&gt;(.*?)&lt;\/code&gt;/, '`\1`')
+  content = content.gsub(/&lt;code&gt;/, '{% codeblock %}')
+  content = content.gsub(/&lt;\/code&gt;/, '{% endcodeblock %}')
+
+  # convert &lt;pre&gt;&lt;/pre&gt; blocks to {% codeblock %}{% encodebloc %}
+  #content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;(.*?)&lt;\/pre&gt;/m, '`\1`')
+  content = content.gsub(/&lt;pre&gt;/, '{% codeblock %}')
+  content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;/, '{% codeblock %}')
+  content = content.gsub(/&lt;\/pre&gt;/m, '{% endcodeblock %}')
+
+  # convert headers
+  (1..3).each do |i|
+    content = content.gsub(/&lt;h#{i}&gt;([^&lt;]*)&lt;\/h#{i}&gt;/, ('#'*i) + ' \1')
+  end
+
+  puts &quot;Converting: #{name}&quot;
+
+  data = {
+    'layout' =&gt; 'post',
+    'title' =&gt; post['title'].text,
+    'date' =&gt; date_string,
+    'comments' =&gt; true,
+    'categories' =&gt; categories,
+  }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
+
+  File.open(&quot;_posts/#{name}&quot;, &quot;w&quot;) do |f|
+    f.puts data
+    f.puts &quot;---&quot;
+    f.puts content
+  end
+
+end
+</code></pre></noscript></div>
+
+
+<p>This was a fork of
+<a href="https://gist.github.com/1240781/ac8a139bf73232c4333f0cc5734151cf8e5d1f87">another script</a>,
+but tailored for my specific needs (e.g. all tags and categories of a
+post were converted to categories and I exported the files to Textile
+instead of Markdown because I used the former in my WP install through
+a plugin).</p>
+
+<p>Since some of my posts are quite popular and get linked to a lot, I
+didn&#8217;t want to loose my old links. I therefore wrote another script
+that created 301 redirects for all of them:</p>
+
+<div><script src='https://gist.github.com/1241762.js?file='></script>
+<noscript><pre><code>require 'date'
+require 'rexml/document'
+
+include REXML
+
+doc = Document.new(File.new(ARGV[0]))
+format = ARGV[1] || &quot;apache&quot;
+
+formats = {
+  :apache =&gt; &quot;RewriteRule ^%s$ /%s [R=301,L]&quot;,
+  :nginx =&gt; &quot;rewrite ^%s /%s permanent;&quot;
+}
+
+File.open(&quot;redirects.txt&quot;, &quot;w&quot;) do |f|
+  doc.elements.each(&quot;rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']&quot;) do |e|
+    post = e.elements
+    date = DateTime.parse(post['wp:post_date'].text)
+    slug = post['wp:post_name'].text
+
+    post['link'].text =~ %r{.*(/archives/\d+)}
+    old_url = $1
+    new_url = &quot;blog/#{date.strftime(&quot;%Y/%m/%d&quot;)}/#{slug}/&quot;
+
+    f.puts formats[format.intern] % [old_url, new_url]
+  end
+end
+</code></pre></noscript></div>
+
+
+<p>The script can generate the necessary directives for Apache or Nginx,
+so all you have to do is copy them into your web server
+configuration. I also added another redirect rule for the RSS feed to
+not annoy my subscribers:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RewriteRule ^/feed /atom.xml [R=301,L]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Of course I also didn&#8217;t want to loose all my comments, so I had to
+come up with a solution for that. I first
+installed the WP <a href="http://disqus.com">Disqus</a> plugin and exported all
+my current comments. I then used some good old Emacs magic to convert
+the list of redirects I had already generated to a CSV for Disqus&#8217;
+<a href="http://docs.disqus.com/help/39/">URL map migration tool</a>. So far this
+has not migrated all comments to the correct location, but it should
+eventually work out (worst case I&#8217;ll have to email Disqus support).</p>
+
+<p>Last but not least I used Octopress&#8217; excellent
+<a href="http://octopress.org/docs/theme/template/index.html">customization suport</a>
+to re-add some stuff to my headers, like the OpenID delegate.</p>
+
+<p>Of course there are still some things that need to be done, some of them more urgently
+then others. First off this site needs a better stylesheet. The
+default is actually quite ok, but I want something with more
+personality. I&#8217;ll also have to go through my old posts and clean them
+up a bit, the automatic conversion did some funny things at
+times. I also want to re-integrate Flattr and PostRank, but I&#8217;m not
+exactly in a hurry when it comes to that.</p>
+
+<p>I hope this post was useful to some of you, I&#8217;m definitely happy with
+my new blogging setup.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -500,52 +694,6 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
 <p>Now for the actual content: after a foreword by Metasploit&#8217;s main developer HD Moore, there&#8217;s a little introduction section on penetration testing and the history of the framework. This is followed by the first chapter, which covers some penetration testing basics. After this the authors give a first introduction to the <span class="caps">MSF</span>, before dedicating a chapter each to various phases of pen testing, namely information gathering, vulnerability scanning and the actual exploitation. After this you&#8217;ll find a whole chapter on Meterpreter, covering various aspects of post-exploitation techniques. Once you get to this point, you should have a good idea about how Metasploit works in principle and how capable it is. The authors don&#8217;t stop here though, but use the following chapters to try to teach you about avoiding detection, client-side exploits and  Metasploit&#8217;s auxiliary modules. By this point in the book it felt like I already had learned a lot, but then I realized that I&#8217;m only halfway through the book! There still were chapters on various topics, including the social-engineering toolkit which is built in the <span class="caps">MSF</span> and wireless exploitation with Karmetasploit. As a Ruby developer/dev ops guy I was really interested in the next couple of chapters, which deal with building your own modules and exploits as well as porting existing exploits to Metasploit and Meterpreter scripting. Wow, the authors definitely covered a lot of ground until here, but we are still not done, since there&#8217;s on more chapter on how to simulate your pen tests.</p>
 <p>While the above shows what the book covered, it doesn&#8217;t say much on how it was covered. In my opinion the authors did a very good job, the text is easy to follow and to the point and helped by screenshots and transcripts of &#8220;msfconsole&#8221; sessions. Sure, most of this material is also available on the <a href="http://www.offensive-security.com/metasploit-unleashed/Metasploit_Unleashed_Information_Security_Training">Metasploit Unleashed</a> web site, but I like having it all in the form of one compact book. I noticed 2-3 places where the textual description and the content of the screenshot/transcript didn&#8217;t exactly match, which can lead to brief moments of confusion, but nothing dramatic.</p>
 <p>If you are new to Metasploit and want to get up to speed quickly, it&#8217;s hard to imagine that you&#8217;ll find a better book at the moment. More experienced users of the framework should flip through it in a book store to decide how much they&#8217;ll really get from it, but it&#8217;s probably still a good book to have around, even if it&#8217;s just for the cheat sheet in Appendix B.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/08/21/information-overload-2011-08-21/">Information Overload 2011-08-21</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-21T00:00:00+02:00" pubdate data-updated="true">Aug 21<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.telegraph.co.uk/culture/film/8681025/Saddams-demon-seed.html">Saddam&#8217;s demon seed</a><br>Latif Yahia was forced to work as Uday Hussein&#8217;s (Saddam&#8217;s son) body double, now a movie has been made about his life.</li>
-<li><a href="http://www.hrw.org/news/2011/08/14/indonesia-military-documents-reveal-unlawful-spying-papua">Indonesia: Military Documents Reveal Unlawful Spying in Papua</a><br>Lately I&#8217;ve been quite interested in Indonesia, not least because it&#8217;s a place people don&#8217;t tend to talk about too much, which is kinda odd considering it&#8217;s the 4th biggest country in the world.</li>
-<li><a href="http://zachholman.com/posts/how-github-works-hours/">How GitHub Works: Hours are Bullshit</a><br>A 3 part series of blog posts explaining how GitHub works. This is not about technical stuff, but about working hours, internal communications and so on (<a href="http://zachholman.com/posts/how-github-works-asynchronous/">part 2</a>, <a href="http://zachholman.com/posts/how-github-works-creativity/">part 3</a>).</li>
-<li><a href="http://thegazette.com/2011/08/15/for-first-time-more-corn-to-be-used-for-ethanol-than-livestock/">For first time, more corn used for ethanol than livestock</a><br>While food prices rise and people are starving, more corn is used for ethanol than for feeding animals (and we are not even talking feeding people here).</li>
-<li><a href="http://www.hanselman.com/blog/ImAPhonyAreYou.aspx">I&#8217;m a phony. Are you?</a><br>I too noticed this lack of self-confidence in a lot of IT people and occasionally myself. Do you have any experience with it?</li>
-<li><a href="http://www.economist.com/node/21525851">Don&#8217;t look down</a><br>I&#8217;m always surprised by how many people adhere to the &#8220;as long as someone is worth of than me&#8221; principle.</li>
-<li><a href="http://articles.cnn.com/2011-08-17/tech/finishing.videogames.snow_1_red-dead-redemption-entertainment-software-association-avid-gamers?_s=PM:TECH">Why most people don&#8217;t finish video games</a><br>I barely play video games anymore, but when I do I also prefer short and/or multiplayer ones.</li>
-<li><a href="http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html" title="AES">A Stick Figure Guide to the Advanced Encryption Standard</a><br>Awesome post explaining crypto to the non-techies out there. In related news, a <a href="http://www.net-security.org/secworld.php?id=11474">new potential weakness</a> in <span class="caps">AES</span> as found this week.</li>
-<li><a href="http://www.businessinsider.com/karl-marx-is-hot-2011-8">Karl Marx Is Hot</a><br>When US economists start quoting Marx, I start wondering if the global economy is really screwed?</li>
-<li><a href="http://inhabitat.com/13-year-old-makes-solar-power-breakthrough-by-harnessing-the-fibonacci-sequence/">13-Year-Old Makes Solar Power Breakthrough by Harnessing the Fibonacci Sequence</a><br>A young boy looks at nature, sees a pattern and turns it into something useful. Here&#8217;s an <a href="http://www.amnh.org/nationalcenter/youngnaturalistawards/2011/aidan.html">essay</a></li> <p>he wrote for the Young Naturalist Award. Or maybe this all was a hoax, at least according to one <a href="http://webcache.googleusercontent.com/search?q=cache:JmlMNqVPKlsJ:uvdiv.blogspot.com/2011/08/solar-panel-trees-really-are-inferior.html+http://uvdiv.blogspot.com/2011/08/solar-panel-trees-really-are-inferior.html&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us">removed post on Blogger</a>.</p>
-</ul></div>
   
   
 
