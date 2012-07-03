@@ -9,8 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Steve Rogers aka Captain America has died in Marvel&#8217;s recent Civil War story line.
-Although he never was among my favorite comic heroes, you &hellip;">
+  <meta name="description" content="Today at work we needed to find a regular expression to extract the name of a backup job from an SNMP trap. The trap looks as follows:
+&#8220;[ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +97,46 @@ Although he never was among my favorite comic heroes, you &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/04/05/regex-madness/">RegEx Madness</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-04-05T00:00:00+02:00" pubdate data-updated="true">Apr 5<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today at work we needed to find a regular expression to extract the name of a backup job from an <span class="caps">SNMP</span> trap. The trap looks as follows:</p>
+<p>&#8220;[beginning garbage]job name[more garbage]&#8221;</p>
+<p>The job name can consist of several words containing alphanumeric characters, separated by either a space, an underscore or a dash. Here&#8217;s the crucial part of the final solution I came up with:</p>
+<p><b>((?:&#92;w+[- ]?)<strong>&#92;w</strong>)</b></p>
+<p>When you use this in a longer regex that also filters out the beginning garbage, this works like a charm even for strange job names as &#8220;foo-bar_baz qux_ madness&#8221;.</p>
+<p>Setting Orange, Discord 22, 3173 <span class="caps">YOLD</span></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -444,42 +484,6 @@ Since I took that day off, I finally managed to get some sleep. I wasn&#8217;t a
   <div class="entry-content"><p>Today I found this excellent Flash animation on the <a href="http://www.metalab.at">Metalab</a> members mailing list, which may prove to be a great help in raising your non-techy friends awareness of privacy issues. Unfortunately it&#8217;s in German only&#8230;</p>
 <p><a href="http://www.trashhero.ch/redirect/1881.html">http://www.trashhero.ch/redirect/1881.html</a></p>
 <p>Pungenday, Chaos 28, 3173 <span class="caps">YOLD</span></p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/01/25/summer-chaos/">Summer Chaos</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-01-25T00:00:00+01:00" pubdate data-updated="true">Jan 25<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The date and location for the <a href="http://events.ccc.de/camp/">Chaos Communication Camp 2007</a> have now been confirmed! Hope to see you all there!</p>
-<p>Setting Orange, Chaos 25, 3173 <span class="caps">YOLD</span></p></div>
   
   
 

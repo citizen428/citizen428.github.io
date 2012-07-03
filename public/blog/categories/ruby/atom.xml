@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-07-01T12:04:53+02:00</updated>
+  <updated>2012-07-03T21:35:14+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Shenanigans]]></title>
+    <link href="http://citizen428.net/blog/2012/07/03/shenanigans/"/>
+    <updated>2012-07-03T19:46:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/07/03/shenanigans</id>
+    <content type="html"><![CDATA[<p>About 1.5 month ago I finally packaged some of my Ruby extension methods into the aptly named <a href="https://rubygems.org/gems/shenanigans">Shenanigans</a> gem. It's similar to <a href="http://rubyworks.github.com/facets/">Facets</a> or <a href="http://as.rubyonrails.org/">ActiveSupport</a>, but probably less useful to most people. Also some of the methods actually are in Facets, although sometimes with different names or slightly different semantics. Anyway, since some people told me they actually do like the gem, here's a quick summary of what the different methods do and how they can be useful.</p>
+
+<ul>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:%5E">Array#^</a>: Ruby defines <a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/set/rdoc/Set.html#method-i-5E">Set#^</a>, which returns the elements exclusive between the set and a given enum. Since a lot of people use arrays instead of proper sets in Ruby, I found it makes a nice addition to <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-7C">Array#|</a> and <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-26">Array#&amp;</a>.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:random_subarray">Array#random_subarray</a>: Generates one or more random subarrays of an array, using the fact that Ruby can index integers to get the bit values to ensure fast uniform distributions. Similar to <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-sample">Array#sample</a>, but can generate several subarrays at once.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:zip_with">Array#zip_with</a>: The more general form of <code>zip</code> (e.g. in Haskell you could define <code>zip = zipWith (,)</code>). Like Ruby's <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject">Enumerable#inject</a> it can take a symbol argument or a block, and like Haskell's <code>zip</code> it discards excess array elements if one list is shorter than the other, whereas Ruby's <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-zip">Array#zip</a> only does that if the receiver is shorter than the argument (it adds <code>nil</code>s in the other case).</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Hash:has_shape%3F">Hash#has_shape?</a>: A quick way to check if a hash's keys are of certain classes. This does feel a bit strange in a duck-typed language like Ruby, but someone asked for it on StackOverflow and it was easy enough to write. This could be useful in validations or unit tests though.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Hash:to_ostruct">Hash#to_ostruct</a>: I really like the <a href="https://github.com/railsjedi/rails_config">rails_config</a> gem. I therefore decided to write something that gives me similar functionality (although a lot simpler) for plain Ruby projects. Basically this recursively converts a hash and all nested hashes into <a href="http://ruby-doc.org/stdlib-1.9.3/libdoc/ostruct/rdoc/OpenStruct.html">OpenStruct</a> instances. Populate the hash with Ruby's <a href="http://corelib.rubyonrails.org/classes/YAML.html">YAML</a> support and you have an instant settings object.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:fn">Kernel#fn</a>: I admit, this was more of a "because I can" method. Originally I wrote this so I could compose blocks in <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a>, but later added support for <a href="http://www.ruby-doc.org/core-1.9.3/Proc.html">Proc</a> instances too.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:prompt">Kernel#prompt</a>: While it's great that Ruby's <a href="http://www.ruby-doc.org/core-1.9.3/IO.html#method-i-gets">IO#gets</a> is so general, I always wanted something like Python's <a href="http://docs.python.org/library/functions.html#raw_input">raw_input</a> for command line apps. Additionally you can also automatically call any of the numeric conversions, and I'm pondering adding support for every unary string method.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:with">Kernel#with</a>: I think <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> is great. However, I sometimes see it used as a replacement for <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject">Enumerable#inject</a> or <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_with_object">Enumerable#each_with_object</a>, but for some reason I never really liked the semantics of it. And since I'm anal about that sort of thing I added this Pascal/ActionScript like <code>with</code> statement.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Object:display">Object#display</a>: Having no proper object-oriented way to print objects in Ruby always kinda bothered me, so I abused <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> as a wrapper around <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html#method-i-puts">Kernel#puts</a> and <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html#method-i-print">Kernel#print</a>. Additionally this is aliased to the name <code>d</code>, which I stole from <a href="https://github.com/janlelis/irbtools">irbtools</a>. The latter form makes it great for debugging method chains and the likes.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Object:it">Object#it</a>: I always disliked blocks of the form <code>{ |x| x }</code> that sometimes crop up when using  <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-group_by">Enumerable#group_by</a> or similar methods. Since Ruby lacks an identity method and <code>id</code> has historically been taken, I decided to name it <code>it</code>.</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rails — Display branch in development mode]]></title>
@@ -227,70 +250,6 @@ end
 ```</p>
 
 <p>I'm hosting <a href="http://citizen428.net/ruby_github.atom">the feed</a> on this blog (updated regularly via cron), add it to your feed reader to discover potentially interesting new Ruby projects.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A little Pow helper]]></title>
-    <link href="http://citizen428.net/blog/2011/11/22/a-little-pow-helper/"/>
-    <updated>2011-11-22T21:08:00+01:00</updated>
-    <id>http://citizen428.net/blog/2011/11/22/a-little-pow-helper</id>
-    <content type="html"><![CDATA[<p>If you are a Ruby developer on MacOS X, you probably love <a href="http://pow.cx">Pow</a> as much as I do. While skimming the <a href="http://pow.cx/manual.html">fine manual</a> today, I noticed <a href="http://pow.cx/manual.html#section_3.2">section 3.2</a>, "Reading the Current Configuration", which explains that you can query Pow's config and status via simple HTTP requests:</p>
-
-<p><code>bash Query Pow's status http://pow.cx/manual.html#section_3.2 Pow manual
-curl -H host:pow localhost/status.json
-</code></p>
-
-<p>Since I know I'd probably forget that sooner than later, I immediately wrapped it up in a small script, which I called <code>pow-show</code> and put in <code>~/bin</code>:</p>
-
-<p>``` ruby ~/bin/pow-show</p>
-
-<h1>!/usr/bin/env ruby</h1>
-
-<p>require 'json'</p>
-
-<p>unless %w(status config).include?(ARGV[0])
-  puts "Usage: #{File.basename($0)} status|config"
-  exit 1
-end</p>
-
-<p>jj JSON.parse(<code>curl -s -H host:pow localhost/#{ARGV[0]}.json</code>)
-```</p>
-
-<p>Here's some example output:</p>
-
-<p><code>javascript pow-show status
-{
-  "pid": 802,
-  "version": "0.3.2",
-  "requestCount": 134
-}
-</code></p>
-
-<p>``` javascript pow-show config
-{
-  "bin": "/Users/name/Library/Application Support/Pow/Versions/0.3.2/bin/pow",
-  "dstPort": 80,
-  "httpPort": 20559,
-  "dnsPort": 20560,
-  "timeout": 900,
-  "workers": 2,
-  "domains": [</p>
-
-<pre><code>"dev"
-</code></pre>
-
-<p>  ],
-  "extDomains": [</p>
-
-<p>  ],
-  "hostRoot": "/Users/name/Library/Application Support/Pow/Hosts",
-  "logRoot": "/Users/name/Library/Logs/Pow",
-  "rvmPath": "/Users/name/.rvm/scripts/rvm"
-}
-```</p>
-
-<p>Maybe that's useful for someone else too.</p>
 ]]></content>
   </entry>
   
