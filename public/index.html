@@ -9,7 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="About 1.5 month ago I finally packaged some of my Ruby extension methods into the aptly named Shenanigans gem. It&#8217;s similar to Facets or &hellip;">
+  <meta name="description" content="Why Russia locks up so many entrepreneursBeing a business man in Russia can be dangerous it seems.
+The Perfect ComplimentThis is not some cheesy &# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +97,51 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/08/information-overload-2012-07-08/">Information Overload 2012-07-08</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-08T00:00:00+02:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.bbc.co.uk/news/magazine-18706597">Why Russia locks up so many entrepreneurs</a><br>Being a business man in Russia can be dangerous it seems.</li>
+<li><a href="http://www.esquire.com/features/how-to-compliment-1009">The Perfect Compliment</a><br>This is not some cheesy &#8220;how to&#8221;, but actually a nice story to read.</li>
+<li><a href="http://www.pbs.org/wgbh/pages/frontline/shows/divided/">A class divided</a><br>Very interesting documentary about an elementary school teacher and how she taught 3rd graders about discrimination.</li>
+<li><a href="http://newswatch.nationalgeographic.com/2012/07/04/the-invisible-bank-how-kenya-has-beaten-the-world-in-mobile-money/">The Invisible Bank: How Kenya Has Beaten the World in Mobile Money</a><br>Innovation doesn&#8217;t only happen in the so-called &#8220;developed&#8221; world.</li>
+<li><a href="http://www.wired.com/threatlevel/2012/05/ff_counterfeiter/all/">The Ultimate Counterfeiter Isn’t a Crook—He’s an Artist</a><br>You&#8217;ve probably never heard about Hans-Jürgen Kuhl before, but his story is fascinating.</li>
+<li><a href="http://blogs.discovermagazine.com/notrocketscience/2011/11/30/how-fairy-wasps-cope-with-being-smaller-than-amoebas/">How tiny wasps cope with being smaller than amoebas</a><br>Nature never ceases to surprise me.</li>
+<li><a href="http://www.foreignpolicy.com/articles/2012/07/05/think_again_india_s_rise?page=full">Think Again: India&#8217;s Rise</a><br>Very interesting article on India&#8217;s role in world politics.</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -535,95 +581,6 @@
 <li><a href="http://www.theatlanticcities.com/neighborhoods/2012/05/why-arent-cities-littered-dead-pigeons/2038/">Why Aren&#8217;t Cities Littered With Dead Pigeons?</a><br>This is the sort of question that really needs an answer.</li>
 </ul>
 
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/14/tap-dance/">Tap Dance</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-14T23:14:00+02:00" pubdate data-updated="true">May 14<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Ruby&#8217;s <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> is a really nice and useful method. One of my favorite uses is <code>Object#d</code>, which I think I originally saw in <a href="https://github.com/janlelis/irbtools">irbtools</a>. Personally, I&#8217;m using the following version in my <code>~/.irbrc</code>:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Object</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">d</span>
-</span><span class='line'>    <span class="nb">self</span><span class="o">.</span><span class="n">tap</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">s</span> <span class="p">}</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Inserting this in a chain of calls can be very enlightening as to where a value changes unexpectedly.</p>
-
-<p>However, recently I&#8217;ve seen more and more use of <code>tap</code> where I&#8217;d traditionally have used <code>inject/reduce</code>. People who know me can attest to the fact that I&#8217;m a big fan of the latter, but for some reason there seem to be quite a few developers who find these methods hard to grok. For this reason recent Ruby versions added <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_with_object">Enumerable#each_with_object</a>, which seems to be easier to use for some people, but which isn&#8217;t very popular because of it&#8217;s lengthy name. See for example the following blog post that was written as a result of a discussion I had with the author on StackOverflow: <a href="http://phrogz.net/tap-vs-each_with_object">tap vs. each_with_object: tap is faster and less typing.</a></p>
-
-<p>As I said in the comment there, my main problem is that you have to call <code>tap</code> on what is to become the result, not the data you want to transform. While this is not a problem per se, I somehow don&#8217;t like the semantics of it. However, once I decided to hide it behind a Pascal-like <a href="http://www.freepascal.org/docs-html/ref/refsu53.html">with statement</a>, I immediately started liking it:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Kernel</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">with</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">blk</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">o</span><span class="o">.</span><span class="n">tap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">blk</span><span class="p">)</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here are the examples from the blog post linked above, including a new version for <code>with</code>. Decide which one you like best:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">nums</span><span class="o">.</span><span class="n">inject</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="p">,</span> <span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">;</span> <span class="n">h</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">nums</span><span class="o">.</span><span class="n">each_with_object</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="p">,</span> <span class="n">h</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">{}</span><span class="o">.</span><span class="n">tap</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="o">|</span> <span class="n">nums</span><span class="o">.</span><span class="n">each</span><span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">with</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="o">|</span> <span class="n">nums</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]=</span><span class="n">n</span> <span class="p">}</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Sure, putting it in <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html">Kernel</a> and therefore calling it without a receiver seems a little strange at first, but I kinda like how it reads. I know this is probably a case of me being anal about semantics, but I really think that <code>with</code> transports the intent a lot better than <code>tap</code> in cases like the one shown here.</p>
 </div>
   
   
