@@ -9,7 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="When reading John Derbyshire&#8217;s excellent book Prime Obsession, I stumbled upon the following interesting footnote about Euler&#8217;s number &hellip;">
+  <meta name="description" content="The Birthday Paradox is an interesting little problem in probability theory. To quote Wikipedia:
+[&#8230;] the birthday problem, or birthday paradox &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +97,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/04/13/the-birthday-paradox-in-clojure/">The Birthday Paradox in Clojure</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-13T00:00:00+02:00" pubdate data-updated="true">Apr 13<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <a href="http://en.wikipedia.org/wiki/Birthday_problem">Birthday Paradox</a> is an interesting little problem in probability theory. To quote Wikipedia:</p>
+<blockquote><p>[&#8230;] the birthday problem, or birthday paradox pertains to the probability that in a set of randomly chosen people some pair of them will have the same birthday. In a group of at least 23 randomly chosen people, there is more than 50% probability that some pair of them will have the same birthday. Such a result is counter-intuitive to many.</p></blockquote>
+<p>I don&#8217;t really find this counter-intuitive, but as Kalid from <a href="http://betterexplained.com/">BetterExplained</a> accurately <a href="http://betterexplained.com/articles/understanding-the-birthday-paradox/">observed</a> &#8220;exponents aren&#8217;t intuitive&#8221; and &#8220;humans are a tad bit selfish&#8221;. Here&#8217;s a quote regarding that last comment:</p>
+<blockquote><p>In a room of 23, do you think of the 22 comparisons where your birthday is being compared against someone else’s? Probably.</p><p>Do you think of the 231 comparisons where someone you don’t know is being checked against someone else you don’t know? Do you realize there are so many? Probably not.</p><p>The fact that we neglect the 10 times as many comparisons that don’t include us helps us see why the “paradox” can happen.</p><footer><strong>Kalid Azad</strong> <cite><a href='http://betterexplained.com/articles/understanding-the-birthday-paradox/'>Understanding the Birthday Paradox</a></cite></footer></blockquote>
+<p>So let&#8217;s use Clojure to see why math works better than people&#8217;s intuition:</p>
+<script src="http://gist.github.com/365172.js?file=gistfile1.clj"></script><p>Happy birthday everyone!</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -510,42 +551,6 @@
 <p><b>Gödel, Escher, Bach</b>: Douglas R. Hofstadter<br />
 <b>Brückenkurs Mathematik</b>: Guido Walz<br /></p>
 <p>This list is not taking into account stuff that didn&#8217;t have ISBNs like some eBooks or scientific papers.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/12/28/simple-aws-scripting-with-boto/">Simple AWS Scripting With Boto</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-12-28T00:00:00+01:00" pubdate data-updated="true">Dec 28<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://code.google.com/p/boto/">boto</a> is a very nice Python interface to the Amazon Web Services which I can heartily recommend for your cloud scripting needs. Here&#8217;s a quick example program I whipped up around 2 weeks ago (be gentle, I&#8217;m not a Python guy and this is just a throwaway quickie), which will list all your AMIs (excluding public ones), used S3 buckets plus a list of currently running instances with some information like instance type, start time etc. The nice part is that you can connect to any instance via <span class="caps">SSH</span> directly from this lsit which I find more convenient than copy/pasting the public <span class="caps">DNS</span> name from the <span class="caps">AWS</span> console:</p>
-<script src="http://gist.github.com/264696.js?file=cloudwtf.py"></script></div>
   
   
 

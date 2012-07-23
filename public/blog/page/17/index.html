@@ -9,7 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="After years of being an avid Vim user, I recently succumbed to the temptation of Emacs and haven&#8217;t looked back since. Now that I slowly &hellip;">
+  <meta name="description" content="If you are interested in using Emacs for Ruby development, here are the relevant parts from my config file with some additional comments:
+I use this &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +97,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/07/06/emacs-for-rubyists/">Emacs for Rubyists</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-06T00:00:00+02:00" pubdate data-updated="true">Jul 6<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you are interested in using Emacs for Ruby development, here are the relevant parts from my config file with some additional comments:</p>
+<script src="http://gist.github.com/465950.js?file=gistfile1.cl"></script><p>I use this setup at work every day and am very happy with it, but if you have any additional suggestions please leave a comment!</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -582,46 +619,6 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
   <div class="entry-content"><p>I love questions that start with &#8220;Wouldn&#8217;t it be nice if Ruby &lt;insert perceived missing feature&gt;?&#8221; because more often than not the answer is: &#8220;Just tell it to!&#8221;</p>
 <p>Something like this happened on RubyLearning today, when fellow mentor José asked &#8220;<i>Wouldn&#8217;t it be nice if Ruby was smart enough to realize that when a division has a remainder then it should use a floating result?</i>&#8221; and once again the answer was &#8220;You mean like this?&#8221;:</p>
 <script src="http://gist.github.com/365000.js?file=gistfile1.ru"></script><p>I&#8217;m definitely not saying monkey-patching core classes with unexpected behavior is a smart idea (it&#8217;s <span class="caps">NOT</span>), but I always like how you can add behavior to Ruby if you really feel it&#8217;s necessary (and once again, I don&#8217;t in this case).</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/04/13/the-birthday-paradox-in-clojure/">The Birthday Paradox in Clojure</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-04-13T00:00:00+02:00" pubdate data-updated="true">Apr 13<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The <a href="http://en.wikipedia.org/wiki/Birthday_problem">Birthday Paradox</a> is an interesting little problem in probability theory. To quote Wikipedia:</p>
-<blockquote><p>[&#8230;] the birthday problem, or birthday paradox pertains to the probability that in a set of randomly chosen people some pair of them will have the same birthday. In a group of at least 23 randomly chosen people, there is more than 50% probability that some pair of them will have the same birthday. Such a result is counter-intuitive to many.</p></blockquote>
-<p>I don&#8217;t really find this counter-intuitive, but as Kalid from <a href="http://betterexplained.com/">BetterExplained</a> accurately <a href="http://betterexplained.com/articles/understanding-the-birthday-paradox/">observed</a> &#8220;exponents aren&#8217;t intuitive&#8221; and &#8220;humans are a tad bit selfish&#8221;. Here&#8217;s a quote regarding that last comment:</p>
-<blockquote><p>In a room of 23, do you think of the 22 comparisons where your birthday is being compared against someone else’s? Probably.</p><p>Do you think of the 231 comparisons where someone you don’t know is being checked against someone else you don’t know? Do you realize there are so many? Probably not.</p><p>The fact that we neglect the 10 times as many comparisons that don’t include us helps us see why the “paradox” can happen.</p><footer><strong>Kalid Azad</strong> <cite><a href='http://betterexplained.com/articles/understanding-the-birthday-paradox/'>Understanding the Birthday Paradox</a></cite></footer></blockquote>
-<p>So let&#8217;s use Clojure to see why math works better than people&#8217;s intuition:</p>
-<script src="http://gist.github.com/365172.js?file=gistfile1.clj"></script><p>Happy birthday everyone!</p></div>
   
   
 
