@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-07-23T09:33:21+02:00</updated>
+  <updated>2012-07-28T10:32:43+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
+    <link href="http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
+    <updated>2012-07-28T10:15:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
+    <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
+
+<p>While I haven&#8217;t received <a href="http://www.packtpub.com/ruby-and-mongodb-web-development-beginners-guide/book">the book</a> in its final form yet, I&#8217;ve read all of it, and I can say that the author does a good job at introducing inexperienced programmers to web development with Ruby and MongoDB.</p>
+
+<p>This is a hands-on book and you&#8217;ll get most out of it by following all the exercises and doing them on your own. From getting all the necessary components and installing them, to developing apps with Sinatra and Rails, a lot of ground is covered.</p>
+
+<p>While the author does tackle some more advanced topics, they are clearly not the focus of this book (it&#8217;s subtitled &#8220;Beginner&#8217;s Guide&#8221; for a reason) which will leave more experienced developers wanting for more. However, the presented material is well written, chapters build on each other and if you are new to web development with Ruby/RoR and/or MongoDB, this is a good title to get you up to speed in just 300 pages.</p>
+
+<p>If you are a more experienced Ruby developer or are already very familiar with MongoDB, this is probably not the book for you, even though you&#8217;ll probably still get something out of it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-22]]></title>
@@ -504,27 +521,6 @@
 <p>After a fruitless discussion of said law, the — admittely nice — guy on the phone reassured me that my server will be restarted if I agree to disable the Tor node. I politely told him that I have no interest in using their services at all if I can&#8217;t use them the way I want to, so I&#8217;ll cancel my contract with Server4You as soon as possible. For the time being I donated some money to Tor, moved my blog over to <a href="http://www.heroku.com/">Heroku</a> (yay <a href="http://octopress.org/">Octopress</a>) and started evaluating hosting providers in countries with saner legislation (as long as there still are some).</p>
 
 <p>Sure, there&#8217;s probably a lot of really bad things happening over the Tor network, but those shouldn&#8217;t be used to discredit the tool&#8217;s legitimate uses. If we start blaming technology instead of people, we might as well turn off the Internet.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-04-15]]></title>
-    <link href="http://citizen428.net/blog/2012/04/15/information-overload-2012-04-15/"/>
-    <updated>2012-04-15T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/04/15/information-overload-2012-04-15</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://www.insidehighered.com/views/2011/05/02/slavoj_zizek_essay_on_cloud_computing_and_privacy">Corporate Rule of Cyberspace</a><br>Philosopher <a href="http://en.wikipedia.org/wiki/Slavoj_%C5%BDi%C5%BEek">Slavoj Žižek</a> offers some thoughts on cloud computing. Some of the comments are interesting too.</li>
-<li><a href="http://www.slate.com/articles/technology/future_tense/2012/03/narrative_science_robot_journalists_customized_news_and_the_danger_to_civil_discourse_.single.html">A Robot Stole My Pulitzer!</a><br>On automated journalism and the potential consequences for society.</li>
-<li><a href="https://groups.google.com/group/comp.lang.forth/browse_thread/thread/4e15a2197c0aaafe/95c3f82d1c681296?#95c3f82d1c681296">A Forth Story&#8230;</a><br>This long text from 1995 is not only interesting because it talks about Forth, but also because of the history of programming in the 70s, 80s and 90s.</li>
-<li><a href="http://www.economist.com/node/21552581">Giving divorce a bad name</a><br>South Sudan invaded an oil field in Sudan, which could lead to a fierce war. Make sure to read the comments too, there&#8217;s some good stuff in there.</li>
-<li><a href="http://www.wired.com/threatlevel/2012/04/code-not-physical-property/">Code Not Physical Property, Court Rules in Goldman Sachs Espionage Case</a><br>An update on the Aleynikov vs Goldman Sachs case.</li>
-<li><a href="http://www.technologyreview.com/blog/arxiv/27730">Computer Scientists Build Computer Using Swarms of Crabs</a><br>A computer exploiting the swarming behavior of soldier crabs. Ok, maybe just a function OR gate, but still rather cool.</li>
-<li><a href="http://www.physicscentral.com/buzz/blog/index.cfm?postid=4656335810518469535">Physicist Uses Math to Beat Traffic Ticket</a><br>Who says math can&#8217;t be useful in your daily life? ;-)</li>
-<li><a href="http://derstandard.at/1334132541612/Strassengangs-Rosen-aus-dem-Beton">Rosen aus dem Beton</a><br>About street gangs and gang related violence in Los Angeles (in German).</li>
-<li><a href="http://www.antipope.org/charlie/blog-static/2012/04/understanding-amazons-strategy.html">What Amazon&#8217;s ebook strategy means</a><br>Wether you agree with Charlie Stross or not, his posts are usually well written and provide food for thought.</li>
-<li><a href="http://www.guardian.co.uk/sport/2012/apr/13/olympics-2012-branding-police-sponsors">Olympics 2012: branding &#8216;police&#8217; to protect sponsors&#8217; exclusive rights</a><br>Brave new corporate world.</li>
-</ul>
-
 ]]></content>
   </entry>
   

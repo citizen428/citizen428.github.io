@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="If you are interested in using Emacs for Ruby development, here are the relevant parts from my config file with some additional comments:
-I use this &hellip;">
+  <meta name="description" content="Today I stumbled upon a post called GitHub Stats on Programming Languages, where the author uses R to create various graphs about GitHub&#8217;s top &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +87,7 @@ I use this &hellip;">
   <li><a href="/about/">About</a></li>
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/talks_and_publications">Talks and Publications</a></li>
   <li><a href="/studynotes">Study Notes</a></li>
   <li><a href="/imprint/">Imprint</a></li>
 </ul>
@@ -97,6 +97,60 @@ I use this &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/08/10/github-stats-with-incanter/">GitHub Stats With Incanter</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-10T00:00:00+02:00" pubdate data-updated="true">Aug 10<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I stumbled upon a post called <a href="http://www.r-chart.com/2010/08/github-stats-on-programming-languages.html">GitHub Stats on Programming Languages</a>, where the author uses <a href="http://www.r-project.org/">R</a> to create various graphs about GitHub&#8217;s top 10 programming languages. He was nice and posted his <a href="http://github.com/ezgraphs/R-Programs/blob/master/git_lang_stats.txt">data set</a>, so I had a go at it with <a href="http://data-sorcery.org/">Incanter</a>.</p>
+<p>Load the necessary libraries:<br />
+<script src="http://gist.github.com/518090.js?file=gistfile1.clj"></script></p>
+<p>Then read in the data set (the delimiter defaults to \, which can be changed with the :delim option) and create a (somewhat arbitrary) list of languages to examine:<br />
+<script src="http://gist.github.com/518090.js?file=gistfile2.clj"></script></p>
+<p>Get a tabular view of the data:<br />
+<script src="http://gist.github.com/518090.js?file=gistfile5.clj"></script></p>
+<div class="thumbnail"><a href="http://skitch.com/citizen428/dtc5e/screen-shot-2010-08-10-at-19.02.03"><img src="http://img.skitch.com/20100810-cqyy9wcfe8biqcwt83k7y91puy.preview.jpg" alt="Screen shot 2010-08-10 at 19.02.03" /></a><br /></div>
+<p>Narrow the data set down to languages of interest:<br />
+<script src="http://gist.github.com/518090.js?file=gistfile3.clj"></script></p>
+<p>Display a bar chart of repositories per user (this has to be within the with-data form shown above):<br />
+<script src="http://gist.github.com/518090.js?file=gistfile4.clj"></script></p>
+<div class="thumbnail"><a href="http://skitch.com/citizen428/dtchx/screen-shot-2010-08-10-at-23.40.36"><img src="http://img.skitch.com/20100810-mg1kd6257pstaeqct2hr9e33ei.preview.jpg" alt="Screen shot 2010-08-10 at 23.40.36" /></a><br /></div>
+<p>More graphs:</p>
+<div class="thumbnail"><a href="http://skitch.com/citizen428/dtc7d/screen-shot-2010-08-10-at-23.40.53"><img src="http://img.skitch.com/20100810-f14j5pj592gc2nkc2dfqs5xwba.preview.jpg" alt="Screen shot 2010-08-10 at 23.40.53" /></a><br /></div>
+<div class="thumbnail"><a href="http://skitch.com/citizen428/dtc78/screen-shot-2010-08-10-at-23.40.09"><img src="http://img.skitch.com/20100810-kjduhqj47pa8tridr1n6gm5f9c.preview.jpg" alt="Screen shot 2010-08-10 at 23.40.09" /></a><br /></div>
+<div class="thumbnail"><a href="http://skitch.com/citizen428/dtc7c/screen-shot-2010-08-10-at-23.41.06"><img src="http://img.skitch.com/20100810-e6w4insn9fs2g2eshc852uhmnd.preview.jpg" alt="Screen shot 2010-08-10 at 23.41.06" /></a><br /></div>
+<p>The full code:<br />
+<script src="http://gist.github.com/518090.js?file=gistfile6.clj"></script></p>
+<p>I just love how simple Incanter makes this type of thing. It&#8217;s an immensely cool and useful library, which can do much more than what I showed in this post (and previous ones). I hope that one day there&#8217;ll be a book about it!</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -582,43 +636,6 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
 <p><a href="http://twitpic.com/1ftr8f" title="Birthday Paradox plotted by Incanter on Twitpic"><img src="http://twitpic.com/show/thumb/1ftr8f.png" width="250" height="250" border="1" alt="Birthday Paradox plotted by Incanter on Twitpic" /></a></p>
 <p>I just love how easy it is to explore problems like this with Clojure and then use Incanter go get some cute little plot too! :-)</p>
 <p><b>Update</b>: Incanter&#8217;s author David Liebke sent me <a href="http://twitter.com/liebke/status/12242784190">a version of the above that fits into one tweet</a> and <a href="https://gist.github.com/6aa65685559cdb5b6e5e">another one with a Latex annotation</a>! I updated my code to incorporate some of his suggestions.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/04/13/wouldnt-it-be-nice-if-ruby/">Wouldn&#8217;t It Be Nice if Ruby&#8230;?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-04-13T00:00:00+02:00" pubdate data-updated="true">Apr 13<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I love questions that start with &#8220;Wouldn&#8217;t it be nice if Ruby &lt;insert perceived missing feature&gt;?&#8221; because more often than not the answer is: &#8220;Just tell it to!&#8221;</p>
-<p>Something like this happened on RubyLearning today, when fellow mentor José asked &#8220;<i>Wouldn&#8217;t it be nice if Ruby was smart enough to realize that when a division has a remainder then it should use a floating result?</i>&#8221; and once again the answer was &#8220;You mean like this?&#8221;:</p>
-<script src="http://gist.github.com/365000.js?file=gistfile1.ru"></script><p>I&#8217;m definitely not saying monkey-patching core classes with unexpected behavior is a smart idea (it&#8217;s <span class="caps">NOT</span>), but I always like how you can add behavior to Ruby if you really feel it&#8217;s necessary (and once again, I don&#8217;t in this case).</p></div>
   
   
 

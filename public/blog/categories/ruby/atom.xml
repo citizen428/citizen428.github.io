@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-07-23T09:33:21+02:00</updated>
+  <updated>2012-07-28T10:32:43+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
+    <link href="http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
+    <updated>2012-07-28T10:15:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
+    <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
+
+<p>While I haven't received <a href="http://www.packtpub.com/ruby-and-mongodb-web-development-beginners-guide/book">the book</a> in its final form yet, I've read all of it, and I can say that the author does a good job at introducing inexperienced programmers to web development with Ruby and MongoDB.</p>
+
+<p>This is a hands-on book and you'll get most out of it by following all the exercises and doing them on your own. From getting all the necessary components and installing them, to developing apps with Sinatra and Rails, a lot of ground is covered.</p>
+
+<p>While the author does tackle some more advanced topics, they are clearly not the focus of this book (it's subtitled "Beginner's Guide" for a reason) which will leave more experienced developers wanting for more. However, the presented material is well written, chapters build on each other and if you are new to web development with Ruby/RoR and/or MongoDB, this is a good title to get you up to speed in just 300 pages.</p>
+
+<p>If you are a more experienced Ruby developer or are already very familiar with MongoDB, this is probably not the book for you, even though you'll probably still get something out of it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Shenanigans]]></title>
@@ -201,55 +218,6 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Note: I'm sick, all of this is untested, does not take into account corner cases of any kind and may harm your pet. It was however a fun little diversion that showed once again how flexible Ruby is.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ruby GitHub projects Atom feed]]></title>
-    <link href="http://citizen428.net/blog/2011/11/23/ruby-github-projects-atom-feed/"/>
-    <updated>2011-11-23T20:43:00+01:00</updated>
-    <id>http://citizen428.net/blog/2011/11/23/ruby-github-projects-atom-feed</id>
-    <content type="html"><![CDATA[<p>The other day I found an <a href="http://xach.livejournal.com/298220.html">interesting post</a> by Lisper extraordinaire <a href="http://xach.livejournal.com/">Zach Beane</a> on <a href="http://planet.lisp.org/">Planet Lisp</a>, where he describes his program to generate a feed for the <a href="https://github.com/languages/Common%20Lisp/created">GitHub page about recently created Common Lisp repos</a>.</p>
-
-<p>Since good artists borrow and great artists steal, I decided to do the latter with his idea and implemented something similar for the <a href="https://github.com/languages/Ruby/created">new Ruby repos</a>. It uses <a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/open-uri/rdoc/">open-uri</a> for fetching the page, <a href="http://nokogiri.org/">Nokogiri</a> for parsing it and <a href="http://builder.rubyforge.org/">Builder</a> for generating the Atom feed.</p>
-
-<p>``` ruby
-require 'open-uri'
-require 'nokogiri'
-require 'builder'</p>
-
-<p>html = open("https://github.com/languages/Ruby/created")
-doc = Nokogiri::HTML.parse(html)</p>
-
-<p>atom = Builder::XmlMarkup.new(:target => STDOUT, :indent => 2)
-atom.instruct!
-atom.feed "xmlns" => "http://www.w3.org/2005/Atom" do
-  atom.id "urn:citizen428:github:newrepos"
-  atom.updated Time.now.utc.iso8601(0)
-  atom.title "New GitHub Ruby Repos", :type => "text"
-  atom.link :rel => "self", :href => "/ruby_github.atom"
-  doc.xpath("//table[@class='repo']/tr/td[@class='title']/a").each do |title|</p>
-
-<pre><code>name = title.content
-owner = title.at_xpath("../../td[@class='owner']/a").content
-desc = title.at_xpath("../../following-sibling::tr/td[@class='desc']").content
-date = Time.parse(title.at_xpath("../../td[@class='date']").content)
-atom.entry do
-  atom.title "#{owner}: #{name}"
-  atom.author { atom.name owner }
-  atom.link "href" =&gt; "https://github.com#{title.attributes["href"].value}"
-  atom.id "urn:citizen428:github:#{owner}:#{name}"
-  atom.published date.utc.iso8601(0)
-  atom.updated date.utc.iso8601(0)
-  atom.content desc, :type =&gt; "html"
-end
-</code></pre>
-
-<p>  end
-end
-```</p>
-
-<p>I'm hosting <a href="http://citizen428.net/ruby_github.atom">the feed</a> on this blog (updated regularly via cron), add it to your feed reader to discover potentially interesting new Ruby projects.</p>
 ]]></content>
   </entry>
   
