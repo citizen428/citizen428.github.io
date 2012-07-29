@@ -4,7 +4,7 @@
   <title><![CDATA[Category: security | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/security/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-07-28T10:32:43+02:00</updated>
+  <updated>2012-07-29T18:07:22+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-07-29]]></title>
+    <link href="http://citizen428.net/blog/2012/07/29/information-overload-2012-07-29/"/>
+    <updated>2012-07-29T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/07/29/information-overload-2012-07-29</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://bosker.wordpress.com/2012/07/23/the-prisoners-dilemma/">The Prisoner’s Dilemma</a><br>Nice article on the prisoner's dillema, including an interactive toy to play with various strategies.</li>
+<li><a href="http://scienceblogs.com/startswithabang/2012/07/18/how-big-is-the-entire-universe/">How Big is the Entire Universe?</a><br>The short answer: very big. I love articles like this one.</li>
+<li><a href="http://www.redorbit.com/news/science/1112661209/young-gorillas-observed-dismantling-poacher-snares/">Young Gorillas Observed Dismantling Poacher Snares</a><br>Go gorillas!</li>
+<li><a href="http://www.theregister.co.uk/2012/07/26/andre_hedrick/">RIP Andre Hedrick: The engineer who kept the PC open</a><br>Another "famous" programmer takes his own life :-(</li>
+<li><a href="http://derstandard.at/1342947903062/Lasst-100-Moscheen-bluehen">Lasst 100 Moscheen blühen</a><br>On recent developments in Istanbul, a city very dear to me for various reasons (in German).</li>
+<li><a href="http://rubylearning.com/blog/2012/07/23/the-ongoing-vigil-of-software-security/">The Ongoing Vigil of Software Security</a><br>No news for the seasoned security professional, but a good summary of security measures for software development projects.</li>
+<li><a href="http://mondediplo.com/2012/07/04egypt">Egypt’s first civilian president</a><br>I know the Egyption elections have been over for a while, but I didn't get around to read this article until now.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-15]]></title>
@@ -100,27 +118,6 @@
 
 
 <p><blockquote><p>Doctor Who, for the uninitiated, is a show featuring an “eleven-hundred-and-three-year-old” alien who travels through space and time in a police box (called the TARDIS – Time and Relative Dimension in Space), fighting monsters and finding friends to take along with him, only ninety per cent of which have been very attractive women.</p><footer><strong>Emer Sugrue</strong> <cite><a href='http://www.universityobserver.ie/2012/02/08/the-man-who/'>The Man Who</a></cite></footer></blockquote></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-01-29]]></title>
-    <link href="http://citizen428.net/blog/2012/01/29/information-overload-2012-01-29/"/>
-    <updated>2012-01-29T00:00:00+01:00</updated>
-    <id>http://citizen428.net/blog/2012/01/29/information-overload-2012-01-29</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://benwerd.com/blog/2012/01/22/die-hollywood-die/">Die, Hollywood, die!</a><br>A voice of reason in the <a href="http://ycombinator.com/rfs9.html">"Kill Hollywood"</a> discussion.</li>
-<li><a href="http://www.wired.com/magazine/2012/01/ff_ux/all/1">The New French Hacker-Artist Underground</a><br>The French group UX sneaks into places to restore them (or the art inside them). A fascinating read.</li>
-<li><a href="http://www.wienerzeitung.at/nachrichten/kultur/medien/?em_cnt=427905">Die Opfer von Niklaas und Perrine</a><br>Granted, this article makes most sense if you were born in the 1970s (or early 1980s) and grew up in Austria, but I still wanted to include it here (in German).</li>
-<li><a href="https://blog.torproject.org/blog/tale-new-censors-vodafone-uk-t-mobile-uk-o2-uk-and-t-mobile-usa">A tale of new censors - Vodafone UK, T-Mobile UK, O2 UK, and T-Mobile USA</a><br>If you think only China and dictatorships in the Middle East censor the internet, think again.</li>
-<li><a href="http://www.humbledmba.com/public-speaking-for-normal-people">Public speaking for normal people</a><br>Public speaking is a difficult topic for me. I like doing it, but tend to be rather nervous. Once I'm done I always feel like my talks were horrible, but feedback usually suggests they weren't. This post has some interesting ideas which I'm eager to try out.</li>
-<li><a href="http://whorulesamerica.net/power/investment_manager.html">An Investment Manager's View on the Top 1%</a><br>Seems like the "Occupy" movement should have adopted we are the 99.9% as a slogan.</li>
-<li><a href="http://danielmiessler.com/study/infosec_interview_questions/">Information Security Interview Questions</a><br>If you want to get into information security, you should read this article for a little self assessment.</li>
-<li><a href="http://arstechnica.com/tech-policy/news/2012/01/mega-man-the-bizarre-rise-and-sudden-downfall-of-kim-dotcom.ars/1">Mega-man: The fast, fabulous, fraudulent life of Megaupload's Kim Dotcom</a><br>Interesting portrait of <a href="http://en.wikipedia.org/wiki/Kim_Dotcom">Kim Dotcom</a>, the man who's all over the news again.</li>
-<li><a href="http://lists.busybox.net/pipermail/busybox/2010-December/074114.html">Understanding the bin, sbin, usr/bin , usr/sbin split</a><br>This mailing list post is an interesting bit of Unix trivia.</li>
-<li><a href="http://reason.com/archives/2012/01/26/how-much-is-an-astronauts-life-worth">How Much Is an Astronaut’s Life Worth?</a><br>Some interesting points on a controversial topic.</li>
-</ul>
-
 ]]></content>
   </entry>
   

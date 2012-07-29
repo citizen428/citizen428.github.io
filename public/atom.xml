@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-07-28T10:32:43+02:00</updated>
+  <updated>2012-07-29T18:07:22+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-07-29]]></title>
+    <link href="http://citizen428.net/blog/2012/07/29/information-overload-2012-07-29/"/>
+    <updated>2012-07-29T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/07/29/information-overload-2012-07-29</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://bosker.wordpress.com/2012/07/23/the-prisoners-dilemma/">The Prisoner’s Dilemma</a><br>Nice article on the prisoner&#8217;s dillema, including an interactive toy to play with various strategies.</li>
+<li><a href="http://scienceblogs.com/startswithabang/2012/07/18/how-big-is-the-entire-universe/">How Big is the Entire Universe?</a><br>The short answer: very big. I love articles like this one.</li>
+<li><a href="http://www.redorbit.com/news/science/1112661209/young-gorillas-observed-dismantling-poacher-snares/">Young Gorillas Observed Dismantling Poacher Snares</a><br>Go gorillas!</li>
+<li><a href="http://www.theregister.co.uk/2012/07/26/andre_hedrick/">RIP Andre Hedrick: The engineer who kept the PC open</a><br>Another &#8220;famous&#8221; programmer takes his own life :-(</li>
+<li><a href="http://derstandard.at/1342947903062/Lasst-100-Moscheen-bluehen">Lasst 100 Moscheen blühen</a><br>On recent developments in Istanbul, a city very dear to me for various reasons (in German).</li>
+<li><a href="http://rubylearning.com/blog/2012/07/23/the-ongoing-vigil-of-software-security/">The Ongoing Vigil of Software Security</a><br>No news for the seasoned security professional, but a good summary of security measures for software development projects.</li>
+<li><a href="http://mondediplo.com/2012/07/04egypt">Egypt’s first civilian president</a><br>I know the Egyption elections have been over for a while, but I didn&#8217;t get around to read this article until now.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
@@ -504,23 +522,6 @@
 
 <blockquote><p>Would some kernel people prefer getting tucked in at night instead of being cursed at? I’m sure that would be appreciated. I don’t think I have it in me, though.</p><footer><strong>Linus Torvals</strong> <cite><a href='http://techcrunch.com/2012/04/19/an-interview-with-millenium-technology-prize-finalist-linus-torvalds/'>An Interview With Linus Torvalds</a></cite></footer></blockquote>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[No Tor, no more customer]]></title>
-    <link href="http://citizen428.net/blog/2012/04/18/no-tor/"/>
-    <updated>2012-04-18T00:10:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/04/18/no-tor</id>
-    <content type="html"><![CDATA[<p><em>Update:</em> Server4You rebooted the server into a recovery system for me. I removed the Tor packages and the system is back up again, which means at least the <a href="http://tor.blingblingsquad.net/">mirror</a> is back. I&#8217;d also like to state explicitly that this whole post is based on a single phone conversation with a Server4You support employee, so it&#8217;s hard to tell if the company per se really considers Tor to be illegal in Germany. Personally I think it&#8217;s just a bad excuse for shutting down the service on shared hosts, which is just as bad in my book.</p>
-
-<p>I&#8217;ve been running a <a href="https://www.torproject.org/">Tor</a> relay since sometime in early 2006. There&#8217;s many good reasons for doing so, but what motivated me personally was my experience of studying in China for one year and having to live with a censored Internet connection myself (theoretically, as there was an <a href="http://embraceubuntu.com/2006/12/08/ssh-tunnel-socks-proxy-forwarding-secure-browsing/">easy way around it</a> if you had a server outside of China to SSH to). Alas our system hasn&#8217;t been an exit node in a while, but it&#8217;s still better than nothing.</p>
-
-<p>Today I was contacted by my <a href="http://server4you.de">hosting provider</a>&#8217;s abuse team, telling me that my server has been shut down because of a ToS violation. I <a href="https://twitter.com/#!/citizen428/status/192189329177718784">immediately was afraid</a> that they might complain about the Tor relay, but still had hope that I might be wrong. Ten hours later, after I got no reply to about five support requests, I decided to call their hotline. The employee first told me that he has no way to see why the abuse team blocked my server, but then said that running a Tor node may have been the reason. What ensued was a five minute conversation full of WTFs, facepalms and headdesks on my part, but the bottom line is that Server4You is of the opinion that it is illegal to run a Tor relay in Germany because of the <a href="http://de.wikipedia.org/wiki/Hackerparagraf">&#8220;Hackerparagraf&#8221;</a>. If you don&#8217;t know what that is, <a href="http://hackingexpose.blogspot.com/2012/04/watch-out-white-hats-european-union_3977.html">read up</a> on recent pushes to enforce similar legislation EU wide.</p>
-
-<p>After a fruitless discussion of said law, the — admittely nice — guy on the phone reassured me that my server will be restarted if I agree to disable the Tor node. I politely told him that I have no interest in using their services at all if I can&#8217;t use them the way I want to, so I&#8217;ll cancel my contract with Server4You as soon as possible. For the time being I donated some money to Tor, moved my blog over to <a href="http://www.heroku.com/">Heroku</a> (yay <a href="http://octopress.org/">Octopress</a>) and started evaluating hosting providers in countries with saner legislation (as long as there still are some).</p>
-
-<p>Sure, there&#8217;s probably a lot of really bad things happening over the Tor network, but those shouldn&#8217;t be used to discredit the tool&#8217;s legitimate uses. If we start blaming technology instead of people, we might as well turn off the Internet.</p>
 ]]></content>
   </entry>
   

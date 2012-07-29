@@ -9,7 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Disclaimer: I was one of the technical editors of this book, so I may be biased. While I haven&#8217;t received the book in its final form yet, I&# &hellip;">
+  <meta name="description" content="The Prisoner’s DilemmaNice article on the prisoner&#8217;s dillema, including an interactive toy to play with various strategies.
+How Big is the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +98,51 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/29/information-overload-2012-07-29/">Information Overload 2012-07-29</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-29T00:00:00+02:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://bosker.wordpress.com/2012/07/23/the-prisoners-dilemma/">The Prisoner’s Dilemma</a><br>Nice article on the prisoner&#8217;s dillema, including an interactive toy to play with various strategies.</li>
+<li><a href="http://scienceblogs.com/startswithabang/2012/07/18/how-big-is-the-entire-universe/">How Big is the Entire Universe?</a><br>The short answer: very big. I love articles like this one.</li>
+<li><a href="http://www.redorbit.com/news/science/1112661209/young-gorillas-observed-dismantling-poacher-snares/">Young Gorillas Observed Dismantling Poacher Snares</a><br>Go gorillas!</li>
+<li><a href="http://www.theregister.co.uk/2012/07/26/andre_hedrick/">RIP Andre Hedrick: The engineer who kept the PC open</a><br>Another &#8220;famous&#8221; programmer takes his own life :-(</li>
+<li><a href="http://derstandard.at/1342947903062/Lasst-100-Moscheen-bluehen">Lasst 100 Moscheen blühen</a><br>On recent developments in Istanbul, a city very dear to me for various reasons (in German).</li>
+<li><a href="http://rubylearning.com/blog/2012/07/23/the-ongoing-vigil-of-software-security/">The Ongoing Vigil of Software Security</a><br>No news for the seasoned security professional, but a good summary of security measures for software development projects.</li>
+<li><a href="http://mondediplo.com/2012/07/04egypt">Egypt’s first civilian president</a><br>I know the Egyption elections have been over for a while, but I didn&#8217;t get around to read this article until now.</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -513,56 +559,6 @@
 <li><a href="http://www-cs-students.stanford.edu/~cale/cs201/apartheid.comp.html">The Use of Computers to Support Oppression</a><br>On the role of computers in the South African apartheid system.</li>
 </ul>
 
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/12/rails-display-branch-in-development-mode/">Rails — Display Branch in Development Mode</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-12T21:33:00+02:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>At work we are building a Rails app that&#8217;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it&#8217;d be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn&#8217;t have been any simpler:</p>
-
-<figure class='code'><figcaption><span>app/helpers/application_helper.rb  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">version_div</span>
-</span><span class='line'>  <span class="n">version</span> <span class="o">=</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">development?</span> <span class="p">?</span> <span class="o">::</span><span class="no">Grit</span><span class="o">::</span><span class="no">Repo</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="o">::</span><span class="no">OurApp</span><span class="o">::</span><span class="no">Application</span><span class="o">::</span><span class="no">Version</span>
-</span><span class='line'>  <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:span</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;version&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
 </div>
   
   
