@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-07-29T18:07:22+02:00</updated>
+  <updated>2012-07-30T23:55:41+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
+    <link href="http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
+    <updated>2012-07-30T23:24:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
+    <content type="html"><![CDATA[<p>Let me admit right away that this is yet another "because I can" type of post with little practical use. With that out of the way, today's topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here's an example:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="err">λ</span><span class="o">&gt;</span> <span class="n">map</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">]</span>
+</span><span class='line'><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>As you can see the function to be <code>map</code>ped is specified with the <a href="http://www.haskell.org/haskellwiki/Partial_application">partially applied</a> function <code>(2+)</code> (or <code>(+2)</code> for that matter).</p>
+
+<p>Here's how we would have to write the same code in Ruby:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This could also be written in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree</a> way, but alas that would make the code rather hard to understand for less experienced Rubyists:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="ss">:+</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>But because Ruby is as flexible as it is, adding partial application is actually really trivial:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
+</span><span class='line'>  <span class="k">alias</span> <span class="ss">:add</span> <span class="ss">:+</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  def +(o=nil)&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">o</span> <span class="p">?</span> <span class="nb">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">o</span><span class="p">)</span> <span class="p">:</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">self</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>And now we can do this:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">+</span><span class="p">)</span> <span class="c1">#=&gt; [3, 4, 5]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Not too bad I think and rather consistent with Ruby's overall style. Alas I don't think we are likely to see partial application on a language level any time soon though...</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
@@ -143,27 +204,6 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Sure, putting it in <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html">Kernel</a> and therefore calling it without a receiver seems a little strange at first, but I kinda like how it reads. I know this is probably a case of me being anal about semantics, but I really think that <code>with</code> transports the intent a lot better than <code>tap</code> in cases like the one shown here.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-04-15]]></title>
-    <link href="http://citizen428.net/blog/2012/04/15/information-overload-2012-04-15/"/>
-    <updated>2012-04-15T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/04/15/information-overload-2012-04-15</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://www.insidehighered.com/views/2011/05/02/slavoj_zizek_essay_on_cloud_computing_and_privacy">Corporate Rule of Cyberspace</a><br>Philosopher <a href="http://en.wikipedia.org/wiki/Slavoj_%C5%BDi%C5%BEek">Slavoj Žižek</a> offers some thoughts on cloud computing. Some of the comments are interesting too.</li>
-<li><a href="http://www.slate.com/articles/technology/future_tense/2012/03/narrative_science_robot_journalists_customized_news_and_the_danger_to_civil_discourse_.single.html">A Robot Stole My Pulitzer!</a><br>On automated journalism and the potential consequences for society.</li>
-<li><a href="https://groups.google.com/group/comp.lang.forth/browse_thread/thread/4e15a2197c0aaafe/95c3f82d1c681296?#95c3f82d1c681296">A Forth Story...</a><br>This long text from 1995 is not only interesting because it talks about Forth, but also because of the history of programming in the 70s, 80s and 90s.</li>
-<li><a href="http://www.economist.com/node/21552581">Giving divorce a bad name</a><br>South Sudan invaded an oil field in Sudan, which could lead to a fierce war. Make sure to read the comments too, there's some good stuff in there.</li>
-<li><a href="http://www.wired.com/threatlevel/2012/04/code-not-physical-property/">Code Not Physical Property, Court Rules in Goldman Sachs Espionage Case</a><br>An update on the Aleynikov vs Goldman Sachs case.</li>
-<li><a href="http://www.technologyreview.com/blog/arxiv/27730">Computer Scientists Build Computer Using Swarms of Crabs</a><br>A computer exploiting the swarming behavior of soldier crabs. Ok, maybe just a function OR gate, but still rather cool.</li>
-<li><a href="http://www.physicscentral.com/buzz/blog/index.cfm?postid=4656335810518469535">Physicist Uses Math to Beat Traffic Ticket</a><br>Who says math can't be useful in your daily life? ;-)</li>
-<li><a href="http://derstandard.at/1334132541612/Strassengangs-Rosen-aus-dem-Beton">Rosen aus dem Beton</a><br>About street gangs and gang related violence in Los Angeles (in German).</li>
-<li><a href="http://www.antipope.org/charlie/blog-static/2012/04/understanding-amazons-strategy.html">What Amazon's ebook strategy means</a><br>Wether you agree with Charlie Stross or not, his posts are usually well written and provide food for thought.</li>
-<li><a href="http://www.guardian.co.uk/sport/2012/apr/13/olympics-2012-branding-police-sponsors">Olympics 2012: branding 'police' to protect sponsors' exclusive rights</a><br>Brave new corporate world.</li>
-</ul>
-
 ]]></content>
   </entry>
   

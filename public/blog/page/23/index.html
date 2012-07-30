@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn&#8217;t already running, copy &hellip;">
+  <meta name="description" content="A couple of days ago I decided that I want to play around with Rubinius, so I cloned the source from GitHub and thought I was ready to go. As it &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +97,48 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/10/rubinius-build-woes/">Rubinius Build Woes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-10T00:00:00+01:00" pubdate data-updated="true">Mar 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A couple of days ago I decided that I want to play around with <a href="http://rubini.us">Rubinius</a>, so I cloned the <a href="http://github.com/evanphx/rubinius/tree/master">source</a> from GitHub and thought I was ready to go. As it turned out that wasn&#8217;t quite the case, since my first attempt to build it ended in the second error can see here:</p>
+<script src="http://gist.github.com/77119.js"></script><p>I hopped into #rubinius to find out if more people have this problem, but that doesn&#8217;t seem to be the case. At least I learnt that most active develop is going into the &#8216;stackfull&#8217; branch, so I did a &#8216;git checkout origin/stackfull&#8217; and gave the build another try, which resulted in the first error message you see above.</p>
+<p>Determined not to give up, I decided to try one last time with &#8216;rake vm:clean&#8217; and &#8216;rake build:debug&#8217; and to my surprise ended up with a working Rubinius install :-)</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ bin/rbx -v
+</span><span class='line'>rubinius 0.11.0-dev (ruby 1.8.6) (f5260b581 12/31/2009) [i686-apple-darwin9.6.0]</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>That made me somewhat curious, so I tried &#8216;rake vm:clean&#8217; and &#8216;rake build&#8217; which now also worked (still can&#8217;t build master though). I have to admit that I&#8217;m slightly confused, but at least I have a working Rubinius version to play around with for the time being.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -444,48 +486,6 @@ So how is my first impression of Shoes? Good, actually very good. While the tool
 Links:<br />
 <a href="http://the-shoebox.org/">The Shoebox</a><br />
 <a href="http://waveninja.blogspot.com/2009/01/10-steps-in-shoes-step-1-paras.html">waveninja&#8217;s 10 steps in Shoes</a></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/01/29/freie-editoren-braucht-das-land/">Freie Editoren Braucht Das Land</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-01-29T00:00:00+01:00" pubdate data-updated="true">Jan 29<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Geht es um Text-Editoren für MacOS X führt kaum ein Weg an <a href="http://macromates.com/">TextMate</a> vorbei, als freie Alternative ist <a href="http://tuppis.com/smultron/">Smultron</a> sehr beliebt.</p>
-<p>Mit <a href="http://code.google.com/p/macvim/">MacVim</a> steht nun aber auch endlich ein vernünftiger Port des Unix-Veteranen <a href="http://www.vim.org/">Vim</a> zur Verfügung, welcher nichts mit der veralteten <a href="http://macvim.org/">Carbon-Version</a> zu tun hat. Vim hat zwar eine deutlich steilere Lernkurve als andere Editoren, hat man die Bedienung aber einmal gemeistert, wird man mit ungeahnter Flexibilität und Effizienz belohnt. Da MacVim typische Tastaturkürzel wie ?Z, ?V und ?A versteht, können sich Neulinge langsam an die Bedienung des Editors heranzutasten ohne sofort eine Vielzahl an Kommandos lernen zu müssen. Darüber hinaus bietet das Programm transparente Hintergründe, einen Vollbild-Modus sowie volle Unterstützung für Multibyte-Text. Insgesamt eine sehr gelungene Portierung, welche die Vorzüge von Vim und MacOS X optimal verbindet.</p>
-<p>Links:<br />
-<a href="http://code.google.com/p/macvim/wiki/FAQ">MavVim <span class="caps">FAQ</span></a><br />
-<a href="http://thomer.com/vi/vi.html">The Vi Lovers Home Page</a><br />
-<a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">Graphical vi-vim Cheat Sheet and Tutorial</a><br />
-<a href="http://stuff.citizen428.net/vimrc">Meine .vimrc</a> (ausführlich kommentiert)</p>
-<p>(Originally published by me on <a href="http://www.opensourcemac.de/2009/01/29/freie-editoren-braucht-das-land/">open.source.mac</a> on Jan 29th 2009.)</p></div>
   
   
 

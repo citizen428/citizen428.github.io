@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-07-29T18:07:22+02:00</updated>
+  <updated>2012-07-30T23:55:41+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
+    <link href="http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
+    <updated>2012-07-30T23:24:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
+    <content type="html"><![CDATA[<p>Let me admit right away that this is yet another &#8220;because I can&#8221; type of post with little practical use. With that out of the way, today&#8217;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&#8217;s an example:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="err">λ</span><span class="o">&gt;</span> <span class="n">map</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">]</span>
+</span><span class='line'><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see the function to be <code>map</code>ped is specified with the <a href="http://www.haskell.org/haskellwiki/Partial_application">partially applied</a> function <code>(2+)</code> (or <code>(+2)</code> for that matter).</p>
+
+<p>Here&#8217;s how we would have to write the same code in Ruby:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This could also be written in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree</a> way, but alas that would make the code rather hard to understand for less experienced Rubyists:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="ss">:+</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But because Ruby is as flexible as it is, adding partial application is actually really trivial:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
+</span><span class='line'>  <span class="k">alias</span> <span class="ss">:add</span> <span class="ss">:+</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">+</span><span class="p">(</span><span class="n">o</span><span class="o">=</span><span class="kp">nil</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">o</span> <span class="p">?</span> <span class="nb">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">o</span><span class="p">)</span> <span class="p">:</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">self</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And now we can do this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">.</span><span class="n">+</span><span class="p">)</span> <span class="c1">#=&gt; [3, 4, 5]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Not too bad I think and rather consistent with Ruby&#8217;s overall style. Alas I don&#8217;t think we are likely to see partial application on a language level any time soon though&#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-29]]></title>
@@ -494,33 +554,6 @@
 <li><a href="http://arstechnica.com/business/coolest-jobs-in-tech/2012/04/coolest-jobs-in-tech-literally-running-a-south-pole-data-center.ars/1">Coolest jobs in tech (literally): running a South Pole data center</a><br>Literally and figuratively this is a cool job indeed.</li>
 <li><a href="http://chronicle.com/blogs/percolator/is-psychology-about-to-come-undone/29045">Is Psychology About to Come Undone?</a><br>A researcher is trying to replicate resuls from studies published in various magazines to double check their results.</li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-04-22]]></title>
-    <link href="http://citizen428.net/blog/2012/04/22/information-overload-2012-04-22/"/>
-    <updated>2012-04-22T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/04/22/information-overload-2012-04-22</id>
-    <content type="html"><![CDATA[<blockquote><p>Economic development and social stability require freedom of expression, and an independent media to report on issues and abuses that government officials want to sweep under the rug.</p><footer><strong>Phil Robertson, deputy Asia director at Human Rights Watch</strong> <cite><a href='http://www.hrw.org/news/2012/04/16/vietnam-immediately-release-rights-bloggers'>Vietnam: Immediately Release Rights Bloggers</a></cite></footer></blockquote>
-
-
-<ul>
-<li><a href="http://news.sciencemag.org/sciencenow/2012/04/silly-putty-for-potholes.html">Silly Putty for Potholes</a><br>A practical application for non-Newtonian fluids, great idea.</li>
-<li><a href="http://www.forbes.com/sites/kauffman/2012/04/04/firing-yourself/">Avoiding The BlackBerry Blues: Know When To Fire Yourself</a><br>More startup founders should read this.</li>
-<li><a href="http://www.hrw.org/news/2012/04/16/vietnam-immediately-release-rights-bloggers">Vietnam: Immediately Release Rights Bloggers</a><br>Sometimes I wonder how much longer it will be before we see this kind of article about Europe&#8230;</li>
-<li><a href="http://online.wsj.com/article/SB10001424052702304177104577305780300265926.html">Asia&#8217;s Endangered Species: The Expat</a><br>To quote the article, &#8220;Western companies must approach newly empowered Asian companies and consumers as equals and clients — not just manufacturing partners&#8221;.</li>
-<li><a href="http://techcrunch.com/2012/04/19/an-interview-with-millenium-technology-prize-finalist-linus-torvalds/">An Interview With Linus Torvalds</a><br>I generally like interviews with Linux Torvals and this one is no exception.</li>
-<li><a href="http://www.economist.com/node/21552564">It&#8217;ll cost you</a><br>How much would a Scottish independence cost and how will this influence the <a href="http://en.wikipedia.org/wiki/Scottish_independence_referendum,_2014">referendum</a> in 2014?</li>
-<li><a href="http://www.wired.com/autopia/2012/04/spacex-space-station/">SpaceX Given Green Light for First Launch to Space Station</a><br>Soon the first commercial carrier will deliver cargo to the ISS.</li>
-<li><a href="http://www.slate.com/articles/news_and_politics/politics/2012/04/george_w_bush_and_torture_america_s_highest_officials_are_responsible_for_the_enhanced_interrogation_of_prisoners_.single.html">How America Came To Torture Its Prisoners</a><br>Don&#8217;t blame this on some misguided individuals, this was planned from the top.</li>
-<li><a href="http://www.bunniestudios.com/blog/?p=2269">China: Crowdsourced Tax Enforcement</a><br>Once again China comes up with a clever solution to a problem.</li>
-<li><a href="http://www.ft.com/cms/s/2/87bf2654-89b3-11e1-85af-00144feab49a.html#axzz1se7I7IYx">How do you like your meat?</a><br>Interesting article on lab grown meat.</li>
-</ul>
-
-
-<blockquote><p>Would some kernel people prefer getting tucked in at night instead of being cursed at? I’m sure that would be appreciated. I don’t think I have it in me, though.</p><footer><strong>Linus Torvals</strong> <cite><a href='http://techcrunch.com/2012/04/19/an-interview-with-millenium-technology-prize-finalist-linus-torvalds/'>An Interview With Linus Torvalds</a></cite></footer></blockquote>
 
 ]]></content>
   </entry>

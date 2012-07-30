@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-07-29T18:07:22+02:00</updated>
+  <updated>2012-07-30T23:55:41+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
+    <link href="http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
+    <updated>2012-07-30T23:24:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
+    <content type="html"><![CDATA[<p>Let me admit right away that this is yet another "because I can" type of post with little practical use. With that out of the way, today's topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here's an example:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="err">λ</span><span class="o">&gt;</span> <span class="n">map</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">]</span>
+</span><span class='line'><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>As you can see the function to be <code>map</code>ped is specified with the <a href="http://www.haskell.org/haskellwiki/Partial_application">partially applied</a> function <code>(2+)</code> (or <code>(+2)</code> for that matter).</p>
+
+<p>Here's how we would have to write the same code in Ruby:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This could also be written in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree</a> way, but alas that would make the code rather hard to understand for less experienced Rubyists:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="ss">:+</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>But because Ruby is as flexible as it is, adding partial application is actually really trivial:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
+</span><span class='line'>  <span class="k">alias</span> <span class="ss">:add</span> <span class="ss">:+</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  def +(o=nil)&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">o</span> <span class="p">?</span> <span class="nb">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">o</span><span class="p">)</span> <span class="p">:</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">self</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>And now we can do this:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">+</span><span class="p">)</span> <span class="c1">#=&gt; [3, 4, 5]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Not too bad I think and rather consistent with Ruby's overall style. Alas I don't think we are likely to see partial application on a language level any time soon though...</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
@@ -143,81 +204,6 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Sure, putting it in <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html">Kernel</a> and therefore calling it without a receiver seems a little strange at first, but I kinda like how it reads. I know this is probably a case of me being anal about semantics, but I really think that <code>with</code> transports the intent a lot better than <code>tap</code> in cases like the one shown here.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Pointless Ruby]]></title>
-    <link href="http://citizen428.net/blog/2012/05/04/pointless-ruby/"/>
-    <updated>2012-05-04T13:03:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/05/04/pointless-ruby</id>
-    <content type="html"><![CDATA[<p>It's no secret that I'm rather fond of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a> and also try to apply it to my Ruby coding, at least as long as it doesn't become too unidiomatic.</p>
-
-<p>Being at home sick I got bored, so I played around a bit in IRB to create a composition function that will allow me to create higher-order functions in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a> (sometimes also referred to as "pointless style", hence the title of this post). I know that <a href="http://rubyworks.github.com/facets/">Facets</a> has <code>Proc#compose</code> and <code>Proc#*</code>, but they only work with <code>Proc</code> objects. Ruby being the flexible beast that it is, it took me about two minutes to come up with a working solution, which I called <code>fn</code> because it basically returns a function and <code>compose</code> was too long for my taste:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
-</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">funs</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">v</span><span class="p">,</span> <span class="n">f</span><span class="o">|</span> <span class="n">v</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Here it is in action:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="s2">&quot;foo bar&quot;</span><span class="p">,</span> <span class="s2">&quot;baz qux&quot;</span><span class="o">].</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:split</span><span class="p">,</span> <span class="ss">:last</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; [&quot;bar&quot;, &quot;qux&quot;]&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>I know that this isn't really shorter than <code>{ |x| x.split.last }</code>, but usefullness isn't really the goal of a pointless exercise ;-)</p>
-
-<p>So far so good, but if one doesn't really care about pointfree style, wouldn't it also be fun to mix and match procs and symbols? It sure would:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="o">*</span><span class="n">funs</span><span class="p">)</span>
-</span><span class='line'>  <span class="o">-&gt;</span> <span class="n">x</span> <span class="k">do</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;funs.inject(x) do |v, f|</span>
-</span><span class='line'><span class="sr">  Proc === f ? f.call(v) : v.send(f)</span>
-</span><span class='line'><span class="sr">end</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Let's see this in action:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">fn</span><span class="p">(</span><span class="ss">:next</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="p">},</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="p">{</span> <span class="n">x</span><span class="o">.</span><span class="n">to_f</span> <span class="o">/</span> <span class="mi">2</span> <span class="p">}</span> <span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; [2.0, 4.5, 8.0]&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Note: I'm sick, all of this is untested, does not take into account corner cases of any kind and may harm your pet. It was however a fun little diversion that showed once again how flexible Ruby is.</p>
 ]]></content>
   </entry>
   
