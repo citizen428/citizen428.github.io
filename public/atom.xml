@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-07-30T23:55:41+02:00</updated>
+  <updated>2012-08-05T15:24:53+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-08-05]]></title>
+    <link href="http://citizen428.net/blog/2012/08/05/information-overload-2012-08-05/"/>
+    <updated>2012-08-05T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/08/05/information-overload-2012-08-05</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="https://plus.google.com/101960720994009339267/posts/R58WgWwN9jp">A lesson in shortcuts</a><br>A nice piece of Unix history by Rob Pike.</li>
+<li><a href="http://www.raptitude.com/2012/06/why-we-fck/">Why we f*ck</a><br>I like different perspectives. Whether you buy into this or not, it&#8217;s a good read with some interesting discussion in the comments.</li>
+<li><a href="http://www.guardian.co.uk/world/2012/aug/01/somali-comedian-islamists-shot-dead">Somali comedian who mocked Islamists is shot dead</a><br>While the main theme of this article is sad, it also mentions the new Somali constitution and the upcoming elections.</li>
+<li><a href="http://taz.de/Schwaebische-Beamte-beim-Ku-Klux-Klan/!98469/">Polizisten, Ritter und Rassisten</a><br>Two German police men were members of the European KKK (in German).</li>
+<li><a href="http://mondediplo.com/2012/08/06bedouin">The end of the Bedouin</a><br>Israel wants to relocate Bedouins from their unrecognized settlements.</li>
+<li><a href="http://www.economist.com/node/21559947?fsrc=scn/tw/te/pe/workinprogress">Work in progress</a><br>The Economist analyzes Facebook&#8217;s current share value.</li>
+<li><a href="http://www.nytimes.com/2012/08/02/us/sexual-harassment-in-online-gaming-stirs-anger.html?_r=1">In Virtual Play, Sex Harassment Is All Too Real</a><br>On sexual harassment in the gaming community.</li>
+<li><a href="http://www.slate.com/articles/news_and_politics/foreigners/2012/08/china_s_wealthy_and_influential_sometimes_hire_body_doubles_to_serve_their_prison_sentences.html">Double Jeopardy</a><br>If you are wealthy in China, you may be able to hire a substitute to go to prison for you.</li>
+<li><a href="http://www.wired.com/business/2012/08/ff_wallstreet_trading/all/">Raging Bulls: How Wall Street Got Addicted to Light-Speed Trading</a><br>Wired looks at high-frequency trading.</li>
+<li><a href="http://arstechnica.com/apple/2012/07/os-x-10-8/">OS X 10.8 Mountain Lion: the Ars Technica review</a><br>There&#8217;s no better way to inform yourself about a new OS X release than the Ars Technica review that comes with it.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
@@ -534,27 +555,6 @@
 
 
 <p>Note: I&#8217;m sick, all of this is untested, does not take into account corner cases of any kind and may harm your pet. It was however a fun little diversion that showed once again how flexible Ruby is.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-04-29]]></title>
-    <link href="http://citizen428.net/blog/2012/04/29/information-overload-2012-04-29/"/>
-    <updated>2012-04-29T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/04/29/information-overload-2012-04-29</id>
-    <content type="html"><![CDATA[<blockquote><p>You don&#8217;t simply get to say you&#8217;re not a racist; not being racist — or a sexist or a homophobe — is a constant, arduous process of unlearning, of being uncomfortable, of eating crow and being humbled and re-evaluating.</p><footer><strong>G.D.</strong> <cite><a href='http://www.postbourgie.com/2010/04/30/the-racist-harvard-law-student-and-naming-names'>The Racist Harvard Law Student and Naming Names.</a></cite></footer></blockquote>
-
-
-<ul>
-<li><a href="http://www.postbourgie.com/2010/04/30/the-racist-harvard-law-student-and-naming-names">The Racist Harvard Law Student and Naming Names</a><br>The quote above says it all.</li>
-<li><a href="http://www.zeit.de/politik/deutschland/2012-04/delius-piraten-holocaust">Nazi-Vergleich zwingt Berliner Piraten zum Rückzug</a><br>The German Pirate Party currently has problems dealing with rightwing views within their ranks.</li>
-<li><a href="http://www.yesmagazine.org/issues/sustainable-happiness/10-things-science-says-will-make-you">10 Things Science Says Will Make You Happy</a><br>While there are no real surprises on this list, a lot of people — myself included — tend to forget some of the points mentioned in this article.</li>
-<li><a href="http://www.heise.de/tp/artikel/36/36785/1.html">Liquid Constitution</a><br>Island uses <a href="http://www.communitywiki.org/LiquidDemocracy">Liquid Democracy</a> for rewriting the constitution (in German).</li>
-<li><a href="http://www.alfiekohn.org/managing/fbrftb.htm">For Best Results, Forget the Bonus</a><br>Why bonuses don&#8217;t really work as motivation for employees.</li>
-<li><a href="http://arstechnica.com/business/coolest-jobs-in-tech/2012/04/coolest-jobs-in-tech-literally-running-a-south-pole-data-center.ars/1">Coolest jobs in tech (literally): running a South Pole data center</a><br>Literally and figuratively this is a cool job indeed.</li>
-<li><a href="http://chronicle.com/blogs/percolator/is-psychology-about-to-come-undone/29045">Is Psychology About to Come Undone?</a><br>A researcher is trying to replicate resuls from studies published in various magazines to double check their results.</li>
-</ul>
-
 ]]></content>
   </entry>
   

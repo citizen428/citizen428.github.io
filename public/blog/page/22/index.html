@@ -9,7 +9,13 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Playing with Squeak&#8216;s Method Finder, I discovered a really neat feature that I wish would be available for Ruby documentation. Here&#8217;s the &hellip;">
+  <meta name="description" content="From Ruby Quiz #202:
+And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#8217;s solution: 1
+2
+3
+4
+5
+require &#39;rubygems &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +103,55 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/03/im-in-your-pi-crunching-your-numbers/">I&#8217;m in Your Pi, Crunching Your Numbers ;-)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-03T00:00:00+02:00" pubdate data-updated="true">May 3<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>From <a href="http://rubyquiz.strd6.com/quizzes/202">Ruby Quiz #202</a>:</p>
+<p><em>And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#8217;s solution:</em></p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;hpricot&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Hpricot</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;http://www.eveandersson.com/pi/digits/100000&#39;</span><span class="p">))</span>
+</span><span class='line'><span class="nb">puts</span> <span class="p">(</span><span class="n">doc</span><span class="o">/</span><span class="s1">&#39;pre&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">inner_html</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p><em>It finishes in less than one second for the entire 100,000 digits!</em></p>
+<p>And no, this wasn&#8217;t a serious submission&#8230; :-)</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -538,52 +593,6 @@
 </span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;def foo&quot;</span><span class="p">,</span> <span class="s2">&quot;puts &#39;bar&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;end&quot;</span><span class="o">]</span>
 </span></code></pre></td></tr></table></div></figure></div></notextile></p>
 <p>The last command created a file named test.rb for us, which contains only the method foo. :-)</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/03/12/ruby-implementations-and-why-we-should-care/">Ruby Implementations and Why We Should Care</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-12T00:00:00+01:00" pubdate data-updated="true">Mar 12<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Not too lang ago our <a href="http://www.ruby-lang.org/en/">favorite language</a> had only implementation, the one made by <a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">Matz</a> (now commonly referred to as MatzRuby or <span class="caps">MRI</span>). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
-<ul>
-<li>Ruby 1.8.6: This is your trusted old Ruby 1.8.6, and while it may not be the most spectacular of the implementations listed here, it&#8217;s the most widely used Ruby interpreter around and the current de facto standard of the language.</li>
-<li>Ruby 1.9.1: Featuring the new bytecode interpreter <a href="http://en.wikipedia.org/wiki/YARV"><span class="caps">YARV</span></a>, this is the newest &#8216;official&#8217; Ruby version which gives us interesting features like improved speed, block local variables, a <a href="http://pragdave.blogs.pragprog.com/pragdave/2008/05/new-lambda-synt.html">new lambda syntax</a>, native threads and some other niceties. So while we are waiting for 1.9.1 to replace 1.8.6 as the standard Ruby interpreter (which probably will take quite a while), my advice is to install it now, play around with it, get used to the new things and <a href="http://isitruby19.com/">help the community in porting gems to 1.9</a>.</li>
-<li><a href="http://jruby.codehaus.org/">JRuby</a>: A Java implementation of Ruby, which allows developers to interact with Java classes or define them from within Ruby. It&#8217;s fast, it works well, and is a big driving force in the filed of alternative Ruby interpreters. As of now I mostly used JRuby from within &#8220;ruby-processing&#8221;:, but eventually want to have a look at <a href="http://monkeybars.rubyforge.org/">Monkeybars</a>, which  was created in order to simplify the development of <a href="http://en.wikipedia.org/wiki/Swing_(Java)">Swing</a> apps with JRuby.</li>
-<li><a href="http://rubini.us/">Rubinius</a>: Here is what the project itself has to say about its relevance for Ruby developers: <i>&#8220;A spec driven Ruby implementation. A core library written in Ruby. More first class objects than you can shake a stick at. Super easy to contribute. Low barrier to entry. If you can breathe, you can commit</i>&#8221;. So far I only used Rubinius to test some of my own scripts, but eventually would like to find the time to contribute to the project by writing new specs or trying to fix failing ones. I encourage you to do the same, since this is not only a great chance to learn more about Ruby&#8217;s internals, but also to help the Ruby community at large.</li>
-<li><a href="http://www.macruby.org/trac/wiki/MacRuby">MacRuby</a>: MacRuby is a port of Ruby 1.9 which sits directly on top of OS X core technologies. This means that when you e.g. create an Array, you get an NSMutableArray (see the output of Array.ancestors in macirb: [NSMutableArray, NSArray, Enumerable, NSObject, Kernel]). It also features <a href="http://www.macruby.org/trac/wiki/HotCocoa">HotCocoa</a> which provides mappings for common Cocoa methods thus making your MacRuby programs a lot more idiomatic. This together with the interactive way of development provided by macirb make MacRuby an interesting tool not only for Ruby developers, but also for people who want to prototype their OS X apps.</li> 
-<li><a href="http://shoooes.net/">Shoes</a>: Some people may be surprised to see Shoes in this list, and technically they are right. Shoes is not a distinct Ruby implementation, but it is a Ruby distribution (which will <a href="http://www.mail-archive.com/shoes@code.whytheluckystiff.net/msg03168.html">switch to 1.9.1 in Shoes 3</a>), which lives separated from your other Ruby interpreters, installs gems in its own location and so on. The main thing though is that Shoes provides us with an easy to learn and use, cross-platform <span class="caps">GUI</span> toolkit that makes developing in it fun! Granted, it may not be suitable for everything, but with a bit of creativity you can push it quite far. Have a look at the <a href="http://the-shoebox.org/">Shoebox</a> to see what people are doing with it.</li>
-</ul>
-<p>There are of course other Ruby implementations like <a href="http://cardinal2.rubyforge.org/">Cardinal</a> (a Ruby interpreter for <a href="http://www.parrot.org/">Parrot</a>), <a href="http://www.ironruby.net/">IronRuby</a> (Ruby for the .<span class="caps">NET</span> environment) and <a href="http://github.com/macournoyer/tinyrb/tree/master">tinyrb</a> (a tiny and fast subset of Ruby), which I won&#8217;t describe here in more detail, since I haven&#8217;t yet had time to play around with them.</p>
-<p>So why should we care? Because the various implementations create a sort of competitive spirit, therefore pushing the limits of Ruby and driving it forward, by making it faster or running on top of other VMs (JRuby, IronRuby), thus letting it leverage a plethora of established technologies and also exposing it to potential new developers. Plus we also got <a href="http://rubyspec.org/">RubySpec</a>, so potential Ruby implementors have a standard to follow.</p>
-<p>I hope you enjoyed this post, please leave comments in case you disagree with something or want to add some information!</p></div>
   
   
 

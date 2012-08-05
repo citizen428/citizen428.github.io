@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Ever since I started this blog in January 2005 it was powered by Serendipity (aka S9Y). Lately however I became more and more dissatisfied with it &hellip;">
+  <meta name="description" content="&#8220;By relieving the brain of all unnecesary work, a good notation sets it free to concentrate on more advanced problems, and in effect increases &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +97,75 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/08/16/rewiring-my-brain-apl-and-j/">Rewiring My Brain: APL and J</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-16T00:00:00+02:00" pubdate data-updated="true">Aug 16<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>&#8220;<em>By relieving the brain of all unnecesary work, a good notation sets it free to concentrate on more advanced problems, and in effect increases the mental power of the race.</em>&#8221; &#8211; <a href="http://en.wikipedia.org/wiki/Alfred_North_Whitehead">A. N. Whitehead</a></p>
+<p>Yesterday <a href="http://antifuchs.soup.io/">Andreas</a> posted this awesome video of a <a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Game of Life</a> coding session in <a href="http://en.wikipedia.org/wiki/APL_(programming_language)"><span class="caps">APL</span></a>, which really blew my mind. Watch it, it&#8217;s well worth 8 minutes of your time!</p>
+<div align="center"><iframe width="420" height="315" src="http://www.youtube.com/embed/a9xAKttWgP4" frameborder="0" allowfullscreen></iframe></div>
+<p>Being extremely impressed by what I saw, I realized that I never wrote anything in a language from the <a href="http://en.wikipedia.org/wiki/Category:APL_programming_language_family"><span class="caps">APL</span> family</a>, so I decided to change that. I couldn&#8217;t find a free version of <span class="caps">APL</span> running on <span class="caps">OSX</span> that wasn&#8217;t time limited or required me to apply for an educational license, so I finally settled on <a href="http://www.jsoftware.com/">J</a> (<a href="http://en.wikipedia.org/wiki/J_(programming_language)">Wikipedia article</a>), skimmed the docs and wrote solutions to 4 different <a href="http://projecteuler.net/">Project Euler</a> problems. They are all extremely terse, but I lack the <span class="caps">APL</span>/J knowledge to further comment on their quality. If you have experience in either language, I&#8217;d really appreciate some comments!</p>
+<p><em>Problem 7: Find the 10001st prime.</em></p>
+<p>This ones fairly easy, since the vocabulary contains <a href="http://www.jsoftware.com/help/dictionary/dpco.htm">p:</a> which will return the n-th prime (0 indexed):<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p: 10000</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p><em>Problem 3: What is the largest prime factor of the number 600851475143?</em><br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{: q: 600851475143</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Get the tail (<a href="http://www.jsoftware.com/help/dictionary/d522.htm">{:</a>) of the list of prime factors (<a href="http://www.jsoftware.com/help/dictionary/dqco.htm">q:</a>)</p>
+<p><em>Problem 5: What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?</em><br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*./ }. i.20</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+Behead (<a href="http://www.jsoftware.com/help/dictionary/d531.htm">}.</a>) the list of all non-negative integers up to 20 (<a href="http://www.jsoftware.com/help/dictionary/didot.htm">i.20</a>) and apply (<a href="http://www.jsoftware.com/help/dictionary/d420.htm">/</a>) the least common multiple (<a href="http://www.jsoftware.com/help/dictionary/d111.htm">*.</a>).</p>
+<p><em>Problem 1: Find the sum of all the multiples of 3 or 5 below 1000.</em></p>
+<p>This one took me a bit, so we&#8217;ll do it step by step. First, apply (<a href="http://www.jsoftware.com/help/dictionary/d420.htm">/</a>) the residue (<a href="http://www.jsoftware.com/help/dictionary/d230.htm">|</a>) to the non-negative integers up to (non-inclusive) 1000 (i.1000):<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(3 5|/i.1000)
+</span><span class='line'>0 1 2 0 1 2 0 1 2 0 1 2 ...
+</span><span class='line'>0 1 2 3 4 0 1 2 3 4 0 1 ...</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+Filter out the elements with index 0 (0 (<a href="http://www.jsoftware.com/help/dictionary/d502.htm">[:</a> <a href="http://www.jsoftware.com/help/dictionary/dicapdot.htm">I.</a> <a href="http://www.jsoftware.com/help/dictionary/d000.htm">=</a>)):<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0 ([: I. =) (3 5|/i.1000)
+</span><span class='line'>0 3  6  9 12 15 18 21 24 27 30 ...
+</span><span class='line'>0 5 10 15 20 25 30 35 40 45 50 ...</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Finally append the two lists (<a href="http://www.jsoftware.com/help/dictionary/d320.htm">,</a>), remove duplicates (<a href="http://www.jsoftware.com/help/dictionary/d221.htm">~.</a>) and apply (<a href="http://www.jsoftware.com/help/dictionary/d420.htm">/</a>) <a href="http://www.jsoftware.com/help/dictionary/d100.htm">+</a>:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>+/ ~. ,0 ([: I. =) (3 5|/i.1000)</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Overall playing with my first non-<a href="http://en.wikipedia.org/wiki/Von_Neumann_programming_languages">von Neumann programming language</a> was a rather fun experience, especially after getting over the somewhat strange syntax and the fact that most &#8220;words&#8221; have monadic and dyadic versions. From my cursory glances J&#8217;s documentation looks pretty solid and the language starts making sense a lot quicker than one might expect. It&#8217;s definitely stimulating to play around with and I think I&#8217;ll do a bit more of that over the next few weeks, especially since I haven&#8217;t yet explored the <a href="http://www.jsoftware.com/jwiki/Plot">plotting</a> and <a href="http://www.jsoftware.com/jwiki/OpenGL">OpenGL</a> frameworks.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -673,49 +742,6 @@ This is only the beginning though:<br />
 </span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
 </span></code></pre></td></tr></table></div></figure></div></notextile><br />
 The reason I&#8217;m posting this long explanation is that destructuring is often useful and can do much more for you than &#8220;just&#8221; swap variables, yet I rarely see it used to its full potential in Ruby. If only we could have <a href="http://java.ociweb.com/mark/clojure/article.html#Destructuring">Clojure&#8217;s destructuring</a> in Ruby&#8230;</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/04/24/ruby-and-the-principle-of-least-surprise/">Ruby and the Principle of Least Surprise</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-04-24T00:00:00+02:00" pubdate data-updated="true">Apr 24<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I generally observed that people tend to bring up the <span class="caps">POLS</span> when <i>they</i> find one specific aspect counter-intuitive. For example you sometimes will hear people complain about how the &#8220;modulo operator&#8221; (String#% really) is used for formatting strings in Ruby which in their opinion violates the <span class="caps">POLS</span>:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="s2">&quot;%05d&quot;</span> <span class="o">%</span> <span class="mi">123</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="s2">&quot;00123&quot;</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>Well, when you start out from the wrong assumption that the percent sign is the &#8220;modulo operator&#8221;, you can only reach wrong conclusions.</p>
-<p>In mathematical textbooks you will generally find &#8216;mod&#8217; used in this context, which is also the operator used in e.g. Haskell. The surprise in this case stems from the assumption that the symbol % is in some way tied to the modulo operation, which it only is in some programming languages (mod, rem, &#92;, remainder, modulo, |~, %% and <span class="caps">IDIV</span> being some other options).</p>
-<p>This is not intended to sound harsh, I just think that whenever you feel Ruby violates the <span class="caps">POLS</span>, it&#8217;s probably a good time to check your own assumptions and find out that for people with a better understanding of the topic at hand, the <span class="caps">POLS</span> most likely did not get violated. Don&#8217;t confuse &#8220;what I would expect&#8221; with &#8220;what the majority of people knowledgeable in a given area find surprising&#8221;. When I traveled in Bulgaria I found it very confusing that people there shake their head for &#8220;yes&#8221; and nod for &#8220;no&#8221;. Turns out all the locals were perfectly fine with it&#8230; ;-)</p></div>
   
   
 

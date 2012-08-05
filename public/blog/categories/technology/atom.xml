@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-07-30T23:55:41+02:00</updated>
+  <updated>2012-08-05T15:24:53+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-08-05]]></title>
+    <link href="http://citizen428.net/blog/2012/08/05/information-overload-2012-08-05/"/>
+    <updated>2012-08-05T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/08/05/information-overload-2012-08-05</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="https://plus.google.com/101960720994009339267/posts/R58WgWwN9jp">A lesson in shortcuts</a><br>A nice piece of Unix history by Rob Pike.</li>
+<li><a href="http://www.raptitude.com/2012/06/why-we-fck/">Why we f*ck</a><br>I like different perspectives. Whether you buy into this or not, it's a good read with some interesting discussion in the comments.</li>
+<li><a href="http://www.guardian.co.uk/world/2012/aug/01/somali-comedian-islamists-shot-dead">Somali comedian who mocked Islamists is shot dead</a><br>While the main theme of this article is sad, it also mentions the new Somali constitution and the upcoming elections.</li>
+<li><a href="http://taz.de/Schwaebische-Beamte-beim-Ku-Klux-Klan/!98469/">Polizisten, Ritter und Rassisten</a><br>Two German police men were members of the European KKK (in German).</li>
+<li><a href="http://mondediplo.com/2012/08/06bedouin">The end of the Bedouin</a><br>Israel wants to relocate Bedouins from their unrecognized settlements.</li>
+<li><a href="http://www.economist.com/node/21559947?fsrc=scn/tw/te/pe/workinprogress">Work in progress</a><br>The Economist analyzes Facebook's current share value.</li>
+<li><a href="http://www.nytimes.com/2012/08/02/us/sexual-harassment-in-online-gaming-stirs-anger.html?_r=1">In Virtual Play, Sex Harassment Is All Too Real</a><br>On sexual harassment in the gaming community.</li>
+<li><a href="http://www.slate.com/articles/news_and_politics/foreigners/2012/08/china_s_wealthy_and_influential_sometimes_hire_body_doubles_to_serve_their_prison_sentences.html">Double Jeopardy</a><br>If you are wealthy in China, you may be able to hire a substitute to go to prison for you.</li>
+<li><a href="http://www.wired.com/business/2012/08/ff_wallstreet_trading/all/">Raging Bulls: How Wall Street Got Addicted to Light-Speed Trading</a><br>Wired looks at high-frequency trading.</li>
+<li><a href="http://arstechnica.com/apple/2012/07/os-x-10-8/">OS X 10.8 Mountain Lion: the Ars Technica review</a><br>There's no better way to inform yourself about a new OS X release than the Ars Technica review that comes with it.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-08]]></title>
@@ -95,27 +116,6 @@
 <li><a href="http://www.theweek.co.uk/us/46535/when-half-million-americans-died-and-nobody-noticed">When half a million Americans died and nobody noticed</a><br>If this is true, this is a pretty bad pharmaceutical scandal.</li>
 <li><a href="http://www.estherderby.com/2012/05/self-awareness-matters-finding-your-filters.html">Self-Awareness Matters: Finding Your Filters</a><br>This sounds interesting, I may try that out.</li>
 <li><a href="http://mondediplo.com/2012/05/05uganda">Cheap help from Uganda</a><br>US security firms in Iraq exploit workers from Uganda and other "third countries". Unless they are white.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-04-15]]></title>
-    <link href="http://citizen428.net/blog/2012/04/15/information-overload-2012-04-15/"/>
-    <updated>2012-04-15T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/04/15/information-overload-2012-04-15</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://www.insidehighered.com/views/2011/05/02/slavoj_zizek_essay_on_cloud_computing_and_privacy">Corporate Rule of Cyberspace</a><br>Philosopher <a href="http://en.wikipedia.org/wiki/Slavoj_%C5%BDi%C5%BEek">Slavoj Žižek</a> offers some thoughts on cloud computing. Some of the comments are interesting too.</li>
-<li><a href="http://www.slate.com/articles/technology/future_tense/2012/03/narrative_science_robot_journalists_customized_news_and_the_danger_to_civil_discourse_.single.html">A Robot Stole My Pulitzer!</a><br>On automated journalism and the potential consequences for society.</li>
-<li><a href="https://groups.google.com/group/comp.lang.forth/browse_thread/thread/4e15a2197c0aaafe/95c3f82d1c681296?#95c3f82d1c681296">A Forth Story...</a><br>This long text from 1995 is not only interesting because it talks about Forth, but also because of the history of programming in the 70s, 80s and 90s.</li>
-<li><a href="http://www.economist.com/node/21552581">Giving divorce a bad name</a><br>South Sudan invaded an oil field in Sudan, which could lead to a fierce war. Make sure to read the comments too, there's some good stuff in there.</li>
-<li><a href="http://www.wired.com/threatlevel/2012/04/code-not-physical-property/">Code Not Physical Property, Court Rules in Goldman Sachs Espionage Case</a><br>An update on the Aleynikov vs Goldman Sachs case.</li>
-<li><a href="http://www.technologyreview.com/blog/arxiv/27730">Computer Scientists Build Computer Using Swarms of Crabs</a><br>A computer exploiting the swarming behavior of soldier crabs. Ok, maybe just a function OR gate, but still rather cool.</li>
-<li><a href="http://www.physicscentral.com/buzz/blog/index.cfm?postid=4656335810518469535">Physicist Uses Math to Beat Traffic Ticket</a><br>Who says math can't be useful in your daily life? ;-)</li>
-<li><a href="http://derstandard.at/1334132541612/Strassengangs-Rosen-aus-dem-Beton">Rosen aus dem Beton</a><br>About street gangs and gang related violence in Los Angeles (in German).</li>
-<li><a href="http://www.antipope.org/charlie/blog-static/2012/04/understanding-amazons-strategy.html">What Amazon's ebook strategy means</a><br>Wether you agree with Charlie Stross or not, his posts are usually well written and provide food for thought.</li>
-<li><a href="http://www.guardian.co.uk/sport/2012/apr/13/olympics-2012-branding-police-sponsors">Olympics 2012: branding 'police' to protect sponsors' exclusive rights</a><br>Brave new corporate world.</li>
 </ul>
 
 ]]></content>
