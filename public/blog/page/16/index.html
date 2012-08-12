@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="This week &#8220;Information Overload&#8221; is back in full swing, and there really were lots of interesting things I stumbled upon: The Biggest &hellip;">
+  <meta name="description" content="If you are running a non-system Emacs on OS X and have tried to use &#8220;emacsclient&#8221;, you may have seen the following error message despite &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/09/22/emacsclient-on-os-x/">Emacsclient on OS X</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-22T00:00:00+02:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you are running a non-system Emacs on OS X and have tried to use &#8220;emacsclient&#8221;, you may have seen the following error message despite having started the Emacs server:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>emacsclient: can't find socket; have you started the server?
+</span><span class='line'>To start the server in Emacs, type "M-x server-start".
+</span><span class='line'>emacsclient: No socket or alternate editor.  Please use:
+</span><span class='line'>
+</span><span class='line'>	--socket-name
+</span><span class='line'>	--server-file      (or environment variable EMACS_SERVER_FILE)
+</span><span class='line'>	--alternate-editor (or environment variable ALTERNATE_EDITOR)</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>This doesn&#8217;t work because you are invoking &#8220;/usr/bin/emacsclient&#8221; which came with the OS, instead of &#8220;/Applications/Emacs.app/Contents/MacOS/bin/emacsclient&#8221;. This can easily be fixed by symlinking the latter to &#8220;/usr/local/bin/emacsclient&#8221; and making sure that &#8220;/usr/local/bin&#8221; is listed in your path before &#8220;/usr/bin&#8221;.</p>
+<p>Not a big deal, but it took me a couple of minutes to figure out and I thought I might as well save others some time&#8230;</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -597,122 +648,6 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
 <li><a href="http://www.newscientist.com/article/mg20727721.400-hydrogen-bombshell-rewriting-lifes-history.html">Hydrogen bombshell: Rewriting life&#8217;s history</a><br>Animals who don&#8217;t need oxygen for survival.</li>
 <li><a href="http://wearehugh.com/public/2010/08/html5-web-workers/">An Implausibly Illustrated Introduction to HTML5 Web Workers</a><br>Exactly what the title promises. </li>
 <li><a href="http://www.spiegel.de/unispiegel/jobundberuf/0,1518,711917,00.html">Urlaub ohne Ende</a><br>Netflix employees can take as many holidays as they want. Working models for the post-industrial age? (German)</Ii></ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter/">RoR: &#8216;Call&#8217;: Cannot Yield From a Proc Type Filter.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-08-20T00:00:00+02:00" pubdate data-updated="true">Aug 20<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>As we all know, there are 2 main differences between procs and lambdas in Ruby.</p>
-<p>1. Argument checking:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008dc600@(irb):3&gt;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008d3c08@(irb):4 (lambda)&gt;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span><span class="o">.</span><span class="n">call</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="s2">&quot;Hello &quot;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">call</span>
-</span><span class='line'><span class="no">ArgumentError</span><span class="p">:</span> <span class="n">wrong</span> <span class="n">number</span> <span class="n">of</span> <span class="n">arguments</span> <span class="p">(</span><span class="mi">0</span> <span class="k">for</span> <span class="mi">1</span><span class="p">)</span>
-</span><span class='line'>	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">4</span><span class="ss">:in</span> <span class="sb">`block in irb_binding&#39;</span>
-</span><span class='line'><span class="sb">	from (irb):6:in `</span><span class="n">call</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">	from (irb):6</span>
-</span><span class='line'><span class="s1">	from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&lt;main&gt;&#39;</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>2. The possibility to return from within the closure:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008c83a8@(irb):7&gt;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008c4050@(irb):8 (lambda)&gt;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span><span class="o">.</span><span class="n">call</span>
-</span><span class='line'><span class="no">LocalJumpError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="k">return</span>
-</span><span class='line'>	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">7</span><span class="ss">:in</span> <span class="sb">`block in irb_binding&#39;</span>
-</span><span class='line'><span class="sb">	from (irb):9:in `</span><span class="n">call</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">	from (irb):9</span>
-</span><span class='line'><span class="s1">	from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&lt;main&gt;&#39;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">call</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>I&#8217;ve known about this for a while, but as a Rubyists who until quite recently happily ignored Rails, I didn&#8217;t know that ActiveSupport changes the &#8220;LocalJumpError&#8221; from the second example into</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="sb">`call&#39;: Cannot yield from a Proc type filter.</span>
-</span><span class='line'><span class="sb">   The Proc must take two arguments and execute</span>
-</span><span class='line'><span class="sb">   #call on the second argument. (ArgumentError)</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>when you try to return from callbacks like &#8220;before_save&#8221;. I spent quite some time debugging this before I finally found the solution in this <a href="http://obosan.blogspot.com/2008/11/blocksclosures-and-return.html">blog post</a>. Instead of</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">after_save</span> <span class="k">do</span> <span class="o">|</span><span class="n">foo</span><span class="o">|</span>
-</span><span class='line'>  <span class="k">return</span> <span class="k">if</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>you have to do</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">after_save</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">foo</span><span class="o">|</span>
-</span><span class='line'>  <span class="k">return</span> <span class="k">if</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>Probably obvious to more experienced Rails developers, but I really got thrown off by the &#8220;ArgumentError&#8221; that replaced the &#8220;LocalJumpError&#8221;.</p></div>
   
   
 

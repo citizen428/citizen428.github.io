@@ -9,7 +9,20 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="&#8220;By relieving the brain of all unnecesary work, a good notation sets it free to concentrate on more advanced problems, and in effect increases &hellip;">
+  <meta name="description" content="As we all know, there are 2 main differences between procs and lambdas in Ruby.
+1. Argument checking: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&gt;&gt; p = Proc. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +111,122 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter/">RoR: &#8216;Call&#8217;: Cannot Yield From a Proc Type Filter.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-20T00:00:00+02:00" pubdate data-updated="true">Aug 20<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As we all know, there are 2 main differences between procs and lambdas in Ruby.</p>
+<p>1. Argument checking:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008dc600@(irb):3&gt;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008d3c08@(irb):4 (lambda)&gt;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span><span class="o">.</span><span class="n">call</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="s2">&quot;Hello &quot;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">call</span>
+</span><span class='line'><span class="no">ArgumentError</span><span class="p">:</span> <span class="n">wrong</span> <span class="n">number</span> <span class="n">of</span> <span class="n">arguments</span> <span class="p">(</span><span class="mi">0</span> <span class="k">for</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">4</span><span class="ss">:in</span> <span class="sb">`block in irb_binding&#39;</span>
+</span><span class='line'><span class="sb">	from (irb):6:in `</span><span class="n">call</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">	from (irb):6</span>
+</span><span class='line'><span class="s1">	from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&lt;main&gt;&#39;</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>2. The possibility to return from within the closure:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008c83a8@(irb):7&gt;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008c4050@(irb):8 (lambda)&gt;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span><span class="o">.</span><span class="n">call</span>
+</span><span class='line'><span class="no">LocalJumpError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="k">return</span>
+</span><span class='line'>	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">7</span><span class="ss">:in</span> <span class="sb">`block in irb_binding&#39;</span>
+</span><span class='line'><span class="sb">	from (irb):9:in `</span><span class="n">call</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">	from (irb):9</span>
+</span><span class='line'><span class="s1">	from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&lt;main&gt;&#39;</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">call</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>I&#8217;ve known about this for a while, but as a Rubyists who until quite recently happily ignored Rails, I didn&#8217;t know that ActiveSupport changes the &#8220;LocalJumpError&#8221; from the second example into</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="sb">`call&#39;: Cannot yield from a Proc type filter.</span>
+</span><span class='line'><span class="sb">   The Proc must take two arguments and execute</span>
+</span><span class='line'><span class="sb">   #call on the second argument. (ArgumentError)</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>when you try to return from callbacks like &#8220;before_save&#8221;. I spent quite some time debugging this before I finally found the solution in this <a href="http://obosan.blogspot.com/2008/11/blocksclosures-and-return.html">blog post</a>. Instead of</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">after_save</span> <span class="k">do</span> <span class="o">|</span><span class="n">foo</span><span class="o">|</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">if</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>you have to do</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">after_save</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">foo</span><span class="o">|</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">if</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Probably obvious to more experienced Rails developers, but I really got thrown off by the &#8220;ArgumentError&#8221; that replaced the &#8220;LocalJumpError&#8221;.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -602,147 +731,6 @@ Behold the wonder:<br />
 </span><span class='line'><span class="o">&gt;&gt;</span> <span class="sx">%w(foo bar)</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
 </span><span class='line'> <span class="o">=&gt;</span> <span class="n">foo</span>
 </span></code></pre></td></tr></table></div></figure></div></notextile></p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/04/29/destructuring-binds-in-ruby/">Destructuring Binds in Ruby</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-04-29T00:00:00+02:00" pubdate data-updated="true">Apr 29<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When we &#8220;swap variables in Ruby&#8221;, what really happens is something called &#8220;a destructuring binding&#8221; in other languages:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">10</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">20</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">object_id</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">21</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">object_id</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">41</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">object_id</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">41</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">object_id</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">21</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-This is only the beginning though:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># assign first 2 elements to x and y</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># throw away the rest</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">a</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">1</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">y</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">2</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># assign first 2 elements to x and y</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># assign rest to z</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">z</span>  <span class="o">=</span> <span class="n">a</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">1</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">y</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">2</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">z</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># assign first 2 elements to x and y</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># throw away the third</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># assign the rest to z</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="o">*</span><span class="n">z</span> <span class="o">=</span> <span class="n">a</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">1</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">y</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">2</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">z</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># if there aren&#39;t enough rvalues,</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># remaining lvalues are nil</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="mi">1</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">b</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-The reason I&#8217;m posting this long explanation is that destructuring is often useful and can do much more for you than &#8220;just&#8221; swap variables, yet I rarely see it used to its full potential in Ruby. If only we could have <a href="http://java.ociweb.com/mark/clojure/article.html#Destructuring">Clojure&#8217;s destructuring</a> in Ruby&#8230;</p></div>
   
   
 
