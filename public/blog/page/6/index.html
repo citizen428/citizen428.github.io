@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Quite often, the answer to that exasperated &#8220;why don&#8217;t they just &#8230; ?&#8221; is green, and it folds.Megan McArdle If Everyone Else &hellip;">
+  <meta name="description" content="From the &#8220;better late than never&#8221; department, here&#8217;s a quick writeup of the movies I saw this year. Ha-shoter: The story of a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,49 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/09/viennale-2011/">Viennale 2011</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-09T13:45:00+01:00" pubdate data-updated="true">Dec 9<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>From the &#8220;better late than never&#8221; department, here&#8217;s a quick writeup of the movies I saw this year.</p>
+
+<ul>
+<li><a href="http://www.imdb.com/title/tt1978447/">Ha-shoter</a>: The story of a member of an Israeli anti-terror unit and a group of young radicals. This had a lot of potential, but all in all it was a very disappointing experience. I don&#8217;t know what it was, but neither the actors nor the storytelling convinced me in any way.</li>
+<li><a href="http://www.imdb.com/title/tt1235170/">The Future</a>: Miranda July&#8217;s second feature length film was my personal highlight of this years Viennale. It was witty, thoughtful and also very sad at times and has the same quirkiness that made &#8220;Me and You and Everyone We Know&#8221; such an excellent movie.</li>
+<li><a href="http://www.imdb.com/title/tt1822304/">Schlafkrankheit</a>: The story of a German aid worker in Africa. This was neither particularly good, nor was it awful. Not a bad movie, but if you never see it, you won&#8217;t miss much.</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -672,67 +715,6 @@
     <footer>
       <a rel="full-article" href="/blog/2011/10/28/fun-with-twitter-and-mongodb/">Read on &rarr;</a>
     </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/10/23/tom-and-michael-vs-john-von-neumann/">Tom and Michael vs. John Von Neumann</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-10-23T19:55:00+02:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In case you wonder if <a href="http://mrjaba.posterous.com/">Tom</a> and I gave up on <a href="http://citizen428.net/blog/categories/versus/">reading papers</a>, the answer is a resounding no! In fact there&#8217;s one we finished sometime around mid-September, which for various reasons hasn&#8217;t been summarized yet. This is about to change.</p>
-
-<p><strong>The paper</strong></p>
-
-<p>The paper in questions was <a href="http://www.stanford.edu/class/cs242/readings/backus.pdf">&#8220;Can Programming Be Liberated from the von Neumann Style?&#8221;</a>, a <a href="http://en.wikipedia.org/wiki/Turing_Award">Turing Award</a> lecture by <a href="http://en.wikipedia.org/wiki/John_Backus">John Backus</a>.</p>
-
-<p><strong> A very brief summary</strong></p>
-
-<p>At the core of his lecture, Backus argues in favor of functional/applicative programming. This is done by first exploring shortcomings and bottlenecks in the <a href="http://en.wikipedia.org/wiki/Von_Neumann_architecture">von Neumann architecture</a>, followed by an exploration of concepts from his own <a href="http://en.wikipedia.org/wiki/FP_(programming_language">FP</a>) (Function Programming) language.</p>
-
-<p><strong> Difficulty of the paper</strong></p>
-
-<p>Generally this is very easy to read, and provides good food for thought, even today. The more mathematical parts in the middle might deter some readers, but aren&#8217;t really that important.</p>
-
-<p><strong>Takeaway</strong></p>
-
-<p>Alas the age of the paper shows a bit. While some of the points are still valid, there undoubtedly is a much wider appreciation of the benefits of applicative style programming nowadays, as can be seen by various functional languages slowly finding their way into the mainstream. It&#8217;s still very interesting to see how early Backus already thought about all of this though, and also that the language he envisioned seemed to be more in line with the <a href="http://en.wikipedia.org/wiki/Apl">APL</a> school of thought that e.g. Haskell, which in all fairness wasn&#8217;t around back then. I wonder how Backus felt about the latter,  which can be very declarative (see <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a>). For example, here is the inner product function from section 5 of the paper translated to Haskell:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="nf">ip</span> <span class="ow">::</span> <span class="p">[[</span><span class="kt">Integer</span><span class="p">]]</span> <span class="ow">-&gt;</span> <span class="kt">Integer</span>
-</span><span class='line'><span class="nf">ip</span> <span class="ow">=</span> <span class="n">sum</span> <span class="o">.</span> <span class="n">map</span> <span class="n">product</span> <span class="o">.</span> <span class="n">transpose</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you like programming languages and also like to think about them, and learn about their history, this is an interesting paper to read. Also it&#8217;s quite ironic that Backus actually won in large parts for his contributions to Fortran, a language that influenced so many other imperative languages.</p>
-</div>
-  
   
 
 
