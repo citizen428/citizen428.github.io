@@ -40,6 +40,8 @@ This is a list of some of my (personal) projects. Since I contribute quite regul
 
 ## Misc
 
+* [nmap http-generator script](http://nmap.org/nsedoc/scripts/http-generator.html): Since I sometimes do security related work, I use `nmap` quite a bit. So when I decided to learn some Lua, I wrote this discovery tool that is now part of `nmap`'s default script set.
+
 * [Happy Nerds](http://happynerds.net/): A collection of programming resources for children. Created by me and made pretty by [Thomas Fadrus](http://fadr.at).
 
 * [ClojureX](https://github.com/citizen428/ClojureX): While Clojure was still young, it wasn't always easy to get a development environment up and running. ClojureX was a distribution that tried to simplify the process on OSX and was fairly popular for a while. I have not worked on this past Clojure 1.2 though, so the project is not very useful in its current form.
