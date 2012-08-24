@@ -16,7 +16,9 @@ This is a list of some of my (personal) projects. Since I contribute quite regul
 
 * [Shenanigans](http://citizen428.github.com/shenanigans/): My personal Ruby extension library (view on [Rubygems](https://rubygems.org/gems/shenanigans)).
 
-* [tryit](https://github.com/sevenmaxis/tryit): After a discussion on StackOverflow, Sergey Gopkalo and I created this gem as an alternative to Rails' `Object#try` method. Personally I prefer it syntax-wise and it's also useful in pure Ruby projects (view on [Rubygems](https://rubygems.org/gems/tryit))
+* [tryit](https://github.com/sevenmaxis/tryit): After a discussion on StackOverflow, Sergey Gopkalo and I created this gem as an alternative to Rails' `Object#try` method. Personally I prefer it syntax-wise and it's also useful in pure Ruby projects (view on [Rubygems](https://rubygems.org/gems/tryit)).
+
+* [Revolver](http://citizen428.github.com/revolver/): A fixed-size LIFO data structure (view on [Rubygems](https://rubygems.org/gems/revolver)).
 
 * [JRuby](https://github.com/jruby/jruby): I sometimes use JRuby and while doing so [fixed 2 bugs in it](https://github.com/jruby/jruby/commits?author=citizen428).
 
