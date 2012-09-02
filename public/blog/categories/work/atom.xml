@@ -4,7 +4,7 @@
   <title><![CDATA[Category: work | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/work/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-08-26T11:22:14+02:00</updated>
+  <updated>2012-09-02T21:25:53+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-09-02]]></title>
+    <link href="http://citizen428.net/blog/2012/09/02/information-overload-2012-09-02/"/>
+    <updated>2012-09-02T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/09/02/information-overload-2012-09-02</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://discovermagazine.com/2012/jul-aug/06-vital-signs-woman-needed-upside-down">The Woman Who Needed to Be Upside-Down</a><br>One of the stranger medical stories I've heard so far.</li>
+<li><a href="http://www.bbc.co.uk/news/world-us-canada-19432553">CIA interrogation probe ends without any charges</a><br>Everything else would have been rather surprising.</li>
+<li><a href="http://www.woz.ch/1235/schengen/ein-oder-mehrere-mitgliedstaaten-glauben-dass-sie-eine-gefahr-sind">«Ein oder mehrere Mitgliedstaaten glauben, dass Sie eine Gefahr sind»</a><br>Brave New Fortress Europe (in German).</li>
+<li><a href="http://www.smh.com.au/world/science/the-humans-who-outrun-horses-20120606-1zv96.html">The humans who outrun horses</a><br>Very interesting article on how humans evolved into long-distance runners.</li>
+<li><a href="http://www.fastcompany.com/3000852/37signals-earns-millions-each-year-its-ceo%E2%80%99s-model-his-cleaning-lady">37signals Earns Millions Each Year. Its CEO’s Model? His Cleaning Lady</a><br>Nice interview with Jason Fried of 37signals fame.</li>
+<li><a href="http://www.bbc.co.uk/news/science-environment-19412819">DNA test jailed innocent man for murder</a><br>If you have nothing to fear, you have nothing to hide. Yeah, right.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Comprehensive list of cloud-related links]]></title>
@@ -80,19 +97,6 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
     <content type="html"><![CDATA[<p>Just a little info for the people who may wonder about my lack of activity lately (mainly the Ruby herd and some guys of the Gentoo/ALT project): I've started a new job as a Junior Systems Engineer for a company providing open source solutions for enterprise customers, which means I've recently been playing around with stuff like Linux Heartbeat and other cool technologies. It's quite stressful, but also pretty interesting so far and I quite like it (despite my constant rambling about having a regular job).</p>
 
 <p>However, in January I also had to finish the last few classes of my college career, so there actually was nearly no time left for Gentoo, as the measly 4 commits I did demonstrate pretty well. I still have a seminar this Friday where I'll present the concept of my diploma thesis, but starting from next week I'll try to do more Gentoo related things again. :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mini update]]></title>
-    <link href="http://citizen428.net/blog/2006/01/10/mini-update/"/>
-    <updated>2006-01-10T00:00:00+01:00</updated>
-    <id>http://citizen428.net/blog/2006/01/10/mini-update</id>
-    <content type="html"><![CDATA[<p>Yesterday evening "m3's":http://www.leyrer.priv.at/martin/ girlfriend "Susanne":http://www.webcave.at/ organized a little surprise dinner at "mas":http://www.pancho.at/mas/index.htm to celebrate Martin's 35th birthday, which was really relaxing and entertaing. :) It was just what I needed after a rather unnerving day at university, and it really made me look forward to my other "social events" this week (the monthly "AGLUG":http://www.aglug.net/ meeting on Thursday and another "Pardus":http://pardus.at/ meetup on Saturday).</p>
-
-<p>Today was my second day in my new job, which I mostly spent on heartbeat scripts and a "funny" server which shows some irritating behavior. I also had to build my first deb package for the deployment of some in-house software, and I have to say that I now love Portage more than ever... ;)</p>
-
-<p>Setting Orange, Chaos 10, 3172 YOLD</p>
 ]]></content>
   </entry>
   
