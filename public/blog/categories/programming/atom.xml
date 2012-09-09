@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-09-02T23:01:22+02:00</updated>
+  <updated>2012-09-09T21:11:36+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-09-09]]></title>
+    <link href="http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09/"/>
+    <updated>2012-09-09T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09</id>
+    <content type="html"><![CDATA[<p>I was rather busy this week, so this Information Overload is super short.</p>
+
+<ul>
+<li><a href="http://lubutu.com/soso/condition-handling-for-non-lispers">Condition Handling for Non-Lispers</a><br>If you ever need to explain condition handling to a non-Lisper, this is a sensible post to point them too.</li>
+<li><a href="http://www.handelsblatt.com/politik/oekonomie/nachrichten/vollgeld-iwf-forscher-spielen-radikale-bankreform-durch-seite-all/7008170-all.html">IWF-Forscher spielen radikale Bankreform durch</a><br>Two IMF economist test a model where banks can't create new money in the form of loans (in German).</li>
+<li><a href="http://news.discovery.com/history/preserved-brain-bog-england-110406.html">Prehistoric human brain found pickled in bog</a><br>A bit older, but still very insteresting for science.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
@@ -133,77 +149,6 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tap dance]]></title>
-    <link href="http://citizen428.net/blog/2012/05/14/tap-dance/"/>
-    <updated>2012-05-14T23:14:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/05/14/tap-dance</id>
-    <content type="html"><![CDATA[<p>Ruby's <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> is a really nice and useful method. One of my favorite uses is <code>Object#d</code>, which I think I originally saw in <a href="https://github.com/janlelis/irbtools">irbtools</a>. Personally, I'm using the following version in my <code>~/.irbrc</code>:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Object</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">d</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;self.tap { |s| puts s }</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Inserting this in a chain of calls can be very enlightening as to where a value changes unexpectedly.</p>
-
-<p>However, recently I've seen more and more use of <code>tap</code> where I'd traditionally have used <code>inject/reduce</code>. People who know me can attest to the fact that I'm a big fan of the latter, but for some reason there seem to be quite a few developers who find these methods hard to grok. For this reason recent Ruby versions added <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_with_object">Enumerable#each_with_object</a>, which seems to be easier to use for some people, but which isn't very popular because of it's lengthy name. See for example the following blog post that was written as a result of a discussion I had with the author on StackOverflow: <a href="http://phrogz.net/tap-vs-each_with_object">tap vs. each_with_object: tap is faster and less typing.</a></p>
-
-<p>As I said in the comment there, my main problem is that you have to call <code>tap</code> on what is to become the result, not the data you want to transform. While this is not a problem per se, I somehow don't like the semantics of it. However, once I decided to hide it behind a Pascal-like <a href="http://www.freepascal.org/docs-html/ref/refsu53.html">with statement</a>, I immediately started liking it:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Kernel</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">with</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">blk</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;o.tap(&amp;amp;blk)</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Here are the examples from the blog post linked above, including a new version for <code>with</code>. Decide which one you like best:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">nums</span><span class="o">.</span><span class="n">inject</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="p">,</span> <span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">;</span> <span class="n">h</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;nums.each_with_object({}) { |n, h| h[n] = n }&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="p">{}</span><span class="o">.</span><span class="n">tap</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="o">|</span> <span class="n">nums</span><span class="o">.</span><span class="n">each</span><span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">}</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;with({}) { |h| nums.each { |n| h[n]=n } }</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Sure, putting it in <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html">Kernel</a> and therefore calling it without a receiver seems a little strange at first, but I kinda like how it reads. I know this is probably a case of me being anal about semantics, but I really think that <code>with</code> transports the intent a lot better than <code>tap</code> in cases like the one shown here.</p>
 ]]></content>
   </entry>
   

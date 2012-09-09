@@ -4,7 +4,7 @@
   <title><![CDATA[Category: science | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/science/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-09-02T23:01:22+02:00</updated>
+  <updated>2012-09-09T21:11:36+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-09-09]]></title>
+    <link href="http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09/"/>
+    <updated>2012-09-09T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09</id>
+    <content type="html"><![CDATA[<p>I was rather busy this week, so this Information Overload is super short.</p>
+
+<ul>
+<li><a href="http://lubutu.com/soso/condition-handling-for-non-lispers">Condition Handling for Non-Lispers</a><br>If you ever need to explain condition handling to a non-Lisper, this is a sensible post to point them too.</li>
+<li><a href="http://www.handelsblatt.com/politik/oekonomie/nachrichten/vollgeld-iwf-forscher-spielen-radikale-bankreform-durch-seite-all/7008170-all.html">IWF-Forscher spielen radikale Bankreform durch</a><br>Two IMF economist test a model where banks can't create new money in the form of loans (in German).</li>
+<li><a href="http://news.discovery.com/history/preserved-brain-bog-england-110406.html">Prehistoric human brain found pickled in bog</a><br>A bit older, but still very insteresting for science.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-02]]></title>
@@ -86,22 +102,6 @@
 <li><a href="http://derstandard.at/1342947903062/Lasst-100-Moscheen-bluehen">Lasst 100 Moscheen blühen</a><br>On recent developments in Istanbul, a city very dear to me for various reasons (in German).</li>
 <li><a href="http://rubylearning.com/blog/2012/07/23/the-ongoing-vigil-of-software-security/">The Ongoing Vigil of Software Security</a><br>No news for the seasoned security professional, but a good summary of security measures for software development projects.</li>
 <li><a href="http://mondediplo.com/2012/07/04egypt">Egypt’s first civilian president</a><br>I know the Egyption elections have been over for a while, but I didn't get around to read this article until now.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-07-22]]></title>
-    <link href="http://citizen428.net/blog/2012/07/22/information-overload-2012-07-22/"/>
-    <updated>2012-07-22T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/07/22/information-overload-2012-07-22</id>
-    <content type="html"><![CDATA[<p>I was busy last week, so this issue of the Information Overload is very short and a bit late.</p>
-
-<ul>
-<li><a href="http://www.extremetech.com/extreme/132918-the-laser-powered-bionic-eye-that-gives-576-pixel-grayscale-vision-to-the-blind">The laser-powered bionic eye that gives 576-pixel grayscale vision to the blind</a><br>Bionic eyes could change many people's lives.</li>
-<li><a href="http://www.bbc.co.uk/news/magazine-15987082">How to avoid getting 'hit by air' in Italy</a><br>I have lived in Italy. I still live with an Italian. I also have an Italian coworker. And I'm quite the hypochondriac myself, so obviously this article resonates well with me.</li>
-<li><a href="http://www.wilsonquarterly.com/article.cfm?aid=2153">A Small World After All?</a><br>Maybe the Internet isn't as globalizing as people believe it to be?</li>
 </ul>
 
 ]]></content>
