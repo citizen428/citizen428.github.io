@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Thus, tweeting &quot;Down with capitalism&quot; from your iPhone for those around the world to read seems to be the most ironic thing a person can do &hellip;">
+  <meta name="description" content="I finally found some time to give this blog a less generic look, which was really easy thanks to Octopress&#8217;s great theme and customization &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,100 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/10/10/octopress-customizations/">Octopress Customizations</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-10T19:59:00+02:00" pubdate data-updated="true">Oct 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I finally found some time to give this blog a less generic look, which was really easy thanks to <a href="http://octopress.org/docs/theme/">Octopress&#8217;s great theme and customization support</a>.</p>
+
+<p>First I changed some colors in <code>sass/custom/_colors.scss</code>:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="na">$header-bg</span><span class="o">:</span> <span class="mh">#000</span><span class="err">;</span>
+</span><span class='line'><span class="na">$subtitle-color</span><span class="o">:</span> <span class="nf">lighten</span><span class="p">(</span><span class="nv">$header-bg</span><span class="o">,</span> <span class="mi">58</span><span class="p">)</span><span class="err">;</span>
+</span><span class='line'><span class="na">$nav-bg</span><span class="o">:</span> <span class="nf">desaturate</span><span class="p">(</span><span class="nf">lighten</span><span class="p">(</span><span class="mh">#FF7100</span><span class="o">,</span> <span class="mi">18</span><span class="p">)</span><span class="o">,</span> <span class="mi">5</span><span class="p">)</span>
+</span><span class='line'><span class="na">$link-color</span><span class="o">:</span> <span class="mh">#FF7100</span><span class="err">;</span>
+</span><span class='line'><span class="na">$footer-bg</span><span class="o">:</span> <span class="mh">#CCC</span><span class="err">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then I reduced the width of the body, the size of the dates and article titles as well as the codeblocks (all of this can be done in <code>sass/custom/_styles.scss</code>):</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">body</span> <span class="err">{</span>
+</span><span class='line'>  <span class="na">max-width</span><span class="o">:</span> <span class="mi">1100</span><span class="kt">px</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span><span class='line'><span class="nt">time</span> <span class="err">{</span>
+</span><span class='line'>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">14</span><span class="kt">px</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span><span class='line'><span class="nt">h1</span> <span class="err">{</span>
+</span><span class='line'>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">2</span><span class="mf">.2</span><span class="kt">em</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span><span class='line'><span class="nt">section</span> <span class="err">{</span>
+</span><span class='line'>  <span class="o">&gt;</span> <span class="nt">h1</span> <span class="err">{</span>
+</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span><span class="err">;</span>
+</span><span class='line'>  <span class="err">}</span>
+</span><span class='line'><span class="err">}</span>
+</span><span class='line'><span class="nt">codeblock</span> <span class="err">{</span>
+</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.1</span><span class="kt">em</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Last but not least I found some <a href="http://www.elegantthemes.com/blog/resources/free-social-media-icon-set">excellent free social media icons</a> for the sidebar.</p>
+
+<p>I hope you like the changes, I do and I was also pleasantly surprised how easy it is to change the look of an Octopress blog.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -663,52 +757,6 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
 01.10.2011: Lange Nacht der Museen / Abschlussveranstaltung</p>
 </blockquote>
 <p>Unfortunately I don&#8217;t know if I&#8217;ll really make it, since the next two weeks will be super busy. I&#8217;ll definitely try to drop by though.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/11/information-overload-2011-09-11/">Information Overload 2011-09-11</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-11T00:00:00+02:00" pubdate data-updated="true">Sep 11<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.eurozine.com/articles/2010-10-29-mudde-en.html">The intolerance of the tolerant</a><br>Trying to shed some light on the perceived rise of intolerance towards Islam in northern Europe. I&#8217;m not sure what to think of this, but it&#8217;s interesting nonetheless.</li>
-<li><a href="http://www.ourmaninbeirut.com/2011/09/nation-blanding-hedonism-and-the-underselling-of-beirut/">Nation Blanding: Hedonism and the Underselling of Beirut</a><br>Interesting piece on Beirut being sold as a party city.</li>
-<li><a href="http://www.smh.com.au/lifestyle/dont-dumb-girls-down-20110829-1jh86.html">Don&#8217;t dumb girls down</a><br>When you talk to little girls, don&#8217;t enforce stereotypes by how you talk to them. I guess the same goes for boys and &#8220;being strong&#8221;.</li>
-<li><a href="http://falkvinge.net/2011/09/05/cable-reveals-extent-of-lapdoggery-from-swedish-govt-on-copyright-monopoly/">Caable reveals extent of lapdoggery from Swedish govt on copyright monopoly</a><br>Leaked cables show how the US actively influenced Sweden in regards of copyright policies.</li>
-<li><a href="http://manoharvanga.com/hackme/">hackme: Deconstructing an <span class="caps">ELF</span> File</a><br>If you wanna see how to dissect an <span class="caps">ELF</span> binary to solve a hacking challenge, this is a good read.</li>
-<li><a href="http://www.newyorker.com/talk/2011/09/12/110912ta_talk_smith">Monsters</a><br>Short text by <a href="http://en.wikipedia.org/wiki/Zadie_Smith">Zadie Smith</a> on the post 9/11 world.</li>
-<li><a href="http://www.guardian.co.uk/commentisfree/2011/sep/07/anders-breivik-hate-manifesto">Anders Breivik&#8217;s spider web of hate</a><br>The Guardian features a map of sites Anders Breivik mentions in his manifesto and the sites they link to.</li>
-<li><a href="http://edition.cnn.com/2011/OPINION/09/07/rushkoff.jobs.obsolete/index.html">Are jobs obsolete?</a><br>I agree, we shouldn&#8217;t treat the current information based society the same way we treated industria</li>
-<li><a href="http://english.aljazeera.net/indepth/opinion/2011/09/20119775453842191.html">Chomsky: 9/11 &#8211; was there an alternative?</a><br>Noam Chomsky reflects on 9/11. Both of them.</li>
-<li><a href="http://www.bloomberg.com/news/2011-09-08/in-china-don-t-dare-help-the-elderly-adam-minter.html">In China, Don&#8217;t Dare Help the Elderly: Adam Minter</a><br>In a country that always has been know to rever its eleder, this is a shocking new development.</li>
-</ul></div>
   
   
 

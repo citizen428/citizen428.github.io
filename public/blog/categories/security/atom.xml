@@ -4,7 +4,7 @@
   <title><![CDATA[Category: security | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/security/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-09-16T20:03:20+02:00</updated>
+  <updated>2012-09-23T20:55:19+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-09-23]]></title>
+    <link href="http://citizen428.net/blog/2012/09/23/information-overload-2012-09-23/"/>
+    <updated>2012-09-23T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/09/23/information-overload-2012-09-23</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://derstandard.at/1345166255203/In-Wien-fehlt-der-Diskurs-zu-Gentrifizierung">"In Wien fehlt der Diskurs zu Gentrifizierung"</a><br>On urban gentrification in Vienna (in German).</li>
+<li><a href="http://www.npr.org/blogs/krulwich/2012/09/12/160996525/odd-things-happen-when-you-chop-up-cities-and-stack-them-sideways">Odd Things Happen When You Chop Up Cities And Stack Them Sideways</a><br>Great visualization. And wandering around Istanbul is indeed a pleasure.</li>
+<li><a href="http://www.datagenetics.com/blog/september32012/index.html">PIN analysis</a><br>Interesting analysis of PIN numbers from a security point of view.</li>
+<li><a href="http://www.jadaliyya.com/pages/index/7365/was-the-arab-spring-really-worth-it_the-fascinatin">"Was the Arab Spring Really Worth It?": The Fascinating Arrogance of Power</a><br>"Arrogance" really is the only term that comes to mind here.</li>
+<li><a href="http://www.washingtonpost.com/world/national-security/iran-preparing-internal-version-of-internet/2012/09/19/79458194-01c3-11e2-b260-32f4a8db9b7e_story.html">Iran preparing internal version of Internet</a><br>One wonders if they actually think this will work...</li>
+<li><a href="http://www.antalik.com/how-much-food-is-eaten-around-the-world-in-one-week/">How Much Food is Eaten Around the World in One Week</a><br>Not really an article, but still quite interesting.</li>
+<li><a href="http://www.aljazeera.com/indepth/opinion/2012/09/20129168313878423.html">The fallacy of the phrase, 'the Muslim world'</a><br>Well put.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-29]]></title>
@@ -93,31 +111,6 @@
 
 
 <p><blockquote><p>Review of Black Hat by Obi-Wan Kenobi: "You will never find a more wretched hive of scum and villainy."</p><footer><strong>Henry Schwarz</strong> <cite><a href='http://henryschwarz.blogspot.co.uk/2012/06/black-hatted.html'>Black Hatted</a></cite></footer></blockquote></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-02-12]]></title>
-    <link href="http://citizen428.net/blog/2012/02/12/information-overload-2012-02-12/"/>
-    <updated>2012-02-12T00:00:00+01:00</updated>
-    <id>http://citizen428.net/blog/2012/02/12/information-overload-2012-02-12</id>
-    <content type="html"><![CDATA[<p><blockquote><p>In a nation that celebrates freedom of religion like no other, freedom not to be religious at all can be as hard to exercise as the right to swim the Atlantic.</p><footer><strong>Julian Baggini</strong> <cite><a href='http://www.ft.com/intl/cms/s/2/d2239780-4d4e-11e1-8741-00144feabdc0.html'>Atheism in America</a></cite></footer></blockquote></p>
-
-<ul>
-<li><a href="http://www.economist.com/node/21542763">The magic number</a><br>While I don't share some of the author's opinions, the new Indian identity scheme certainly could have a positive influence on many people's lives.</li>
-<li><a href="http://www.ft.com/intl/cms/s/2/d2239780-4d4e-11e1-8741-00144feabdc0.html">Atheism in America</a><br>Interesting article about the lives of atheists in the United States. I'm afraid there are parts of Austria where it wouldn't be too different.</li>
-<li><a href="http://blog.ioactive.com/2012/02/ssl-traffic-analysis-on-google-maps.html">I can still see your actions on Google Maps over SSL</a><br>A proof of concept for SSL traffic analyses/side channel-attacks, with an easy to understand video for your less security-aware friends.</li>
-<li><a href="http://www.independent.co.uk/news/uk/crime/government-may-sanction-nerveagent-use-on-rioters-scientists-fear-6612084.html">Government 'may sanction nerve-agent use on rioters', scientists fear</a><br>Brave new world, UK style.</li>
-<li><a href="http://www.universityobserver.ie/2012/02/08/the-man-who/">The Man Who</a><br>An article about Steven Moffat, writer of some of my favorite TV shows.</li>
-<li><a href="http://skeptoid.com/episodes/4219">Stalin's Human-Ape Hybrids</a><br>Skeptoid debunks the myth that Stalin tried to create an army of human-ape hybrids.</li>
-<li><a href="http://www.good.is/post/a-happy-flourishing-city-with-no-advertising">A Happy, Flourishing City With No Advertising</a><br>In 2006, the mayor of São Paulo banned all billboards and similar forms of advertising, in order to reduce "visual pollution".</li>
-<li><a href="http://www.theatlantic.com/magazine/archive/1977/10/the-gentle-art-of-poverty/8241/?single_page=true/">The Gentle Art of Poverty</a><br>This article from 1977 tells the story of an old man dealing with poverty in Southern California. An intense read, despite the bad copy editing.</li>
-<li><a href="http://www.wired.com/epicenter/2012/02/perpetual-window-into-gmail/">Wired Opinion: The Perpetual, Invisible Window Into Your Gmail Inbox</a><br>Personally I regularly check all app permissions. I also have a Gmail label "Registrations" where I store signup mails and occasionally work through that and close/delete all accounts I don't use regularly.</li>
-<li><a href="http://derstandard.at/1328507315096/Ich-empfand-eine-unbaendige-Wut">"Ich empfand eine unbändige Wut"</a><br>Interview with a former member of El Salvador's guerilla movement, who was part of the first unit to discover the <a href="http://en.wikipedia.org/wiki/El_Mozote_massacre">El Mozote massacre</a>.</li>
-</ul>
-
-
-<p><blockquote><p>Doctor Who, for the uninitiated, is a show featuring an “eleven-hundred-and-three-year-old” alien who travels through space and time in a police box (called the TARDIS – Time and Relative Dimension in Space), fighting monsters and finding friends to take along with him, only ninety per cent of which have been very attractive women.</p><footer><strong>Emer Sugrue</strong> <cite><a href='http://www.universityobserver.ie/2012/02/08/the-man-who/'>The Man Who</a></cite></footer></blockquote></p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="A couple of month ago I first heard about Clojure, a Lisp-like language sitting on top of the JVM. Alas I didn&#8217;t yet have time to have a closer &hellip;">
+  <meta name="description" content="While browsing through my Delicious bookmarks the other day, I realized that over time I had accumulated quite a few dead links (about 5% of my &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,74 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/06/unsavory-%25e2%2580%2594-get-rid-of-stale-delicious-bookmarks/">Unsavory — Get Rid of Stale Delicious Bookmarks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-06T00:00:00+02:00" pubdate data-updated="true">Jun 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>While browsing through <a href="http://delicious.com/citizen428">my Delicious bookmarks</a> the other day, I realized that over time I had accumulated quite a few dead links (about 5% of my collection). I then looked for a <strong>simple</strong> tool to automatically remove them, but couldn&#8217;t find one that appealed to me, so I wrote my own script called <em>unsavory</em> which you can find on GitHub:</p>
+<p><a href="http://github.com/citizen428/unsavory/tree/master">http://github.com/citizen428/unsavory/tree/master</a></p>
+<p>It uses HTTParty to generate a list of all your bookmarks, which then get checked individually with Net::<span class="caps">HTTP</span>. Every link that returns an <span class="caps">HTTP</span> status code of 404 will automatically be removed (no questions asked, no undo), links with a status code other than 200 (OK) won&#8217;t be changed but will display some information in case you want to fix them manually. Here&#8217;s some example output (links anonymized for this post):</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Enter Delicious username: citizen428
+</span><span class='line'>  Enter Delicious password: *********
+</span><span class='line'>
+</span><span class='line'>  citizen428 has 664 bookmarks.
+</span><span class='line'>  Processing URL #0001: OK
+</span><span class='line'>  Processing URL #0002: OK
+</span><span class='line'>  Processing URL #0003: OK
+</span><span class='line'>  Processing URL #0004: OK
+</span><span class='line'>  Processing URL #0005: OK
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0013: 405: http://...
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0074: 302: http://...
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0086: Connection reset by peer - https://...</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Not bad for under 60 lines of code. :-) I hope this is useful to some of you, I do have some features I plan on adding to this in the future.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -553,48 +621,6 @@
 <p>And that&#8217;s the 2 books I&#8217;m currently reading:</p>
 <p><b>Nancy L. Clark:</b> &#8220;South Africa: The Rise and Fall of Apartheid&#8221;<br />
 <b>Will Ferguson:</b> &#8220;Hokkaido Highway Blues&#8221;</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/04/09/learning-haskell/">Learning Haskell</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-04-09T00:00:00+02:00" pubdate data-updated="true">Apr 9<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To get my mind off Ruby I recently started dabbling in Haskell. I really like what I&#8217;ve seen so far and it seems I&#8217;m finally starting to understand functional programming (my two attempts with <a href="http://www.gigamonkeys.com/book/">Practical Common Lisp</a> never got past the first few chapters).</p>
-<p>In case you are interested in Haskell too, here&#8217;s a list of the resources I use:<br />
-<ul><br />
-<li><a href="http://en.wikibooks.org/wiki/Haskell">Haskell :: Functional Programming with Types</a>: A very nice <a href="http://wikibooks.org">Wikibook</a> covering a wide range of topics from the very basics to Monads, Arrows and Zippers.</li><br />
-<li><a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good</a>: A nice and colorful tutorial in the spirit of <a href="http://poignantguide.net/ruby/">Why&#8217;s (Poignant) Guide to Ruby</a></li><br />
-<li><a href="http://book.realworldhaskell.org/">Real World Haskell</a>: Yes, the entire book can be read online (including per paragraph comments!) for free! I&#8217;ve only just started reading this, since I first want to brush up my basic Haskell a bit, but once I&#8217;m past the <a href="http://projecteuler.net/">Project Euler</a> stage this is probably gonna be very nice.</li><br />
-<li><a href="http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours">Write Yourself a Scheme in 48 Hours</a>: Now that I&#8217;m slowly getting the hang of this functional programming thing, why not write an interpreter for one functional language in another? &#8220;Along the way, you&#8217;ll learn Haskell&#8217;s I/O, mutable state, dynamic typing, error handling, and parsing features. By the time you finish, you should be fairly fluent in both Haskell and Scheme&#8221;. Sounds good to me! :)</li></p>
-</ul></div>
   
   
 
