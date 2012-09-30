@@ -4,7 +4,7 @@
   <title><![CDATA[Category: science | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/science/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-09-23T20:55:19+02:00</updated>
+  <updated>2012-09-30T20:06:28+02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2012-09-30]]></title>
+    <link href="http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30/"/>
+    <updated>2012-09-30T00:00:00+02:00</updated>
+    <id>http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30</id>
+    <content type="html"><![CDATA[<p><blockquote><p>[W]e’re rushing to meet so many deadlines that we hardly register that what we need most are lifelines.</p><footer><strong>Pico Iyer</strong> <cite><a href='http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&amp;pagewanted=all'>The Joy of Quiet</a></cite></footer></blockquote></p>
+
+<ul>
+<li><a href="http://www.motherjones.com/politics/2012/02/mac-mcclelland-free-online-shipping-warehouses-labor">I Was a Warehouse Wage Slave</a><br>This sounds like early 19th century, not early 21st.</li>
+<li><a href="http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&amp;pagewanted=all">The Joy of Quiet</a><br>A joy indeed.</li>
+<li><a href="http://www.edri.org/cleanIT">Clean IT – Leak Shows Plans For Large-Scale, Undemocratic Surveillance Of All Communications</a><br>This reads like a marketing effort for darknets.</li>
+<li><a href="http://www.wired.com/design/2012/09/broad-sustainable-building-instant-skyscraper/all/?pid=917&amp;viewall=true">Meet the Man Who Built a 30-Story Building in 15 Days</a><br>He's Chinese, in case you wonder.</li>
+<li><a href="http://www.mentalfloss.com/blogs/archives/79429">How Did the Duck Hunt Gun Work? </a><br>Another childhood mistery solved.</li>
+<li><a href="http://derstandard.at/1347492611889/Lettland-Wirtschaftskrise-Emigration-demographische-Katastrophe">Lettland: Der Musterschüler fällt durch</a><br>(in German).</li>
+<li><a href="http://www.guardian.co.uk/business/2012/sep/21/drugs-industry-scandal-ben-goldacre">The drugs don't work: a modern medical scandal</a><br>Most articles about pharmaceutical companies leave one slightly worried (or worse). This one is no exception.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-09]]></title>
@@ -84,24 +104,6 @@
 <li><a href="http://slifty.com/2012/08/a-tor-of-the-dark-web/">A Tor of the Dark Web</a><br>This lighthearted article is a good introduction to Tor that you can send on to your less tech-savvy friends.</li>
 <li><a href="http://pod2g-ios.blogspot.co.uk/2012/08/never-trust-sms-ios-text-spoofing.html">Never trust SMS: iOS text spoofing</a><br>This is obviously a scammer's dream. I wonder how Android phones deal with this.</li>
 <li><a href="http://online.wsj.com/article/SB10000872396390444772404577589270444059332.html">The Panic Over Fukushima</a><br>The WSJ does some math related to radiatin in Fukushima.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-07-29]]></title>
-    <link href="http://citizen428.net/blog/2012/07/29/information-overload-2012-07-29/"/>
-    <updated>2012-07-29T00:00:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/07/29/information-overload-2012-07-29</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://bosker.wordpress.com/2012/07/23/the-prisoners-dilemma/">The Prisoner’s Dilemma</a><br>Nice article on the prisoner's dillema, including an interactive toy to play with various strategies.</li>
-<li><a href="http://scienceblogs.com/startswithabang/2012/07/18/how-big-is-the-entire-universe/">How Big is the Entire Universe?</a><br>The short answer: very big. I love articles like this one.</li>
-<li><a href="http://www.redorbit.com/news/science/1112661209/young-gorillas-observed-dismantling-poacher-snares/">Young Gorillas Observed Dismantling Poacher Snares</a><br>Go gorillas!</li>
-<li><a href="http://www.theregister.co.uk/2012/07/26/andre_hedrick/">RIP Andre Hedrick: The engineer who kept the PC open</a><br>Another "famous" programmer takes his own life :-(</li>
-<li><a href="http://derstandard.at/1342947903062/Lasst-100-Moscheen-bluehen">Lasst 100 Moscheen blühen</a><br>On recent developments in Istanbul, a city very dear to me for various reasons (in German).</li>
-<li><a href="http://rubylearning.com/blog/2012/07/23/the-ongoing-vigil-of-software-security/">The Ongoing Vigil of Software Security</a><br>No news for the seasoned security professional, but a good summary of security measures for software development projects.</li>
-<li><a href="http://mondediplo.com/2012/07/04egypt">Egypt’s first civilian president</a><br>I know the Egyption elections have been over for a while, but I didn't get around to read this article until now.</li>
 </ul>
 
 ]]></content>
