@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-11T23:18:03-04:00</updated>
+  <updated>2012-10-12T18:52:34-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -20,29 +20,55 @@
     <id>http://citizen428.net/blog/2011/04/08/motivating-methodfinder-feedback</id>
     <content type="html"><![CDATA[<p>Apparently there was a certain demand for "MethodFinder":https://github.com/citizen428/methodfinder and after being mentioned on "Ruby5":http://ruby5.envylabs.com, it now has almost 150 followers on GitHub as well as over 200 downloads on Rubygems, which is more than I ever expected.  There's also been some very nice feedback on Twitter:</p>
 
-<p><blockquote><p>MethodFinder, where have you been all my life?</p><footer><strong>@rbates</strong> <cite><a href='http://twitter.com/#!/metasoarous/status/55714164802453504'>twitter.com/#!/metasoarous/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @rbates http://twitter.com/#!/metasoarous/status/55714164802453504 %}
+MethodFinder, where have you been all my life?
+{% endblockquote %}</p>
 
-<p><blockquote><p>[...] that MethodFinder is quite awesome though I'm not sure I've ever needed one</p><footer><strong>@anentropic</strong> <cite><a href='http://twitter.com/#!/anentropic/status/53086564179382272'>twitter.com/#!/anentropic/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @anentropic http://twitter.com/#!/anentropic/status/53086564179382272 %}
+[...] that MethodFinder is quite awesome though I'm not sure I've ever needed one
+{% endblockquote %}</p>
 
-<p><blockquote><p>MethodFinder is one of the coolest things about Squeak. Neat to see it's been ported to Ruby</p><footer><strong>@avibryant</strong> <cite><a href='http://twitter.com/#!/caldeiro/status/53078298682593280'>twitter.com/#!/caldeiro/status/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @avibryant http://twitter.com/#!/caldeiro/status/53078298682593280 %}
+MethodFinder is one of the coolest things about Squeak. Neat to see it's been ported to Ruby
+{% endblockquote %}</p>
 
-<p><blockquote><p>MethodFinder in ruby has to be the coolest Gem I've ever seen</p><footer><strong>@bilco105</strong> <cite><a href='http://twitter.com/bilco105/status/53052032973676544'>twitter.com/bilco105/status/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @bilco105 http://twitter.com/bilco105/status/53052032973676544 %}
+MethodFinder in ruby has to be the coolest Gem I've ever seen
+{% endblockquote %}</p>
 
-<p><blockquote><p>geniale</p><footer><strong>@microspino</strong> <cite><a href='http://twitter.com/microspino/status/53020300220182528'>twitter.com/microspino/status/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @microspino http://twitter.com/microspino/status/53020300220182528 %}
+geniale
+{% endblockquote %}</p>
 
-<p><blockquote><p>I loved Smalltalk's method finder. Now there is one for Ruby. Cool!</p><footer><strong>@wallingf</strong> <cite><a href='http://twitter.com/#!/wdjunaidi/status/52872212788678657'>twitter.com/#!/wdjunaidi/status/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @wallingf http://twitter.com/#!/wdjunaidi/status/52872212788678657 %}
+ I loved Smalltalk's method finder. Now there is one for Ruby. Cool!
+{% endblockquote %}</p>
 
-<p><blockquote><p>This is one neat piece of code</p><footer><strong>@lukaszkorecki</strong> <cite><a href='http://twitter.com/lukaszkorecki/status/52824077538312192'>twitter.com/lukaszkorecki/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @lukaszkorecki http://twitter.com/lukaszkorecki/status/52824077538312192 %}
+This is one neat piece of code
+{% endblockquote %}</p>
 
-<p><blockquote><p>Hulk WANTS for #clojure.</p><footer><strong>@marick</strong> <cite><a href='http://twitter.com/#!/garybernhardt/status/52801103615635456'>twitter.com/#!/garybernhardt/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @marick http://twitter.com/#!/garybernhardt/status/52801103615635456 %}
+Hulk WANTS for #clojure.
+{% endblockquote %}</p>
 
-<p><blockquote><p>Holy shitballs, I need to learn SmallTalk</p><footer><strong>@batasrki</strong> <cite><a href='http://twitter.com/#!/batasrki/status/52799132351463424'>twitter.com/#!/batasrki/status/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @batasrki http://twitter.com/#!/batasrki/status/52799132351463424 %}
+Holy shitballs, I need to learn SmallTalk
+{% endblockquote %}</p>
 
-<p><blockquote><p>This is great for Ruby newbies like me !</p><footer><strong>@stiiifff</strong> <cite><a href='http://twitter.com/#!/stiiifff/status/52792106460266496'>twitter.com/#!/stiiifff/status/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @stiiifff http://twitter.com/#!/stiiifff/status/52792106460266496 %}
+ This is great for Ruby newbies like me !
+{% endblockquote %}</p>
 
-<p><blockquote><p></p></p><p><h1>Ruby method finder ftw!</h1></p><p><p></p><footer><strong>@kuroi_kenshi</strong> <cite><a href='http://twitter.com/kuroi_kenshi/status/52791499364118528'>twitter.com/kuroi_kenshi/status/&hellip;</a></cite></footer></blockquote></p>
+<p>{% blockquote @kuroi_kenshi http://twitter.com/kuroi_kenshi/status/52791499364118528 %}</p>
 
-<p><blockquote><p>Really amazing!!</p><footer><strong>@5pidou</strong> <cite><a href='http://twitter.com/5pidou/status/52788853618122752'>twitter.com/5pidou/status/&hellip;</a></cite></footer></blockquote></p>
+<h1>Ruby method finder ftw!</h1>
+
+<p>{% endblockquote %}</p>
+
+<p>{% blockquote @5pidou http://twitter.com/5pidou/status/52788853618122752 %}
+Really amazing!!
+{% endblockquote %}</p>
 
 <p>That's quite motivating and I'm currently experimenting with some ideas that might eventually lead to another tool useful for Ruby learners.</p>
 ]]></content>
@@ -215,14 +241,12 @@ Ruby, Clojure, Bash, Python, JavaScript, Scheme, Haskell, SQL</p>
     <content type="html"><![CDATA[<p>Ever since I started this blog in January 2005 it was powered by <a href="http://s9y.org/">Serendipity</a> (aka S9Y). Lately however I became more and more dissatisfied with it for various reasons, so I finally took the plunge and moved it over to Wordpress. The whole process was surprisingly painless, but did have some caveats, so I decided to post a short description of what I did:</p>
 
 <p>There is a script for migrating S9Y to Wordpress that has been floating around for a while and has been patched/modified by various people. Luckily I found version <a href="http://snowulf.com/2010/06/11/serendipity-to-wordpress-post-import/">1.4</a>, which got updated very recently (June 2010). For some reason it didn't work for me when I tried to migrate between S9Y 1.5.3 and Wordpress 3.0.1 directly, so I installed Wordpress 2.9.2 first, migrated the content and then upgraded to the most recent version. The import itself was very smooth and successful, categories (which I stopped using a long time ago), users, posts and comments all made it to the new blog! Once you are done importing, you can run several SQL statements provided in <a href="http://code.google.com/p/snowulf/source/browse/trunk/wordpress/s9y-to-wp/readme.txt">readme.txt</a>, so that your new posts will have the same IDs as the old ones, which is necessary for redirecting. For that purpose I added some <a href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html">Apache mod_rewrite </a> rules, so that old post URLs will redirect to the new locations (and so will the RSS and Atom feed so subscriptions don't get interrupted):
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>RewriteEngine on
-</span><span class='line'>RewriteRule ^/archives/([0-9]+)-.*$ /archives/$1 [R,L]
-</span><span class='line'>RewriteRule ^/feeds/index.rss2 /feed [R,L]
-</span><span class='line'>RewriteRule ^/feeds/atom.xml /feed/atom [R,L]</span></code></pre></td></tr></table></div></figure></notextile></div>
+{% codeblock %}
+RewriteEngine on
+RewriteRule ^/archives/([0-9]+)-.*$ /archives/$1 [R,L]
+RewriteRule ^/feeds/index.rss2 /feed [R,L]
+RewriteRule ^/feeds/atom.xml /feed/atom [R,L]
+{% endcodeblock %}
 There's still quite a bit to do though: first I need to find a theme I like (I might even stick with the one I'm using now and just tweak it a bit), then lots of posts need fixes to their formatting because they were written in <a href="http://www.textism.com/tools/textile/">Textile</a> (I fixed the most recent 2 so far, it's rather quick and painless). There are also some widgets and static pages I want to move over from the old blog, so I guess this site will be a work in progress for a while. I am however very satisfied with Wordpress and glad I finally did this move I put off for so long.</p>
 ]]></content>
   </entry>

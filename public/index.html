@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="[W]e’re rushing to meet so many deadlines that we hardly register that what we need most are lifelines.Pico Iyer The Joy of Quiet I Was a Warehouse &hellip;">
+  <meta name="description" content="This was originally written on October 6th as an email, but I only got around to modify and post it here now. &#8220;Bon bini&#8221; means &#8220; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,73 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/12/bon-bini/">Bon Bini</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-12T17:55:00-04:00" pubdate data-updated="true">Oct 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>This was originally written on October 6th as an email, but I only got around to modify and post it here now.</em></p>
+
+<p>&#8220;Bon bini&#8221; means &#8220;welcome&#8221; in Papiamento, the creole language of the
+<a href="http://en.wikipedia.org/wiki/ABC_islands_(Lesser_Antilles)">ABC islands</a>, which seems fitting, since I&#8217;m writing this from Curaçao.
+Yes, that&#8217;s right, I&#8217;m in the Caribbean right now. But more on that
+later&#8230;</p>
+
+<p>Let&#8217;s start from the beginning: I&#8217;m happily unemployed and homeless
+again, which can only mean one thing: prolonged travelling! Before
+anyone wonders, &#8220;I&#8221; is still a &#8220;we&#8221; and P. is somewhere around here, I
+promise.</p>
+
+<p>Back to the present: our first destination on this trip is Curaçao,
+mostly because we found a really cheap one-way flight with Air Berlin,
+which in my book is a rather good reason to go almost anywhere (except
+for you, Dubai, I&#8217;m afraid we&#8217;ll never be friends). Except for the 45
+minute delay the flight via Duesseldorf was rather uneventful,
+although the lack of in-seat IFE combined with slightly annoying
+neighbors made the almost 10 hours seem somewhat longer. Anyway, we
+got here safe and sound on October 2nd, met some really cool people right
+away and have been happily idling away the last couple of days.
+Unfortunately two of our new friends already moved on to Columbia, but
+the remaining four of our little hostel family are holding up bravely
+and are going to <a href="http://en.wikipedia.org/wiki/Klein_Cura%C3%A7ao">Klein Curaçao</a> tomorrow as consolation.</p>
+
+<p>We have a flight to Paraguay on October 14th, and while 11 days on
+Curaçao may seem like stretching it a bit, this is a much-needed break
+after a rather stressful period back in Vienna.</p>
+
+<p>Since we only got here a couple of days ago it&#8217;s too
+early for any profound observations, but expect more impressions of
+backpacking on a Caribbean island in the next post.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -509,93 +576,6 @@
 <li><a href="http://arstechnica.com/apple/2012/07/os-x-10-8/">OS X 10.8 Mountain Lion: the Ars Technica review</a><br>There&#8217;s no better way to inform yourself about a new OS X release than the Ars Technica review that comes with it.</li>
 </ul>
 
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/30/ruby-left-section-for-infix-operators/">Ruby — Left Section for Infix Operators</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-30T23:24:00-04:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Let me admit right away that this is yet another &#8220;because I can&#8221; type of post with little practical use. With that out of the way, today&#8217;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&#8217;s an example:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="err">λ</span><span class="o">&gt;</span> <span class="n">map</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">]</span>
-</span><span class='line'><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>As you can see the function to be <code>map</code>ped is specified with the <a href="http://www.haskell.org/haskellwiki/Partial_application">partially applied</a> function <code>(2+)</code> (or <code>(+2)</code> for that matter).</p>
-
-<p>Here&#8217;s how we would have to write the same code in Ruby:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This could also be written in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree</a> way, but alas that would make the code rather hard to understand for less experienced Rubyists:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="ss">:+</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But because Ruby is as flexible as it is, adding partial application is actually really trivial:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
-</span><span class='line'>  <span class="k">alias</span> <span class="ss">:add</span> <span class="ss">:+</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">+</span><span class="p">(</span><span class="n">o</span><span class="o">=</span><span class="kp">nil</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">o</span> <span class="p">?</span> <span class="nb">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">o</span><span class="p">)</span> <span class="p">:</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">self</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And now we can do this:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">.</span><span class="n">+</span><span class="p">)</span> <span class="c1">#=&gt; [3, 4, 5]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Not too bad I think and rather consistent with Ruby&#8217;s overall style. Alas I don&#8217;t think we are likely to see partial application on a language level any time soon though&#8230;</p>
 </div>
   
   

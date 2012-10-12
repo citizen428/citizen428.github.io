@@ -4,7 +4,7 @@
   <title><![CDATA[Category: freedom | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/freedom/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-11T23:18:03-04:00</updated>
+  <updated>2012-10-12T18:52:34-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -18,7 +18,9 @@
     <link href="http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30/"/>
     <updated>2012-09-30T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30</id>
-    <content type="html"><![CDATA[<p><blockquote><p>[W]e’re rushing to meet so many deadlines that we hardly register that what we need most are lifelines.</p><footer><strong>Pico Iyer</strong> <cite><a href='http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&amp;pagewanted=all'>The Joy of Quiet</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Pico Iyer http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&amp;pagewanted=all The Joy of Quiet %}
+[W]e’re rushing to meet so many deadlines that we hardly register that what we need most are lifelines.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.motherjones.com/politics/2012/02/mac-mcclelland-free-online-shipping-warehouses-labor">I Was a Warehouse Wage Slave</a><br>This sounds like early 19th century, not early 21st.</li>
@@ -73,7 +75,9 @@
     <link href="http://citizen428.net/blog/2012/02/05/information-overload-2012-02-05/"/>
     <updated>2012-02-05T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/02/05/information-overload-2012-02-05</id>
-    <content type="html"><![CDATA[<p><blockquote><p>[T]oday's strangeness, while only a few mouse-clicks away from anyone, becomes difficult to find because it has to occur to you to Google it. You may be able to Google everything, but the trick is figuring what you need to Google.</p><footer><strong>William Gibson</strong> <cite><a href='http://www.theverge.com/2012/1/24/2724370/william-gibson-intervie'>An Interview With William Gibson</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote William Gibson http://www.theverge.com/2012/1/24/2724370/william-gibson-intervie An interview with William Gibson %}
+[T]oday's strangeness, while only a few mouse-clicks away from anyone, becomes difficult to find because it has to occur to you to Google it. You may be able to Google everything, but the trick is figuring what you need to Google.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.wired.com/geekdad/2012/01/everything-about-learning/">Everything You Thought You Knew About Learning Is Wrong</a><br>I like articles on learning, this one has a few good tips.</li>
@@ -89,7 +93,9 @@
 </ul>
 
 
-<p><blockquote><p>The only other thing you could get the internet to agree on was if they tried to institute a ban on cat pictures.</p><footer><strong>Paul Tassi</strong> <cite><a href='http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/'>You Will Never Kill Piracy, and Piracy Will Never Kill You</a></cite></footer></blockquote></p>
+<p>{% blockquote Paul Tassi http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/ You Will Never Kill Piracy, and Piracy Will Never Kill You %}
+The only other thing you could get the internet to agree on was if they tried to institute a ban on cat pictures.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   

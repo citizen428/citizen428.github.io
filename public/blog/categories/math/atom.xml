@@ -4,7 +4,7 @@
   <title><![CDATA[Category: math | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/math/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-11T23:18:03-04:00</updated>
+  <updated>2012-10-12T18:52:34-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -35,7 +35,9 @@
     <link href="http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17/"/>
     <updated>2012-06-17T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17</id>
-    <content type="html"><![CDATA[<p><blockquote><p>[H]e worries that economic and ecological collapse will come much sooner than we think, and that the time to start behaving in an anarchic way—taking care of ourselves instead of deferring to government and big business—is now. He wants, in his words, for people to have a "soft landing" when the global shit hits the global fan.</p><footer><strong>Brendan Kiley</strong> <cite><a href='http://www.thestranger.com/seattle/anarchy-is-boring/Content?oid=13597692'>Anarchy Is Boring</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Brendan Kiley http://www.thestranger.com/seattle/anarchy-is-boring/Content?oid=13597692 Anarchy Is Boring %}
+[H]e worries that economic and ecological collapse will come much sooner than we think, and that the time to start behaving in an anarchic way—taking care of ourselves instead of deferring to government and big business—is now. He wants, in his words, for people to have a "soft landing" when the global shit hits the global fan.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://esr.ibiblio.org/?p=4386">Why I think RMS is a fanatic, and why that matters.</a><br>The most current "RMS is a fanatic" post by ESR. While he may be right that pragmatism sells better, I always admired Stallman's approach.</li>
@@ -56,7 +58,9 @@
     <link href="http://citizen428.net/blog/2012/06/10/information-overload-2012-06-10/"/>
     <updated>2012-06-10T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/06/10/information-overload-2012-06-10</id>
-    <content type="html"><![CDATA[<p><blockquote><p>[S]omeone who takes MDPV may find himself feeling extremely paranoid and panicky, but he’s unlikely to believe that a giant lizard wearing a tuxedo is about to eat his cat.</p><footer><strong>David DiSalvo</strong> <cite><a href='http://www.forbes.com/sites/daviddisalvo/2012/06/05/the-straight-dope-on-what-bath-salts-do-to-your-brain-and-why-theyre-dangerous/'>The Straight Dope on What Bath Salts Do to Your Brain and Why They're Dangerous</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote David DiSalvo http://www.forbes.com/sites/daviddisalvo/2012/06/05/the-straight-dope-on-what-bath-salts-do-to-your-brain-and-why-theyre-dangerous/ The Straight Dope on What Bath Salts Do to Your Brain and Why They're Dangerous %}
+[S]omeone who takes MDPV may find himself feeling extremely paranoid and panicky, but he’s unlikely to believe that a giant lizard wearing a tuxedo is about to eat his cat.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.nytimes.com/2012/06/03/opinion/sunday/we-only-think-we-know-the-truth-about-salt.html?_r=2&amp;pagewanted=all">Salt, We Misjudged You</a><br>Like with many things, I think listening to your body will solve this controversy in a rather natural manner.</li>
@@ -72,7 +76,9 @@
 </ul>
 
 
-<p><blockquote><p>Review of Black Hat by Obi-Wan Kenobi: "You will never find a more wretched hive of scum and villainy."</p><footer><strong>Henry Schwarz</strong> <cite><a href='http://henryschwarz.blogspot.co.uk/2012/06/black-hatted.html'>Black Hatted</a></cite></footer></blockquote></p>
+<p>{% blockquote Henry Schwarz http://henryschwarz.blogspot.co.uk/2012/06/black-hatted.html Black Hatted %}
+Review of Black Hat by Obi-Wan Kenobi: "You will never find a more wretched hive of scum and villainy."
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   
@@ -102,7 +108,9 @@
     <link href="http://citizen428.net/blog/2012/03/18/information-overload-2012-03-18/"/>
     <updated>2012-03-18T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/03/18/information-overload-2012-03-18</id>
-    <content type="html"><![CDATA[<p><blockquote><p>Nor are introverts necessarily shy. Shyness is the fear of social disapproval or humiliation, while introversion is a preference for environments that are not overstimulating. Shyness is inherently painful; introversion is not.</p><footer><strong>Susan Cain</strong> <cite><a href='http://www.guardian.co.uk/science/2012/mar/13/why-the-world-needs-introverts'>Why the World Needs Introverts</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Susan Cain http://www.guardian.co.uk/science/2012/mar/13/why-the-world-needs-introverts Why the world needs introverts %}
+Nor are introverts necessarily shy. Shyness is the fear of social disapproval or humiliation, while introversion is a preference for environments that are not overstimulating. Shyness is inherently painful; introversion is not.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://denisdutton.com/cold_reading.htm">The Cold Reading Technique</a><br/>A long and very informative article on <a href="http://en.wikipedia.org/wiki/Cold_reading">cold reading</a>.</li>
