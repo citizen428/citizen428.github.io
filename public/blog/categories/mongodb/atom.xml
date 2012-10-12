@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mongodb | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/mongodb/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-09-30T20:06:28+02:00</updated>
+  <updated>2012-10-11T23:18:03-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Fun With Twitter and MongoDB]]></title>
     <link href="http://citizen428.net/blog/2011/10/28/fun-with-twitter-and-mongodb/"/>
-    <updated>2011-10-28T20:36:00+02:00</updated>
+    <updated>2011-10-28T20:36:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/10/28/fun-with-twitter-and-mongodb</id>
     <content type="html"><![CDATA[<p>I'm currently reading the early access version of <a href="http://www.manning.com/banker/">MongoDB in Action</a>, so I felt like playing around with it a bit (in fact I do use it for <a href="http://happynerds.net">Happynerds.net</a>, but that's not very exciting). I then remembered that I recently stumbled upon a service called <a href="http://export.synack.me/">The Exporter</a>, which I had used to download all my tweets from Twitter (as of October 4th 2011). So why not use MongoDB to find out which users I retweet most often?</p>
 
@@ -214,7 +214,7 @@
   <entry>
     <title type="html"><![CDATA[Fun with Sinatra, Heroku and MongoDB]]></title>
     <link href="http://citizen428.net/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb/"/>
-    <updated>2009-12-06T00:00:00+01:00</updated>
+    <updated>2009-12-06T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb</id>
     <content type="html"><![CDATA[<p>I've been toying around with the idea for a small website lately, but never actually got around to do it. In an attempt to clear out my personal to do list I finally motivated myself to start yesterday, and I have to say the following combination of tools is not only insanely efficient, but also really fun to work with:</p>
 

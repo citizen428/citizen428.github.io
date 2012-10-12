@@ -4,7 +4,7 @@
   <title><![CDATA[Category: lisp | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/lisp/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-09-30T20:06:28+02:00</updated>
+  <updated>2012-10-11T23:18:03-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Review: Land of Lisp]]></title>
     <link href="http://citizen428.net/blog/2011/02/03/review-land-of-lisp/"/>
-    <updated>2011-02-03T00:00:00+01:00</updated>
+    <updated>2011-02-03T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/02/03/review-land-of-lisp</id>
     <content type="html"><![CDATA[<p><i>Disclaimer: The awesome folks at <a href="http://www.nostarch.com/">No Starch Press</a> were nice enough to provide me with a free copy of the book reviewed here, but what I'm about to write has not been influenced by this. I just wanted to get this out of the way...</i></p>
 
@@ -40,7 +40,7 @@
   <entry>
     <title type="html"><![CDATA[Learning Haskell]]></title>
     <link href="http://citizen428.net/blog/2009/04/09/learning-haskell/"/>
-    <updated>2009-04-09T00:00:00+02:00</updated>
+    <updated>2009-04-09T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2009/04/09/learning-haskell</id>
     <content type="html"><![CDATA[<p>To get my mind off Ruby I recently started dabbling in Haskell. I really like what I've seen so far and it seems I'm finally starting to understand functional programming (my two attempts with "Practical Common Lisp":http://www.gigamonkeys.com/book/ never got past the first few chapters).</p>
 
@@ -59,7 +59,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby's Lisp features]]></title>
     <link href="http://citizen428.net/blog/2006/04/30/rubys-lisp-features/"/>
-    <updated>2006-04-30T00:00:00+02:00</updated>
+    <updated>2006-04-30T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2006/04/30/rubys-lisp-features</id>
     <content type="html"><![CDATA[<p>Not too long ago, Edward Kenworthy "inquired about 'Ruby's lisp features'":http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179515 on ruby-talk. "Matz' answer":http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179642 was as follows:</p>
 

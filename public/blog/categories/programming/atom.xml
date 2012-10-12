@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-09-30T20:06:28+02:00</updated>
+  <updated>2012-10-11T23:18:03-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-09]]></title>
     <link href="http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09/"/>
-    <updated>2012-09-09T00:00:00+02:00</updated>
+    <updated>2012-09-09T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09</id>
     <content type="html"><![CDATA[<p>I was rather busy this week, so this Information Overload is super short.</p>
 
@@ -32,7 +32,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
     <link href="http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
-    <updated>2012-07-30T23:24:00+02:00</updated>
+    <updated>2012-07-30T23:24:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
     <content type="html"><![CDATA[<p>Let me admit right away that this is yet another "because I can" type of post with little practical use. With that out of the way, today's topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here's an example:</p>
 
@@ -93,7 +93,7 @@
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
     <link href="http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
-    <updated>2012-07-28T10:15:00+02:00</updated>
+    <updated>2012-07-28T10:15:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
     <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
 
@@ -110,7 +110,7 @@
   <entry>
     <title type="html"><![CDATA[Shenanigans]]></title>
     <link href="http://citizen428.net/blog/2012/07/03/shenanigans/"/>
-    <updated>2012-07-03T19:46:00+02:00</updated>
+    <updated>2012-07-03T19:46:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/07/03/shenanigans</id>
     <content type="html"><![CDATA[<p>About 1.5 month ago I finally packaged some of my Ruby extension methods into the aptly named <a href="https://rubygems.org/gems/shenanigans">Shenanigans</a> gem. It's similar to <a href="http://rubyworks.github.com/facets/">Facets</a> or <a href="http://as.rubyonrails.org/">ActiveSupport</a>, but probably less useful to most people. Also some of the methods actually are in Facets, although sometimes with different names or slightly different semantics. Anyway, since some people told me they actually do like the gem, here's a quick summary of what the different methods do and how they can be useful.</p>
 
@@ -133,7 +133,7 @@
   <entry>
     <title type="html"><![CDATA[Rails — Display branch in development mode]]></title>
     <link href="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/"/>
-    <updated>2012-06-12T21:33:00+02:00</updated>
+    <updated>2012-06-12T21:33:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode</id>
     <content type="html"><![CDATA[<p>At work we are building a Rails app that's supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it'd be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn't have been any simpler:</p>
 

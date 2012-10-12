@@ -4,7 +4,7 @@
   <title><![CDATA[Category: geek | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/geek/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-09-30T20:06:28+02:00</updated>
+  <updated>2012-10-11T23:18:03-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Random ramblings]]></title>
     <link href="http://citizen428.net/blog/2007/07/08/random-ramblings/"/>
-    <updated>2007-07-08T00:00:00+02:00</updated>
+    <updated>2007-07-08T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2007/07/08/random-ramblings</id>
     <content type="html"><![CDATA[<p>*) Ordered a presale ticket for the "Chaos Communication Camp 2007":https://events.ccc.de/camp/2007/Intro/</p>
 
@@ -33,7 +33,7 @@
   <entry>
     <title type="html"><![CDATA[XPath (good|mad)ness]]></title>
     <link href="http://citizen428.net/blog/2007/01/04/xpath-goodmadness/"/>
-    <updated>2007-01-04T00:00:00+01:00</updated>
+    <updated>2007-01-04T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2007/01/04/xpath-goodmadness</id>
     <content type="html"><![CDATA[<p>Today I started writing a useful little "Greasemonkey":http://greasemonkey.mozdev.org/ "userscript":http://userscripts.org/ for a "browser-based MMRPG":http://www.pardus.at I'm playing. Although I'm no JavaScript guru I feel somewhat confident in the language and am quite fond of "XPath":http://www.w3.org/TR/xpath ever since I joined the "hoodwink.d":http://hoodwinkd.hobix.com/ community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. "funky") from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here's the working result:</p>
 

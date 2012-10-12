@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-09-30T20:06:28+02:00</updated>
+  <updated>2012-10-11T23:18:03-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[My way: Ruby, Sinatra, Heroku]]></title>
     <link href="http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku/"/>
-    <updated>2009-03-25T00:00:00+01:00</updated>
+    <updated>2009-03-25T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku</id>
     <content type="html"><![CDATA[<p>"RubyLearning":http://rubylearning.org just had a nice one week introductory course on "Sinatra":http://www.sinatrarb.com/, a "DSL":http://en.wikipedia.org/wiki/Domain-specific_programming_language for easily creating web applications. The next batch will start on May 2nd (and I'll probably be around as a mentor again), you can "join here":http://rubylearning.org/class/course/enrol.php?id=32 if you are interested.</p>
 
@@ -31,7 +31,7 @@
   <entry>
     <title type="html"><![CDATA[RubyLearning Git and GitHub course review]]></title>
     <link href="http://citizen428.net/blog/2009/02/24/rubylearning-git-and-github-course-review/"/>
-    <updated>2009-02-24T00:00:00+01:00</updated>
+    <updated>2009-02-24T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2009/02/24/rubylearning-git-and-github-course-review</id>
     <content type="html"><![CDATA[<p>Today I finished the <em>free</em> "Git and GitHub course":http://rubylearning.org/class/course/category.php?id=11 at "RubyLearning":http://rubylearning.org and I have to say I'm really happy with it! Since its creation "GitHub":http://github.com has become a kind of de facto standard for Ruby-related projects (and probably also for FOSS development in general), so knowing it is quite essential if you want to contribute to any of them. That being said it's not really hard to get up to speed with the technology, there are "good tutorials":http://b.lesseverything.com/2008/3/25/got-git-howto-git-and-github and other "useful sites":http://www.gitready.com/ out there. But if you are just starting out with Git or "revision control systems":http://en.wikipedia.org/wiki/Revision_Control_System in general, this course is definitely a great way to learn all the basics and much more in a fun and collaborative way! And since the course covers quite a wide range of topics (including automatic gem creation, GH pages, Gists etc.), you'll probably also find it useful if you already have some previous Git/GitHub experience. The next batch will start on March 28th, make sure you don't miss it!</p>
 

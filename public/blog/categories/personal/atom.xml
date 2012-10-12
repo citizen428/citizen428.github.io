@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-09-30T20:06:28+02:00</updated>
+  <updated>2012-10-11T23:18:03-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Motivating MethodFinder feedback]]></title>
     <link href="http://citizen428.net/blog/2011/04/08/motivating-methodfinder-feedback/"/>
-    <updated>2011-04-08T00:00:00+02:00</updated>
+    <updated>2011-04-08T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/04/08/motivating-methodfinder-feedback</id>
     <content type="html"><![CDATA[<p>Apparently there was a certain demand for "MethodFinder":https://github.com/citizen428/methodfinder and after being mentioned on "Ruby5":http://ruby5.envylabs.com, it now has almost 150 followers on GitHub as well as over 200 downloads on Rubygems, which is more than I ever expected.  There's also been some very nice feedback on Twitter:</p>
 
@@ -51,7 +51,7 @@
   <entry>
     <title type="html"><![CDATA[2010 reading list]]></title>
     <link href="http://citizen428.net/blog/2011/01/01/2010-reading-list/"/>
-    <updated>2011-01-01T00:00:00+01:00</updated>
+    <updated>2011-01-01T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/01/01/2010-reading-list</id>
     <content type="html"><![CDATA[<p>A list of the books I read in 2010, sorted by finishing date. According to "Goodreads":http://www.goodreads.com/ that's roughly 18.5k pages, not bad considering I worked full-time and also studied on the side:</p>
 
@@ -120,7 +120,7 @@
   <entry>
     <title type="html"><![CDATA[(best-of 2010)]]></title>
     <link href="http://citizen428.net/blog/2010/12/31/best-of-2010/"/>
-    <updated>2010-12-31T00:00:00+01:00</updated>
+    <updated>2010-12-31T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2010/12/31/best-of-2010</id>
     <content type="html"><![CDATA[<p>After reading "Fogus'":http://blog.fogus.me/about/ post "The best things in 2010":http://blog.fogus.me/2010/12/30/the-best-things-in-2010/, I decided to do one of my own.</p>
 
@@ -210,7 +210,7 @@ Ruby, Clojure, Bash, Python, JavaScript, Scheme, Haskell, SQL</p>
   <entry>
     <title type="html"><![CDATA[Blog moved from Serendipity to Wordpress]]></title>
     <link href="http://citizen428.net/blog/2010/08/13/blog-moved-from-serendipity-to-wordpress/"/>
-    <updated>2010-08-13T00:00:00+02:00</updated>
+    <updated>2010-08-13T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2010/08/13/blog-moved-from-serendipity-to-wordpress</id>
     <content type="html"><![CDATA[<p>Ever since I started this blog in January 2005 it was powered by <a href="http://s9y.org/">Serendipity</a> (aka S9Y). Lately however I became more and more dissatisfied with it for various reasons, so I finally took the plunge and moved it over to Wordpress. The whole process was surprisingly painless, but did have some caveats, so I decided to post a short description of what I did:</p>
 
@@ -230,7 +230,7 @@ There's still quite a bit to do though: first I need to find a theme I like (I m
   <entry>
     <title type="html"><![CDATA[Good math teachers are like unicorns]]></title>
     <link href="http://citizen428.net/blog/2010/04/23/good-math-teachers-are-like-unicorns/"/>
-    <updated>2010-04-23T00:00:00+02:00</updated>
+    <updated>2010-04-23T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2010/04/23/good-math-teachers-are-like-unicorns</id>
     <content type="html"><![CDATA[<p>There's a striking similarity between unicorns and good math teachers: both are mythical creatures you really wish existed whereas empirical evidence strongly suggests they don't.</p>
 
