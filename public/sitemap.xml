@@ -1423,10 +1423,6 @@
         <lastmod>2012-05-20T06:21:36-04:00</lastmod>
     </url>
     <url>
-        <loc>http://citizen428.net/blog/2011/10/12/android-vs-iphone/</loc>
-        <lastmod>2012-05-20T06:21:36-04:00</lastmod>
-    </url>
-    <url>
         <loc>http://citizen428.net/blog/2011/10/16/information-overload-2011-10-16/</loc>
         <lastmod>2012-05-20T06:21:36-04:00</lastmod>
     </url>
@@ -1464,10 +1460,6 @@
     </url>
     <url>
         <loc>http://citizen428.net/blog/2011/11/20/information-overload-2011-11-20/</loc>
-        <lastmod>2012-05-20T06:21:36-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://citizen428.net/blog/2011/11/20/deepsec-recap/</loc>
         <lastmod>2012-05-20T06:21:36-04:00</lastmod>
     </url>
     <url>
@@ -1716,7 +1708,11 @@
     </url>
     <url>
         <loc>http://citizen428.net/blog/2012/10/12/bon-bini/</loc>
-        <lastmod>2012-10-12T18:29:22-04:00</lastmod>
+        <lastmod>2012-10-12T19:29:22-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://citizen428.net/blog/2012/10/20/curacao-curawow/</loc>
+        <lastmod>2012-10-20T23:23:28-03:00</lastmod>
     </url>
     <url>
         <loc>http://citizen428.net/talks_and_publications/</loc>
@@ -1732,18 +1728,18 @@
     </url>
     <url>
         <loc>http://citizen428.net/</loc>
-        <lastmod>2012-10-12T18:29:22-04:00</lastmod>
+        <lastmod>2012-10-20T23:23:28-03:00</lastmod>
     </url>
     <url>
         <loc>http://citizen428.net/blog/archives/</loc>
-        <lastmod>2012-10-12T18:29:22-04:00</lastmod>
+        <lastmod>2012-10-20T23:23:28-03:00</lastmod>
     </url>
     <url>
         <loc>http://citizen428.net/about/</loc>
-        <lastmod>2012-03-10T14:55:06-04:00</lastmod>
+        <lastmod>2012-03-10T15:55:06-03:00</lastmod>
     </url>
     <url>
         <loc>http://citizen428.net/imprint/</loc>
-        <lastmod>2012-02-22T11:24:12-04:00</lastmod>
+        <lastmod>2012-02-22T12:24:12-03:00</lastmod>
     </url>
 </urlset>

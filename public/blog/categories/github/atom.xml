@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-12T18:41:01-04:00</updated>
+  <updated>2012-10-20T23:24:09-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby and HTTParty: GitHub issues to CSV]]></title>
     <link href="http://citizen428.net/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv/"/>
-    <updated>2010-10-07T00:00:00-04:00</updated>
+    <updated>2010-10-07T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv</id>
     <content type="html"><![CDATA[<p>To fill our backlog at work, our project manager needed a list of our current <a href="https://github.com/">GitHub</a> issues, ideally in a spreadsheet format. A couple lines of Ruby produce CSV output consisting of issue title, creation date, reporter and labels, which then can be redirected to a file and opened with any spreadsheet program.</p>
 
@@ -126,7 +126,7 @@ Rubygems will automatically create a wrapper-script named "unsavory", which you 
   <entry>
     <title type="html"><![CDATA[Tweet active Safari tab from command line]]></title>
     <link href="http://citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
-    <updated>2009-02-27T00:00:00-04:00</updated>
+    <updated>2009-02-27T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
     <content type="html"><![CDATA[<p>Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn't already running, copy  the URL, shorten it, paste it into the client...</p>
 

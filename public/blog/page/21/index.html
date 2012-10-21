@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Sideshow Bob: Attempted murder? Now honestly, what is that? Do they give a Nobel prize for attempted chemistry? Do they?
-Nope, only for attempted &hellip;">
+  <meta name="description" content="After upgrading to Snow Leopard I had quite a bit of trouble with my MacPorts installation, since most builds just failed with configure errors. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +98,44 @@ Nope, only for attempted &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/19/fixing-macports-on-snow-leopard/">Fixing MacPorts on Snow Leopard</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-19T00:00:00-03:00" pubdate data-updated="true">Oct 19<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">	<p>After upgrading to Snow Leopard I had quite a bit of trouble with my <a href="http://www.macports.org/">MacPorts</a> installation, since most builds just failed with configure errors. After the obvious first steps of installing a newer version for SL and making sure I have the most recent XCode, I was a bit stumped until I finally found this site:</p>
+	<p><a href="http://trac.macports.org/wiki/Migration">Migrating a MacPorts install to a new major OS version or <span class="caps">CPU</span> architecture</a></p>
+	<p>After finding this guide &#8211; which btw really solved my problems &#8211; I felt a bit stupid, but since I didn&#8217;t have to do anything after the Tiger&#8594;Leopard upgrade, I really didn&#8217;t expect this.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -691,46 +728,6 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
 
   <div class="entry-content"><p>Hash.new with a block is a sexy beast: you can specify default hash values and when a key is first used, the value will be calculated and inserted into the Hash. Based on that behavior I took a couple of minutes to hack together a small proof of concept class for <a href="http://en.wikipedia.org/wiki/Lazy_evaluation">lazy lists</a>:</p>
 <script src="http://gist.github.com/131821.js"></script><p>As I said, this is quick and dirty, especially since you have to pass the entire Hash.new block to LazyList.new right now. Other than that I quite like it though. I know there are at least <a href="http://lazylist.rubyforge.org/">two</a> <a href="http://moonbase.rydia.net/software/lazy.rb/">other</a> lazy list implementations for Ruby, but it seems like both haven&#8217;t been updated in a while and I don&#8217;t particularly like their interfaces. Dunno, if I manage to simplify list definition, I may actually try to develop this into something. Don&#8217;t hold your breath though&#8230;</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/06/15/unsavory-updates/">Unsavory Updates</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-06-15T00:00:00-04:00" pubdate data-updated="true">Jun 15<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Today I felt like playing around with <a href="http://github.com/citizen428/unsavory/tree/master">unsavory</a> a bit more, which led to some minor improvements: <br />
-<ul><br />
-<li>code reorganization: the delicious class got moved to a separate file in lib/ and got a new method for easier retrieval of the URLs array</li><br />
-<li>login credentials can now be read from a config file, thus making HighLine optional</li></p>
-</ul>
-<p>Next on my list is packaging this up as a gem so people can simply install it with &#8216;gem install unsavory&#8217;.</p></div>
   
   
 

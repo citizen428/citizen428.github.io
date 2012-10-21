@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-12T18:41:01-04:00</updated>
+  <updated>2012-10-20T23:24:09-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Octopress Customizations]]></title>
     <link href="http://citizen428.net/blog/2011/10/10/octopress-customizations/"/>
-    <updated>2011-10-10T19:59:00-04:00</updated>
+    <updated>2011-10-10T19:59:00-03:00</updated>
     <id>http://citizen428.net/blog/2011/10/10/octopress-customizations</id>
     <content type="html"><![CDATA[<p>I finally found some time to give this blog a less generic look, which was really easy thanks to <a href="http://octopress.org/docs/theme/">Octopress's great theme and customization support</a>.</p>
 

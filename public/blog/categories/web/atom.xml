@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/web/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-12T18:41:01-04:00</updated>
+  <updated>2012-10-20T23:24:09-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -95,7 +95,7 @@
   <entry>
     <title type="html"><![CDATA[XPath (good|mad)ness]]></title>
     <link href="http://citizen428.net/blog/2007/01/04/xpath-goodmadness/"/>
-    <updated>2007-01-04T00:00:00-04:00</updated>
+    <updated>2007-01-04T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2007/01/04/xpath-goodmadness</id>
     <content type="html"><![CDATA[<p>Today I started writing a useful little "Greasemonkey":http://greasemonkey.mozdev.org/ "userscript":http://userscripts.org/ for a "browser-based MMRPG":http://www.pardus.at I'm playing. Although I'm no JavaScript guru I feel somewhat confident in the language and am quite fond of "XPath":http://www.w3.org/TR/xpath ever since I joined the "hoodwink.d":http://hoodwinkd.hobix.com/ community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. "funky") from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here's the working result:</p>
 
@@ -123,7 +123,7 @@
   <entry>
     <title type="html"><![CDATA[Loads of links]]></title>
     <link href="http://citizen428.net/blog/2005/12/10/loads-of-links/"/>
-    <updated>2005-12-10T00:00:00-04:00</updated>
+    <updated>2005-12-10T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2005/12/10/loads-of-links</id>
     <content type="html"><![CDATA[<p>I haven't blogged for quite some time now, so I decided I could at least entertain you with one of my semi-regular link dumps until I'm motivated enough to write a proper entry again...</p>
 

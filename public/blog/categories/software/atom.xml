@@ -4,7 +4,7 @@
   <title><![CDATA[Category: software | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-12T18:41:01-04:00</updated>
+  <updated>2012-10-20T23:24:09-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Freie Editoren braucht das Land]]></title>
     <link href="http://citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land/"/>
-    <updated>2009-01-29T00:00:00-04:00</updated>
+    <updated>2009-01-29T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land</id>
     <content type="html"><![CDATA[<p>Geht es um Text-Editoren für MacOS X führt kaum ein Weg an <a href="http://macromates.com/">TextMate</a> vorbei, als freie Alternative ist <a href="http://tuppis.com/smultron/">Smultron</a> sehr beliebt.</p>
 
@@ -35,7 +35,7 @@
   <entry>
     <title type="html"><![CDATA[Werbefrei]]></title>
     <link href="http://citizen428.net/blog/2009/01/22/werbefrei/"/>
-    <updated>2009-01-22T00:00:00-04:00</updated>
+    <updated>2009-01-22T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/01/22/werbefrei</id>
     <content type="html"><![CDATA[<p>Werbung in Webseiten ist lästig, da sie nicht nur die Ladezeit der aufgerufenen Seite unnötig erhöht, sondern - besonders im Fall großer animierter Flashbanner - auch von der Benutzung der Seite ablenkt bzw. den eigentlichen Inhalt manchmal sogar gänzlich verdeckt. Aus diesem Grund gibt es auch diverse Tools um sich ihrer zu entledigen, so zum Beispiel das bekannte Firefox-Plugin <a href="https://addons.mozilla.org/en-US/firefox/addon/1865">Adblock Plus</a>. Anders sah es da bisher bei Safari aus, wo diverse Werbeblocker gemeinhin als Hacks implementiert wurden, welche einerseits die Stabilität des Browsers beeinträchtigen konnten und andererseits nach Updates auch oft den Dienst verweigerten. Damit ist jetzt aber Schluss, denn mit <a title="GlimmerBlocker" href="http://glimmerblocker.org/">GlimmerBlocker</a> gibt es endlich eine stabile und zukunftssichere Lösung, welche darüber hinaus auch noch browserunabhängig ist.</p>
 
@@ -50,7 +50,7 @@
   <entry>
     <title type="html"><![CDATA[Nützliches für die Kommandozeile]]></title>
     <link href="http://citizen428.net/blog/2009/01/22/nutzliches-fur-die-kommandozeile/"/>
-    <updated>2009-01-22T00:00:00-04:00</updated>
+    <updated>2009-01-22T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/01/22/nutzliches-fur-die-kommandozeile</id>
     <content type="html"><![CDATA[<p>Nachdem MacOS X ja bekanntlich über einen <a title="Wikipedia: Darwin" href="http://de.wikipedia.org/wiki/Darwin_(Betriebssystem)">Unix-Kern</a> verfügt, steht ein Großteil der bekannten Kommandozeilen-Werkzeuge zur Verfügung. Zusätzlich gibt es aber auch noch einige macspezifische Kommandos, von denen wir heute einige vorstellen wollen.</p>
 
@@ -86,7 +86,7 @@ Been using this for around 2 weeks now, really sweet! If you want to sign up, pl
   <entry>
     <title type="html"><![CDATA[What a waste]]></title>
     <link href="http://citizen428.net/blog/2005/11/06/what-a-waste/"/>
-    <updated>2005-11-06T00:00:00-04:00</updated>
+    <updated>2005-11-06T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2005/11/06/what-a-waste</id>
     <content type="html"><![CDATA[<p>I just wasted two hours fixing a problem that maybe wasn't one to begin with. Don't you just love it when software starts acting strange for no obvious reason, and you have nfc what's going on? And then suddenly, when you're about to finally throw that frigging PC out of the window so you can once and for all start your new career as buddhist mendicant, it just starts working again as if nothing ever happened.</p>
 

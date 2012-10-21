@@ -4,7 +4,7 @@
   <title><![CDATA[Category: nitro | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/nitro/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-12T18:41:01-04:00</updated>
+  <updated>2012-10-20T23:24:09-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[So what's the word? RUBY!]]></title>
     <link href="http://citizen428.net/blog/2005/11/18/so-whats-the-word-ruby/"/>
-    <updated>2005-11-18T00:00:00-04:00</updated>
+    <updated>2005-11-18T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2005/11/18/so-whats-the-word-ruby</id>
     <content type="html"><![CDATA[<p>This week I finally had a little more time to work on Gentoo related things again, so I commited some overdue packages to the tree.</p>
 
@@ -33,7 +33,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby: All your web are belong to us]]></title>
     <link href="http://citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us/"/>
-    <updated>2005-11-06T00:00:00-04:00</updated>
+    <updated>2005-11-06T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us</id>
     <content type="html"><![CDATA[<p>When it comes to Ruby, I've recently mostly been blogging about "Nitro":http://www.nitrohq.com/, which I think will be a really great framework for writing web applications once it matures a little more. For the next version (0.25.0) the developers plan to concentrate on bug fixing, code cleanup and refactoring, as well as documentation. The current development version - which following my suggestion is now called Glycerin - can be fetched from a "Darcs repository":http://repo.nitrohq.com/, so there shouldn't be anything stopping you from valuable contributions! ;)</p>
 
@@ -55,7 +55,7 @@
   <entry>
     <title type="html"><![CDATA[Look who's back...]]></title>
     <link href="http://citizen428.net/blog/2005/10/29/look-whos-back/"/>
-    <updated>2005-10-29T00:00:00-04:00</updated>
+    <updated>2005-10-29T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2005/10/29/look-whos-back</id>
     <content type="html"><![CDATA[<p>Seems like I haven't had a post on Planet for quite some time now, which may have to do with he fact that I'm "officially away":http://dev.gentoo.org/devaway/ in October... However, there are times when I just don't want to learn for that frigging exam, so here's a little status update on my Gentoo work:</p>
 
