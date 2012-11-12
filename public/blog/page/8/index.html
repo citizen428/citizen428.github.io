@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="On October 29th the local Google Technology User Group is hosting a Chrome Hackathon, in which I&#8217;ll participate. As a little warm up exercise I &hellip;">
+  <meta name="description" content="In case you wonder if Tom and I gave up on reading papers, the answer is a resounding no! In fact there&#8217;s one we finished sometime around mid- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -104,6 +104,121 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2011/10/23/tom-and-michael-vs-john-von-neumann/">Tom and Michael vs. John Von Neumann</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-23T19:55:00-02:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In case you wonder if <a href="http://mrjaba.posterous.com/">Tom</a> and I gave up on <a href="http://citizen428.net/blog/categories/versus/">reading papers</a>, the answer is a resounding no! In fact there&#8217;s one we finished sometime around mid-September, which for various reasons hasn&#8217;t been summarized yet. This is about to change.</p>
+
+<p><strong>The paper</strong></p>
+
+<p>The paper in questions was <a href="http://www.stanford.edu/class/cs242/readings/backus.pdf">&#8220;Can Programming Be Liberated from the von Neumann Style?&#8221;</a>, a <a href="http://en.wikipedia.org/wiki/Turing_Award">Turing Award</a> lecture by <a href="http://en.wikipedia.org/wiki/John_Backus">John Backus</a>.</p>
+
+<p><strong> A very brief summary</strong></p>
+
+<p>At the core of his lecture, Backus argues in favor of functional/applicative programming. This is done by first exploring shortcomings and bottlenecks in the <a href="http://en.wikipedia.org/wiki/Von_Neumann_architecture">von Neumann architecture</a>, followed by an exploration of concepts from his own <a href="http://en.wikipedia.org/wiki/FP_(programming_language">FP</a>) (Function Programming) language.</p>
+
+<p><strong> Difficulty of the paper</strong></p>
+
+<p>Generally this is very easy to read, and provides good food for thought, even today. The more mathematical parts in the middle might deter some readers, but aren&#8217;t really that important.</p>
+
+<p><strong>Takeaway</strong></p>
+
+<p>Alas the age of the paper shows a bit. While some of the points are still valid, there undoubtedly is a much wider appreciation of the benefits of applicative style programming nowadays, as can be seen by various functional languages slowly finding their way into the mainstream. It&#8217;s still very interesting to see how early Backus already thought about all of this though, and also that the language he envisioned seemed to be more in line with the <a href="http://en.wikipedia.org/wiki/Apl">APL</a> school of thought that e.g. Haskell, which in all fairness wasn&#8217;t around back then. I wonder how Backus felt about the latter,  which can be very declarative (see <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a>). For example, here is the inner product function from section 5 of the paper translated to Haskell:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="nf">ip</span> <span class="ow">::</span> <span class="p">[[</span><span class="kt">Integer</span><span class="p">]]</span> <span class="ow">-&gt;</span> <span class="kt">Integer</span>
+</span><span class='line'><span class="nf">ip</span> <span class="ow">=</span> <span class="n">sum</span> <span class="o">.</span> <span class="n">map</span> <span class="n">product</span> <span class="o">.</span> <span class="n">transpose</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you like programming languages and also like to think about them, and learn about their history, this is an interesting paper to read. Also it&#8217;s quite ironic that Backus actually won in large parts for his contributions to Fortran, a language that influenced so many other imperative languages.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/10/23/information-overload-2011-10-23/">Information Overload 2011-10-23</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-23T19:30:00-02:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>The Internet is a radical medium: it mostly reflects polarized positions.</p><footer><strong>Gleb Pavlovsky</strong> <cite><a href='http://www.eurozine.com/articles/2011-06-09-pavlovsky-en.html'>The Politics of No Alternatives or How Power Works in Russia</a></cite></footer></blockquote>
+
+
+<ul>
+<li><a href="http://www.wired.com/wiredscience/2011/10/the-drive-to-be-different/all/1">The Drive to Be Different</a><br>Wired has a piece on our drive to be different and how that can be compensated by satisfying other desires.</li>
+<li><a href="http://www.fsf.org/campaigns/secure-boot-vs-restricted-boot/">Will your computer&#8217;s &#8220;Secure Boot&#8221; turn out to be &#8220;Restricted Boot&#8221;?</a><br>The &#8220;Secure Boot&#8221; feature that hardware vendors have to support for getting a Windows 8 compatibility logo could have disastrous consequences for users of free software. Inform yourself by reading this article and then sign the <a href="http://www.fsf.org/campaigns/secure-boot-vs-restricted-boot/statement">statement</a> to show your support!</li>
+<li><a href="http://www.reuters.com/article/2011/10/18/us-malaria-vaccine-scientist-idUSTRE79H59220111018">Malaria scientist celebrates success after 24 years</a><br>While not perfect, this already has a success rate of around 50% and is an important step forward in the fight against malaria.</li>
+<li><a href="http://medicalxpress.com/news/2011-10-genome-wide-association-dengue-candidate-susceptibility.html">First genome-wide association study for dengue identifies candidate susceptibility genes</a><br>Speaking of mosquito-borne infections, there also are some new research results on Dengue, the second most common one after malaria.</li>
+<li><a href="http://www.sicher.org/2011/10/18/how-to-create-a-language-in-one-day/">How to create a language in one day</a><br>I&#8217;m a language nerd, no matter if you talk about natural or programming languages. So an article where somebody creates an artificial language using Python obviously makes me very happy.</li>
+<li><a href="http://blog.fogus.me/2011/10/18/programming-language-development-the-past-5-years/">Programming language development: the past 5 years</a><br>I said I&#8217;m a programming language nerd and this is another excellent blog post by Michael Fogus.</li>
+<li><a href="http://www.theatlantic.com/magazine/archive/2011/11/hacked/8673/2/?single_page=true">Hacked!</a><br>After his wife&#8217;s Gmail account got hacked, a journalist started contemplating the security of data in the &#8220;cloud&#8221;. This is a good link to forward to your less techy friends.</li>
+<li><a href="http://www.npr.org/blogs/money/2011/10/21/141510617/what-if-we-paid-off-the-debt-the-secret-government-report">What If We Paid Off The Debt? The Secret Government Report</a><br>Would a debt free U.S. be bad for the world economy? There&#8217;s also an interesting link at the end of the article, make sure to look at it too.</li>
+<li><a href="http://www.eurozine.com/articles/2011-06-09-pavlovsky-en.html">The politics of no alternatives or How power works in Russia</a><br>A very long but super interesting interview about the power structure in present day Russia.</li>
+<li><a href="http://www.smh.com.au/it-pro/security-it/super-bad-first-state-set-police-on-man-who-showed-them-how--770000-accounts-could-be-ripped-off-20111018-1lvx1.html">Super bad: First State set police on man who showed them how 770,000 accounts could be ripped off</a><br>And of course he was threatened with legal action. Why do companies with bad security always try to shoot the messenger?</li>
+</ul>
+
+
+<blockquote><p>Interestingly, this desire for distinctiveness could be quelled by giving the aroused males a candy bar.</p><footer><strong>Jonah Lehrer</strong> <cite><a href='http://www.wired.com/wiredscience/2011/10/the-drive-to-be-different/all/1'>The Drive to Be Different</a></cite></footer></blockquote>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2011/10/21/a-chrome-extension-for-soup-dot-io/">A Chrome Extension for Soup.io</a></h1>
     
     
@@ -120,7 +235,7 @@
   
 
 
-<time datetime="2011-10-21T08:53:00-03:00" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
+<time datetime="2011-10-21T08:53:00-02:00" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
         
       </p>
     
@@ -163,7 +278,7 @@
   
 
 
-<time datetime="2011-10-17T15:41:00-03:00" pubdate data-updated="true">Oct 17<span>th</span>, 2011</time>
+<time datetime="2011-10-17T15:41:00-02:00" pubdate data-updated="true">Oct 17<span>th</span>, 2011</time>
         
       </p>
     
@@ -267,7 +382,7 @@
   
 
 
-<time datetime="2011-10-16T20:00:00-03:00" pubdate data-updated="true">Oct 16<span>th</span>, 2011</time>
+<time datetime="2011-10-16T20:00:00-02:00" pubdate data-updated="true">Oct 16<span>th</span>, 2011</time>
         
       </p>
     
@@ -323,7 +438,7 @@
   
 
 
-<time datetime="2011-10-10T19:59:00-03:00" pubdate data-updated="true">Oct 10<span>th</span>, 2011</time>
+<time datetime="2011-10-10T19:59:00-02:00" pubdate data-updated="true">Oct 10<span>th</span>, 2011</time>
         
       </p>
     
@@ -417,7 +532,7 @@
   
 
 
-<time datetime="2011-10-09T19:45:00-03:00" pubdate data-updated="true">Oct 9<span>th</span>, 2011</time>
+<time datetime="2011-10-09T19:45:00-02:00" pubdate data-updated="true">Oct 9<span>th</span>, 2011</time>
         
       </p>
     
@@ -475,7 +590,7 @@
   
 
 
-<time datetime="2011-10-05T20:55:00-03:00" pubdate data-updated="true">Oct 5<span>th</span>, 2011</time>
+<time datetime="2011-10-05T20:55:00-02:00" pubdate data-updated="true">Oct 5<span>th</span>, 2011</time>
         
       </p>
     
@@ -525,7 +640,7 @@
   
 
 
-<time datetime="2011-10-02T20:00:00-03:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2011</time>
+<time datetime="2011-10-02T20:00:00-02:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2011</time>
         
       </p>
     
@@ -573,7 +688,7 @@
   
 
 
-<time datetime="2011-09-27T16:58:00-04:00" pubdate data-updated="true">Sep 27<span>th</span>, 2011</time>
+<time datetime="2011-09-27T16:58:00-03:00" pubdate data-updated="true">Sep 27<span>th</span>, 2011</time>
         
       </p>
     
@@ -586,241 +701,6 @@
     <footer>
       <a rel="full-article" href="/blog/2011/09/27/octopress-templates/">Read on &rarr;</a>
     </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/26/goodbye-wordpress/">Goodbye Wordpress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-26T21:00:00-04:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After using <a href="http://wordpress.org/">Wordpress</a> as my blogging engine
-of choice for over a year (after moving away from <a href="http://s9y.org/">S9Y</a>), I decided to switch this site to
-<a href="http://octopress.org/">Octopress</a>. Why? Because it&#8217;s cool!
-No, seriously. I was actually quite happy with WP, it just always felt
-like way more than I actually needed. OP on the other hand is super
-lightweight, ritten in Ruby and uses some of my favorite technologies,
-like Sinatra and Markdown. It doesn&#8217;t stop there though: having the site rendered to static
-files means I can get rid of MySQL and PHP on my little VPS, which
-definitely is a plus. And it&#8217;s also very cool to have all your posts
-in a directory on your local file system, so you can use all your
-favorite command line tools to search through or batch modify
-them. Last but not least I&#8217;m now writing my posts in Emacs instead of
-some crappy web input form (ok, granted, I could have done that before
-too).</p>
-
-<p>Now to the actual migration. I started by exporting my WP blog to
-XML. This can be done in the administration backend under &#8220;Tools -
-Export&#8221;. Once I had this XML, I used the following script to convert
-the posts to individual files for Octopress:</p>
-
-<div><script src='https://gist.github.com/1240781.js?file='></script>
-<noscript><pre><code>require 'fileutils'
-require 'date'
-require 'yaml'
-require 'rexml/document'
-
-include REXML
-
-doc = Document.new(File.new(ARGV[0]))
-
-FileUtils.mkdir_p &quot;_posts&quot;
-
-doc.elements.each(&quot;rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']&quot;) do |e|
-  p e.elements['wp:post_name'].text
-  post = e.elements
-  slug = post['wp:post_name'].text
-  date = DateTime.parse(post['wp:post_date'].text)
-  name = &quot;%02d-%02d-%02d-%s.textile&quot; % [date.year, date.month, date.day, slug]
-  date_string = &quot;#{date.year}-#{date.month}-#{date.day}&quot;
-
-  # convert all tags and categories into categories
-  categories = []
-  post.each('category') do |cat|
-    categories &lt;&lt; cat.text
-  end
-
-  content = post['content:encoded'].text.encode(&quot;UTF-8&quot;)
-
-  # convert &lt;code&gt;&lt;/code&gt; blocks to {% codeblock %}{% encodebloc %}
-  #content = content.gsub(/&lt;code&gt;(.*?)&lt;\/code&gt;/, '`\1`')
-  content = content.gsub(/&lt;code&gt;/, '{% codeblock %}')
-  content = content.gsub(/&lt;\/code&gt;/, '{% endcodeblock %}')
-
-  # convert &lt;pre&gt;&lt;/pre&gt; blocks to {% codeblock %}{% encodebloc %}
-  #content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;(.*?)&lt;\/pre&gt;/m, '`\1`')
-  content = content.gsub(/&lt;pre&gt;/, '{% codeblock %}')
-  content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;/, '{% codeblock %}')
-  content = content.gsub(/&lt;\/pre&gt;/m, '{% endcodeblock %}')
-
-  # convert headers
-  (1..3).each do |i|
-    content = content.gsub(/&lt;h#{i}&gt;([^&lt;]*)&lt;\/h#{i}&gt;/, ('#'*i) + ' \1')
-  end
-
-  puts &quot;Converting: #{name}&quot;
-
-  data = {
-    'layout' =&gt; 'post',
-    'title' =&gt; post['title'].text,
-    'date' =&gt; date_string,
-    'comments' =&gt; true,
-    'categories' =&gt; categories,
-  }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
-
-  File.open(&quot;_posts/#{name}&quot;, &quot;w&quot;) do |f|
-    f.puts data
-    f.puts &quot;---&quot;
-    f.puts content
-  end
-
-end
-</code></pre></noscript></div>
-
-
-<p>This was a fork of
-<a href="https://gist.github.com/1240781/ac8a139bf73232c4333f0cc5734151cf8e5d1f87">another script</a>,
-but tailored for my specific needs (e.g. all tags and categories of a
-post were converted to categories and I exported the files to Textile
-instead of Markdown because I used the former in my WP install through
-a plugin).</p>
-
-<p>Since some of my posts are quite popular and get linked to a lot, I
-didn&#8217;t want to loose my old links. I therefore wrote another script
-that created 301 redirects for all of them:</p>
-
-<div><script src='https://gist.github.com/1241762.js?file='></script>
-<noscript><pre><code>require 'date'
-require 'rexml/document'
-
-include REXML
-
-doc = Document.new(File.new(ARGV[0]))
-format = ARGV[1] || &quot;apache&quot;
-
-formats = {
-  :apache =&gt; &quot;RewriteRule ^%s$ /%s [R=301,L]&quot;,
-  :nginx =&gt; &quot;rewrite ^%s /%s permanent;&quot;
-}
-
-File.open(&quot;redirects.txt&quot;, &quot;w&quot;) do |f|
-  doc.elements.each(&quot;rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']&quot;) do |e|
-    post = e.elements
-    date = DateTime.parse(post['wp:post_date'].text)
-    slug = post['wp:post_name'].text
-
-    post['link'].text =~ %r{.*(/archives/\d+)}
-    old_url = $1
-    new_url = &quot;blog/#{date.strftime(&quot;%Y/%m/%d&quot;)}/#{slug}/&quot;
-
-    f.puts formats[format.intern] % [old_url, new_url]
-  end
-end
-</code></pre></noscript></div>
-
-
-<p>The script can generate the necessary directives for Apache or Nginx,
-so all you have to do is copy them into your web server
-configuration. I also added another redirect rule for the RSS feed to
-not annoy my subscribers:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>RewriteRule ^/feed /atom.xml [R=301,L]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Of course I also didn&#8217;t want to loose all my comments, so I had to
-come up with a solution for that. I first
-installed the WP <a href="http://disqus.com">Disqus</a> plugin and exported all
-my current comments. I then used some good old Emacs magic to convert
-the list of redirects I had already generated to a CSV for Disqus&#8217;
-<a href="http://docs.disqus.com/help/39/">URL map migration tool</a>. So far this
-has not migrated all comments to the correct location, but it should
-eventually work out (worst case I&#8217;ll have to email Disqus support).</p>
-
-<p>Last but not least I used Octopress&#8217; excellent
-<a href="http://octopress.org/docs/theme/template/index.html">customization suport</a>
-to re-add some stuff to my headers, like the OpenID delegate.</p>
-
-<p>Of course there are still some things that need to be done, some of them more urgently
-then others. First off this site needs a better stylesheet. The
-default is actually quite ok, but I want something with more
-personality. I&#8217;ll also have to go through my old posts and clean them
-up a bit, the automatic conversion did some funny things at
-times. I also want to re-integrate Flattr and PostRank, but I&#8217;m not
-exactly in a hurry when it comes to that.</p>
-
-<p>I hope this post was useful to some of you, I&#8217;m definitely happy with
-my new blogging setup.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/25/information-overload-2011-09-25/">Information Overload 2011-09-25</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-25T00:00:00-04:00" pubdate data-updated="true">Sep 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This week&#8217;s issue is shorter than usual since I spent 4 days in Helsinki to attend <a href="https://frozenrails.eu/">Frozen Rails</a> and then had to prepare my talk for <a href="http://linuxwochenende2011.luga.at/">Linuxwochenende 2011</a>. I also had to deal with a non-functioning hard-disk in my MacBook Pro, it still remains to be seen if the disk failed or if it&#8217;s just the <span class="caps">SATA</span> cable.</p>
-<ul>
-<li><a href="http://bos.github.com/strange-loop-2011/talk/talk.html">Running a startup on Haskell</a><br>Unfortunately the slides are missing some bits that were in the actual talk, but they are still interesting.</li>
-<li><a href="http://www.ibiblio.org/harris/500milemail.html">The case of the 500-mile email</a><br>An old story by now that&#8217;s been posted all over the interent, but still a good piece of sysadmin lore.</li>
-<li><a href="http://www.economist.com/blogs/dailychart/2011/09/employment">Defending jobs</a><br>Of the world&#8217;s 10 biggest employers, 7 are state run.</li>
-<li><a href="http://www.wired.com/magazine/2011/08/ff_lost_basementtapes/">Lost: Wired&#8217;s Guide to Pop Culture&#8217;s Buried Treasure</a><br>No matter if it&#8217;s movies, TV shows, music albums or video games, some of pop cultures greatest treasures seem to be lost forever.</li>
-<li><a href="http://dl.dropbox.com/u/4186469/rust-all-hands-w2011/assets/fallback/index.html">The Rust Programming Language</a><br>More slides from a presentation related to programming, this time on Mozilla&#8217;s new systems programming language <a href="http://www.rust-lang.org/">Rust</a>, which is starting to shape up.</li>
-<li><a href="http://www.falter.at/web/print/detail.php?id=1460">&quot;Da bleibt mir die Spucke weg&quot;</a><br>An interview with <a href="http://www.sueddeutsche.de/">SZ</a> journalist Michael Frank about democracy and the political system in Austria (in German).</li>
-</ul></div>
-  
   
 
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: opinion | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/opinion/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-20T23:24:09-03:00</updated>
+  <updated>2012-11-12T19:50:31-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[C#/Mono: first impressions, IDEs]]></title>
     <link href="http://citizen428.net/blog/2005/09/03/cmono-first-impressions-ides/"/>
-    <updated>2005-09-03T00:00:00-04:00</updated>
+    <updated>2005-09-03T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2005/09/03/cmono-first-impressions-ides</id>
     <content type="html"><![CDATA[<p>Now that I'm working through my "Mono Developer's Notebook":http://www.amazon.de/exec/obidos/tg/detail/-/0596007922/qid=1125743180/sr=8-1/ref=pd_bbs_1/302-8376596-0194421?v=glance&amp;s=books&amp;n=507846, I thought it's time for some first impressions on C# and Mono. Ok, they are not really first impressions, as I've played with the framework before. But not until now have I done so methodically, with the aim of <em>really</em> learning C# and the "class libraries":http://www.go-mono.com/docs/.<!--more--><em>Firsts impressions:</em>
 First off, C# is a pretty modern language which features stuff like automatic garbage collection, support for interfaces, versioning, delegates and much more. I really like the "StringBuilder":http://www.go-mono.com/docs/index.aspx?link=T%3aSystem.Text.StringBuilder, and think that regular expressions are handled "in a nice way":http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconUsingRegularExpressionClasses.asp. "Collections":http://www.go-mono.com/docs/monodoc.ashx?tlink=7@N%3aSystem.Collections and "Indexers":http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcerrusingindexers.asp are pretty neat too, and I yet have to look into "Attributes and Reflection":http://www.oreilly.com/catalog/progcsharp/chapter/ch18.html a little more. I also like the great documentation that can either be found on the "MSDN library":http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcoriCProgrammersReference.asp or the "Mono website":http://www.go-mono.com/docs/.</p>

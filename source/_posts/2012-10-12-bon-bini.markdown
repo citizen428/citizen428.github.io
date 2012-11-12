@@ -4,6 +4,8 @@ title: "Bon bini"
 date: 2012-10-12 17:55
 comments: true
 categories:
+    - personal
+    - travel
 ---
 _This was originally written on October 6th as an email, but I only got around to modify and post it here now._
 

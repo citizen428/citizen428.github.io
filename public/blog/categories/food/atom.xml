@@ -4,7 +4,7 @@
   <title><![CDATA[Category: food | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/food/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-20T23:24:09-03:00</updated>
+  <updated>2012-11-12T19:50:31-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,11 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-11-13]]></title>
     <link href="http://citizen428.net/blog/2011/11/13/information-overload-2011-11-13/"/>
-    <updated>2011-11-13T19:00:00-03:00</updated>
+    <updated>2011-11-13T19:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2011/11/13/information-overload-2011-11-13</id>
-    <content type="html"><![CDATA[<p><blockquote><p>[...] Iran has as much chance of stopping an Israeli strike as Prime Minister Benjamin Netanyahu does of becoming an ayatollah [...]</p><footer><strong>Michael Peck</strong> <cite><a href='http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full'>The Persian Incursion</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Michael Peck http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full The Persian Incursion %}
+[...] Iran has as much chance of stopping an Israeli strike as Prime Minister Benjamin Netanyahu does of becoming an ayatollah [...]
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.economist.com/blogs/babbage/2011/11/artificial-intelligence">Difference Engine: Luddite legacy</a><br>Will more and more jobs be done by machines instead of people?</li>
@@ -34,14 +36,16 @@
 </ul>
 
 
-<p><blockquote><p>We’re from Shanghai. We care only about money. You want to talk politics, go to Beijing.</p><footer><strong>Unnamed businessman</strong> <cite><a href='http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory'>Shanghai Gets Supersized</a></cite></footer></blockquote></p>
+<p>{% blockquote Unnamed businessman http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory Shanghai Gets Supersized %}
+We’re from Shanghai. We care only about money. You want to talk politics, go to Beijing.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[citizen428 weekly telegram]]></title>
     <link href="http://citizen428.net/blog/2006/02/26/citizen428-weekly-telegram/"/>
-    <updated>2006-02-26T00:00:00-03:00</updated>
+    <updated>2006-02-26T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2006/02/26/citizen428-weekly-telegram</id>
     <content type="html"><![CDATA[<p><em>Saturday, February 18:</em>
 "teemow":http://www.teemow.de and "Steffi":http://flickr.com/photos/peppertwin/ came from Cologne to Vienna. Spent the night at "B72":http://b72.at/, "Chelsea":http://www.chelsea.co.at/ and "Elektro Gönner":http://www.elektro-g.at/. Nice.</p>
@@ -71,7 +75,7 @@ Had brunch with Karin and Andi at the "Lux":http://lokaltipp.at/lokale/homepage_
   <entry>
     <title type="html"><![CDATA[citizen428.tidbits()]]></title>
     <link href="http://citizen428.net/blog/2006/02/04/citizen428-tidbits/"/>
-    <updated>2006-02-04T00:00:00-03:00</updated>
+    <updated>2006-02-04T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2006/02/04/citizen428-tidbits</id>
     <content type="html"><![CDATA[<p><em>Personal:</em>
 Yesterday I had the last seminar of my university "career", which feels kind of strange. As the people who know me better can tell you, for the past few years I've always been torn between a job in the technical field and pursuing an academic career in humanities. Now that I've surprisingly found a job which allows me to work full time on/with free software, it seems that this decision has finally been made, but there still is a certain amount of uncertainty...</p>
@@ -93,7 +97,7 @@ I've just finished J.G. Ballard's "Millenium People":http://www.amazon.com/gp/pr
   <entry>
     <title type="html"><![CDATA[Hooray for Turkish food]]></title>
     <link href="http://citizen428.net/blog/2005/11/27/hooray-for-turkish-food/"/>
-    <updated>2005-11-27T00:00:00-03:00</updated>
+    <updated>2005-11-27T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2005/11/27/hooray-for-turkish-food</id>
     <content type="html"><![CDATA[<p>If you know me, you also know how much I love food. I can't think of many things which are better than spending a nice evening with friends in a restaurant, having a great dinner and an interesting conversation.</p>
 

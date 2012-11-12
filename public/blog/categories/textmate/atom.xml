@@ -4,7 +4,7 @@
   <title><![CDATA[Category: textmate | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/textmate/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-20T23:24:09-03:00</updated>
+  <updated>2012-11-12T19:50:31-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Easy setup for Clojure on Mac OS X Leopard]]></title>
     <link href="http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
-    <updated>2009-08-24T00:00:00-04:00</updated>
+    <updated>2009-08-24T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
     <content type="html"><![CDATA[<p>"Clojure":http://clojure.org/ definitely is one of the hottest new programming languages around and just recently hit a "very important milestone":http://clojure.blogspot.com/2009/05/clojure-10.html. Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand "one of those":http://github.com/carlism/Clojure-MacOSX/tree into "ClojureX":http://github.com/citizen428/ClojureX/tree/master, which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
 
@@ -44,7 +44,7 @@
   <entry>
     <title type="html"><![CDATA[A TextMate command for the RubyLearning forums]]></title>
     <link href="http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/"/>
-    <updated>2009-05-10T00:00:00-04:00</updated>
+    <updated>2009-05-10T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums</id>
     <content type="html"><![CDATA[<p>As we all know posting code to "Moodle":http://moodle.org/ (the software that powers "RubyLearning":http://rubylearning.org) can be a bit cumbersome. I therefore created a TextMate command which will</p>
 

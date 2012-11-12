@@ -4,7 +4,7 @@
   <title><![CDATA[Category: games | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/games/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-20T23:24:09-03:00</updated>
+  <updated>2012-11-12T19:50:31-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,11 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-30]]></title>
     <link href="http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30/"/>
-    <updated>2012-09-30T00:00:00-04:00</updated>
+    <updated>2012-09-30T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30</id>
-    <content type="html"><![CDATA[<p><blockquote><p>[W]e’re rushing to meet so many deadlines that we hardly register that what we need most are lifelines.</p><footer><strong>Pico Iyer</strong> <cite><a href='http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&amp;pagewanted=all'>The Joy of Quiet</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Pico Iyer http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&amp;pagewanted=all The Joy of Quiet %}
+[W]e’re rushing to meet so many deadlines that we hardly register that what we need most are lifelines.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.motherjones.com/politics/2012/02/mac-mcclelland-free-online-shipping-warehouses-labor">I Was a Warehouse Wage Slave</a><br>This sounds like early 19th century, not early 21st.</li>
@@ -36,9 +38,11 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-06-24]]></title>
     <link href="http://citizen428.net/blog/2012/06/24/information-overload-2012-06-24/"/>
-    <updated>2012-06-24T00:00:00-04:00</updated>
+    <updated>2012-06-24T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2012/06/24/information-overload-2012-06-24</id>
-    <content type="html"><![CDATA[<p><blockquote><p>It was like finding out your husband didn't just cheat, but had a frequent-flier account with every brothel in North America for the past 10 years.</p><footer><strong>Matt Taibbi</strong> <cite><a href='http://www.rollingstone.com/politics/news/the-scam-wall-street-learned-from-the-mafia-20120620'>The Scam Wall Street Learned From the Mafia</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Matt Taibbi http://www.rollingstone.com/politics/news/the-scam-wall-street-learned-from-the-mafia-20120620 The Scam Wall Street Learned From the Mafia %}
+It was like finding out your husband didn't just cheat, but had a frequent-flier account with every brothel in North America for the past 10 years.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.vice.com/read/i-dont-get-art">I Don't "Get" Art</a><br>More than once I found myself at an exhibition with exactly the same thoughts.</li>
@@ -59,7 +63,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-01-08]]></title>
     <link href="http://citizen428.net/blog/2012/01/08/information-overload-2012-01-08/"/>
-    <updated>2012-01-08T00:00:00-03:00</updated>
+    <updated>2012-01-08T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2012/01/08/information-overload-2012-01-08</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="https://www.eff.org/deeplinks/2011/12/newyears-resolution-full-disk-encryption-every-computer-you-own">New Year's Resolution: Full Disk Encryption on Every Computer You Own</a><br>The <a href="https://www.eff.org">EFF</a> has a great suggestion for a New Year's resolution.</li>
@@ -80,9 +84,11 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-12-25]]></title>
     <link href="http://citizen428.net/blog/2011/12/25/information-overload-2011-12-25/"/>
-    <updated>2011-12-25T00:00:00-03:00</updated>
+    <updated>2011-12-25T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2011/12/25/information-overload-2011-12-25</id>
-    <content type="html"><![CDATA[<p><blockquote><p>They’ve reminded us that politics is not a matter of choosing among what we’re offered but of fighting for what we and others actually need, not to mention what we hope for.</p><footer><strong>Nathan Schneider</strong> <cite><a href='http://www.thenation.com/article/165240/thank-you-anarchists'>Thank You, Anarchists</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Nathan Schneider http://www.thenation.com/article/165240/thank-you-anarchists Thank You, Anarchists %}
+They’ve reminded us that politics is not a matter of choosing among what we’re offered but of fighting for what we and others actually need, not to mention what we hope for.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://web.mit.edu/newsoffice/2011/mitx-education-initiative-1219.html">MIT launches online learning initiative</a><br>After Stanford's successful online courses, the MIT also develops a new online platform on top of the already cool <a href="http://ocw.mit.edu/index.htm">OCW</a>. I always welcome more good and free learning resources.</li>
@@ -98,16 +104,20 @@
 </ul>
 
 
-<p><blockquote><p>The business of humanity has become entertainment, and entertainment is the business of feeding fake fitness cues to our brains.</p><footer><strong>Geoffrey Miller</strong> <cite><a href='http://seedmagazine.com/content/article/why_we_havent_met_any_aliens/'>Why We Haven't Met Any Aliens</a></cite></footer></blockquote></p>
+<p>{% blockquote Geoffrey Miller http://seedmagazine.com/content/article/why_we_havent_met_any_aliens/ Why We Haven't Met Any Aliens %}
+The business of humanity has become entertainment, and entertainment is the business of feeding fake fitness cues to our brains.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-10-09]]></title>
     <link href="http://citizen428.net/blog/2011/10/09/information-overload-2011-10-09/"/>
-    <updated>2011-10-09T19:45:00-03:00</updated>
+    <updated>2011-10-09T19:45:00-02:00</updated>
     <id>http://citizen428.net/blog/2011/10/09/information-overload-2011-10-09</id>
-    <content type="html"><![CDATA[<p><blockquote><p>Thus, tweeting &quot;Down with capitalism&quot; from your iPhone for those around the world to read seems to be the most ironic thing a person can do.</p><footer><strong>Robert David Graham</strong> <cite><a href='http://erratasec.blogspot.com/2011/10/independent-reporting-of.html'>Independent Reporting of #OccupyWallStreet</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Robert David Graham http://erratasec.blogspot.com/2011/10/independent-reporting-of.html Independent reporting of #OccupyWallStreet %}
+Thus, tweeting &quot;Down with capitalism&quot; from your iPhone for those around the world to read seems to be the most ironic thing a person can do.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://bemmu.posterous.com/what-it-costs-to-live-in-japan">What it costs to live in Japan</a><br>A foreigner living in Japan gives an interesting breakdown of the cost of living there.</li>
@@ -123,7 +133,9 @@
 </ul>
 
 
-<p><blockquote><p>If only we carried rocks instead of cameras, we'd look like revolutionaries.</p><footer><strong>Douglas Haddow</strong> <cite><a href='http://www.adbusters.org/magazine/79/hipster.html'>Hipster: The Dead End of Western Civilization</a></cite></footer></blockquote></p>
+<p>{% blockquote Douglas Haddow http://www.adbusters.org/magazine/79/hipster.html Hipster: The Dead End of Western Civilization %}
+If only we carried rocks instead of cameras, we'd look like revolutionaries.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   

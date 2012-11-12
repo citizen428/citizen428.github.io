@@ -4,7 +4,7 @@
   <title><![CDATA[Category: security | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/security/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-20T23:24:09-03:00</updated>
+  <updated>2012-11-12T19:50:31-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-23]]></title>
     <link href="http://citizen428.net/blog/2012/09/23/information-overload-2012-09-23/"/>
-    <updated>2012-09-23T00:00:00-04:00</updated>
+    <updated>2012-09-23T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2012/09/23/information-overload-2012-09-23</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://derstandard.at/1345166255203/In-Wien-fehlt-der-Diskurs-zu-Gentrifizierung">"In Wien fehlt der Diskurs zu Gentrifizierung"</a><br>On urban gentrification in Vienna (in German).</li>
@@ -34,7 +34,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-29]]></title>
     <link href="http://citizen428.net/blog/2012/07/29/information-overload-2012-07-29/"/>
-    <updated>2012-07-29T00:00:00-04:00</updated>
+    <updated>2012-07-29T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2012/07/29/information-overload-2012-07-29</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://bosker.wordpress.com/2012/07/23/the-prisoners-dilemma/">The Prisoner’s Dilemma</a><br>Nice article on the prisoner's dillema, including an interactive toy to play with various strategies.</li>
@@ -52,7 +52,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-15]]></title>
     <link href="http://citizen428.net/blog/2012/07/15/information-overload-2012-07-15/"/>
-    <updated>2012-07-15T00:00:00-04:00</updated>
+    <updated>2012-07-15T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2012/07/15/information-overload-2012-07-15</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://what-if.xkcd.com/1/">Relativistic Baseball</a><br><a href="http://en.wikipedia.org/wiki/Randall_Munroe">Randal Munroe</a> of xkcd fame has a new blog where he answers hypothetical questions about physics.</li>
@@ -71,9 +71,11 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-06-17]]></title>
     <link href="http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17/"/>
-    <updated>2012-06-17T00:00:00-04:00</updated>
+    <updated>2012-06-17T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2012/06/17/information-overload-2012-06-17</id>
-    <content type="html"><![CDATA[<p><blockquote><p>[H]e worries that economic and ecological collapse will come much sooner than we think, and that the time to start behaving in an anarchic way—taking care of ourselves instead of deferring to government and big business—is now. He wants, in his words, for people to have a "soft landing" when the global shit hits the global fan.</p><footer><strong>Brendan Kiley</strong> <cite><a href='http://www.thestranger.com/seattle/anarchy-is-boring/Content?oid=13597692'>Anarchy Is Boring</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Brendan Kiley http://www.thestranger.com/seattle/anarchy-is-boring/Content?oid=13597692 Anarchy Is Boring %}
+[H]e worries that economic and ecological collapse will come much sooner than we think, and that the time to start behaving in an anarchic way—taking care of ourselves instead of deferring to government and big business—is now. He wants, in his words, for people to have a "soft landing" when the global shit hits the global fan.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://esr.ibiblio.org/?p=4386">Why I think RMS is a fanatic, and why that matters.</a><br>The most current "RMS is a fanatic" post by ESR. While he may be right that pragmatism sells better, I always admired Stallman's approach.</li>
@@ -92,9 +94,11 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-06-10]]></title>
     <link href="http://citizen428.net/blog/2012/06/10/information-overload-2012-06-10/"/>
-    <updated>2012-06-10T00:00:00-04:00</updated>
+    <updated>2012-06-10T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2012/06/10/information-overload-2012-06-10</id>
-    <content type="html"><![CDATA[<p><blockquote><p>[S]omeone who takes MDPV may find himself feeling extremely paranoid and panicky, but he’s unlikely to believe that a giant lizard wearing a tuxedo is about to eat his cat.</p><footer><strong>David DiSalvo</strong> <cite><a href='http://www.forbes.com/sites/daviddisalvo/2012/06/05/the-straight-dope-on-what-bath-salts-do-to-your-brain-and-why-theyre-dangerous/'>The Straight Dope on What Bath Salts Do to Your Brain and Why They're Dangerous</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote David DiSalvo http://www.forbes.com/sites/daviddisalvo/2012/06/05/the-straight-dope-on-what-bath-salts-do-to-your-brain-and-why-theyre-dangerous/ The Straight Dope on What Bath Salts Do to Your Brain and Why They're Dangerous %}
+[S]omeone who takes MDPV may find himself feeling extremely paranoid and panicky, but he’s unlikely to believe that a giant lizard wearing a tuxedo is about to eat his cat.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.nytimes.com/2012/06/03/opinion/sunday/we-only-think-we-know-the-truth-about-salt.html?_r=2&amp;pagewanted=all">Salt, We Misjudged You</a><br>Like with many things, I think listening to your body will solve this controversy in a rather natural manner.</li>
@@ -110,7 +114,9 @@
 </ul>
 
 
-<p><blockquote><p>Review of Black Hat by Obi-Wan Kenobi: "You will never find a more wretched hive of scum and villainy."</p><footer><strong>Henry Schwarz</strong> <cite><a href='http://henryschwarz.blogspot.co.uk/2012/06/black-hatted.html'>Black Hatted</a></cite></footer></blockquote></p>
+<p>{% blockquote Henry Schwarz http://henryschwarz.blogspot.co.uk/2012/06/black-hatted.html Black Hatted %}
+Review of Black Hat by Obi-Wan Kenobi: "You will never find a more wretched hive of scum and villainy."
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   

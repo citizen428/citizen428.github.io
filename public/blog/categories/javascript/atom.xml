@@ -4,7 +4,7 @@
   <title><![CDATA[Category: javascript | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-20T23:24:09-03:00</updated>
+  <updated>2012-11-12T19:50:31-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,22 +16,18 @@
   <entry>
     <title type="html"><![CDATA[XPath (good|mad)ness]]></title>
     <link href="http://citizen428.net/blog/2007/01/04/xpath-goodmadness/"/>
-    <updated>2007-01-04T00:00:00-03:00</updated>
+    <updated>2007-01-04T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2007/01/04/xpath-goodmadness</id>
     <content type="html"><![CDATA[<p>Today I started writing a useful little "Greasemonkey":http://greasemonkey.mozdev.org/ "userscript":http://userscripts.org/ for a "browser-based MMRPG":http://www.pardus.at I'm playing. Although I'm no JavaScript guru I feel somewhat confident in the language and am quite fond of "XPath":http://www.w3.org/TR/xpath ever since I joined the "hoodwink.d":http://hoodwinkd.hobix.com/ community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. "funky") from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here's the working result:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var xpath = "/html/frameset/frame[@name='main']";
-</span><span class='line'>var frameResult = document.evaluate(xpath, document, null,
-</span><span class='line'>   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
-</span><span class='line'>var document2 = frameResult.contentDocument;
-</span><span class='line'>var imgResult = document2.evaluate("//img[contains(@src,'funky')]", document2, null,
-</span><span class='line'>  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+var xpath = "/html/frameset/frame[@name='main']";
+var frameResult = document.evaluate(xpath, document, null,
+   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
+var document2 = frameResult.contentDocument;
+var imgResult = document2.evaluate("//img[contains(@src,'funky')]", document2, null,
+  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
+{% endcodeblock %}</p>
 
 <p>Of course if any of you know sbout a better way to achieve the same result, please don't hesitate to post a comment, thanks!</p>
 

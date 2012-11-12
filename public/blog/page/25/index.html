@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="If you haven&#8217;t heard about it yet, Shoes is yet another ingenious brainchild of Ruby hacker extraordinaire _why. Here&#8217;s the project &hellip;">
+  <meta name="description" content="While writing my second Shoes app I ran into the problem of how to require a gem from within Shoes. Luckily the truth is out there, but I wanna share &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -104,6 +104,91 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2009/02/02/babysteps/">Babysteps</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-02T00:00:00-02:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>While writing my <a href="http://the-shoebox.org/apps/128">second Shoes app</a> I ran into the problem of how to require a gem from within Shoes. Luckily <a href="http://hackety.org/2008/05/08/clearingUpTheWholeShoesAndRubyGemsDeal.html">the truth is out there</a>, but I wanna share it with you nonetheless:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Shoes</span><span class="o">.</span><span class="n">setup</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;foo&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;foo&#39;</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Enjoy!</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac/">RubyLearning Got a New Mentor With Shiny Shoes and a Mac</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-01T00:00:00-02:00" pubdate data-updated="true">Feb 1<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Since I currently have quite a lot of time but am slightly on the poor side (as we all know: &#8216;money = has_time ? 0 : loads.to_i&#8217;) I decided to join batch 10 of <a href="http://rubylearning.org/class/">RubyLearning&#8217;s</a> free online core Ruby programming course. In my opinion the course is <strong>very</strong> good, so if you always wanted to learn Ruby but couldn&#8217;t find the motivation alone, definitely give this a try! But since I myself am not exactly new to Ruby, it so happened that after the first week of the course I now joined the RubyLearning team as a mentor. Glad to be part of the gang, folks! :)</p>
+<p>Yesterday <a href="http://citizen428.net/archives/353-The-first-steps-in-new-Shoes.html">I blogged</a> about my first experiments with <a href="http://shoooes.net/">Shoes</a> and thanks to some feedback by <a href="http://ashbb.github.com/">ashbb</a> a newer version of the <a href="http://the-shoebox.org/apps/126">Little Helper</a> is now available. And since I plan on doing some more experiments with Shoes, I also started a <a href="http://github.com/citizen428/littlesteps/tree/master">repo called littlesteps</a> on Github where I will keep the source for all those nice little application.</p>
+<p>Finally a bit of good news for all you Ruby on MacOS X fans out there: there soon will be new versions of the <a href="http://rubyosx.rubyforge.org/">Ruby One-Click Installer for <span class="caps">OSX</span></a> for Ruby 1.9.1! :) The <a href="http://wiki.rubyonrails.org/rails/pages/parasew">maintainer</a> is a friend of mine, so I tried to convince him to include <a href="http://rspec.info/">rspec</a> and <a href="http://cheat.errtheblog.com/">cheats</a> in the next release, let&#8217;s see if we&#8217;ll get them&#8230;</p>
+<p>Some links:<br />
+<a href="http://waveninja.blogspot.com/2009/01/ten-steps-in-shoes-step-2-stack-flow.html">waveninja&#8217;s Ten Steps in Shoes, part 2</a><br />
+<a href="http://github.com/ashbb/shoes_tutorial_html/tree/master">ashbb&#8217;s Shoes Tutorial</a></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2009/01/31/the-first-steps-in-new-shoes/">The First Steps in New Shoes</a></h1>
     
     
@@ -120,7 +205,7 @@
   
 
 
-<time datetime="2009-01-31T00:00:00-03:00" pubdate data-updated="true">Jan 31<span>st</span>, 2009</time>
+<time datetime="2009-01-31T00:00:00-02:00" pubdate data-updated="true">Jan 31<span>st</span>, 2009</time>
         
       </p>
     
@@ -164,7 +249,7 @@ Links:<br />
   
 
 
-<time datetime="2009-01-29T00:00:00-03:00" pubdate data-updated="true">Jan 29<span>th</span>, 2009</time>
+<time datetime="2009-01-29T00:00:00-02:00" pubdate data-updated="true">Jan 29<span>th</span>, 2009</time>
         
       </p>
     
@@ -206,7 +291,7 @@ Links:<br />
   
 
 
-<time datetime="2009-01-26T00:00:00-03:00" pubdate data-updated="true">Jan 26<span>th</span>, 2009</time>
+<time datetime="2009-01-26T00:00:00-02:00" pubdate data-updated="true">Jan 26<span>th</span>, 2009</time>
         
       </p>
     
@@ -241,7 +326,7 @@ Links:<br />
   
 
 
-<time datetime="2009-01-22T00:00:00-03:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2009</time>
+<time datetime="2009-01-22T00:00:00-02:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2009</time>
         
       </p>
     
@@ -279,7 +364,7 @@ Links:<br />
   
 
 
-<time datetime="2009-01-22T00:00:00-03:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2009</time>
+<time datetime="2009-01-22T00:00:00-02:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2009</time>
         
       </p>
     
@@ -322,7 +407,7 @@ Links:<br />
   
 
 
-<time datetime="2009-01-21T00:00:00-03:00" pubdate data-updated="true">Jan 21<span>st</span>, 2009</time>
+<time datetime="2009-01-21T00:00:00-02:00" pubdate data-updated="true">Jan 21<span>st</span>, 2009</time>
         
       </p>
     
@@ -358,7 +443,7 @@ Links:<br />
   
 
 
-<time datetime="2008-12-10T00:00:00-03:00" pubdate data-updated="true">Dec 10<span>th</span>, 2008</time>
+<time datetime="2008-12-10T00:00:00-02:00" pubdate data-updated="true">Dec 10<span>th</span>, 2008</time>
         
       </p>
     
@@ -408,7 +493,7 @@ M</p></div>
   
 
 
-<time datetime="2008-07-06T00:00:00-04:00" pubdate data-updated="true">Jul 6<span>th</span>, 2008</time>
+<time datetime="2008-07-06T00:00:00-03:00" pubdate data-updated="true">Jul 6<span>th</span>, 2008</time>
         
       </p>
     
@@ -421,109 +506,6 @@ M</p></div>
 <p>Love,<br />
 M</p>
 <p>P.S. Go watch <a href="http://www.imdb.com/title/tt0423977/">Charlie Bartlett</a>, it&#8217;s a great movie. And brush your teeth at least twice a day!</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2008/05/25/how-i-became-relegated-to-being-man-2/">How I Became Relegated to Being Man #2</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-05-25T00:00:00-04:00" pubdate data-updated="true">May 25<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Time for some random musings on India&#8230;</p>
-<p>Austr(i|ali)a: Let&#8217;s face it, nobody knows Austria. It usually goes like this: &#8220;Where are you from?&#8221; &#8211; (Oh no, not again&#8230;) Austria.&quot; &#8211; &#8220;Ah, Australia. Good country! Cricket!&#8221; &#8211; &#8220;Uhm, yes. Australia&#8217;s a good country, but I&#8217;m from Austria.&#8221; &#8211; &#8220;Yes, Australia. Good!&#8221; &#8211; But then, only a few days ago, it seems as if the word &#8220;Austria&#8221; suddenly registers with my conversation partner, he concentrates deeply for a moment, smiles and then asks: &#8220;Arnold country?&#8221; &#8211; There is no god.</p>
-<p>Buckets: Indian hotels led to my newfound admiration for buckets, the most useful tool mankind ever invented! Why? Because they are incredibly versatile. You can wash your clothes in them, use them as showers, puke into them, sweep floors with the water inside them, turn them around and use them as chairs or to catch cockroaches, the possibilities are almost endless. In bucket we trust!</p>
-<p>Cricket: India is cricket country, full stop. The sport is everywhere, and although I fully agree that aliens must have brought it to our planet (who am I to argue with Douglas Adams?), I lately feel a strange attraction to it, watching quite a bit of the new Indian Twenty20 league together with good old Spyro. In our defense, it is a lot more interesting to watch than test cricket, and &#8211; as an Australian guy explained to us yesterday &#8211; it&#8217;s as close to backyard cricket as you can get. Wait, backyard cricket? We&#8217;re in! Because playing cricket is even more fun than watching it. Especially when you play barefoot with a bunch of Indians on dirty streets, where you are out after one bounce and a boundary doesn&#8217;t get you 4 or 6 points, but evil looks from everybody around &#8217;cause you just lost the ball&#8230;</p>
-<p>Transport: Auto-rickshaw &#8211; done. Bicycle-rickshaw &#8211; done. Non-AC bus for 15+ hours on horrible roads &#8211; done. Sitting on the floor in an overcrowded train next to an open door &#8211; done. Riding on top of a truck to the amusement of the Indians around us &#8211; done.</p>
-<p>Movies: Indians are crazy about their cinema. And Indian cinema is crazy. In fact, it&#8217;s crazy enough to let bums like Spyro and me play business men in a Tamil movie. Yes, business men! We got casted (&#8220;You guys wanna be in a movie tomorrow?&#8221; &#8211; &#8220;Hm, why not&#8230;&#8221; &#8211; &#8220;Can you maybe shave?&#8221; &#8211; &#8220;No!&#8221; &#8211; &#8220;Ok&#8221;) in our lovely Mahabalipuram and went to the movie shot in Chennai the next day (and yes, they paid our ride there, which was quite handy since we needed to catch a bus from there anyway), arrived at the set around 9:30, got great food and then&#8230;sat around for a while. After a couple of hours we got more great food and were told &#8220;Relax over there in the shade&#8221;. Relax? Sure, we are good at that. Anyway, eventually they made us wear suits (it&#8217;s good that there are no pics, Spy looked like a 16 year old forced to wear a suit for some relative&#8217;s wedding or something), and gave us our great lines. Originally I was supposed to be Man#1, who had an impressive 15 words of text (&#8220;Okay, Mr. Krishna. We have decided to start three new companies in association with you.&#8221;), but after we told the producers that we couldn&#8217;t make it back to Chennai ten days later, the stuttering African guy got promoted and I was relegated to become Man#2 (&#8220;You have to make them the best companies!&#8221;). Spyro starred as Man#3 (&#8220;Not only the best, but also number one!&#8221;), but later managed to sneak another sentence in. Overall a very cool experience, the male lead and the other guys were all really nice and funny, we got delicious food and 500 rupees. The movie will start in South Indian cinemas around August 2008, but if things keep going at the current rate, we&#8217;ll be living in Hollywood by then. I wonder if the food is as good there&#8230;</p>
-<p>Travels: After the last big update (sent from Bangalore) we went on to Pondicherry (nice, but a bit boring) including a day-trip to Auroville (according to Wikipedia it&#8217;s an &#8220;experimental township&#8221;, according to us it&#8217;s&#8230;weird), Mahabalipuram (a relaxed backpacker town), Chennai (from here to fame) and Rameswaram (impressing temple, great food and close to an eerie post-Tsunami ghost-town). Last stop in Tamil Nadu was Kanyakumari, where the Arabian Sea meets the Indian Ocean and the Bay of Bengal, and where the food is terrible. Right now we are in Kerala, a state ruled by the first democratically elected communist government in the world. We spent a couple of hours in the state capital Trivandrum, before coming to Varkala (another very backpackery town) where we are currently hanging around like a bad smell (literally). Our future plans are &#8211; as always &#8211; tentative at best, so if you have any suggestions or want to meet up somewhere, shoot me a message!</p>
-<p>Lots of love and licks to body parts of your choice,<br />
-M</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2008/05/02/spyros-a-bastard-he-saw-an-elephant-and-wears-a-skirt/">Spyro&#8217;s a Bastard, He Saw an Elephant and Wears a Skirt</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-05-02T00:00:00-04:00" pubdate data-updated="true">May 2<span>nd</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After leaving my beloved Istanbul I&#8217;m now in India since last Tuesday. The flight with Air Arabia only cost 160 Euro from Istanbul to Bangalore, but I had to endure a 15 hour stopover in the United Arab Emirates. Since hanging out at the airport for that long isn&#8217;t really an option, I decided to go see some of Sharjah, but immigration took a bit longer than expected:</p>
-<p><em>me (walking up to the counter)</em>: Good morning!<br />
-<em>Immigration officer #1</em>: Hello!</p>
-<p><em>(She checks my passport for a while)</em></p>
-<p><em>Immigration officer #1</em>: Where are you from?<br />
-<em>Me</em>: Austria.<br />
-<em>She</em>: Australia?<br />
-<em>Me</em>: No.</p>
-<p><em>(She consults with another immigration officer. We establish that I&#8217;m not from Australia one more time. We consult a third officer. No, not Australia. They send me to another counter.)</em></p>
-<p><em>Immigration officer #2</em>: Hello. Where are you from?<br />
-<em>Me (hopeful)</em>: Austria.<br />
-<em>Immigration officer #2</em>: Australia?<br />
-<em>Me</em>: Austria! Autriche. Oesterreich? Avusturia&#8230; In Europe. EU. Mozart.</p>
-<p><em>(He calls for another guy, rinse and repeat the Austria-Australia confusion. He takes my passport, says he&#8217;s gonna check something and disappears. I can see him through a window, he takes a big book and apparently tries to figure out where I&#8217;m from. About 15 minutes later he reappears, smiling.)</em></p>
-<p><em>Immigration officer #3</em>: I found your country, in Arabic we call it&#8230; (sorry, I forgot). And we also know why we didn&#8217;t recognize your passport <em>(proud smile)</em>: you&#8217;re a diplomat!<br />
-<em>Me</em>: (scruffy, wearing dirty baggy jeans, mildly surprised and really amused): No, I&#8217;m not. It&#8217;s a standard EU passport, they changed them 1 or 2 years ago and look a bit different now&#8230; Anyway, thanks for your help!</p>
-<p><em>(Immigration officer #2 still doesn&#8217;t exactly understand what&#8217;s going on, starts flipping through my passport, sees the page with my Hong Kong visa on arrival, smiles and decides to also give me one. Of course he doesn&#8217;t use a new page, but squeezes it in next to the HK one. He&#8217;s right though, the Arabic script indeed looks kinda neat next to the Chinese characters.)</em></p>
-<p>Finally out of the airport I see two guys who where on the same flight as yours truly. We decide to go to the city center together and while chatting on the bus I discover that they are from Hungary. Which by the way also seems to be totally unknown in the <span class="caps">UAE</span>. Apparently nobody gave a shit about the Austro-Hungarian empire in the Middle East. But then, why should they? Anyway, we get to Sharjah, stroll around for a bit and then they tell me that they&#8217;ll rent a car and go to Dubai and that I can tag along if I want to. Sure do, let&#8217;s go! Once we reach the car rental an elaborate sales pitch follows. Long story short, the two of them rent a car including a driver, who&#8217;ll show them Dubai and its sights. And I can come along, for free. Sweet! So basically I ended up seeing a lot of Dubai and Sharjah in my quite limited time there. And honestly that was quite enough. It just seems too much like a fake place with no soul and unless you are really into skyscrapers and big malls it&#8217;s not all that interesting. It did have it&#8217;s funny moments though, especially in the tucked away Somali restaurant where it seemed like we were the first white people to ever eat there and especially when 3 random guys walked up to us on the street, only to say &#8220;Hello, Michael Jackson!&#8221; and disappear again immediately.</p>
-<p>Hm, getting lazy now, so cutting the story short: made it to India, met Spy at the airport (for those of you who don&#8217;t know him, Spyro and me traveling together is probably not good for world peace), crashed at his hotel room. Since Wednesday we&#8217;re supposed to stay with Dilip, but somehow always end up crashing at Murali&#8217;s nice penthouse apartment (I wonder why).</p>
-<p>Random India info: food is good, although a bit repetitive. People find us very exciting. Even more so than in China. In fact a lot more, cause in China nobody ever walked up to me, shook my hand, kissed it, stroked my beard and then left without saying a word. Within the course of 10 seconds, while negotiating with an autorickshaw driver. Different strokes for different folks I suppose. So far we saw cows, buffaloes, monkeys and a lot of other small animals roam the street, but Spy already saw an elephant on his bus trip, which makes me insanely jealous.</p>
-<p>What we do: Yesterday we went on a road trip to a place I can&#8217;t pronounce, where we did a boat trip next to some waterfalls with beautiful scenery around. We also played some hurling on the beach and<br />
-had dinner at a little village on the way back home, where the locals seemed very excited by our mere existence. Today or tomorrow we&#8217;ll most likely do another road trip before heading to Tamil Nadu and then further down south (although that&#8217;s only a tentative plan, since we really suck at making real ones). Yes, at the hottest time of the year. No, we never said we are smart.</p>
-<p>That&#8217;s it for today, better stuff to do than hanging out in front of a<br />
-computer.</p>
-<p>Love you all,<br />
-M</p></div>
   
   
 

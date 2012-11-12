@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sinatra | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/sinatra/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-20T23:24:09-03:00</updated>
+  <updated>2012-11-12T19:50:31-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Fun with Sinatra, Heroku and MongoDB]]></title>
     <link href="http://citizen428.net/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb/"/>
-    <updated>2009-12-06T00:00:00-03:00</updated>
+    <updated>2009-12-06T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb</id>
     <content type="html"><![CDATA[<p>I've been toying around with the idea for a small website lately, but never actually got around to do it. In an attempt to clear out my personal to do list I finally motivated myself to start yesterday, and I have to say the following combination of tools is not only insanely efficient, but also really fun to work with:</p>
 
@@ -35,7 +35,7 @@
   <entry>
     <title type="html"><![CDATA[Rock-paper-scissors in Sinatra]]></title>
     <link href="http://citizen428.net/blog/2009/03/27/rock-paper-scissors-in-sinatra/"/>
-    <updated>2009-03-27T00:00:00-04:00</updated>
+    <updated>2009-03-27T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/03/27/rock-paper-scissors-in-sinatra</id>
     <content type="html"><![CDATA[<p>Just a stupid little example to demonstrate why Sinatra is cool:</p>
 
@@ -47,7 +47,7 @@
   <entry>
     <title type="html"><![CDATA[My way: Ruby, Sinatra, Heroku]]></title>
     <link href="http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku/"/>
-    <updated>2009-03-25T00:00:00-04:00</updated>
+    <updated>2009-03-25T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku</id>
     <content type="html"><![CDATA[<p>"RubyLearning":http://rubylearning.org just had a nice one week introductory course on "Sinatra":http://www.sinatrarb.com/, a "DSL":http://en.wikipedia.org/wiki/Domain-specific_programming_language for easily creating web applications. The next batch will start on May 2nd (and I'll probably be around as a mentor again), you can "join here":http://rubylearning.org/class/course/enrol.php?id=32 if you are interested.</p>
 
@@ -62,7 +62,7 @@
   <entry>
     <title type="html"><![CDATA[Sinatra course at RubyLearning announced!]]></title>
     <link href="http://citizen428.net/blog/2009/02/25/sinatra-course-at-rubylearning-announced/"/>
-    <updated>2009-02-25T00:00:00-03:00</updated>
+    <updated>2009-02-25T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2009/02/25/sinatra-course-at-rubylearning-announced</id>
     <content type="html"><![CDATA[<p>For a lot of people, Ruby became almost equivalent to "Rails":http://rubyonrails.org/, but this doesn't mean that Rubyists can't choose from a wider selection of web frameworks. One of them is the microframework "Sinatra":http://www.sinatrarb.com/, for which "RubyLearning":http://rubylearning.org will start a "course":http://rubylearning.com/blog/2009/02/25/introduction-to-sinatra-a-new-course/ on March 21st. Registration is open now, the price is a reasonable US$3 for the first 15 people to sign up, US$4 for the next 25 and finally US$5 for everyone after that. Yours truly will also be a mentor for this course and would be happy to see some of you there!</p>
 ]]></content>

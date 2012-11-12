@@ -4,7 +4,7 @@
   <title><![CDATA[Category: privacy | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/privacy/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-20T23:24:09-03:00</updated>
+  <updated>2012-11-12T19:50:31-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,11 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-05-06]]></title>
     <link href="http://citizen428.net/blog/2012/05/06/information-overload-2012-05-06/"/>
-    <updated>2012-05-06T00:00:00-04:00</updated>
+    <updated>2012-05-06T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2012/05/06/information-overload-2012-05-06</id>
-    <content type="html"><![CDATA[<p><blockquote><p>Because groups with wildly different perspectives dominate politics, the observation that ninety-nine per cent of Americans are being left behind economically isn’t of much use politically. The ninety-nine per cent is too big a category to be an effective political force.</p><footer><strong>Nicholas Lemann</strong> <cite><a href='http://www.newyorker.com/arts/critics/atlarge/2012/04/23/120423crat_atlarge_lemann?currentPage=all'>Evening the Odds</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Nicholas Lemann http://www.newyorker.com/arts/critics/atlarge/2012/04/23/120423crat_atlarge_lemann?currentPage=all Evening the Odds %}
+Because groups with wildly different perspectives dominate politics, the observation that ninety-nine per cent of Americans are being left behind economically isn’t of much use politically. The ninety-nine per cent is too big a category to be an effective political force.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.forbes.com/sites/andygreenberg/2012/05/01/mozilla-slams-cispa-breaking-silicon-valleys-silence-on-cybersecurity-bill/">Mozilla Slams CISPA, Breaking Silicon Valley's Silence On Cybersecurity Bill</a><br>Finally someone in the valley speaks out against CISPA.</li>
@@ -39,9 +41,11 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-04-08]]></title>
     <link href="http://citizen428.net/blog/2012/04/08/information-overload-2012-04-08/"/>
-    <updated>2012-04-08T00:00:00-04:00</updated>
+    <updated>2012-04-08T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2012/04/08/information-overload-2012-04-08</id>
-    <content type="html"><![CDATA[<p><blockquote><p>Ich habe also mit meiner Aktion das alteingesessene Bild instituitionalisierter Brauchtums-Macht performativ dekonstruiert. Würde ich aus heutiger Sicht vielleicht sagen. Damals am Christkindlmarkt sagte ich nur “Esmeralda!” und humpelte wie Igor durch die Fleischberge an Touristen.</p><footer><strong>Markus Lust</strong> <cite><a href='http://www.viceland.com/blogs/at/2012/01/05/auf-lsd-am-christkindlmarkt/'>Auf LSD Am Christkindlmarkt</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Markus Lust http://www.viceland.com/blogs/at/2012/01/05/auf-lsd-am-christkindlmarkt/ Auf LSD am Christkindlmarkt %}
+Ich habe also mit meiner Aktion das alteingesessene Bild instituitionalisierter Brauchtums-Macht performativ dekonstruiert. Würde ich aus heutiger Sicht vielleicht sagen. Damals am Christkindlmarkt sagte ich nur “Esmeralda!” und humpelte wie Igor durch die Fleischberge an Touristen.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.antipope.org/charlie/blog-static/2012/03/not-an-april-fool-1.html">Not an April Fool</a><br>An article by Charlie Stross on privacy in regard to social media, stalking apps and more.</li>
@@ -57,14 +61,16 @@
 </ul>
 
 
-<p><blockquote><p>It’s probably not unrealistic to say that porn makes up 30% of the total data transferred across the internet.</p><footer><strong>Sebastian Anthony</strong> <cite><a href='http://www.extremetech.com/computing/123929-just-how-big-are-porn-sites'>Just How Big Are Porn Sites?</a></cite></footer></blockquote></p>
+<p>{% blockquote Sebastian Anthony http://www.extremetech.com/computing/123929-just-how-big-are-porn-sites Just how big are porn sites? %}
+It’s probably not unrealistic to say that porn makes up 30% of the total data transferred across the internet.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-01-08]]></title>
     <link href="http://citizen428.net/blog/2012/01/08/information-overload-2012-01-08/"/>
-    <updated>2012-01-08T00:00:00-03:00</updated>
+    <updated>2012-01-08T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2012/01/08/information-overload-2012-01-08</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="https://www.eff.org/deeplinks/2011/12/newyears-resolution-full-disk-encryption-every-computer-you-own">New Year's Resolution: Full Disk Encryption on Every Computer You Own</a><br>The <a href="https://www.eff.org">EFF</a> has a great suggestion for a New Year's resolution.</li>
@@ -106,7 +112,7 @@
   <entry>
     <title type="html"><![CDATA[The brave new world of surveillance]]></title>
     <link href="http://citizen428.net/blog/2007/01/28/the-brave-new-world-of-surveillance/"/>
-    <updated>2007-01-28T00:00:00-03:00</updated>
+    <updated>2007-01-28T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2007/01/28/the-brave-new-world-of-surveillance</id>
     <content type="html"><![CDATA[<p>Today I found this excellent Flash animation on the "Metalab":http://www.metalab.at members mailing list, which may prove to be a great help in raising your non-techy friends awareness of privacy issues. Unfortunately it's in German only...</p>
 

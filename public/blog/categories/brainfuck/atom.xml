@@ -4,7 +4,7 @@
   <title><![CDATA[Category: brainfuck | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/brainfuck/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-20T23:24:09-03:00</updated>
+  <updated>2012-11-12T19:50:31-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Loads of links]]></title>
     <link href="http://citizen428.net/blog/2005/12/10/loads-of-links/"/>
-    <updated>2005-12-10T00:00:00-03:00</updated>
+    <updated>2005-12-10T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2005/12/10/loads-of-links</id>
     <content type="html"><![CDATA[<p>I haven't blogged for quite some time now, so I decided I could at least entertain you with one of my semi-regular link dumps until I'm motivated enough to write a proper entry again...</p>
 
@@ -54,7 +54,7 @@
   <entry>
     <title type="html"><![CDATA[Getting brainf*cked]]></title>
     <link href="http://citizen428.net/blog/2005/04/12/getting-brainfcked/"/>
-    <updated>2005-04-12T00:00:00-04:00</updated>
+    <updated>2005-04-12T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2005/04/12/getting-brainfcked</id>
     <content type="html"><![CDATA[<p>After knowing "Brainfuck":http://en.wikipedia.org/wiki/Brainfuck for quite a while alreay, I today have decided to write my very first "program" in this funny little language. It does nothing more than displaying the string ""CARGAL":http://www.cargal.org!" followed by a newline, but nonetheless it was good excercise for getting used to BF.</p>
 
@@ -62,26 +62,16 @@
 
 
 <p>Here we go for the source:
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;blockquote>&lt;p>++++++++[&lt;++++++++>-]&lt;+++.
-</span><span class='line'>--.
-</span><span class='line'>++++++++[&lt;++>-]&lt;+.
-</span><span class='line'>+++++[&lt;-->-]&lt;-.
-</span><span class='line'>------.
-</span><span class='line'>++[&lt;+++++>-]&lt;+.
-</span><span class='line'>[-]+++++++[&lt;------>-]&lt;-.
-</span><span class='line'>[-]++++++++++.</span></code></pre></td></tr></table></div></figure></notextile></div>
+{% codeblock %}</p>
+
+<blockquote><p>++++++++[&lt;++++++++>-]&lt;+++.
+--.
+++++++++[&lt;++>-]&lt;+.
++++++[<-->-]&lt;-.
+------.
+++[&lt;+++++>-]&lt;+.
+[-]+++++++[<------>-]&lt;-.
+[-]++++++++++.{% endcodeblock %}
 Programming in BF gives me a rewarding feeling in a very strange way, which makes me fear that I will spend more time with it, especially now that I know about "app-vim/brainfuck-syntax":http://www.vim.org/scripts/script.php?script_id=716... ;) However, I still wonder how "Markus Schaber":http://www.ulm.ccc.de/~schabi/ had the patience to implement a multi-threading library for (and of course in) BF.</p></blockquote>
 ]]></content>
   </entry>

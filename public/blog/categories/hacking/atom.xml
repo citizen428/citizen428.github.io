@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacking | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/hacking/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-10-20T23:24:09-03:00</updated>
+  <updated>2012-11-12T19:50:31-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Create script from IRB session]]></title>
     <link href="http://citizen428.net/blog/2009/03/18/create-script-from-irb-session/"/>
-    <updated>2009-03-18T00:00:00-04:00</updated>
+    <updated>2009-03-18T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/03/18/create-script-from-irb-session</id>
     <content type="html"><![CDATA[<p>We all know the feeling: before starting a new script you hack around in IRB to try out some things, but once you're done you realize that now you either have to type everything again or copy/paste from the IRB session (or the history file if you keep one). So I set out on my search for a solution and found an "old ruby-talk post by Gavin Sinclair":http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results, which implemented a method called <b>dumphist</b>, which I modified to my needs and put in my ~/.irbrc:</p>
 
@@ -25,35 +25,21 @@
 
 <p>Let's look at the following IRB session:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;puts &quot;hello&quot;</span>
-</span><span class='line'><span class="sr">hello</span>
-</span><span class='line'><span class="sr">=&gt; nil</span>
-</span><span class='line'><span class="sr">puts &quot;world&quot;</span>
-</span><span class='line'><span class="sr">world</span>
-</span><span class='line'><span class="sr">=&gt; nil</span>
-</span><span class='line'><span class="sr">def foo</span>
-</span><span class='line'><span class="sr">..   puts &#39;bar&#39;</span>
-</span><span class='line'><span class="sr">..   end</span>
-</span><span class='line'><span class="sr">=&gt; nil</span>
-</span><span class='line'><span class="sr">dumphist(3, &#39;test.rb&#39;)</span>
-</span><span class='line'><span class="sr">=&gt; [&quot;def foo&quot;, &quot;puts &#39;bar&#39;&quot;, &quot;end&quot;]</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote>
+<p>{% codeblock lang:ruby %}</p>
+
+<blockquote><blockquote><p>puts "hello"
+hello
+=> nil
+puts "world"
+world
+=> nil
+def foo
+..   puts 'bar'
+..   end
+=> nil
+dumphist(3, 'test.rb')
+=> ["def foo", "puts 'bar'", "end"]
+{% endcodeblock %}</p></blockquote></blockquote>
 
 <p>The last command created a file named test.rb for us, which contains only the method foo. :-)</p>
 ]]></content>
@@ -62,7 +48,7 @@
   <entry>
     <title type="html"><![CDATA[Tweet active Safari tab from command line]]></title>
     <link href="http://citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
-    <updated>2009-02-27T00:00:00-03:00</updated>
+    <updated>2009-02-27T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
     <content type="html"><![CDATA[<p>Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn't already running, copy  the URL, shorten it, paste it into the client...</p>
 
@@ -76,7 +62,7 @@
   <entry>
     <title type="html"><![CDATA[Summer Chaos]]></title>
     <link href="http://citizen428.net/blog/2007/01/25/summer-chaos/"/>
-    <updated>2007-01-25T00:00:00-03:00</updated>
+    <updated>2007-01-25T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2007/01/25/summer-chaos</id>
     <content type="html"><![CDATA[<p>The date and location for the "Chaos Communication Camp 2007":http://events.ccc.de/camp/ have now been confirmed! Hope to see you all there!</p>
 
@@ -87,7 +73,7 @@
   <entry>
     <title type="html"><![CDATA[23C3 here we come]]></title>
     <link href="http://citizen428.net/blog/2006/12/25/23c3-here-we-come/"/>
-    <updated>2006-12-25T00:00:00-03:00</updated>
+    <updated>2006-12-25T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2006/12/25/23c3-here-we-come</id>
     <content type="html"><![CDATA[<p>In a little less than four hours, "berq":http:berq.net, "lippi":http://twoday.tuwien.ac.at/perm, "red667":http://red667.org, and me will leave for Berlin where we're going to attend the "23C3":http://events.ccc.de/congress/2006/Home. Since the "Ã–BB":http://oebb.at still sucks, we're once again going by bus, arriving tomorrow at around 6:30am. Judging from last year the time between our arrival until we can check into our "hostel":http://www.hostels.com/en/availability.php/HostelNumber.10594 at around noon will be spent drinking beer, which definitely isn't a recommended breakfast option. Kids, don't try this at home!</p>
 
