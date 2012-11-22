@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="The web is full of wonderful information. In fact there&#8217;s so much of it, it almost feels intimidating at times. I therefore plan to start a &hellip;">
+  <meta name="description" content="Since my previous post on APL and J I&#8217;ve read the 45 or so pages of Easy J and am quite impressed by this nifty language. It may seem strange &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,65 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/08/28/more-tinkering-with-j/">More Tinkering With J</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-28T00:00:00-03:00" pubdate data-updated="true">Aug 28<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Since my <a href="http://citizen428.net/archives/436">previous post</a> on <span class="caps">APL</span> and J I&#8217;ve read the 45 or so pages of  <a href="http://www.jsoftware.com/books/pdf/easyj.pdf">Easy J</a> and am quite impressed by this nifty language. It may seem strange at first, but is very logically structured and not difficult to understand at all. That said I still need to constantly have the <a href="http://www.jsoftware.com/help/dictionary/vocabul.htm">vocabulary</a> open to write anything remotely useful, but I&#8217;m slowly starting to remember more and more of it.</p>
+<p>Here are a couple of examples of J&#8217;s expressiveness, with the first two based on exercises from our &#8220;Core Ruby&#8221; course on <a href="http://www.rubylearning.org/class/">RubyLearning.org</a>.</p>
+<p><em>How old is a person if he/she is 1 billion seconds old?</em><br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0 365 24 60 60 #: 1000000000
+</span><span class='line'>31 259 1 46 40</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (#:) it&#8217;s easy to see that the answer is 31 years, 259 days, 1 hour, 46 minutes and 40 seconds.</p>
+<p><em>Convert degress Fahrenheit to degrees Celsius.</em><br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>toc =: %&1.8@-&32
+</span><span class='line'>  toc 100
+</span><span class='line'>37.7778</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Divide by 1.8 after (<a href="http://www.jsoftware.com/help/dictionary/d620.htm">Atop</a>,  @) subtracting 32. I suspect there&#8217;s a better way to write this, but it&#8217;s the first thing that came to my mind&#8230;</p>
+<p><em>Create a sorted set from a list of numbers.</em><br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>toset =: ({~/:)@~.
+</span><span class='line'>  toset 3 4 1 2 4 2 3 5
+</span><span class='line'>1 2 3 4 5</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Sort (<a href="http://www.jsoftware.com/help/dictionary/d422.htm">/:</a>) the distinct items (<a href="http://www.jsoftware.com/help/dictionary/d221.htm">nub</a>) of the list. Don&#8217;t concern yourself too much with the passive (<a href="http://www.jsoftware.com/help/dictionary/d220v.htm">~</a>) for now, it&#8217;s just there so the arguments to <a href="http://www.jsoftware.com/help/dictionary/d521.htm">take</a> end up in the right spot.</p>
+<p>That&#8217;s it for today, in my next post on J I want to focus on the language&#8217;s excellent plotting capabilities.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -658,54 +717,6 @@ There&#8217;s still quite a bit to do though: first I need to find a theme I lik
 </span><span class='line'>        red667/tecc: The Euler Coding Collective                             (7)
 </span><span class='line'>       fogus/potion: _why the lucky stiff's little language                  (39)</span></code></pre></td></tr></table></div></figure></div></notextile><br />
 I know that there are several gems for interacting with GitHub, but thanks to the awesome <a href="http://httparty.rubyforge.org/">HTTParty</a> it takes about as long to just implement the relevant part of the <span class="caps">API</span> yourself as it would take to actually find said gems, install them and glance over their docs. In case this looks a bit over-engineered, I have a couple more ideas I might add in the future, so I already prepared the code for that (e.g. the API_METHODS hash). Once I do that I&#8217;ll also not hardcode the user name, separate out&#8230; who am I kidding, it&#8217;s just another throwaway script, but at least it&#8217;s somewhat useful&#8230;</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/06/08/a-ruby-reading-list/">A Ruby Reading List</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-06-08T00:00:00-03:00" pubdate data-updated="true">Jun 8<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Since I just compiled this list for the RubyLearning forums, I might as well post it here. Below you&#8217;ll find articles I often recommend to our students, plus some personal favorites:<br />
-<ul><br />
-<li><a href="http://www.caliban.org/ruby/rubyguide.shtml">The Unofficial Ruby Usage Guide</a> </li><br />
-<li><a href="http://www.hokstad.com/ruby-object-model.html">The Ruby Object Model &#8211; Structure and Semantics</a> </li><br />
-<li><a href="http://viewsourcecode.org/why/hacking/seeingMetaclassesClearly.html">Seeing Metaclasses Clearly</a> </li><br />
-<li><a href="http://ola-bini.blogspot.com/2006/09/ruby-singleton-class.html">The Ruby Singleton Class</a> </li><br />
-<li><a href="http://practicalruby.blogspot.com/2007/02/ruby-metaprogramming-introduction.html">A Ruby Metaprogramming Introduction</a> </li><br />
-<li><a href="http://viewsourcecode.org/why/hacking/theFullyUpturnedBin.html">The Fully Upturned Bin</a> </li><br />
-<li><a href="http://coaxialhost.com/tutorials/writing_ruby_extensions.html">Writing Ruby extensions</a> </li><br />
-<li><a href="http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers/">Untangling Evented Code with Ruby Fibers</a> </li><br />
-<li><a href="http://judofyr.net/posts/tailin-ruby.html" title="faking tail call optimization in Ruby">Tailin&#8217; Ruby</a> </li><br />
-<li><a href="http://tagaholic.me/2009/05/11/demystifying-irb-commands.html">Demistifying <span class="caps">IRB</span>&#8217;s Commands</a> </li><br />
-<li><a href="http://www.engineyard.com/blog/2010/everything-you-need-to-know-about-unicorn/">Everything You Need to Know About Unicorn</a> </li><br /></p>
-</ul></div>
   
   
 
