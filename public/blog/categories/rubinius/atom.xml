@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rubinius | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/rubinius/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-11-12T19:50:31-02:00</updated>
+  <updated>2012-11-21T23:44:23-02:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -52,10 +52,10 @@
 
 <p>Determined not to give up, I decided to try one last time with 'rake vm:clean' and 'rake build:debug' and to my surprise ended up with a working Rubinius install :-)</p>
 
-<p>{% codeblock %}
-$ bin/rbx -v
-rubinius 0.11.0-dev (ruby 1.8.6) (f5260b581 12/31/2009) [i686-apple-darwin9.6.0]
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ bin/rbx -v
+</span><span class='line'>rubinius 0.11.0-dev (ruby 1.8.6) (f5260b581 12/31/2009) [i686-apple-darwin9.6.0]</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>That made me somewhat curious, so I tried 'rake vm:clean' and 'rake build' which now also worked (still can't build master though). I have to admit that I'm slightly confused, but at least I have a working Rubinius version to play around with for the time being.</p>
 ]]></content>
