@@ -4,7 +4,7 @@
   <title><![CDATA[Category: clojure | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/clojure/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-11-21T23:50:43-02:00</updated>
+  <updated>2012-12-24T10:10:46-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -98,7 +98,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-02-06]]></title>
     <link href="http://citizen428.net/blog/2011/02/06/information-overload-2011-02-06/"/>
-    <updated>2011-02-06T00:00:00-02:00</updated>
+    <updated>2011-02-06T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2011/02/06/information-overload-2011-02-06</id>
     <content type="html"><![CDATA[<ul>
 <li>"Plenty Of Fish Hacked":http://grumomedia.com/plenty-of-fish-hacked-chris-russos-explains-how-he-did-it/<br>Once again a security researcher gets into trouble for reporting a vulnerability. Will people never learn?</li>
@@ -119,7 +119,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-01-02]]></title>
     <link href="http://citizen428.net/blog/2011/01/02/information-overload-2011-01-02/"/>
-    <updated>2011-01-02T00:00:00-02:00</updated>
+    <updated>2011-01-02T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2011/01/02/information-overload-2011-01-02</id>
     <content type="html"><![CDATA[<ul>
 <li>"Why the Internet Is a Great Tool for Totalitarians":http://www.wired.com/magazine/2010/12/st_essay_totalitarians/<br>It's always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
@@ -140,7 +140,7 @@
   <entry>
     <title type="html"><![CDATA[Clojure: Deriving the Y Combinator in 7 Stolen Steps ]]></title>
     <link href="http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/"/>
-    <updated>2010-12-14T00:00:00-02:00</updated>
+    <updated>2010-12-14T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps</id>
     <content type="html"><![CDATA[<p>"Fixed point combinators":http://en.wikipedia.org/wiki/Fixed_point_combinator are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that don't explicitly support it. This might be slightly academic, but that doesn't make it less fun.</p>
 

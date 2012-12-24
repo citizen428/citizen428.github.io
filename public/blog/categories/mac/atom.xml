@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mac | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/mac/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-11-21T23:50:43-02:00</updated>
+  <updated>2012-12-24T10:10:46-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Major changes in ClojureX]]></title>
     <link href="http://citizen428.net/blog/2010/02/21/major-changes-in-clojurex/"/>
-    <updated>2010-02-21T00:00:00-02:00</updated>
+    <updated>2010-02-21T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2010/02/21/major-changes-in-clojurex</id>
     <content type="html"><![CDATA[<p>When ClojureX was started it tried to be everything for everybody. Not only did it checkout and compile the git HEADs of clojure, clojure-contrib and jline, it also (optionally) downloaded packages for Clojure support in TextMate or Emacs, configured and installed them. This has two obvious drawbacks. First off, people end up downloading stuff they don't need. With current disk sizes and connection speeds that's probably not much of a problem, but some users may still find annoying. More importantly though it was hard to keep up with the upstream changes, e.g. clojure-contrib's recent switch to Maven.</p>
 
@@ -32,7 +32,7 @@
   <entry>
     <title type="html"><![CDATA[Fixing MacPorts on Snow Leopard]]></title>
     <link href="http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard/"/>
-    <updated>2009-10-19T00:00:00-02:00</updated>
+    <updated>2009-10-19T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard</id>
     <content type="html"><![CDATA[<pre><code>&lt;p&gt;After upgrading to Snow Leopard I had quite a bit of trouble with my &lt;a href="http://www.macports.org/"&gt;MacPorts&lt;/a&gt; installation, since most builds just failed with configure errors. After the obvious first steps of installing a newer version for SL and making sure I have the most recent XCode, I was a bit stumped until I finally found this site:&lt;/p&gt;
 

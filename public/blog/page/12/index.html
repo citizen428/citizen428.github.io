@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Crunching the numbers: How many people have ever lived?Why is math awesome? Because it answers questions like this one. Don&#8217;t worry, no &hellip;">
+  <meta name="description" content="So, over the last few weeks Tom Crinson and I read another paper, this time &#8220;The essence of functional programming&#8221; (available here) by &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,89 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/18/tom-and-michael-vs-the-monad/">Tom and Michael vs the Monad</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-18T00:00:00-03:00" pubdate data-updated="true">May 18<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, over the last few weeks <a href="http://mrjaba.posterous.com/">Tom Crinson</a> and I read another paper, this time &#8220;The essence of functional programming&#8221; (available <a href="http://homepages.inf.ed.ac.uk/wadler/topics/monads.html">here</a>) by Philip Wadler, one of the principal designers of Haskell. Tom&#8217;s post is <a href="http://mrjaba.posterous.com/michael-and-tom-vs-the-monad">here</a>.</p>
+<p><strong>The paper</strong></p>
+<p>Don&#8217;t let yourself be fooled by the title, this is <strong>not</strong> an introduction to functional programming or lambda calculus. Instead it talks about monads, a topic one reads a lot about and that&#8217;s often made out to be a lot more complicated than it really is.</p>
+<p>The whole paper is 23 pages long, so I won&#8217;t really summarize it all, but rather try to give you an idea if it might be an interesting read for you. Section 1 lays out some basics and explains the difference between pure and impure code. In section 2 the reader finally encounters the monad, defined using the usual triple <em>(M, unitM, bindM)</em>. After that we see several versions of a simple call-by-value interpreter, demonstrating various well-known monads (identity, state, error, list etc), as well as a rewrite of the interpreter to implement call-by-name semantics. For some more theory Wadler lays down the monadic laws and provides a definition of monads in terms of <em>mapM</em> and <em>joinM</em>.  He also mentions that list comprehension notation generalizes to arbitrary monads, which I found to be quite interesting. Section 3 introduces continuation passing style (<span class="caps">CPS</span>) and its relation to monads, before section 4 talks about the influence of monads on Haskell, including some cool info tidbits about early Haskell versions that seem to lack do-notation and the bind operator (the paper is from 1992 after all). Last but not least there&#8217;s the wrap-up and the work is put in context of other research.</p>
+<p><strong>Takeaway</strong></p>
+<p>Monads are not rocket science, they are just another tool in a programmer&#8217;s toolbox, especially of a programmer in a pure functional language. In the end, a monad really isn&#8217;t much more than a formalized computation, following certain rules like &#8220;I put in an A and get out a B, so what ever comes next has to take a B&#8221;. Ok, maybe that was a bit oversimplified, but it&#8217;s definitely not magic. In fact I wrote up an explanation for Tom, trying to get the basic idea across:</p>
+<blockquote>
+<p>If you imagine a Monad as some sort of box, UnitM is what puts an item into the box. Bind extracts such a value (M a), processes it with a function (a &#8594; M b) and returns another item in a box (M b). Why is that cool, because you can&#8217;t leave the box! If you think about it &#8211; and that&#8217;s an oversimplification &#8211; it&#8217;s a bit like aligning your types so you can chain method calls (just that Unit and Bind have to follow the Monadic laws). Imagine in Ruby you have an intermediary result but instead of returning a plain value OR an array, you always make sure to return [*values]. This way you can chain anything that expects an array, no matter how many intermediary values there were. That&#8217;s a bit like having an item wrapped up in some sort of array monad (once again, we are in oversimplification land here, but maybe the analogy helps).</p>
+</blockquote>
+<p><strong>Difficulty of the paper</strong></p>
+<p>The author states that he assumes no previous knowledge of category theory or Haskell (the language used in the examples), but judging Tom&#8217;s reaction to the paper, I&#8217;m not convinced by that. For somebody who has seen Haskell before and/or has a basic understanding of Monads already this is a pretty good and easy to follow read though.</p>
+<p><strong>Q&amp;A</strong></p>
+<p>Since Tom had some trouble with the paper &#8211; but bravely fought his way through it &#8211; we exchanged quite some emails on the actual content. This is cool, because it&#8217;s exactly the reason we are doing this! First we needed to get some Haskell syntax out of the way:</p>
+<blockquote>
+<p>Let&#8217;s do it slow with actual Haskell (this is a stupid function though, you could just do add = (+)):</p>
+<p>add :: Int &#8594; Int &#8594; Int<br />
+add x y = x + y</p>
+<p>This means that &#8220;add&#8221; is a function that takes two &#8220;Ints&#8221; and returns an &#8220;Int&#8221;. The value after the last &#8594; is the actual return value of the function. If you wonder about the intermediate arrows, that&#8217;s because Haskell functions technically only take one argument and return a new function which takes another argument etc.</p>
+<p>So what happens when you call</p>
+<p>add 5 6</p>
+<p>is that &#8220;add&#8221; gets applied to the argument 5, which returns another function that looks roughly like (add y = 5 + y) which in the end returns the number 11. This is a result of Haskell being based on the lambda calculus, where the equivalent expression would be \x.\y.x+y. For practical purposes it&#8217;s enough to remember the following though: whatever goes before the last &#8594; are the arguments to the function, the thing after the last &#8594; is the return type.</p>
+<p>What about polymorphic functions? Easy:</p>
+<p>add :: (Num a) =&gt; a &#8594; a &#8594; a<br />
+add x y = x + y</p>
+<p>Here we just say that we take 2 arguments of type &#8220;a&#8221; and return another &#8220;a&#8221;, with the constraint that &#8220;a&#8221; has to be numeric.</p>
+<p>Since it also is covered in the paper, here&#8217;s an example of a higher order function, good old map (that&#8217;s the same as Ruby&#8217;s map):</p>
+<p>map :: (a &#8594; b) &#8594; [a] &#8594; [b]<br />
+map f []     = []<br />
+map f (x:xs) = f x : map f xs</p>
+<p>This basically tells us that &#8220;map&#8221; takes two arguments. The first is itself a one-argument function ((a &#8594; b)) the second a list of values ([a]) and we return another list of values ([b]). Note that &#8220;a&#8221; and &#8220;b&#8221; can be the same type, but don&#8217;t have to be.</p>
+</blockquote>
+<p><em>Could you please, as simply as possible, define a Monad?</em><br />
+I have to quote Brian Beckman on that, &#8220;Monads are a theory for interacting things&#8221;. Or to paraphrase, Monads are an abstraction that allows you to define how the various stages of a computation interact. It&#8217;s a sequence of operations, put into context.</p>
+<p><em>What would you use a Monad for?</em><br />
+As seen in the paper, Monads are quite a flexible abstraction and can be used for many different things (take for example the <a href="http://haskell.org/haskellwiki/MapReduce_as_a_monad">MapReduce Monad</a>). Personally I&#8217;ve never used one outside of my limited Haskell experience, but .Net developers may find it interesting to know that <a href="http://msdn.microsoft.com/en-us/library/bb397926.aspx"><span class="caps">LINQ</span></a> is a monad (more on that <a href="http://devhawk.net/2008/07/30/monadic-philosophy-part-2-the-linq-monad/">here</a>).</p>
+<p><em>Can I use them in Ruby?</em><br />
+You can, in fact there&#8217;s a link listed below that shows simple Monads implemented in Ruby. It&#8217;s more a question of how useful they actually are in a mostly object oriented language that allows for side-effects.</p>
+<p><em>If I wanted to learn more about this sort of thing where should I go?</em><br />
+Brian Beckman recorded an <a href="http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads">awesome 67 minute video</a> on the topic, which is probably the best introduction I ever saw.</p>
+<p><strong>Links</strong></p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Monad_(functional_programming)">Wikipedia: Monad (functional programming)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Continuation-passing_style">Wikipedia: Continuation-passing style</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Call-with-current-continuation">Call-with-current-continuation</a></li>
+<li><a href="http://www.ruby-doc.org/core/classes/Kernel.html#M001422">call/cc in Ruby</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_comprehension">Wikipedia: List comprehension</a></li>
+<li><a href="http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads">Brian Beckman: Don&#8217;t fear the Monad</a></li>
+<li><a href="http://moonbase.rydia.net/mental/writings/programming/monads-in-ruby/00introduction.html">Monads in Ruby</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -599,52 +682,6 @@ I guess this wouldn&#8217;t really need to be mentioned, but for completeness&#8
 
   <div class="entry-content"><p>Considering how many tools for getting up and running with Clojure are available nowadays (e.g. <a href="https://github.com/liebke/cljr">cljr</a>, <a href="http://github.com/ninjudd/cake">cake</a> or <a href="https://github.com/russolsen/dejour">Dejour</a>) I&#8217;m not sure if anyone still cares, but as of today I&#8217;m actively working on <a href="https://github.com/citizen428/ClojureX">ClojureX</a> again.</p>
 <p>There&#8217;s not really a good reason for that, but I noticed I&#8217;ve been absent from the Clojure community for way too long and would like to change that again, so see this as a first step.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/04/10/information-overload-2011-04-10/">Information Overload 2011-04-10</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-04-10T00:00:00-03:00" pubdate data-updated="true">Apr 10<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://nuclearsquid.com/writings/git-tricks-tips-workflows.html">A few of my Git tricks, tips and workflows</a><br>Really nice collection of Git tricks by <a href="http://twitter.com/cypher">Markus Prinz</a>.</li>
-<li><a href="http://www.newyorker.com/arts/critics/atlarge/2011/04/11/110411crat_atlarge_parks?currentPage=all">Booted &#8211; What really ails Italy?</a><br>Great New Yorker article by <a href="http://tim-parks.com/">Tim Parks</a> on Italy and Silvio Berlusconi.</li>
-<li><a href="http://www.npr.org/2011/04/04/135117829/the-future-of-libraries-in-the-e-book-age">The Future Of Libraries In The E-Book Age</a><br>A follow-up to last week&#8217;s post on ebooks. I hope we&#8217;ll eventually have sane policies for digital media.</li>
-<li><a href="http://writing.wisc.edu/Handbook/index.html">The Writer&#8217;s Handbook</a><br>Prepared by the University of Wisconsin &#8211; Madison this has some good tips for writing English (a lot of which also apply to German).</li>
-<li><a href="http://blueparen.com/node/6">Interview With Albert Graef</a><br>An interview with the inventor of <a href="http://code.google.com/p/pure-lang/">Pure</a>, an unfortunately rather unknown functional programming language I used to play around with a bit last year (there&#8217;s also a <a href="http://blueparen.com/node/7">second part</a>).</li>
-<li><a href="http://sports.espn.go.com/espn/eticket/story?page=110329/Cricket">Why You Should Care About Cricket</a><br>This is a very good read not only about Cricket, but also about India.</li>
-<li><a href="http://www.schneier.com/blog/archives/2011/04/detecting_cheat_2.html">Detecting Cheaters</a><br>Interesting as always, this article by Bruce Schneier covers cheating, evolutionary psychology and formal logic.</li>
-<li><a href="http://squid314.livejournal.com/293753.html">The Story of Emily and Control</a><br>Here we go, for once I&#8217;m linking to some fiction in &#8220;Information Overload&#8221;. This is a very nice short story, don&#8217;t let yourself be turned away by the fact that it was posted on LJ.</li>
-<li><a href="http://news.stanford.edu/news/2011/january/jacobson-world-energy-012611.html">The world can be powered by alternative energy in 20-40 years, Stanford researcher says</a><br>While this is interesting, I&#8217;m still somewhat doubtful that there&#8217;ll be enough political will to make this happen.</li>
-<li><a href="http://designfestival.com/the-cicada-principle-and-why-it-matters-to-web-designers/">The Cicada Principle and Why It Matters to Web Designers</a><br>When math helps design.</li>
-</ul></div>
   
   
 

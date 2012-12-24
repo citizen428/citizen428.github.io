@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rubinius | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/rubinius/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-11-21T23:50:43-02:00</updated>
+  <updated>2012-12-24T10:10:46-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby implementations and why we should care]]></title>
     <link href="http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/"/>
-    <updated>2009-03-12T00:00:00-03:00</updated>
+    <updated>2009-03-12T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care</id>
     <content type="html"><![CDATA[<p>Not too lang ago our "favorite language":http://www.ruby-lang.org/en/ had only implementation, the one made by "Matz":http://en.wikipedia.org/wiki/Yukihiro_Matsumoto (now commonly referred to as MatzRuby or MRI). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
 
@@ -41,7 +41,7 @@
   <entry>
     <title type="html"><![CDATA[Rubinius build woes]]></title>
     <link href="http://citizen428.net/blog/2009/03/10/rubinius-build-woes/"/>
-    <updated>2009-03-10T00:00:00-03:00</updated>
+    <updated>2009-03-10T00:00:00-02:00</updated>
     <id>http://citizen428.net/blog/2009/03/10/rubinius-build-woes</id>
     <content type="html"><![CDATA[<p>A couple of days ago I decided that I want to play around with "Rubinius":http://rubini.us, so I cloned the "source":http://github.com/evanphx/rubinius/tree/master from GitHub and thought I was ready to go. As it turned out that wasn't quite the case, since my first attempt to build it ended in the second error can see here:</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-11-21T23:50:43-02:00</updated>
+  <updated>2012-12-24T10:10:46-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Emacs twittering-mode]]></title>
     <link href="http://citizen428.net/blog/2011/01/21/emacs-twittering-mode/"/>
-    <updated>2011-01-21T00:00:00-02:00</updated>
+    <updated>2011-01-21T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2011/01/21/emacs-twittering-mode</id>
     <content type="html"><![CDATA[<p>When my <a href="http://nambu.com/">usual Twitter client</a> stopped working last Tuesday, I got inspired by <a href="http://www.mostlymaths.net/2010/12/emacs-30-day-challenge.html">Ruben's Emacs 30 Day Challenge</a> and decided to look what Emacs had to offer in terms of Twitter clients. On the always helpful EmacsWiki I found a <a href="http://emacswiki.org/emacs/Twitter">list of available options</a> and after some browsing settled on <a href="http://twmode.sourceforge.net/">twittering-mode</a>. I got hooked really fast, so even after getting Nambu to work again (somehow authentication got screwed up), I decided to stay with Emacs for my Twitter needs.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sysadmin | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/sysadmin/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-11-21T23:50:43-02:00</updated>
+  <updated>2012-12-24T10:10:46-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Fixing Grub on a LUKS-encrypted Disk]]></title>
     <link href="http://citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk/"/>
-    <updated>2011-10-17T15:41:00-02:00</updated>
+    <updated>2011-10-17T15:41:00-03:00</updated>
     <id>http://citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk</id>
     <content type="html"><![CDATA[<p>When I rebooted my new work notebook (a very nice x201s, with a dual-core i7, 8GB RAM and an SSD by the way), it seemed that for whatever reason there was no Grub installed. Strange, but not the only problem I had with the alternate Ubuntu installer that I used for setting up <a href="http://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS-encrypted</a> root and swap partitions. Since this turned out to be more involved than I originally thought, I decided to document what I did to maybe save others the trouble. BTW: You'll need a Linux Live-CD for this, I recommend the excellent Debian-based <a href="http://grml.org/">Grml</a>.</p>
 

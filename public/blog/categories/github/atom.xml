@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-11-21T23:50:43-02:00</updated>
+  <updated>2012-12-24T10:10:46-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby and HTTParty: GitHub issues to CSV]]></title>
     <link href="http://citizen428.net/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv/"/>
-    <updated>2010-10-07T00:00:00-02:00</updated>
+    <updated>2010-10-07T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv</id>
     <content type="html"><![CDATA[<p>To fill our backlog at work, our project manager needed a list of our current <a href="https://github.com/">GitHub</a> issues, ideally in a spreadsheet format. A couple lines of Ruby produce CSV output consisting of issue title, creation date, reporter and labels, which then can be redirected to a file and opened with any spreadsheet program.</p>
 
@@ -69,7 +69,7 @@
   <entry>
     <title type="html"><![CDATA[What's new pussycat?]]></title>
     <link href="http://citizen428.net/blog/2009/10/06/whats-new-pussycat/"/>
-    <updated>2009-10-06T00:00:00-02:00</updated>
+    <updated>2009-10-06T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/10/06/whats-new-pussycat</id>
     <content type="html"><![CDATA[<p>Quite a bit actually:<ul>
 <li>I live in Vienna again. Seriously.</li>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tip | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/tip/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-11-21T23:50:43-02:00</updated>
+  <updated>2012-12-24T10:10:46-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Fixing MacPorts on Snow Leopard]]></title>
     <link href="http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard/"/>
-    <updated>2009-10-19T00:00:00-02:00</updated>
+    <updated>2009-10-19T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard</id>
     <content type="html"><![CDATA[<pre><code>&lt;p&gt;After upgrading to Snow Leopard I had quite a bit of trouble with my &lt;a href="http://www.macports.org/"&gt;MacPorts&lt;/a&gt; installation, since most builds just failed with configure errors. After the obvious first steps of installing a newer version for SL and making sure I have the most recent XCode, I was a bit stumped until I finally found this site:&lt;/p&gt;
 

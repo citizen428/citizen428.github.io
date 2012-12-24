@@ -4,7 +4,7 @@
   <title><![CDATA[Category: kids | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/kids/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-11-21T23:50:43-02:00</updated>
+  <updated>2012-12-24T10:10:46-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[happynerds.net is online!]]></title>
     <link href="http://citizen428.net/blog/2009/12/13/happynerds-net-is-online/"/>
-    <updated>2009-12-13T00:00:00-02:00</updated>
+    <updated>2009-12-13T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2009/12/13/happynerds-net-is-online</id>
     <content type="html"><![CDATA[<p>In my <a href="http://citizen428.net/archives/404-Fun-with-Sinatra,-Heroku-and-MongoDB.html">previous blog post</a> I mentioned how much fun I have in creating a small web project with Sinatra, Heroku and MongoHQ and today said project finally went online:</p>
 

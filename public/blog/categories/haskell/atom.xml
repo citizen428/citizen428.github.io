@@ -4,7 +4,7 @@
   <title><![CDATA[Category: haskell | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/haskell/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-11-21T23:50:43-02:00</updated>
+  <updated>2012-12-24T10:10:46-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -141,7 +141,7 @@ Brian Beckman recorded an "awesome 67 minute video":http://channel9.msdn.com/Sho
   <entry>
     <title type="html"><![CDATA[So, you want to learn Haskell?]]></title>
     <link href="http://citizen428.net/blog/2010/12/29/so-you-want-to-learn-haskell/"/>
-    <updated>2010-12-29T00:00:00-02:00</updated>
+    <updated>2010-12-29T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2010/12/29/so-you-want-to-learn-haskell</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Haskell_(programming_language)">Haskell</a> is a great language and well worth your time. Here are some freely available learning resources for the aspiring Haskeller:</p>
 
