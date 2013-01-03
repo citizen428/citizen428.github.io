@@ -4,7 +4,7 @@
   <title><![CDATA[Category: books | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/books/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-02T23:06:55-03:00</updated>
+  <updated>2013-01-02T23:42:36-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -14,11 +14,20 @@
 
   
   <entry>
-    <title type="html"><![CDATA[2013 reading list]]></title>
-    <link href="http://citizen428.net/blog/2013/01/02/2013-reading-list/"/>
+    <title type="html"><![CDATA[2012 reading list]]></title>
+    <link href="http://citizen428.net/blog/2013/01/02/2012-reading-list/"/>
     <updated>2013-01-02T20:44:00-03:00</updated>
-    <id>http://citizen428.net/blog/2013/01/02/2013-reading-list</id>
-    <content type="html"><![CDATA[<p>Mukoma wa Ngugi: <em>Nairobi Heat</em><br>
+    <id>http://citizen428.net/blog/2013/01/02/2012-reading-list</id>
+    <content type="html"><![CDATA[<p>Once again here's a list of all the books I read in the past year, in
+reading order. I'm surprised I made it to 52 again, since there were
+several periods where I didn't read much for various reasons.</p>
+
+<p>I also got to work on two books, first as technical reviewer for <a href="http://www.amazon.com/gp/product/1849515026/ref=as_li_ss_tl?ie=UTF8&amp;tag=citizen4blog-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1849515026">Ruby and MongoDB Web Development Beginner's Guide</a>
+and then as the author of the Metasploit chapter for
+<a href="http://www.sicherheitsforschung-magdeburg.de/buecher.html">Informationstechnologie und
+Sicherheitspolitik</a>.</p>
+
+<p>Mukoma wa Ngugi: <em>Nairobi Heat</em><br>
 Antoinette Bergin: <em>Bedtime Stories for Children You Hate</em><br>
 Margaret Killjoy: <em>Mythmakers and Lawbreakers: Anarchist Writers on Fiction</em><br>
 Roberto Ierusalimschy: <em>Programming in Lua</em><br>
