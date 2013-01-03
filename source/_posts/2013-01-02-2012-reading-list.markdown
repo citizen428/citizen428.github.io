@@ -12,8 +12,7 @@ several periods where I didn't read much for various reasons.
 
 I also got to work on two books, first as technical reviewer for [Ruby and MongoDB Web Development Beginner's Guide](http://www.amazon.com/gp/product/1849515026/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1849515026)
 and then as the author of the Metasploit chapter for
-[Informationstechnologie und
-Sicherheitspolitik](http://www.sicherheitsforschung-magdeburg.de/buecher.html).
+[Informationstechnologie und Sicherheitspolitik](http://www.sicherheitsforschung-magdeburg.de/buecher.html).
 
 Mukoma wa Ngugi: *Nairobi Heat*<br>
 Antoinette Bergin: *Bedtime Stories for Children You Hate*<br>
