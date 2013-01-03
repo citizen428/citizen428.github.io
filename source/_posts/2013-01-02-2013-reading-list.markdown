@@ -6,63 +6,63 @@ comments: true
 categories:
     - books
 ---
-Mukoma wa Ngugi: *Nairobi Heat*
-Antoinette Bergin: *Bedtime Stories for Children You Hate*
-Margaret Killjoy: *Mythmakers and Lawbreakers: Anarchist Writers on Fiction*
-Roberto Ierusalimschy: *Programming in Lua*
-Tobias Klein: *A Bug Hunter's Diary: A Guided Tour Through the Wilds of Software Security*
-Salman Rushdie: *The Satanic Verses*
-Banana Yoshimoto: *Kitchen*
-Jens Bjørneboe: *Haie: die Geschichte eines Schiffsunterganges*
-Henry David Thoreau: *Civil Disobedience*
-Terry Pratchett: *Reaper Man*
-Dean Wampler: *Programming Scala*
-Brendan Behan: *After the Wake*
-Bruce Sterling: *Black Swan*
-Lewis Shiner: *Slam*
-Peter Godwin: *When a Crocodile Eats the Sun: A Memoir of Africa*
-Ron Currie Jr.: *God Is Dead*
-Kurt Vonnegut: *Cat's Cradle*
-Aravind Adiga: *Between The Assassinations*
-Jonathan Safran Foer: *Eating Animals*
-Chuck Palahniuk: *Nonfiction*
-Gautam Rege: *Ruby and MongoDB Web Development*
-Terry Pratchett: *The Fifth Elephant*
-Herbert Rosendorfer: *Großes Solo für Anton*
-Brian P. Hogan: *tmux: Productive Mouse-Free Development*
-Charles Bukowski: *Ham on Rye*
-Thomas Marcinko: *Astronauts and Heretics*
-Avdi Grimm: *Exceptional Ruby: Master the Art of Handling Failure in Ruby*
-Michal Zalewski: *The Tangled Web: A Guide to Securing Modern Web Applications*
-Haruki Murakami: *1Q84*
-Jesse Storimer: *Working with UNIX Processes*
-Qiu Xiaolong: *When Red Is Black*
-Lao Tzu: *Tao Te King*
-Kim Wright: *City of Darkness*
-Joyce Carol Oates: *Rape. A Love Story*
-Joseph Heller: *Catch-22*
-Hugh Howey: *I, Zombie*
-Nury Vittachi: *Mr. Wong Goes West*
-Douglas Adams: *Dirk Gently's Holistic Detective Agency*
-p.m.: *bolo’ bolo*
-Kenneth S. Cohen: *Qigong. Grundlagen, Methoden, Anwendung*
-David Wong: *John Dies at the End*
-Terry Pratchett: *Lords and Ladies*
-Julia Alvarez: *How The Garcia Girls Lost Their Accents*
-T. E. Klemm: *100 Chess Problems for the Rest of Us*
-Robert A. Heinlein: *6xH*
-Gao Xingjian: *Soul Mountain*
-Junot Díaz: *The Brief Wondrous Life of Oscar Wao*
-Matt Ruff: *Bad Monkeys*
-Richard Wilhelm: *The Secret of the Golden Flower: A Chinese Book of Life*
-Uzodinma Iweala: *Beasts of No Nation*
-James Bracken: *¡Che Boludo!: A gringo's guide to understanding the Argentines*
-Terry Pratchett: *The Light Fantastic*
+Mukoma wa Ngugi: *Nairobi Heat*<br>
+Antoinette Bergin: *Bedtime Stories for Children You Hate*<br>
+Margaret Killjoy: *Mythmakers and Lawbreakers: Anarchist Writers on Fiction*<br>
+Roberto Ierusalimschy: *Programming in Lua*<br>
+Tobias Klein: *A Bug Hunter's Diary: A Guided Tour Through the Wilds of Software Security*<br>
+Salman Rushdie: *The Satanic Verses*<br>
+Banana Yoshimoto: *Kitchen*<br>
+Jens Bjørneboe: *Haie: die Geschichte eines Schiffsunterganges*<br>
+Henry David Thoreau: *Civil Disobedience*<br>
+Terry Pratchett: *Reaper Man*<br>
+Dean Wampler: *Programming Scala*<br>
+Brendan Behan: *After the Wake*<br>
+Bruce Sterling: *Black Swan*<br>
+Lewis Shiner: *Slam*<br>
+Peter Godwin: *When a Crocodile Eats the Sun: A Memoir of Africa*<br>
+Ron Currie Jr.: *God Is Dead*<br>
+Kurt Vonnegut: *Cat's Cradle*<br>
+Aravind Adiga: *Between The Assassinations*<br>
+Jonathan Safran Foer: *Eating Animals*<br>
+Chuck Palahniuk: *Nonfiction*<br>
+Gautam Rege: *Ruby and MongoDB Web Development*<br>
+Terry Pratchett: *The Fifth Elephant*<br>
+Herbert Rosendorfer: *Großes Solo für Anton*<br>
+Brian P. Hogan: *tmux: Productive Mouse-Free Development*<br>
+Charles Bukowski: *Ham on Rye*<br>
+Thomas Marcinko: *Astronauts and Heretics*<br>
+Avdi Grimm: *Exceptional Ruby: Master the Art of Handling Failure in Ruby*<br>
+Michal Zalewski: *The Tangled Web: A Guide to Securing Modern Web Applications*<br>
+Haruki Murakami: *1Q84*<br>
+Jesse Storimer: *Working with UNIX Processes*<br>
+Qiu Xiaolong: *When Red Is Black*<br>
+Lao Tzu: *Tao Te King*<br>
+Kim Wright: *City of Darkness*<br>
+Joyce Carol Oates: *Rape. A Love Story*<br>
+Joseph Heller: *Catch-22*<br>
+Hugh Howey: *I, Zombie*<br>
+Nury Vittachi: *Mr. Wong Goes West*<br>
+Douglas Adams: *Dirk Gently's Holistic Detective Agency*<br>
+p.m.: *bolo’ bolo*<br>
+Kenneth S. Cohen: *Qigong. Grundlagen, Methoden, Anwendung*<br>
+David Wong: *John Dies at the End*<br>
+Terry Pratchett: *Lords and Ladies*<br>
+Julia Alvarez: *How The Garcia Girls Lost Their Accents*<br>
+T. E. Klemm: *100 Chess Problems for the Rest of Us*<br>
+Robert A. Heinlein: *6xH*<br>
+Gao Xingjian: *Soul Mountain*<br>
+Junot Díaz: *The Brief Wondrous Life of Oscar Wao*<br>
+Matt Ruff: *Bad Monkeys*<br>
+Richard Wilhelm: *The Secret of the Golden Flower: A Chinese Book of Life*<br>
+Uzodinma Iweala: *Beasts of No Nation*<br>
+James Bracken: *¡Che Boludo!: A gringo's guide to understanding the Argentines*<br>
+Terry Pratchett: *The Light Fantastic*<br>
 
 There also were several programming books I didn't finish, either because I didn't have time, didn't find them interesting enough or because I got all the information I needed before the book was over:
 
-Martin Logan: *Erlang and OTP in Action*
-Leo Brodie: *Starting FORTH*
-Timothy Perrett: *Lift in Action*
-Kees Doets: *The Haskell Road to Logic, Maths and Programming*
-Ivo Balbaert: *The Way to Go*
+Martin Logan: *Erlang and OTP in Action*<br>
+Leo Brodie: *Starting FORTH*<br>
+Timothy Perrett: *Lift in Action*<br>
+Kees Doets: *The Haskell Road to Logic, Maths and Programming*<br>
+Ivo Balbaert: *The Way to Go*<br>
