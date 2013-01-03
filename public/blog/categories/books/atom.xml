@@ -4,7 +4,7 @@
   <title><![CDATA[Category: books | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/books/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2012-12-24T10:10:46-03:00</updated>
+  <updated>2013-01-02T22:41:03-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,74 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[2013 reading list]]></title>
+    <link href="http://citizen428.net/blog/2013/01/02/2013-reading-list/"/>
+    <updated>2013-01-02T20:44:00-03:00</updated>
+    <id>http://citizen428.net/blog/2013/01/02/2013-reading-list</id>
+    <content type="html"><![CDATA[<p>Mukoma wa Ngugi: <em>Nairobi Heat</em>
+Antoinette Bergin: <em>Bedtime Stories for Children You Hate</em>
+Margaret Killjoy: <em>Mythmakers and Lawbreakers: Anarchist Writers on Fiction</em>
+Roberto Ierusalimschy: <em>Programming in Lua</em>
+Tobias Klein: <em>A Bug Hunter's Diary: A Guided Tour Through the Wilds of Software Security</em>
+Salman Rushdie: <em>The Satanic Verses</em>
+Banana Yoshimoto: <em>Kitchen</em>
+Jens Bjørneboe: <em>Haie: die Geschichte eines Schiffsunterganges</em>
+Henry David Thoreau: <em>Civil Disobedience</em>
+Terry Pratchett: <em>Reaper Man</em>
+Dean Wampler: <em>Programming Scala</em>
+Brendan Behan: <em>After the Wake</em>
+Bruce Sterling: <em>Black Swan</em>
+Lewis Shiner: <em>Slam</em>
+Peter Godwin: <em>When a Crocodile Eats the Sun: A Memoir of Africa</em>
+Ron Currie Jr.: <em>God Is Dead</em>
+Kurt Vonnegut: <em>Cat's Cradle</em>
+Aravind Adiga: <em>Between The Assassinations</em>
+Jonathan Safran Foer: <em>Eating Animals</em>
+Chuck Palahniuk: <em>Nonfiction</em>
+Gautam Rege: <em>Ruby and MongoDB Web Development</em>
+Terry Pratchett: <em>The Fifth Elephant</em>
+Herbert Rosendorfer: <em>Großes Solo für Anton</em>
+Brian P. Hogan: <em>tmux: Productive Mouse-Free Development</em>
+Charles Bukowski: <em>Ham on Rye</em>
+Thomas Marcinko: <em>Astronauts and Heretics</em>
+Avdi Grimm: <em>Exceptional Ruby: Master the Art of Handling Failure in Ruby</em>
+Michal Zalewski: <em>The Tangled Web: A Guide to Securing Modern Web Applications</em>
+Haruki Murakami: <em>1Q84</em>
+Jesse Storimer: <em>Working with UNIX Processes</em>
+Qiu Xiaolong: <em>When Red Is Black</em>
+Lao Tzu: <em>Tao Te King</em>
+Kim Wright: <em>City of Darkness</em>
+Joyce Carol Oates: <em>Rape. A Love Story</em>
+Joseph Heller: <em>Catch-22</em>
+Hugh Howey: <em>I, Zombie</em>
+Nury Vittachi: <em>Mr. Wong Goes West</em>
+Douglas Adams: <em>Dirk Gently's Holistic Detective Agency</em>
+p.m.: <em>bolo’ bolo</em>
+Kenneth S. Cohen: <em>Qigong. Grundlagen, Methoden, Anwendung</em>
+David Wong: <em>John Dies at the End</em>
+Terry Pratchett: <em>Lords and Ladies</em>
+Julia Alvarez: <em>How The Garcia Girls Lost Their Accents</em>
+T. E. Klemm: <em>100 Chess Problems for the Rest of Us</em>
+Robert A. Heinlein: <em>6xH</em>
+Gao Xingjian: <em>Soul Mountain</em>
+Junot Díaz: <em>The Brief Wondrous Life of Oscar Wao</em>
+Matt Ruff: <em>Bad Monkeys</em>
+Richard Wilhelm: <em>The Secret of the Golden Flower: A Chinese Book of Life</em>
+Uzodinma Iweala: <em>Beasts of No Nation</em>
+James Bracken: <em>¡Che Boludo!: A gringo's guide to understanding the Argentines</em>
+Terry Pratchett: <em>The Light Fantastic</em></p>
+
+<p>There also were several programming books I didn't finish, either because I didn't have time, didn't find them interesting enough or because I got all the information I needed before the book was over:</p>
+
+<p>Martin Logan: <em>Erlang and OTP in Action</em>
+Leo Brodie: <em>Starting FORTH</em>
+Timothy Perrett: <em>Lift in Action</em>
+Kees Doets: <em>The Haskell Road to Logic, Maths and Programming</em>
+Ivo Balbaert: <em>The Way to Go</em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
@@ -86,75 +154,6 @@
 <p>If there's anything to criticize about this book, it's that the chapters are fairly repetitive, so I never really felt like reading more than one in a single sitting. But then it's also not the type of book that needs to be read cover to cover as fast as possible.</p>
 
 <p>Link: <a href="http://www.amazon.com/gp/product/1593273851/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1593273851">Tobias Klein: A Bug Hunter's Diary</a> (Amazon affiliate link)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[2011 reading list]]></title>
-    <link href="http://citizen428.net/blog/2011/12/28/2011-reading-list/"/>
-    <updated>2011-12-28T20:50:00-03:00</updated>
-    <id>http://citizen428.net/blog/2011/12/28/2011-reading-list</id>
-    <content type="html"><![CDATA[<p>A list of the books I read in 2011, sorted by finishing date (oldest to newest). According to <a href="http://goodreads.com">Goodreads</a> that’s roughly 16.2k pages, less than the last few years. I also have a couple of unfinished books, read several <a href="http://citizen428.net/blog/categories/papers/">papers</a> and a couple of chapters of a book on Ruby and MongoDB that I'm the technical reviewer for.</p>
-
-<p>Terry Pratchett: <strong>Hogfather</strong><br>
-Michael Köhlmeier: <strong>Sunrise</strong><br>
-Terry Pratchett: <strong>Eric</strong><br>
-Audrey Niffenegger: <strong>Her Fearful Symmetry</strong><br>
-Conrad Barski: <strong>Land of Lisp</strong><br>
-Arthur Nersesian: <strong>The Fuck-Up</strong><br>
-Ryszard Kapuściński: <strong>The Shadow of the Sun</strong><br>
-Jacqueline Rayner: <strong>Doctor Who: The Sontaran Games</strong><br>
-Gregory Brown: <strong>Ruby Best Practices</strong><br>
-L. Frank Baum: <strong>The Wonderful Wizard of Oz</strong><br>
-Paolo Bacigalupi: <strong>The Windup Girl</strong><br>
-Cory Doctorow: <strong>Eastern Standard Tribe</strong><br>
-Canol Gökel: <strong>Computer Programming using GNU Smalltalk</strong><br>
-Jeremy Leipzig: <strong>Data Mashups with R</strong><br>
-Lana Citron: <strong>Transit</strong><br>
-Suzanne Skublics: <strong>Smalltalk With Style</strong><br>
-Russ Olsen: <strong>Eloquent Ruby</strong><br>
-Dennis Lehane: <strong>Shutter Island</strong><br>
-Terrance Dicks: <strong>Doctor Who: Made of Steel</strong><br>
-Christian Bök: <strong>Eunoia</strong><br>
-Chuck Palahniuk: <strong>Invisible Monsters</strong><br>
-Radek Knapp: <strong>Franio</strong><br>
-Michael Fogus: <strong>The Joy of Clojure</strong><br>
-Terry Pratchett: <strong>Mort</strong><br>
-Dan Cederholm: <strong>Handcrafted CSS: More Bulletproof Web Design</strong><br>
-Paolo Perrotta: <strong>Metaprogramming Ruby</strong><br>
-Mark Bowden: <strong>Killing Pablo: The Hunt for the World's Greatest Outlaw</strong><br>
-Cormac McCarthy: <strong>The Road</strong><br>
-Charles Stross: <strong>Accelerando</strong><br>
-Gautam Malkani: <strong>Londonstani</strong><br>
-Armin Risi: <strong>Vegetarisch leben - Die Vorteile einer fleischlosen Ernährung</strong><br>
-Miran Lipovača: <strong>Learn You a Haskell for Great Good!: A Guide for Beginners</strong><br>
-Robert J. Chassell: <strong>An Introduction to Programming in Emacs Lisp</strong><br>
-Hunter S. Thompson: <strong>Hell's Angels</strong><br>
-Lauren Beukes: <strong>Moxyland</strong><br>
-Raphael Selbourne: <strong>Beauty</strong><br>
-Zed A. Shaw: <strong>Learn Python The Hard Way</strong><br>
-David Kennedy: <strong>Metasploit: The Penetration Tester's Guide</strong><br>
-Paolo Bacigalupi: <strong>Pump Six</strong><br>
-Michael Moorcock: <strong>The Nomad of Time</strong><br>
-Russ Olsen: <strong>Design Patterns in Ruby</strong><br>
-David Mark: <strong>Beginning iPhone 4 Development: Exploring the iOS SDK</strong><br>
-Reijo Mäki: <strong>Tango Negro</strong><br>
-David Sedaris: <strong>Me Talk Pretty One Day</strong><br>
-Kurt Vonnegut: <strong>Breakfast of Champions</strong><br>
-Mario Vargas Llosa: <strong>Der Geschichtenerzähler</strong><br>
-Kyle Banker: <strong>MongoDB in Action</strong><br>
-Scott Kenemore: <strong>Zombie, Ohio: A Tale of the Undead</strong><br>
-Leopold Kohr: <strong>The Breakdown of Nations</strong><br>
-Carlos Bueno: <strong>Lauren Ipsum</strong><br>
-Henning Mankell: <strong>Mannen på stranden</strong><br>
-Garrison Keillor: <strong>Was ist eigentlich Anarchie?</strong><br>
-Thomas Pynchon: <strong>Gravity's Rainbow</strong><br>
-Norman Matloff: <strong>The Art of R Programming</strong><br>
-Stéphane Hessel: <strong>Empört Euch!</strong><br>
-Fabian Kruse: <strong>Beyond Rules</strong><br>
-Dario Tonani: <strong>Cardanica (A Steampunk Nightmare)</strong><br>
-Ryū Murakami: <strong>In The Miso Soup</strong><br>
-Kaaron Warren: <strong>The Grinding House</strong><br></p>
 ]]></content>
   </entry>
   
