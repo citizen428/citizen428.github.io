@@ -14,7 +14,7 @@ Argentina! As you know by now, our last destination in Paraguay was
 charming little Encarnacion, from where you have an excellent view of
 Posadas in Argentina. And when I say "excellent", I mean it:
 
-http://www.flickr.com/photos/citizen428/8139257884/in/set-72157631893001328
+[http://www.flickr.com/photos/citizen428/8139257884/in/set-72157631893001328](http://www.flickr.com/photos/citizen428/8139257884/in/set-72157631893001328)
 
 Originally we wanted to take a bus on Thursday morning, but since our
 CouchSurfing host had an appointment in Posadas on Wednesday he took
@@ -37,7 +37,7 @@ went there, which is quite different from San Ignacio where domestic
 tourists are carted in by the busload. Still, if you are in the area,
 try to include the mission in your schedule, it's definitely worth it!
 
-http://www.flickr.com/photos/citizen428/8202692227/in/set-72157632056336739/
+[http://www.flickr.com/photos/citizen428/8202692227/in/set-72157632056336739/](http://www.flickr.com/photos/citizen428/8202692227/in/set-72157632056336739/)
 
 San Ignacio is also where the first terere withdrawal symptoms kicked
 in, but luckily one evening we met a guy called Paco, who not only
@@ -55,7 +55,7 @@ And then: Iguazu! I saw waterfalls before, or so I thought before I
 saw Iguazu. It's like nature put on its best Crocodile Dundee
 impression and said: "You call that a waterfall? THIS is a waterfall!"
 
-http://www.flickr.com/photos/citizen428/8203664696/in/set-72157632056336739
+[http://www.flickr.com/photos/citizen428/8203664696/in/set-72157632056336739](http://www.flickr.com/photos/citizen428/8203664696/in/set-72157632056336739)
 
 I never thought I'd be this awed by water falling down some rocks, but
 I was, and words can't really describe it. Or maybe one word can,
@@ -101,5 +101,5 @@ mentioning that the Spanish around here (Español rioplatense) is quite
 different from the one in Spain (the use of the Voseo, the
 pronunciation of "ll" and "y", the melody), but I have to say I really
 quite like it. I'd write more about it, but I'm currently in charming
-little Colonia Sacramento, so I'd rather have a walk and expand on
-this though when I tell you about Uruguay and the rest of Argentina...
+little Colonia del Sacramento, so I'd rather have a walk and expand on
+this thought when I tell you about Uruguay and the rest of Argentina...

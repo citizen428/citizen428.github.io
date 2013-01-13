@@ -9,7 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Ok, I know Hattrick is only a game. But one I&#8217;ve played constantly for more than 25 month now and which has more than 500.000 users wold wide. &hellip;">
+  <meta name="description" content="It&#8217;s time for some good Ruby-related news again! After version bumping ncurses-ruby I added two new packages to the tree.
+The first one is ruby &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +99,141 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/02/15/new-ruby-stuff/">New Ruby Stuff</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-02-15T00:00:00-03:00" pubdate data-updated="true">Feb 15<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It&#8217;s time for some good Ruby-related news again! After version bumping <a href="http://ncurses-ruby.berlios.de/">ncurses-ruby</a> I added two new packages to the tree.</p>
+<p>The first one is <a href="http://ruby-mp3info.rubyforge.org/">ruby-mp3info</a> and was submitted via Bugzilla. It&#8217;s written in pure Ruby and gives you access to a lot of low level information about mp3 files, like bitrate and samplerate. Besides that it can read and write id3v1 and read id3v2.</p>
+<p>But the really cool thing I&#8217;ve added today is <a href="http://rubytorrent.rubyforge.org/">RubyTorrent</a>. I&#8217;ve stumbled across this project a while ago and took the 0.3 release as a motivation to finally add it to the tree. Check it out, it&#8217;s really cool stuff.</p>
+<p>Here&#8217;s an example that I&#8217;ve stolen from the project&#8217;s website:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubytorrent&#39;</span>
+</span><span class='line'><span class="n">bt</span> <span class="o">=</span> <span class="no">RubyTorrent</span><span class="o">::</span><span class="no">BitTorrent</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">ARGV</span><span class="o">.</span><span class="n">shift</span><span class="p">)</span>
+</span><span class='line'><span class="n">thread</span> <span class="o">=</span> <span class="no">Thread</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span>
+</span><span class='line'>  <span class="k">while</span> <span class="kp">true</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="n">bt</span><span class="o">.</span><span class="n">percent_completed</span>
+</span><span class='line'>    <span class="nb">sleep</span> <span class="mi">15</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="n">bt</span><span class="o">.</span><span class="n">on_event</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">:complete</span><span class="p">)</span> <span class="p">{</span> <span class="n">thread</span><span class="o">.</span><span class="n">kill</span> <span class="p">}</span>
+</span><span class='line'><span class="n">thread</span><span class="o">.</span><span class="n">join</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+Yeah, that&#8217;s a BitTorrent client. Really. Nifty, isn&#8217;t it?</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/02/15/i-stood-by-your-atlantic-sea/">I Stood by Your Atlantic Sea</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-02-15T00:00:00-03:00" pubdate data-updated="true">Feb 15<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It&#8217;s done! Only 5 month (sic!) after our great trip to Ireland I finally managed to upload some pictures to my gallery.</p>
+<p><a href="http://gallery.symbion.at/album32" target="_blank">Click and thou shalt see!</a></p>
+<p>Looking at those pics again I just remembered how much I really enjoyed our time there!</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/02/07/me-in-the-press/">/me in the Press</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-02-07T00:00:00-03:00" pubdate data-updated="true">Feb 7<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Quoting from <a href="http://www.gentoo.org/news/en/gwn/20050207-newsletter.xml">this weeks Gentoo Weekly Newsletter</A>, section &#8220;Gentoo in the press&#8221;:</p>
+<blockquote><p>The German Linux Magazin carries an article by Gentoo developer Michael Kohl in its latest number. Michael explains the catalyst release engineering tool and the release process for Gentoo Linux on three pages full of interesting details, mentioning examples for using catalyst to create variant LiveCDs like the German &#8220;Fizzle Wizzle&#8221; release that includes a complete <span class="caps">KDE</span> environment running Knoppix-like from the CD without the need to install on the harddisk. The printed magazine is available at newsstands in Germany since Thursday last week, and also includes an additional Gentoo installation rundown by editor Oliver Frommel.</p></blockquote>
+<p>Unfortunately the article can&#8217;t be found online†, so you have to go buy the magazine if you want to read it.</p>
+<p>†I&#8217;ve already talked to the editorial staff of Linux Magazin and should be able to put up an <span class="caps">HTML</span> version of the text next month.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>

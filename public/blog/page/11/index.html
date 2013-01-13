@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="How Seawater Can Power the WorldInteresting NYT op-ed on the future of fusion energy.
-ZooboticsRobot researchers are modeling their creations after &hellip;">
+  <meta name="description" content="This week Tom &mdash; who is now a happily married man :-) &mdash; and yours truly finally read another paper and since I&#8217;m sick and barely &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +98,150 @@ ZooboticsRobot researchers are modeling their creations after &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm/">Tom and Michael vs the Good Grief Algorithm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-30T00:00:00-03:00" pubdate data-updated="true">Jul 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This week <a href="http://mrjaba.posterous.com/">Tom</a> &mdash; who is now a happily married man :-) &mdash; and yours truly finally read another paper and since I&#8217;m sick and barely left bed for the last 2 days I decided to fight my boredom by writing about it.</p>
+<p><strong>The paper</strong><br />
+&#8220;Multiple Aspect Ranking using the Good Grief Algorithm&#8221; by Benjamin Snyder and Regina Barzilay from the <span class="caps">MIT</span> CS and AI Lab.</p>
+<ul>
+<li><a href="http://people.csail.mit.edu/regina/my_papers/ggranker.ps">Paper</a></li>
+<li><a href="http://pages.cs.wisc.edu/~bsnyder/presentations/naacl07.pdf">Presentation</a></li>
+<li><a href="http://people.csail.mit.edu/bsnyder/naacl07/">Data and code</a></li>
+</ul>
+<p><strong>Summary</strong><br />
+The paper is in the field of sentiment analysis &mdash; extracting opinions from a text &mdash; and uses restaurant reviews as a corpus. The prime assumption is that such texts will contain more than one opinion (e.g. quality of food, price range, interior, quality of service), which the authors believe is not properly reflected by previous work in this area, where one opinion per text is assumed.</p>
+<p>The problem the authors try to solve is assigning a rank from a fixed scale (e.g. 1-5) to several related aspects. They dismiss the easy approach of treating every aspect as a separate ranking problem, since they believe that a real text relates the different aspects in a coherent way (e.g. through phrases like &#8220;but&#8221;, &#8220;one problem was&#8221; etc.).</p>
+<p>They built on previous work in the natural language processing field, namely linear models trained with <a href="http://en.wikipedia.org/wiki/Perceptron">&#8220;Perceptron&#8221;</a> and extended this framework with a sort of &#8220;meta-model&#8221; that predicts relations (agreement or disagreement) between the individually ranked aspects. By relating the different aspects in such a way, it&#8217;s easier to reflect the contrasting views in real text like &#8220;good <span class="caps">BUT</span> pricey&#8221; in a meaningful way.</p>
+<p>What follows is some math, where each input (a review) gets assigned an m-dimensional ranking vector (reflecting m aspects). For example if you try to rank 3 different aspects (food, service, price) on a scale of 1-5 a ranking vector might look like &lt;5,5,3&gt; (&#8220;food and service were great, but it was a bit pricey&#8221;). The joint ranking model then combines the individual ranks with an &#8220;agreement model&#8221; to introduce &#8220;grief terms&#8221; which express dissatisfaction in a certain aspect. The algorithm than tries to minimize the sum of this &#8220;grief&#8221; &mdash; which is what gave the algorithm its name &mdash; in a joint rank. This step then gets incorporated into the training of the individual rankers (there&#8217;s some pseudo-code for the joint training), where features of an aspect get represented through presence or absence of words and word <a href="http://en.wikipedia.org/wiki/Bigram">bigrams</a>. This is obviously a very simplified description of the algorithm, but it seems moot to repeat the entire math here, which is very well laid out in the presentation. There&#8217;s also a very nice illustration about decoding and relating the various aspects at the end of the <span class="caps">PDF</span>.</p>
+<p>What then follows is a comparison of the Good Grief algorithm with similar algorithms on a corpus of 4500 restaurant reviews ranking restaurants on 5 different aspects, where it outperforms the &#8220;competition&#8221; in a statistically relevant way.</p>
+<p><strong>Takeaway</strong><br />
+As someone who works in an area where sentiment analyses could come in handy I do have an interest in the topic, but alas we don&#8217;t have the time and resources to develop our own system to do this properly. I once hacked something together with JRuby and the OpenNLP library, which wasn&#8217;t really sentiment analysis but an attempt to extract useful phrases from reviews. It was crude and had its faults, but worked surprisingly well for the amount of time it took to write. It did however get abandoned in a prototype stage and after reading the paper it&#8217;s quite clear to me that that probably was a good choice. Sentiment analysis is a non-trivial problem that can&#8217;t properly be tackled in the ad-hoc fashion we tried. Should this topic ever resurface at my company I&#8217;ll definitely try to go for a more elaborate and scientific approach.</p>
+<p><strong>Difficulty of the paper</strong><br />
+I know that for some people the math might look scary, but if you take some time and look at it carefully you&#8217;ll notice that it&#8217;s actually rather simple. It probably doesn&#8217;t hurt to be acquainted with some basic concepts of <span class="caps">NLP</span> and machine learning, but if you have those it&#8217;s quite an enjoyable paper even if you are not an absolute crack in the field.</p>
+<p><strong>Further reading</strong></p>
+<ul>
+	<li><a href="http://en.wikipedia.org/wiki/Natural_language_processing">Natural language processing</a></li>
+	<li><a href="http://en.wikipedia.org/wiki/Sentiment_analysis">Sentiment analysis</a></li>
+	<li><a href="http://incubator.apache.org/opennlp/">OpenNLP</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/24/information-overload-2011-07-24/">Information Overload 2011-07-24</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-24T00:00:00-03:00" pubdate data-updated="true">Jul 24<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://online.wsj.com/article/SB10001424052702304911104576445862242908294.html?mod=WSJ_hp_mostpop_read">Why My Father Hated India</a><br>A half Indian/half Pakistani sheds some light on the animosity between the two countries.</li>
+<li><a href="http://www.wired.com/magazine/2011/07/ff_khan/all/1">How Khan Academy Is Changing the Rules of Education</a><br>Very nice piece on the <a href="http://www.khanacademy.org/">Khan Academy</a>, including examples of how it&#8217;s used in class rooms as well as positive and negative feedback by educators.</li>
+<li><a href="http://www.wired.com/magazine/2011/07/mf_chainworld/all/1">Chain World Videogame Was Supposed to be a Religion-Not a Holy War</a><br>Wow, I completely missed this last year, but this is a super-interesting piece on an even more interesting indie game.</li>
+<li><a href="http://rahulbijlani.com/essays/you-are-not-running-out-of-time-essay/">You are not running out of time</a><br>This really resonates with me and judging from the comments I&#8217;m not the only one.</li>
+<li><a href="http://www.guardian.co.uk/world/2011/jun/07/marching-with-the-slutwalkers">Marching with the SlutWalkers</a><br>A Guardian story on the <a href="http://en.wikipedia.org/wiki/SlutWalk">SlutWalk</a> protest marches that are causing debate amongst feminists. Because it fits the topic, here&#8217;s a picture of a sticker I took in Vienna not so long ago (it roughly translates to &#8220;the power of definition means that only the aggrieved can decide if sexual borders were crossed&#8221;):</li>
+<div align="center"><img src="https://lh5.googleusercontent.com/-MmAHHFB4gTA/TiK_HvbSdwI/AAAAAAAAAPQ/q1JIrriJNCo/s912/11%2B-%2B1" /></div>
+<li><a href="http://www.fastcodesign.com/1664508/apple-designer-creates-teaching-ui-that-kills-math-using-data-viz">Ex-Apple Designer Creates Teaching UI That &quot;Kills Math&quot; Using Data Viz</a><br>I&#8217;m almost jealous all these great math teaching tools didn&#8217;t exist when I went to school. Ok, I am jealous.</li>
+<li><a href="http://willinglycrazy.blogspot.com/2011/07/why-i-talk-openly-about-deep-dark-hole.html" title="and why you should too">Why I talk openly about the deep dark hole I&#8217;m sitting in</a><br>For various reasons this affects me on a very personal level and I can only agree with the message of this post.</li>
+<li><a href="http://www.heise.de/tp/artikel/29/29687/1.html">&quot;In 30 Jahren wird es keinen Kapitalismus mehr geben&quot;</a><br>Will capitalism really disappear within the next 30 years? Sometimes it definitely feels like it.</li>
+<li><a href="http://www.physorg.com/news/2011-07-years-math-problem-falls.html">After almost 20 years, math problem falls</a><br>Interesting result about approximating something NP-complete without something P-complete which might have a huge impact in several disciplines, from engineering to economics.</li>
+<li><a href="http://www.theatlantic.com/technology/archive/2011/07/keepin-it-cool-how-the-air-conditioner-made-modern-america/241892/">Keepin&#8217; It Cool: How the Air Conditioner Made Modern America</a><br>I&#8217;m not a big fan of ACs, but this article isn&#8217;t only about them, but about how one piece of technology can change the world in profound ways.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/23/haskell-a-summary-of-the-typeclassopedia/">Haskell: A Summary of the &#8220;Typeclassopedia&#8221;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-23T00:00:00-03:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In my current effort of trying to really learn and master Haskell, I spent the last two or so weeks reading the excellent <a href="http://www.haskell.org/haskellwiki/Typeclassopedia">Typeclassopedia</a> by Brent Yorgey. Since I probably will have to go through it a couple more times, I took notes in Emacs <a href="http://orgmode.org/">org-mode</a> and exported them to <span class="caps">HTML</span>. You can find the summary either on GitHub or here:</p>
+<ul>
+	<li><a href="https://github.com/citizen428/study-notes/tree/master/typeclassopedia">GitHub repo</a></li>
+	<li><a href="http://typeclassopedia.citizen428.net/">Typeclassopedia on citizen428.net</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -674,145 +817,6 @@ A is a globally defined constant which points to an Object.</p>
 <ul>
 <li><a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ext_ruby.html">Extending Ruby</a> from the PickAxe</li>
 <li>Mark Volkmann&#8217;s presentation <a href="http://java.ociweb.com/mark/NFJS/RubyCExtensions.pdf">Ruby C Extensions</a></li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/19/information-overload-2011-06-19/">Information Overload 2011-06-19</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-19T00:00:00-03:00" pubdate data-updated="true">Jun 19<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://io9.com/5806767/">Take a look at the world&#8217;s oldest mathematical object</a><br>A short article about the Ishango bone, apparently the &quot;<a href="http://mathworld.wolfram.com/IshangoBone.html">oldest known object containing logical carvings</a>&quot;.</li>
-<li><a href="http://www.scienceblogs.de/astrodicticum-simplex/2011/06/nemesis-der-todesstern-und-die-dinosaurier.php">Nemesis: Der Todesstern und die Dinosaurier</a><br>Somehow I&#8217;ve missed the <a href="http://en.wikipedia.org/wiki/Nemesis_(hypothetical_star)">Nemesis theory</a> until now, but it sure is interesting (in German).</li>
-<li><a href="http://www.codequarterly.com/2011/rich-hickey/">Rich Hickey Q&amp;A</a><br>Great interview with Rich Hickey in Code Quarterly. Whenever I hear/read something by Rich, I understand why Clojure is such an awesome language.</li>
-<li><a href="http://www.theregister.co.uk/2011/06/14/ice_age/">Earth may be headed into a mini Ice Age within a decade</a><br>Hm, finally a good excuse to move to warmer places for good? <a href="http://www.newscientist.com/blogs/shortsharpscience/2011/06/new-ice-age-dont-count-on-it.html">Or not</a>?</li>
-<li><a href="http://www.theatlantic.com/infocus/2011/06/diy-weapons-of-the-libyan-rebels/100086/"><span class="caps">DIY</span> Weapons of the Libyan Rebels</a><br>The creativity of humans when it comes to killing each other never ceases to amaze and sadden me.</li>
-<li><a href="http://techcrunch.com/2011/06/17/indian-village-renamed-snapdeal-com-and-its-not-a-cheap-marketing-stunt/">Indian Village Renamed Snapdeal.com. And It&#8217;s Not A Cheap Marketing Stunt!</a><br><span class="caps">IMHO</span> as long as people get helped, it doesn&#8217;t even matter if it&#8217;s a marketing stunt or not. More companies should do something for their local communities.</li>
-<li><a href="http://pastebin.com/HZtH523f">LulzSec &#8211; 1000th tweet statement</a><br>Since LulzSec was all over the news this week, I decided to include their open letter. There also was an <a href="http://pastebin.com/pbhBQLKy">answer</a>.</li>
-<li><a href="http://www.digitaltrends.com/computing/translation-technology-may-let-humans-speak-with-dolphins/">Translation technology may let humans speak with dolphins</a><br>That would be awesome.</li>
-<li><a href="http://www.thecompulsiveliar.com/top-10-media-manipulation-strategies.html">Top 10 media manipulation strategies</a><br>A list compiled by Noam Chomsky.</li>
-<li><a href="http://www.digitaltrends.com/computing/wow-high-school-grad-builds-8-bit-computer-from-scratch-complete-with-custom-os-and-pong/">High school grad builds 8-bit computer from scratch, complete with custom OS and Pong</a><br>Simply amazing, an 18 yo builds a computer from scratch and then implements a custom OS and some games.</li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/03/information-overload-2011-06-03/">Information Overload 2011-06-03</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-03T00:00:00-03:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Information Overload is a bit early this week and may be skipped altogether next Sunday. After that it should be back to the regular schedule.</p>
-<ul>
-<li><a href="http://dorophone.blogspot.com/2011/05/hyperturtle-monad-makes-pretty-pictures.html">A Hyperturtle Monad Makes Pretty Pictures</a><br>This article on monads isn&#8217;t only awesome because it develops a novel one instead of reiterating one of the well-known simple monads, but also because it does so using <a href="http://racket-lang.org/">Racket</a>.</li>
-<li><a href="http://online.wsj.com/article/SB10001424052748704889404576277391449002016.html">Iran Vows to Unplug Internet</a><br>Not that it&#8217;s that suprising, but the amount of world wide censorship efforts we saw recently is shocking.</li>
-<li><a href="http://www.guardian.co.uk/books/2011/may/21/jon-ronson-how-to-spot-a-psychopath">How to spot a psychopath</a><br>In case you ever wondered, you&#8217;ll find answers in this interesting article. As always, things are not really black and white, there&#8217;s a lot of gray in between.</li>
-<li><a href="http://www.slate.com/id/2295413/">The Case&mdash;Please Hear Me Out&mdash;Against the Em Dash</a><br>What a delightful read, especially thanks to the ironic overuse of em-dashes. Personally I&#8217;m more of a parenthesis man.</li>
-<li><a href="http://www.voxeu.org/index.php?q=node/6596">How the long-gone Habsburg Empire is still visible in Eastern European bureaucracies today</a><br>This is quite an interesting result, I want to read more on this.</li>
-<li><a href="http://www.physorg.com/news/2011-05-track-secret-feral-free-roaming-house.html">Researchers track the secret lives of feral and free-roaming house cats</a><br>Cats are cool.</li>
-<li><a href="http://flavorwire.com/180906/hacking-museums-our-retrospective-of-interventionists-and-crashers">Hacking Museums: Our Retrospective of Interventionists and Crashers</a><br>Stirring up emotion, provoking, pushing the limits, isn&#8217;t this what art really is about?</li>
-<li><a href="http://lesswrong.com/lw/60y/action_and_habit/">Action and habit</a><br>Sometimes &#8220;This is just what I do&#8221; is a good answer after all. This is in the same vain as the article about ritualizing I posted not too long ago and is something I&#8217;ve observed in many smart people as a basically subconscious action.</li>
-<li><a href="http://online.wsj.com/article/SB10001424052748703691804575254533386933138.html">Humans: Why They Triumphed</a><br>While it makes me somewhat wary when an economics magazine identifies trade as most important aspect of human evolution, the argument presented seems to have some merit, so I&#8217;ll let you make up your own mind.</li>
-<li><a href="http://the-gay-bar.com/2011/06/01/eine-neue-hackerethik/">Eine neue Hackerethik</a><br>Trying to establish a new hacker ethic (in German).</li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/05/29/information-overload-2011-05-29/">Information Overload 2011-05-29</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T00:00:00-03:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.businessweek.com/print/magazine/content/11_22/b4230064852768.htm">Red Bull&#8217;s Billionaire Maniac</a><br>Interesting article about Austrian entrepreneur and founder of Red Bull, Dietrich Mateschitz.</li>
-<li><a href="http://www.slate.com/id/2295099/pagenum/all/">Prophecy Fail</a><br>How the human mind deals with failed prophecies.</li>
-<li><a href="http://blogs.hbr.org/schwartz/2011/05/the-only-way-to-get-important.html">The Only Way to Get Important Things Done</a><br>That&#8217;s interesting, I noticed a similar pattern of ritual building in myself and it works really quite well.</li>
-<li><a href="http://www.untoldentertainment.com/blog/2011/05/24/sissys-magical-ponycorn-adventure/">5-Year-Old Girl Makes Video Game</a><br>Awesome parenting, this is great!</li>
-<li><a href="http://www.untoldentertainment.com/blog/2011/05/24/sissys-magical-ponycorn-adventure/">Depixelizing Pixel Art: Upscaling Retro 8-bit Games</a><br>There are some amazing results in there, I&#8217;ll definitely have to read the paper.</li>
-<li><a href="http://www.wired.com/wiredscience/2011/05/ads-implant-false-memories/">Ads Implant False Memories</a><br>This is pretty fascinating, the human brain is full of wonder. On a side note I realized how few ads I&#8217;m exposed to due to not having a TV and mainly consuming newspapers and magazines through their web sites (with an ad blocker).</li>
-<li><a href="http://www.zeit.de/politik/ausland/2011-05/fpoe-oesterreich-umfragen/seite-1">Heinz-Christian Strache &#8211; Aufstieg eines Hasspredigers</a><br>If you are not Austrian but can read German, this might be an interesting article about Austria&#8217;s right wing party which is currently leading the opinion polls.</li>
-<li><a href="http://www.paulgraham.com/nerds.html">Why Nerds Are Unpolular</a><br>Very good article by Paul Graham. While my school was far (in fact very far) from perfect, I&#8217;m still glad I didn&#8217;t have to go to a US high-school.</li>
-<li><a href="http://www.physorg.com/news/2011-04-scientists-spacetime-dimension.html">Scientists suggest spacetime has no time dimension</a><br>And this is why I like physics so much as a subject.</li>
-<li><a href="http://www.dnaftb.org/"><span class="caps">DNA</span> From The Beginning</a><br>Interested in genetics? You&#8217;ll love this site!</li>
 </ul></div>
   
   
