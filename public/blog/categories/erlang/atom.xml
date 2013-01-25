@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/erlang/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-10T15:45:23-03:00</updated>
+  <updated>2013-01-25T12:27:16-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -20,131 +20,74 @@
     <id>http://citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3</id>
     <content type="html"><![CDATA[<p>A couple of days ago I finally started properly looking at "Erlang":http://www.erlang.org/ for the first time. One aspect I find especially interesting is the "bit syntax":http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html, so I wrote a small program for parsing "ID3v1 tags":http://www.id3.org/ID3v1 for practice. There's definitely room for improvement (I ignored ID3v1.1), but it  was a fun little exercise. Here's the code:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">mp3</span><span class="p">).</span>
-</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">get_id3</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="n">get_tags</span><span class="o">/</span><span class="mi">2</span><span class="p">]).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">get_id3</span><span class="p">(</span><span class="nv">File</span><span class="p">)</span> <span class="o">-&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">case</span> <span class="nn">file</span><span class="p">:</span><span class="n">open</span><span class="p">(</span><span class="nv">File</span><span class="p">,</span> <span class="p">[</span><span class="n">read</span><span class="p">,</span> <span class="n">binary</span><span class="p">])</span> <span class="k">of</span>
-</span><span class='line'>    <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="nv">MP3</span><span class="p">}</span> <span class="o">-</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span>
-</span><span class='line'>        <span class="nv">Result</span> <span class="o">=</span> <span class="k">case</span> <span class="nn">file</span><span class="p">:</span><span class="n">pread</span><span class="p">(</span><span class="nv">MP3</span><span class="p">,</span> <span class="p">{</span><span class="n">eof</span><span class="p">,</span> <span class="o">-</span><span class="mi">128</span><span class="p">},</span> <span class="mi">128</span><span class="p">)</span> <span class="k">of</span>
-</span><span class='line'>            <span class="p">{</span><span class="n">eof</span><span class="p">}</span> <span class="o">-</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">eof</span><span class="p">;</span>
-</span><span class='line'>            <span class="p">{</span><span class="n">error</span><span class="p">,</span> <span class="nv">Reason</span><span class="p">}</span> <span class="o">-</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nv">Reason</span><span class="p">;</span>
-</span><span class='line'>            <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="err">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="err">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="s">&quot;TAG&quot;</span><span class="p">,</span> <span class="nv">Tags</span><span class="o">/</span><span class="n">binary</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;}</span> <span class="o">-</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">parse_id3</span><span class="p">(</span><span class="nv">Tags</span><span class="p">);</span>
-</span><span class='line'>            <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="p">_}</span> <span class="o">-</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">no_id3</span>
-</span><span class='line'>        <span class="k">end</span><span class="p">,</span>
-</span><span class='line'>        <span class="nn">file</span><span class="p">:</span><span class="n">close</span><span class="p">(</span><span class="nv">MP3</span><span class="p">),</span>
-</span><span class='line'>        <span class="nv">Result</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">{</span><span class="n">error</span><span class="p">,</span> <span class="nv">Reason</span><span class="p">}</span> <span class="o">-</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nv">Reason</span>
-</span><span class='line'><span class="k">end</span><span class="p">.</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">get_tags</span><span class="p">(</span><span class="nv">Tags</span><span class="p">,</span> <span class="nv">L</span><span class="p">)</span> <span class="o">-&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nn">lists</span><span class="p">:</span><span class="n">map</span><span class="p">(</span><span class="k">fun</span> <span class="p">(</span><span class="nv">Tag</span><span class="p">)</span> <span class="o">-</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nn">proplists</span><span class="p">:</span><span class="n">get_value</span><span class="p">(</span><span class="nv">Tag</span><span class="p">,</span> <span class="nv">L</span><span class="p">)</span> <span class="k">end</span><span class="p">,</span> <span class="nv">Tags</span><span class="p">).</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">parse_id3</span><span class="p">(</span><span class="err">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="err">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="nv">T</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">Ar</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">Al</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">Y</span><span class="p">:</span><span class="mi">4</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">C</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">G</span><span class="p">:</span><span class="mi">1</span><span class="o">/</span><span class="n">binary</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nv">Clean</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="n">map</span><span class="p">(</span><span class="k">fun</span> <span class="n">cleanup</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="nv">T</span><span class="p">,</span> <span class="nv">Ar</span><span class="p">,</span> <span class="nv">Al</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">C</span><span class="p">,</span> <span class="nv">G</span><span class="p">]),</span>
-</span><span class='line'><span class="p">{</span><span class="n">id3v1</span><span class="p">,</span> <span class="nn">lists</span><span class="p">:</span><span class="n">zip</span><span class="p">([</span><span class="n">title</span><span class="p">,</span> <span class="n">artist</span><span class="p">,</span> <span class="n">album</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">genre</span><span class="p">],</span> <span class="nv">Clean</span><span class="p">)}.</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">cleanup</span><span class="p">(</span><span class="nv">T</span><span class="p">)</span> <span class="o">-&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nn">lists</span><span class="p">:</span><span class="n">filter</span><span class="p">(</span><span class="k">fun</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="o">-</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nv">X</span> <span class="o">=/=</span> <span class="mi">0</span> <span class="k">end</span><span class="p">,</span> <span class="nb">binary_to_list</span><span class="p">(</span><span class="nv">T</span><span class="p">)).</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:erlang %}
+-module(mp3).
+-export([get_id3/1, get_tags/2]).</p>
+
+<p>get_id3(File) -></p>
+
+<pre><code>case file:open(File, [read, binary]) of
+    {ok, MP3} -&gt;
+        Result = case file:pread(MP3, {eof, -128}, 128) of
+            {eof} -&gt; eof;
+            {error, Reason} -&gt; Reason;
+            {ok, &lt;&lt;"TAG", Tags/binary&gt;&gt;} -&gt; parse_id3(Tags);
+            {ok, _} -&gt; no_id3
+        end,
+        file:close(MP3),
+        Result;
+    {error, Reason} -&gt; Reason
+end.
+</code></pre>
+
+<p>get_tags(Tags, L) -></p>
+
+<pre><code>lists:map(fun (Tag) -&gt; proplists:get_value(Tag, L) end, Tags).
+</code></pre>
+
+<p>parse_id3(&lt;&lt;T:30/binary,Ar:30/binary,Al:30/binary,Y:4/binary,C:30/binary,G:1/binary>>) -></p>
+
+<pre><code>Clean = lists:map(fun cleanup/1, [T, Ar, Al, Y, C, G]),
+{id3v1, lists:zip([title, artist, album, year, comment, genre], Clean)}.
+</code></pre>
+
+<p>cleanup(T) -></p>
+
+<pre><code>lists:filter(fun(X) -&gt; X =/= 0 end, binary_to_list(T)).
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>Lets see this in action in the Erlang shell (the MP3 comes from a similar exercise in "RubyLearning's core Ruby course":http://rubylearning.org/class/course/category.php?id=2):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">147</span><span class="o">&gt;</span> <span class="c">% file doesn&#39;t exist</span>
-</span><span class='line'><span class="mi">147</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="n">get_id3</span><span class="p">(</span><span class="s">&quot;./test.txt&quot;</span><span class="p">).</span>
-</span><span class='line'><span class="n">enoent</span>
-</span><span class='line'><span class="mi">148</span><span class="o">&gt;</span> <span class="c">% file is not an MP3</span>
-</span><span class='line'><span class="mi">148</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="n">get_id3</span><span class="p">(</span><span class="s">&quot;./test.clj&quot;</span><span class="p">).</span>
-</span><span class='line'><span class="n">no_id3</span>
-</span><span class='line'><span class="mi">150</span><span class="o">&gt;</span> <span class="c">% get the tags</span>
-</span><span class='line'><span class="mi">150</span><span class="o">&gt;</span> <span class="p">{</span><span class="n">id3v1</span><span class="p">,</span> <span class="nv">Tags</span><span class="p">}</span> <span class="o">=</span> <span class="nn">mp3</span><span class="p">:</span><span class="n">get_id3</span><span class="p">(</span><span class="s">&quot;song.mp3&quot;</span><span class="p">).</span>
-</span><span class='line'><span class="p">{</span><span class="n">id3v1</span><span class="p">,[{</span><span class="n">title</span><span class="p">,</span><span class="s">&quot;Dancing Shoes&quot;</span><span class="p">},</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>    <span class="p">{</span><span class="n">artist</span><span class="p">,</span><span class="s">&quot;Cliff Richard and The Shadows&quot;</span><span class="p">},</span>
-</span><span class='line'>    <span class="p">{</span><span class="n">album</span><span class="p">,</span><span class="s">&quot;(SUMMER HOLIDAY  1963)&quot;</span><span class="p">},</span>
-</span><span class='line'>    <span class="p">{</span><span class="n">year</span><span class="p">,</span><span class="s">&quot;2000&quot;</span><span class="p">},</span>
-</span><span class='line'>    <span class="p">{</span><span class="n">comment</span><span class="p">,</span><span class="s">&quot;Rubylearning</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">},</span>
-</span><span class='line'>    <span class="p">{</span><span class="n">genre</span><span class="p">,[</span><span class="mi">24</span><span class="p">]}]}</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:erlang %}
+147> % file doesn't exist
+147> mp3:get_id3("./test.txt").
+enoent
+148> % file is not an MP3
+148> mp3:get_id3("./test.clj").
+no_id3
+150> % get the tags
+150> {id3v1, Tags} = mp3:get_id3("song.mp3").
+{id3v1,[{title,"Dancing Shoes"},</p>
+
+<pre><code>    {artist,"Cliff Richard and The Shadows"},
+    {album,"(SUMMER HOLIDAY  1963)"},
+    {year,"2000"},
+    {comment,"Rubylearning\r"},
+    {genre,[24]}]}
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>I'm too new to Erlang to judge if this is a proper use of a "property list":http://www.erlang.org/doc/man/proplists.html, but it allowed me to write <em>get_tags/2</em> as a wrapper for <em>proplists:get_value/2</em> which is rather nice:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">151</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="n">get_tags</span><span class="p">([</span><span class="n">artist</span><span class="p">],</span> <span class="nv">Tags</span><span class="p">).</span>
-</span><span class='line'><span class="p">[</span><span class="s">&quot;Cliff Richard and The Shadows&quot;</span><span class="p">]</span>
-</span><span class='line'><span class="mi">152</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="n">get_tags</span><span class="p">([</span><span class="n">artist</span><span class="p">,</span> <span class="n">year</span><span class="p">],</span> <span class="nv">Tags</span><span class="p">).</span>
-</span><span class='line'><span class="p">[</span><span class="s">&quot;Cliff Richard and The Shadows&quot;</span><span class="p">,</span><span class="s">&quot;2000&quot;</span><span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:erlang %}
+151> mp3:get_tags([artist], Tags).
+["Cliff Richard and The Shadows"]
+152> mp3:get_tags([artist, year], Tags).
+["Cliff Richard and The Shadows","2000"]
+{% endcodeblock %}</p>
 
 <p>Some initial help came from "this related blog post":http://bigdingus.com/2007/05/27/id3v1-tags-via-erlang/, but I think our versions came out quite differently in the end.</p>
 

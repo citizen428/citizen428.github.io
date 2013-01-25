@@ -4,7 +4,7 @@
   <title><![CDATA[Category: shell | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/shell/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-10T15:45:23-03:00</updated>
+  <updated>2013-01-25T12:27:16-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -49,80 +49,50 @@
 
 <p>Let's look at an interesting snippet from the script:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>xmlstarlet sel -I -t -m <span class="s2">&quot;//item&quot;</span> -v <span class="s2">&quot;./guid&quot;</span> -o <span class="s2">&quot;|&quot;</span> -c <span class="s2">&quot;.&quot;</span> -n - |
-</span><span class='line'>  sed -e <span class="s1">&#39;...&#39;</span> |
-</span><span class='line'>  awk <span class="se">\&lt;</span>/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;pre&gt;&lt;code&gt;<span class="s1">&#39;BEGIN {</span>
-</span><span class='line'><span class="s1">  FS=&quot;|&quot;</span>
-</span><span class='line'><span class="s1">  RS=&quot;\n&quot;</span>
-</span><span class='line'><span class="s1">}</span>
-</span><span class='line'><span class="s1">{</span>
-</span><span class='line'><span class="s1">  id=$1</span>
-</span><span class='line'><span class="s1">  command=&quot;printf \&quot;%s\&quot; \&quot;&quot; $2 &quot;\&quot; | md5sum | cut -d\&quot; \&quot; -f1&quot;</span>
-</span><span class='line'><span class="s1">  command | getline md5</span>
-</span><span class='line'><span class="s1">  close(command)</span>
-</span><span class='line'><span class="s1">  print id&quot;:&quot;md5</span>
-</span><span class='line'><span class="s1">}&#39;</span> &amp;gt;&amp;gt; <span class="nv">$MD5_DIR</span>/vendor-md5-<span class="nv">$TODAY</span>
-</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:bash %}
+xmlstarlet sel -I -t -m "//item" -v "./guid" -o "|" -c "." -n - |
+  sed -e '...' |
+  awk \</p>
+
+<pre><code>'BEGIN {
+  FS="|"
+  RS="\n"
+}
+{
+  id=$1
+  command="printf \"%s\" \"" $2 "\" | md5sum | cut -d\" \" -f1"
+  command | getline md5
+  close(command)
+  print id":"md5
+}' &gt;&gt; $MD5_DIR/vendor-md5-$TODAY
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>Here we use xmlstarlet to iterate over all the items in the feed (the <a href="http://www.w3.org/TR/xpath/">XPath</a> "//item"), print the value of the "guid" element (-v "./guid"), output a pipe character (-o "|") and then copy the current element followed by a newline (-c "." -n) . This then gets piped through sed for some cleaning up (which I omitted here for brevity's sake) before awk takes the part after each "|", generates an MD5 sum and finally produces a file that looks like this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rKKTZ:4012fced7c4cd77da607d294fbb8b5b6
-</span><span class='line'>hC7Jr:39245a0f9a976e6d47c0e2d76abf6238
-</span><span class='line'>...</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+rKKTZ:4012fced7c4cd77da607d294fbb8b5b6
+hC7Jr:39245a0f9a976e6d47c0e2d76abf6238
+...
+{% endcodeblock %}</p>
 
 <p>Now that we are able to create a daily list of MD5 sums, it's easy to generate the diff feed:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">if</span> <span class="o">[</span> -e <span class="nv">$MD5_DIR</span>/vendor-md5-last <span class="o">]</span> ; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span><span class="nv">changed</span><span class="o">=</span><span class="sb">`</span>diff <span class="nv">$MD5_DIR</span>/vendor-md5-last <span class="nv">$MD5_DIR</span>/vendor-md5-<span class="nv">$TODAY</span> |&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;pre&gt;&lt;code&gt;   grep <span class="s2">&quot;^&amp;gt;&quot;</span> |
-</span><span class='line'>       cut -d<span class="s2">&quot;:&quot;</span> -f 1 |
-</span><span class='line'>       cut -b 1-2 --complement<span class="sb">`</span>
-</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;for record in <span class="nv">$changed</span> ; <span class="k">do</span>
-</span><span class='line'><span class="k">  </span><span class="nv">f</span><span class="o">=</span>&lt;code&gt;fgrep -l <span class="s2">&quot;&amp;lt;guid&amp;gt;$record&amp;lt;/guid&amp;gt;&quot;</span> <span class="nv">$FILE_PATTERN</span>&lt;/code&gt;
-</span><span class='line'>  xmlstarlet sel -I -t -c <span class="s2">&quot;/rss/channel/item[guid=&#39;$record&#39;]&quot;</span> <span class="nv">$f</span> &gt;&gt; vendor-import-<span class="nv">$TODAY</span>.xml
-</span><span class='line'><span class="k">done</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:bash %}
+if [ -e $MD5_DIR/vendor-md5-last ] ; then
+  changed=`diff $MD5_DIR/vendor-md5-last $MD5_DIR/vendor-md5-$TODAY |</p>
+
+<pre><code>   grep "^&gt;" |
+       cut -d":" -f 1 |
+       cut -b 1-2 --complement`
+</code></pre>
+
+<p>for record in $changed ; do
+  f=<code>fgrep -l "&lt;guid&gt;$record&lt;/guid&gt;" $FILE_PATTERN</code>
+  xmlstarlet sel -I -t -c "/rss/channel/item[guid='$record']" $f >> vendor-import-$TODAY.xml
+done
+{% endcodeblock %}</p>
 
 <p>Here we create an array with the id of the changed elements over which we then iterate. In the loop we once again use xmlstarlet to extract the current item from the feed which contains the right guid.</p>
 
@@ -137,8 +107,9 @@
     <id>http://citizen428.net/blog/2009/05/25/most-used-shell-commands</id>
     <content type="html"><![CDATA[<p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head
+{% endcodeblock %}</p>
 
 <p>Although there was no real point in doing so, I felt the need to write a short Ruby script to do the same:</p>
 
@@ -146,29 +117,19 @@
 
 
 <p>Here's the output on my MacBook:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>command_stats | head
-</span><span class='line'><span class="nb">time</span>: 75
-</span><span class='line'><span class="nb">cd</span>: 68
-</span><span class='line'>ls: 66
-</span><span class='line'>git: 35
-</span><span class='line'>cat: 32
-</span><span class='line'>irb: 20
-</span><span class='line'>awk: 17
-</span><span class='line'>ruby: 15
-</span><span class='line'>scala: 15
-</span><span class='line'>vim: 12
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock lang:bash %}
+$ command_stats | head
+time: 75
+cd: 68
+ls: 66
+git: 35
+cat: 32
+irb: 20
+awk: 17
+ruby: 15
+scala: 15
+vim: 12
+{% endcodeblock %}</p>
 
 <p>If you are surprised by how many times (no pun intended) I called <em>time</em>, it's just because I was benchmarking "Project Euler":http://projecteuler.net/ solutions in several languages, everything else is quite regular (and suggests I don't use the Finder much ;) ).</p>
 ]]></content>

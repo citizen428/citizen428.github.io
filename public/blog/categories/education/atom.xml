@@ -4,7 +4,7 @@
   <title><![CDATA[Category: education | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/education/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-10T15:45:23-03:00</updated>
+  <updated>2013-01-25T12:27:16-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -36,7 +36,9 @@
     <link href="http://citizen428.net/blog/2011/12/25/information-overload-2011-12-25/"/>
     <updated>2011-12-25T00:00:00-03:00</updated>
     <id>http://citizen428.net/blog/2011/12/25/information-overload-2011-12-25</id>
-    <content type="html"><![CDATA[<p><blockquote><p>They’ve reminded us that politics is not a matter of choosing among what we’re offered but of fighting for what we and others actually need, not to mention what we hope for.</p><footer><strong>Nathan Schneider</strong> <cite><a href='http://www.thenation.com/article/165240/thank-you-anarchists'>Thank You, Anarchists</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Nathan Schneider http://www.thenation.com/article/165240/thank-you-anarchists Thank You, Anarchists %}
+They’ve reminded us that politics is not a matter of choosing among what we’re offered but of fighting for what we and others actually need, not to mention what we hope for.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://web.mit.edu/newsoffice/2011/mitx-education-initiative-1219.html">MIT launches online learning initiative</a><br>After Stanford's successful online courses, the MIT also develops a new online platform on top of the already cool <a href="http://ocw.mit.edu/index.htm">OCW</a>. I always welcome more good and free learning resources.</li>
@@ -52,7 +54,9 @@
 </ul>
 
 
-<p><blockquote><p>The business of humanity has become entertainment, and entertainment is the business of feeding fake fitness cues to our brains.</p><footer><strong>Geoffrey Miller</strong> <cite><a href='http://seedmagazine.com/content/article/why_we_havent_met_any_aliens/'>Why We Haven't Met Any Aliens</a></cite></footer></blockquote></p>
+<p>{% blockquote Geoffrey Miller http://seedmagazine.com/content/article/why_we_havent_met_any_aliens/ Why We Haven't Met Any Aliens %}
+The business of humanity has become entertainment, and entertainment is the business of feeding fake fitness cues to our brains.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-10T15:45:23-03:00</updated>
+  <updated>2013-01-25T12:27:16-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -25,107 +25,70 @@
 </ol>
 
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;p = Proc.new { |name| &quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="sr">&quot; }</span>
-</span><span class='line'><span class="sr">=&gt; #&amp;lt;Proc:0x000001008dc600@(irb):3&gt;</span>
-</span><span class='line'><span class="sr">l = lambda { |name| &quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="sr">&quot; }</span>
-</span><span class='line'><span class="sr">=&gt; #&amp;lt;Proc:0x000001008d3c08@(irb):4 (lambda)&gt;</span>
-</span><span class='line'><span class="sr">p.call</span>
-</span><span class='line'><span class="sr">=&gt; &quot;Hello &quot;</span>
-</span><span class='line'><span class="sr">l.call</span>
-</span><span class='line'><span class="sr">ArgumentError: wrong number of arguments (0 for 1)&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">4</span><span class="ss">:in</span> <span class="sb">`block in irb_binding&#39;</span>
-</span><span class='line'><span class="sb">from (irb):6:in `</span><span class="n">call</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from (irb):6</span>
-</span><span class='line'><span class="s1">from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&amp;lt;main&amp;gt;&#39;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote>
+<p>{% codeblock lang:ruby %}</p>
+
+<blockquote><blockquote><p>p = Proc.new { |name| "Hello #{name}" }
+=> #&lt;Proc:0x000001008dc600@(irb):3>
+l = lambda { |name| "Hello #{name}" }
+=> #&lt;Proc:0x000001008d3c08@(irb):4 (lambda)>
+p.call
+=> "Hello "
+l.call
+ArgumentError: wrong number of arguments (0 for 1)</p>
+
+<pre><code>from (irb):4:in `block in irb_binding'
+from (irb):6:in `call'
+from (irb):6
+from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&lt;main&gt;'
+</code></pre>
+
+<p>{% endcodeblock %}</p></blockquote></blockquote>
 
 <ol>
 <li>The possibility to return from within the closure:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="nb">p</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&amp;lt;Proc:0x000001008c83a8@(irb):7&gt;</span>
-</span><span class='line'><span class="n">l</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&amp;lt;Proc:0x000001008c4050@(irb):8 (lambda)&gt;</span>
-</span><span class='line'><span class="nb">p</span><span class="o">.</span><span class="n">call</span>
-</span><span class='line'><span class="no">LocalJumpError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="k">return</span>
-</span><span class='line'> <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">7</span><span class="ss">:in</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">block</span> <span class="k">in</span> <span class="n">irb_binding</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1"> from (irb):9:in&lt;/code&gt;call&#39;</span>
-</span><span class='line'> <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">9</span>
-</span><span class='line'> <span class="n">from</span><span class="sr"> /Users/mi</span><span class="n">chi</span><span class="o">/.</span><span class="n">rvm</span><span class="o">/</span><span class="n">rubies</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">p0</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">irb</span><span class="p">:</span><span class="mi">17</span><span class="ss">:in</span> <span class="sb">`&lt;main&gt;&#39;</span>
-</span><span class='line'><span class="sb">l.call</span>
-</span><span class='line'><span class="sb">=&gt; nil</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></li>
+{% codeblock lang:ruby %}
+
+<blockquote><blockquote><p>p = Proc.new { return }
+=> #&lt;Proc:0x000001008c83a8@(irb):7>
+l = lambda { return }
+=> #&lt;Proc:0x000001008c4050@(irb):8 (lambda)>
+p.call
+LocalJumpError: unexpected return
+ from (irb):7:in <code>block in irb_binding'
+ from (irb):9:in</code>call'
+ from (irb):9
+ from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `<main>'
+l.call
+=> nil
+{% endcodeblock %}</p></blockquote></blockquote></li>
 </ol>
 
 
 <p>I've known about this for a while, but as a Rubyists who until quite recently happily ignored Rails, I didn't know that ActiveSupport changes the "LocalJumpError" from the second example into</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="sb">`call&#39;: Cannot yield from a Proc type filter.</span>
-</span><span class='line'><span class="sb">   The Proc must take two arguments and execute</span>
-</span><span class='line'><span class="sb">   #call on the second argument. (ArgumentError)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+`call': Cannot yield from a Proc type filter.
+   The Proc must take two arguments and execute
+   #call on the second argument. (ArgumentError)
+{% endcodeblock %}</p>
 
 <p>when you try to return from callbacks like "before_save". I spent quite some time debugging this before I finally found the solution in this "blog post":http://obosan.blogspot.com/2008/11/blocksclosures-and-return.html. Instead of</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">after_save</span> <span class="k">do</span> <span class="o">|</span><span class="n">foo</span><span class="o">|</span>
-</span><span class='line'>  <span class="k">return</span> <span class="k">if</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+after_save do |foo|
+  return if ...
+  ...
+end
+{% endcodeblock %}</p>
 
 <p>you have to do</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">after_save</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">foo</span><span class="o">|</span>
-</span><span class='line'>  <span class="k">return</span> <span class="k">if</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+after_save(lambda { |foo|
+  return if...
+  ...
+})
+{% endcodeblock %}</p>
 
 <p>Probably obvious to more experienced Rails developers, but I really got thrown off by the "ArgumentError" that replaced the "LocalJumpError".</p>
 ]]></content>

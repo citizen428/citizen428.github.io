@@ -4,7 +4,7 @@
   <title><![CDATA[Category: lua | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/lua/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-10T15:45:23-03:00</updated>
+  <updated>2013-01-25T12:27:16-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -20,195 +20,105 @@
     <id>http://citizen428.net/blog/2011/12/23/writing-nmap-scripts-with-lua</id>
     <content type="html"><![CDATA[<p>About 2 weeks ago I finally started looking into <a href="http://www.lua.org/">Lua</a>, a language that's been on my radar for a while but that I never really got around to play with so far. Then I realized that the <a href="http://nmap.org/book/nse.html">Nmap Scripting Engine</a> uses Lua scripts, so I had an excuse to hack on this stuff for work. Here's my first small <code>nmap</code> script, which will extract the contents of the generator meta tag if there is one. It's nothing funky, but it shows how easy it is to write custom scripts for <code>nmap</code> thanks to the provided libraries like <code>http</code> and <code>shortport</code>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">description</span> <span class="o">=</span> <span class="s">[[</span>
-</span><span class='line'><span class="s">Displays the contents of the &quot;generator&quot; meta tag if there is one.</span>
-</span><span class='line'><span class="s">]]</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Michael Kohl&quot;</span>
-</span><span class='line'><span class="n">license</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Same as Nmap--See http://nmap.org/book/man-legal.html&quot;</span>
-</span><span class='line'><span class="n">categories</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;</span><span class="s">discovery&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">safe&quot;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c1">-- documentation skipped&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nb">require</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">http&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nb">require</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">shortport&#39;</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">portrule</span> <span class="o">=</span> <span class="n">shortport</span><span class="p">.</span><span class="n">http</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">action</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
-</span><span class='line'>   <span class="kd">local</span> <span class="n">response</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">generator</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="s1">&#39;</span><span class="s">/&#39;</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="c1">-- deal with redirects</span>
-</span><span class='line'>   <span class="k">while</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;</span><span class="s">status-line&#39;</span><span class="p">]:</span><span class="n">lower</span><span class="p">():</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">&lt;sup&gt;http/1.1&lt;/sup&gt; 30[12]&quot;</span><span class="p">)</span> <span class="k">do</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>  <span class="n">loc</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;</span><span class="s">location&#39;</span><span class="p">]</span>
-</span><span class='line'>  <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get_url</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="k">for</span> <span class="n">line</span> <span class="k">in</span> <span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">gmatch</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[&lt;sup&gt;</span><span class="se">\r\n</span><span class="s">]+&quot;</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">sup</span><span class="o">&gt;</span> <span class="k">do</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>  <span class="n">generator</span> <span class="o">=</span> <span class="n">line</span><span class="p">:</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">&amp;lt;meta name=&quot;generator&quot; content=&quot;(.*)&quot; /&amp;gt;&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">generator</span> <span class="k">then</span>
-</span><span class='line'>     <span class="k">return</span> <span class="n">generator</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:lua %}
+description = [[
+Displays the contents of the "generator" meta tag if there is one.
+]]</p>
+
+<p>author = "Michael Kohl"
+license = "Same as Nmap--See http://nmap.org/book/man-legal.html"
+categories = {"discovery", "safe"}</p>
+
+<p>-- documentation skipped</p>
+
+<p>require('http')
+require('shortport')</p>
+
+<p>portrule = shortport.http</p>
+
+<p>action = function(host, port)
+   local response, loc, generator</p>
+
+<p>   response = http.get(host, port, '/')</p>
+
+<p>   -- deal with redirects
+   while response['status-line']:lower():match("<sup>http/1.1</sup> 30[12]") do</p>
+
+<pre><code>  loc = response.header['location']
+  response = http.get_url(loc)
+</code></pre>
+
+<p>   end</p>
+
+<p>   for line in response.body:gmatch("[<sup>\r\n]+")</sup> do</p>
+
+<pre><code>  generator = line:match('&lt;meta name="generator" content="(.*)" /&gt;')
+  if generator then
+     return generator
+  end
+</code></pre>
+
+<p>   end
+end
+{% endcodeblock %}</p>
 
 <p><strong>Update:</strong> Here's the version that's now part of <code>nmap</code>, it even made it to the default category.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">description</span> <span class="o">=</span> <span class="s">[[</span>
-</span><span class='line'><span class="s">Displays the contents of the &quot;generator&quot; meta tag if there is one.</span>
-</span><span class='line'><span class="s">]]</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Michael Kohl&quot;</span>
-</span><span class='line'><span class="n">license</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Same as Nmap--See http://nmap.org/book/man-legal.html&quot;</span>
-</span><span class='line'><span class="n">categories</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;</span><span class="s">default&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">discovery&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">safe&quot;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c1">-- documentation skipped&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nb">require</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">http&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nb">require</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">shortport&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nb">require</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">stdnse&#39;</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c1">-- helper function</span>
-</span><span class='line'><span class="kd">local</span> <span class="n">follow_redirects</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-</span><span class='line'>   <span class="kd">local</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">&lt;sup&gt;[hH][tT][tT][pP]/1.[01]&lt;/sup&gt; 30[12]&quot;</span>
-</span><span class='line'>   <span class="kd">local</span> <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="k">while</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;</span><span class="s">status-line&#39;</span><span class="p">]:</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">do</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>  <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span class='line'>  <span class="n">loc</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;</span><span class="s">location&#39;</span><span class="p">]</span>
-</span><span class='line'>  <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get_url</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="k">return</span> <span class="n">response</span>
-</span><span class='line'><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">portrule</span> <span class="o">=</span> <span class="n">shortport</span><span class="p">.</span><span class="n">http</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">action</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
-</span><span class='line'>   <span class="kd">local</span> <span class="n">response</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">generator</span>
-</span><span class='line'>   <span class="kd">local</span> <span class="n">path</span> <span class="o">=</span> <span class="n">stdnse</span><span class="p">.</span><span class="n">get_script_args</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">http-generator.path&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;</span><span class="s">/&#39;</span>
-</span><span class='line'>   <span class="kd">local</span> <span class="n">redirects</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">stdnse</span><span class="p">.</span><span class="n">get_script_args</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">http-generator.redirects&#39;</span><span class="p">))</span> <span class="ow">or</span> <span class="mi">3</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="c1">-- Worst case: &lt;meta name=Generator content=&quot;Microsoft Word 11&quot;&gt;</span>
-</span><span class='line'>   <span class="kd">local</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">&lt;meta name=&quot;?generator&quot;? content=&quot;([^</span><span class="se">\&quot;</span><span class="s">]*)&quot; ?/?&gt;&#39;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="c1">-- make pattern case-insensitive</span>
-</span><span class='line'>   <span class="n">pattern</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">:</span><span class="n">gsub</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">%a&quot;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>           <span class="k">return</span> <span class="nb">string.format</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[%s%s]&quot;</span><span class="p">,</span> <span class="nb">string.lower</span><span class="p">(</span><span class="n">c</span><span class="p">),</span>
-</span><span class='line'>                                          <span class="nb">string.upper</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
-</span><span class='line'>         <span class="k">end</span><span class="p">)</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="n">response</span> <span class="o">=</span> <span class="n">follow_redirects</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">redirects</span><span class="p">)</span>
-</span><span class='line'>   <span class="k">return</span> <span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:lua %}
+description = [[
+Displays the contents of the "generator" meta tag if there is one.
+]]</p>
+
+<p>author = "Michael Kohl"
+license = "Same as Nmap--See http://nmap.org/book/man-legal.html"
+categories = {"default", "discovery", "safe"}</p>
+
+<p>-- documentation skipped</p>
+
+<p>require('http')
+require('shortport')
+require('stdnse')</p>
+
+<p>-- helper function
+local follow_redirects = function(host, port, path, n)
+   local pattern = "<sup>[hH][tT][tT][pP]/1.[01]</sup> 30[12]"
+   local response = http.get(host, port, path)</p>
+
+<p>   while response['status-line']:match(pattern) and n > 0 do</p>
+
+<pre><code>  n = n - 1
+  loc = response.header['location']
+  response = http.get_url(loc)
+</code></pre>
+
+<p>   end</p>
+
+<p>   return response
+end</p>
+
+<p>portrule = shortport.http</p>
+
+<p>action = function(host, port)
+   local response, loc, generator
+   local path = stdnse.get_script_args('http-generator.path') or '/'
+   local redirects = tonumber(stdnse.get_script_args('http-generator.redirects')) or 3</p>
+
+<p>   -- Worst case: <meta name=Generator content="Microsoft Word 11">
+   local pattern = '<meta name="?generator"? content="([^\"]*)" ?/?>'</p>
+
+<p>   -- make pattern case-insensitive
+   pattern = pattern:gsub("%a", function (c)</p>
+
+<pre><code>           return string.format("[%s%s]", string.lower(c),
+                                          string.upper(c))
+         end)
+</code></pre>
+
+<p>   response = follow_redirects(host, port, path, redirects)
+   return response.body:match(pattern)</p>
+
+<p>end
+{% endcodeblock %}</p>
 ]]></content>
   </entry>
   
