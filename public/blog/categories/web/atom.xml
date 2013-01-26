@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/web/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-25T12:27:16-03:00</updated>
+  <updated>2013-01-26T13:28:08-03:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -24,23 +24,36 @@
 
 <p>It uses HTTParty to generate a list of all your bookmarks, which then get checked individually with Net::HTTP. Every link that returns an HTTP status code of 404 will automatically be removed (no questions asked, no undo), links with a status code other than 200 (OK) won't be changed but will display some information in case you want to fix them manually. Here's some example output (links anonymized for this post):</p>
 
-<p>{% codeblock %}
-  Enter Delicious username: citizen428
-  Enter Delicious password: *********</p>
-
-<p>  citizen428 has 664 bookmarks.
-  Processing URL #0001: OK
-  Processing URL #0002: OK
-  Processing URL #0003: OK
-  Processing URL #0004: OK
-  Processing URL #0005: OK
-  ...
-  Processing URL #0013: 405: http://...
-  ...
-  Processing URL #0074: 302: http://...
-  ...
-  Processing URL #0086: Connection reset by peer - https://...
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Enter Delicious username: citizen428
+</span><span class='line'>  Enter Delicious password: *********&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  citizen428 has 664 bookmarks.
+</span><span class='line'>  Processing URL #0001: OK
+</span><span class='line'>  Processing URL #0002: OK
+</span><span class='line'>  Processing URL #0003: OK
+</span><span class='line'>  Processing URL #0004: OK
+</span><span class='line'>  Processing URL #0005: OK
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0013: 405: http://...
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0074: 302: http://...
+</span><span class='line'>  ...
+</span><span class='line'>  Processing URL #0086: Connection reset by peer - https://...</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Not bad for under 60 lines of code. :-) I hope this is useful to some of you, I do have some features I plan on adding to this in the future.</p>
 ]]></content>
@@ -86,14 +99,18 @@
     <id>http://citizen428.net/blog/2007/01/04/xpath-goodmadness</id>
     <content type="html"><![CDATA[<p>Today I started writing a useful little "Greasemonkey":http://greasemonkey.mozdev.org/ "userscript":http://userscripts.org/ for a "browser-based MMRPG":http://www.pardus.at I'm playing. Although I'm no JavaScript guru I feel somewhat confident in the language and am quite fond of "XPath":http://www.w3.org/TR/xpath ever since I joined the "hoodwink.d":http://hoodwinkd.hobix.com/ community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. "funky") from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here's the working result:</p>
 
-<p>{% codeblock %}
-var xpath = "/html/frameset/frame[@name='main']";
-var frameResult = document.evaluate(xpath, document, null,
-   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
-var document2 = frameResult.contentDocument;
-var imgResult = document2.evaluate("//img[contains(@src,'funky')]", document2, null,
-  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var xpath = "/html/frameset/frame[@name='main']";
+</span><span class='line'>var frameResult = document.evaluate(xpath, document, null,
+</span><span class='line'>   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
+</span><span class='line'>var document2 = frameResult.contentDocument;
+</span><span class='line'>var imgResult = document2.evaluate("//img[contains(@src,'funky')]", document2, null,
+</span><span class='line'>  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Of course if any of you know sbout a better way to achieve the same result, please don't hesitate to post a comment, thanks!</p>
 
