@@ -4,7 +4,7 @@
   <title><![CDATA[Category: books | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/books/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-26T13:28:08-03:00</updated>
+  <updated>2013-02-13T20:03:07-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[2012 reading list]]></title>
     <link href="http://citizen428.net/blog/2013/01/02/2012-reading-list/"/>
-    <updated>2013-01-02T20:44:00-03:00</updated>
+    <updated>2013-01-02T20:44:00-04:00</updated>
     <id>http://citizen428.net/blog/2013/01/02/2012-reading-list</id>
     <content type="html"><![CDATA[<p>Once again here's a list of all the books I read in the past year, in
 reading order. I'm surprised I made it to 52 again, since there were
@@ -92,7 +92,7 @@ Ivo Balbaert: <em>The Way to Go</em><br></p>
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
     <link href="http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
-    <updated>2012-07-28T10:15:00-03:00</updated>
+    <updated>2012-07-28T10:15:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
     <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
 
@@ -109,7 +109,7 @@ Ivo Balbaert: <em>The Way to Go</em><br></p>
   <entry>
     <title type="html"><![CDATA[Review: The Tangled Web]]></title>
     <link href="http://citizen428.net/blog/2012/06/20/review-the-tangled-web/"/>
-    <updated>2012-06-20T15:05:00-03:00</updated>
+    <updated>2012-06-20T15:05:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/06/20/review-the-tangled-web</id>
     <content type="html"><![CDATA[<p><em>Disclaimer 1: The good folks of No Starch Press were kind enough to provide me with a review copy of this book, but this did not influence the following text.</em></p>
 
@@ -128,7 +128,7 @@ Ivo Balbaert: <em>The Way to Go</em><br></p>
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-02-26]]></title>
     <link href="http://citizen428.net/blog/2012/02/26/information-overload-2012-02-26/"/>
-    <updated>2012-02-26T00:00:00-03:00</updated>
+    <updated>2012-02-26T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/02/26/information-overload-2012-02-26</id>
     <content type="html"><![CDATA[<p><blockquote><p>To us, the Web is a sort of shared external memory. We do not have to remember unnecessary details: dates, sums, formulas, clauses, street names, detailed definitions. It is enough for us to have an abstract, the essence that is needed to process the information and relate it to others.</p><footer><strong>Piotr Czerski (translated by Marta Szreder)</strong> <cite><a href='http://pastebin.com/0xXV8k7k'>We, the Web Kids</a></cite></footer></blockquote></p>
 
@@ -153,7 +153,7 @@ Ivo Balbaert: <em>The Way to Go</em><br></p>
   <entry>
     <title type="html"><![CDATA[Review: A Bug Hunter's Diary]]></title>
     <link href="http://citizen428.net/blog/2012/02/01/review-a-bug-hunters-diary/"/>
-    <updated>2012-02-01T22:03:00-03:00</updated>
+    <updated>2012-02-01T22:03:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/02/01/review-a-bug-hunters-diary</id>
     <content type="html"><![CDATA[<p>This was a very good read! In each chapter the author introduces one bug he found in a popular software package, always following the same structure: discovery, exploitation, remediation, lessons learned from the bug and a timeline of the bug's lifetime (disclosure, fix, etc).</p>
 

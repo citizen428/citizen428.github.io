@@ -4,7 +4,7 @@
   <title><![CDATA[Category: polyglot | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/polyglot/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-26T13:28:08-03:00</updated>
+  <updated>2013-02-13T20:03:07-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Erlang bit syntax and ID3]]></title>
     <link href="http://citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3/"/>
-    <updated>2010-09-04T00:00:00-03:00</updated>
+    <updated>2010-09-04T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3</id>
     <content type="html"><![CDATA[<p>A couple of days ago I finally started properly looking at "Erlang":http://www.erlang.org/ for the first time. One aspect I find especially interesting is the "bit syntax":http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html, so I wrote a small program for parsing "ID3v1 tags":http://www.id3.org/ID3v1 for practice. There's definitely room for improvement (I ignored ID3v1.1), but it  was a fun little exercise. Here's the code:</p>
 
@@ -155,7 +155,7 @@
   <entry>
     <title type="html"><![CDATA[Rewiring my brain: APL and J]]></title>
     <link href="http://citizen428.net/blog/2010/08/16/rewiring-my-brain-apl-and-j/"/>
-    <updated>2010-08-16T00:00:00-03:00</updated>
+    <updated>2010-08-16T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2010/08/16/rewiring-my-brain-apl-and-j</id>
     <content type="html"><![CDATA[<p>"<em>By relieving the brain of all unnecesary work, a good notation sets it free to concentrate on more advanced problems, and in effect increases the mental power of the race.</em>" - "A. N. Whitehead":http://en.wikipedia.org/wiki/Alfred_North_Whitehead</p>
 

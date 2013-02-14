@@ -4,7 +4,7 @@
   <title><![CDATA[Category: lua | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/lua/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-26T13:28:08-03:00</updated>
+  <updated>2013-02-13T20:03:07-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Writing nmap scripts with Lua]]></title>
     <link href="http://citizen428.net/blog/2011/12/23/writing-nmap-scripts-with-lua/"/>
-    <updated>2011-12-23T13:54:00-03:00</updated>
+    <updated>2011-12-23T13:54:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/12/23/writing-nmap-scripts-with-lua</id>
     <content type="html"><![CDATA[<p>About 2 weeks ago I finally started looking into <a href="http://www.lua.org/">Lua</a>, a language that's been on my radar for a while but that I never really got around to play with so far. Then I realized that the <a href="http://nmap.org/book/nse.html">Nmap Scripting Engine</a> uses Lua scripts, so I had an excuse to hack on this stuff for work. Here's my first small <code>nmap</code> script, which will extract the contents of the generator meta tag if there is one. It's nothing funky, but it shows how easy it is to write custom scripts for <code>nmap</code> thanks to the provided libraries like <code>http</code> and <code>shortport</code>.</p>
 

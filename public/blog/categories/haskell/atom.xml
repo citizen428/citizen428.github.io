@@ -4,7 +4,7 @@
   <title><![CDATA[Category: haskell | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/haskell/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-26T13:28:08-03:00</updated>
+  <updated>2013-02-13T20:03:07-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Haskell: A summary of the "Typeclassopedia"]]></title>
     <link href="http://citizen428.net/blog/2011/07/23/haskell-a-summary-of-the-typeclassopedia/"/>
-    <updated>2011-07-23T00:00:00-03:00</updated>
+    <updated>2011-07-23T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/07/23/haskell-a-summary-of-the-typeclassopedia</id>
     <content type="html"><![CDATA[<p>In my current effort of trying to really learn and master Haskell, I spent the last two or so weeks reading the excellent "Typeclassopedia":http://www.haskell.org/haskellwiki/Typeclassopedia by Brent Yorgey. Since I probably will have to go through it a couple more times, I took notes in Emacs "org-mode":http://orgmode.org/ and exported them to HTML. You can find the summary either on GitHub or here:</p>
 
@@ -31,7 +31,7 @@
   <entry>
     <title type="html"><![CDATA[Review: Learn You a Haskell for Great Good]]></title>
     <link href="http://citizen428.net/blog/2011/07/07/review-learn-you-a-haskell-for-great-good/"/>
-    <updated>2011-07-07T00:00:00-03:00</updated>
+    <updated>2011-07-07T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/07/07/review-learn-you-a-haskell-for-great-good</id>
     <content type="html"><![CDATA[<p><em>Disclaimer: <a href="http://www.nostarch.com/">No Starch Press</a> were nice enough to provide me with a free copy of the book reviewed here but what I'm about to write has not been influenced by this.</em></p>
 
@@ -49,7 +49,7 @@
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs The Monad]]></title>
     <link href="http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad/"/>
-    <updated>2011-05-18T00:00:00-03:00</updated>
+    <updated>2011-05-18T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad</id>
     <content type="html"><![CDATA[<p>So, over the last few weeks "Tom Crinson":http://mrjaba.posterous.com/ and I read another paper, this time "The essence of functional programming" (available "here":http://homepages.inf.ed.ac.uk/wadler/topics/monads.html) by Philip Wadler, one of the principal designers of Haskell. Tom's post is "here":http://mrjaba.posterous.com/michael-and-tom-vs-the-monad.</p>
 
@@ -141,7 +141,7 @@ Brian Beckman recorded an "awesome 67 minute video":http://channel9.msdn.com/Sho
   <entry>
     <title type="html"><![CDATA[So, you want to learn Haskell?]]></title>
     <link href="http://citizen428.net/blog/2010/12/29/so-you-want-to-learn-haskell/"/>
-    <updated>2010-12-29T00:00:00-03:00</updated>
+    <updated>2010-12-29T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2010/12/29/so-you-want-to-learn-haskell</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Haskell_(programming_language)">Haskell</a> is a great language and well worth your time. Here are some freely available learning resources for the aspiring Haskeller:</p>
 
@@ -160,7 +160,7 @@ Brian Beckman recorded an "awesome 67 minute video":http://channel9.msdn.com/Sho
   <entry>
     <title type="html"><![CDATA[Learning Haskell]]></title>
     <link href="http://citizen428.net/blog/2009/04/09/learning-haskell/"/>
-    <updated>2009-04-09T00:00:00-03:00</updated>
+    <updated>2009-04-09T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2009/04/09/learning-haskell</id>
     <content type="html"><![CDATA[<p>To get my mind off Ruby I recently started dabbling in Haskell. I really like what I've seen so far and it seems I'm finally starting to understand functional programming (my two attempts with "Practical Common Lisp":http://www.gigamonkeys.com/book/ never got past the first few chapters).</p>
 

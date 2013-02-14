@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blog | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-26T13:28:08-03:00</updated>
+  <updated>2013-02-13T20:03:07-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Octopress Customizations]]></title>
     <link href="http://citizen428.net/blog/2011/10/10/octopress-customizations/"/>
-    <updated>2011-10-10T19:59:00-03:00</updated>
+    <updated>2011-10-10T19:59:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/10/10/octopress-customizations</id>
     <content type="html"><![CDATA[<p>I finally found some time to give this blog a less generic look, which was really easy thanks to <a href="http://octopress.org/docs/theme/">Octopress's great theme and customization support</a>.</p>
 
@@ -95,7 +95,7 @@
   <entry>
     <title type="html"><![CDATA[Octopress Templates]]></title>
     <link href="http://citizen428.net/blog/2011/09/27/octopress-templates/"/>
-    <updated>2011-09-27T16:58:00-03:00</updated>
+    <updated>2011-09-27T16:58:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/09/27/octopress-templates</id>
     <content type="html"><![CDATA[<p>When deciding to switch from Wordpress to Octopress one of the main reasons was that I don't need most of the advanced features the former offers. However, for my weekly <a href="http://citizen428.net/blog/categories/informationoverload/">Information Overload</a> series I relied on two features, namely templates and scheduling: I created a new post from the template and then filled it with content over the week. Once I was done I'd schedule it for publishing on Sunday afternoon. Here's how I plan to do this with Octopress.<!-- more --></p>
 
@@ -183,7 +183,7 @@ handy here.</p>
   <entry>
     <title type="html"><![CDATA[Goodbye Wordpress]]></title>
     <link href="http://citizen428.net/blog/2011/09/26/goodbye-wordpress/"/>
-    <updated>2011-09-26T21:00:00-03:00</updated>
+    <updated>2011-09-26T21:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/09/26/goodbye-wordpress</id>
     <content type="html"><![CDATA[<p>After using <a href="http://wordpress.org/">Wordpress</a> as my blogging engine
 of choice for over a year (after moving away from <a href="http://s9y.org/">S9Y</a>), I decided to switch this site to
@@ -348,7 +348,7 @@ my new blogging setup.</p>
   <entry>
     <title type="html"><![CDATA[Anniversaries all around]]></title>
     <link href="http://citizen428.net/blog/2009/01/26/anniversaries-all-around/"/>
-    <updated>2009-01-26T00:00:00-02:00</updated>
+    <updated>2009-01-26T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2009/01/26/anniversaries-all-around</id>
     <content type="html"><![CDATA[<p>What a weekend for celebrations! On Saturday this blog turned 4 ("first post":http://citizen428.net/archives/1-Blog-started.html, <a href="http://citizen428.net/archives/3-Added-RedCloth.html">first "real" post</a>), on Sunday it's been exactly one year since I left Austria (although I did go back for 6 days around Christmas) and today is "Australia Day":http://en.wikipedia.org/wiki/Australia_Day. I had a great weekend and the weather actually was nice for a change. Sunshine and lollipops all around... ;)</p>
 ]]></content>
@@ -357,7 +357,7 @@ my new blogging setup.</p>
   <entry>
     <title type="html"><![CDATA[Blog reactivated, Feedburner feeds history]]></title>
     <link href="http://citizen428.net/blog/2009/01/21/blog-reactivated-feedburner-feeds-history/"/>
-    <updated>2009-01-21T00:00:00-02:00</updated>
+    <updated>2009-01-21T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2009/01/21/blog-reactivated-feedburner-feeds-history</id>
     <content type="html"><![CDATA[<p>Although I do love "my Soup":http://soup.citizen428.net, "Twitter":http://twitter.com/citizen428 and all those other microblogs, tumblelogs and whatgotyou, I recently feel the urge to sometimes write proper long blog posts rising again. Therefore I once again resurrected this blog (I slowly start feeling like the "George Romero":http://en.wikipedia.org/wiki/George_Romero of blogging), gave it a proper facelift and am now ready to roll again.</p>
 

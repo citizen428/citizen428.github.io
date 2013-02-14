@@ -4,7 +4,7 @@
   <title><![CDATA[Category: review | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/review/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-26T13:28:08-03:00</updated>
+  <updated>2013-02-13T20:03:07-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
     <link href="http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
-    <updated>2012-07-28T10:15:00-03:00</updated>
+    <updated>2012-07-28T10:15:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
     <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
 
@@ -33,7 +33,7 @@
   <entry>
     <title type="html"><![CDATA[Review: The Tangled Web]]></title>
     <link href="http://citizen428.net/blog/2012/06/20/review-the-tangled-web/"/>
-    <updated>2012-06-20T15:05:00-03:00</updated>
+    <updated>2012-06-20T15:05:00-04:00</updated>
     <id>http://citizen428.net/blog/2012/06/20/review-the-tangled-web</id>
     <content type="html"><![CDATA[<p><em>Disclaimer 1: The good folks of No Starch Press were kind enough to provide me with a review copy of this book, but this did not influence the following text.</em></p>
 
@@ -52,7 +52,7 @@
   <entry>
     <title type="html"><![CDATA[28C3 day 4]]></title>
     <link href="http://citizen428.net/blog/2011/12/30/28c3-day-4/"/>
-    <updated>2011-12-30T13:01:00-03:00</updated>
+    <updated>2011-12-30T13:01:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/12/30/28c3-day-4</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4828.en.html">Antiforensik</a><br>How to work against forensics. Nothing revolutionary, but a solid talk.</li>
@@ -67,7 +67,7 @@
   <entry>
     <title type="html"><![CDATA[28C3 day 3]]></title>
     <link href="http://citizen428.net/blog/2011/12/29/28c3-day-3/"/>
-    <updated>2011-12-29T16:24:00-03:00</updated>
+    <updated>2011-12-29T16:24:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/12/29/28c3-day-3</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4767.en.html">Security Log Visualization with a Correlation Engine</a><br>Nothing too special, but still rather interesting, especially since I need this for work at the moment.</li>
@@ -84,7 +84,7 @@
   <entry>
     <title type="html"><![CDATA[28C3 day 2]]></title>
     <link href="http://citizen428.net/blog/2011/12/29/28c3-day-2/"/>
-    <updated>2011-12-29T14:00:00-03:00</updated>
+    <updated>2011-12-29T14:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2011/12/29/28c3-day-2</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4770.en.html">Don't scan, just ask</a><br>This sounded a lot more interesting than it actually was, especially since the tool that was introduced is not publicly available (as far as I know that is).</li>

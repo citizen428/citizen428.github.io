@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-01-26T13:28:08-03:00</updated>
+  <updated>2013-02-13T20:03:07-04:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[RoR: 'call': Cannot yield from a Proc type filter.]]></title>
     <link href="http://citizen428.net/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter/"/>
-    <updated>2010-08-20T00:00:00-03:00</updated>
+    <updated>2010-08-20T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter</id>
     <content type="html"><![CDATA[<p>As we all know, there are 2 main differences between procs and lambdas in Ruby.</p>
 
@@ -134,7 +134,7 @@
   <entry>
     <title type="html"><![CDATA[Sinatra course at RubyLearning announced!]]></title>
     <link href="http://citizen428.net/blog/2009/02/25/sinatra-course-at-rubylearning-announced/"/>
-    <updated>2009-02-25T00:00:00-02:00</updated>
+    <updated>2009-02-25T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2009/02/25/sinatra-course-at-rubylearning-announced</id>
     <content type="html"><![CDATA[<p>For a lot of people, Ruby became almost equivalent to "Rails":http://rubyonrails.org/, but this doesn't mean that Rubyists can't choose from a wider selection of web frameworks. One of them is the microframework "Sinatra":http://www.sinatrarb.com/, for which "RubyLearning":http://rubylearning.org will start a "course":http://rubylearning.com/blog/2009/02/25/introduction-to-sinatra-a-new-course/ on March 21st. Registration is open now, the price is a reasonable US$3 for the first 15 people to sign up, US$4 for the next 25 and finally US$5 for everyone after that. Yours truly will also be a mentor for this course and would be happy to see some of you there!</p>
 ]]></content>
@@ -143,7 +143,7 @@
   <entry>
     <title type="html"><![CDATA[Some quick Ruby tips]]></title>
     <link href="http://citizen428.net/blog/2009/02/09/some-quick-ruby-tips/"/>
-    <updated>2009-02-09T00:00:00-02:00</updated>
+    <updated>2009-02-09T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2009/02/09/some-quick-ruby-tips</id>
     <content type="html"><![CDATA[<p>Good news for OS X users: "Priit Haamer":http://www.priithaamer.com/ provides documentation for Ruby 1.9 and Rails as dictionaries for Dictionary.app, which makes them searchable by Spotlight ("Ruby documentation":http://www.priithaamer.com/blog/ruby-dictionary-for-mac-os-x, "Rails documentation":http://www.priithaamer.com/blog/updated-ruby-on-rails-dictionary)!</p>
 
@@ -156,7 +156,7 @@
   <entry>
     <title type="html"><![CDATA[Loads of links]]></title>
     <link href="http://citizen428.net/blog/2005/12/10/loads-of-links/"/>
-    <updated>2005-12-10T00:00:00-03:00</updated>
+    <updated>2005-12-10T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2005/12/10/loads-of-links</id>
     <content type="html"><![CDATA[<p>I haven't blogged for quite some time now, so I decided I could at least entertain you with one of my semi-regular link dumps until I'm motivated enough to write a proper entry again...</p>
 
@@ -194,7 +194,7 @@
   <entry>
     <title type="html"><![CDATA[So what's the word? RUBY!]]></title>
     <link href="http://citizen428.net/blog/2005/11/18/so-whats-the-word-ruby/"/>
-    <updated>2005-11-18T00:00:00-03:00</updated>
+    <updated>2005-11-18T00:00:00-04:00</updated>
     <id>http://citizen428.net/blog/2005/11/18/so-whats-the-word-ruby</id>
     <content type="html"><![CDATA[<p>This week I finally had a little more time to work on Gentoo related things again, so I commited some overdue packages to the tree.</p>
 
