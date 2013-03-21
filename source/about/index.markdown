@@ -11,14 +11,16 @@ I'm Michael Kohl from Austria and this is my personal blog. My work experience i
 I'm a big programming language nerd and used to run a functional programming user group called [Lambdaheads](https://metalab.at/wiki/Lambdaheads) at the [Metalab](http://metalab.at). I also was [hopelessly addicted to StackOverflow](http://stackoverflow.com/users/220147/michael-kohl) for a while, but I'm taking a break from it at the moment.
 <hr>
 Besides all the techy stuff I really enjoy traveling, and so far have visited the following countries:
-<div align="center" style="font: 14px arial, sans; color: #2B2B2B" id="tamap_init">
-  <img src="http://www.tripadvisor.com/CommunityMapImage?id=9F80285A9AF4B3124E098E476800D4A5&type=GUID&size=LARGE" id="tamap_img">
+<div id="ta_travelmap" style="width:430px;" align="center">
+<img
+src="http://www.tripadvisor.com/CommunityMapImage?id=40199953&type=TRIPADVISOR&size=LARGE">
+<ul id="ta_links">
+<li><a href="http://www.tripadvisor.com/members/citizen428">View my
+profile</a></li>
+</ul>
 </div>
-
-<div id="ta_travelmap" style="width:430px;">
-<img src="http://www.tripadvisor.com/CommunityMapImage?id=40199953&type=TRIPADVISOR&size=LARGE">
-</div>
-<script src="http://www.tripadvisor.com/MapEmbed?mid=E.TmvkVulqoCV28pxMYDTzDg%3D%3D&favorites=false&frm=pt&Version=VACATION_RENT_002"></script>
+<script
+src="http://www.tripadvisor.com/MapEmbed?mid=E.TmvkVulqoCV28pxMYDTzDg%3D%3D&favorites=false&frm=pt&Version=VACATION_RENT_002"></script>
 
 I also lived in Shanghai (China, 1 year), Istanbul (Turkey, 3 month), Kathmandu (Nepal, 3 month) and Milan (Italy, 10 month).
 
