@@ -9,7 +9,9 @@ footer: true
 
 Publications
 ---
-* Technical Reviewer for "[Ruby and MongoDB Web Development Beginners Guide](http://www.packtpub.com/ruby-and-mongodb-web-development-beginners-guide/book)":<br> Here's what the author has to say: <em>Big thanks to Michael Kohl, who was of great help in ensuring that every tiny technical detail was accurate and rich in content. I have become "technically mature" because of him!</em>
+* "Penetrationstests mit Metasploit":<br>I contributed a chapter on penetration testing with Metasploit to the anthology [Informationstechnologie und Sicherheitspolitik: Wird der dritte Weltkrieg im Internet ausgetragen?](http://www.amazon.de/Informationstechnologie-Sicherheitspolitik-Weltkrieg-ausgetragen-ebook/dp/B00AY8G48U/).
+
+* Technical Reviewer for "[Ruby and MongoDB Web Development Beginners Guide](http://www.packtpub.com/ruby-and-mongodb-web-development-beginners-guide/book)":<br>Here's what the author has to say: <em>Big thanks to Michael Kohl, who was of great help in ensuring that every tiny technical detail was accurate and rich in content. I have become "technically mature" because of him!</em>
 
 * [Linux Magazin](http://www.linux-magazin.de/), 3/2005, "Schneller Weg zur Live-CD":<br>While I was still an active developer for Gentoo Linux, I wrote this article on building custom Live CDs with the Catalyst build tool.
 

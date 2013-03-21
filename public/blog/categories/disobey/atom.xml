@@ -4,7 +4,7 @@
   <title><![CDATA[Category: disobey | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/disobey/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-02-13T20:03:07-04:00</updated>
+  <updated>2013-03-21T18:15:30-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Irrepressible - An Amnesty International campaign]]></title>
     <link href="http://citizen428.net/blog/2007/07/14/irrepressible-an-amnesty-international-campaign/"/>
-    <updated>2007-07-14T00:00:00-04:00</updated>
+    <updated>2007-07-14T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2007/07/14/irrepressible-an-amnesty-international-campaign</id>
     <content type="html"><![CDATA[<p><em>The web is a great tool for sharing ideas and freedom of expression. However, efforts to try and control the Internet are growing. Internet repression is reported in countries like China, Vietnam, Tunisia, Iran, Saudi Arabia and Syria. People are persecuted and imprisoned simply for criticising their government, calling for democracy and greater press freedom, or exposing human rights abuses, online.</em></p>
 
@@ -38,7 +38,7 @@
   <entry>
     <title type="html"><![CDATA[Happy Fair Use Day!]]></title>
     <link href="http://citizen428.net/blog/2007/07/11/happy-fair-use-day/"/>
-    <updated>2007-07-11T00:00:00-04:00</updated>
+    <updated>2007-07-11T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2007/07/11/happy-fair-use-day</id>
     <content type="html"><![CDATA[<p>"Fair Use Day":http://www.fairuseday.com/index.php/about-fairuse/</p>
 
@@ -49,7 +49,7 @@
   <entry>
     <title type="html"><![CDATA[Tor mirror set up!]]></title>
     <link href="http://citizen428.net/blog/2006/09/24/tor-mirror-set-up/"/>
-    <updated>2006-09-24T00:00:00-04:00</updated>
+    <updated>2006-09-24T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2006/09/24/tor-mirror-set-up</id>
     <content type="html"><![CDATA[<p>After running a "Tor":http://tor.eff.org server for more than half a year already and having donated some money to support Tor's development, I was looking for new ways to help out the project. That's why I decided to set up a mirror, which can be reached "here":http://tor.blingblingsquad.net ("dist/ mirror":http://tor.blingblingsquad.net). The initial sync is still running, but the site should be fully functional soon. Once this is finished, I'll also try to set up another mirror on the Vienna based server hosting this domain.</p>
 
@@ -60,7 +60,7 @@
   <entry>
     <title type="html"><![CDATA[Tor servers confiscated in Germany]]></title>
     <link href="http://citizen428.net/blog/2006/09/10/tor-servers-confiscated-in-germany/"/>
-    <updated>2006-09-10T00:00:00-04:00</updated>
+    <updated>2006-09-10T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2006/09/10/tor-servers-confiscated-in-germany</id>
     <content type="html"><![CDATA[<p>Since I was pretty busy with personal stuff during the last few days, I hadn't noticed that two days ago German authorities started confiscating "Tor":http://tor.eff.org/ middleman servers. That changed when earlier today I received an email from the owner of a confiscated system, who wants to get in touch with other Tor admins, in order to start a kind of "Knowledge Base" for people who were affected by the recent confiscations or who (still) want to set up their own Tor server. Since I'm also running "such a baby":http://serifos.eecs.harvard.edu/cgi-bin/desc.pl?q=blingblingserver (which never was an exit node though) on a virtual server in Germany, I'm of course interested in this recent development, so I want to share the informative links provided in his mail with you.</p>
 
@@ -94,7 +94,7 @@ Wikipedia article on Tor ("English":http://en.wikipedia.org/wiki/Tor<em>%28anony
   <entry>
     <title type="html"><![CDATA[Interesting times indeed...]]></title>
     <link href="http://citizen428.net/blog/2006/04/13/interesting-times-indeed/"/>
-    <updated>2006-04-13T00:00:00-04:00</updated>
+    <updated>2006-04-13T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2006/04/13/interesting-times-indeed</id>
     <content type="html"><![CDATA[<p>"Jennifer Government":http://www.amazon.com/gp/product/1400030927/sr=8-1/qid=1144962014/ref=pd_bbs_1/002-7034558-6000856?%5Fencoding=UTF8 for "real":http://www.cbsnews.com/stories/2005/03/30/earlyshow/living/caught/main683960.shtml?</p>
 

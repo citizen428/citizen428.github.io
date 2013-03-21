@@ -4,7 +4,7 @@
   <title><![CDATA[Category: webculture | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/webculture/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-02-13T20:03:07-04:00</updated>
+  <updated>2013-03-21T18:15:30-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Damn...]]></title>
     <link href="http://citizen428.net/blog/2006/11/19/damn/"/>
-    <updated>2006-11-19T00:00:00-04:00</updated>
+    <updated>2006-11-19T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2006/11/19/damn</id>
     <content type="html"><![CDATA[<p>I just lost the <a href="http://losethegame.com/">game</a>.</p>
 
@@ -31,7 +31,7 @@ RULE 3: Loss must be announced.</p>
   <entry>
     <title type="html"><![CDATA[Tor mirror set up!]]></title>
     <link href="http://citizen428.net/blog/2006/09/24/tor-mirror-set-up/"/>
-    <updated>2006-09-24T00:00:00-04:00</updated>
+    <updated>2006-09-24T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2006/09/24/tor-mirror-set-up</id>
     <content type="html"><![CDATA[<p>After running a "Tor":http://tor.eff.org server for more than half a year already and having donated some money to support Tor's development, I was looking for new ways to help out the project. That's why I decided to set up a mirror, which can be reached "here":http://tor.blingblingsquad.net ("dist/ mirror":http://tor.blingblingsquad.net). The initial sync is still running, but the site should be fully functional soon. Once this is finished, I'll also try to set up another mirror on the Vienna based server hosting this domain.</p>
 
@@ -42,7 +42,7 @@ RULE 3: Loss must be announced.</p>
   <entry>
     <title type="html"><![CDATA[A closer look at Google.cn filtering]]></title>
     <link href="http://citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering/"/>
-    <updated>2006-01-27T00:00:00-04:00</updated>
+    <updated>2006-01-27T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering</id>
     <content type="html"><![CDATA[<p>While reading "netzpolitik.org":netzpolitik.org yesterday, I found a link to an article on the "OpenNet Initiative Blog":http://opennetinitiative.net/blog/, explaining "how the filtering of Google.cn works":http://www.opennetinitiative.net/blog/?p=87. Now let's have a closer look at some of the blocked sites:</p>
 
@@ -107,7 +107,7 @@ site:epochtimes.com</p>
   <entry>
     <title type="html"><![CDATA[Happy hoodwinking!]]></title>
     <link href="http://citizen428.net/blog/2005/11/29/happy-hoodwinking/"/>
-    <updated>2005-11-29T00:00:00-04:00</updated>
+    <updated>2005-11-29T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2005/11/29/happy-hoodwinking</id>
     <content type="html"><![CDATA[<p><i>You have nil shillings. You are a simple cleric, you have 10 more shillings to earn before you have proven your xpath/regexen charming skills on par with the druids. A real druid will check your work and pay you soon enough.</i> - "http://hoodwink.d/":http://hoodwink.d/</p>
 
@@ -122,7 +122,7 @@ site:epochtimes.com</p>
   <entry>
     <title type="html"><![CDATA[Why blogging is cool]]></title>
     <link href="http://citizen428.net/blog/2005/10/19/why-blogging-is-cool/"/>
-    <updated>2005-10-19T00:00:00-04:00</updated>
+    <updated>2005-10-19T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2005/10/19/why-blogging-is-cool</id>
     <content type="html"><![CDATA[<p>I have to admit that I was really sceptical when this whole blogging thing started a few years back, mostly because I had the feeling that this will only add to all the noise that already makes finding information on the web harder than it needs to be. However, as time moved on and the blogging scene developed, I really came to appreciate this form of communication. Blogs are not only a great way to keep people updated on what you're currently up to (or to stalk other people for that matter), comments and the possibility of trackbacks also provide great facilities for interesting discussions with a wide variety of people and their differing opinions, especially when aggregators like "Technorati":http://www.technorati.com/ and "Planet":http://www.planetplanet.org/ come into play...</p>
 

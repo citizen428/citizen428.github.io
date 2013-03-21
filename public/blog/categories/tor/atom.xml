@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tor | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/tor/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-02-13T20:03:07-04:00</updated>
+  <updated>2013-03-21T18:15:30-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[No Tor, no more customer]]></title>
     <link href="http://citizen428.net/blog/2012/04/18/no-tor/"/>
-    <updated>2012-04-18T00:10:00-04:00</updated>
+    <updated>2012-04-18T00:10:00-05:00</updated>
     <id>http://citizen428.net/blog/2012/04/18/no-tor</id>
     <content type="html"><![CDATA[<p><em>Update:</em> Server4You rebooted the server into a recovery system for me. I removed the Tor packages and the system is back up again, which means at least the <a href="http://tor.blingblingsquad.net/">mirror</a> is back. I'd also like to state explicitly that this whole post is based on a single phone conversation with a Server4You support employee, so it's hard to tell if the company per se really considers Tor to be illegal in Germany. Personally I think it's just a bad excuse for shutting down the service on shared hosts, which is just as bad in my book.</p>
 
@@ -33,7 +33,7 @@
   <entry>
     <title type="html"><![CDATA[Tor mirror set up!]]></title>
     <link href="http://citizen428.net/blog/2006/09/24/tor-mirror-set-up/"/>
-    <updated>2006-09-24T00:00:00-04:00</updated>
+    <updated>2006-09-24T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2006/09/24/tor-mirror-set-up</id>
     <content type="html"><![CDATA[<p>After running a "Tor":http://tor.eff.org server for more than half a year already and having donated some money to support Tor's development, I was looking for new ways to help out the project. That's why I decided to set up a mirror, which can be reached "here":http://tor.blingblingsquad.net ("dist/ mirror":http://tor.blingblingsquad.net). The initial sync is still running, but the site should be fully functional soon. Once this is finished, I'll also try to set up another mirror on the Vienna based server hosting this domain.</p>
 
@@ -44,7 +44,7 @@
   <entry>
     <title type="html"><![CDATA[Tor servers confiscated in Germany]]></title>
     <link href="http://citizen428.net/blog/2006/09/10/tor-servers-confiscated-in-germany/"/>
-    <updated>2006-09-10T00:00:00-04:00</updated>
+    <updated>2006-09-10T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2006/09/10/tor-servers-confiscated-in-germany</id>
     <content type="html"><![CDATA[<p>Since I was pretty busy with personal stuff during the last few days, I hadn't noticed that two days ago German authorities started confiscating "Tor":http://tor.eff.org/ middleman servers. That changed when earlier today I received an email from the owner of a confiscated system, who wants to get in touch with other Tor admins, in order to start a kind of "Knowledge Base" for people who were affected by the recent confiscations or who (still) want to set up their own Tor server. Since I'm also running "such a baby":http://serifos.eecs.harvard.edu/cgi-bin/desc.pl?q=blingblingserver (which never was an exit node though) on a virtual server in Germany, I'm of course interested in this recent development, so I want to share the informative links provided in his mail with you.</p>
 

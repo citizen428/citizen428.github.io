@@ -4,7 +4,7 @@
   <title><![CDATA[Category: versus | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/versus/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-02-13T20:03:07-04:00</updated>
+  <updated>2013-03-21T18:15:30-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs. John Von Neumann]]></title>
     <link href="http://citizen428.net/blog/2011/10/23/tom-and-michael-vs-john-von-neumann/"/>
-    <updated>2011-10-23T19:55:00-04:00</updated>
+    <updated>2011-10-23T19:55:00-05:00</updated>
     <id>http://citizen428.net/blog/2011/10/23/tom-and-michael-vs-john-von-neumann</id>
     <content type="html"><![CDATA[<p>In case you wonder if <a href="http://mrjaba.posterous.com/">Tom</a> and I gave up on <a href="http://citizen428.net/blog/categories/versus/">reading papers</a>, the answer is a resounding no! In fact there's one we finished sometime around mid-September, which for various reasons hasn't been summarized yet. This is about to change.</p>
 
@@ -49,7 +49,7 @@
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs The Good Grief Algorithm]]></title>
     <link href="http://citizen428.net/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm/"/>
-    <updated>2011-07-30T00:00:00-04:00</updated>
+    <updated>2011-07-30T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm</id>
     <content type="html"><![CDATA[<p>This week "Tom":http://mrjaba.posterous.com/ &mdash; who is now a happily married man :-) &mdash; and yours truly finally read another paper and since I'm sick and barely left bed for the last 2 days I decided to fight my boredom by writing about it.</p>
 
@@ -97,7 +97,7 @@ I know that for some people the math might look scary, but if you take some time
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs Prototypical Inheritance]]></title>
     <link href="http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/"/>
-    <updated>2011-07-11T00:00:00-04:00</updated>
+    <updated>2011-07-11T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance</id>
     <content type="html"><![CDATA[<p>"Tom":http://mrjaba.posterous.com/ and I read another paper, this time on prototypical inheritance: "Organizing Programs Without Classes":http://selflanguage.org/documentation/published/organizing-programs.html. You can find his post "here":http://mrjaba.posterous.com/organizing-programs-without-classes and I have to admit that he also did almost the entire summary this time whereas I only added some minor things and code examples.</p>
 
@@ -369,7 +369,7 @@ A is a globally defined constant which points to an Object.</p>
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs The Monad]]></title>
     <link href="http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad/"/>
-    <updated>2011-05-18T00:00:00-04:00</updated>
+    <updated>2011-05-18T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad</id>
     <content type="html"><![CDATA[<p>So, over the last few weeks "Tom Crinson":http://mrjaba.posterous.com/ and I read another paper, this time "The essence of functional programming" (available "here":http://homepages.inf.ed.ac.uk/wadler/topics/monads.html) by Philip Wadler, one of the principal designers of Haskell. Tom's post is "here":http://mrjaba.posterous.com/michael-and-tom-vs-the-monad.</p>
 
@@ -461,7 +461,7 @@ Brian Beckman recorded an "awesome 67 minute video":http://channel9.msdn.com/Sho
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs Google's MapReduce]]></title>
     <link href="http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce/"/>
-    <updated>2011-05-02T00:00:00-04:00</updated>
+    <updated>2011-05-02T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce</id>
     <content type="html"><![CDATA[<p>The other day on Twitter I complained about my own laziness when it comes to reading academic papers, and "Tom Crinson":http://mrjaba.posterous.com/ chimed in to let me know that he'd also like to read more of them. That's how we decided to set up a sort of online based reading group for this type of thing, where we'll choose a paper to read, discuss it via email and then blog about it ("Tom's post is here":http://mrjaba.posterous.com/mapreduce-simplified-data-processing-on-large).</p>
 
