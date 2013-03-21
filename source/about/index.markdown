@@ -14,10 +14,6 @@ Besides all the techy stuff I really enjoy traveling, and so far have visited th
 <div id="ta_travelmap" style="width:430px;" align="center">
 <img
 src="http://www.tripadvisor.com/CommunityMapImage?id=40199953&type=TRIPADVISOR&size=LARGE">
-<ul id="ta_links">
-<li><a href="http://www.tripadvisor.com/members/citizen428">View my
-profile</a></li>
-</ul>
 </div>
 <script
 src="http://www.tripadvisor.com/MapEmbed?mid=E.TmvkVulqoCV28pxMYDTzDg%3D%3D&favorites=false&frm=pt&Version=VACATION_RENT_002"></script>
