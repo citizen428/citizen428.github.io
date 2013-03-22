@@ -15,8 +15,7 @@ Besides all the techy stuff I really enjoy traveling, and so far have visited th
 <img
 src="http://www.tripadvisor.com/CommunityMapImage?id=40199953&type=TRIPADVISOR&size=LARGE">
 </div>
-<script
-src="http://www.tripadvisor.com/MapEmbed?mid=E.TmvkVulqoCV28pxMYDTzDg%3D%3D&favorites=false&frm=pt&Version=VACATION_RENT_002"></script>
+<script src="http://www.tripadvisor.com/MapEmbed?mid=E.TmvkVulqoCV28pxMYDTzDg%3D%3D&favorites=false&frm=pt&Version=VACATION_RENT_002"></script>
 
 I also lived in Shanghai (China, 1 year), Istanbul (Turkey, 3 month), Kathmandu (Nepal, 3 month) and Milan (Italy, 10 month).
 
