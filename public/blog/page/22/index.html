@@ -9,9 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Quite a bit actually:
-I live in Vienna again. Seriously.
-I started my new job as IT systems engineer at Nessus. Update: That was October. In November &hellip;">
+  <meta name="description" content="Sideshow Bob: Attempted murder? Now honestly, what is that? Do they give a Nobel prize for attempted chemistry? Do they?
+Nope, only for attempted &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -106,6 +105,42 @@ I started my new job as IT systems engineer at Nessus. Update: That was October.
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2009/10/10/attempted-peace/">Attempted Peace</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-10T00:00:00-05:00" pubdate data-updated="true">Oct 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><i>Sideshow Bob</i>: Attempted murder? Now honestly, what is that? Do they give a Nobel prize for attempted chemistry? Do they?</p>
+<p>Nope, only for attempted peace it seems.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2009/10/06/whats-new-pussycat/">What&#8217;s New Pussycat?</a></h1>
     
     
@@ -176,140 +211,6 @@ I started my new job as IT systems engineer at Nessus. Update: That was October.
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ gem sources -a http://gems.github.com 
 </span><span class='line'>$ sudo gem install citizen428-unsavory</span></code></pre></td></tr></table></div></figure></div></notextile><br />
 Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;, which you can use to start the program so you finally can get rid of all these outdated bookmarks.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/09/06/using-java-libraries-from-clojure/">Using Java Libraries From Clojure</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-09-06T00:00:00-05:00" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><br />
-After reading <a href="http://www.engineyard.com/blog/2009/scripting-java-libraries-with-jruby/">Scripting Java Libraries With Ruby</a> on the <a href="http://www.engineyard.com/">Engine Yard blog</a>, I decided to translate the two example programs to Clojure. Please keep in mind though that I&#8217;m pretty much a Clojure newbie myself, so the code shown here might not be very idiomatic. In case you have any suggestions on how to improve the code examples presented here, please leave a comment, thank you! To get the most out of this post, you should probably read the <a href="http://java.ociweb.com/mark/clojure/article.html#JavaInterop">section on Java Interoperability</a> in <a href="http://java.ociweb.com/mark/">Mark Volkmann</a>&#8216;s excellent <a href="http://java.ociweb.com/mark/clojure/article.html">Clojure tutorial</a> first.<br />
-<p><b>A <span class="caps">MIDI</span> Keyboard</b></p><br />
-The first example listens for a line of text which then gets converted into a playable <span class="caps">MIDI</span> sequence. Let&#8217;s start with importing the classes we need.<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(ns midi/keyboard
-</span><span class='line'>  (:import [javax.sound.midi MidiSystem Sequence MidiEvent ShortMessage])
-</span><span class='line'>  (:use [clojure.contrib.seq-utils :only (indexed)]))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-<br />
-Next we set up a <a href="http://clojure.org/special_forms#toc9">loop</a> and an exit clause.  In case the user enters the word &#8220;exit&#8221;, we call System.exit to shut down all the threads that got started by Java&#8217;s <span class="caps">MIDI</span> support.<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(loop [line (read-line)]
-</span><span class='line'>  (if (re-find #"exit" line) (System/exit 0))
-</span><span class='line'>  ... other code snipped...
-</span><span class='line'>  (recur (read-line)))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-<br />
-The main part of the application constructs a new <span class="caps">MIDI</span> sequence by creating a NOTE_ON event for every character in the entered text and then finishing the sequence with a <span class="caps">STOP</span> event. The original article states that it favors simplicity over efficiency, so the same also holds true for my &#8220;translation&#8221;.<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(def sq (Sequence. Sequence/PPQ 2))
-</span><span class='line'>  (def track (.createTrack sq))
-</span><span class='line'>  (doseq [[idx note] (indexed line)]
-</span><span class='line'>    (let [msg (ShortMessage.)]
-</span><span class='line'>      (.setMessage msg ShortMessage/NOTE_ON (int note) 64)
-</span><span class='line'>      (.add track (MidiEvent. msg idx))))
-</span><span class='line'>  (let [msg (ShortMessage.)]
-</span><span class='line'>    (.setMessage msg ShortMessage/STOP)
-</span><span class='line'>    (.add track (MidiEvent. msg (+ (.length line) 1))))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-<br />
-To finish off our first program we play the sequence before prompting for more input (see the loop snippet above).<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(doto (MidiSystem/getSequencer)
-</span><span class='line'>    (.open)
-</span><span class='line'>    (.setSequence sq)
-</span><span class='line'>    (.start))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-<br />
-<a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/keyboard.clj">Full source for the first example</a><br />
-<p><b>Making It More Interactive</b></p><br />
-While the first example was fun, it wasn&#8217;t as interactive as it could be. Therefore the second program launches a <span class="caps">GUI</span> window to receive keystroke events, turning a note on or off when a key is pressed or released. Since we don&#8217;t have to create <span class="caps">MIDI</span> sequences this time, our import statement becomes a lot shorter:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(ns midi/interactive
-</span><span class='line'>  (:import [javax.sound.midi MidiSystem]
-</span><span class='line'>           [javax.swing JFrame] [java.awt.event KeyListener]))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-<br />
-This example directly accesses the system synthesizer. The following lines open the default synthesizer&#8217;s channel 0 (and also create a JFrame object which we&#8217;ll use later):<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(let [synth (MidiSystem/getSynthesizer)
-</span><span class='line'>      frame (JFrame. "Music Frame")]
-</span><span class='line'>  (.open synth)
-</span><span class='line'>  (let [channel (aget (.getChannels synth) 0)]</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-<br />
-We then launch a <span class="caps">GUI</span> frame as a simple and cross-platform way to receive keystroke events. The KeyListener interface is implemented using Clojure&#8217;s <a href="http://clojure.org/java_interop#toc26">proxy macro</a>, using keyPressed and keyReleased events to turn notes on or off.<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(doto frame
-</span><span class='line'>      (.setSize 300 300)
-</span><span class='line'>      (.setDefaultCloseOperation JFrame/EXIT_ON_CLOSE)
-</span><span class='line'>      (.addKeyListener
-</span><span class='line'>       (proxy [KeyListener] []
-</span><span class='line'>         (keyPressed [e]
-</span><span class='line'>                     (.noteOn channel (int (.getKeyChar e)) 64))
-</span><span class='line'>         (keyReleased [e]
-</span><span class='line'>                      (.noteOff channel (int (.getKeyChar e))))
-</span><span class='line'>         (keyTyped [e])))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-<br />
-Last but not least we display our frame to let the fun begin.<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(.setVisible true))))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-<a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/interactive.clj">Full source for the second example</a><br />
-<br />
-<br />
-I hope this article helped to illustrate how easy it is to use the plethora of existing Java libraries from Clojure. In case you have any feedback or questions, please feel free to leave a comment!</p></div>
   
   
 
@@ -473,6 +374,140 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
 <p><a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/interactive.clj">Full source for the second example</a><br>
 I hope this article helped to illustrate how easy it is to use the plethora of existing Java libraries from Clojure. In case you have any feedback or questions, please feel free to leave a comment!</p>
 </div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/06/using-java-libraries-from-clojure/">Using Java Libraries From Clojure</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-06T00:00:00-05:00" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><br />
+After reading <a href="http://www.engineyard.com/blog/2009/scripting-java-libraries-with-jruby/">Scripting Java Libraries With Ruby</a> on the <a href="http://www.engineyard.com/">Engine Yard blog</a>, I decided to translate the two example programs to Clojure. Please keep in mind though that I&#8217;m pretty much a Clojure newbie myself, so the code shown here might not be very idiomatic. In case you have any suggestions on how to improve the code examples presented here, please leave a comment, thank you! To get the most out of this post, you should probably read the <a href="http://java.ociweb.com/mark/clojure/article.html#JavaInterop">section on Java Interoperability</a> in <a href="http://java.ociweb.com/mark/">Mark Volkmann</a>&#8216;s excellent <a href="http://java.ociweb.com/mark/clojure/article.html">Clojure tutorial</a> first.<br />
+<p><b>A <span class="caps">MIDI</span> Keyboard</b></p><br />
+The first example listens for a line of text which then gets converted into a playable <span class="caps">MIDI</span> sequence. Let&#8217;s start with importing the classes we need.<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(ns midi/keyboard
+</span><span class='line'>  (:import [javax.sound.midi MidiSystem Sequence MidiEvent ShortMessage])
+</span><span class='line'>  (:use [clojure.contrib.seq-utils :only (indexed)]))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+<br />
+Next we set up a <a href="http://clojure.org/special_forms#toc9">loop</a> and an exit clause.  In case the user enters the word &#8220;exit&#8221;, we call System.exit to shut down all the threads that got started by Java&#8217;s <span class="caps">MIDI</span> support.<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(loop [line (read-line)]
+</span><span class='line'>  (if (re-find #"exit" line) (System/exit 0))
+</span><span class='line'>  ... other code snipped...
+</span><span class='line'>  (recur (read-line)))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+<br />
+The main part of the application constructs a new <span class="caps">MIDI</span> sequence by creating a NOTE_ON event for every character in the entered text and then finishing the sequence with a <span class="caps">STOP</span> event. The original article states that it favors simplicity over efficiency, so the same also holds true for my &#8220;translation&#8221;.<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(def sq (Sequence. Sequence/PPQ 2))
+</span><span class='line'>  (def track (.createTrack sq))
+</span><span class='line'>  (doseq [[idx note] (indexed line)]
+</span><span class='line'>    (let [msg (ShortMessage.)]
+</span><span class='line'>      (.setMessage msg ShortMessage/NOTE_ON (int note) 64)
+</span><span class='line'>      (.add track (MidiEvent. msg idx))))
+</span><span class='line'>  (let [msg (ShortMessage.)]
+</span><span class='line'>    (.setMessage msg ShortMessage/STOP)
+</span><span class='line'>    (.add track (MidiEvent. msg (+ (.length line) 1))))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+<br />
+To finish off our first program we play the sequence before prompting for more input (see the loop snippet above).<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(doto (MidiSystem/getSequencer)
+</span><span class='line'>    (.open)
+</span><span class='line'>    (.setSequence sq)
+</span><span class='line'>    (.start))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+<br />
+<a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/keyboard.clj">Full source for the first example</a><br />
+<p><b>Making It More Interactive</b></p><br />
+While the first example was fun, it wasn&#8217;t as interactive as it could be. Therefore the second program launches a <span class="caps">GUI</span> window to receive keystroke events, turning a note on or off when a key is pressed or released. Since we don&#8217;t have to create <span class="caps">MIDI</span> sequences this time, our import statement becomes a lot shorter:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(ns midi/interactive
+</span><span class='line'>  (:import [javax.sound.midi MidiSystem]
+</span><span class='line'>           [javax.swing JFrame] [java.awt.event KeyListener]))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+<br />
+This example directly accesses the system synthesizer. The following lines open the default synthesizer&#8217;s channel 0 (and also create a JFrame object which we&#8217;ll use later):<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(let [synth (MidiSystem/getSynthesizer)
+</span><span class='line'>      frame (JFrame. "Music Frame")]
+</span><span class='line'>  (.open synth)
+</span><span class='line'>  (let [channel (aget (.getChannels synth) 0)]</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+<br />
+We then launch a <span class="caps">GUI</span> frame as a simple and cross-platform way to receive keystroke events. The KeyListener interface is implemented using Clojure&#8217;s <a href="http://clojure.org/java_interop#toc26">proxy macro</a>, using keyPressed and keyReleased events to turn notes on or off.<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(doto frame
+</span><span class='line'>      (.setSize 300 300)
+</span><span class='line'>      (.setDefaultCloseOperation JFrame/EXIT_ON_CLOSE)
+</span><span class='line'>      (.addKeyListener
+</span><span class='line'>       (proxy [KeyListener] []
+</span><span class='line'>         (keyPressed [e]
+</span><span class='line'>                     (.noteOn channel (int (.getKeyChar e)) 64))
+</span><span class='line'>         (keyReleased [e]
+</span><span class='line'>                      (.noteOff channel (int (.getKeyChar e))))
+</span><span class='line'>         (keyTyped [e])))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+<br />
+Last but not least we display our frame to let the fun begin.<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(.setVisible true))))</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+<a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/interactive.clj">Full source for the second example</a><br />
+<br />
+<br />
+I hope this article helped to illustrate how easy it is to use the plethora of existing Java libraries from Clojure. In case you have any feedback or questions, please feel free to leave a comment!</p></div>
   
   
 
@@ -696,45 +731,6 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
 <li>login credentials can now be read from a config file, thus making HighLine optional</li></p>
 </ul>
 <p>Next on my list is packaging this up as a gem so people can simply install it with &#8216;gem install unsavory&#8217;.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/06/09/review-the-well-grounded-rubyist-manning-publications/">Review: The Well-Grounded Rubyist (Manning Publications)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-06-09T00:00:00-05:00" pubdate data-updated="true">Jun 9<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>As part of <a href="http://www.rubylearning.org/class/">Rubylearning&#8217;s</a> <a href="http://rubylearning.com/blog/2009/05/29/book-promotion-the-well-grounded-rubyist/">current book promotion</a> I&#8217;m reading <a href="http://www.manning.com/black2/">The Well-Grounded Rubyist</a> by David A. Black. Here are my thoughts on the book:</p>
-<p>If you are new to Ruby, this may very well be the book you are looking for, since the author was really serious about the &#8220;well-grounded&#8221; in the title. Together the first six chapters form Part 1, aptly called &#8220;Ruby Foundations&#8221;. Here you&#8217;ll learn about objects, modules, classes, self and control-flow techniques. Although this part may not be the most interesting for more experienced Rubyists, it&#8217;s certainly well-written and manages to present a lot of very fundamental Ruby right at the beginning. True, at first I was a bit surprised to see that singleton methods were &#8211; implicitly &#8211; introduced before classes, but when you follow the author&#8217;s logic, it all makes a lot of sense. What I really like about this approach is that it exposes the reader to concepts needed for some quite advanced Ruby coding right away, and in a very light-hearted and &#8220;natural&#8221; manner. Well done!</p>
-<p>Part 2 (&#8220;Built-in classes and modules&#8221;) covers everything from strings, over symbols to regular expressions and file I/O. What I really like about this part is that the author dedicated two whole chapters to collections and iterators/enumerators, which are essential for everyone striving to become fluent in Ruby.</p>
-<p>Last but not least Part 3 (&#8220;Ruby dynamics&#8221;) talks about singleton methods, procs, lambdas, Symbol#to_proc, the various eval methods, bindings and introspection, thus equipping the reader with all the necessary tools for metaprogramming, one of the many things that make Ruby that sexy little beast it is.</p>
-<p>Oh yeah, since I didn&#8217;t mention this before, &#8220;The Well-Grounded&#8221; Rubyist&quot; covers Ruby 1.9.1, which means you&#8217;ll learn about the coolest Ruby around. Don&#8217;t worry though, most of what you read will also apply to 1.8.6, but isn&#8217;t it about time that we all slowly moved on?</p></div>
   
   
 

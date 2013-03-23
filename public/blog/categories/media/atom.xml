@@ -4,7 +4,7 @@
   <title><![CDATA[Category: media | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/media/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-03-21T19:07:06-05:00</updated>
+  <updated>2013-03-23T17:44:23-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -55,7 +55,9 @@
     <id>http://citizen428.net/blog/2012/05/25/information-overload-2012-05-25</id>
     <content type="html"><![CDATA[<p>Due to a trip this week's Information Overload is a bit earlier and shorter than usual. There won't be a new issue next week by the way.</p>
 
-<p><blockquote><p>You should never want to be average — unless you are below average. This is a cry for normalcy, when so many others wish to be abnormal.</p><footer><strong>David Peter</strong> <cite><a href='http://davidpeter.me/stories/being-deaf'>Being Deaf</a></cite></footer></blockquote></p>
+<p>{% blockquote David Peter http://davidpeter.me/stories/being-deaf Being deaf %}
+You should never want to be average — unless you are below average. This is a cry for normalcy, when so many others wish to be abnormal.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://davidpeter.me/stories/being-deaf">Being deaf</a><br>If you ever wondered how it's like to be deaf, you should read this.</li>

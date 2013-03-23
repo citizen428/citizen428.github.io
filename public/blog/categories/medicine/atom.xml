@@ -4,7 +4,7 @@
   <title><![CDATA[Category: medicine | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/medicine/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-03-21T19:07:06-05:00</updated>
+  <updated>2013-03-23T17:44:23-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -35,7 +35,9 @@
     <link href="http://citizen428.net/blog/2012/06/24/information-overload-2012-06-24/"/>
     <updated>2012-06-24T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2012/06/24/information-overload-2012-06-24</id>
-    <content type="html"><![CDATA[<p><blockquote><p>It was like finding out your husband didn't just cheat, but had a frequent-flier account with every brothel in North America for the past 10 years.</p><footer><strong>Matt Taibbi</strong> <cite><a href='http://www.rollingstone.com/politics/news/the-scam-wall-street-learned-from-the-mafia-20120620'>The Scam Wall Street Learned From the Mafia</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Matt Taibbi http://www.rollingstone.com/politics/news/the-scam-wall-street-learned-from-the-mafia-20120620 The Scam Wall Street Learned From the Mafia %}
+It was like finding out your husband didn't just cheat, but had a frequent-flier account with every brothel in North America for the past 10 years.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.vice.com/read/i-dont-get-art">I Don't "Get" Art</a><br>More than once I found myself at an exhibition with exactly the same thoughts.</li>

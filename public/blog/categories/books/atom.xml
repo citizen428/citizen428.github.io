@@ -4,7 +4,7 @@
   <title><![CDATA[Category: books | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/books/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-03-21T19:07:06-05:00</updated>
+  <updated>2013-03-23T17:44:23-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -130,7 +130,9 @@ Ivo Balbaert: <em>The Way to Go</em><br></p>
     <link href="http://citizen428.net/blog/2012/02/26/information-overload-2012-02-26/"/>
     <updated>2012-02-26T00:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2012/02/26/information-overload-2012-02-26</id>
-    <content type="html"><![CDATA[<p><blockquote><p>To us, the Web is a sort of shared external memory. We do not have to remember unnecessary details: dates, sums, formulas, clauses, street names, detailed definitions. It is enough for us to have an abstract, the essence that is needed to process the information and relate it to others.</p><footer><strong>Piotr Czerski (translated by Marta Szreder)</strong> <cite><a href='http://pastebin.com/0xXV8k7k'>We, the Web Kids</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Piotr Czerski (translated by Marta Szreder) http://pastebin.com/0xXV8k7k We, the Web Kids %}
+To us, the Web is a sort of shared external memory. We do not have to remember unnecessary details: dates, sums, formulas, clauses, street names, detailed definitions. It is enough for us to have an abstract, the essence that is needed to process the information and relate it to others.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://pastebin.com/0xXV8k7k">We, the Web Kids</a><br>While I'm probably a bit too old to qualify as a "web kid", I agree with most of this post.</li>
@@ -146,7 +148,9 @@ Ivo Balbaert: <em>The Way to Go</em><br></p>
 </ul>
 
 
-<p><blockquote><p>The future is not evenly distributed. Not along cultural lines, along language lines, along political, economic, class, or generational lines. And most certainly not along gender lines.</p><footer><strong>Cat Valente</strong> <cite><a href='http://www.antipope.org/charlie/blog-static/2012/02/life-with-and-without-animated.html'>Life With and Without Animated Ducks: The Future Is Gender Distributed</a></cite></footer></blockquote></p>
+<p>{% blockquote Cat Valente http://www.antipope.org/charlie/blog-static/2012/02/life-with-and-without-animated.html Life With and Without Animated Ducks: The Future Is Gender Distributed %}
+The future is not evenly distributed. Not along cultural lines, along language lines, along political, economic, class, or generational lines. And most certainly not along gender lines.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   
