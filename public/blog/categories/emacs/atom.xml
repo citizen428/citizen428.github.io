@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-03-23T17:44:23-05:00</updated>
+  <updated>2013-04-25T00:06:16-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -28,45 +28,83 @@
 
 <p>Here are the relevant parts of my Emacs config, with extra comments added for this post:</p>
 
-<p>{% codeblock lang:scheme %}
-(require 'twittering-mode)
-; update every 10 minutes
-(setq twittering-timer-interval 600)
-(setq twittering-url-show-status nil)
-; Show character count in compose buffer
-(setq twittering-use-show-minibuffer-length t)
-; I added is.gd support myself, pull request sent.
-; standard options are tinyurl and toly
-(setq twittering-tinyurl-service 'is.gd)
-; See http://www.reverttoconsole.com/blog/nix/twitter-mode-for-emacs-with-oauth/
-(setq twittering-use-master-password t)</p>
-
-<p>; This tells twittering-mode which time line buffers
-; to open when starting
-(setq twittering-initial-timeline-spec-string</p>
-
-<pre><code>  '(":friends"
-    ":replies"
-    ":direct_messages"
-    ":search/clojure/"
-    ":search/#jlang/"
-    "citizen428/tupaleros"))
-</code></pre>
-
-<p>; some key bindings
-(add-hook 'twittering-mode-hook</p>
-
-<pre><code>      (lambda ()
-        (mapc (lambda (pair)
-                (let ((key (car pair))
-                      (func (cdr pair)))
-                  (define-key twittering-mode-map
-                    (read-kbd-macro key) func)))
-              '(("R" . twittering-native-retweet)
-                ("l" . twittering-goto-next-thing)))))
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='scheme'><span class='line'><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;twittering-mode</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; update every 10 minutes</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-timer-interval</span> <span class="mi">600</span><span class="p">)</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-url-show-status</span> <span class="nv">nil</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; Show character count in compose buffer</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-show-minibuffer-length</span> <span class="nv">t</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; I added is.gd support myself, pull request sent.</span>
+</span><span class='line'><span class="c1">; standard options are tinyurl and toly</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-tinyurl-service</span> <span class="ss">&#39;is</span><span class="o">.</span><span class="nv">gd</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; See http://www.reverttoconsole.com/blog/nix/twitter-mode-for-emacs-with-oauth/</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-master-password</span> <span class="nv">t</span><span class="p">)</span><span class="nv">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">&lt;p&gt;</span><span class="c1">; This tells twittering-mode which time line buffers</span>
+</span><span class='line'><span class="c1">; to open when starting</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-initial-timeline-spec-string&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">&lt;pre&gt;&lt;code&gt;</span>  <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;:friends&quot;</span>
+</span><span class='line'>    <span class="s">&quot;:replies&quot;</span>
+</span><span class='line'>    <span class="s">&quot;:direct_messages&quot;</span>
+</span><span class='line'>    <span class="s">&quot;:search/clojure/&quot;</span>
+</span><span class='line'>    <span class="s">&quot;:search/#jlang/&quot;</span>
+</span><span class='line'>    <span class="s">&quot;citizen428/tupaleros&quot;</span><span class="p">))</span>
+</span><span class='line'><span class="nv">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">&lt;p&gt;</span><span class="c1">; some key bindings</span>
+</span><span class='line'><span class="p">(</span><span class="nf">add-hook</span> <span class="ss">&#39;twittering-mode-hook&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">&lt;pre&gt;&lt;code&gt;</span>      <span class="p">(</span><span class="k">lambda </span><span class="p">()</span>
+</span><span class='line'>        <span class="p">(</span><span class="nf">mapc</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">pair</span><span class="p">)</span>
+</span><span class='line'>                <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">key</span> <span class="p">(</span><span class="nb">car </span><span class="nv">pair</span><span class="p">))</span>
+</span><span class='line'>                      <span class="p">(</span><span class="nf">func</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">pair</span><span class="p">)))</span>
+</span><span class='line'>                  <span class="p">(</span><span class="nf">define-key</span> <span class="nv">twittering-mode-map</span>
+</span><span class='line'>                    <span class="p">(</span><span class="nf">read-kbd-macro</span> <span class="nv">key</span><span class="p">)</span> <span class="nv">func</span><span class="p">)))</span>
+</span><span class='line'>              <span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;R&quot;</span> <span class="o">.</span> <span class="nv">twittering-native-retweet</span><span class="p">)</span>
+</span><span class='line'>                <span class="p">(</span><span class="s">&quot;l&quot;</span> <span class="o">.</span> <span class="nv">twittering-goto-next-thing</span><span class="p">)))))</span>
+</span><span class='line'><span class="nv">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p><strong>TImelines</strong></p>
 
@@ -87,17 +125,26 @@
     <id>http://citizen428.net/blog/2010/09/22/emacsclient-on-os-x</id>
     <content type="html"><![CDATA[<p>If you are running a non-system Emacs on OS X and have tried to use "emacsclient", you may have seen the following error message despite having started the Emacs server:</p>
 
-<p>{% codeblock %}
-emacsclient: can't find socket; have you started the server?
-To start the server in Emacs, type "M-x server-start".
-emacsclient: No socket or alternate editor.  Please use:</p>
-
-<pre><code>--socket-name
---server-file      (or environment variable EMACS_SERVER_FILE)
---alternate-editor (or environment variable ALTERNATE_EDITOR)
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>emacsclient: can't find socket; have you started the server?
+</span><span class='line'>To start the server in Emacs, type "M-x server-start".
+</span><span class='line'>emacsclient: No socket or alternate editor.  Please use:&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>--socket-name
+</span><span class='line'>--server-file      (or environment variable EMACS_SERVER_FILE)
+</span><span class='line'>--alternate-editor (or environment variable ALTERNATE_EDITOR)
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>This doesn't work because you are invoking "/usr/bin/emacsclient" which came with the OS, instead of "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient". This can easily be fixed by symlinking the latter to "/usr/local/bin/emacsclient" and making sure that "/usr/local/bin" is listed in your path before "/usr/bin".</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: shoes | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/shoes/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-03-23T17:44:23-05:00</updated>
+  <updated>2013-04-25T00:06:16-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -78,12 +78,15 @@
     <id>http://citizen428.net/blog/2009/02/02/babysteps</id>
     <content type="html"><![CDATA[<p>While writing my "second Shoes app":http://the-shoebox.org/apps/128 I ran into the problem of how to require a gem from within Shoes. Luckily "the truth is out there":http://hackety.org/2008/05/08/clearingUpTheWholeShoesAndRubyGemsDeal.html, but I wanna share it with you nonetheless:</p>
 
-<p>{% codeblock lang:ruby %}
-Shoes.setup do
-  gem 'foo'
-end
-require 'foo'
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Shoes</span><span class="o">.</span><span class="n">setup</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;foo&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;foo&#39;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Enjoy!</p>
 ]]></content>

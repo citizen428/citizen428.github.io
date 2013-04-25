@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://citizen428.net/sitemap.xml 

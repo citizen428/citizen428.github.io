@@ -4,7 +4,7 @@
   <title><![CDATA[Category: productivity | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/productivity/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-03-23T17:44:23-05:00</updated>
+  <updated>2013-04-25T00:06:16-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -18,9 +18,7 @@
     <link href="http://citizen428.net/blog/2011/11/13/information-overload-2011-11-13/"/>
     <updated>2011-11-13T19:00:00-05:00</updated>
     <id>http://citizen428.net/blog/2011/11/13/information-overload-2011-11-13</id>
-    <content type="html"><![CDATA[<p>{% blockquote Michael Peck http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full The Persian Incursion %}
-[...] Iran has as much chance of stopping an Israeli strike as Prime Minister Benjamin Netanyahu does of becoming an ayatollah [...]
-{% endblockquote %}</p>
+    <content type="html"><![CDATA[<p><blockquote><p>[...] Iran has as much chance of stopping an Israeli strike as Prime Minister Benjamin Netanyahu does of becoming an ayatollah [...]</p><footer><strong>Michael Peck</strong> <cite><a href='http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full'>The Persian Incursion</a></cite></footer></blockquote></p>
 
 <ul>
 <li><a href="http://www.economist.com/blogs/babbage/2011/11/artificial-intelligence">Difference Engine: Luddite legacy</a><br>Will more and more jobs be done by machines instead of people?</li>
@@ -36,9 +34,7 @@
 </ul>
 
 
-<p>{% blockquote Unnamed businessman http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory Shanghai Gets Supersized %}
-We’re from Shanghai. We care only about money. You want to talk politics, go to Beijing.
-{% endblockquote %}</p>
+<p><blockquote><p>We’re from Shanghai. We care only about money. You want to talk politics, go to Beijing.</p><footer><strong>Unnamed businessman</strong> <cite><a href='http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory'>Shanghai Gets Supersized</a></cite></footer></blockquote></p>
 ]]></content>
   </entry>
   
