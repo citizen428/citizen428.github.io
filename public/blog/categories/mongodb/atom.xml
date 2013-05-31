@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mongodb | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/mongodb/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-04-25T00:06:16-05:00</updated>
+  <updated>2013-05-31T18:07:59-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -214,7 +214,7 @@
   <entry>
     <title type="html"><![CDATA[Fun with Sinatra, Heroku and MongoDB]]></title>
     <link href="http://citizen428.net/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb/"/>
-    <updated>2009-12-06T00:00:00-05:00</updated>
+    <updated>2009-12-06T00:00:00-06:00</updated>
     <id>http://citizen428.net/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb</id>
     <content type="html"><![CDATA[<p>I've been toying around with the idea for a small website lately, but never actually got around to do it. In an attempt to clear out my personal to do list I finally motivated myself to start yesterday, and I have to say the following combination of tools is not only insanely efficient, but also really fun to work with:</p>
 

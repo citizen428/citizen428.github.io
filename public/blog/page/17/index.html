@@ -9,8 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Designing For JediOn libertarians and the Victorian Era.
-Full-body scanners are waste of money, Israeli expert saysThe former chief security officer &hellip;">
+  <meta name="description" content="Another Viennale has finished, time for a little recap of the five movies we saw this year: Los labios (Ivan Fund &amp; Santiago Loza)
+This had &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -100,6 +100,53 @@ Full-body scanners are waste of money, Israeli expert saysThe former chief secur
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/05/viennale-2010/">Viennale 2010</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-05T00:00:00-06:00" pubdate data-updated="true">Nov 5<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Another <a href="http://en.wikipedia.org/wiki/Vienna_International_Film_Festival">Viennale</a> has finished, time for a little recap of the five movies we saw this year:</p>
+<ul>
+	<li><a href="http://www.imdb.com/title/tt1637694/">Los labios</a> (Ivan Fund &amp; Santiago Loza)<br>
+This had potential, but didn&#8217;t really live up to it. Usually I&#8217;m all for mixing professional and amateur actors, but in this case it didn&#8217;t work for me. A documentary on this topic would probably haven been more interesting.</li>
+	<li><a href="http://www.imdb.com/title/tt1156173/">Vincere</a> (Marco Bellocchio)<br>
+Probably my favorite movie of this year&#8217;s festival. An interesting &#8211; and true &#8211; story, great acting and beautiful presentation, what more can you ask for?</li>
+	<li><a href="http://www.imdb.com/title/tt1639901/">Un homme qui crie</a> (Mahamat-Saleh Haroun)<br />
+A solid movie about present-day Chad. Told in a very dry manner, I really enjoyed the first half of this, but found it a bit of a drag towards the end. The lead actor was great though!</li>
+	<li><a href="http://www.imdb.com/title/tt1522857/">The Oath</a> (Laura Poitras)<br />
+A documentary about two men from Yemen who worked for Osama Bin Laden. I found this very interesting and as always it&#8217;s good to hear the other side of a story.</li>
+	<li><a href="http://www.imdb.com/title/tt1424053/">Engkwentro</a> (Pepe Diokno)<br>
+The life of two brothers in a ghetto somewhere in the Philippine &#8211; violence, drugs and gangs. This seems to have been made with a fairly low budget, and the nervous handheld camera may upset some people. Overall it was pretty interesting though and I&#8217;m glad we saw this.</li>
+</ul></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -646,57 +693,6 @@ Full-body scanners are waste of money, Israeli expert saysThe former chief secur
 <li><a href="http://nostarch.com/download/Lisp08.pdf">This Ain&#8217;t Your Daddy&#8217;s Wumpus</a><br>Example chapter from the upcoming book <a href="http://nostarch.com/lisp.htm">Land of Lisp</a> (<span class="caps">PDF</span>).</li>
 <li><a href="http://www.nytimes.com/2010/09/26/arts/design/26masdar.html?_r=1&amp;hp">In Arabian Desert, a Sustainable City Rises</a><br>The first residents are starting to move into <a href="http://en.wikipedia.org/wiki/Masdar_City">Masdar</a>, a planned city built in Abu Dhabi. There seems to be some discussion about how much of a &#8220;real&#8221; city Masdar will be, but then Dubai didn&#8217;t feel like a &#8220;real&#8221; place to me either, but more like a soulless agglomeration of skyscrapers and shopping malls.</li>
 </ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/09/22/emacsclient-on-os-x/">Emacsclient on OS X</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-22T00:00:00-05:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you are running a non-system Emacs on OS X and have tried to use &#8220;emacsclient&#8221;, you may have seen the following error message despite having started the Emacs server:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>emacsclient: can't find socket; have you started the server?
-</span><span class='line'>To start the server in Emacs, type "M-x server-start".
-</span><span class='line'>emacsclient: No socket or alternate editor.  Please use:
-</span><span class='line'>
-</span><span class='line'>	--socket-name
-</span><span class='line'>	--server-file      (or environment variable EMACS_SERVER_FILE)
-</span><span class='line'>	--alternate-editor (or environment variable ALTERNATE_EDITOR)</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>This doesn&#8217;t work because you are invoking &#8220;/usr/bin/emacsclient&#8221; which came with the OS, instead of &#8220;/Applications/Emacs.app/Contents/MacOS/bin/emacsclient&#8221;. This can easily be fixed by symlinking the latter to &#8220;/usr/local/bin/emacsclient&#8221; and making sure that &#8220;/usr/local/bin&#8221; is listed in your path before &#8220;/usr/bin&#8221;.</p>
-<p>Not a big deal, but it took me a couple of minutes to figure out and I thought I might as well save others some time&#8230;</p></div>
   
   
 

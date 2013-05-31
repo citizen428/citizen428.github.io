@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rubylearning | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/rubylearning/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-04-25T00:06:16-05:00</updated>
+  <updated>2013-05-31T18:07:59-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -93,7 +93,7 @@
   <entry>
     <title type="html"><![CDATA[My way: Ruby, Sinatra, Heroku]]></title>
     <link href="http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku/"/>
-    <updated>2009-03-25T00:00:00-05:00</updated>
+    <updated>2009-03-25T00:00:00-06:00</updated>
     <id>http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku</id>
     <content type="html"><![CDATA[<p>"RubyLearning":http://rubylearning.org just had a nice one week introductory course on "Sinatra":http://www.sinatrarb.com/, a "DSL":http://en.wikipedia.org/wiki/Domain-specific_programming_language for easily creating web applications. The next batch will start on May 2nd (and I'll probably be around as a mentor again), you can "join here":http://rubylearning.org/class/course/enrol.php?id=32 if you are interested.</p>
 
