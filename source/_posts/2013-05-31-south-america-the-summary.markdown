@@ -6,7 +6,7 @@ comments: true
 categories:
     - travel
 ---
-After a three day layover in the U.S., Mexico seems like the perfect place to write up my thoughts and the roughly 7.5 month we spent in South America. I'm sure there are plenty of omissions, but it should be enough to give you an idea.
+After a three day layover in the U.S., Mexico seems like the perfect place to write up my thoughts and the roughly 7.5 months we spent in South America. I'm sure there are plenty of omissions, but it should be enough to give you an idea.
 
 **Paraguay**
 
@@ -22,8 +22,7 @@ Our introduction to Rioplatense dialect, my favorite Spanish dialect so far.
 
 **Argentina**
 
-Probably the South American country I wanted to visit for the longest time. Buenos Aires was all that I expected and probably more. Iguazu
-was amazing, Mendoza was chilled out and very relaxing, the Andean part offered some breath-taking views and some of the best food in the country. People were friendly and chatty (and loud), but have a tendency of making everything about Argentina, which can get a bit tiring at times. Also the food wasn't always that great, since vegetarianism roughly equals treason. They may well have the best ice cream outside of Italy though and there were other great sweets too. I'd love to live in Buenos Aires, but as one of our friends once said: "In this city everything that can be easy is hard, and everything that can be hard is super-hard..." Oh btw, a special thanks to Eze for hosting us for 10 days or so at his place in Buenos Aires and to all the great teachers at El Pasaje Spanish School!
+Probably the South American country I wanted to visit for the longest time. Buenos Aires was all that I expected and probably more. Iguazu was amazing, Mendoza was chilled out and very relaxing, the Andean part offered some breath-taking views and some of the best food in the country. People were friendly and chatty (and loud), but have a tendency of making everything about Argentina, which can get a bit tiring at times. Also the food wasn't always that great, since vegetarianism roughly equals treason. They may well have the best ice cream outside of Italy though and there were other great sweets too. I'd love to live in Buenos Aires, but as one of our friends once said: "In this city everything that can be easy is hard, and everything that can be hard is super-hard..." Oh btw, a special thanks to Eze for hosting us for 10 days or so at his place in Buenos Aires and to all the great teachers at El Pasaje Spanish School!
 
 _Memorable foods and drinks_
 
@@ -39,9 +38,7 @@ Ah, Uruguay, hobbit land. Rolling green hills, cows, mate, more cows, more mate.
 
 _Memorable foods and drinks_
 
-Pizza and faina at Subte, Montevideo. Empanadas in the Ciudad Vieja,
-Montevideo. Alfajores. Mate (everyone, everywhere, all the time). Red
-wine (surprisingly).
+Pizza and faina at Subte, Montevideo. Empanadas in the Ciudad Vieja, Montevideo. Alfajores. Mate (everyone, everywhere, all the time). Red wine (surprisingly).
 
 _Spanish_
 
@@ -49,7 +46,7 @@ Basically like in Argentina.
 
 **Chile**
 
-Stunning. Due to its unique shape, you are never too far from the Andes AND the Pacific. Yes, both, at the same time. It's totally feasible to start a day with a hike in the mountains, take a bus and still fall asleep to the sound of the ocean. The food was good, with more vegetarian options available. Plus the markets feature some of the nicest fruits and vegetables I ever saw. Also you can buy a kilo of avocados for less money than 2 avocados cost in Vienna. People were lovely too, but they speak fast. Very fast. And with a rather unique vocabulary. I was especially fond of Santiago, which has some great neighborhoods (Bella Vista, Barrio Brasil) and a very active cultural life. Another city I would give a try for living!
+Stunning. Due to its unique shape, you are never too far from the Andes AND the Pacific. Yes, both, at the same time. It's totally feasible to start a day with a hike in the mountains, take a bus and still fall asleep to the sound of the ocean. The food was good, with more vegetarian options available. Plus the markets feature some of the nicest fruits and vegetables I ever saw. Also you can buy a kilo of avocados for less money than 2 avocados cost in Vienna. The people were lovely too! I was especially fond of Santiago, which has some great neighborhoods (Bella Vista, Barrio Brasil) and a very active cultural life. Another city I would give a try for living!
 
 _Memorable foods and drinks_
 
@@ -73,15 +70,15 @@ The first country where the Spanish sounded more like what one is used to from S
 
 **Peru**
 
-Before we got there, we heard mixed reviews of Peru. It seems to be a place you either love or hate, with us definitely being in the former category. There's are some absolutely stunning historical sites (yes, that includes Machu Picchu, although I find it's way overpriced), great food, and incredibly friendly people. Cusco was super touristy yet very nice and relaxed, Lima surprisingly pleasant (not least because of Christian, our amazing CouchSurfing host) and we also had a really good time on the coast and in Huacachina, a little desert oasis (thanks Birgit for the tip!). Chiclayo is quite the shithole but has one of the best museums we saw on this trip and if I had to get stuck somewhere for Easter weekend, worth place than pleasant little Piura come to mind. And let's not forget Arequipa and the amazing Monasterio de Santa Catalina, a sight definitely worth seeing.
+Before we got there, we heard mixed reviews of Peru. It seems to be a place you either love or hate, with us definitely being in the former category. There are some absolutely stunning historical sites (yes, that includes Machu Picchu, although I find it's way overpriced), great food, and incredibly friendly people. Cusco was super touristy yet very nice and relaxed, Lima surprisingly pleasant (not least because of Christian, our amazing CouchSurfing host) and we also had a really good time on the coast and in Huacachina, a little desert oasis (thanks Birgit for the tip!). Chiclayo is quite the shithole but has one of the best museums we saw on this trip and if I had to get stuck somewhere for Easter weekend, worse places than pleasant little Piura come to mind. And let's not forget Arequipa and the amazing Monasterio de Santa Catalina, a sight definitely worth seeing.
 
 _Memorable foods and drinks_
-Arroz a la cubana, food stalls at the Mercado Central in Cusco, piazza at "La Pizza de Carlo" in Cusco, rocoto, palta rellena, queso andino, chocolate cake with dulce de leche. Chicha.
+
+Arroz a la cubana, food stalls at the Mercado Central in Cusco, pizza at "La Pizza de Carlo" in Cusco, rocoto, palta rellena, queso andino, chocolate cake with dulce de leche. Chicha.
 
 _Spanish_
 
 Lots, because if you kill a Peruvian, you probably have to kill the mouth separately. Also the perfect tense made a reappearance in spoken language.
-
 
 **Ecuador**
 
@@ -97,11 +94,11 @@ Standard, pleasant, easy to understand.
 
 **Colombia**
 
-Another place many people love and that has a lot of hype surrounding it. Coming in from Ecuador we drove through some rather heavily militarized zones and had our buses and luggage searched by the army twice, which does leave you with a bit of a strange feeling. I never quite got why everybody seems to like Medellin so much. I liked both Cali and Bogota more. And then there's Cartagena: super touristy, expensive, but still rather relaxed and relaxing and VERY pretty. One of my favorite parts was Santa Marta though (kinda like a more "real" Cartagena), where we stayed in a hotel that used to be owned by a drug cartel and which was rather incredible. Full of nice people and featuring a cool swimming pool we got stuck there for a bit but at least managed to go to lovely Minca close by.
+Another place many people love and that has a lot of hype surrounding it. Coming in from Ecuador we drove through some rather heavily militarized zones and had our buses and luggage searched by the army twice, which does leave you with a bit of a strange feeling. I never quite got why everybody seems to like Medellin so much. I liked both Cali and Bogota more. And then there's Cartagena: super touristy, expensive, but still rather relaxed and relaxing and VERY pretty. One of my favorite parts was Santa Marta though (kinda like a more "real" Cartagena), where we stayed in a hotel that used to be owned by a drug cartel and which was rather incredible. It also was full of nice people and featured a cool swimming pool, so we got stuck there for a bit but at least managed to go to lovely Minca close by.
 
 _Memorable foods and drinks_
 
-Arepas, patacones, fruits and vegetables you've never heard of. Pizza at "Los Bohemios" in Bogota. Juices made of the same. Coffee (OMG the coffee).
+Pizza at "Los Bohemios" in Bogota. Arepas, patacones, fruits and vegetables you've never heard of. Juices made of the same. Coffee (OMG the coffee).
 
 _Spanish_
 
@@ -109,9 +106,9 @@ Lots of people love Colombian Spanish, and I can understand why. It's rather sta
 
 **Regrets**
 
-* Not going to Patagonia in either Argentina or Chile. There were reasons (some better than others), but in the end we never went. While I'm sure Argentinian Patagonia is awesome too, I'm especially sorry about Torres del Paine, but at least it's a good excuse for going back to one of my favorite countries of this trip.
+* Not going to Patagonia in either Argentina or Chile. There were reasons, some better than others. While I'm sure Argentinian Patagonia is awesome too, I'm especially sorry about Torres del Paine, but at least it's a good excuse for going back to one of my favorite countries of this trip.
 * Not having more time for Bogota. It seems to be a super interesting city, full of life and (free) culture.
-* Skipping Brazil. We wanted to go, but it's really quite expensive, so for a long trip we considered it to be outside our budget. Also it's huge, you can easily spend several month there alone.
+* Skipping Brazil. We wanted to go, but it's really quite expensive, so for a long trip we considered it to be outside our budget. Also it's huge, you can easily spend several months just there.
 
 **Links**
 
