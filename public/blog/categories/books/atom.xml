@@ -4,7 +4,7 @@
   <title><![CDATA[Category: books | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/books/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-05-31T23:32:29-05:00</updated>
+  <updated>2013-06-07T17:09:56-05:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,171 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[My Kindle Fire and I]]></title>
+    <link href="http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i/"/>
+    <updated>2013-06-07T16:52:00-05:00</updated>
+    <id>http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i</id>
+    <content type="html"><![CDATA[<p>Back in October I broke my trusty old <a href="">Kindle Keyboard</a>, a rather
+annoying thing to happen at the beginning of a long trip. As a
+workaround I started to use the Kindle app on my iPod Touch, and while
+I did manage to finish several books on it, it's a bit annoying to
+read on such a small screen. So I decided to get a new device, but
+which one? Either the new <a href="">Kindle Paperwhite</a>, a <a href="">Kindle Fire</a> or maybe
+just an iPad or an Android tablet with the Kindle app?</p>
+
+<p><strong>Tablet or Kindle?</strong></p>
+
+<p>Lately I got a lot more serious about my chess playing, so I own
+several books on the topic in digital form. Needless to say, they
+don't do too well on a "classical" Kindle, so I started considering a
+Fire or other tablet. Once I started thinking along those lines,
+another group of publications came to mind, comics and graphic
+novels. I used to love and collect them, but eventually stopped
+because they just take up way too much space. Nowadays a lot of
+publishers do have digital editions though, so this became the point
+where the Paperwhite got thrown out of the race.</p>
+
+<p><strong>The decision process</strong></p>
+
+<p>So I knew I wanted a tablet, and I knew I wanted something small. This
+left me with four contestants, the <a href="">Kindle Fire HD 7"</a>, the <a href="">iPad Mini</a>,
+the <a href="">Nexus 7</a> and the <a href="">Galaxy Tab 2 7"</a>.</p>
+
+<p>I like Apple products, but I wasn't really willing to shell out the
+money for an iPad Mini (although you can get them for as little as 300
+bucks at Wallmart at the moment). One down, three to go. Now for the
+Nexus 7. It's a powerful Android device and also caters to the "power
+user", whatever that's worth in the tablet world. Alas I found a ton
+of comments and posts about quality issues (DOA, glass coming off the
+screens, devices having to be RMA'd after only two weeks etc.) so I
+was hesitant to get one, because the last thing I need while traveling
+is carrying around a dead device while trying to get it replaced. Also
+at $250 it was only $50 cheaper than an iPad Mini.</p>
+
+<p>That left the Kindle Fire HD and the Galaxy Tab 2, the latter of which
+is ridiculously cheap by now (the cheapest I saw was $150 with a
+cover), but it's also not exactly the newest piece of hardware. I
+still was leaning in the direction of the more general device
+though... Until I walked into a Radioshack during our layover in
+Florida, saw the Kindle Fire HD and bought it. Damn you, instant
+gratification!</p>
+
+<p><strong>First impressions</strong></p>
+
+<p>When I turned it on for the first time, I was amazed. The display is
+good, and I mean really good! As are the Dolby speakers. In short, I
+find the audio and video quality to be pretty amazing for a 7 inch
+device. Reading with the Kindle app is a pleasure, as is watching
+movies and listening to music. I actually really enjoy watching stuff
+on the Kindle Fire, much more than I expected on such a small screen.</p>
+
+<p>But then I started to explore a bit more, and I got disappointed
+rather fast. Amazon's user interface clearly was only built for two
+purposes: shopping and consuming content. The Kindle Fire is not meant
+to be a full-fledged Android tablet, it's a portable frontend to the
+Amazon store and cloud. Starting from the ads which get displayed when
+you wake up the device (I know, you can pay to have them removed),
+over the unavailability of many apps in Amazon's app store (for
+example all Google apps like GMail or Google Maps) to the extremely
+content focused UI, everything screams "Consume!" in a rather shrill
+and annoying voice.</p>
+
+<p><strong>Making it work for me</strong></p>
+
+<p>Luckily, there are lots of things you can do to make the Kindle Fire a
+lot more interesting, even without rooting it (something I really
+can't be bothered to do while on the road).</p>
+
+<p>First off, you will need an alternative app store. After some research
+I settled on <a href="">SlideME</a>, mostly because they actually check the
+applications they are offering, thus alleviating some of the security
+concerns I had about other offerings. Next I got myself a decent file
+manager in the form of <a href="">ES File Explorer</a>, before setting out to
+find a decent browser. Yes, a browser, because somehow Amazon's own
+offering, called Silk, doesn't really cut it for me. It has good
+features, but I found it to be rather sluggish. And I had some privacy
+concerns about the cloud rendering, euphemistically called "Accelerate
+Page Loading" in the settings. Sure, you can choose to encrypt the
+data or disable this "feature" completely, but it did leave a somewhat
+bitter aftertaste. Most people seem to prefer <a href="">Dolphin</a> or similar
+offerings for their Android devices, but I settled for the good old
+Firefox (or rather Aurora) in its <a href="">mobile incarnation</a>. It's a solid app
+and so far provides everything I need, including a direct download
+from the website. This is how I interact with Google apps for the time
+being, I just use their mobile versions in the browser.</p>
+
+<p>App store fixed, file manager acquired, browser fixed, on to the
+horrible UI. Unfortunately there's not really too much you can do in
+this regard, but I found <a href="">Smart Taskbar</a> to be a huge
+improvement. It has a small icon for triggering the app from
+everywhere and features quick launch for up to five apps, configurable
+labels and much more. Not as good as having a "normal" Android
+interface, but definitely much better than the standard Kindle Fire
+offering.</p>
+
+<p>Last but not least I installed <a href="">Dropbox</a> for easier file exchange, which
+is super easy because there's a direct download link on the web
+site. I wish more developers would do this...</p>
+
+<p><strong>More content</strong></p>
+
+<p>Once I was done with the basics, it was time to add more content
+sources/viewers. <a href="">ComiCat</a> is an exzellent CBR/CBZ reader and I
+highly recommend it for managing and reading your digital
+comics. <a href="">ComiXology</a> (and its app Comics) also is a good addition,
+especially since they have a rather well stocked online store and a
+decent read-by-panel feature. Both of these apps are available in
+Amazon's app store ($3 for ComiCat, Comics is for free).</p>
+
+<p>For access to more books I added the <a href="">Gutenberg eReader</a> app, a frontend
+to the well-known Project Gutenberg, as well as the <a href="">NOOK</a>
+software. Yes, NOOK, on a Kindle. As you can imagine this did not come
+from the official app store but from SlideME instead. Since I'm
+usually really happy with Amazon's offerings I'm not even sure I'll
+use it, but it's nice to have a choice and apparently the NOOK store
+has a dedicated comic section, so who knows...</p>
+
+<p>On to movies. While Amazon's streaming service is great (or so I've
+heard), it's of no use to me while traveling. I do however have quite
+a few films and documentaries on my netbook (go check out <a href="">VODO</a>,
+there's some great free stuff on there), but I don't want to convert
+all of them to a format the Kindle understands. Enter <a href="">MoboPlayer</a>, a
+great free movie player that can deal with a ton of formats and even
+has a windowed mode. Yes, on a tablet!</p>
+
+<p>With comics, books and movies covered, what's left? Games! The guys
+over at <a href="">Humble Bundle</a> don't only compile great game bundles, they
+also have a nifty <a href="">Android app</a>, that let's you manage all your
+purchases. Since they offered several Android bundles in the past I
+actually have a ton of games, and the Kindle Fire is an excellent
+device to play them on.</p>
+
+<p>Of course I have a lot more apps than that (Instapaper, Twitter,
+Flipboard, LinkedIn etc.) but they all come from the official app
+store and don't really need any explanation here.</p>
+
+<p><strong>Final verdict</strong></p>
+
+<p>After I got over my initial frustrations, I REALLY like my Kindle
+Fire. I guess it's all about expectation management. This is not a
+productivity device, it's a gadget for consuming media in all its
+forms. I especially love reading comics and graphic novels on it, the
+colors are great, and the resolution is high enough to actually be
+able to enjoy them, even on a rather small screen. It's also great for
+watching movies or listening to music and audiobooks, and since it's a
+Kindle, reading eBooks is a pleasure too once you configured the app
+to your liking.</p>
+
+<p>The hardware is fantastic (especially for $200) and the battery life
+(around 10-11h) is great. I don't exclude the possibility of rooting
+it in the future and maybe even flashing a different ROM, but for now
+I take the Kindle Fire for what it is and thoroughly enjoy it that
+way: during a bus ride the other day I read a book, watched a video,
+and read some comics, all on the same device.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[2012 reading list]]></title>
@@ -147,21 +312,6 @@ Ivo Balbaert: <em>The Way to Go</em><br></p>
 
 
 <p><blockquote><p>The future is not evenly distributed. Not along cultural lines, along language lines, along political, economic, class, or generational lines. And most certainly not along gender lines.</p><footer><strong>Cat Valente</strong> <cite><a href='http://www.antipope.org/charlie/blog-static/2012/02/life-with-and-without-animated.html'>Life With and Without Animated Ducks: The Future Is Gender Distributed</a></cite></footer></blockquote></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Review: A Bug Hunter's Diary]]></title>
-    <link href="http://citizen428.net/blog/2012/02/01/review-a-bug-hunters-diary/"/>
-    <updated>2012-02-01T22:03:00-06:00</updated>
-    <id>http://citizen428.net/blog/2012/02/01/review-a-bug-hunters-diary</id>
-    <content type="html"><![CDATA[<p>This was a very good read! In each chapter the author introduces one bug he found in a popular software package, always following the same structure: discovery, exploitation, remediation, lessons learned from the bug and a timeline of the bug's lifetime (disclosure, fix, etc).</p>
-
-<p>The writing is engaging and to the point, but still contains a lot of technical detail. Be warned though, if reading C and disassembly is not your type of thing, you probably won't enjoy this too much. The author tries hard to make everything as easy to understand as possible, but there's only so much you can do with limited space.</p>
-
-<p>If there's anything to criticize about this book, it's that the chapters are fairly repetitive, so I never really felt like reading more than one in a single sitting. But then it's also not the type of book that needs to be read cover to cover as fast as possible.</p>
-
-<p>Link: <a href="http://www.amazon.com/gp/product/1593273851/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1593273851">Tobias Klein: A Bug Hunter's Diary</a> (Amazon affiliate link)</p>
 ]]></content>
   </entry>
   
