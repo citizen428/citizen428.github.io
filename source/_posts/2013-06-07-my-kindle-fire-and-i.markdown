@@ -8,12 +8,12 @@ categories:
     - review
     - books
 ---
-Back in October I broke my trusty old [Kindle Keyboard](), a rather
+Back in October I broke my trusty old [Kindle Keyboard](http://www.amazon.com/gp/product/B004HZYA6E/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004HZYA6E&linkCode=as2&tag=citizen4blog-20), a rather
 annoying thing to happen at the beginning of a long trip. As a
 workaround I started to use the Kindle app on my iPod Touch, and while
 I did manage to finish several books on it, it's a bit annoying to
 read on such a small screen. So I decided to get a new device, but
-which one? Either the new [Kindle Paperwhite](), a [Kindle Fire]() or maybe
+which one? Either the new [Kindle Paperwhite](http://www.amazon.com/gp/product/B008UB7DU6/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008UB7DU6&linkCode=as2&tag=citizen4blog-20), a [Kindle Fire](http://www.amazon.com/gp/product/B008GGCAVM/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008GGCAVM&linkCode=as2&tag=citizen4blog-20) or maybe
 just an iPad or an Android tablet with the Kindle app?
 
 **Tablet or Kindle?**
@@ -31,8 +31,8 @@ where the Paperwhite got thrown out of the race.
 **The decision process**
 
 So I knew I wanted a tablet, and I knew I wanted something small. This
-left me with four contestants, the [Kindle Fire HD 7"](), the [iPad Mini](),
-the [Nexus 7]() and the [Galaxy Tab 2 7"]().
+left me with four contestants, the [Kindle Fire HD 7"](http://www.amazon.com/gp/product/B008GGCAVM/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008GGCAVM&linkCode=as2&tag=citizen4blog-20), the [iPad Mini](http://www.amazon.com/gp/product/B00746W3HG/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00746W3HG&linkCode=as2&tag=citizen4blog-20),
+the [Nexus 7](http://www.amazon.com/gp/product/B009X3UW2G/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B009X3UW2G&linkCode=as2&tag=citizen4blog-20) and the [Galaxy Tab 2 7"](http://www.amazon.com/gp/product/B007P4VOWC/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B007P4VOWC&linkCode=as2&tag=citizen4blog-20).
 
 I like Apple products, but I wasn't really willing to shell out the
 money for an iPad Mini (although you can get them for as little as 300
@@ -80,48 +80,48 @@ lot more interesting, even without rooting it (something I really
 can't be bothered to do while on the road).
 
 First off, you will need an alternative app store. After some research
-I settled on [SlideME](), mostly because they actually check the
+I settled on [SlideME](http://slideme.org/), mostly because they actually check the
 applications they are offering, thus alleviating some of the security
 concerns I had about other offerings. Next I got myself a decent file
-manager in the form of [ES File Explorer](), before setting out to
+manager in the form of [ES File Explorer](http://slideme.org/application/es-file-explorer), before setting out to
 find a decent browser. Yes, a browser, because somehow Amazon's own
 offering, called Silk, doesn't really cut it for me. It has good
 features, but I found it to be rather sluggish. And I had some privacy
 concerns about the cloud rendering, euphemistically called "Accelerate
 Page Loading" in the settings. Sure, you can choose to encrypt the
 data or disable this "feature" completely, but it did leave a somewhat
-bitter aftertaste. Most people seem to prefer [Dolphin]() or similar
+bitter aftertaste. Most people seem to prefer [Dolphin](http://slideme.org/application/dolphin-browser-0) or similar
 offerings for their Android devices, but I settled for the good old
-Firefox (or rather Aurora) in its [mobile incarnation](). It's a solid app
+Firefox (or rather Aurora) in its [mobile incarnation](http://www.mozilla.org/en-US/mobile/aurora/). It's a solid app
 and so far provides everything I need, including a direct download
 from the website. This is how I interact with Google apps for the time
 being, I just use their mobile versions in the browser.
 
 App store fixed, file manager acquired, browser fixed, on to the
 horrible UI. Unfortunately there's not really too much you can do in
-this regard, but I found [Smart Taskbar]() to be a huge
+this regard, but I found [Smart Taskbar](http://www.amazon.com/gp/product/B004VN7BRC/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004VN7BRC&linkCode=as2&tag=citizen4blog-20) to be a huge
 improvement. It has a small icon for triggering the app from
 everywhere and features quick launch for up to five apps, configurable
 labels and much more. Not as good as having a "normal" Android
 interface, but definitely much better than the standard Kindle Fire
 offering.
 
-Last but not least I installed [Dropbox]() for easier file exchange, which
+Last but not least I installed [Dropbox](https://www.dropbox.com/android) for easier file exchange, which
 is super easy because there's a direct download link on the web
 site. I wish more developers would do this...
 
 **More content**
 
 Once I was done with the basics, it was time to add more content
-sources/viewers. [ComiCat]() is an exzellent CBR/CBZ reader and I
+sources/viewers. [ComiCat](http://www.amazon.com/gp/product/B004UBB1HQ/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004UBB1HQ&linkCode=as2&tag=citizen4blog-20) is an exzellent CBR/CBZ reader and I
 highly recommend it for managing and reading your digital
-comics. [ComiXology]() (and its app Comics) also is a good addition,
+comics. [ComiXology](http://www.amazon.com/gp/product/B005VVSQU4/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B005VVSQU4&linkCode=as2&tag=citizen4blog-20) (and its app Comics) also is a good addition,
 especially since they have a rather well stocked online store and a
 decent read-by-panel feature. Both of these apps are available in
 Amazon's app store ($3 for ComiCat, Comics is for free).
 
-For access to more books I added the [Gutenberg eReader]() app, a frontend
-to the well-known Project Gutenberg, as well as the [NOOK]()
+For access to more books I added the [Gutenberg eReader](http://slideme.org/application/gutenberg-ereader) app, a frontend
+to the well-known Project Gutenberg, as well as the [NOOK](http://slideme.org/application/nook)
 software. Yes, NOOK, on a Kindle. As you can imagine this did not come
 from the official app store but from SlideME instead. Since I'm
 usually really happy with Amazon's offerings I'm not even sure I'll
@@ -130,15 +130,15 @@ has a dedicated comic section, so who knows...
 
 On to movies. While Amazon's streaming service is great (or so I've
 heard), it's of no use to me while traveling. I do however have quite
-a few films and documentaries on my netbook (go check out [VODO](),
+a few films and documentaries on my netbook (go check out [VODO](http://vodo.net/),
 there's some great free stuff on there), but I don't want to convert
-all of them to a format the Kindle understands. Enter [MoboPlayer](), a
+all of them to a format the Kindle understands. Enter [MoboPlayer](http://www.amazon.com/gp/product/B00AHQNHSY/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00AHQNHSY&linkCode=as2&tag=citizen4blog-20), a
 great free movie player that can deal with a ton of formats and even
 has a windowed mode. Yes, on a tablet!
 
 With comics, books and movies covered, what's left? Games! The guys
-over at [Humble Bundle]() don't only compile great game bundles, they
-also have a nifty [Android app](), that let's you manage all your
+over at [Humble Bundle](https://www.humblebundle.com/) don't only compile great game bundles, they
+also have a nifty [Android app](https://www.humblebundle.com/app), that let's you manage all your
 purchases. Since they offered several Android bundles in the past I
 actually have a ton of games, and the Kindle Fire is an excellent
 device to play them on.
