@@ -4,7 +4,7 @@
   <title><![CDATA[Category: jruby | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/jruby/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,9 @@
   <entry>
     <title type="html"><![CDATA[Ruby implementations and why we should care]]></title>
     <link href="http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/"/>
-    <updated>2009-03-12T00:00:00-06:00</updated>
+    <updated>2009-03-12T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care</id>
-    <content type="html"><![CDATA[<p>Not too lang ago our "favorite language":http://www.ruby-lang.org/en/ had only implementation, the one made by "Matz":http://en.wikipedia.org/wiki/Yukihiro_Matsumoto (now commonly referred to as MatzRuby or MRI). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
+    <content type="html"><![CDATA[<p>Not too lang ago our &ldquo;favorite language&rdquo;:<a href="http://www.ruby-lang.org/en/">http://www.ruby-lang.org/en/</a> had only implementation, the one made by &ldquo;Matz&rdquo;:<a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">http://en.wikipedia.org/wiki/Yukihiro_Matsumoto</a> (now commonly referred to as MatzRuby or MRI). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
 
 <ul>
 <li>Ruby 1.8.6: This is your trusted old Ruby 1.8.6, and while it may not be the most spectacular of the implementations listed here, it's the most widely used Ruby interpreter around and the current de facto standard of the language.</li>
@@ -30,9 +30,9 @@
 </ul>
 
 
-<p>There are of course other Ruby implementations like "Cardinal":http://cardinal2.rubyforge.org/ (a Ruby interpreter for "Parrot":http://www.parrot.org/), "IronRuby":http://www.ironruby.net/ (Ruby for the .NET environment) and "tinyrb":http://github.com/macournoyer/tinyrb/tree/master (a tiny and fast subset of Ruby), which I won't describe here in more detail, since I haven't yet had time to play around with them.</p>
+<p>There are of course other Ruby implementations like &ldquo;Cardinal&rdquo;:<a href="http://cardinal2.rubyforge.org/">http://cardinal2.rubyforge.org/</a> (a Ruby interpreter for &ldquo;Parrot&rdquo;:<a href="http://www.parrot.org/">http://www.parrot.org/</a>), &ldquo;IronRuby&rdquo;:<a href="http://www.ironruby.net/">http://www.ironruby.net/</a> (Ruby for the .NET environment) and &ldquo;tinyrb&rdquo;:<a href="http://github.com/macournoyer/tinyrb/tree/master">http://github.com/macournoyer/tinyrb/tree/master</a> (a tiny and fast subset of Ruby), which I won&rsquo;t describe here in more detail, since I haven&rsquo;t yet had time to play around with them.</p>
 
-<p>So why should we care? Because the various implementations create a sort of competitive spirit, therefore pushing the limits of Ruby and driving it forward, by making it faster or running on top of other VMs (JRuby, IronRuby), thus letting it leverage a plethora of established technologies and also exposing it to potential new developers. Plus we also got "RubySpec":http://rubyspec.org/, so potential Ruby implementors have a standard to follow.</p>
+<p>So why should we care? Because the various implementations create a sort of competitive spirit, therefore pushing the limits of Ruby and driving it forward, by making it faster or running on top of other VMs (JRuby, IronRuby), thus letting it leverage a plethora of established technologies and also exposing it to potential new developers. Plus we also got &ldquo;RubySpec&rdquo;:<a href="http://rubyspec.org/,">http://rubyspec.org/,</a> so potential Ruby implementors have a standard to follow.</p>
 
 <p>I hope you enjoyed this post, please leave comments in case you disagree with something or want to add some information!</p>
 ]]></content>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: reviews | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/reviews/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,15 +16,15 @@
   <entry>
     <title type="html"><![CDATA[Review: A Bug Hunter's Diary]]></title>
     <link href="http://citizen428.net/blog/2012/02/01/review-a-bug-hunters-diary/"/>
-    <updated>2012-02-01T22:03:00-06:00</updated>
+    <updated>2012-02-01T22:03:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/02/01/review-a-bug-hunters-diary</id>
-    <content type="html"><![CDATA[<p>This was a very good read! In each chapter the author introduces one bug he found in a popular software package, always following the same structure: discovery, exploitation, remediation, lessons learned from the bug and a timeline of the bug's lifetime (disclosure, fix, etc).</p>
+    <content type="html"><![CDATA[<p>This was a very good read! In each chapter the author introduces one bug he found in a popular software package, always following the same structure: discovery, exploitation, remediation, lessons learned from the bug and a timeline of the bug&rsquo;s lifetime (disclosure, fix, etc).</p>
 
-<p>The writing is engaging and to the point, but still contains a lot of technical detail. Be warned though, if reading C and disassembly is not your type of thing, you probably won't enjoy this too much. The author tries hard to make everything as easy to understand as possible, but there's only so much you can do with limited space.</p>
+<p>The writing is engaging and to the point, but still contains a lot of technical detail. Be warned though, if reading C and disassembly is not your type of thing, you probably won&rsquo;t enjoy this too much. The author tries hard to make everything as easy to understand as possible, but there&rsquo;s only so much you can do with limited space.</p>
 
-<p>If there's anything to criticize about this book, it's that the chapters are fairly repetitive, so I never really felt like reading more than one in a single sitting. But then it's also not the type of book that needs to be read cover to cover as fast as possible.</p>
+<p>If there&rsquo;s anything to criticize about this book, it&rsquo;s that the chapters are fairly repetitive, so I never really felt like reading more than one in a single sitting. But then it&rsquo;s also not the type of book that needs to be read cover to cover as fast as possible.</p>
 
-<p>Link: <a href="http://www.amazon.com/gp/product/1593273851/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1593273851">Tobias Klein: A Bug Hunter's Diary</a> (Amazon affiliate link)</p>
+<p>Link: <a href="http://www.amazon.com/gp/product/1593273851/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1593273851">Tobias Klein: A Bug Hunter&rsquo;s Diary</a> (Amazon affiliate link)</p>
 ]]></content>
   </entry>
   

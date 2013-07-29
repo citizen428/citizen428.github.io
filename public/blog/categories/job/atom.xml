@@ -4,7 +4,7 @@
   <title><![CDATA[Category: job | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/job/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,20 +16,20 @@
   <entry>
     <title type="html"><![CDATA[Why working in Business IT sucks]]></title>
     <link href="http://citizen428.net/blog/2006/02/07/why-working-in-business-it-sucks/"/>
-    <updated>2006-02-07T00:00:00-06:00</updated>
+    <updated>2006-02-07T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/02/07/why-working-in-business-it-sucks</id>
     <content type="html"><![CDATA[<ol>
-<li><p>You'll turn into a bitter cynic. This in fact is probably the best thing about your job, which really  should make you think...</p></li>
-<li><p>Only wackos and smartasses work in this field. Depending on which group you belong to, this might even be fun. More often though you're screwed.</p></li>
-<li><p>If your boss screws up, it will probably get communicated to the customer as your fault. Given that you took the job in the first place, that's even true.</p></li>
-<li><p>Every job where people tell you things along the line of "An average day has 24 hours and if that isn't enough, you'll have to make use of the nights too!" and find that actually funny, is a good reason to spend the rest of your life in a zen buddhist monastery, a mental home or both.</p></li>
-<li><p>The best thing about your average work day is that there's always at least one person in the office who is worse off than you (see #1). However, he's most likely also the one poor guy who's neither a wacko nor a smartass (see #2), so you have to control your bitter cynicism and feel sorry for him.</p></li>
-<li><p>The coffee is cold or bad and the coke is either warm or a diet coke. They've thought about everything!</p></li>
-<li><p>After a certain amount of time you won't be able to remember if the sentences "Resistance is futile. Your life as it has been is over. From this time forward, you will service us." have been said by your boss or Locutus of Borg. What's even worse is that it doesn't really make a difference anyway...</p></li>
+<li><p>You&rsquo;ll turn into a bitter cynic. This in fact is probably the best thing about your job, which really  should make you think&hellip;</p></li>
+<li><p>Only wackos and smartasses work in this field. Depending on which group you belong to, this might even be fun. More often though you&rsquo;re screwed.</p></li>
+<li><p>If your boss screws up, it will probably get communicated to the customer as your fault. Given that you took the job in the first place, that&rsquo;s even true.</p></li>
+<li><p>Every job where people tell you things along the line of &ldquo;An average day has 24 hours and if that isn&rsquo;t enough, you&rsquo;ll have to make use of the nights too!&rdquo; and find that actually funny, is a good reason to spend the rest of your life in a zen buddhist monastery, a mental home or both.</p></li>
+<li><p>The best thing about your average work day is that there&rsquo;s always at least one person in the office who is worse off than you (see #1). However, he&rsquo;s most likely also the one poor guy who&rsquo;s neither a wacko nor a smartass (see #2), so you have to control your bitter cynicism and feel sorry for him.</p></li>
+<li><p>The coffee is cold or bad and the coke is either warm or a diet coke. They&rsquo;ve thought about everything!</p></li>
+<li><p>After a certain amount of time you won&rsquo;t be able to remember if the sentences &ldquo;Resistance is futile. Your life as it has been is over. From this time forward, you will service us.&rdquo; have been said by your boss or Locutus of Borg. What&rsquo;s even worse is that it doesn&rsquo;t really make a difference anyway&hellip;</p></li>
 </ol>
 
 
-<p>P.S. I'm also planning on writing up some reasons for "Why working in Business IT rocks". Yeah, right.</p>
+<p>P.S. I&rsquo;m also planning on writing up some reasons for &ldquo;Why working in Business IT rocks&rdquo;. Yeah, right.</p>
 
 <p>Pungenday, Chaos 38, 3172 YOLD</p>
 ]]></content>
@@ -38,9 +38,9 @@
   <entry>
     <title type="html"><![CDATA[First day in my new job]]></title>
     <link href="http://citizen428.net/blog/2006/01/05/first-day-in-my-new-job/"/>
-    <updated>2006-01-05T00:00:00-06:00</updated>
+    <updated>2006-01-05T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/01/05/first-day-in-my-new-job</id>
-    <content type="html"><![CDATA[<p>/me is now working as a "Junior System Engineer", whatever that is supposed to mean... ;)</p>
+    <content type="html"><![CDATA[<p>/me is now working as a &ldquo;Junior System Engineer&rdquo;, whatever that is supposed to mean&hellip; ;)</p>
 
 <p>After succesfully avoiding anything even remotely resembling regular payed work for some years now, this feels pretty strange, but at least my job is all about open source business solutions (clustering, heartbeat, Nagios setups, etc.), the company desktops run Linux (Debian) and code I write is licensed under the GPL.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: screencast | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/screencast/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,13 +16,13 @@
   <entry>
     <title type="html"><![CDATA[Review: Meet MacRuby (PeepCode screencast)]]></title>
     <link href="http://citizen428.net/blog/2009/05/23/review-meet-macruby-peepcode-screencast/"/>
-    <updated>2009-05-23T00:00:00-05:00</updated>
+    <updated>2009-05-23T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/05/23/review-meet-macruby-peepcode-screencast</id>
-    <content type="html"><![CDATA[<p>This afternoon I had the time to finally watch the "PeepCode":http://peepcode.com/ "Meet MacRuby":http://peepcode.com/products/meet-macruby screencast.</p>
+    <content type="html"><![CDATA[<p>This afternoon I had the time to finally watch the &ldquo;PeepCode&rdquo;:<a href="http://peepcode.com/">http://peepcode.com/</a> &ldquo;Meet MacRuby&rdquo;:<a href="http://peepcode.com/products/meet-macruby">http://peepcode.com/products/meet-macruby</a> screencast.</p>
 
-<p>In case you don't know "MacRuby":http://www.macruby.com/, it's a Ruby interpreter sitting on top of "Objective-C":http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/ and OS X core technologies (see also "here":http://citizen428.net/archives/365-Ruby-implementations-and-why-we-should-care.html).</p>
+<p>In case you don&rsquo;t know &ldquo;MacRuby&rdquo;:<a href="http://www.macruby.com/,">http://www.macruby.com/,</a> it&rsquo;s a Ruby interpreter sitting on top of &ldquo;Objective-C&rdquo;:<a href="http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/">http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/</a> and OS X core technologies (see also &ldquo;here&rdquo;:<a href="http://citizen428.net/archives/365-Ruby-implementations-and-why-we-should-care.html">http://citizen428.net/archives/365-Ruby-implementations-and-why-we-should-care.html</a>).</p>
 
-<p>During the 74 minute screencast you will build a basic but functional Twitter client, and in the process learn about MacRuby and "Cocoa":http://developer.apple.com/cocoa/ basics, using "Xcode":http://developer.apple.com/tools/macosxtools.html and "InterfaceBuilder":http://developer.apple.com/tools/interfacebuilder.html to develop and bundle your application and many other interesting topics.</p>
+<p>During the 74 minute screencast you will build a basic but functional Twitter client, and in the process learn about MacRuby and &ldquo;Cocoa&rdquo;:<a href="http://developer.apple.com/cocoa/">http://developer.apple.com/cocoa/</a> basics, using &ldquo;Xcode&rdquo;:<a href="http://developer.apple.com/tools/macosxtools.html">http://developer.apple.com/tools/macosxtools.html</a> and &ldquo;InterfaceBuilder&rdquo;:<a href="http://developer.apple.com/tools/interfacebuilder.html">http://developer.apple.com/tools/interfacebuilder.html</a> to develop and bundle your application and many other interesting topics.</p>
 
 <p>The screencast is very well structured, easy to follow and full of good and practical information, including perks and rough edges of the current MacRuby version. All in all a really enjoyable and informative video, which is well worth US$9 (or less if you buy packs of credits)!</p>
 ]]></content>

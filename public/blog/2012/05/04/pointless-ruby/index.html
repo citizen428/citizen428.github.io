@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="It&#8217;s no secret that I&#8217;m rather fond of functional programming and also try to apply it to my Ruby coding, at least as long as it doesn&# &hellip;">
+  <meta name="description" content="It&rsquo;s no secret that I&rsquo;m rather fond of functional programming and also try to apply it to my Ruby coding, at least as long as it doesn& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -118,16 +118,16 @@
   
 
 
-<time datetime="2012-05-04T13:03:00-05:00" pubdate data-updated="true">May 4<span>th</span>, 2012</time>
+<time datetime="2012-05-04T13:03:00+07:00" pubdate data-updated="true">May 4<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>It&#8217;s no secret that I&#8217;m rather fond of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a> and also try to apply it to my Ruby coding, at least as long as it doesn&#8217;t become too unidiomatic.</p>
+<div class="entry-content"><p>It&rsquo;s no secret that I&rsquo;m rather fond of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a> and also try to apply it to my Ruby coding, at least as long as it doesn&rsquo;t become too unidiomatic.</p>
 
-<p>Being at home sick I got bored, so I played around a bit in IRB to create a composition function that will allow me to create higher-order functions in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a> (sometimes also referred to as &#8220;pointless style&#8221;, hence the title of this post). I know that <a href="http://rubyworks.github.com/facets/">Facets</a> has <code>Proc#compose</code> and <code>Proc#*</code>, but they only work with <code>Proc</code> objects. Ruby being the flexible beast that it is, it took me about two minutes to come up with a working solution, which I called <code>fn</code> because it basically returns a function and <code>compose</code> was too long for my taste:</p>
+<p>Being at home sick I got bored, so I played around a bit in IRB to create a composition function that will allow me to create higher-order functions in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a> (sometimes also referred to as &ldquo;pointless style&rdquo;, hence the title of this post). I know that <a href="http://rubyworks.github.com/facets/">Facets</a> has <code>Proc#compose</code> and <code>Proc#*</code>, but they only work with <code>Proc</code> objects. Ruby being the flexible beast that it is, it took me about two minutes to come up with a working solution, which I called <code>fn</code> because it basically returns a function and <code>compose</code> was too long for my taste:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -147,9 +147,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>I know that this isn&#8217;t really shorter than <code>{ |x| x.split.last }</code>, but usefullness isn&#8217;t really the goal of a pointless exercise ;-)</p>
+<p>I know that this isn&rsquo;t really shorter than <code>{ |x| x.split.last }</code>, but usefullness isn&rsquo;t really the goal of a pointless exercise ;&ndash;)</p>
 
-<p>So far so good, but if one doesn&#8217;t really care about pointfree style, wouldn&#8217;t it also be fun to mix and match procs and symbols? It sure would:</p>
+<p>So far so good, but if one doesn&rsquo;t really care about pointfree style, wouldn&rsquo;t it also be fun to mix and match procs and symbols? It sure would:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -168,7 +168,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Let&#8217;s see this in action:</p>
+<p>Let&rsquo;s see this in action:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -177,7 +177,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Note: I&#8217;m sick, all of this is untested, does not take into account corner cases of any kind and may harm your pet. It was however a fun little diversion that showed once again how flexible Ruby is.</p>
+<p>Note: I&rsquo;m sick, all of this is untested, does not take into account corner cases of any kind and may harm your pet. It was however a fun little diversion that showed once again how flexible Ruby is.</p>
 </div>
 
 
@@ -200,7 +200,7 @@
   
 
 
-<time datetime="2012-05-04T13:03:00-05:00" pubdate data-updated="true">May 4<span>th</span>, 2012</time>
+<time datetime="2012-05-04T13:03:00+07:00" pubdate data-updated="true">May 4<span>th</span>, 2012</time>
       
 
 <span class="categories">
@@ -226,7 +226,7 @@
 
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2012/05/04/pointless-ruby/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2012/05/04/pointless-ruby/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2012/05/04/pointless-ruby/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2012/05/04/pointless-ruby/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -379,7 +379,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

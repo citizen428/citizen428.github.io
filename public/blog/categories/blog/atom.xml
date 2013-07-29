@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blog | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,9 @@
   <entry>
     <title type="html"><![CDATA[Octopress Customizations]]></title>
     <link href="http://citizen428.net/blog/2011/10/10/octopress-customizations/"/>
-    <updated>2011-10-10T19:59:00-05:00</updated>
+    <updated>2011-10-10T19:59:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/10/10/octopress-customizations</id>
-    <content type="html"><![CDATA[<p>I finally found some time to give this blog a less generic look, which was really easy thanks to <a href="http://octopress.org/docs/theme/">Octopress's great theme and customization support</a>.</p>
+    <content type="html"><![CDATA[<p>I finally found some time to give this blog a less generic look, which was really easy thanks to <a href="http://octopress.org/docs/theme/">Octopress&rsquo;s great theme and customization support</a>.</p>
 
 <p>First I changed some colors in <code>sass/custom/_colors.scss</code>:</p>
 
@@ -95,13 +95,13 @@
   <entry>
     <title type="html"><![CDATA[Octopress Templates]]></title>
     <link href="http://citizen428.net/blog/2011/09/27/octopress-templates/"/>
-    <updated>2011-09-27T16:58:00-05:00</updated>
+    <updated>2011-09-27T16:58:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/09/27/octopress-templates</id>
-    <content type="html"><![CDATA[<p>When deciding to switch from Wordpress to Octopress one of the main reasons was that I don't need most of the advanced features the former offers. However, for my weekly <a href="http://citizen428.net/blog/categories/informationoverload/">Information Overload</a> series I relied on two features, namely templates and scheduling: I created a new post from the template and then filled it with content over the week. Once I was done I'd schedule it for publishing on Sunday afternoon. Here's how I plan to do this with Octopress.<!-- more --></p>
+    <content type="html"><![CDATA[<p>When deciding to switch from Wordpress to Octopress one of the main reasons was that I don&rsquo;t need most of the advanced features the former offers. However, for my weekly <a href="http://citizen428.net/blog/categories/informationoverload/">Information Overload</a> series I relied on two features, namely templates and scheduling: I created a new post from the template and then filled it with content over the week. Once I was done I&rsquo;d schedule it for publishing on Sunday afternoon. Here&rsquo;s how I plan to do this with Octopress.<!-- more --></p>
 
 <h2>Templating</h2>
 
-<p>I created a new Rake task named "new_overload", that looks like this:</p>
+<p>I created a new Rake task named &ldquo;new_overload&rdquo;, that looks like this:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -135,23 +135,23 @@
 <span class='line-number'>30</span>
 <span class='line-number'>31</span>
 <span class='line-number'>32</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">desc</span> <span class="s2">&quot;Create a new Information Overload template </span><span class="si">#{</span><span class="n">source_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">posts_dir</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">desc</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Create</span> <span class="n">a</span> <span class="kp">new</span> <span class="no">Information</span> <span class="no">Overload</span> <span class="n">template</span> <span class="c1">#{source_dir}/#{posts_dir}&amp;rdquo;</span>
 </span><span class='line'><span class="n">task</span> <span class="ss">:new_overload</span> <span class="k">do</span>
-</span><span class='line'>  <span class="k">raise</span> <span class="s2">&quot;### You haven&#39;t set anything up yet. First run &lt;code&gt;rake install&lt;/code&gt; to set up an Octopress theme.&quot;</span> <span class="k">unless</span> <span class="no">File</span><span class="o">.</span><span class="n">directory?</span><span class="p">(</span><span class="n">source_dir</span><span class="p">)</span>
-</span><span class='line'>  <span class="nb">require</span> <span class="s1">&#39;date&#39;</span>
-</span><span class='line'>  <span class="nb">require</span> <span class="s1">&#39;./plugins/titlecase.rb&#39;</span>
-</span><span class='line'>  <span class="n">mkdir_p</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">source_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">posts_dir</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="k">raise</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="c1">### You haven&amp;rsquo;t set anything up yet. First run &lt;code&gt;rake install&lt;/code&gt; to set up an Octopress theme.&amp;rdquo; unless File.directory?(source_dir)</span>
+</span><span class='line'>  <span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">date</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'>  <span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">.</span><span class="n">/plugins</span><span class="o">/</span><span class="n">titlecase</span><span class="o">.</span><span class="n">rb</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">mkdir_p</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="c1">#{source_dir}/#{posts_dir}&amp;rdquo;</span>
 </span><span class='line'>  <span class="n">date</span> <span class="o">=</span> <span class="p">(</span><span class="no">Date</span><span class="o">.</span><span class="n">today</span> <span class="o">+</span> <span class="p">(</span><span class="mi">7</span><span class="o">-</span><span class="no">Date</span><span class="o">.</span><span class="n">today</span><span class="o">.</span><span class="n">wday</span><span class="p">))</span>
-</span><span class='line'>  <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Information Overload </span><span class="si">#{</span><span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-%d&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'>  <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">source_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">posts_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-%d&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="n">title</span><span class="o">.</span><span class="n">to_url</span><span class="si">}</span><span class="s2">.</span><span class="si">#{</span><span class="n">new_post_ext</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="n">title</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Information</span> <span class="no">Overload</span> <span class="c1">#{date.strftime(&amp;rdquo;%Y-%m-%d&quot;)}&amp;ldquo;</span>
+</span><span class='line'>  <span class="n">filename</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="c1">#{source_dir}/#{posts_dir}/#{date.strftime(&amp;lsquo;%Y-%m-%d&amp;rsquo;)}&amp;ndash;#{title.to_url}.#{new_post_ext}&amp;ldquo;</span>
 </span><span class='line'>  <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;abort(&quot;rake aborted!&quot;) if ask(&quot;</span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="sr"> already exists. Do you want to overwrite?&quot;, [&#39;y&#39;, &#39;n&#39;]) == &#39;n&#39;</span>
 </span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">  puts &quot;Creating new post: </span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="sr">&quot;</span>
-</span><span class='line'><span class="sr">  open(filename, &#39;w&#39;) do |post|&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="sr">  puts &amp;ldquo;Creating new post: </span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="sr">&amp;rdquo;</span>
+</span><span class='line'><span class="sr">  open(filename, &amp;lsquo;w&amp;rsquo;) do |post|&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nb">system</span> <span class="s2">&quot;mkdir -p </span><span class="si">#{</span><span class="n">source_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">posts_dir</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">;</span>
 </span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;---&quot;</span>
@@ -169,12 +169,12 @@
 </span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>This is very similar to the standard "new_post" task, but generates
-the post with the date of the current week's Sunday. It also marks it
-as a draft by adding "published: false" to the YAML header and inserts
+<p>This is very similar to the standard &ldquo;new_post&rdquo; task, but generates
+the post with the date of the current week&rsquo;s Sunday. It also marks it
+as a draft by adding &ldquo;published: false&rdquo; to the YAML header and inserts
 a template for an unordered list in Markdown syntax.</p>
 
-<p>I'm not exactly sure how to handle the scheduling yet, but I think
+<p>I&rsquo;m not exactly sure how to handle the scheduling yet, but I think
 good old <a href="http://en.wikipedia.org/wiki/At_(Unix">at</a> will come in
 handy here.</p>
 ]]></content>
@@ -183,26 +183,26 @@ handy here.</p>
   <entry>
     <title type="html"><![CDATA[Goodbye Wordpress]]></title>
     <link href="http://citizen428.net/blog/2011/09/26/goodbye-wordpress/"/>
-    <updated>2011-09-26T21:00:00-05:00</updated>
+    <updated>2011-09-26T21:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/09/26/goodbye-wordpress</id>
     <content type="html"><![CDATA[<p>After using <a href="http://wordpress.org/">Wordpress</a> as my blogging engine
 of choice for over a year (after moving away from <a href="http://s9y.org/">S9Y</a>), I decided to switch this site to
-<a href="http://octopress.org/">Octopress</a>. Why? Because it's cool!
+<a href="http://octopress.org/">Octopress</a>. Why? Because it&rsquo;s cool!
 No, seriously. I was actually quite happy with WP, it just always felt
 like way more than I actually needed. OP on the other hand is super
 lightweight, ritten in Ruby and uses some of my favorite technologies,
-like Sinatra and Markdown. It doesn't stop there though: having the site rendered to static
+like Sinatra and Markdown. It doesn&rsquo;t stop there though: having the site rendered to static
 files means I can get rid of MySQL and PHP on my little VPS, which
-definitely is a plus. And it's also very cool to have all your posts
+definitely is a plus. And it&rsquo;s also very cool to have all your posts
 in a directory on your local file system, so you can use all your
 favorite command line tools to search through or batch modify
-them. Last but not least I'm now writing my posts in Emacs instead of
+them. Last but not least I&rsquo;m now writing my posts in Emacs instead of
 some crappy web input form (ok, granted, I could have done that before
 too).</p>
 
 <p>Now to the actual migration. I started by exporting my WP blog to
-XML. This can be done in the administration backend under "Tools -
-Export". Once I had this XML, I used the following script to convert
+XML. This can be done in the administration backend under &ldquo;Tools &ndash;
+Export&rdquo;. Once I had this XML, I used the following script to convert
 the posts to individual files for Octopress:</p>
 
 <p><div><script src='https://gist.github.com/1240781.js'></script>
@@ -277,7 +277,7 @@ instead of Markdown because I used the former in my WP install through
 a plugin).</p>
 
 <p>Since some of my posts are quite popular and get linked to a lot, I
-didn't want to loose my old links. I therefore wrote another script
+didn&rsquo;t want to loose my old links. I therefore wrote another script
 that created 301 redirects for all of them:</p>
 
 <p><div><script src='https://gist.github.com/1241762.js'></script>
@@ -319,14 +319,14 @@ not annoy my subscribers:</p>
 RewriteRule ^/feed /atom.xml [R=301,L]
 </code></p>
 
-<p>Of course I also didn't want to loose all my comments, so I had to
+<p>Of course I also didn&rsquo;t want to loose all my comments, so I had to
 come up with a solution for that. I first
 installed the WP <a href="http://disqus.com">Disqus</a> plugin and exported all
 my current comments. I then used some good old Emacs magic to convert
 the list of redirects I had already generated to a CSV for Disqus'
 <a href="http://docs.disqus.com/help/39/">URL map migration tool</a>. So far this
 has not migrated all comments to the correct location, but it should
-eventually work out (worst case I'll have to email Disqus support).</p>
+eventually work out (worst case I&rsquo;ll have to email Disqus support).</p>
 
 <p>Last but not least I used Octopress' excellent
 <a href="http://octopress.org/docs/theme/template/index.html">customization suport</a>
@@ -335,12 +335,12 @@ to re-add some stuff to my headers, like the OpenID delegate.</p>
 <p>Of course there are still some things that need to be done, some of them more urgently
 then others. First off this site needs a better stylesheet. The
 default is actually quite ok, but I want something with more
-personality. I'll also have to go through my old posts and clean them
+personality. I&rsquo;ll also have to go through my old posts and clean them
 up a bit, the automatic conversion did some funny things at
-times. I also want to re-integrate Flattr and PostRank, but I'm not
+times. I also want to re-integrate Flattr and PostRank, but I&rsquo;m not
 exactly in a hurry when it comes to that.</p>
 
-<p>I hope this post was useful to some of you, I'm definitely happy with
+<p>I hope this post was useful to some of you, I&rsquo;m definitely happy with
 my new blogging setup.</p>
 ]]></content>
   </entry>
@@ -348,20 +348,20 @@ my new blogging setup.</p>
   <entry>
     <title type="html"><![CDATA[Anniversaries all around]]></title>
     <link href="http://citizen428.net/blog/2009/01/26/anniversaries-all-around/"/>
-    <updated>2009-01-26T00:00:00-06:00</updated>
+    <updated>2009-01-26T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/01/26/anniversaries-all-around</id>
-    <content type="html"><![CDATA[<p>What a weekend for celebrations! On Saturday this blog turned 4 ("first post":http://citizen428.net/archives/1-Blog-started.html, <a href="http://citizen428.net/archives/3-Added-RedCloth.html">first "real" post</a>), on Sunday it's been exactly one year since I left Austria (although I did go back for 6 days around Christmas) and today is "Australia Day":http://en.wikipedia.org/wiki/Australia_Day. I had a great weekend and the weather actually was nice for a change. Sunshine and lollipops all around... ;)</p>
+    <content type="html"><![CDATA[<p>What a weekend for celebrations! On Saturday this blog turned 4 (&ldquo;first post&rdquo;:<a href="http://citizen428.net/archives/1-Blog-started.html,">http://citizen428.net/archives/1-Blog-started.html,</a> <a href="http://citizen428.net/archives/3-Added-RedCloth.html">first &ldquo;real&rdquo; post</a>), on Sunday it&rsquo;s been exactly one year since I left Austria (although I did go back for 6 days around Christmas) and today is &ldquo;Australia Day&rdquo;:<a href="http://en.wikipedia.org/wiki/Australia_Day.">http://en.wikipedia.org/wiki/Australia_Day.</a> I had a great weekend and the weather actually was nice for a change. Sunshine and lollipops all around&hellip; ;)</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Blog reactivated, Feedburner feeds history]]></title>
     <link href="http://citizen428.net/blog/2009/01/21/blog-reactivated-feedburner-feeds-history/"/>
-    <updated>2009-01-21T00:00:00-06:00</updated>
+    <updated>2009-01-21T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/01/21/blog-reactivated-feedburner-feeds-history</id>
-    <content type="html"><![CDATA[<p>Although I do love "my Soup":http://soup.citizen428.net, "Twitter":http://twitter.com/citizen428 and all those other microblogs, tumblelogs and whatgotyou, I recently feel the urge to sometimes write proper long blog posts rising again. Therefore I once again resurrected this blog (I slowly start feeling like the "George Romero":http://en.wikipedia.org/wiki/George_Romero of blogging), gave it a proper facelift and am now ready to roll again.</p>
+    <content type="html"><![CDATA[<p>Although I do love &ldquo;my Soup&rdquo;:<a href="http://soup.citizen428.net,">http://soup.citizen428.net,</a> &ldquo;Twitter&rdquo;:<a href="http://twitter.com/citizen428">http://twitter.com/citizen428</a> and all those other microblogs, tumblelogs and whatgotyou, I recently feel the urge to sometimes write proper long blog posts rising again. Therefore I once again resurrected this blog (I slowly start feeling like the &ldquo;George Romero&rdquo;:<a href="http://en.wikipedia.org/wiki/George_Romero">http://en.wikipedia.org/wiki/George_Romero</a> of blogging), gave it a proper facelift and am now ready to roll again.</p>
 
-<p>On a related note, I'd like to inform you that my 2 Feedburner feeds will get deactivated in 30 days. To be honest, I can't even remember why I got them in the first place, but I'm pretty sure I had a really good reason back then ("Are you pondering what I'm pondering?"). Anyway, there's still plenty of subscription options here and on Soup, so you really don't have to stop stalking me if you don't fell like it.</p>
+<p>On a related note, I&rsquo;d like to inform you that my 2 Feedburner feeds will get deactivated in 30 days. To be honest, I can&rsquo;t even remember why I got them in the first place, but I&rsquo;m pretty sure I had a really good reason back then (&ldquo;Are you pondering what I&rsquo;m pondering?&rdquo;). Anyway, there&rsquo;s still plenty of subscription options here and on Soup, so you really don&rsquo;t have to stop stalking me if you don&rsquo;t fell like it.</p>
 ]]></content>
   </entry>
   

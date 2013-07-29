@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="On October 29th the local Google Technology User Group is hosting a Chrome Hackathon, in which I&#8217;ll participate. As a little warm up exercise I &hellip;">
+  <meta name="description" content="On October 29th the local Google Technology User Group is hosting a Chrome Hackathon, in which I&rsquo;ll participate. As a little warm up exercise I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -118,16 +118,16 @@
   
 
 
-<time datetime="2011-10-21T08:53:00-05:00" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
+<time datetime="2011-10-21T08:53:00+07:00" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>On October 29th the local <a href="http://www.gtug.at/">Google Technology User Group</a> is hosting a Chrome Hackathon, in which I&#8217;ll participate. As a little warm up exercise I created a small extension for my favorite microblogging service <a href="http://soup.io">Soup.io</a>, which basically just wraps their bookmarklet.</p>
+<div class="entry-content"><p>On October 29th the local <a href="http://www.gtug.at/">Google Technology User Group</a> is hosting a Chrome Hackathon, in which I&rsquo;ll participate. As a little warm up exercise I created a small extension for my favorite microblogging service <a href="http://soup.io">Soup.io</a>, which basically just wraps their bookmarklet.</p>
 
-<p>All in all this was a very nice experience, since the <a href="http://code.google.com/chrome/extensions/devguide.html">developer&#8217;s guide</a> is thorough and well written. After reading the <a href="http://code.google.com/chrome/extensions/getstarted.html">&#8220;Getting Started&#8221; tutorial</a>, almost all my questions were already answered. The others — which were generally caused by my poor JavaScript skills — could easily be solved by consulting Google and StackOverflow.</p>
+<p>All in all this was a very nice experience, since the <a href="http://code.google.com/chrome/extensions/devguide.html">developer&rsquo;s guide</a> is thorough and well written. After reading the <a href="http://code.google.com/chrome/extensions/getstarted.html">&ldquo;Getting Started&rdquo; tutorial</a>, almost all my questions were already answered. The others — which were generally caused by my poor JavaScript skills — could easily be solved by consulting Google and StackOverflow.</p>
 
 <!-- more -->
 
@@ -182,7 +182,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Here we define some general information, like the extension&#8217;s name, version and description, as well as <a href="http://code.google.com/chrome/extensions/manifest.html#icons">icons in various sizes</a> and needed <a href="http://code.google.com/chrome/extensions/manifest.html#permissions">permissions</a>. The <code>browser_action</code> section specifies the icon — including mouseover text — that will be displayed next to Chrome&#8217;s address bar, whereas the <code>background_page</code> is a script that runs in the extension process.</p>
+<p>Here we define some general information, like the extension&rsquo;s name, version and description, as well as <a href="http://code.google.com/chrome/extensions/manifest.html#icons">icons in various sizes</a> and needed <a href="http://code.google.com/chrome/extensions/manifest.html#permissions">permissions</a>. The <code>browser_action</code> section specifies the icon — including mouseover text — that will be displayed next to Chrome&rsquo;s address bar, whereas the <code>background_page</code> is a script that runs in the extension process.</p>
 
 <p>The core of my background page is a simple JavaScript function, which calls the bookmarklet provided by Soup.io (which I <a href="http://meyerweb.com/eric/tools/dencoder/">URL decoded</a> and formatted nicely):</p>
 
@@ -196,7 +196,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Easy so far, and I got to a first working version in about half an hour. I then wanted to add some keyboard shortcuts, which was slightly more involved, since Chrome doesn&#8217;t provide an API for that. Instead you use JavaScript listeners and <a href="http://code.google.com/chrome/extensions/messaging.html">message passing</a> to implement this. If you look back at the manifest, you&#8217;ll see a section called <code>content_script</code>, which specifies a file that runs in the context of the web page you are looking at. Here I set up a listener for <code>keyup</code> events.</p>
+<p>Easy so far, and I got to a first working version in about half an hour. I then wanted to add some keyboard shortcuts, which was slightly more involved, since Chrome doesn&rsquo;t provide an API for that. Instead you use JavaScript listeners and <a href="http://code.google.com/chrome/extensions/messaging.html">message passing</a> to implement this. If you look back at the manifest, you&rsquo;ll see a section called <code>content_script</code>, which specifies a file that runs in the context of the web page you are looking at. Here I set up a listener for <code>keyup</code> events.</p>
 
 <figure class='code'><figcaption><span>keyboard.js </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -234,11 +234,11 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>And that&#8217;s it, a simple Chrome extension, including a keyboard shortcut. Hosting the extension is a piece of cacke if you use the developer dashboard of the Chrome <a href="https://chrome.google.com/webstore">web store</a>, but there&#8217;s a one time registration fee of USD 5 for it. Here&#8217;s the current version:</p>
+<p>And that&rsquo;s it, a simple Chrome extension, including a keyboard shortcut. Hosting the extension is a piece of cacke if you use the developer dashboard of the Chrome <a href="https://chrome.google.com/webstore">web store</a>, but there&rsquo;s a one time registration fee of USD 5 for it. Here&rsquo;s the current version:</p>
 
 <p><a href="https://chrome.google.com/webstore/detail/jhfapglpemknnoacmdnhikhnpjkgpmcc">Soup.io for Google Chrome</a></p>
 
-<p>This was a fun experience, I&#8217;m definitely looking forward to the hackathon!</p>
+<p>This was a fun experience, I&rsquo;m definitely looking forward to the hackathon!</p>
 </div>
 
 
@@ -261,7 +261,7 @@
   
 
 
-<time datetime="2011-10-21T08:53:00-05:00" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
+<time datetime="2011-10-21T08:53:00+07:00" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
       
 
 <span class="categories">
@@ -287,7 +287,7 @@
 
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/10/21/a-chrome-extension-for-soup-dot-io/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/10/21/a-chrome-extension-for-soup-dot-io/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/10/21/a-chrome-extension-for-soup-dot-io/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/10/21/a-chrome-extension-for-soup-dot-io/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -440,7 +440,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

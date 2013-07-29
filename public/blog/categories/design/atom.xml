@@ -4,7 +4,7 @@
   <title><![CDATA[Category: design | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/design/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,19 +16,19 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-08-19]]></title>
     <link href="http://citizen428.net/blog/2012/08/19/information-overload-2012-08-19/"/>
-    <updated>2012-08-19T00:00:00-05:00</updated>
+    <updated>2012-08-19T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/08/19/information-overload-2012-08-19</id>
-    <content type="html"><![CDATA[<p>Note: I'll probably be too busy this upcoming week, so don't expect an Information Overload next Sunday.</p>
+    <content type="html"><![CDATA[<p>Note: I&rsquo;ll probably be too busy this upcoming week, so don&rsquo;t expect an Information Overload next Sunday.</p>
 
 <ul>
 <li><a href="http://dowlingduncan.com/2010/dowling-duncan-redesign-us-bank-notes/">Dowling Duncan redesign the US bank notes</a><br>This is a bit older, but a very cool design.</li>
-<li><a href="http://eng-pussy-riot.livejournal.com/7473.html">The Pussy Riot Lawyers - They will try to disbar us</a><br>Interesting interview with the Pussy Riot lawyers.</li>
-<li><a href="http://www.stevenpressfield.com/2009/10/writing-wednesdays-2-the-most-important-writing-lession-i-ever-learned/">The Most Important Writing Lesson I Ever Learned</a><br>It's a good lesson indeed and one I wish more artists followed.</li>
-<li><a href="http://www.prospectmagazine.co.uk/politics/mark-kitto-youll-never-be-chinese-leaving-china/">You'll never be Chinese</a><br>A foreigner living in China for 16 years explains why he wants to leave now.</li>
+<li><a href="http://eng-pussy-riot.livejournal.com/7473.html">The Pussy Riot Lawyers &ndash; They will try to disbar us</a><br>Interesting interview with the Pussy Riot lawyers.</li>
+<li><a href="http://www.stevenpressfield.com/2009/10/writing-wednesdays-2-the-most-important-writing-lession-i-ever-learned/">The Most Important Writing Lesson I Ever Learned</a><br>It&rsquo;s a good lesson indeed and one I wish more artists followed.</li>
+<li><a href="http://www.prospectmagazine.co.uk/politics/mark-kitto-youll-never-be-chinese-leaving-china/">You&rsquo;ll never be Chinese</a><br>A foreigner living in China for 16 years explains why he wants to leave now.</li>
 <li><a href="http://www.geekwire.com/2012/startup-acting-big-company/">How to keep your startup from acting like a big company</a><br>One would figure a lot of this boils down to common sense, but since I have seen enough startups that fail to follow this simple advices, I may be wrong.</li>
 <li><a href="http://articles.latimes.com/2012/aug/15/world/la-fg-israel-sperm-20120816">Israel sperm banks find quality is plummeting</a><br>And nobody really knows why.</li>
 <li><a href="http://slifty.com/2012/08/a-tor-of-the-dark-web/">A Tor of the Dark Web</a><br>This lighthearted article is a good introduction to Tor that you can send on to your less tech-savvy friends.</li>
-<li><a href="http://pod2g-ios.blogspot.co.uk/2012/08/never-trust-sms-ios-text-spoofing.html">Never trust SMS: iOS text spoofing</a><br>This is obviously a scammer's dream. I wonder how Android phones deal with this.</li>
+<li><a href="http://pod2g-ios.blogspot.co.uk/2012/08/never-trust-sms-ios-text-spoofing.html">Never trust SMS: iOS text spoofing</a><br>This is obviously a scammer&rsquo;s dream. I wonder how Android phones deal with this.</li>
 <li><a href="http://online.wsj.com/article/SB10000872396390444772404577589270444059332.html">The Panic Over Fukushima</a><br>The WSJ does some math related to radiatin in Fukushima.</li>
 </ul>
 
@@ -38,7 +38,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2010-10-17]]></title>
     <link href="http://citizen428.net/blog/2010/10/17/information-overload-2010-10-17/"/>
-    <updated>2010-10-17T00:00:00-05:00</updated>
+    <updated>2010-10-17T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2010/10/17/information-overload-2010-10-17</id>
     <content type="html"><![CDATA[<ul>
 <li>"The 'Irrational' Way Humans Interact With Dentists":http://www.npr.org/templates/story/story.php?storyId=130356647<br>Are our relationships with our dentists a form of the "Stockholm Syndrome":http://en.wikipedia.org/wiki/Stockholm_syndrome? Ask the behavioral psychologist.</li>
@@ -59,28 +59,28 @@
   <entry>
     <title type="html"><![CDATA[Delusions of grandeur]]></title>
     <link href="http://citizen428.net/blog/2006/08/12/delusions-of-grandeur/"/>
-    <updated>2006-08-12T00:00:00-05:00</updated>
+    <updated>2006-08-12T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/08/12/delusions-of-grandeur</id>
-    <content type="html"><![CDATA[<p>As my PR manager told me, large numbers of fans have already complained about the recent lack of updates. Since I'm only my reader's humble servant, I of course have to comply with this wishes, so here are the long awaited news about yours truly:</p>
+    <content type="html"><![CDATA[<p>As my PR manager told me, large numbers of fans have already complained about the recent lack of updates. Since I&rsquo;m only my reader&rsquo;s humble servant, I of course have to comply with this wishes, so here are the long awaited news about yours truly:</p>
 
 <p><em>Gentoo:</em>
-After being a "Gentoo":http://www.gentoo.org developer for 2 years, I finally decided to leave the project. Since I haven't really been active for the past 4 month anyway for several reasons (e.g. work), this was long overdue anyway. I've met a lot of nice and interesting people in the Gentoo community and working with you guys has really been a pleasure! Thanks for that, I really appreciate what I have learned from all of you during that time!</p>
+After being a &ldquo;Gentoo&rdquo;:<a href="http://www.gentoo.org">http://www.gentoo.org</a> developer for 2 years, I finally decided to leave the project. Since I haven&rsquo;t really been active for the past 4 month anyway for several reasons (e.g. work), this was long overdue anyway. I&rsquo;ve met a lot of nice and interesting people in the Gentoo community and working with you guys has really been a pleasure! Thanks for that, I really appreciate what I have learned from all of you during that time!</p>
 
 <p><em>Mac:</em>
-Today I've joined the team of "Open.Source.Mac":http://opensourcemac.de/ and have already published "my first little article":http://www.opensourcemac.de/2006/08/12/machtgeil/ on the site. Enjoy!</p>
+Today I&rsquo;ve joined the team of &ldquo;Open.Source.Mac&rdquo;:<a href="http://opensourcemac.de/">http://opensourcemac.de/</a> and have already published &ldquo;my first little article&rdquo;:<a href="http://www.opensourcemac.de/2006/08/12/machtgeil/">http://www.opensourcemac.de/2006/08/12/machtgeil/</a> on the site. Enjoy!</p>
 
 <p><em>Personal:</em>
-On the 2nd of August I celebrated my 27th birthday at "Xeno":http://www.xeno.co.at/. A lot of "friends":http://red667.org/ showed up, whereas "certain people":http://berq.net/ decided to get drunk somewhere else and then blamed innocent squirrels for their not showing up. It was a cool evening which I really enjoyed, but working on the next day didn't exactly qualify as a good cure against the headaches...</p>
+On the 2nd of August I celebrated my 27th birthday at &ldquo;Xeno&rdquo;:<a href="http://www.xeno.co.at/.">http://www.xeno.co.at/.</a> A lot of &ldquo;friends&rdquo;:<a href="http://red667.org/">http://red667.org/</a> showed up, whereas &ldquo;certain people&rdquo;:<a href="http://berq.net/">http://berq.net/</a> decided to get drunk somewhere else and then blamed innocent squirrels for their not showing up. It was a cool evening which I really enjoyed, but working on the next day didn&rsquo;t exactly qualify as a good cure against the headaches&hellip;</p>
 
 <p><em>Capitalism:</em>
-I have to admit that I love portable consoles, especially when they are as sexy as the black Nintendo DS Lite I bought three weeks ago. So far I own "Advance Wars: Dual Strike":http://ds.ign.com/articles/643/643656p1.html, "Brain Age: Train Your Brain in Minutes a Day":http://ds.ign.com/articles/702/702057p1.html, "Feel The Magic XY/XX":http://ds.ign.com/articles/567/567496p1.html and "Castlevania: Dawn of Sorrow":http://ds.ign.com/articles/655/655830p1.html. All of them are really great and I can hardly wait until my copy of "Mario Kart DS":http://ds.ign.com/articles/666/666125p1.html finally arrives.</p>
+I have to admit that I love portable consoles, especially when they are as sexy as the black Nintendo DS Lite I bought three weeks ago. So far I own &ldquo;Advance Wars: Dual Strike&rdquo;:<a href="http://ds.ign.com/articles/643/643656p1.html,">http://ds.ign.com/articles/643/643656p1.html,</a> &ldquo;Brain Age: Train Your Brain in Minutes a Day&rdquo;:<a href="http://ds.ign.com/articles/702/702057p1.html,">http://ds.ign.com/articles/702/702057p1.html,</a> &ldquo;Feel The Magic XY/XX&rdquo;:<a href="http://ds.ign.com/articles/567/567496p1.html">http://ds.ign.com/articles/567/567496p1.html</a> and &ldquo;Castlevania: Dawn of Sorrow&rdquo;:<a href="http://ds.ign.com/articles/655/655830p1.html.">http://ds.ign.com/articles/655/655830p1.html.</a> All of them are really great and I can hardly wait until my copy of &ldquo;Mario Kart DS&rdquo;:<a href="http://ds.ign.com/articles/666/666125p1.html">http://ds.ign.com/articles/666/666125p1.html</a> finally arrives.</p>
 
-<p>I also got myself a nice "M9 DX enclosure":http://www.macpower.com.tw/products/hdd3/m9/m9dx with a 250GB Samsung HD as a backup disk for the Mac Mini. Overall it's pretty neat, although it could match the color of the Mini a little better.</p>
+<p>I also got myself a nice &ldquo;M9 DX enclosure&rdquo;:<a href="http://www.macpower.com.tw/products/hdd3/m9/m9dx">http://www.macpower.com.tw/products/hdd3/m9/m9dx</a> with a 250GB Samsung HD as a backup disk for the Mac Mini. Overall it&rsquo;s pretty neat, although it could match the color of the Mini a little better.</p>
 
 <p><em>Misc</em>
-Found an "article":http://www.explosm.net/articles/6135/4/ about "Habbo Hotel":http://www.habbohotel.co.uk/ on the "Pardus":http://www.pardus.at forums and just had "to try it out":http://flickr.com/photos/citizen428/sets/72157594226374139/. Like the author of the article I most likely won't visit the site again, but I had a lot of fun during the hour I spent there.</p>
+Found an &ldquo;article&rdquo;:<a href="http://www.explosm.net/articles/6135/4/">http://www.explosm.net/articles/6135/4/</a> about &ldquo;Habbo Hotel&rdquo;:<a href="http://www.habbohotel.co.uk/">http://www.habbohotel.co.uk/</a> on the &ldquo;Pardus&rdquo;:<a href="http://www.pardus.at">http://www.pardus.at</a> forums and just had &ldquo;to try it out&rdquo;:<a href="http://flickr.com/photos/citizen428/sets/72157594226374139/.">http://flickr.com/photos/citizen428/sets/72157594226374139/.</a> Like the author of the article I most likely won&rsquo;t visit the site again, but I had a lot of fun during the hour I spent there.</p>
 
-<p>"teemow":http://teemow.com recently blogged about "BumpTop":http://honeybrown.ca/Pubs/BumpTop.html, a new take at the desktop metaphor we all grew used to. The video is quite impressive and I'd really like to try out such an interface myself, as I'm interested in how well it works for everyday usage.</p>
+<p>&ldquo;teemow&rdquo;:<a href="http://teemow.com">http://teemow.com</a> recently blogged about &ldquo;BumpTop&rdquo;:<a href="http://honeybrown.ca/Pubs/BumpTop.html,">http://honeybrown.ca/Pubs/BumpTop.html,</a> a new take at the desktop metaphor we all grew used to. The video is quite impressive and I&rsquo;d really like to try out such an interface myself, as I&rsquo;m interested in how well it works for everyday usage.</p>
 
 <p>Prickle-Prickle, Bureaucracy 5, 3172 YOLD</p>
 ]]></content>

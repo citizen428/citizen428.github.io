@@ -4,7 +4,7 @@
   <title><![CDATA[Category: clojure | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/clojure/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,9 @@
   <entry>
     <title type="html"><![CDATA[So you want to learn Clojure?]]></title>
     <link href="http://citizen428.net/blog/2011/05/04/so-you-want-to-learn-clojure/"/>
-    <updated>2011-05-04T00:00:00-05:00</updated>
+    <updated>2011-05-04T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/05/04/so-you-want-to-learn-clojure</id>
-    <content type="html"><![CDATA[<p>For last Monday's <a href="http://metalab.at/wiki/Lambdaheads">Lambdaheads</a> meeting I prepared a list of resources for people interested in learning Clojure, so I thought I'll share it here. The actual presentation had a lot of comments, but I'm afraid I'm too lazy to repeat them in writing. Maybe the list is still useful for some people though:</p>
+    <content type="html"><![CDATA[<p>For last Monday&rsquo;s <a href="http://metalab.at/wiki/Lambdaheads">Lambdaheads</a> meeting I prepared a list of resources for people interested in learning Clojure, so I thought I&rsquo;ll share it here. The actual presentation had a lot of comments, but I&rsquo;m afraid I&rsquo;m too lazy to repeat them in writing. Maybe the list is still useful for some people though:</p>
 
 <h1>Books</h1>
 
@@ -87,18 +87,18 @@
   <entry>
     <title type="html"><![CDATA[ClojureX is back]]></title>
     <link href="http://citizen428.net/blog/2011/04/14/clojurex-is-back/"/>
-    <updated>2011-04-14T00:00:00-05:00</updated>
+    <updated>2011-04-14T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/04/14/clojurex-is-back</id>
-    <content type="html"><![CDATA[<p>Considering how many tools for getting up and running with Clojure are available nowadays (e.g. "cljr":https://github.com/liebke/cljr, "cake":http://github.com/ninjudd/cake or "Dejour":https://github.com/russolsen/dejour) I'm not sure if anyone still cares, but as of today I'm actively working on "ClojureX":https://github.com/citizen428/ClojureX again.</p>
+    <content type="html"><![CDATA[<p>Considering how many tools for getting up and running with Clojure are available nowadays (e.g. &ldquo;cljr&rdquo;:<a href="https://github.com/liebke/cljr,">https://github.com/liebke/cljr,</a> &ldquo;cake&rdquo;:<a href="http://github.com/ninjudd/cake">http://github.com/ninjudd/cake</a> or &ldquo;Dejour&rdquo;:<a href="https://github.com/russolsen/dejour">https://github.com/russolsen/dejour</a>) I&rsquo;m not sure if anyone still cares, but as of today I&rsquo;m actively working on &ldquo;ClojureX&rdquo;:<a href="https://github.com/citizen428/ClojureX">https://github.com/citizen428/ClojureX</a> again.</p>
 
-<p>There's not really a good reason for that, but I noticed I've been absent from the Clojure community for way too long and would like to change that again, so see this as a first step.</p>
+<p>There&rsquo;s not really a good reason for that, but I noticed I&rsquo;ve been absent from the Clojure community for way too long and would like to change that again, so see this as a first step.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-02-06]]></title>
     <link href="http://citizen428.net/blog/2011/02/06/information-overload-2011-02-06/"/>
-    <updated>2011-02-06T00:00:00-06:00</updated>
+    <updated>2011-02-06T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/02/06/information-overload-2011-02-06</id>
     <content type="html"><![CDATA[<ul>
 <li>"Plenty Of Fish Hacked":http://grumomedia.com/plenty-of-fish-hacked-chris-russos-explains-how-he-did-it/<br>Once again a security researcher gets into trouble for reporting a vulnerability. Will people never learn?</li>
@@ -119,7 +119,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-01-02]]></title>
     <link href="http://citizen428.net/blog/2011/01/02/information-overload-2011-01-02/"/>
-    <updated>2011-01-02T00:00:00-06:00</updated>
+    <updated>2011-01-02T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/01/02/information-overload-2011-01-02</id>
     <content type="html"><![CDATA[<ul>
 <li>"Why the Internet Is a Great Tool for Totalitarians":http://www.wired.com/magazine/2010/12/st_essay_totalitarians/<br>It's always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
@@ -140,36 +140,36 @@
   <entry>
     <title type="html"><![CDATA[Clojure: Deriving the Y Combinator in 7 Stolen Steps ]]></title>
     <link href="http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/"/>
-    <updated>2010-12-14T00:00:00-06:00</updated>
+    <updated>2010-12-14T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps</id>
-    <content type="html"><![CDATA[<p>"Fixed point combinators":http://en.wikipedia.org/wiki/Fixed_point_combinator are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that don't explicitly support it. This might be slightly academic, but that doesn't make it less fun.</p>
+    <content type="html"><![CDATA[<p>&ldquo;Fixed point combinators&rdquo;:<a href="http://en.wikipedia.org/wiki/Fixed_point_combinator">http://en.wikipedia.org/wiki/Fixed_point_combinator</a> are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that don&rsquo;t explicitly support it. This might be slightly academic, but that doesn&rsquo;t make it less fun.</p>
 
-<p>The most well-known fixed point combinator is probably "Haskell B. Curry's":http://en.wikipedia.org/wiki/Haskell_Curry "Y combinator":http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator, which will be the topic of this post. If you read "The Little Schemer":http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825 - which I whole-heartedly recommend doing by the way - you already implemented it once, but if you are like me chances are you didn't entirely get it the first time around. So when I found this nice post on "Deriving the Y Combinator in 7 Easy Steps":http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html, I decided to "translate" it from JavaScript to Clojure.</p>
+<p>The most well-known fixed point combinator is probably &ldquo;Haskell B. Curry&rsquo;s&rdquo;:<a href="http://en.wikipedia.org/wiki/Haskell_Curry">http://en.wikipedia.org/wiki/Haskell_Curry</a> &ldquo;Y combinator&rdquo;:<a href="http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator,">http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator,</a> which will be the topic of this post. If you read &ldquo;The Little Schemer&rdquo;:<a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825">http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825</a> &ndash; which I whole-heartedly recommend doing by the way &ndash; you already implemented it once, but if you are like me chances are you didn&rsquo;t entirely get it the first time around. So when I found this nice post on &ldquo;Deriving the Y Combinator in 7 Easy Steps&rdquo;:<a href="http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html,">http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html,</a> I decided to &ldquo;translate&rdquo; it from JavaScript to Clojure.</p>
 
 <p><em>Step 1</em></p>
 
-<p>Let's start with a "classical" recursive factorial function (while we are at it, I think factorial is a way better example for a fold than for recursion, but everybody seems to do this):</p>
+<p>Let&rsquo;s start with a &ldquo;classical&rdquo; recursive factorial function (while we are at it, I think factorial is a way better example for a fold than for recursion, but everybody seems to do this):</p>
 
 <script src="https://gist.github.com/741070.js?file=ycombinator-step1.clj"></script>
 
 
 <p><em>Step 2</em></p>
 
-<p>Now if we wouldn't have explicit recursion, what could we do? One solution would be to call a function with itself as an argument, then call this argument with itself as an argument and on and on until the stack blows. Not so useful. To avoid this, we write a "higher-order function":http://en.wikipedia.org/wiki/Higher-order_function which will return a function taking a numeric argument, which will then be used to calculate the factorial:</p>
+<p>Now if we wouldn&rsquo;t have explicit recursion, what could we do? One solution would be to call a function with itself as an argument, then call this argument with itself as an argument and on and on until the stack blows. Not so useful. To avoid this, we write a &ldquo;higher-order function&rdquo;:<a href="http://en.wikipedia.org/wiki/Higher-order_function">http://en.wikipedia.org/wiki/Higher-order_function</a> which will return a function taking a numeric argument, which will then be used to calculate the factorial:</p>
 
 <script src="https://gist.github.com/741070.js?file=ycombinator-step2.clj"></script>
 
 
 <p><em>Step 3</em></p>
 
-<p>While the above code works, all that duplicated code is really quite ugly, don't you think? Let's write a little helper to avoid that (I was too lazy for a proper "refer-clojure":http://richhickey.github.com/clojure/clojure.core-api.html#clojure.core/refer-clojure statement, so I decided to name the helper "yrecur" instead of "recur"):</p>
+<p>While the above code works, all that duplicated code is really quite ugly, don&rsquo;t you think? Let&rsquo;s write a little helper to avoid that (I was too lazy for a proper &ldquo;refer-clojure&rdquo;:<a href="http://richhickey.github.com/clojure/clojure.core-api.html#clojure.core/refer-clojure">http://richhickey.github.com/clojure/clojure.core-api.html#clojure.core/refer-clojure</a> statement, so I decided to name the helper &ldquo;yrecur&rdquo; instead of &ldquo;recur&rdquo;):</p>
 
 <script src="https://gist.github.com/741070.js?file=ycombinator-step3.clj"></script>
 
 
 <p><em>Step 4</em></p>
 
-<p>This is better, but the double function call in the body of "fact" is still kinda ugly. Let's hide this within another helper function called "g",  which has to be definied inside the closure of "f" in order to be able to call this function:</p>
+<p>This is better, but the double function call in the body of &ldquo;fact&rdquo; is still kinda ugly. Let&rsquo;s hide this within another helper function called &ldquo;g&rdquo;,  which has to be definied inside the closure of &ldquo;f&rdquo; in order to be able to call this function:</p>
 
 <script src="https://gist.github.com/741070.js?file=ycombinator-step4.clj"></script>
 
@@ -183,7 +183,7 @@
 
 <p><em>Step 6</em></p>
 
-<p>Instead of actually binding our helper from step 4 to "g", we just inline it since it's only called once anyway:</p>
+<p>Instead of actually binding our helper from step 4 to &ldquo;g&rdquo;, we just inline it since it&rsquo;s only called once anyway:</p>
 
 <script src="https://gist.github.com/741070.js?file=ycombinator-step6.clj"></script>
 

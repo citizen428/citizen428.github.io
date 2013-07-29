@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tor | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/tor/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,26 +16,26 @@
   <entry>
     <title type="html"><![CDATA[No Tor, no more customer]]></title>
     <link href="http://citizen428.net/blog/2012/04/18/no-tor/"/>
-    <updated>2012-04-18T00:10:00-05:00</updated>
+    <updated>2012-04-18T00:10:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/04/18/no-tor</id>
-    <content type="html"><![CDATA[<p><em>Update:</em> Server4You rebooted the server into a recovery system for me. I removed the Tor packages and the system is back up again, which means at least the <a href="http://tor.blingblingsquad.net/">mirror</a> is back. I'd also like to state explicitly that this whole post is based on a single phone conversation with a Server4You support employee, so it's hard to tell if the company per se really considers Tor to be illegal in Germany. Personally I think it's just a bad excuse for shutting down the service on shared hosts, which is just as bad in my book.</p>
+    <content type="html"><![CDATA[<p><em>Update:</em> Server4You rebooted the server into a recovery system for me. I removed the Tor packages and the system is back up again, which means at least the <a href="http://tor.blingblingsquad.net/">mirror</a> is back. I&rsquo;d also like to state explicitly that this whole post is based on a single phone conversation with a Server4You support employee, so it&rsquo;s hard to tell if the company per se really considers Tor to be illegal in Germany. Personally I think it&rsquo;s just a bad excuse for shutting down the service on shared hosts, which is just as bad in my book.</p>
 
-<p>I've been running a <a href="https://www.torproject.org/">Tor</a> relay since sometime in early 2006. There's many good reasons for doing so, but what motivated me personally was my experience of studying in China for one year and having to live with a censored Internet connection myself (theoretically, as there was an <a href="http://embraceubuntu.com/2006/12/08/ssh-tunnel-socks-proxy-forwarding-secure-browsing/">easy way around it</a> if you had a server outside of China to SSH to). Alas our system hasn't been an exit node in a while, but it's still better than nothing.</p>
+<p>I&rsquo;ve been running a <a href="https://www.torproject.org/">Tor</a> relay since sometime in early 2006. There&rsquo;s many good reasons for doing so, but what motivated me personally was my experience of studying in China for one year and having to live with a censored Internet connection myself (theoretically, as there was an <a href="http://embraceubuntu.com/2006/12/08/ssh-tunnel-socks-proxy-forwarding-secure-browsing/">easy way around it</a> if you had a server outside of China to SSH to). Alas our system hasn&rsquo;t been an exit node in a while, but it&rsquo;s still better than nothing.</p>
 
-<p>Today I was contacted by my <a href="http://server4you.de">hosting provider</a>'s abuse team, telling me that my server has been shut down because of a ToS violation. I <a href="https://twitter.com/#!/citizen428/status/192189329177718784">immediately was afraid</a> that they might complain about the Tor relay, but still had hope that I might be wrong. Ten hours later, after I got no reply to about five support requests, I decided to call their hotline. The employee first told me that he has no way to see why the abuse team blocked my server, but then said that running a Tor node may have been the reason. What ensued was a five minute conversation full of WTFs, facepalms and headdesks on my part, but the bottom line is that Server4You is of the opinion that it is illegal to run a Tor relay in Germany because of the <a href="http://de.wikipedia.org/wiki/Hackerparagraf">"Hackerparagraf"</a>. If you don't know what that is, <a href="http://hackingexpose.blogspot.com/2012/04/watch-out-white-hats-european-union_3977.html">read up</a> on recent pushes to enforce similar legislation EU wide.</p>
+<p>Today I was contacted by my <a href="http://server4you.de">hosting provider</a>&rsquo;s abuse team, telling me that my server has been shut down because of a ToS violation. I <a href="https://twitter.com/#!/citizen428/status/192189329177718784">immediately was afraid</a> that they might complain about the Tor relay, but still had hope that I might be wrong. Ten hours later, after I got no reply to about five support requests, I decided to call their hotline. The employee first told me that he has no way to see why the abuse team blocked my server, but then said that running a Tor node may have been the reason. What ensued was a five minute conversation full of WTFs, facepalms and headdesks on my part, but the bottom line is that Server4You is of the opinion that it is illegal to run a Tor relay in Germany because of the <a href="http://de.wikipedia.org/wiki/Hackerparagraf">&ldquo;Hackerparagraf&rdquo;</a>. If you don&rsquo;t know what that is, <a href="http://hackingexpose.blogspot.com/2012/04/watch-out-white-hats-european-union_3977.html">read up</a> on recent pushes to enforce similar legislation EU wide.</p>
 
-<p>After a fruitless discussion of said law, the — admittely nice — guy on the phone reassured me that my server will be restarted if I agree to disable the Tor node. I politely told him that I have no interest in using their services at all if I can't use them the way I want to, so I'll cancel my contract with Server4You as soon as possible. For the time being I donated some money to Tor, moved my blog over to <a href="http://www.heroku.com/">Heroku</a> (yay <a href="http://octopress.org/">Octopress</a>) and started evaluating hosting providers in countries with saner legislation (as long as there still are some).</p>
+<p>After a fruitless discussion of said law, the — admittely nice — guy on the phone reassured me that my server will be restarted if I agree to disable the Tor node. I politely told him that I have no interest in using their services at all if I can&rsquo;t use them the way I want to, so I&rsquo;ll cancel my contract with Server4You as soon as possible. For the time being I donated some money to Tor, moved my blog over to <a href="http://www.heroku.com/">Heroku</a> (yay <a href="http://octopress.org/">Octopress</a>) and started evaluating hosting providers in countries with saner legislation (as long as there still are some).</p>
 
-<p>Sure, there's probably a lot of really bad things happening over the Tor network, but those shouldn't be used to discredit the tool's legitimate uses. If we start blaming technology instead of people, we might as well turn off the Internet.</p>
+<p>Sure, there&rsquo;s probably a lot of really bad things happening over the Tor network, but those shouldn&rsquo;t be used to discredit the tool&rsquo;s legitimate uses. If we start blaming technology instead of people, we might as well turn off the Internet.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Tor mirror set up!]]></title>
     <link href="http://citizen428.net/blog/2006/09/24/tor-mirror-set-up/"/>
-    <updated>2006-09-24T00:00:00-05:00</updated>
+    <updated>2006-09-24T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/09/24/tor-mirror-set-up</id>
-    <content type="html"><![CDATA[<p>After running a "Tor":http://tor.eff.org server for more than half a year already and having donated some money to support Tor's development, I was looking for new ways to help out the project. That's why I decided to set up a mirror, which can be reached "here":http://tor.blingblingsquad.net ("dist/ mirror":http://tor.blingblingsquad.net). The initial sync is still running, but the site should be fully functional soon. Once this is finished, I'll also try to set up another mirror on the Vienna based server hosting this domain.</p>
+    <content type="html"><![CDATA[<p>After running a &ldquo;Tor&rdquo;:<a href="http://tor.eff.org">http://tor.eff.org</a> server for more than half a year already and having donated some money to support Tor&rsquo;s development, I was looking for new ways to help out the project. That&rsquo;s why I decided to set up a mirror, which can be reached &ldquo;here&rdquo;:<a href="http://tor.blingblingsquad.net">http://tor.blingblingsquad.net</a> (&ldquo;dist/ mirror&rdquo;:<a href="http://tor.blingblingsquad.net">http://tor.blingblingsquad.net</a>). The initial sync is still running, but the site should be fully functional soon. Once this is finished, I&rsquo;ll also try to set up another mirror on the Vienna based server hosting this domain.</p>
 
 <p>Boomtime, Bureaucracy 48, 3172 YOLD</p>
 ]]></content>
@@ -44,32 +44,32 @@
   <entry>
     <title type="html"><![CDATA[Tor servers confiscated in Germany]]></title>
     <link href="http://citizen428.net/blog/2006/09/10/tor-servers-confiscated-in-germany/"/>
-    <updated>2006-09-10T00:00:00-05:00</updated>
+    <updated>2006-09-10T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/09/10/tor-servers-confiscated-in-germany</id>
-    <content type="html"><![CDATA[<p>Since I was pretty busy with personal stuff during the last few days, I hadn't noticed that two days ago German authorities started confiscating "Tor":http://tor.eff.org/ middleman servers. That changed when earlier today I received an email from the owner of a confiscated system, who wants to get in touch with other Tor admins, in order to start a kind of "Knowledge Base" for people who were affected by the recent confiscations or who (still) want to set up their own Tor server. Since I'm also running "such a baby":http://serifos.eecs.harvard.edu/cgi-bin/desc.pl?q=blingblingserver (which never was an exit node though) on a virtual server in Germany, I'm of course interested in this recent development, so I want to share the informative links provided in his mail with you.</p>
+    <content type="html"><![CDATA[<p>Since I was pretty busy with personal stuff during the last few days, I hadn&rsquo;t noticed that two days ago German authorities started confiscating &ldquo;Tor&rdquo;:<a href="http://tor.eff.org/">http://tor.eff.org/</a> middleman servers. That changed when earlier today I received an email from the owner of a confiscated system, who wants to get in touch with other Tor admins, in order to start a kind of &ldquo;Knowledge Base&rdquo; for people who were affected by the recent confiscations or who (still) want to set up their own Tor server. Since I&rsquo;m also running &ldquo;such a baby&rdquo;:<a href="http://serifos.eecs.harvard.edu/cgi-bin/desc.pl?q=blingblingserver">http://serifos.eecs.harvard.edu/cgi-bin/desc.pl?q=blingblingserver</a> (which never was an exit node though) on a virtual server in Germany, I&rsquo;m of course interested in this recent development, so I want to share the informative links provided in his mail with you.</p>
 
 <p><em>Articles/postings about the confiscations:</em>
-"Anonymisierungsserver bei Razzia beschlagnahmt":http://www.heise.de/newsticker/meldung/77915 (German)
-"Staatsanwaltschaft beschlagnahmt Anonymisierungs-Server":http://www.golem.de/0609/47702.html (German)
-"Erfolgreicher Schlag gegen die PrivatsphÃ¤re":http://de.indymedia.org/2006/09/156671.shtml (German)
-"Wie man die Anonymisierung kriminalisiert":http://rabe.supersized.org/comment.php?type=trackback&amp;entry_id=810 (German)
-Re: confiscating middleman-tor-nodes "[1]":http://archives.seul.org/or/talk/Sep-2006/msg00116.html, "[2]":http://archives.seul.org/or/talk/Sep-2006/msg00117.html &amp; "[3]":http://archives.seul.org/or/talk/Sep-2006/msg00126.html (English)
-"Staatsanwaltschaft geht gegen Tor-Server vor":http://forums.gentoo.org/viewtopic-t-496214.html (German)</p>
+&ldquo;Anonymisierungsserver bei Razzia beschlagnahmt&rdquo;:<a href="http://www.heise.de/newsticker/meldung/77915">http://www.heise.de/newsticker/meldung/77915</a> (German)
+&ldquo;Staatsanwaltschaft beschlagnahmt Anonymisierungs-Server&rdquo;:<a href="http://www.golem.de/0609/47702.html">http://www.golem.de/0609/47702.html</a> (German)
+&ldquo;Erfolgreicher Schlag gegen die PrivatsphÃ¤re&rdquo;:<a href="http://de.indymedia.org/2006/09/156671.shtml">http://de.indymedia.org/2006/09/156671.shtml</a> (German)
+&ldquo;Wie man die Anonymisierung kriminalisiert&rdquo;:<a href="http://rabe.supersized.org/comment.php?type=trackback&amp;entry_id=810">http://rabe.supersized.org/comment.php?type=trackback&amp;entry_id=810</a> (German)
+Re: confiscating middleman-tor-nodes &ldquo;[1]&rdquo;:<a href="http://archives.seul.org/or/talk/Sep-2006/msg00116.html,">http://archives.seul.org/or/talk/Sep-2006/msg00116.html,</a> &ldquo;[2]&rdquo;:<a href="http://archives.seul.org/or/talk/Sep-2006/msg00117.html">http://archives.seul.org/or/talk/Sep-2006/msg00117.html</a> &amp; &ldquo;[3]&rdquo;:<a href="http://archives.seul.org/or/talk/Sep-2006/msg00126.html">http://archives.seul.org/or/talk/Sep-2006/msg00126.html</a> (English)
+&ldquo;Staatsanwaltschaft geht gegen Tor-Server vor&rdquo;:<a href="http://forums.gentoo.org/viewtopic-t-496214.html">http://forums.gentoo.org/viewtopic-t-496214.html</a> (German)</p>
 
 <p><em>General info on Tor/anonymity:</em>
-"TOR web site":http://tor.eff.org/ (English, German and more)
-Wikipedia article on Tor ("English":http://en.wikipedia.org/wiki/Tor<em>%28anonymity_network%29, "German":http://de.wikipedia.org/wiki/Tor</em>%28Netzwerk%29)
-"Sicher und anonym im Internet mit Proxys":http://kai.iks-jena.de/bigb/asurf.html (German)
-"Onion Routing und Tor":http://wiki.chaostreff.ch/index.php/Onion_Routing_und_Tor (German)
-"TheOnionRouter/OperationalSecurity":http://wiki.noreply.org/noreply/TheOnionRouter/OperationalSecurity (English)</p>
+&ldquo;TOR web site&rdquo;:<a href="http://tor.eff.org/">http://tor.eff.org/</a> (English, German and more)
+Wikipedia article on Tor (&ldquo;English&rdquo;:<a href="http://en.wikipedia.org/wiki/Tor_%28anonymity_network%29,">http://en.wikipedia.org/wiki/Tor_%28anonymity_network%29,</a> &ldquo;German&rdquo;:<a href="http://de.wikipedia.org/wiki/Tor_%28Netzwerk%29">http://de.wikipedia.org/wiki/Tor_%28Netzwerk%29</a>)
+&ldquo;Sicher und anonym im Internet mit Proxys&rdquo;:<a href="http://kai.iks-jena.de/bigb/asurf.html">http://kai.iks-jena.de/bigb/asurf.html</a> (German)
+&ldquo;Onion Routing und Tor&rdquo;:<a href="http://wiki.chaostreff.ch/index.php/Onion_Routing_und_Tor">http://wiki.chaostreff.ch/index.php/Onion_Routing_und_Tor</a> (German)
+&ldquo;TheOnionRouter/OperationalSecurity&rdquo;:<a href="http://wiki.noreply.org/noreply/TheOnionRouter/OperationalSecurity">http://wiki.noreply.org/noreply/TheOnionRouter/OperationalSecurity</a> (English)</p>
 
 <p><em>Tor network overview:</em>
-"Tor Network Status":http://serifos.eecs.harvard.edu/cgi-bin/exit.pl
-"Current Tor routers":http://www.noreply.org/tor-running-routers/current.html</p>
+&ldquo;Tor Network Status&rdquo;:<a href="http://serifos.eecs.harvard.edu/cgi-bin/exit.pl">http://serifos.eecs.harvard.edu/cgi-bin/exit.pl</a>
+&ldquo;Current Tor routers&rdquo;:<a href="http://www.noreply.org/tor-running-routers/current.html">http://www.noreply.org/tor-running-routers/current.html</a></p>
 
-<p>Don't get me wrong, child pornography is one of the worst crimes I can think of, and I wish the German authorities all the best in finding the people they are after. I do however feel that the route taken here wasn't ideal, as it may well lead to a negative perception of Tor in the general public.</p>
+<p>Don&rsquo;t get me wrong, child pornography is one of the worst crimes I can think of, and I wish the German authorities all the best in finding the people they are after. I do however feel that the route taken here wasn&rsquo;t ideal, as it may well lead to a negative perception of Tor in the general public.</p>
 
-<p>That's why I've tripled the total amount of traffic Tor is allowed to serve on my system and "donated some money":http://tor.eff.org/donate.html.en to the project. I would advise you to do the same! Besides that I also encourage you to use Tor and promote it to other people, because anonymity is something that can't be gained, only lost.</p>
+<p>That&rsquo;s why I&rsquo;ve tripled the total amount of traffic Tor is allowed to serve on my system and &ldquo;donated some money&rdquo;:<a href="http://tor.eff.org/donate.html.en">http://tor.eff.org/donate.html.en</a> to the project. I would advise you to do the same! Besides that I also encourage you to use Tor and promote it to other people, because anonymity is something that can&rsquo;t be gained, only lost.</p>
 
 <p>Pungenday, Bureaucracy 34, 3172 YOLD</p>
 ]]></content>

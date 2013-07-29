@@ -120,7 +120,7 @@ Octopress. Why? &hellip;">
   
 
 
-<time datetime="2011-09-26T21:00:00-05:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
+<time datetime="2011-09-26T21:00:00+07:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
         
       </p>
     
@@ -129,22 +129,22 @@ Octopress. Why? &hellip;">
 
 <div class="entry-content"><p>After using <a href="http://wordpress.org/">Wordpress</a> as my blogging engine
 of choice for over a year (after moving away from <a href="http://s9y.org/">S9Y</a>), I decided to switch this site to
-<a href="http://octopress.org/">Octopress</a>. Why? Because it&#8217;s cool!
+<a href="http://octopress.org/">Octopress</a>. Why? Because it&rsquo;s cool!
 No, seriously. I was actually quite happy with WP, it just always felt
 like way more than I actually needed. OP on the other hand is super
 lightweight, ritten in Ruby and uses some of my favorite technologies,
-like Sinatra and Markdown. It doesn&#8217;t stop there though: having the site rendered to static
+like Sinatra and Markdown. It doesn&rsquo;t stop there though: having the site rendered to static
 files means I can get rid of MySQL and PHP on my little VPS, which
-definitely is a plus. And it&#8217;s also very cool to have all your posts
+definitely is a plus. And it&rsquo;s also very cool to have all your posts
 in a directory on your local file system, so you can use all your
 favorite command line tools to search through or batch modify
-them. Last but not least I&#8217;m now writing my posts in Emacs instead of
+them. Last but not least I&rsquo;m now writing my posts in Emacs instead of
 some crappy web input form (ok, granted, I could have done that before
 too).</p>
 
 <p>Now to the actual migration. I started by exporting my WP blog to
-XML. This can be done in the administration backend under &#8220;Tools -
-Export&#8221;. Once I had this XML, I used the following script to convert
+XML. This can be done in the administration backend under &ldquo;Tools &ndash;
+Export&rdquo;. Once I had this XML, I used the following script to convert
 the posts to individual files for Octopress:</p>
 
 <div><script src='https://gist.github.com/1240781.js'></script>
@@ -219,7 +219,7 @@ instead of Markdown because I used the former in my WP install through
 a plugin).</p>
 
 <p>Since some of my posts are quite popular and get linked to a lot, I
-didn&#8217;t want to loose my old links. I therefore wrote another script
+didn&rsquo;t want to loose my old links. I therefore wrote another script
 that created 301 redirects for all of them:</p>
 
 <div><script src='https://gist.github.com/1241762.js'></script>
@@ -261,14 +261,14 @@ not annoy my subscribers:</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>RewriteRule ^/feed /atom.xml [R=301,L]</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Of course I also didn&#8217;t want to loose all my comments, so I had to
+<p>Of course I also didn&rsquo;t want to loose all my comments, so I had to
 come up with a solution for that. I first
 installed the WP <a href="http://disqus.com">Disqus</a> plugin and exported all
 my current comments. I then used some good old Emacs magic to convert
 the list of redirects I had already generated to a CSV for Disqus&#8217;
 <a href="http://docs.disqus.com/help/39/">URL map migration tool</a>. So far this
 has not migrated all comments to the correct location, but it should
-eventually work out (worst case I&#8217;ll have to email Disqus support).</p>
+eventually work out (worst case I&rsquo;ll have to email Disqus support).</p>
 
 <p>Last but not least I used Octopress&#8217; excellent
 <a href="http://octopress.org/docs/theme/template/index.html">customization suport</a>
@@ -277,12 +277,12 @@ to re-add some stuff to my headers, like the OpenID delegate.</p>
 <p>Of course there are still some things that need to be done, some of them more urgently
 then others. First off this site needs a better stylesheet. The
 default is actually quite ok, but I want something with more
-personality. I&#8217;ll also have to go through my old posts and clean them
+personality. I&rsquo;ll also have to go through my old posts and clean them
 up a bit, the automatic conversion did some funny things at
-times. I also want to re-integrate Flattr and PostRank, but I&#8217;m not
+times. I also want to re-integrate Flattr and PostRank, but I&rsquo;m not
 exactly in a hurry when it comes to that.</p>
 
-<p>I hope this post was useful to some of you, I&#8217;m definitely happy with
+<p>I hope this post was useful to some of you, I&rsquo;m definitely happy with
 my new blogging setup.</p>
 </div>
 
@@ -306,7 +306,7 @@ my new blogging setup.</p>
   
 
 
-<time datetime="2011-09-26T21:00:00-05:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
+<time datetime="2011-09-26T21:00:00+07:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
       
 
 <span class="categories">
@@ -332,7 +332,7 @@ my new blogging setup.</p>
 
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/09/26/goodbye-wordpress/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/09/26/goodbye-wordpress/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/09/26/goodbye-wordpress/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/09/26/goodbye-wordpress/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -485,7 +485,7 @@ my new blogging setup.</p>
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

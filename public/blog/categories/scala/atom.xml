@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scala | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/scala/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,13 +16,13 @@
   <entry>
     <title type="html"><![CDATA[Review: Functional Programming with Clojure (PeepCode screencast) ]]></title>
     <link href="http://citizen428.net/blog/2009/05/25/review-functional-programming-with-clojure-peepcode-screencast/"/>
-    <updated>2009-05-25T00:00:00-05:00</updated>
+    <updated>2009-05-25T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/05/25/review-functional-programming-with-clojure-peepcode-screencast</id>
-    <content type="html"><![CDATA[<p>A couple of month ago I first heard about "Clojure":http://clojure.org/, a <a href="http://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a>-like language sitting on top of the "JVM":http://en.wikipedia.org/wiki/Java_virtual_machine. Alas I didn't yet have time to have a closer look at it, so I decided to get myself the "PeepCode screencast":https://peepcode.com/products/functional-programming-with-clojure.</p>
+    <content type="html"><![CDATA[<p>A couple of month ago I first heard about &ldquo;Clojure&rdquo;:<a href="http://clojure.org/,">http://clojure.org/,</a> a <a href="http://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a>-like language sitting on top of the &ldquo;JVM&rdquo;:<a href="http://en.wikipedia.org/wiki/Java_virtual_machine.">http://en.wikipedia.org/wiki/Java_virtual_machine.</a> Alas I didn&rsquo;t yet have time to have a closer look at it, so I decided to get myself the &ldquo;PeepCode screencast&rdquo;:<a href="https://peepcode.com/products/functional-programming-with-clojure.">https://peepcode.com/products/functional-programming-with-clojure.</a></p>
 
-<p>This 65 minute video is the first to use PeepCode's new post-production workflow, and it's very well done! In just a little over an hour you go from learning about Clojure's basic concepts and syntax to writing a "multi-user text based adventure game":http://github.com/technomancy/mire/tree/master, tackling topics such as data structures, thread safety, lazy collections, unit testing and packaging of Clojure apps. All of that is clearly presented and easy to follow, which makes for an ideal first overview of the language. If you are curious about Clojure but have little time, consider investing the money for this screencast!</p>
+<p>This 65 minute video is the first to use PeepCode&rsquo;s new post-production workflow, and it&rsquo;s very well done! In just a little over an hour you go from learning about Clojure&rsquo;s basic concepts and syntax to writing a &ldquo;multi-user text based adventure game&rdquo;:<a href="http://github.com/technomancy/mire/tree/master,">http://github.com/technomancy/mire/tree/master,</a> tackling topics such as data structures, thread safety, lazy collections, unit testing and packaging of Clojure apps. All of that is clearly presented and easy to follow, which makes for an ideal first overview of the language. If you are curious about Clojure but have little time, consider investing the money for this screencast!</p>
 
-<p>On a more general note it's interesting to see that more and more languages seem to target the JVM. I never really had any interest in Java and also totally ignored "Groovy":http://groovy.codehaus.org/, but now that "JRuby":http://jruby.codehaus.org/, "Scala":http://www.scala-lang.org/ and Clojure entered the stage, I might start looking into the Java platform a bit more. Especially Scala with its mixed Ruby/Haskell feel appeals to me, but as "antifuchs":http://boinkor.net/ showed, there's also "pretty neat stuff":http://boinkor.net/archives/2009/03/clojure_and_art_of_illusion_bf.html ("GitHub project":http://github.com/antifuchs/aoi-swank-plugin/) one can do with Clojure.</p>
+<p>On a more general note it&rsquo;s interesting to see that more and more languages seem to target the JVM. I never really had any interest in Java and also totally ignored &ldquo;Groovy&rdquo;:<a href="http://groovy.codehaus.org/,">http://groovy.codehaus.org/,</a> but now that &ldquo;JRuby&rdquo;:<a href="http://jruby.codehaus.org/,">http://jruby.codehaus.org/,</a> &ldquo;Scala&rdquo;:<a href="http://www.scala-lang.org/">http://www.scala-lang.org/</a> and Clojure entered the stage, I might start looking into the Java platform a bit more. Especially Scala with its mixed Ruby/Haskell feel appeals to me, but as &ldquo;antifuchs&rdquo;:<a href="http://boinkor.net/">http://boinkor.net/</a> showed, there&rsquo;s also &ldquo;pretty neat stuff&rdquo;:<a href="http://boinkor.net/archives/2009/03/clojure_and_art_of_illusion_bf.html">http://boinkor.net/archives/2009/03/clojure_and_art_of_illusion_bf.html</a> (&ldquo;GitHub project&rdquo;:<a href="http://github.com/antifuchs/aoi-swank-plugin/">http://github.com/antifuchs/aoi-swank-plugin/</a>) one can do with Clojure.</p>
 ]]></content>
   </entry>
   

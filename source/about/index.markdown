@@ -11,12 +11,11 @@ I'm Michael Kohl from Austria and this is my personal blog. My work experience i
 I'm a big programming language nerd and used to run a functional programming user group called [Lambdaheads](https://metalab.at/wiki/Lambdaheads) at the [Metalab](http://metalab.at). I also was [hopelessly addicted to StackOverflow](http://stackoverflow.com/users/220147/michael-kohl) for a while, but I'm taking a break from it at the moment.
 <hr>
 Besides all the techy stuff I really enjoy traveling, and so far have visited the following countries:
-<div id="ta_travelmap" style="width:430px;" align="center">
+<div align="center">
 <img
-src="http://www.tripadvisor.com/CommunityMapImage?id=40199953&type=TRIPADVISOR&size=LARGE">
+src="http://chart.apis.google.com/chart?cht=map:fixed=-70,-180,80,180&chs=450x300&chf=bg,s,336699&chco=d0d0d0,cc0000&chd=s:9999999999999999999999999999999999999999999&chld=AR|BO|CL|CO|EC|MX|PY|PE|US|UY|BD|IN|LA|MY|NP|SG|TW|TH|TR|AE|AT|BE|BG|HR|CZ|FI|FR|DE|GR|HU|IE|IT|LV|NL|PL|RO|SK|SI|ES|CH|VA|AN|CN"
+width="450" height="300" ><br/>visited 43 states (19.1%)<br>
 </div>
-<script src="http://www.tripadvisor.com/MapEmbed?mid=E.TmvkVulqoCV28pxMYDTzDg%3D%3D&favorites=false&frm=pt&Version=VACATION_RENT_002"></script>
-
 I also lived in Shanghai (China, 1 year), Istanbul (Turkey, 3 month), Kathmandu (Nepal, 3 month) and Milan (Italy, 10 month).
 
 I'm an avid [CouchSurfer](http://www.couchsurfing.org/people/citizen428/), and regularly contribute to [Wikivoyage](http://en.wikivoyage.org/wiki/Special:Contributions/Citizen428) and [Trip Advisor](http://www.tripadvisor.com/members/citizen428).

@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="When deciding to switch from Wordpress to Octopress one of the main reasons was that I don&#8217;t need most of the advanced features the former &hellip;">
+  <meta name="description" content="When deciding to switch from Wordpress to Octopress one of the main reasons was that I don&rsquo;t need most of the advanced features the former &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -118,18 +118,18 @@
   
 
 
-<time datetime="2011-09-27T16:58:00-05:00" pubdate data-updated="true">Sep 27<span>th</span>, 2011</time>
+<time datetime="2011-09-27T16:58:00+07:00" pubdate data-updated="true">Sep 27<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>When deciding to switch from Wordpress to Octopress one of the main reasons was that I don&#8217;t need most of the advanced features the former offers. However, for my weekly <a href="http://citizen428.net/blog/categories/informationoverload/">Information Overload</a> series I relied on two features, namely templates and scheduling: I created a new post from the template and then filled it with content over the week. Once I was done I&#8217;d schedule it for publishing on Sunday afternoon. Here&#8217;s how I plan to do this with Octopress.<!-- more --></p>
+<div class="entry-content"><p>When deciding to switch from Wordpress to Octopress one of the main reasons was that I don&rsquo;t need most of the advanced features the former offers. However, for my weekly <a href="http://citizen428.net/blog/categories/informationoverload/">Information Overload</a> series I relied on two features, namely templates and scheduling: I created a new post from the template and then filled it with content over the week. Once I was done I&rsquo;d schedule it for publishing on Sunday afternoon. Here&rsquo;s how I plan to do this with Octopress.<!-- more --></p>
 
 <h2>Templating</h2>
 
-<p>I created a new Rake task named &#8220;new_overload&#8221;, that looks like this:</p>
+<p>I created a new Rake task named &ldquo;new_overload&rdquo;, that looks like this:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -186,12 +186,12 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>This is very similar to the standard &#8220;new_post&#8221; task, but generates
-the post with the date of the current week&#8217;s Sunday. It also marks it
-as a draft by adding &#8220;published: false&#8221; to the YAML header and inserts
+<p>This is very similar to the standard &ldquo;new_post&rdquo; task, but generates
+the post with the date of the current week&rsquo;s Sunday. It also marks it
+as a draft by adding &ldquo;published: false&rdquo; to the YAML header and inserts
 a template for an unordered list in Markdown syntax.</p>
 
-<p>I&#8217;m not exactly sure how to handle the scheduling yet, but I think
+<p>I&rsquo;m not exactly sure how to handle the scheduling yet, but I think
 good old <a href="http://en.wikipedia.org/wiki/At_(Unix">at</a> will come in
 handy here.</p>
 </div>
@@ -216,7 +216,7 @@ handy here.</p>
   
 
 
-<time datetime="2011-09-27T16:58:00-05:00" pubdate data-updated="true">Sep 27<span>th</span>, 2011</time>
+<time datetime="2011-09-27T16:58:00+07:00" pubdate data-updated="true">Sep 27<span>th</span>, 2011</time>
       
 
 <span class="categories">
@@ -242,7 +242,7 @@ handy here.</p>
 
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/09/27/octopress-templates/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/09/27/octopress-templates/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/09/27/octopress-templates/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/09/27/octopress-templates/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -395,7 +395,7 @@ handy here.</p>
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

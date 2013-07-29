@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/osx/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,31 +16,31 @@
   <entry>
     <title type="html"><![CDATA[A little Pow helper]]></title>
     <link href="http://citizen428.net/blog/2011/11/22/a-little-pow-helper/"/>
-    <updated>2011-11-22T21:08:00-06:00</updated>
+    <updated>2011-11-22T21:08:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/11/22/a-little-pow-helper</id>
-    <content type="html"><![CDATA[<p>If you are a Ruby developer on MacOS X, you probably love <a href="http://pow.cx">Pow</a> as much as I do. While skimming the <a href="http://pow.cx/manual.html">fine manual</a> today, I noticed <a href="http://pow.cx/manual.html#section_3.2">section 3.2</a>, "Reading the Current Configuration", which explains that you can query Pow's config and status via simple HTTP requests:</p>
+    <content type="html"><![CDATA[<p>If you are a Ruby developer on MacOS X, you probably love <a href="http://pow.cx">Pow</a> as much as I do. While skimming the <a href="http://pow.cx/manual.html">fine manual</a> today, I noticed <a href="http://pow.cx/manual.html#section_3.2">section 3.2</a>, &ldquo;Reading the Current Configuration&rdquo;, which explains that you can query Pow&rsquo;s config and status via simple HTTP requests:</p>
 
 <p><code>bash Query Pow's status http://pow.cx/manual.html#section_3.2 Pow manual
 curl -H host:pow localhost/status.json
 </code></p>
 
-<p>Since I know I'd probably forget that sooner than later, I immediately wrapped it up in a small script, which I called <code>pow-show</code> and put in <code>~/bin</code>:</p>
+<p>Since I know I&rsquo;d probably forget that sooner than later, I immediately wrapped it up in a small script, which I called <code>pow-show</code> and put in <code>~/bin</code>:</p>
 
 <p>``` ruby ~/bin/pow-show</p>
 
 <h1>!/usr/bin/env ruby</h1>
 
-<p>require 'json'</p>
+<p>require &lsquo;json&rsquo;</p>
 
 <p>unless %w(status config).include?(ARGV[0])
-  puts "Usage: #{File.basename($0)} status|config"
+  puts &ldquo;Usage: #{File.basename($0)} status|config&rdquo;
   exit 1
 end</p>
 
 <p>jj JSON.parse(<code>curl -s -H host:pow localhost/#{ARGV[0]}.json</code>)
 ```</p>
 
-<p>Here's some example output:</p>
+<p>Here&rsquo;s some example output:</p>
 
 <p><code>javascript pow-show status
 {
@@ -52,35 +52,35 @@ end</p>
 
 <p>``` javascript pow-show config
 {
-  "bin": "/Users/name/Library/Application Support/Pow/Versions/0.3.2/bin/pow",
-  "dstPort": 80,
-  "httpPort": 20559,
-  "dnsPort": 20560,
-  "timeout": 900,
-  "workers": 2,
-  "domains": [</p>
+  &ldquo;bin&rdquo;: &ldquo;/Users/name/Library/Application Support/Pow/Versions/0.3.2/bin/pow&rdquo;,
+  &ldquo;dstPort&rdquo;: 80,
+  &ldquo;httpPort&rdquo;: 20559,
+  &ldquo;dnsPort&rdquo;: 20560,
+  &ldquo;timeout&rdquo;: 900,
+  &ldquo;workers&rdquo;: 2,
+  &ldquo;domains&rdquo;: [</p>
 
 <pre><code>"dev"
 </code></pre>
 
 <p>  ],
-  "extDomains": [</p>
+  &ldquo;extDomains&rdquo;: [</p>
 
 <p>  ],
-  "hostRoot": "/Users/name/Library/Application Support/Pow/Hosts",
-  "logRoot": "/Users/name/Library/Logs/Pow",
-  "rvmPath": "/Users/name/.rvm/scripts/rvm"
+  &ldquo;hostRoot&rdquo;: &ldquo;/Users/name/Library/Application Support/Pow/Hosts&rdquo;,
+  &ldquo;logRoot&rdquo;: &ldquo;/Users/name/Library/Logs/Pow&rdquo;,
+  &ldquo;rvmPath&rdquo;: &ldquo;/Users/name/.rvm/scripts/rvm&rdquo;
 }
 ```</p>
 
-<p>Maybe that's useful for someone else too.</p>
+<p>Maybe that&rsquo;s useful for someone else too.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Fixing MacPorts on Snow Leopard]]></title>
     <link href="http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard/"/>
-    <updated>2009-10-19T00:00:00-05:00</updated>
+    <updated>2009-10-19T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard</id>
     <content type="html"><![CDATA[<pre><code>&lt;p&gt;After upgrading to Snow Leopard I had quite a bit of trouble with my &lt;a href="http://www.macports.org/"&gt;MacPorts&lt;/a&gt; installation, since most builds just failed with configure errors. After the obvious first steps of installing a newer version for SL and making sure I have the most recent XCode, I was a bit stumped until I finally found this site:&lt;/p&gt;
 
@@ -94,9 +94,9 @@ end</p>
   <entry>
     <title type="html"><![CDATA[Easy setup for Clojure on Mac OS X Leopard]]></title>
     <link href="http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
-    <updated>2009-08-24T00:00:00-05:00</updated>
+    <updated>2009-08-24T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
-    <content type="html"><![CDATA[<p>"Clojure":http://clojure.org/ definitely is one of the hottest new programming languages around and just recently hit a "very important milestone":http://clojure.blogspot.com/2009/05/clojure-10.html. Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand "one of those":http://github.com/carlism/Clojure-MacOSX/tree into "ClojureX":http://github.com/citizen428/ClojureX/tree/master, which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
+    <content type="html"><![CDATA[<p>&ldquo;Clojure&rdquo;:<a href="http://clojure.org/">http://clojure.org/</a> definitely is one of the hottest new programming languages around and just recently hit a &ldquo;very important milestone&rdquo;:<a href="http://clojure.blogspot.com/2009/05/clojure-10.html.">http://clojure.blogspot.com/2009/05/clojure-10.html.</a> Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand &ldquo;one of those&rdquo;:<a href="http://github.com/carlism/Clojure-MacOSX/tree">http://github.com/carlism/Clojure-MacOSX/tree</a> into &ldquo;ClojureX&rdquo;:<a href="http://github.com/citizen428/ClojureX/tree/master,">http://github.com/citizen428/ClojureX/tree/master,</a> which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
 
 <p>ClojureX can</p>
 
@@ -122,7 +122,7 @@ end</p>
   <entry>
     <title type="html"><![CDATA[Create your own (Ruby) API browser in 3 easy steps]]></title>
     <link href="http://citizen428.net/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps/"/>
-    <updated>2009-05-17T00:00:00-05:00</updated>
+    <updated>2009-05-17T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps</id>
     <content type="html"><![CDATA[<ul>
   <li><b>Step 1:</b> Download "Fluid":http://fluidapp.com/, an awesome little application to create site specific browsers.</li>
@@ -133,20 +133,20 @@ end</p>
 </ul>
 
 
-<p>Here's an example screenshot of a site specific browser for RubyBrain.com:</p>
+<p>Here&rsquo;s an example screenshot of a site specific browser for RubyBrain.com:</p>
 
 <p><img src="http://citizen428.net/uploads/fluid_rubybrain.png" alt="Fluid RubyBrain" /></p>
 
-<p>Of course this still requires you to have a working internet connection, but you could always use a local version of the API docs when creating the app. On a related note you should also check out "Goo":http://www.robinlu.com/blog/goo which is a nice alternative to gem server on OS X.</p>
+<p>Of course this still requires you to have a working internet connection, but you could always use a local version of the API docs when creating the app. On a related note you should also check out &ldquo;Goo&rdquo;:<a href="http://www.robinlu.com/blog/goo">http://www.robinlu.com/blog/goo</a> which is a nice alternative to gem server on OS X.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[A TextMate command for the RubyLearning forums]]></title>
     <link href="http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/"/>
-    <updated>2009-05-10T00:00:00-05:00</updated>
+    <updated>2009-05-10T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums</id>
-    <content type="html"><![CDATA[<p>As we all know posting code to "Moodle":http://moodle.org/ (the software that powers "RubyLearning":http://rubylearning.org) can be a bit cumbersome. I therefore created a TextMate command which will</p>
+    <content type="html"><![CDATA[<p>As we all know posting code to &ldquo;Moodle&rdquo;:<a href="http://moodle.org/">http://moodle.org/</a> (the software that powers &ldquo;RubyLearning&rdquo;:<a href="http://rubylearning.org">http://rubylearning.org</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
 
 <ul>
 <li> take the currently active file</li>

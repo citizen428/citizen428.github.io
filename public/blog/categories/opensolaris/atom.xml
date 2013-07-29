@@ -4,7 +4,7 @@
   <title><![CDATA[Category: opensolaris | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/opensolaris/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,13 +16,13 @@
   <entry>
     <title type="html"><![CDATA[OpenSolaris cheat sheet]]></title>
     <link href="http://citizen428.net/blog/2010/01/26/opensolaris-cheat-sheet/"/>
-    <updated>2010-01-26T00:00:00-06:00</updated>
+    <updated>2010-01-26T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2010/01/26/opensolaris-cheat-sheet</id>
-    <content type="html"><![CDATA[<p>I've always been a big fan of the handy little utility <a href="http://cheat.errtheblog.com">cheat</a> and recently became interested in <a href="http://hub.opensolaris.org/bin/view/Main/">OpenSolaris</a> (which btw runs fine on my Thinkpad x200s), so I did the obvious and created an OpenSolaris cheat sheet:</p>
+    <content type="html"><![CDATA[<p>I&rsquo;ve always been a big fan of the handy little utility <a href="http://cheat.errtheblog.com">cheat</a> and recently became interested in <a href="http://hub.opensolaris.org/bin/view/Main/">OpenSolaris</a> (which btw runs fine on my Thinkpad x200s), so I did the obvious and created an OpenSolaris cheat sheet:</p>
 
-<p><a href="http://cheat.errtheblog.com/s/open_solaris">http://cheat.errtheblog.com/s/open_solaris</a></p>
+<p><a href="http://cheat.errtheblog.com/s/open_solaris"><a href="http://cheat.errtheblog.com/s/open_solaris">http://cheat.errtheblog.com/s/open_solaris</a></a></p>
 
-<p>It's still missing information regarding ZFS, but I guess I'll eventually add that too. And who knows, maybe I even get motivated enough for a nicely formatted Latex version...</p>
+<p>It&rsquo;s still missing information regarding ZFS, but I guess I&rsquo;ll eventually add that too. And who knows, maybe I even get motivated enough for a nicely formatted Latex version&hellip;</p>
 ]]></content>
   </entry>
   

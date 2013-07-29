@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Io is a small small, prototype-based OO programming language that&#8217;s fun to play with. Unfortunately there&#8217;s not too much information &hellip;">
+  <meta name="description" content="I&#8217;ve been toying around with the idea for a small website lately, but never actually got around to do it. In an attempt to clear out my &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -105,6 +105,48 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb/">Fun With Sinatra, Heroku and MongoDB</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-06T00:00:00+07:00" pubdate data-updated="true">Dec 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve been toying around with the idea for a small website lately, but never actually got around to do it. In an attempt to clear out my personal to do list I finally motivated myself to start yesterday, and I have to say the following combination of tools is not only insanely efficient, but also really fun to work with:<br />
+<ul><br />
+<li><a href="http://www.sinatrarb.com/">Sinatra</a>, <i>&#8220;a <span class="caps">DSL</span> for quickly creating web applications in Ruby with minimal effort&#8221;</i>. I recommend using it in combination with <a href="http://mongrel.rubyforge.org/">Mongrel</a>, <a href="http://github.com/rtomayko/shotgun">Shotgun</a> and <a href="http://haml-lang.com/">Haml</a>.</li><br />
+<li><a href="http://heroku.com/">Heroku</a>, a Ruby cloud hosting platform. Small sites are for free and Heroku&#8217;s git-based workflow just feels so natural. You can also <a href="http://docs.heroku.com/gems">manage your gem dependencies</a> and <a href="http://docs.heroku.com/config-vars">set up environment variables</a>, which made my life a whole lot easier.</li><br />
+<li><a href="http://www.mongodb.org">MongoDB</a>, <i>&#8220;a scalable, high-performance, open source, schema-free, document-oriented database&#8221;</i>. In this specific case I used <a href="http://www.mongohq.com/home">MongoHQ</a> for the database hosting, since they were nice enough to provide me with a beta account. I stored all the connection information for MongoHQ in environment variables as described above:</p><br />
+<script src="http://gist.github.com/250193.js?file=mongohq.rb"></script></p>
+</ul>
+<p>With this combination I was able to go from zero to mostly finished (I still need to write some of the content and make/steal a stylesheet) in very little time, while actually having fun! Thanks everybody for providing the Ruby community which such awesome tools! :-)</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2009/12/01/gravedigging-why-the-lucky-stiff-io-has-a-very-clean-mirror/">Gravedigging Why the Lucky Stiff: Io Has a Very Clean Mirror</a></h1>
     
     
@@ -121,7 +163,7 @@
   
 
 
-<time datetime="2009-12-01T00:00:00-06:00" pubdate data-updated="true">Dec 1<span>st</span>, 2009</time>
+<time datetime="2009-12-01T00:00:00+07:00" pubdate data-updated="true">Dec 1<span>st</span>, 2009</time>
         
       </p>
     
@@ -157,7 +199,7 @@
   
 
 
-<time datetime="2009-11-23T00:00:00-06:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
+<time datetime="2009-11-23T00:00:00+07:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
         
       </p>
     
@@ -201,7 +243,7 @@ Combining all these ideas you could easily write a bot that follows the current 
   
 
 
-<time datetime="2009-10-19T00:00:00-05:00" pubdate data-updated="true">Oct 19<span>th</span>, 2009</time>
+<time datetime="2009-10-19T00:00:00+07:00" pubdate data-updated="true">Oct 19<span>th</span>, 2009</time>
         
       </p>
     
@@ -239,7 +281,7 @@ Combining all these ideas you could easily write a bot that follows the current 
   
 
 
-<time datetime="2009-10-10T00:00:00-05:00" pubdate data-updated="true">Oct 10<span>th</span>, 2009</time>
+<time datetime="2009-10-10T00:00:00+07:00" pubdate data-updated="true">Oct 10<span>th</span>, 2009</time>
         
       </p>
     
@@ -275,7 +317,7 @@ Combining all these ideas you could easily write a bot that follows the current 
   
 
 
-<time datetime="2009-10-06T00:00:00-05:00" pubdate data-updated="true">Oct 6<span>th</span>, 2009</time>
+<time datetime="2009-10-06T00:00:00+07:00" pubdate data-updated="true">Oct 6<span>th</span>, 2009</time>
         
       </p>
     
@@ -316,7 +358,7 @@ Combining all these ideas you could easily write a bot that follows the current 
   
 
 
-<time datetime="2009-09-08T00:00:00-05:00" pubdate data-updated="true">Sep 8<span>th</span>, 2009</time>
+<time datetime="2009-09-08T00:00:00+07:00" pubdate data-updated="true">Sep 8<span>th</span>, 2009</time>
         
       </p>
     
@@ -356,19 +398,19 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
   
 
 
-<time datetime="2009-09-06T00:00:00-05:00" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
+<time datetime="2009-09-06T00:00:00+07:00" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>After reading <a href="http://www.engineyard.com/blog/2009/scripting-java-libraries-with-jruby/">Scripting Java Libraries With Ruby</a> on the <a href="http://www.engineyard.com/">Engine Yard blog</a>, I decided to translate the two example programs to Clojure. Please keep in mind though that I&#8217;m pretty much a Clojure newbie myself, so the code shown here might not be very idiomatic. In case you have any suggestions on how to improve the code examples presented here, please leave a comment, thank you! To get the most out of this post, you should probably read the <a href="http://java.ociweb.com/mark/clojure/article.html#JavaInterop">section on Java Interoperability</a> in <a href="http://java.ociweb.com/mark/">Mark Volkmann</a>&#8217;s excellent <a href="http://java.ociweb.com/mark/clojure/article.html">Clojure tutorial</a> first.</p>
+  <div class="entry-content"><p>After reading <a href="http://www.engineyard.com/blog/2009/scripting-java-libraries-with-jruby/">Scripting Java Libraries With Ruby</a> on the <a href="http://www.engineyard.com/">Engine Yard blog</a>, I decided to translate the two example programs to Clojure. Please keep in mind though that I&rsquo;m pretty much a Clojure newbie myself, so the code shown here might not be very idiomatic. In case you have any suggestions on how to improve the code examples presented here, please leave a comment, thank you! To get the most out of this post, you should probably read the <a href="http://java.ociweb.com/mark/clojure/article.html#JavaInterop">section on Java Interoperability</a> in <a href="http://java.ociweb.com/mark/">Mark Volkmann</a>&rsquo;s excellent <a href="http://java.ociweb.com/mark/clojure/article.html">Clojure tutorial</a> first.</p>
 
 <p><b>A MIDI Keyboard</b></p>
 
 
-<p>The first example listens for a line of text which then gets converted into a playable MIDI sequence. Let&#8217;s start with importing the classes we need.</p>
+<p>The first example listens for a line of text which then gets converted into a playable MIDI sequence. Let&rsquo;s start with importing the classes we need.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -379,7 +421,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Next we set up a <a href="http://clojure.org/special_forms#toc9">loop</a> and an exit clause.  In case the user enters the word &#8220;exit&#8221;, we call System.exit to shut down all the threads that got started by Java&#8217;s MIDI support.</p>
+<p>Next we set up a <a href="http://clojure.org/special_forms#toc9">loop</a> and an exit clause.  In case the user enters the word &ldquo;exit&rdquo;, we call System.exit to shut down all the threads that got started by Java&rsquo;s MIDI support.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -392,7 +434,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The main part of the application constructs a new MIDI sequence by creating a NOTE_ON event for every character in the entered text and then finishing the sequence with a STOP event. The original article states that it favors simplicity over efficiency, so the same also holds true for my &#8220;translation&#8221;.</p>
+<p>The main part of the application constructs a new MIDI sequence by creating a NOTE_ON event for every character in the entered text and then finishing the sequence with a STOP event. The original article states that it favors simplicity over efficiency, so the same also holds true for my &ldquo;translation&rdquo;.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -433,7 +475,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 <p><b>Making It More Interactive</b></p>
 
 
-<p>While the first example was fun, it wasn&#8217;t as interactive as it could be. Therefore the second program launches a GUI window to receive keystroke events, turning a note on or off when a key is pressed or released. Since we don&#8217;t have to create MIDI sequences this time, our import statement becomes a lot shorter:</p>
+<p>While the first example was fun, it wasn&rsquo;t as interactive as it could be. Therefore the second program launches a GUI window to receive keystroke events, turning a note on or off when a key is pressed or released. Since we don&rsquo;t have to create MIDI sequences this time, our import statement becomes a lot shorter:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -444,7 +486,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>This example directly accesses the system synthesizer. The following lines open the default synthesizer&#8217;s channel 0 (and also create a JFrame object which we&#8217;ll use later):</p>
+<p>This example directly accesses the system synthesizer. The following lines open the default synthesizer&rsquo;s channel 0 (and also create a JFrame object which we&rsquo;ll use later):</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -457,7 +499,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>We then launch a GUI frame as a simple and cross-platform way to receive keystroke events. The KeyListener interface is implemented using Clojure&#8217;s <a href="http://clojure.org/java_interop#toc26">proxy macro</a>, using keyPressed and keyReleased events to turn notes on or off.</p>
+<p>We then launch a GUI frame as a simple and cross-platform way to receive keystroke events. The KeyListener interface is implemented using Clojure&rsquo;s <a href="http://clojure.org/java_interop#toc26">proxy macro</a>, using keyPressed and keyReleased events to turn notes on or off.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -519,7 +561,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   
 
 
-<time datetime="2009-09-06T00:00:00-05:00" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
+<time datetime="2009-09-06T00:00:00+07:00" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
         
       </p>
     
@@ -653,7 +695,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   
 
 
-<time datetime="2009-08-26T00:00:00-05:00" pubdate data-updated="true">Aug 26<span>th</span>, 2009</time>
+<time datetime="2009-08-26T00:00:00+07:00" pubdate data-updated="true">Aug 26<span>th</span>, 2009</time>
         
       </p>
     
@@ -669,51 +711,6 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
 <a href="http://java.ociweb.com/mark/clojure/article.html">Clojure &#8211; Functional Programming for the <span class="caps">JVM</span></a><br />
 <a href="http://mattsears.com/2009/6/6/20-clojure-links-to-get-you-up-to-speed">20 Clojure links to get you up to speed</a><br />
 <a href="http://lifeofaprogrammergeek.blogspot.com/2009/03/learning-clojure-and-emacs.html">Learning Clojure and Emacs</a></p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/">Easy Setup for Clojure on Mac OS X Leopard</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-08-24T00:00:00-05:00" pubdate data-updated="true">Aug 24<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://clojure.org/">Clojure</a> definitely is one of the hottest new programming languages around and just recently hit a <a href="http://clojure.blogspot.com/2009/05/clojure-10.html">very important milestone</a>. Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand <a href="http://github.com/carlism/Clojure-MacOSX/tree">one of those</a> into <a href="http://github.com/citizen428/ClojureX/tree/master">ClojureX</a>, which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
-<p>ClojureX can</p>
-<ul>
-<li> download and build the source code for Clojure, <a href="http://github.com/richhickey/clojure-contrib/tree/master">clojure-contrib</a> and <a href="http://jline.sourceforge.net/">JLine</a> (a readline like library for Java)</li>
-<li> download editor support packages for TextMate and Emacs</li>
-<li> create a symlink for the Clojure startup script in /usr/local/bin</li>
-<li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
-<li> configure Emacs to use <a href="http://github.com/jochu/clojure-mode/tree/master">clojure-mode</a>, <a href="http://common-lisp.net/project/slime/">Slime</a> and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
-<li> keep your Clojure installation up to date via a simple &#8220;git submodule update &amp;&amp; ant&#8221;</li>
-</ul>
-<p>I hope this will come in handy for other people interested in trying out Clojure on Mac OS X, if you have any feedback please post it in the comment section.</p></div>
   
   
 
@@ -849,7 +846,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

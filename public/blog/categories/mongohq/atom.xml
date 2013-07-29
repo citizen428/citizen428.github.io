@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mongohq | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/mongohq/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,9 @@
   <entry>
     <title type="html"><![CDATA[Fun with Sinatra, Heroku and MongoDB]]></title>
     <link href="http://citizen428.net/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb/"/>
-    <updated>2009-12-06T00:00:00-06:00</updated>
+    <updated>2009-12-06T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/12/06/fun-with-sinatra-heroku-and-mongodb</id>
-    <content type="html"><![CDATA[<p>I've been toying around with the idea for a small website lately, but never actually got around to do it. In an attempt to clear out my personal to do list I finally motivated myself to start yesterday, and I have to say the following combination of tools is not only insanely efficient, but also really fun to work with:</p>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been toying around with the idea for a small website lately, but never actually got around to do it. In an attempt to clear out my personal to do list I finally motivated myself to start yesterday, and I have to say the following combination of tools is not only insanely efficient, but also really fun to work with:</p>
 
 <ul>
 <li><a href="http://www.sinatrarb.com/">Sinatra</a>, <i>&#8220;a DSL for quickly creating web applications in Ruby with minimal effort&#8221;</i>. I recommend using it in combination with <a href="http://mongrel.rubyforge.org/">Mongrel</a>, <a href="http://github.com/rtomayko/shotgun">Shotgun</a> and <a href="http://haml-lang.com/">Haml</a>.</li><br />
@@ -28,7 +28,7 @@
 </ul>
 
 
-<p>With this combination I was able to go from zero to mostly finished (I still need to write some of the content and make/steal a stylesheet) in very little time, while actually having fun! Thanks everybody for providing the Ruby community which such awesome tools! :-)</p>
+<p>With this combination I was able to go from zero to mostly finished (I still need to write some of the content and make/steal a stylesheet) in very little time, while actually having fun! Thanks everybody for providing the Ruby community which such awesome tools! :&ndash;)</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sysadmin | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/sysadmin/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,9 @@
   <entry>
     <title type="html"><![CDATA[Fixing Grub on a LUKS-encrypted Disk]]></title>
     <link href="http://citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk/"/>
-    <updated>2011-10-17T15:41:00-05:00</updated>
+    <updated>2011-10-17T15:41:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk</id>
-    <content type="html"><![CDATA[<p>When I rebooted my new work notebook (a very nice x201s, with a dual-core i7, 8GB RAM and an SSD by the way), it seemed that for whatever reason there was no Grub installed. Strange, but not the only problem I had with the alternate Ubuntu installer that I used for setting up <a href="http://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS-encrypted</a> root and swap partitions. Since this turned out to be more involved than I originally thought, I decided to document what I did to maybe save others the trouble. BTW: You'll need a Linux Live-CD for this, I recommend the excellent Debian-based <a href="http://grml.org/">Grml</a>.</p>
+    <content type="html"><![CDATA[<p>When I rebooted my new work notebook (a very nice x201s, with a dual-core i7, 8GB RAM and an SSD by the way), it seemed that for whatever reason there was no Grub installed. Strange, but not the only problem I had with the alternate Ubuntu installer that I used for setting up <a href="http://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS-encrypted</a> root and swap partitions. Since this turned out to be more involved than I originally thought, I decided to document what I did to maybe save others the trouble. BTW: You&rsquo;ll need a Linux Live-CD for this, I recommend the excellent Debian-based <a href="http://grml.org/">Grml</a>.</p>
 
 <p>First we need to open the LUKS partition, which can be done with <a href="http://linux.die.net/man/8/cryptsetup">cryptsetup</a>.</p>
 
@@ -30,12 +30,12 @@
 <span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cryptsetup luksOpen /dev/&lt;device&gt; &lt;name&gt;&lt;/p&gt;
 </span><span class='line'>
-</span><span class='line'>&lt;h1&gt;you<span class="err">&#39;</span>ll be asked <span class="k">for </span>your password&lt;/h1&gt;
+</span><span class='line'>&lt;h1&gt;you&amp;rsquo;ll be asked <span class="k">for </span>your password&lt;/h1&gt;
 </span><span class='line'>
 </span><span class='line'>&lt;p&gt;
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>With that out of the way, you'll have to mount your LVM volumes. This took me a bit because my VG wasn't active, but thanks to an excellent blog post I found (see sources) this problem was solved quickly.</p>
+<p>With that out of the way, you&rsquo;ll have to mount your LVM volumes. This took me a bit because my VG wasn&rsquo;t active, but thanks to an excellent blog post I found (see sources) this problem was solved quickly.</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Step 2: Mounting LVM </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -71,7 +71,7 @@
 </span><span class='line'>
 </span><span class='line'>&lt;h1&gt;mount the actual volume&lt;/h1&gt;
 </span><span class='line'>
-</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>mount /dev/&lt;volume_group_name&gt;/&lt;volume&gt; /mnt/external
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>mount /dev/&amp;lt;volume_group_name&gt;/&lt;volume&gt; /mnt/external
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>I then needed to mount the unencrypted <code>/boot</code> partition as well as some special filesystems (with bind mounts) at the appropriate mount points.</p>
@@ -96,12 +96,12 @@
 </span><span class='line'>
 </span><span class='line'>&lt;h1&gt;bind mount some things we need in the chroot env&lt;/h1&gt;
 </span><span class='line'>
-</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>mount --bind /dev /mnt/external/dev
-</span><span class='line'><span class="nv">$ </span>mount --bind /proc /mnt/external/proc
-</span><span class='line'><span class="nv">$ </span>mount --bind /sys /mnt/external/sys
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>mount &amp;mdash;bind /dev /mnt/external/dev
+</span><span class='line'><span class="nv">$ </span>mount &amp;mdash;bind /proc /mnt/external/proc
+</span><span class='line'><span class="nv">$ </span>mount &amp;mdash;bind /sys /mnt/external/sys
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>With everything set up, all that's left to do is <code>chroot</code>ing into the system and fixing Grub.</p>
+<p>With everything set up, all that&rsquo;s left to do is <code>chroot</code>ing into the system and fixing Grub.</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Step 4: chrooting and fixing Grub </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: shell | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/shell/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-05-22]]></title>
     <link href="http://citizen428.net/blog/2011/05/22/information-overload-2011-05-22/"/>
-    <updated>2011-05-22T00:00:00-05:00</updated>
+    <updated>2011-05-22T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/05/22/information-overload-2011-05-22</id>
     <content type="html"><![CDATA[<ul>
 <li>"Understanding the Fourier transform by Stuart Riffle":http://altdevblogaday.org/2011/05/17/understanding-the-fourier-transform/<br>You know I'm a big fan of good (math) explanations and this is no exception. I really like the color coded formula!</li>
@@ -37,17 +37,17 @@
   <entry>
     <title type="html"><![CDATA[ XML diffs with bash and awk]]></title>
     <link href="http://citizen428.net/blog/2010/10/01/xml-diffs-with-bash-and-awk/"/>
-    <updated>2010-10-01T00:00:00-05:00</updated>
+    <updated>2010-10-01T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2010/10/01/xml-diffs-with-bash-and-awk</id>
-    <content type="html"><![CDATA[<p><i>Slightly modified version of a "post":http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/ I originally wrote for our "company blog":http://tupalo.com/en/blog/.</i></p>
+    <content type="html"><![CDATA[<p><i>Slightly modified version of a &ldquo;post&rdquo;:<a href="http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/">http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/</a> I originally wrote for our &ldquo;company blog&rdquo;:<a href="http://tupalo.com/en/blog/.">http://tupalo.com/en/blog/.</a></i></p>
 
-<p>When importing data at work, we often have to deal with XML. This generally works fine, but the format's structured nature also means that you can't just treat it like any old text file.</p>
+<p>When importing data at work, we often have to deal with XML. This generally works fine, but the format&rsquo;s structured nature also means that you can&rsquo;t just treat it like any old text file.</p>
 
-<p>That's something we recently had to work around when we wanted to generate a daily XML diff, which only contains elements which changed since the previous feed. Of course there are several open source tools for diff-ing XML (e.g. <a href="http://diffxml.sourceforge.net/">diffxml</a> or <a href="http://www.logilab.org/859">xmldiff</a>) but since we didn't get them to do what we want in a reasonable amount of time, we just decided to roll our own.</p>
+<p>That&rsquo;s something we recently had to work around when we wanted to generate a daily XML diff, which only contains elements which changed since the previous feed. Of course there are several open source tools for diff-ing XML (e.g. <a href="http://diffxml.sourceforge.net/">diffxml</a> or <a href="http://www.logilab.org/859">xmldiff</a>) but since we didn&rsquo;t get them to do what we want in a reasonable amount of time, we just decided to roll our own.</p>
 
 <p>The final solution is a 71 line bash script, which downloads a zip, extracts it, generates <a href="http://en.wikipedia.org/wiki/MD5">MD5</a> sums for every element and then creates a diff between this new file and the previous list of MD5 sums. Once we know which elements have changed we merge them into a new feed which then gets handed to our importer. The awesome <a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> was a great help in this, as was battle-tested old <a href="http://en.wikipedia.org/wiki/AWK">awk</a>.</p>
 
-<p>Let's look at an interesting snippet from the script:</p>
+<p>Let&rsquo;s look at an interesting snippet from the script:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -67,8 +67,8 @@
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>xmlstarlet sel -I -t -m <span class="s2">&quot;//item&quot;</span> -v <span class="s2">&quot;./guid&quot;</span> -o <span class="s2">&quot;|&quot;</span> -c <span class="s2">&quot;.&quot;</span> -n - |
-</span><span class='line'>  sed -e <span class="s1">&#39;...&#39;</span> |
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>xmlstarlet sel -I -t -m &amp;ldquo;//item&amp;rdquo; -v &amp;ldquo;./guid&amp;rdquo; -o &amp;ldquo;|&amp;rdquo; -c &amp;ldquo;.&amp;rdquo; -n &amp;ndash; |
+</span><span class='line'>  sed -e &amp;lsquo;&amp;hellip;&amp;rsquo; |
 </span><span class='line'>  awk <span class="se">\&lt;</span>/p&gt;
 </span><span class='line'>
 </span><span class='line'>&lt;pre&gt;&lt;code&gt;<span class="s1">&#39;BEGIN {</span>
@@ -87,16 +87,16 @@
 </span><span class='line'>&lt;p&gt;
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Here we use xmlstarlet to iterate over all the items in the feed (the <a href="http://www.w3.org/TR/xpath/">XPath</a> "//item"), print the value of the "guid" element (-v "./guid"), output a pipe character (-o "|") and then copy the current element followed by a newline (-c "." -n) . This then gets piped through sed for some cleaning up (which I omitted here for brevity's sake) before awk takes the part after each "|", generates an MD5 sum and finally produces a file that looks like this:</p>
+<p>Here we use xmlstarlet to iterate over all the items in the feed (the <a href="http://www.w3.org/TR/xpath/">XPath</a> &ldquo;//item&rdquo;), print the value of the &ldquo;guid&rdquo; element (-v &ldquo;./guid&rdquo;), output a pipe character (-o &ldquo;|&rdquo;) and then copy the current element followed by a newline (-c &ldquo;.&rdquo; -n) . This then gets piped through sed for some cleaning up (which I omitted here for brevity&rsquo;s sake) before awk takes the part after each &ldquo;|&rdquo;, generates an MD5 sum and finally produces a file that looks like this:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rKKTZ:4012fced7c4cd77da607d294fbb8b5b6
 </span><span class='line'>hC7Jr:39245a0f9a976e6d47c0e2d76abf6238
-</span><span class='line'>...</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'>&hellip;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Now that we are able to create a daily list of MD5 sums, it's easy to generate the diff feed:</p>
+<p>Now that we are able to create a daily list of MD5 sums, it&rsquo;s easy to generate the diff feed:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -120,32 +120,32 @@
 </span><span class='line'>
 </span><span class='line'>&lt;p&gt;for record in <span class="nv">$changed</span> ; <span class="k">do</span>
 </span><span class='line'><span class="k">  </span><span class="nv">f</span><span class="o">=</span>&lt;code&gt;fgrep -l <span class="s2">&quot;&amp;lt;guid&amp;gt;$record&amp;lt;/guid&amp;gt;&quot;</span> <span class="nv">$FILE_PATTERN</span>&lt;/code&gt;
-</span><span class='line'>  xmlstarlet sel -I -t -c <span class="s2">&quot;/rss/channel/item[guid=&#39;$record&#39;]&quot;</span> <span class="nv">$f</span> &gt;&gt; vendor-import-<span class="nv">$TODAY</span>.xml
+</span><span class='line'>  xmlstarlet sel -I -t -c &amp;ldquo;/rss/channel/item<span class="o">[</span><span class="nv">guid</span><span class="o">=</span>&amp;lsquo;<span class="nv">$record</span>&amp;rsquo;<span class="o">]</span>&amp;rdquo; <span class="nv">$f</span> &gt;&gt; vendor-import-<span class="nv">$TODAY</span>.xml
 </span><span class='line'><span class="k">done</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Here we create an array with the id of the changed elements over which we then iterate. In the loop we once again use xmlstarlet to extract the current item from the feed which contains the right guid.</p>
 
-<p>I'm quite happy with the result, it does exactly what we want it to do and is also reasonably fast. This is a good example of how familiar Unix tools can be combined to create fairly concise solutions for non-trivial problem.</p>
+<p>I&rsquo;m quite happy with the result, it does exactly what we want it to do and is also reasonably fast. This is a good example of how familiar Unix tools can be combined to create fairly concise solutions for non-trivial problem.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Most used shell commands]]></title>
     <link href="http://citizen428.net/blog/2009/05/25/most-used-shell-commands/"/>
-    <updated>2009-05-25T00:00:00-05:00</updated>
+    <updated>2009-05-25T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/05/25/most-used-shell-commands</id>
     <content type="html"><![CDATA[<p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | awk &lsquo;{a[$2]++ } END{for(i in a){print a[i] &ldquo; &rdquo; i}}&rsquo;|sort -rn|head</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Although there was no real point in doing so, I felt the need to write a short Ruby script to do the same:</p>
 
 <script src="http://gist.github.com/117571.js"></script>
 
 
-<p>Here's the output on my MacBook:
+<p>Here&rsquo;s the output on my MacBook:
 <div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -170,7 +170,7 @@
 </span><span class='line'>vim: 12
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>If you are surprised by how many times (no pun intended) I called <em>time</em>, it's just because I was benchmarking "Project Euler":http://projecteuler.net/ solutions in several languages, everything else is quite regular (and suggests I don't use the Finder much ;) ).</p>
+<p>If you are surprised by how many times (no pun intended) I called <em>time</em>, it&rsquo;s just because I was benchmarking &ldquo;Project Euler&rdquo;:<a href="http://projecteuler.net/">http://projecteuler.net/</a> solutions in several languages, everything else is quite regular (and suggests I don&rsquo;t use the Finder much ;) ).</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: shoes | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/shoes/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,9 @@
   <entry>
     <title type="html"><![CDATA[Ruby implementations and why we should care]]></title>
     <link href="http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/"/>
-    <updated>2009-03-12T00:00:00-06:00</updated>
+    <updated>2009-03-12T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care</id>
-    <content type="html"><![CDATA[<p>Not too lang ago our "favorite language":http://www.ruby-lang.org/en/ had only implementation, the one made by "Matz":http://en.wikipedia.org/wiki/Yukihiro_Matsumoto (now commonly referred to as MatzRuby or MRI). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
+    <content type="html"><![CDATA[<p>Not too lang ago our &ldquo;favorite language&rdquo;:<a href="http://www.ruby-lang.org/en/">http://www.ruby-lang.org/en/</a> had only implementation, the one made by &ldquo;Matz&rdquo;:<a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">http://en.wikipedia.org/wiki/Yukihiro_Matsumoto</a> (now commonly referred to as MatzRuby or MRI). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
 
 <ul>
 <li>Ruby 1.8.6: This is your trusted old Ruby 1.8.6, and while it may not be the most spectacular of the implementations listed here, it's the most widely used Ruby interpreter around and the current de facto standard of the language.</li>
@@ -30,9 +30,9 @@
 </ul>
 
 
-<p>There are of course other Ruby implementations like "Cardinal":http://cardinal2.rubyforge.org/ (a Ruby interpreter for "Parrot":http://www.parrot.org/), "IronRuby":http://www.ironruby.net/ (Ruby for the .NET environment) and "tinyrb":http://github.com/macournoyer/tinyrb/tree/master (a tiny and fast subset of Ruby), which I won't describe here in more detail, since I haven't yet had time to play around with them.</p>
+<p>There are of course other Ruby implementations like &ldquo;Cardinal&rdquo;:<a href="http://cardinal2.rubyforge.org/">http://cardinal2.rubyforge.org/</a> (a Ruby interpreter for &ldquo;Parrot&rdquo;:<a href="http://www.parrot.org/">http://www.parrot.org/</a>), &ldquo;IronRuby&rdquo;:<a href="http://www.ironruby.net/">http://www.ironruby.net/</a> (Ruby for the .NET environment) and &ldquo;tinyrb&rdquo;:<a href="http://github.com/macournoyer/tinyrb/tree/master">http://github.com/macournoyer/tinyrb/tree/master</a> (a tiny and fast subset of Ruby), which I won&rsquo;t describe here in more detail, since I haven&rsquo;t yet had time to play around with them.</p>
 
-<p>So why should we care? Because the various implementations create a sort of competitive spirit, therefore pushing the limits of Ruby and driving it forward, by making it faster or running on top of other VMs (JRuby, IronRuby), thus letting it leverage a plethora of established technologies and also exposing it to potential new developers. Plus we also got "RubySpec":http://rubyspec.org/, so potential Ruby implementors have a standard to follow.</p>
+<p>So why should we care? Because the various implementations create a sort of competitive spirit, therefore pushing the limits of Ruby and driving it forward, by making it faster or running on top of other VMs (JRuby, IronRuby), thus letting it leverage a plethora of established technologies and also exposing it to potential new developers. Plus we also got &ldquo;RubySpec&rdquo;:<a href="http://rubyspec.org/,">http://rubyspec.org/,</a> so potential Ruby implementors have a standard to follow.</p>
 
 <p>I hope you enjoyed this post, please leave comments in case you disagree with something or want to add some information!</p>
 ]]></content>
@@ -41,11 +41,11 @@
   <entry>
     <title type="html"><![CDATA[Ruby and RubyLearning keep me busy]]></title>
     <link href="http://citizen428.net/blog/2009/02/18/ruby-and-rubylearning-keep-me-busy/"/>
-    <updated>2009-02-18T00:00:00-06:00</updated>
+    <updated>2009-02-18T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/02/18/ruby-and-rubylearning-keep-me-busy</id>
-    <content type="html"><![CDATA[<p>If you are interested in finally learning Ruby, but don't have the motivation to do it on your own, you should definitely check out  "RubyLearning":http://rubylearning.org, it's a great way to learn together with other people but at your own pace.</p>
+    <content type="html"><![CDATA[<p>If you are interested in finally learning Ruby, but don&rsquo;t have the motivation to do it on your own, you should definitely check out  &ldquo;RubyLearning&rdquo;:<a href="http://rubylearning.org,">http://rubylearning.org,</a> it&rsquo;s a great way to learn together with other people but at your own pace.</p>
 
-<p>Right now I'm involved in three different courses as a student and/or mentor:</p>
+<p>Right now I&rsquo;m involved in three different courses as a student and/or mentor:</p>
 
 <ul>
 <li>First off there's the 10th batch of the free Core Ruby Programming course, which started on January 23rd and has over 700 participants, some of whom are really active. I have a "GitHub repo for this course":http://github.com/citizen428/rubylearning-forpc101/tree/master, but to avoid spoilers I haven't committed the exercises from week 5-8 yet. BTW: the next batch will start on March 14th! :)</li>
@@ -54,7 +54,7 @@
 </ul>
 
 
-<p>Besides all these courses I'm working on a "Shoes tutorial":http://github.com/ashbb/shoes_tutorial_html/tree together with "ashbb":http://github.com/ashbb, have my own little "Shoes experiments":http://github.com/citizen428/littlesteps/tree and am reading "quite":http://www.hokstad.com/compiler "some":http://practicalruby.blogspot.com/2007/02/ruby-metaprogramming-introduction.html "interesting":http://www.jamievandyke.com/blog/2009/01/09/building-a-gem-using-bdd.html "articles":http://on-ruby.blogspot.com/2009/02/stackful-rubinius-interview.html.</p>
+<p>Besides all these courses I&rsquo;m working on a &ldquo;Shoes tutorial&rdquo;:<a href="http://github.com/ashbb/shoes_tutorial_html/tree">http://github.com/ashbb/shoes_tutorial_html/tree</a> together with &ldquo;ashbb&rdquo;:<a href="http://github.com/ashbb,">http://github.com/ashbb,</a> have my own little &ldquo;Shoes experiments&rdquo;:<a href="http://github.com/citizen428/littlesteps/tree">http://github.com/citizen428/littlesteps/tree</a> and am reading &ldquo;quite&rdquo;:<a href="http://www.hokstad.com/compiler">http://www.hokstad.com/compiler</a> &ldquo;some&rdquo;:<a href="http://practicalruby.blogspot.com/2007/02/ruby-metaprogramming-introduction.html">http://practicalruby.blogspot.com/2007/02/ruby-metaprogramming-introduction.html</a> &ldquo;interesting&rdquo;:<a href="http://www.jamievandyke.com/blog/2009/01/09/building-a-gem-using-bdd.html">http://www.jamievandyke.com/blog/2009/01/09/building-a-gem-using-bdd.html</a> &ldquo;articles&rdquo;:<a href="http://on-ruby.blogspot.com/2009/02/stackful-rubinius-interview.html.">http://on-ruby.blogspot.com/2009/02/stackful-rubinius-interview.html.</a></p>
 
 <p>Happy Rubying everyone!</p>
 ]]></content>
@@ -63,29 +63,29 @@
   <entry>
     <title type="html"><![CDATA[Zber Fubrf!]]></title>
     <link href="http://citizen428.net/blog/2009/02/06/zber-fubrf/"/>
-    <updated>2009-02-06T00:00:00-06:00</updated>
+    <updated>2009-02-06T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/02/06/zber-fubrf</id>
-    <content type="html"><![CDATA[<p>Playing with "Shoes":http://shoooes.net/ is kinda addictive, so I wrote my "third little app":http://the-shoebox.org/apps/131 for the "Shoebox":http://the-shoebox.org/. This little experiment does "ROT13":http://en.wikipedia.org/wiki/ROT13 which in itself is lame, but it was a good way to see how to read from and write to the system clipboard. Altogether this has 20 lines of code, of which 4 only consist of the word "end", so I think Shoes really succeeded in providing us with a tiny and easy to use cross-platform toolkit :)</p>
+    <content type="html"><![CDATA[<p>Playing with &ldquo;Shoes&rdquo;:<a href="http://shoooes.net/">http://shoooes.net/</a> is kinda addictive, so I wrote my &ldquo;third little app&rdquo;:<a href="http://the-shoebox.org/apps/131">http://the-shoebox.org/apps/131</a> for the &ldquo;Shoebox&rdquo;:<a href="http://the-shoebox.org/.">http://the-shoebox.org/.</a> This little experiment does &ldquo;ROT13&rdquo;:<a href="http://en.wikipedia.org/wiki/ROT13">http://en.wikipedia.org/wiki/ROT13</a> which in itself is lame, but it was a good way to see how to read from and write to the system clipboard. Altogether this has 20 lines of code, of which 4 only consist of the word &ldquo;end&rdquo;, so I think Shoes really succeeded in providing us with a tiny and easy to use cross-platform toolkit :)</p>
 
-<p><em>Hint: If you don't understand the title of this blog post, the little app mentioned above might be helpful...</em></p>
+<p><em>Hint: If you don&rsquo;t understand the title of this blog post, the little app mentioned above might be helpful&hellip;</em></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Babysteps]]></title>
     <link href="http://citizen428.net/blog/2009/02/02/babysteps/"/>
-    <updated>2009-02-02T00:00:00-06:00</updated>
+    <updated>2009-02-02T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/02/02/babysteps</id>
-    <content type="html"><![CDATA[<p>While writing my "second Shoes app":http://the-shoebox.org/apps/128 I ran into the problem of how to require a gem from within Shoes. Luckily "the truth is out there":http://hackety.org/2008/05/08/clearingUpTheWholeShoesAndRubyGemsDeal.html, but I wanna share it with you nonetheless:</p>
+    <content type="html"><![CDATA[<p>While writing my &ldquo;second Shoes app&rdquo;:<a href="http://the-shoebox.org/apps/128">http://the-shoebox.org/apps/128</a> I ran into the problem of how to require a gem from within Shoes. Luckily &ldquo;the truth is out there&rdquo;:<a href="http://hackety.org/2008/05/08/clearingUpTheWholeShoesAndRubyGemsDeal.html,">http://hackety.org/2008/05/08/clearingUpTheWholeShoesAndRubyGemsDeal.html,</a> but I wanna share it with you nonetheless:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Shoes</span><span class="o">.</span><span class="n">setup</span> <span class="k">do</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;foo&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
 </span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;foo&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Enjoy!</p>
@@ -95,17 +95,17 @@
   <entry>
     <title type="html"><![CDATA[RubyLearning got a new mentor with shiny Shoes and a Mac]]></title>
     <link href="http://citizen428.net/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac/"/>
-    <updated>2009-02-01T00:00:00-06:00</updated>
+    <updated>2009-02-01T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac</id>
-    <content type="html"><![CDATA[<p>Since I currently have quite a lot of time but am slightly on the poor side (as we all know: 'money = has_time ? 0 : loads.to_i') I decided to join batch 10 of <a href="http://rubylearning.org/class/">RubyLearning's</a> free online core Ruby programming course. In my opinion the course is <em>very</em> good, so if you always wanted to learn Ruby but couldn't find the motivation alone, definitely give this a try! But since I myself am not exactly new to Ruby, it so happened that after the first week of the course I now joined the RubyLearning team as a mentor. Glad to be part of the gang, folks! :)</p>
+    <content type="html"><![CDATA[<p>Since I currently have quite a lot of time but am slightly on the poor side (as we all know: &lsquo;money = has_time ? 0 : loads.to_i&rsquo;) I decided to join batch 10 of <a href="http://rubylearning.org/class/">RubyLearning&rsquo;s</a> free online core Ruby programming course. In my opinion the course is <em>very</em> good, so if you always wanted to learn Ruby but couldn&rsquo;t find the motivation alone, definitely give this a try! But since I myself am not exactly new to Ruby, it so happened that after the first week of the course I now joined the RubyLearning team as a mentor. Glad to be part of the gang, folks! :)</p>
 
-<p>Yesterday "I blogged":http://citizen428.net/archives/353-The-first-steps-in-new-Shoes.html about my first experiments with "Shoes":http://shoooes.net/ and thanks to some feedback by "ashbb":http://ashbb.github.com/ a newer version of the "Little Helper":http://the-shoebox.org/apps/126 is now available. And since I plan on doing some more experiments with Shoes, I also started a "repo called littlesteps":http://github.com/citizen428/littlesteps/tree/master on Github where I will keep the source for all those nice little application.</p>
+<p>Yesterday &ldquo;I blogged&rdquo;:<a href="http://citizen428.net/archives/353-The-first-steps-in-new-Shoes.html">http://citizen428.net/archives/353-The-first-steps-in-new-Shoes.html</a> about my first experiments with &ldquo;Shoes&rdquo;:<a href="http://shoooes.net/">http://shoooes.net/</a> and thanks to some feedback by &ldquo;ashbb&rdquo;:<a href="http://ashbb.github.com/">http://ashbb.github.com/</a> a newer version of the &ldquo;Little Helper&rdquo;:<a href="http://the-shoebox.org/apps/126">http://the-shoebox.org/apps/126</a> is now available. And since I plan on doing some more experiments with Shoes, I also started a &ldquo;repo called littlesteps&rdquo;:<a href="http://github.com/citizen428/littlesteps/tree/master">http://github.com/citizen428/littlesteps/tree/master</a> on Github where I will keep the source for all those nice little application.</p>
 
-<p>Finally a bit of good news for all you Ruby on MacOS X fans out there: there soon will be new versions of the "Ruby One-Click Installer for OSX":http://rubyosx.rubyforge.org/ for Ruby 1.9.1! :) The "maintainer":http://wiki.rubyonrails.org/rails/pages/parasew is a friend of mine, so I tried to convince him to include "rspec":http://rspec.info/ and "cheats":http://cheat.errtheblog.com/ in the next release, let's see if we'll get them...</p>
+<p>Finally a bit of good news for all you Ruby on MacOS X fans out there: there soon will be new versions of the &ldquo;Ruby One-Click Installer for OSX&rdquo;:<a href="http://rubyosx.rubyforge.org/">http://rubyosx.rubyforge.org/</a> for Ruby 1.9.1! :) The &ldquo;maintainer&rdquo;:<a href="http://wiki.rubyonrails.org/rails/pages/parasew">http://wiki.rubyonrails.org/rails/pages/parasew</a> is a friend of mine, so I tried to convince him to include &ldquo;rspec&rdquo;:<a href="http://rspec.info/">http://rspec.info/</a> and &ldquo;cheats&rdquo;:<a href="http://cheat.errtheblog.com/">http://cheat.errtheblog.com/</a> in the next release, let&rsquo;s see if we&rsquo;ll get them&hellip;</p>
 
 <p>Some links:
-"waveninja's Ten Steps in Shoes, part 2":http://waveninja.blogspot.com/2009/01/ten-steps-in-shoes-step-2-stack-flow.html
-"ashbb's Shoes Tutorial":http://github.com/ashbb/shoes_tutorial_html/tree/master</p>
+&ldquo;waveninja&rsquo;s Ten Steps in Shoes, part 2&rdquo;:<a href="http://waveninja.blogspot.com/2009/01/ten-steps-in-shoes-step-2-stack-flow.html">http://waveninja.blogspot.com/2009/01/ten-steps-in-shoes-step-2-stack-flow.html</a>
+&ldquo;ashbb&rsquo;s Shoes Tutorial&rdquo;:<a href="http://github.com/ashbb/shoes_tutorial_html/tree/master">http://github.com/ashbb/shoes_tutorial_html/tree/master</a></p>
 ]]></content>
   </entry>
   

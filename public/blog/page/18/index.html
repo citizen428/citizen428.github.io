@@ -9,7 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Being sick this week I had a lot of time to read, but most if it went into Bruce Sterling&#8217;s Hacker Crackdown and Joe Dunthorne&#8217;s &hellip;">
+  <meta name="description" content="Slightly modified version of a post I originally wrote for our company blog.
+When importing data at work, we often have to deal with XML. This &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -105,6 +106,105 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2010/10/01/xml-diffs-with-bash-and-awk/">XML Diffs With Bash and Awk</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-01T00:00:00+07:00" pubdate data-updated="true">Oct 1<span>st</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><i>Slightly modified version of a <a href="http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/">post</a> I originally wrote for our <a href="http://tupalo.com/en/blog/">company blog</a>.</i></p>
+<p>When importing data at work, we often have to deal with <span class="caps">XML</span>. This generally works fine, but the format&#8217;s structured nature also means that you can&#8217;t just treat it like any old text file.</p>
+<p>That&#8217;s something we recently had to work around when we wanted to generate a daily <span class="caps">XML</span> diff, which only contains elements which changed since the previous feed. Of course there are several open source tools for diff-ing <span class="caps">XML</span> (e.g. <a href="http://diffxml.sourceforge.net/">diffxml</a> or <a href="http://www.logilab.org/859">xmldiff</a>) but since we didn&#8217;t get them to do what we want in a reasonable amount of time, we just decided to roll our own.</p>
+<p>The final solution is a 71 line bash script, which downloads a zip, extracts it, generates <a href="http://en.wikipedia.org/wiki/MD5">MD5</a> sums for every element and then creates a diff between this new file and the previous list of MD5 sums. Once we know which elements have changed we merge them into a new feed which then gets handed to our importer. The awesome <a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> was a great help in this, as was battle-tested old <a href="http://en.wikipedia.org/wiki/AWK">awk</a>.</p>
+<p>Let&#8217;s look at an interesting snippet from the script:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>xmlstarlet sel -I -t -m <span class="s2">&quot;//item&quot;</span> -v <span class="s2">&quot;./guid&quot;</span> -o <span class="s2">&quot;|&quot;</span> -c <span class="s2">&quot;.&quot;</span> -n - |
+</span><span class='line'>  sed -e <span class="s1">&#39;...&#39;</span> |
+</span><span class='line'>  awk <span class="se">\</span>
+</span><span class='line'>    <span class="s1">&#39;BEGIN {</span>
+</span><span class='line'><span class="s1">      FS=&quot;|&quot;</span>
+</span><span class='line'><span class="s1">      RS=&quot;\n&quot;</span>
+</span><span class='line'><span class="s1">    }</span>
+</span><span class='line'><span class="s1">    {</span>
+</span><span class='line'><span class="s1">      id=$1</span>
+</span><span class='line'><span class="s1">      command=&quot;printf \&quot;%s\&quot; \&quot;&quot; $2 &quot;\&quot; | md5sum | cut -d\&quot; \&quot; -f1&quot;</span>
+</span><span class='line'><span class="s1">      command | getline md5</span>
+</span><span class='line'><span class="s1">      close(command)</span>
+</span><span class='line'><span class="s1">      print id&quot;:&quot;md5</span>
+</span><span class='line'><span class="s1">    }&#39;</span> &gt;&gt; <span class="nv">$MD5_DIR</span>/vendor-md5-<span class="nv">$TODAY</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Here we use xmlstarlet to iterate over all the items in the feed (the <a href="http://www.w3.org/TR/xpath/">XPath</a> &#8220;//item&#8221;), print the value of the &#8220;guid&#8221; element (-v &#8220;./guid&#8221;), output a pipe character (-o &#8220;|&#8221;) and then copy the current element followed by a newline (-c &#8220;.&#8221; -n) . This then gets piped through sed for some cleaning up (which I omitted here for brevity&#8217;s sake) before awk takes the part after each &#8220;|&#8221;, generates an MD5 sum and finally produces a file that looks like this:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rKKTZ:4012fced7c4cd77da607d294fbb8b5b6
+</span><span class='line'>hC7Jr:39245a0f9a976e6d47c0e2d76abf6238
+</span><span class='line'>...</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Now that we are able to create a daily list of MD5 sums, it&#8217;s easy to generate the diff feed:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">if</span> <span class="o">[</span> -e <span class="nv">$MD5_DIR</span>/vendor-md5-last <span class="o">]</span> ; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nv">changed</span><span class="o">=</span><span class="sb">`</span>diff <span class="nv">$MD5_DIR</span>/vendor-md5-last <span class="nv">$MD5_DIR</span>/vendor-md5-<span class="nv">$TODAY</span> |
+</span><span class='line'>	   grep <span class="s2">&quot;^&gt;&quot;</span> |
+</span><span class='line'>           cut -d<span class="s2">&quot;:&quot;</span> -f 1 |
+</span><span class='line'>           cut -b 1-2 --complement<span class="sb">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">for </span>record in <span class="nv">$changed</span> ; <span class="k">do</span>
+</span><span class='line'><span class="k">  </span><span class="nv">f</span><span class="o">=</span><span class="sb">`</span>fgrep -l <span class="s2">&quot;&lt;guid&gt;$record&lt;/guid&gt;&quot;</span> <span class="nv">$FILE_PATTERN</span><span class="sb">`</span>
+</span><span class='line'>  xmlstarlet sel -I -t -c <span class="s2">&quot;/rss/channel/item[guid=&#39;$record&#39;]&quot;</span> <span class="nv">$f</span> &gt;&gt; vendor-import-<span class="nv">$TODAY</span>.xml
+</span><span class='line'><span class="k">done</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Here we create an array with the id of the changed elements over which we then iterate. In the loop we once again use xmlstarlet to extract the current item from the feed which contains the right guid.</p>
+<p>I&#8217;m quite happy with the result, it does exactly what we want it to do and is also reasonably fast. This is a good example of how familiar Unix tools can be combined to create fairly concise solutions for non-trivial problem.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2010/09/26/information-overload-2010-09-26/">Information Overload 2010-09-26</a></h1>
     
     
@@ -121,7 +221,7 @@
   
 
 
-<time datetime="2010-09-26T00:00:00-05:00" pubdate data-updated="true">Sep 26<span>th</span>, 2010</time>
+<time datetime="2010-09-26T00:00:00+07:00" pubdate data-updated="true">Sep 26<span>th</span>, 2010</time>
         
       </p>
     
@@ -167,7 +267,7 @@
   
 
 
-<time datetime="2010-09-22T00:00:00-05:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2010</time>
+<time datetime="2010-09-22T00:00:00+07:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2010</time>
         
       </p>
     
@@ -218,7 +318,7 @@
   
 
 
-<time datetime="2010-09-19T00:00:00-05:00" pubdate data-updated="true">Sep 19<span>th</span>, 2010</time>
+<time datetime="2010-09-19T00:00:00+07:00" pubdate data-updated="true">Sep 19<span>th</span>, 2010</time>
         
       </p>
     
@@ -266,7 +366,7 @@
   
 
 
-<time datetime="2010-09-18T00:00:00-05:00" pubdate data-updated="true">Sep 18<span>th</span>, 2010</time>
+<time datetime="2010-09-18T00:00:00+07:00" pubdate data-updated="true">Sep 18<span>th</span>, 2010</time>
         
       </p>
     
@@ -318,7 +418,7 @@
   
 
 
-<time datetime="2010-09-14T00:00:00-05:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
+<time datetime="2010-09-14T00:00:00+07:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
         
       </p>
     
@@ -358,7 +458,7 @@
   
 
 
-<time datetime="2010-09-13T00:00:00-05:00" pubdate data-updated="true">Sep 13<span>th</span>, 2010</time>
+<time datetime="2010-09-13T00:00:00+07:00" pubdate data-updated="true">Sep 13<span>th</span>, 2010</time>
         
       </p>
     
@@ -397,7 +497,7 @@
   
 
 
-<time datetime="2010-09-05T00:00:00-05:00" pubdate data-updated="true">Sep 5<span>th</span>, 2010</time>
+<time datetime="2010-09-05T00:00:00+07:00" pubdate data-updated="true">Sep 5<span>th</span>, 2010</time>
         
       </p>
     
@@ -441,7 +541,7 @@
   
 
 
-<time datetime="2010-09-04T00:00:00-05:00" pubdate data-updated="true">Sep 4<span>th</span>, 2010</time>
+<time datetime="2010-09-04T00:00:00+07:00" pubdate data-updated="true">Sep 4<span>th</span>, 2010</time>
         
       </p>
     
@@ -571,7 +671,7 @@
   
 
 
-<time datetime="2010-08-29T00:00:00-05:00" pubdate data-updated="true">Aug 29<span>th</span>, 2010</time>
+<time datetime="2010-08-29T00:00:00+07:00" pubdate data-updated="true">Aug 29<span>th</span>, 2010</time>
         
       </p>
     
@@ -590,65 +690,6 @@
 <li><a href="http://www.badassoftheweek.com/tesla.html">Badass of the Week: Nikola Tesla</a><br />Entertaining little article on a very interesting person.</li>
 <li><a href="http://www.neunetz.com/2010/08/25/filesharing-flattr-und-bezahlschranken-die-aufloesung-historischer-unfaelle/">Filesharing, Flattr und Bezahlschranken: Die Aufloesung historischer Unfaelle</a><br />Value creation in the digital world and how it should differ from the analog times (German).</li>
 </ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/08/28/more-tinkering-with-j/">More Tinkering With J</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-08-28T00:00:00-05:00" pubdate data-updated="true">Aug 28<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Since my <a href="http://citizen428.net/archives/436">previous post</a> on <span class="caps">APL</span> and J I&#8217;ve read the 45 or so pages of  <a href="http://www.jsoftware.com/books/pdf/easyj.pdf">Easy J</a> and am quite impressed by this nifty language. It may seem strange at first, but is very logically structured and not difficult to understand at all. That said I still need to constantly have the <a href="http://www.jsoftware.com/help/dictionary/vocabul.htm">vocabulary</a> open to write anything remotely useful, but I&#8217;m slowly starting to remember more and more of it.</p>
-<p>Here are a couple of examples of J&#8217;s expressiveness, with the first two based on exercises from our &#8220;Core Ruby&#8221; course on <a href="http://www.rubylearning.org/class/">RubyLearning.org</a>.</p>
-<p><em>How old is a person if he/she is 1 billion seconds old?</em><br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0 365 24 60 60 #: 1000000000
-</span><span class='line'>31 259 1 46 40</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (#:) it&#8217;s easy to see that the answer is 31 years, 259 days, 1 hour, 46 minutes and 40 seconds.</p>
-<p><em>Convert degress Fahrenheit to degrees Celsius.</em><br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>toc =: %&1.8@-&32
-</span><span class='line'>  toc 100
-</span><span class='line'>37.7778</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>Divide by 1.8 after (<a href="http://www.jsoftware.com/help/dictionary/d620.htm">Atop</a>,  @) subtracting 32. I suspect there&#8217;s a better way to write this, but it&#8217;s the first thing that came to my mind&#8230;</p>
-<p><em>Create a sorted set from a list of numbers.</em><br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>toset =: ({~/:)@~.
-</span><span class='line'>  toset 3 4 1 2 4 2 3 5
-</span><span class='line'>1 2 3 4 5</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>Sort (<a href="http://www.jsoftware.com/help/dictionary/d422.htm">/:</a>) the distinct items (<a href="http://www.jsoftware.com/help/dictionary/d221.htm">nub</a>) of the list. Don&#8217;t concern yourself too much with the passive (<a href="http://www.jsoftware.com/help/dictionary/d220v.htm">~</a>) for now, it&#8217;s just there so the arguments to <a href="http://www.jsoftware.com/help/dictionary/d521.htm">take</a> end up in the right spot.</p>
-<p>That&#8217;s it for today, in my next post on J I want to focus on the language&#8217;s excellent plotting capabilities.</p></div>
   
   
 
@@ -784,7 +825,7 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

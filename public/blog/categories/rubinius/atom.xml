@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rubinius | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/rubinius/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,9 @@
   <entry>
     <title type="html"><![CDATA[Ruby implementations and why we should care]]></title>
     <link href="http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/"/>
-    <updated>2009-03-12T00:00:00-06:00</updated>
+    <updated>2009-03-12T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care</id>
-    <content type="html"><![CDATA[<p>Not too lang ago our "favorite language":http://www.ruby-lang.org/en/ had only implementation, the one made by "Matz":http://en.wikipedia.org/wiki/Yukihiro_Matsumoto (now commonly referred to as MatzRuby or MRI). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
+    <content type="html"><![CDATA[<p>Not too lang ago our &ldquo;favorite language&rdquo;:<a href="http://www.ruby-lang.org/en/">http://www.ruby-lang.org/en/</a> had only implementation, the one made by &ldquo;Matz&rdquo;:<a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">http://en.wikipedia.org/wiki/Yukihiro_Matsumoto</a> (now commonly referred to as MatzRuby or MRI). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
 
 <ul>
 <li>Ruby 1.8.6: This is your trusted old Ruby 1.8.6, and while it may not be the most spectacular of the implementations listed here, it's the most widely used Ruby interpreter around and the current de facto standard of the language.</li>
@@ -30,9 +30,9 @@
 </ul>
 
 
-<p>There are of course other Ruby implementations like "Cardinal":http://cardinal2.rubyforge.org/ (a Ruby interpreter for "Parrot":http://www.parrot.org/), "IronRuby":http://www.ironruby.net/ (Ruby for the .NET environment) and "tinyrb":http://github.com/macournoyer/tinyrb/tree/master (a tiny and fast subset of Ruby), which I won't describe here in more detail, since I haven't yet had time to play around with them.</p>
+<p>There are of course other Ruby implementations like &ldquo;Cardinal&rdquo;:<a href="http://cardinal2.rubyforge.org/">http://cardinal2.rubyforge.org/</a> (a Ruby interpreter for &ldquo;Parrot&rdquo;:<a href="http://www.parrot.org/">http://www.parrot.org/</a>), &ldquo;IronRuby&rdquo;:<a href="http://www.ironruby.net/">http://www.ironruby.net/</a> (Ruby for the .NET environment) and &ldquo;tinyrb&rdquo;:<a href="http://github.com/macournoyer/tinyrb/tree/master">http://github.com/macournoyer/tinyrb/tree/master</a> (a tiny and fast subset of Ruby), which I won&rsquo;t describe here in more detail, since I haven&rsquo;t yet had time to play around with them.</p>
 
-<p>So why should we care? Because the various implementations create a sort of competitive spirit, therefore pushing the limits of Ruby and driving it forward, by making it faster or running on top of other VMs (JRuby, IronRuby), thus letting it leverage a plethora of established technologies and also exposing it to potential new developers. Plus we also got "RubySpec":http://rubyspec.org/, so potential Ruby implementors have a standard to follow.</p>
+<p>So why should we care? Because the various implementations create a sort of competitive spirit, therefore pushing the limits of Ruby and driving it forward, by making it faster or running on top of other VMs (JRuby, IronRuby), thus letting it leverage a plethora of established technologies and also exposing it to potential new developers. Plus we also got &ldquo;RubySpec&rdquo;:<a href="http://rubyspec.org/,">http://rubyspec.org/,</a> so potential Ruby implementors have a standard to follow.</p>
 
 <p>I hope you enjoyed this post, please leave comments in case you disagree with something or want to add some information!</p>
 ]]></content>
@@ -41,23 +41,23 @@
   <entry>
     <title type="html"><![CDATA[Rubinius build woes]]></title>
     <link href="http://citizen428.net/blog/2009/03/10/rubinius-build-woes/"/>
-    <updated>2009-03-10T00:00:00-06:00</updated>
+    <updated>2009-03-10T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/03/10/rubinius-build-woes</id>
-    <content type="html"><![CDATA[<p>A couple of days ago I decided that I want to play around with "Rubinius":http://rubini.us, so I cloned the "source":http://github.com/evanphx/rubinius/tree/master from GitHub and thought I was ready to go. As it turned out that wasn't quite the case, since my first attempt to build it ended in the second error can see here:</p>
+    <content type="html"><![CDATA[<p>A couple of days ago I decided that I want to play around with &ldquo;Rubinius&rdquo;:<a href="http://rubini.us,">http://rubini.us,</a> so I cloned the &ldquo;source&rdquo;:<a href="http://github.com/evanphx/rubinius/tree/master">http://github.com/evanphx/rubinius/tree/master</a> from GitHub and thought I was ready to go. As it turned out that wasn&rsquo;t quite the case, since my first attempt to build it ended in the second error can see here:</p>
 
 <script src="http://gist.github.com/77119.js"></script>
 
 
-<p>I hopped into #rubinius to find out if more people have this problem, but that doesn't seem to be the case. At least I learnt that most active develop is going into the 'stackfull' branch, so I did a 'git checkout origin/stackfull' and gave the build another try, which resulted in the first error message you see above.</p>
+<p>I hopped into #rubinius to find out if more people have this problem, but that doesn&rsquo;t seem to be the case. At least I learnt that most active develop is going into the &lsquo;stackfull&rsquo; branch, so I did a &lsquo;git checkout origin/stackfull&rsquo; and gave the build another try, which resulted in the first error message you see above.</p>
 
-<p>Determined not to give up, I decided to try one last time with 'rake vm:clean' and 'rake build:debug' and to my surprise ended up with a working Rubinius install :-)</p>
+<p>Determined not to give up, I decided to try one last time with &lsquo;rake vm:clean&rsquo; and &lsquo;rake build:debug&rsquo; and to my surprise ended up with a working Rubinius install :&ndash;)</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ bin/rbx -v
 </span><span class='line'>rubinius 0.11.0-dev (ruby 1.8.6) (f5260b581 12/31/2009) [i686-apple-darwin9.6.0]</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>That made me somewhat curious, so I tried 'rake vm:clean' and 'rake build' which now also worked (still can't build master though). I have to admit that I'm slightly confused, but at least I have a working Rubinius version to play around with for the time being.</p>
+<p>That made me somewhat curious, so I tried &lsquo;rake vm:clean&rsquo; and &lsquo;rake build&rsquo; which now also worked (still can&rsquo;t build master though). I have to admit that I&rsquo;m slightly confused, but at least I have a working Rubinius version to play around with for the time being.</p>
 ]]></content>
   </entry>
   

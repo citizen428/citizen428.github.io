@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="I&#8217;m currently reading the early access version of MongoDB in Action, so I felt like playing around with it a bit (in fact I do use it for &hellip;">
+  <meta name="description" content="I&rsquo;m currently reading the early access version of MongoDB in Action, so I felt like playing around with it a bit (in fact I do use it for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -118,14 +118,14 @@
   
 
 
-<time datetime="2011-10-28T20:36:00-05:00" pubdate data-updated="true">Oct 28<span>th</span>, 2011</time>
+<time datetime="2011-10-28T20:36:00+07:00" pubdate data-updated="true">Oct 28<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>I&#8217;m currently reading the early access version of <a href="http://www.manning.com/banker/">MongoDB in Action</a>, so I felt like playing around with it a bit (in fact I do use it for <a href="http://happynerds.net">Happynerds.net</a>, but that&#8217;s not very exciting). I then remembered that I recently stumbled upon a service called <a href="http://export.synack.me/">The Exporter</a>, which I had used to download all my tweets from Twitter (as of October 4th 2011). So why not use MongoDB to find out which users I retweet most often?</p>
+<div class="entry-content"><p>I&rsquo;m currently reading the early access version of <a href="http://www.manning.com/banker/">MongoDB in Action</a>, so I felt like playing around with it a bit (in fact I do use it for <a href="http://happynerds.net">Happynerds.net</a>, but that&rsquo;s not very exciting). I then remembered that I recently stumbled upon a service called <a href="http://export.synack.me/">The Exporter</a>, which I had used to download all my tweets from Twitter (as of October 4th 2011). So why not use MongoDB to find out which users I retweet most often?</p>
 
 <!-- more -->
 
@@ -139,7 +139,7 @@
 
 <p>Alas this just threw a lot of errors at me and said that no records got imported. A quick look at the <a href="http://www.mongodb.org/display/DOCS/Import+Export+Tools">relevant documentation</a> shows that <code>mongoimport</code> expects one JSON object per line, so I had to remove the opening and closing bracket on the first and last line respectively, as well as the commas separating the lines (<code>s/,$//</code>). Once I did this, the import worked as expected and I had several thousand tweets in the collection <code>tweets</code> in the database <code>twitter</code>.</p>
 
-<p>Since I&#8217;ll most likely do similar imports in the future, I added a <a href="http://www.mongodb.org/display/DOCS/Indexes#Indexes-UniqueIndexes">unique index</a> on the field named <code>id</code> (note that this is different from Mongo&#8217;s built in <code>_id</code>):</p>
+<p>Since I&rsquo;ll most likely do similar imports in the future, I added a <a href="http://www.mongodb.org/display/DOCS/Indexes#Indexes-UniqueIndexes">unique index</a> on the field named <code>id</code> (note that this is different from Mongo&rsquo;s built in <code>_id</code>):</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">tweets</span><span class="p">.</span><span class="nx">ensureIndex</span><span class="p">({</span><span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="nx">unique</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
@@ -153,7 +153,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>For getting the actual data I wanted, MongoDB&#8217;s built-in <a href="http://www.mongodb.org/display/DOCS/MapReduce">map/reduce functionality</a> seemed like a perfect fit. Here&#8217;s the mapping function, in all it&#8217;s glory:</p>
+<p>For getting the actual data I wanted, MongoDB&rsquo;s built-in <a href="http://www.mongodb.org/display/DOCS/MapReduce">map/reduce functionality</a> seemed like a perfect fit. Here&rsquo;s the mapping function, in all it&rsquo;s glory:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -220,7 +220,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Hm, this is a collection I&#8217;ll most likely query more in the future, how did the above query perform? Not so well I&#8217;m afraid:</p>
+<p>Hm, this is a collection I&rsquo;ll most likely query more in the future, how did the above query perform? Not so well I&rsquo;m afraid:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -257,7 +257,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The most important thing to note here is the difference between the number of documents (<code>nscanned</code>, 192) and the actual number returned (<code>n</code>, 10). Also the query had to order the result for us (indicated by <code>"scanAndOrder" : true</code>). Fortunately that&#8217;s nothing another index can&#8217;t fix, this time a reverse one on <code>value.count</code>:</p>
+<p>The most important thing to note here is the difference between the number of documents (<code>nscanned</code>, 192) and the actual number returned (<code>n</code>, 10). Also the query had to order the result for us (indicated by <code>"scanAndOrder" : true</code>). Fortunately that&rsquo;s nothing another index can&rsquo;t fix, this time a reverse one on <code>value.count</code>:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -312,7 +312,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>All in all this was a pretty fun little exercise, that proves how easy it is to go from JSON to queryable data with MongoDB. I&#8217;ll probably do more of this in the future.</p>
+<p>All in all this was a pretty fun little exercise, that proves how easy it is to go from JSON to queryable data with MongoDB. I&rsquo;ll probably do more of this in the future.</p>
 </div>
 
 
@@ -335,7 +335,7 @@
   
 
 
-<time datetime="2011-10-28T20:36:00-05:00" pubdate data-updated="true">Oct 28<span>th</span>, 2011</time>
+<time datetime="2011-10-28T20:36:00+07:00" pubdate data-updated="true">Oct 28<span>th</span>, 2011</time>
       
 
 <span class="categories">
@@ -361,7 +361,7 @@
 
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/10/28/fun-with-twitter-and-mongodb/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/10/28/fun-with-twitter-and-mongodb/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/10/28/fun-with-twitter-and-mongodb/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/10/28/fun-with-twitter-and-mongodb/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -514,7 +514,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

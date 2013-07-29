@@ -9,9 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="After using Wordpress as my blogging engine
-of choice for over a year (after moving away from S9Y), I decided to switch this site to
-Octopress. Why? &hellip;">
+  <meta name="description" content="When deciding to switch from Wordpress to Octopress one of the main reasons was that I don&rsquo;t need most of the advanced features the former &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,6 +105,45 @@ Octopress. Why? &hellip;">
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2011/09/27/octopress-templates/">Octopress Templates</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-27T16:58:00+07:00" pubdate data-updated="true">Sep 27<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When deciding to switch from Wordpress to Octopress one of the main reasons was that I don&rsquo;t need most of the advanced features the former offers. However, for my weekly <a href="http://citizen428.net/blog/categories/informationoverload/">Information Overload</a> series I relied on two features, namely templates and scheduling: I created a new post from the template and then filled it with content over the week. Once I was done I&rsquo;d schedule it for publishing on Sunday afternoon. Here&rsquo;s how I plan to do this with Octopress.</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2011/09/27/octopress-templates/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2011/09/26/goodbye-wordpress/">Goodbye Wordpress</a></h1>
     
     
@@ -123,7 +160,7 @@ Octopress. Why? &hellip;">
   
 
 
-<time datetime="2011-09-26T21:00:00-05:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
+<time datetime="2011-09-26T21:00:00+07:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
         
       </p>
     
@@ -132,22 +169,22 @@ Octopress. Why? &hellip;">
 
   <div class="entry-content"><p>After using <a href="http://wordpress.org/">Wordpress</a> as my blogging engine
 of choice for over a year (after moving away from <a href="http://s9y.org/">S9Y</a>), I decided to switch this site to
-<a href="http://octopress.org/">Octopress</a>. Why? Because it&#8217;s cool!
+<a href="http://octopress.org/">Octopress</a>. Why? Because it&rsquo;s cool!
 No, seriously. I was actually quite happy with WP, it just always felt
 like way more than I actually needed. OP on the other hand is super
 lightweight, ritten in Ruby and uses some of my favorite technologies,
-like Sinatra and Markdown. It doesn&#8217;t stop there though: having the site rendered to static
+like Sinatra and Markdown. It doesn&rsquo;t stop there though: having the site rendered to static
 files means I can get rid of MySQL and PHP on my little VPS, which
-definitely is a plus. And it&#8217;s also very cool to have all your posts
+definitely is a plus. And it&rsquo;s also very cool to have all your posts
 in a directory on your local file system, so you can use all your
 favorite command line tools to search through or batch modify
-them. Last but not least I&#8217;m now writing my posts in Emacs instead of
+them. Last but not least I&rsquo;m now writing my posts in Emacs instead of
 some crappy web input form (ok, granted, I could have done that before
 too).</p>
 
 <p>Now to the actual migration. I started by exporting my WP blog to
-XML. This can be done in the administration backend under &#8220;Tools -
-Export&#8221;. Once I had this XML, I used the following script to convert
+XML. This can be done in the administration backend under &ldquo;Tools &ndash;
+Export&rdquo;. Once I had this XML, I used the following script to convert
 the posts to individual files for Octopress:</p>
 
 <div><script src='https://gist.github.com/1240781.js'></script>
@@ -222,7 +259,7 @@ instead of Markdown because I used the former in my WP install through
 a plugin).</p>
 
 <p>Since some of my posts are quite popular and get linked to a lot, I
-didn&#8217;t want to loose my old links. I therefore wrote another script
+didn&rsquo;t want to loose my old links. I therefore wrote another script
 that created 301 redirects for all of them:</p>
 
 <div><script src='https://gist.github.com/1241762.js'></script>
@@ -264,14 +301,14 @@ not annoy my subscribers:</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>RewriteRule ^/feed /atom.xml [R=301,L]</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Of course I also didn&#8217;t want to loose all my comments, so I had to
+<p>Of course I also didn&rsquo;t want to loose all my comments, so I had to
 come up with a solution for that. I first
 installed the WP <a href="http://disqus.com">Disqus</a> plugin and exported all
 my current comments. I then used some good old Emacs magic to convert
 the list of redirects I had already generated to a CSV for Disqus&#8217;
 <a href="http://docs.disqus.com/help/39/">URL map migration tool</a>. So far this
 has not migrated all comments to the correct location, but it should
-eventually work out (worst case I&#8217;ll have to email Disqus support).</p>
+eventually work out (worst case I&rsquo;ll have to email Disqus support).</p>
 
 <p>Last but not least I used Octopress&#8217; excellent
 <a href="http://octopress.org/docs/theme/template/index.html">customization suport</a>
@@ -280,12 +317,12 @@ to re-add some stuff to my headers, like the OpenID delegate.</p>
 <p>Of course there are still some things that need to be done, some of them more urgently
 then others. First off this site needs a better stylesheet. The
 default is actually quite ok, but I want something with more
-personality. I&#8217;ll also have to go through my old posts and clean them
+personality. I&rsquo;ll also have to go through my old posts and clean them
 up a bit, the automatic conversion did some funny things at
-times. I also want to re-integrate Flattr and PostRank, but I&#8217;m not
+times. I also want to re-integrate Flattr and PostRank, but I&rsquo;m not
 exactly in a hurry when it comes to that.</p>
 
-<p>I hope this post was useful to some of you, I&#8217;m definitely happy with
+<p>I hope this post was useful to some of you, I&rsquo;m definitely happy with
 my new blogging setup.</p>
 </div>
   
@@ -315,7 +352,7 @@ my new blogging setup.</p>
   
 
 
-<time datetime="2011-09-25T00:00:00-05:00" pubdate data-updated="true">Sep 25<span>th</span>, 2011</time>
+<time datetime="2011-09-25T00:00:00+07:00" pubdate data-updated="true">Sep 25<span>th</span>, 2011</time>
         
       </p>
     
@@ -358,7 +395,7 @@ my new blogging setup.</p>
   
 
 
-<time datetime="2011-09-24T00:00:00-05:00" pubdate data-updated="true">Sep 24<span>th</span>, 2011</time>
+<time datetime="2011-09-24T00:00:00+07:00" pubdate data-updated="true">Sep 24<span>th</span>, 2011</time>
         
       </p>
     
@@ -397,7 +434,7 @@ my new blogging setup.</p>
   
 
 
-<time datetime="2011-09-18T00:00:00-05:00" pubdate data-updated="true">Sep 18<span>th</span>, 2011</time>
+<time datetime="2011-09-18T00:00:00+07:00" pubdate data-updated="true">Sep 18<span>th</span>, 2011</time>
         
       </p>
     
@@ -443,7 +480,7 @@ my new blogging setup.</p>
   
 
 
-<time datetime="2011-09-15T00:00:00-05:00" pubdate data-updated="true">Sep 15<span>th</span>, 2011</time>
+<time datetime="2011-09-15T00:00:00+07:00" pubdate data-updated="true">Sep 15<span>th</span>, 2011</time>
         
       </p>
     
@@ -498,7 +535,7 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
   
 
 
-<time datetime="2011-09-11T00:00:00-05:00" pubdate data-updated="true">Sep 11<span>th</span>, 2011</time>
+<time datetime="2011-09-11T00:00:00+07:00" pubdate data-updated="true">Sep 11<span>th</span>, 2011</time>
         
       </p>
     
@@ -544,7 +581,7 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
   
 
 
-<time datetime="2011-09-04T00:00:00-05:00" pubdate data-updated="true">Sep 4<span>th</span>, 2011</time>
+<time datetime="2011-09-04T00:00:00+07:00" pubdate data-updated="true">Sep 4<span>th</span>, 2011</time>
         
       </p>
     
@@ -587,7 +624,7 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
   
 
 
-<time datetime="2011-08-28T00:00:00-05:00" pubdate data-updated="true">Aug 28<span>th</span>, 2011</time>
+<time datetime="2011-08-28T00:00:00+07:00" pubdate data-updated="true">Aug 28<span>th</span>, 2011</time>
         
       </p>
     
@@ -633,7 +670,7 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
   
 
 
-<time datetime="2011-08-27T00:00:00-05:00" pubdate data-updated="true">Aug 27<span>th</span>, 2011</time>
+<time datetime="2011-08-27T00:00:00+07:00" pubdate data-updated="true">Aug 27<span>th</span>, 2011</time>
         
       </p>
     
@@ -657,46 +694,6 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
 <li><a href="http://tagaholic.me/2009/05/11/demystifying-irb-commands.html">Demistifying <span class="caps">IRB</span>&#8217;s Commands</a> </li><br />
 <li><a href="http://kconrails.com/2010/11/30/ruby-enumerable-primer-part-1-the-basics/">Ruby Enumerable Magic: The Basics</a></li><br /></p>
 </ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/08/23/review-metasplot-the-penetration-testers-guide/">Review: Metasploit - the Penetration Tester&#8217;s Guide</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-23T00:00:00-05:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Disclaimer: The fine folks at No Starch Press were nice enough to provide me with a review copy of this book, but this has not influenced this review in any way.</em></p>
-<p>Where to start? The <a href="http://www.metasploit.com/">Metasploit Framework</a> (<span class="caps">MSF</span>) is a very popular penetration testing tool used by security professionals the world over. It was previously written in Perl but underwent a complete rewrite for version 3, where the developers switched the project to Ruby. The tool unifies the various stages of penetration testing in convenient interfaces (&#8220;msfconsole&#8221; for interactive use and &#8220;msfcli&#8221; for scripting purposes): information gathering and storage, exploit and payload configuration, <span class="caps">IDS</span> and antivirus evasion and actually exploiting the system.</p>
-<p>From this you probably can gather that Metasploit is quite big and complex, as well as in a state of constant flux. This makes it rather hard to write a definitive book on it, which is illustrated by the fact that shortly after this volume got published, the Metasploit team released version 4 of the framework. Considering these difficulties, I&#8217;m tempted to say that the authors have done a tremendous job describing <span class="caps">MSF</span> as it was at the time of writing.</p>
-<p>Now for the actual content: after a foreword by Metasploit&#8217;s main developer HD Moore, there&#8217;s a little introduction section on penetration testing and the history of the framework. This is followed by the first chapter, which covers some penetration testing basics. After this the authors give a first introduction to the <span class="caps">MSF</span>, before dedicating a chapter each to various phases of pen testing, namely information gathering, vulnerability scanning and the actual exploitation. After this you&#8217;ll find a whole chapter on Meterpreter, covering various aspects of post-exploitation techniques. Once you get to this point, you should have a good idea about how Metasploit works in principle and how capable it is. The authors don&#8217;t stop here though, but use the following chapters to try to teach you about avoiding detection, client-side exploits and  Metasploit&#8217;s auxiliary modules. By this point in the book it felt like I already had learned a lot, but then I realized that I&#8217;m only halfway through the book! There still were chapters on various topics, including the social-engineering toolkit which is built in the <span class="caps">MSF</span> and wireless exploitation with Karmetasploit. As a Ruby developer/dev ops guy I was really interested in the next couple of chapters, which deal with building your own modules and exploits as well as porting existing exploits to Metasploit and Meterpreter scripting. Wow, the authors definitely covered a lot of ground until here, but we are still not done, since there&#8217;s on more chapter on how to simulate your pen tests.</p>
-<p>While the above shows what the book covered, it doesn&#8217;t say much on how it was covered. In my opinion the authors did a very good job, the text is easy to follow and to the point and helped by screenshots and transcripts of &#8220;msfconsole&#8221; sessions. Sure, most of this material is also available on the <a href="http://www.offensive-security.com/metasploit-unleashed/Metasploit_Unleashed_Information_Security_Training">Metasploit Unleashed</a> web site, but I like having it all in the form of one compact book. I noticed 2-3 places where the textual description and the content of the screenshot/transcript didn&#8217;t exactly match, which can lead to brief moments of confusion, but nothing dramatic.</p>
-<p>If you are new to Metasploit and want to get up to speed quickly, it&#8217;s hard to imagine that you&#8217;ll find a better book at the moment. More experienced users of the framework should flip through it in a book store to decide how much they&#8217;ll really get from it, but it&#8217;s probably still a good book to have around, even if it&#8217;s just for the cheat sheet in Appendix B.</p></div>
   
   
 
@@ -832,7 +829,7 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

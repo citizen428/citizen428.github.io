@@ -4,7 +4,7 @@
   <title><![CDATA[Category: docs | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/docs/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-06-09T20:18:44-05:00</updated>
+  <updated>2013-07-29T19:58:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,9 +16,9 @@
   <entry>
     <title type="html"><![CDATA[Look who's back...]]></title>
     <link href="http://citizen428.net/blog/2005/10/29/look-whos-back/"/>
-    <updated>2005-10-29T00:00:00-05:00</updated>
+    <updated>2005-10-29T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2005/10/29/look-whos-back</id>
-    <content type="html"><![CDATA[<p>Seems like I haven't had a post on Planet for quite some time now, which may have to do with he fact that I'm "officially away":http://dev.gentoo.org/devaway/ in October... However, there are times when I just don't want to learn for that frigging exam, so here's a little status update on my Gentoo work:</p>
+    <content type="html"><![CDATA[<p>Seems like I haven&rsquo;t had a post on Planet for quite some time now, which may have to do with he fact that I&rsquo;m &ldquo;officially away&rdquo;:<a href="http://dev.gentoo.org/devaway/">http://dev.gentoo.org/devaway/</a> in October&hellip; However, there are times when I just don&rsquo;t want to learn for that frigging exam, so here&rsquo;s a little status update on my Gentoo work:</p>
 
 <ul>
 <li>*Gentoo/ALT documentation:* Since we will soon start to recruit Arch Testers for the Gentoo/ALT project, I converted our old docs to handbook format, moved them around and wrote some new things. This led to the not-quite-finished "Gentoo/ALT Contributor's Guide":http://www.gentoo.org/proj/en/gentoo-alt/contribute/, which is intended to be the one place where people interested in our project should find all the necessary information. I'll still need a few more hours to fix typos and check other docs for now deprecated URLs, but other than that it's fairly complete, so I hope it's useful to you!</li>
