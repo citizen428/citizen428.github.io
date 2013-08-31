@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scala | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/scala/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-07-29T19:58:03+07:00</updated>
+  <updated>2013-09-01T01:28:13+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Review: Functional Programming with Clojure (PeepCode screencast) ]]></title>
     <link href="http://citizen428.net/blog/2009/05/25/review-functional-programming-with-clojure-peepcode-screencast/"/>
-    <updated>2009-05-25T00:00:00+07:00</updated>
+    <updated>2009-05-25T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2009/05/25/review-functional-programming-with-clojure-peepcode-screencast</id>
     <content type="html"><![CDATA[<p>A couple of month ago I first heard about &ldquo;Clojure&rdquo;:<a href="http://clojure.org/,">http://clojure.org/,</a> a <a href="http://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a>-like language sitting on top of the &ldquo;JVM&rdquo;:<a href="http://en.wikipedia.org/wiki/Java_virtual_machine.">http://en.wikipedia.org/wiki/Java_virtual_machine.</a> Alas I didn&rsquo;t yet have time to have a closer look at it, so I decided to get myself the &ldquo;PeepCode screencast&rdquo;:<a href="https://peepcode.com/products/functional-programming-with-clojure.">https://peepcode.com/products/functional-programming-with-clojure.</a></p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: shoes | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/shoes/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-07-29T19:58:03+07:00</updated>
+  <updated>2013-09-01T01:28:13+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby implementations and why we should care]]></title>
     <link href="http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/"/>
-    <updated>2009-03-12T00:00:00+07:00</updated>
+    <updated>2009-03-12T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care</id>
     <content type="html"><![CDATA[<p>Not too lang ago our &ldquo;favorite language&rdquo;:<a href="http://www.ruby-lang.org/en/">http://www.ruby-lang.org/en/</a> had only implementation, the one made by &ldquo;Matz&rdquo;:<a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">http://en.wikipedia.org/wiki/Yukihiro_Matsumoto</a> (now commonly referred to as MatzRuby or MRI). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
 
@@ -41,7 +41,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby and RubyLearning keep me busy]]></title>
     <link href="http://citizen428.net/blog/2009/02/18/ruby-and-rubylearning-keep-me-busy/"/>
-    <updated>2009-02-18T00:00:00+07:00</updated>
+    <updated>2009-02-18T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2009/02/18/ruby-and-rubylearning-keep-me-busy</id>
     <content type="html"><![CDATA[<p>If you are interested in finally learning Ruby, but don&rsquo;t have the motivation to do it on your own, you should definitely check out  &ldquo;RubyLearning&rdquo;:<a href="http://rubylearning.org,">http://rubylearning.org,</a> it&rsquo;s a great way to learn together with other people but at your own pace.</p>
 
@@ -63,7 +63,7 @@
   <entry>
     <title type="html"><![CDATA[Zber Fubrf!]]></title>
     <link href="http://citizen428.net/blog/2009/02/06/zber-fubrf/"/>
-    <updated>2009-02-06T00:00:00+07:00</updated>
+    <updated>2009-02-06T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2009/02/06/zber-fubrf</id>
     <content type="html"><![CDATA[<p>Playing with &ldquo;Shoes&rdquo;:<a href="http://shoooes.net/">http://shoooes.net/</a> is kinda addictive, so I wrote my &ldquo;third little app&rdquo;:<a href="http://the-shoebox.org/apps/131">http://the-shoebox.org/apps/131</a> for the &ldquo;Shoebox&rdquo;:<a href="http://the-shoebox.org/.">http://the-shoebox.org/.</a> This little experiment does &ldquo;ROT13&rdquo;:<a href="http://en.wikipedia.org/wiki/ROT13">http://en.wikipedia.org/wiki/ROT13</a> which in itself is lame, but it was a good way to see how to read from and write to the system clipboard. Altogether this has 20 lines of code, of which 4 only consist of the word &ldquo;end&rdquo;, so I think Shoes really succeeded in providing us with a tiny and easy to use cross-platform toolkit :)</p>
 
@@ -74,7 +74,7 @@
   <entry>
     <title type="html"><![CDATA[Babysteps]]></title>
     <link href="http://citizen428.net/blog/2009/02/02/babysteps/"/>
-    <updated>2009-02-02T00:00:00+07:00</updated>
+    <updated>2009-02-02T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2009/02/02/babysteps</id>
     <content type="html"><![CDATA[<p>While writing my &ldquo;second Shoes app&rdquo;:<a href="http://the-shoebox.org/apps/128">http://the-shoebox.org/apps/128</a> I ran into the problem of how to require a gem from within Shoes. Luckily &ldquo;the truth is out there&rdquo;:<a href="http://hackety.org/2008/05/08/clearingUpTheWholeShoesAndRubyGemsDeal.html,">http://hackety.org/2008/05/08/clearingUpTheWholeShoesAndRubyGemsDeal.html,</a> but I wanna share it with you nonetheless:</p>
 
@@ -95,7 +95,7 @@
   <entry>
     <title type="html"><![CDATA[RubyLearning got a new mentor with shiny Shoes and a Mac]]></title>
     <link href="http://citizen428.net/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac/"/>
-    <updated>2009-02-01T00:00:00+07:00</updated>
+    <updated>2009-02-01T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac</id>
     <content type="html"><![CDATA[<p>Since I currently have quite a lot of time but am slightly on the poor side (as we all know: &lsquo;money = has_time ? 0 : loads.to_i&rsquo;) I decided to join batch 10 of <a href="http://rubylearning.org/class/">RubyLearning&rsquo;s</a> free online core Ruby programming course. In my opinion the course is <em>very</em> good, so if you always wanted to learn Ruby but couldn&rsquo;t find the motivation alone, definitely give this a try! But since I myself am not exactly new to Ruby, it so happened that after the first week of the course I now joined the RubyLearning team as a mentor. Glad to be part of the gang, folks! :)</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-07-29T19:58:03+07:00</updated>
+  <updated>2013-09-01T01:28:13+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
     <link href="http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
-    <updated>2012-07-30T23:24:00+07:00</updated>
+    <updated>2012-07-30T23:24:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
     <content type="html"><![CDATA[<p>Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today&rsquo;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&rsquo;s an example:</p>
 
@@ -77,7 +77,7 @@
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
     <link href="http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
-    <updated>2012-07-28T10:15:00+07:00</updated>
+    <updated>2012-07-28T10:15:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
     <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
 
@@ -94,7 +94,7 @@
   <entry>
     <title type="html"><![CDATA[Shenanigans]]></title>
     <link href="http://citizen428.net/blog/2012/07/03/shenanigans/"/>
-    <updated>2012-07-03T19:46:00+07:00</updated>
+    <updated>2012-07-03T19:46:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/07/03/shenanigans</id>
     <content type="html"><![CDATA[<p>About 1.5 month ago I finally packaged some of my Ruby extension methods into the aptly named <a href="https://rubygems.org/gems/shenanigans">Shenanigans</a> gem. It&rsquo;s similar to <a href="http://rubyworks.github.com/facets/">Facets</a> or <a href="http://as.rubyonrails.org/">ActiveSupport</a>, but probably less useful to most people. Also some of the methods actually are in Facets, although sometimes with different names or slightly different semantics. Anyway, since some people told me they actually do like the gem, here&rsquo;s a quick summary of what the different methods do and how they can be useful.</p>
 
@@ -117,7 +117,7 @@
   <entry>
     <title type="html"><![CDATA[Rails — Display branch in development mode]]></title>
     <link href="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/"/>
-    <updated>2012-06-12T21:33:00+07:00</updated>
+    <updated>2012-06-12T21:33:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode</id>
     <content type="html"><![CDATA[<p>At work we are building a Rails app that&rsquo;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it&rsquo;d be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn&rsquo;t have been any simpler:</p>
 
@@ -139,7 +139,7 @@
   <entry>
     <title type="html"><![CDATA[Tap dance]]></title>
     <link href="http://citizen428.net/blog/2012/05/14/tap-dance/"/>
-    <updated>2012-05-14T23:14:00+07:00</updated>
+    <updated>2012-05-14T23:14:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/05/14/tap-dance</id>
     <content type="html"><![CDATA[<p>Ruby&rsquo;s <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> is a really nice and useful method. One of my favorite uses is <code>Object#d</code>, which I think I originally saw in <a href="https://github.com/janlelis/irbtools">irbtools</a>. Personally, I&rsquo;m using the following version in my <code>~/.irbrc</code>:</p>
 

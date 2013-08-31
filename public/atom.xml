@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-07-29T19:58:03+07:00</updated>
+  <updated>2013-09-01T01:28:13+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -14,9 +14,350 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Extending Nmap with Lua]]></title>
+    <link href="http://citizen428.net/blog/2013/08/31/extending-nmap-with-lua/"/>
+    <updated>2013-08-31T17:49:00+08:00</updated>
+    <id>http://citizen428.net/blog/2013/08/31/extending-nmap-with-lua</id>
+    <content type="html"><![CDATA[<p><em>I originally wrote this piece for a pentesting magazine, but after some unprofessional behavior by their editor I lost my cool and decided not too publish it there. It&rsquo;d be a shame to let it go to waste though, so I after almost three month I finally decided to put it up on my blog.</em></p>
+
+<p>Whether you are working as a security professional or a network administrator, chances are that <a href="http://nmap.org/">Nmap</a> (“Network Mapper”) is part of your regular toolkit. For many people this project, which was started by Gordon &ldquo;Fyodor&rdquo; Lyon in 1997, is the first choice when it comes to host and service discovery. But thanks to the Nmap Scripting Engine (NSE), it can do much more than that, allowing users to easily develop and share their own scripts, thus turning it into a versatile security scanner.</p>
+
+<h3>What you will learn&hellip;</h3>
+
+<ul>
+<li>basics of the Lua programming language,</li>
+<li>walkthrough of a simple NSE script,</li>
+<li>where to find more information on scripting Nmap and Lua in general.</li>
+</ul>
+
+
+<h3>What you should know&hellip;</h3>
+
+<ul>
+<li>basic Nmap usage,</li>
+<li>an imperative programming language.</li>
+</ul>
+
+
+<h3>The Nmap Scripting Engine (NSE)</h3>
+
+<p>Scripting has been part of Nmap for a while, but version 6 includes a dramatically improved implementation of the NSE infrastructure. This also led to an enormous increase in <a href="http://nmap.org/nsedoc/">available scripts</a>, from 59 in version 5, to 347 in the latest release and more than 430 in the current SVN repository. The core of NSE is an embedded Lua interpreter. Before NSE’s implementation started, the Nmap developers considered various programming languages for inclusion, but finally settled on Lua because it&rsquo;s small, liberally licensed (MIT), fast, actively developed and designed with embeddability in mind. It&rsquo;s also used in other popular FOSS security tools like <a href="http://www.wireshark.org">Wireshark</a> and <a href="http://snort.org/">Snort</a>, as well as in popular projects such as <em>World of Warcraft</em> or the window manager <a href="http://awesome.naquadah.org/">Awesome</a>.</p>
+
+<h2>The Lua Programming Language</h2>
+
+<p>Development of <a href="http://lua.org/">Lua</a> started in 1993 at the Pontifical Catholic University of Rio de Janeiro, Brazil. It was designed by Roberto Ierusalimschy, Waldemar Celes and Luiz Henrique de Figueiredo, with the primary goals of being lightweight, cross-platform and easy to embed in other projects. These goals were achieved by writing the language in portable ISO C and giving it a comparatively simple C API. Also Lua&rsquo;s interpreter only takes up about 180 kB in compiled form, so embedding it does not incur a huge cost. Over the years it became a popular scripting and extension language, used in a wide variety of projects. The syntax of Lua should be familiar to anyone who has experience in Modula or C style languages (control structures like <em>if</em>, <em>while</em>, <em>for</em>), but the designers borrowed liberally from other languages as well: the semantics of Lua are heavily influenced by Scheme, and even though the different syntax obscures this a bit, it becomes rather clear the longer you use the language. In some ways it feels like a cleaner and better designed JavaScript, so it&rsquo;s normally
+easy to understand a given snippet of Lua code even with little or no previous exposure to the language.</p>
+
+<h3>Key features</h3>
+
+<p>Lua features first-class functions, thus allowing the developer to treat functions like any other data type. It also doesn&rsquo;t impose a certain programming paradigm, but instead provides meta-features to extend the language as needed. This for example makes it possible to implement things like inheritance in a rather simple and straightforward way without explicit language support. Lua is also garbage collected, features closures and proper tails calls and provides an infrastructure for cooperative multitasking in the form of coroutines. While most of this goes beyond the scope of this article (and NSE), interested readers can find more information in the excellent book &ldquo;Programming in Lua&rdquo;, <a href="http://www.lua.org/pil/">an older version of which is available for free on the project&rsquo;s web site</a>.</p>
+
+<h3>Tables</h3>
+
+<p>There&rsquo;s is however one more feature of Lua that&rsquo;s worth discussing in a bit more detail, namely its reliance on a single compound data structure, the table. Tables are in essence what other languages commonly refer to as associative arrays or dictionaries, or key-value pairs. This is how you create a simple table:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">table</span> <span class="o">=</span> <span class="p">{</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">foo&quot;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The values can be accessed like this: <em>t[&ldquo;x&rdquo;]</em> and <em>t[&ldquo;y&rdquo;]</em>. For string keys Lua supports a nice shorthand though, so <em>t.x</em> and <em>t.y</em> will produce the same result.</p>
+
+<p>One special feature of Lua&rsquo;s tables is that they are also optimized for use as arrays, which can be created like this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">array</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">citizen&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">428&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">blog&quot;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Indices are assigned automatically and unlike in other languages start from 1, not 0 (although it is possible to explicitly assign to <em>array[0]</em>). So to get the string &ldquo;428&rdquo; out of our array, we have to use <em>array[2]</em>.</p>
+
+<p>With this comparatively simple data structure (and the powerful metatable feature) Lua not only implements arrays and dictionaries, but also records/structs, namespaces, classes, objects and much more.</p>
+
+<h3>Examples</h3>
+
+<p>Enough theory, let’s look at some example Lua code. First the customary “Hello world” program:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="nb">print</span> <span class="err">“</span><span class="n">Hello</span> <span class="n">world</span><span class="err">”</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will just output <em>Hello world</em>. Now for a function definition:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">function</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</span><span class='line'>  <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="s">Hello &quot;</span> <span class="o">..</span> <span class="n">name</span> <span class="o">..</span> <span class="s2">&quot;</span><span class="s">!&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To generate the same output as above, we would have to call the function with the appropriate argument: <em>sayHello(“world”)</em>. Alternatively, the same function could be defined like this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">sayHello</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</span><span class='line'>  <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="s">Hello &quot;</span> <span class="o">..</span> <span class="n">name</span> <span class="o">..</span> <span class="s2">&quot;</span><span class="s">!&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Last but not least a small loop that iterates over an array and prints out each element (<em>ipairs</em> returns the index-value pairs of an array):</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">str</span> <span class="k">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'>  <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="o">..</span><span class="s2">&quot;</span><span class="s">: &quot;</span><span class="o">..</span><span class="n">str</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Assuming the variable <em>array</em> contains the elements “citizen”, “428”, and “blog”, this will generate the following output:</p>
+
+<pre><code>1: citizen
+2: 428
+3: blog
+</code></pre>
+
+<h2>NSE example script</h2>
+
+<p>The Nmap web site contains some excellent documentation regarding NSE (<a href="http://nmap.org/book/man-nse.html">short intro</a>, <a href="http://nmap.org/book/nse.html">full book chapter</a>, <a href="http://nmap.org/book/nse-tutorial.html">tutorial</a>, so instead of repeating all of what’s written there, we’ll look at a practical example instead. The script shown here is <a href="http://nmap.org/nsedoc/scripts/http-generator.html">http_generator.nse</a>, which looks for the presence of an HTTP <em>generator</em> meta tag to determine which CMS the scanned hosts run (if any). This information can be useful, since outdated versions of such systems are common attack vectors.</p>
+
+<h3>Library imports</h3>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">http</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;</span><span class="s">http&quot;</span>
+</span><span class='line'><span class="kd">local</span> <span class="n">shortport</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;</span><span class="s">shortport&quot;</span>
+</span><span class='line'><span class="kd">local</span> <span class="n">stdnse</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;</span><span class="s">stdnse&quot;</span>
+</span><span class='line'><span class="kd">local</span> <span class="n">string</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;</span><span class="s">string&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It&rsquo;s customary to start Nmap scripts by importing all the needed <a href="http://nmap.org/book/nse-library.html">libraries</a>. In the process they are assigned to local variables, so if you wanted to access them under a different (presumably shorter) name you could do so (for example <em>local s = require “string”</em>). There&rsquo;s a wide variety of available libraries, from protocols (<em>afp</em>, <em>dns</em>, <em>http</em>, <em>bitcoin</em>, <em>openssl</em> etc.) over encoding/decoding (<em>base32</em>, <em>base64</em>, <em>json</em>) and utility libraries (<em>nmap</em>, <em>packet</em>, <em>pcre</em>) to a framework for brute-force attacks against services (<em>brute</em>).
+The script we are looking at uses the <em>http</em> library for communication, <em>shortport</em> for an easier way to define portrules (more on that later), and <em>stdnse</em>, a collection of utility functions provided by NSE. The <em>string</em> library is a standard Lua library and used for string matching in this example.</p>
+
+<h3>Metadata</h3>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">description</span> <span class="o">=</span> <span class="s">[[ Displays the contents of the &quot;generator&quot; meta tag of a web page(default: /) if there is one.</span>
+</span><span class='line'><span class="s">]]</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Michael Kohl&quot;</span>
+</span><span class='line'><span class="n">license</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Same as Nmap--See http://nmap.org/book/man-legal.html&quot;</span>
+</span><span class='line'><span class="n">categories</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;</span><span class="s">default&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">discovery&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">safe&quot;</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">---</span>
+</span><span class='line'><span class="c1">-- @usage</span>
+</span><span class='line'><span class="c1">-- nmap --script http-generator [--script-args http-generator.path=&lt;path&gt;,http-generator.redirects=&lt;number&gt;,...] &lt;host&gt;</span>
+</span><span class='line'><span class="c1">--</span>
+</span><span class='line'><span class="c1">-- @output</span>
+</span><span class='line'><span class="c1">-- PORT    STATE SERVICE</span>
+</span><span class='line'><span class="c1">-- 80/tcp  open  http</span>
+</span><span class='line'><span class="c1">-- |_http-generator: TYPO3 4.2 CMS</span>
+</span><span class='line'><span class="c1">-- 443/tcp open  https</span>
+</span><span class='line'><span class="c1">-- |_http-generator: TYPO3 4.2 CMS</span>
+</span><span class='line'><span class="c1">--</span>
+</span><span class='line'><span class="c1">-- @args http-generator.path Specify the path you want to check for a generator meta tag (default to &#39;/&#39;).</span>
+</span><span class='line'><span class="c1">-- @args http-generator.redirects Specify the maximum number of redirects to follow (defaults to 3).</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">-- Changelog:</span>
+</span><span class='line'><span class="c1">-- 2011-12-23 Michael Kohl &lt;citizen428@gmail.com&gt;:</span>
+</span><span class='line'><span class="c1">--   + Initial version</span>
+</span><span class='line'><span class="o">...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After the library imports, scripts contain some metadata that is used for documentation and internal purposes. The <em>description</em> and author variables are self-explanatory, the syntax used for the former is Lua&rsquo;s way of creating so-called &ldquo;heredocs&rdquo;, string literals that preserve white space and line breaks. In regard to the <em>license</em> script authors have two choices, the GPL-like Nmap license, as well as a simplified (2-clause) BSD license. Last but not least there&rsquo;s documentation in the NSEDoc format. It&rsquo;s customary to include usage documentation, example output, descriptions of all the available arguments (if any) as well as a changelog.</p>
+
+<p>There&rsquo;s another important field that this specific script doesn&rsquo;t use, <em>dependencies</em>. This defines the order in which scripts should be run and is used for the case where one script works on the results of another script. It&rsquo;s important to keep in mind that scripts listed here will not be automatically run, they still have to be selected via <em>&mdash;script scriptname</em> or in another way (for example <em>&mdash;script=default</em>).</p>
+
+<p>The <em>categories</em> variable is a bit more interesting, it defines which groups of scripts our current program belongs to. Scripts marked as <em>default</em> will be run automatically when Nmap is started with the <em>-sC</em> or <em>-A</em> options.To qualify for inclusion in this category, scripts have to adhere to some criteria: they need to be fast, reliable, non-obstrusive and generally useful. There are no clear definitions for these criteria, it&rsquo;s up to the Nmap developers to add a script to this category. The <em>discovery</em> category collects all scripts that actively try to gather more information about the scan targets, in our case the &ldquo;generator&rdquo; HTML meta tag. If a script is marked as <em>safe</em>, that means that it was not written with the intent of crashing services or exploiting vulnerabilities and that it&rsquo;s unlikely to consume large amounts of resources. There are many more categories Nmap uses, for example <em>auth</em> (scripts dealing with authentication credentials), <em>brute</em> (tools for brute force attacks) or <em>vuln</em> (checking for specific vulnerabilities). For a full list, please consult Nmap&rsquo;s excellent documentation.</p>
+
+<p>Now that we know a bit more about categories, let&rsquo;s see how we can use that knowledge for more interesting Nmap runs. Let’s start by running all the default scripts:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap -sC example.com
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap --script<span class="o">=</span>default example.com
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The invocation <em>nmap -A example.com</em> (&ldquo;Aggressive/advanced scan options&rdquo;) enables OS and version detection, script scanning (equivalent to <em>nmap -sC</em>), and traceroute.</p>
+
+<p>If you just want to run a single script, you can do so by specifying the <em>&mdash;script</em> argument, for example <em>nmap &mdash;script http-generator example.com</em>.</p>
+
+<p>It’s also possible to run scripts from several categories, by using something like <em>nmap &mdash;script &ldquo;default,safe&rdquo; example.com</em> or <em>nmap &mdash;script &ldquo;default or safe&rdquo; example.com</em>. There is an analogous and operator, so <em>nmap &mdash;script &ldquo;default AND safe&rdquo; example.com</em> will only run scripts that are in all the listed categories.</p>
+
+<p>As an example for a rather complex invocation, the following command will run all scripts from the three specified categories, except for the ones whose name starts with &ldquo;http-&rdquo;.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap --script <span class="s2">&quot;(default or safe or intrusive) and not http-*&quot;</span> example.com
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Last but not least it’s also possible to run user scripts which are not part of the standard Nmap distribution, as show in the following example:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap --script default,banner,/home/user/customscripts example.com
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The above invocation will run all default scripts, the script named “banner” and all scripts which can be found in the directory <em>/home/user/customscripts</em>.</p>
+
+<h3>Rule</h3>
+
+<p>The <em>rule</em> definition is an important part of every NSE script, it determines when the script should run. A rule is a Lua function that returns <em>true</em> or <em>false</em> to decide whether or not the script&rsquo;s action function will be executed. There are several different rule types, depending on when the script is supposed to run (before or after hosts are scanned, <em>prerule</em> and <em>postrule</em>) or if the trigger is a specific host or port (<em>hostrule</em> and <em>portrule</em>).</p>
+
+<p>The rule definition in our example script is very simple since it uses the very handy <em>shortport</em> library, which has several predefined rules for common scenarios:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">rule</span> <span class="o">=</span> <span class="n">shortport</span><span class="p">.</span><span class="n">http</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will match and return <em>true</em> when a given port is likely to be an HTTP port.</p>
+
+<h3>Action</h3>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">action</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">path</span> <span class="o">=</span> <span class="n">stdnse</span><span class="p">.</span><span class="n">get_script_args</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">http-generator.path&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;</span><span class="s">/&#39;</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">redirects</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">stdnse</span><span class="p">.</span><span class="n">get_script_args</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">http-generator.redirects&#39;</span><span class="p">))</span> <span class="ow">or</span> <span class="mi">3</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">-- Worst case: &lt;meta name=Generator content=&quot;Microsoft Word 11&quot;&gt;</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">&lt;meta name=&quot;?generator&quot;? content=&quot;([^</span><span class="se">\&quot;</span><span class="s">]*)&quot; ?/?&gt;&#39;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">-- make pattern case-insensitive</span>
+</span><span class='line'>    <span class="n">pattern</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">:</span><span class="n">gsub</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">%a&quot;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span><span class='line'>                  <span class="k">return</span> <span class="nb">string.format</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[%s%s]&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="nb">string.upper</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</span><span class='line'>              <span class="k">end</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">response</span> <span class="o">=</span> <span class="n">follow_redirects</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">redirects</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span> <span class="n">response</span> <span class="ow">and</span> <span class="n">response</span><span class="p">.</span><span class="n">body</span> <span class="p">)</span> <span class="k">then</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <em>action</em> function is the heart of every NSE script, it contains the code that will be performed when the rule matches. Basically <em>action</em> is just another Lua function that accepts the same arguments as the <em>rule</em> function (which is not as obvious in our example because of the use of the <em>shortport.http</em> rule).</p>
+
+<p>The function starts with checking for the presence of two arguments and specifies defaults in case the user didn’t provide any values for them. Arguments can be passed to the script in the following way:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">nmap</span> <span class="c1">--script http-generator --script-args http-generator.path=/cms,http-generator.redirects=2 example.com</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>They get stored in the table <em>nmap.registry.args</em>, but instead of using them directly you should use the function <em>stdnse.get_script_args</em> to access them.</p>
+
+<p>After the argument handling, a pattern matching the HTTP &ldquo;meta&rdquo; tag is specified. Standard Lua does not include a regular expression library, but uses its own patterns instead. While there is a library providing Perl-compatible regular expressions (PCRE) for Nmap, it seemed like overkill to drag it in for a single expression, so I relied on plain Lua for this, which explains the little workaround used in the next line to make the pattern case insensitive by replacing every letter (the pattern <em>%a</em>) with its lower and upper case version.
+After that the <em>follow_redirects</em> helper function is used to get an HTTP response, and if there is one, its body will be scanned for our pattern.</p>
+
+<p>If there is a match, the function will return the matching string and Nmap will automatically include it in its output as shown here:</p>
+
+<pre><code>PORT   STATE SERVICE
+80/tcp open  http
+| _http-generator: WordPress.com |
+</code></pre>
+
+<p>Instead of a string the action can also return tables consisting of name-value pairs which are then formatted in a structured fashion, whereas the return value <em>nil</em> generates no output at all.</p>
+
+<p>As you may have noticed I didn’t yet show you the helper function mentioned above, so while it’s not very interesting in itself, I’ll include it for completeness’ sake:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">follow_redirects</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">loc</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">^[hH][tT][tT][pP]/1.[01] 30[12]&quot;</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">while</span> <span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;</span><span class="s">status-line&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="s2">&quot;</span><span class="s">&quot;</span><span class="p">):</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">do</span>
+</span><span class='line'>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+</span><span class='line'>        <span class="n">loc</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;</span><span class="s">location&#39;</span><span class="p">]</span>
+</span><span class='line'>        <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get_url</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">response</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This helper function is a simple way to follow HTTP redirects. It first defines a pattern for recognizing the relevant HTTP status codes (301 and 302) before making a request to the specified host, port and path combination. It then checks for the presence of a redirect and if there is one, follows it to retrieve the location information from the new location. When there are no more redirects or the redirect limit (specified in the argument <em>n</em>) has been reached, the function returns the full HTTP response to the caller.</p>
+
+<h3>Digging deeper</h3>
+
+<p>And that’s all there is to it! Thanks to the excellent infrastructure provided by NSE and all its libraries, writing custom Nmap scripts is a pretty easy and straightforward task. Anybody with a bit of scripting experience should be able to pick up the basics in a very short time and then learn about the finer points while developing scripts. The Nmap development team has assembled some excellent documentation which can be found online at <a href="http://nmap.org/book/nse.html.">http://nmap.org/book/nse.html.</a> There’s also a great presentation by Fyodor and Nmap co-maintainer David Fifield available <a href="http://nmap.org/presentations/BHDC10/">online</a> which gets you started on developing your own NSE scripts in less than an hour.</p>
+
+<h2>Summary</h2>
+
+<p>Nmap is a popular tool for security and network professionals around the world, and its excellent scripting capabilities make it very versatile. The Nmap Scripting Engine relies on the popular and easy to learn Lua programming language, and provides useful libraries for quickly and efficiently developing your own custom scripts, which can then be shared with the wider Nmap user community.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[¡Viva Mexico!]]></title>
     <link href="http://citizen428.net/blog/2013/07/27/viva-mexico/"/>
-    <updated>2013-07-27T20:04:00+07:00</updated>
+    <updated>2013-07-27T20:04:00+08:00</updated>
     <id>http://citizen428.net/blog/2013/07/27/viva-mexico</id>
     <content type="html"><![CDATA[<p>Oh man, this is one overdue post. I wanted to write about Mexico forever, but then we were traveling in Taiwan, and suddenly the whole Latin America experience just seemed so far away already&hellip; Anyway, we are now in Vietnam (Hanoi to be more specific), so I thought I&rsquo;d finally sit down and write up my impressions.</p>
 
@@ -33,7 +374,7 @@
   <entry>
     <title type="html"><![CDATA[My Kindle Fire and I]]></title>
     <link href="http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i/"/>
-    <updated>2013-06-07T16:52:00+07:00</updated>
+    <updated>2013-06-07T16:52:00+08:00</updated>
     <id>http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i</id>
     <content type="html"><![CDATA[<p>Back in October I broke my trusty old <a href="http://www.amazon.com/gp/product/B004HZYA6E/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004HZYA6E&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Keyboard</a>, a rather
 annoying thing to happen at the beginning of a long trip. As a
@@ -198,7 +539,7 @@ and read some comics, all on the same device.</p>
   <entry>
     <title type="html"><![CDATA[South America: The summary]]></title>
     <link href="http://citizen428.net/blog/2013/05/31/south-america-the-summary/"/>
-    <updated>2013-05-31T17:52:00+07:00</updated>
+    <updated>2013-05-31T17:52:00+08:00</updated>
     <id>http://citizen428.net/blog/2013/05/31/south-america-the-summary</id>
     <content type="html"><![CDATA[<p>After a three day layover in the U.S., Mexico seems like the perfect place to write up my thoughts and the roughly 7.5 months we spent in South America. I&rsquo;m sure there are plenty of omissions, but it should be enough to give you an idea.</p>
 
@@ -279,7 +620,7 @@ Another place many people love and that has a lot of hype surrounding it. Coming
   <entry>
     <title type="html"><![CDATA[Living with the Hare Krishna]]></title>
     <link href="http://citizen428.net/blog/2013/04/24/living-with-the-hare-krishna/"/>
-    <updated>2013-04-24T18:43:00+07:00</updated>
+    <updated>2013-04-24T18:43:00+08:00</updated>
     <id>http://citizen428.net/blog/2013/04/24/living-with-the-hare-krishna</id>
     <content type="html"><![CDATA[<p>I know there&rsquo;s lots of other things I could tell you about (like Peru), but we spent last week at a Hare Krishna temple/farm in the Ecuadorian jungle at that&rsquo;s gonna be today&rsquo;s story.</p>
 
@@ -315,7 +656,7 @@ Another place many people love and that has a lot of hype surrounding it. Coming
   <entry>
     <title type="html"><![CDATA[Filling in the blanks]]></title>
     <link href="http://citizen428.net/blog/2013/03/23/filling-in-the-blanks/"/>
-    <updated>2013-03-23T17:20:00+07:00</updated>
+    <updated>2013-03-23T17:20:00+08:00</updated>
     <id>http://citizen428.net/blog/2013/03/23/filling-in-the-blanks</id>
     <content type="html"><![CDATA[<p>As should be clear by now, I&rsquo;m not overly good at writing these things regularly, so I won&rsquo;t even pretend to be sorry it&rsquo;s been over a month
 since the last one, and I also won&rsquo;t promise that the next one will come any sooner. I also kinda gave up hope on ever properly filling you in on Argentina part 2 and 3 and Chile, so a very short summary will have to do:</p>
@@ -360,7 +701,7 @@ place, hard to leave.</li>
   <entry>
     <title type="html"><![CDATA[Mix it up!]]></title>
     <link href="http://citizen428.net/blog/2013/02/13/mix-it-up/"/>
-    <updated>2013-02-13T18:56:00+07:00</updated>
+    <updated>2013-02-13T18:56:00+08:00</updated>
     <id>http://citizen428.net/blog/2013/02/13/mix-it-up</id>
     <content type="html"><![CDATA[<p>I know I didn&rsquo;t write in way too long (and I still didn&rsquo;t talk about Argentina and Chile), but that just happens when you are traveling. Especially when that takes you to Bolivia, where Internet connection speeds are still stuck in the 1990s.</p>
 
@@ -379,7 +720,7 @@ place, hard to leave.</li>
   <entry>
     <title type="html"><![CDATA[Cono Sur reflections]]></title>
     <link href="http://citizen428.net/blog/2013/01/25/cono-sur-reflections/"/>
-    <updated>2013-01-25T12:00:00+07:00</updated>
+    <updated>2013-01-25T12:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2013/01/25/cono-sur-reflections</id>
     <content type="html"><![CDATA[<p>I know I&rsquo;m far behind on telling you about the places we visited, but
 I will eventually catch up, or at least I hope so. For now I wanted to
@@ -477,7 +818,7 @@ missing)</li>
   <entry>
     <title type="html"><![CDATA[2012 travel review]]></title>
     <link href="http://citizen428.net/blog/2013/01/09/2012-travel-review/"/>
-    <updated>2013-01-09T13:25:00+07:00</updated>
+    <updated>2013-01-09T13:25:00+08:00</updated>
     <id>http://citizen428.net/blog/2013/01/09/2012-travel-review</id>
     <content type="html"><![CDATA[<p>I know it&rsquo;s a bit late for a 2012 review post, but we spent the last couple of days in a wonderfully isolated place on the Chilean coast without an Internet connection. Anyway, I thought better late than never, so here are some thoughts on the first 3 month of our trip.</p>
 
@@ -512,7 +853,7 @@ missing)</li>
   <entry>
     <title type="html"><![CDATA[2012 reading list]]></title>
     <link href="http://citizen428.net/blog/2013/01/02/2012-reading-list/"/>
-    <updated>2013-01-02T20:44:00+07:00</updated>
+    <updated>2013-01-02T20:44:00+08:00</updated>
     <id>http://citizen428.net/blog/2013/01/02/2012-reading-list</id>
     <content type="html"><![CDATA[<p>Once again here&rsquo;s a list of all the books I read in the past year, in
 reading order. I&rsquo;m surprised I made it to 52 again, since there were
@@ -588,7 +929,7 @@ Ivo Balbaert: <em>The Way to Go</em><br></p>
   <entry>
     <title type="html"><![CDATA[Feliz Navidad!]]></title>
     <link href="http://citizen428.net/blog/2012/12/24/feliz-navidad/"/>
-    <updated>2012-12-24T10:01:00+07:00</updated>
+    <updated>2012-12-24T10:01:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/12/24/feliz-navidad</id>
     <content type="html"><![CDATA[<p>I even have a present for you, the long overdue post about Uruguay,
 one of the highlights of our trip so far!</p>
@@ -644,7 +985,7 @@ the post about the month we just spent in Argentina!</p>
   <entry>
     <title type="html"><![CDATA[A first glimpse of Argentina]]></title>
     <link href="http://citizen428.net/blog/2012/11/21/a-first-glimpse-of-argentina/"/>
-    <updated>2012-11-21T23:37:00+07:00</updated>
+    <updated>2012-11-21T23:37:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/11/21/a-first-glimpse-of-argentina</id>
     <content type="html"><![CDATA[<p>Ladies and gentlemen,</p>
 
@@ -748,7 +1089,7 @@ this thought when I tell you about Uruguay and the rest of Argentina&hellip;</p>
   <entry>
     <title type="html"><![CDATA[In the land of Tereré]]></title>
     <link href="http://citizen428.net/blog/2012/11/12/in-the-land-of-terere/"/>
-    <updated>2012-11-12T19:36:00+07:00</updated>
+    <updated>2012-11-12T19:36:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/11/12/in-the-land-of-terere</id>
     <content type="html"><![CDATA[<p>Considering we left Paraguay almost three weeks ago, it&rsquo;s a shame I
 haven&rsquo;t told you anything about this wonderful place yet. But let&rsquo;s
@@ -850,7 +1191,7 @@ to Uruguay from where I&rsquo;m currently writing this.</p>
   <entry>
     <title type="html"><![CDATA[A quick one for the road]]></title>
     <link href="http://citizen428.net/blog/2012/10/31/a-quick-one-for-the-road/"/>
-    <updated>2012-10-31T19:30:00+07:00</updated>
+    <updated>2012-10-31T19:30:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/10/31/a-quick-one-for-the-road</id>
     <content type="html"><![CDATA[<p>After a lovely time in Paraguay (a separate post will follow), we explored the Northeast of Argentina a bit (Posadas, San Ignacio,
 Iguazu Falls). Today we&rsquo;ll take an overnight bus to Colon were we&rsquo;ll cross into Paysandu (Uruguay) on Friday or so. We don&rsquo;t know how long we&rsquo;ll stay there yet, but after that we&rsquo;ll head back to Argentina to finally visit some cities.</p>
@@ -868,7 +1209,7 @@ Iguazu Falls). Today we&rsquo;ll take an overnight bus to Colon were we&rsquo;ll
   <entry>
     <title type="html"><![CDATA[Curacao! Curawow?]]></title>
     <link href="http://citizen428.net/blog/2012/10/20/curacao-curawow/"/>
-    <updated>2012-10-20T23:15:00+07:00</updated>
+    <updated>2012-10-20T23:15:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/10/20/curacao-curawow</id>
     <content type="html"><![CDATA[<p>Last time I promised you all a bit more information about backpacking on a Caribbean island, so here we go: before we set out, we didn&rsquo;t exactly know how much time to plan for Curacao, so we decided on 12 days, which also had to do with P.&rsquo;s birthday. Considering this island isn&rsquo;t too big this seems like a rather long time, but things here are slow, especially when travelling on a budget&hellip;</p>
 
@@ -893,7 +1234,7 @@ Iguazu Falls). Today we&rsquo;ll take an overnight bus to Colon were we&rsquo;ll
   <entry>
     <title type="html"><![CDATA[Bon bini]]></title>
     <link href="http://citizen428.net/blog/2012/10/12/bon-bini/"/>
-    <updated>2012-10-12T17:55:00+07:00</updated>
+    <updated>2012-10-12T17:55:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/10/12/bon-bini</id>
     <content type="html"><![CDATA[<p><em>This was originally written on October 6th as an email, but I only got around to modify and post it here now.</em></p>
 
@@ -933,7 +1274,7 @@ backpacking on a Caribbean island in the next post.</p>
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-30]]></title>
     <link href="http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30/"/>
-    <updated>2012-09-30T00:00:00+07:00</updated>
+    <updated>2012-09-30T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30</id>
     <content type="html"><![CDATA[<blockquote><p>[W]e’re rushing to meet so many deadlines that we hardly register that what we need most are lifelines.</p><footer><strong>Pico Iyer</strong> <cite><a href='http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&pagewanted=all'>The Joy of Quiet</a></cite></footer></blockquote>
 
@@ -954,7 +1295,7 @@ backpacking on a Caribbean island in the next post.</p>
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-23]]></title>
     <link href="http://citizen428.net/blog/2012/09/23/information-overload-2012-09-23/"/>
-    <updated>2012-09-23T00:00:00+07:00</updated>
+    <updated>2012-09-23T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/09/23/information-overload-2012-09-23</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://derstandard.at/1345166255203/In-Wien-fehlt-der-Diskurs-zu-Gentrifizierung">&ldquo;In Wien fehlt der Diskurs zu Gentrifizierung&rdquo;</a><br>On urban gentrification in Vienna (in German).</li>
@@ -972,7 +1313,7 @@ backpacking on a Caribbean island in the next post.</p>
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-16]]></title>
     <link href="http://citizen428.net/blog/2012/09/16/information-overload-2012-09-16/"/>
-    <updated>2012-09-16T00:00:00+07:00</updated>
+    <updated>2012-09-16T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/09/16/information-overload-2012-09-16</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://wilwheaton.net/2012/09/depression-lies/">depression lies</a><br>A very personal blog post by Wil Wheaton, and one I can relate to very much on several levels.</li>
@@ -989,7 +1330,7 @@ backpacking on a Caribbean island in the next post.</p>
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-09]]></title>
     <link href="http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09/"/>
-    <updated>2012-09-09T00:00:00+07:00</updated>
+    <updated>2012-09-09T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09</id>
     <content type="html"><![CDATA[<p>I was rather busy this week, so this Information Overload is super short.</p>
 
@@ -997,23 +1338,6 @@ backpacking on a Caribbean island in the next post.</p>
 <li><a href="http://lubutu.com/soso/condition-handling-for-non-lispers">Condition Handling for Non-Lispers</a><br>If you ever need to explain condition handling to a non-Lisper, this is a sensible post to point them too.</li>
 <li><a href="http://www.handelsblatt.com/politik/oekonomie/nachrichten/vollgeld-iwf-forscher-spielen-radikale-bankreform-durch-seite-all/7008170-all.html">IWF-Forscher spielen radikale Bankreform durch</a><br>Two IMF economist test a model where banks can&rsquo;t create new money in the form of loans (in German).</li>
 <li><a href="http://news.discovery.com/history/preserved-brain-bog-england-110406.html">Prehistoric human brain found pickled in bog</a><br>A bit older, but still very insteresting for science.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-09-02]]></title>
-    <link href="http://citizen428.net/blog/2012/09/02/information-overload-2012-09-02/"/>
-    <updated>2012-09-02T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/09/02/information-overload-2012-09-02</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://discovermagazine.com/2012/jul-aug/06-vital-signs-woman-needed-upside-down">The Woman Who Needed to Be Upside-Down</a><br>One of the stranger medical stories I&rsquo;ve heard so far.</li>
-<li><a href="http://www.bbc.co.uk/news/world-us-canada-19432553">CIA interrogation probe ends without any charges</a><br>Everything else would have been rather surprising.</li>
-<li><a href="http://www.woz.ch/1235/schengen/ein-oder-mehrere-mitgliedstaaten-glauben-dass-sie-eine-gefahr-sind">«Ein oder mehrere Mitgliedstaaten glauben, dass Sie eine Gefahr sind»</a><br>Brave New Fortress Europe (in German).</li>
-<li><a href="http://www.smh.com.au/world/science/the-humans-who-outrun-horses-20120606-1zv96.html">The humans who outrun horses</a><br>Very interesting article on how humans evolved into long-distance runners.</li>
-<li><a href="http://www.fastcompany.com/3000852/37signals-earns-millions-each-year-its-ceo%E2%80%99s-model-his-cleaning-lady">37signals Earns Millions Each Year. Its CEO’s Model? His Cleaning Lady</a><br>Nice interview with Jason Fried of 37signals fame.</li>
-<li><a href="http://www.bbc.co.uk/news/science-environment-19412819">DNA test jailed innocent man for murder</a><br>If you have nothing to hide, you have nothing to fear. Yeah, right.</li>
 </ul>
 
 ]]></content>
