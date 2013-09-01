@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mongodb | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/mongodb/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T01:28:13+08:00</updated>
+  <updated>2013-09-01T23:23:22+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -25,187 +25,126 @@
 
 <p>Since the data provided by The Exporter is already in JSON format, it should be really easy to import it using the <code>mongoimport</code> tool:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>mongoimport -d twitter -c tweets twitter-statuses-citizen428.json
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:bash %}
+mongoimport -d twitter -c tweets twitter-statuses-citizen428.json
+{% endcodeblock %}</p>
 
 <p>Alas this just threw a lot of errors at me and said that no records got imported. A quick look at the <a href="http://www.mongodb.org/display/DOCS/Import+Export+Tools">relevant documentation</a> shows that <code>mongoimport</code> expects one JSON object per line, so I had to remove the opening and closing bracket on the first and last line respectively, as well as the commas separating the lines (<code>s/,$//</code>). Once I did this, the import worked as expected and I had several thousand tweets in the collection <code>tweets</code> in the database <code>twitter</code>.</p>
 
 <p>Since I&rsquo;ll most likely do similar imports in the future, I added a <a href="http://www.mongodb.org/display/DOCS/Indexes#Indexes-UniqueIndexes">unique index</a> on the field named <code>id</code> (note that this is different from Mongo&rsquo;s built in <code>_id</code>):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">tweets</span><span class="p">.</span><span class="nx">ensureIndex</span><span class="p">({</span><span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="nx">unique</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+db.tweets.ensureIndex({id: 1}, {unique: true});
+{% endcodeblock %}</p>
 
 <p>I also added a <a href="http://www.mongodb.org/display/DOCS/Indexes#Indexes-SparseIndexes">sparse index</a> on <code>in_reply_to_screen_name</code>, the most important field for what I was about to do:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">tweets</span><span class="p">.</span><span class="nx">ensureIndex</span><span class="p">({</span><span class="nx">in_reply_to_screen_name</span><span class="o">:</span> <span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="nx">sparse</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+db.tweets.ensureIndex({in_reply_to_screen_name: 1}, {sparse: true});
+{% endcodeblock %}</p>
 
 <p>For getting the actual data I wanted, MongoDB&rsquo;s built-in <a href="http://www.mongodb.org/display/DOCS/MapReduce">map/reduce functionality</a> seemed like a perfect fit. Here&rsquo;s the mapping function, in all it&rsquo;s glory:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">m</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">emit</span><span class="p">({</span><span class="nx">user</span><span class="o">:</span><span class="k">this</span><span class="p">.</span><span class="nx">in_reply_to_screen_name</span><span class="p">},</span> <span class="p">{</span><span class="nx">count</span><span class="o">:</span><span class="mi">1</span><span class="p">});</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+m = function () {
+  emit({user:this.in_reply_to_screen_name}, {count:1});
+}
+{% endcodeblock %}</p>
 
 <p>The reduce step is equally simple:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">r</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="nx">v</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span><span class="nx">count</span> <span class="o">+=</span> <span class="nx">value</span><span class="p">.</span><span class="nx">count</span><span class="p">;});</span>
-</span><span class='line'>  <span class="k">return</span> <span class="p">{</span><span class="nx">count</span><span class="o">:</span><span class="nx">count</span><span class="p">};</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+r = function (k, v) {
+  var count = 0;
+  v.forEach(function (value) {count += value.count;});
+  return {count:count};
+}
+{% endcodeblock %}</p>
 
 <p>To make the actual <code>mapReduce</code> invocation more readable, I decided to also save the query in a separate object:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">q</span> <span class="o">=</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">in_reply_to_screen_name</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">$ne</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="kc">null</span> <span class="p">}</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+q = { &ldquo;in_reply_to_screen_name&rdquo; : { &ldquo;$ne&rdquo; : null } }
+{% endcodeblock %}</p>
 
 <p>With all the pieces in place, I could run <code>mapReduce</code> to put the result in a new collection named <code>top_retweets</code>:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">tweets</span><span class="p">.</span><span class="nx">mapReduce</span><span class="p">(</span><span class="nx">m</span><span class="p">,</span> <span class="nx">r</span><span class="p">,</span> <span class="p">{</span><span class="nx">out</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">top_retweets</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span> <span class="nx">query</span><span class="o">:</span> <span class="nx">q</span><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+db.tweets.mapReduce(m, r, {out: &ldquo;top_retweets&rdquo;, query: q});
+{% endcodeblock %}</p>
 
 <p>Querying the freshly created collection, sorting it in reverse order of <code>value.count</code> and limiting the result set to 10 elements gave me the top 10 users I retweet (note that this data is most likely not entirely accurate, since The Exporter only got me around 3.2k of the roughly 5k tweets I had at that time):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">top_retweets</span><span class="p">.</span><span class="nx">find</span><span class="p">({}).</span><span class="nx">sort</span><span class="p">({</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">value</span><span class="p">.</span><span class="nx">count</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:-</span><span class="mi">1</span><span class="p">}).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-</span><span class='line'><span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="nx">em</span><span class="o">&gt;</span><span class="nx">id</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">user</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">MrJaba</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="p">},</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">value</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">count</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="mi">53</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'><span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="err">/em&gt;id&amp;rdquo; : { &amp;ldquo;user&amp;rdquo; : &amp;ldquo;leyrer&amp;rdquo; }, &amp;ldquo;value&amp;rdquo; : { &amp;ldquo;count&amp;rdquo; : 52 } }</span>
-</span><span class='line'><span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="nx">em</span><span class="o">&gt;</span><span class="nx">id</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">user</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">cypher</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="p">},</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">value</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">count</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="mi">38</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'><span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="err">/em&gt;id&amp;rdquo; : { &amp;ldquo;user&amp;rdquo; : &amp;ldquo;MSch&amp;rdquo; }, &amp;ldquo;value&amp;rdquo; : { &amp;ldquo;count&amp;rdquo; : 34 } }</span>
-</span><span class='line'><span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="nx">em</span><span class="o">&gt;</span><span class="nx">id</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">user</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">kewagi</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="p">},</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">value</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">count</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="mi">25</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'><span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="err">/em&gt;id&amp;rdquo; : { &amp;ldquo;user&amp;rdquo; : &amp;ldquo;IORayne&amp;rdquo; }, &amp;ldquo;value&amp;rdquo; : { &amp;ldquo;count&amp;rdquo; : 23 } }</span>
-</span><span class='line'><span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="nx">em</span><span class="o">&gt;</span><span class="nx">id</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">user</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">berenguel</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="p">},</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">value</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">count</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="mi">22</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'><span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="err">/em&gt;id&amp;rdquo; : { &amp;ldquo;user&amp;rdquo; : &amp;ldquo;kaleidic&amp;rdquo; }, &amp;ldquo;value&amp;rdquo; : { &amp;ldquo;count&amp;rdquo; : 20 } }</span>
-</span><span class='line'><span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="nx">em</span><span class="o">&gt;</span><span class="nx">id</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">user</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">antifuchs</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="p">},</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">value</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">count</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">:</span> <span class="mi">19</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'><span class="p">{</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="err">/em&gt;id&amp;rdquo; : { &amp;ldquo;user&amp;rdquo; : &amp;ldquo;ofalk&amp;rdquo; }, &amp;ldquo;value&amp;rdquo; : { &amp;ldquo;count&amp;rdquo; : 19 } }</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+db.top_retweets.find({}).sort({&ldquo;value.count&rdquo;:-1}).limit(10);
+{ &ldquo;<em>id&rdquo; : { &ldquo;user&rdquo; : &ldquo;MrJaba&rdquo; }, &ldquo;value&rdquo; : { &ldquo;count&rdquo; : 53 } }
+{ &ldquo;</em>id&rdquo; : { &ldquo;user&rdquo; : &ldquo;leyrer&rdquo; }, &ldquo;value&rdquo; : { &ldquo;count&rdquo; : 52 } }
+{ &ldquo;<em>id&rdquo; : { &ldquo;user&rdquo; : &ldquo;cypher&rdquo; }, &ldquo;value&rdquo; : { &ldquo;count&rdquo; : 38 } }
+{ &ldquo;</em>id&rdquo; : { &ldquo;user&rdquo; : &ldquo;MSch&rdquo; }, &ldquo;value&rdquo; : { &ldquo;count&rdquo; : 34 } }
+{ &ldquo;<em>id&rdquo; : { &ldquo;user&rdquo; : &ldquo;kewagi&rdquo; }, &ldquo;value&rdquo; : { &ldquo;count&rdquo; : 25 } }
+{ &ldquo;</em>id&rdquo; : { &ldquo;user&rdquo; : &ldquo;IORayne&rdquo; }, &ldquo;value&rdquo; : { &ldquo;count&rdquo; : 23 } }
+{ &ldquo;<em>id&rdquo; : { &ldquo;user&rdquo; : &ldquo;berenguel&rdquo; }, &ldquo;value&rdquo; : { &ldquo;count&rdquo; : 22 } }
+{ &ldquo;</em>id&rdquo; : { &ldquo;user&rdquo; : &ldquo;kaleidic&rdquo; }, &ldquo;value&rdquo; : { &ldquo;count&rdquo; : 20 } }
+{ &ldquo;<em>id&rdquo; : { &ldquo;user&rdquo; : &ldquo;antifuchs&rdquo; }, &ldquo;value&rdquo; : { &ldquo;count&rdquo; : 19 } }
+{ &ldquo;</em>id&rdquo; : { &ldquo;user&rdquo; : &ldquo;ofalk&rdquo; }, &ldquo;value&rdquo; : { &ldquo;count&rdquo; : 19 } }
+{% endcodeblock %}</p>
 
 <p>Hm, this is a collection I&rsquo;ll most likely query more in the future, how did the above query perform? Not so well I&rsquo;m afraid:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">top_retweets</span><span class="p">.</span><span class="nx">find</span><span class="p">({}).</span><span class="nx">sort</span><span class="p">({</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">value</span><span class="p">.</span><span class="nx">count</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:-</span><span class="mi">1</span><span class="p">}).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="nx">explain</span><span class="p">();</span>
-</span><span class='line'><span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="s2">&quot;cursor&quot;</span> <span class="o">:</span> <span class="s2">&quot;BasicCursor&quot;</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;nscanned&quot;</span> <span class="o">:</span> <span class="mi">192</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;nscannedObjects&quot;</span> <span class="o">:</span> <span class="mi">192</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;n&quot;</span> <span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;scanAndOrder&quot;</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;millis&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;nYields&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;nChunkSkips&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;isMultiKey&quot;</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;indexOnly&quot;</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;indexBounds&quot;</span> <span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+db.top_retweets.find({}).sort({&ldquo;value.count&rdquo;:-1}).limit(10).explain();
+{</p>
+
+<pre><code>"cursor" : "BasicCursor",
+"nscanned" : 192,
+"nscannedObjects" : 192,
+"n" : 10,
+"scanAndOrder" : true,
+"millis" : 0,
+"nYields" : 0,
+"nChunkSkips" : 0,
+"isMultiKey" : false,
+"indexOnly" : false,
+"indexBounds" : {
+
+}
+</code></pre>
+
+<p>}
+{% endcodeblock %}</p>
 
 <p>The most important thing to note here is the difference between the number of documents (<code>nscanned</code>, 192) and the actual number returned (<code>n</code>, 10). Also the query had to order the result for us (indicated by <code>"scanAndOrder" : true</code>). Fortunately that&rsquo;s nothing another index can&rsquo;t fix, this time a reverse one on <code>value.count</code>:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">top_retweets</span><span class="p">.</span><span class="nx">ensureIndex</span><span class="p">({</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">value</span><span class="p">.</span><span class="nx">count</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">});</span>
-</span><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">top_retweets</span><span class="p">.</span><span class="nx">find</span><span class="p">({}).</span><span class="nx">sort</span><span class="p">({</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">value</span><span class="p">.</span><span class="nx">count</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:-</span><span class="mi">1</span><span class="p">}).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="nx">explain</span><span class="p">();</span>
-</span><span class='line'><span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="s2">&quot;cursor&quot;</span> <span class="o">:</span> <span class="s2">&quot;BtreeCursor value.count_-1&quot;</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;nscanned&quot;</span> <span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;nscannedObjects&quot;</span> <span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;n&quot;</span> <span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;millis&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;nYields&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;nChunkSkips&quot;</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;isMultiKey&quot;</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;indexOnly&quot;</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span><span class='line'><span class="s2">&quot;indexBounds&quot;</span> <span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;value.count&quot;</span> <span class="o">:</span> <span class="p">[</span>
-</span><span class='line'>        <span class="p">[</span>
-</span><span class='line'>            <span class="p">{</span>
-</span><span class='line'>                <span class="s2">&quot;$maxElement&quot;</span> <span class="o">:</span> <span class="mi">1</span>
-</span><span class='line'>            <span class="p">},</span>
-</span><span class='line'>            <span class="p">{</span>
-</span><span class='line'>                <span class="s2">&quot;$minElement&quot;</span> <span class="o">:</span> <span class="mi">1</span>
-</span><span class='line'>            <span class="p">}</span>
-</span><span class='line'>        <span class="p">]</span>
-</span><span class='line'>    <span class="p">]</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+db.top_retweets.ensureIndex({&ldquo;value.count&rdquo;: -1});
+db.top_retweets.find({}).sort({&ldquo;value.count&rdquo;:-1}).limit(10).explain();
+{</p>
+
+<pre><code>"cursor" : "BtreeCursor value.count_-1",
+"nscanned" : 10,
+"nscannedObjects" : 10,
+"n" : 10,
+"millis" : 0,
+"nYields" : 0,
+"nChunkSkips" : 0,
+"isMultiKey" : false,
+"indexOnly" : false,
+"indexBounds" : {
+    "value.count" : [
+        [
+            {
+                "$maxElement" : 1
+            },
+            {
+                "$minElement" : 1
+            }
+        ]
+    ]
+}
+</code></pre>
+
+<p>}
+{% endcodeblock %}</p>
 
 <p>All in all this was a pretty fun little exercise, that proves how easy it is to go from JSON to queryable data with MongoDB. I&rsquo;ll probably do more of this in the future.</p>
 ]]></content>

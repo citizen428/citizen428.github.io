@@ -4,7 +4,7 @@
   <title><![CDATA[Category: language | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/language/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T01:28:13+08:00</updated>
+  <updated>2013-09-01T23:23:22+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -18,7 +18,9 @@
     <link href="http://citizen428.net/blog/2011/12/25/information-overload-2011-12-25/"/>
     <updated>2011-12-25T00:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2011/12/25/information-overload-2011-12-25</id>
-    <content type="html"><![CDATA[<p><blockquote><p>They’ve reminded us that politics is not a matter of choosing among what we’re offered but of fighting for what we and others actually need, not to mention what we hope for.</p><footer><strong>Nathan Schneider <a href="http://www.thenation.com/article/165240/thank-you-anarchists">http://www.thenation.com/article/165240/thank-you-anarchists</a> Thank You</strong> <cite>Anarchists</cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Nathan Schneider <a href="http://www.thenation.com/article/165240/thank-you-anarchists">http://www.thenation.com/article/165240/thank-you-anarchists</a> Thank You, Anarchists %}
+They’ve reminded us that politics is not a matter of choosing among what we’re offered but of fighting for what we and others actually need, not to mention what we hope for.
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://web.mit.edu/newsoffice/2011/mitx-education-initiative-1219.html">MIT launches online learning initiative</a><br>After Stanford&rsquo;s successful online courses, the MIT also develops a new online platform on top of the already cool <a href="http://ocw.mit.edu/index.htm">OCW</a>. I always welcome more good and free learning resources.</li>
@@ -34,7 +36,9 @@
 </ul>
 
 
-<p><blockquote><p>The business of humanity has become entertainment, and entertainment is the business of feeding fake fitness cues to our brains.</p><footer><strong>Geoffrey Miller <a href="http://seedmagazine.com/content/article/why_we_havent_met_any_aliens/">http://seedmagazine.com/content/article/why_we_havent_met_any_aliens/</a> Why We Haven&rsquo;t Met Any Aliens</strong></footer></blockquote></p>
+<p>{% blockquote Geoffrey Miller <a href="http://seedmagazine.com/content/article/why_we_havent_met_any_aliens/">http://seedmagazine.com/content/article/why_we_havent_met_any_aliens/</a> Why We Haven&rsquo;t Met Any Aliens %}
+The business of humanity has become entertainment, and entertainment is the business of feeding fake fitness cues to our brains.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   
@@ -43,7 +47,9 @@
     <link href="http://citizen428.net/blog/2011/10/16/information-overload-2011-10-16/"/>
     <updated>2011-10-16T20:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2011/10/16/information-overload-2011-10-16</id>
-    <content type="html"><![CDATA[<p><blockquote><p>Above all, remember the more harm you cause, the more hate you feel, and the more kindness you deal into the world the more you come to love the people you help.</p><footer><strong>David McRaney <a href="http://youarenotsosmart.com/2011/10/05/the-benjamin-franklin-effect/">http://youarenotsosmart.com/2011/10/05/the-benjamin-franklin-effect/</a> The Benjamin Franklin Effect</strong></footer></blockquote>
+    <content type="html"><![CDATA[<p>{% blockquote David McRaney <a href="http://youarenotsosmart.com/2011/10/05/the-benjamin-franklin-effect/">http://youarenotsosmart.com/2011/10/05/the-benjamin-franklin-effect/</a> The Benjamin Franklin Effect %}
+Above all, remember the more harm you cause, the more hate you feel, and the more kindness you deal into the world the more you come to love the people you help.
+{% endblockquote %}
 * <a href="http://youarenotsosmart.com/2011/10/05/the-benjamin-franklin-effect/">The Benjamin Franklin Effect</a><br>A very interesting article on cognitive dissonance and how we tend to rationalize things.
 * <a href="http://www.twitlonger.com/show/dh5l3q">Letter from a psychopath</a><br>An email copy/pasted into TwitLonger, giving great insight into the world of a (claimed) psychopath.</li>
 * <a href="http://www.nytimes.com/2011/10/11/health/views/11klass.html">Hearing Bilingual: How Babies Sort Out Language</a><br>Research shows that language development starts really early on, and that the brain adopts to bilingualism easily.</li>
@@ -54,7 +60,9 @@
 * <a href="http://norvig.com/chomsky.html">On Chomsky and the Two Cultures of Statistical Learning</a><br>Peter Norvig&rsquo;s rebuttal to a statement by Chomsky on statistical learning in regards to language.</li>
 * <a href="http://www.npr.org/blogs/krulwich/2011/09/14/140467059/the-toughest-little-bird-youve-never-heard-of">The Toughest Little Bird You&rsquo;ve Never Heard Of</a><br>A small species of birds migrates every year from Alaska to New Zealand.</li>
 * <a href="http://zenhabits.net/tired/">Tired of Being Tired</a><br>I know that occasionally I should take some of the advice offered in this article.
-<blockquote><p>If he went to see a basketball game, he’d walk out taller.</p><footer><strong>Beppe Severgnini  <a href="http://www.slate.com/articles/news_and_politics/foreigners/2011/10/silvio_berlusconi_a_new_book_reveals_why_italians_put_up_with_hi.html">http://www.slate.com/articles/news_and_politics/foreigners/2011/10/silvio_berlusconi_a_new_book_reveals_why_italians_put_up_with_hi.html</a> That’s Italian</strong></footer></blockquote>
+{% blockquote Beppe Severgnini  <a href="http://www.slate.com/articles/news_and_politics/foreigners/2011/10/silvio_berlusconi_a_new_book_reveals_why_italians_put_up_with_hi.html">http://www.slate.com/articles/news_and_politics/foreigners/2011/10/silvio_berlusconi_a_new_book_reveals_why_italians_put_up_with_hi.html</a> That’s Italian %}
+If he went to see a basketball game, he’d walk out taller.
+{% endblockquote %}
 </ul></p>
 ]]></content>
   </entry>

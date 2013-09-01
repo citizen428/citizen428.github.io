@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacking | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/hacking/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T01:28:13+08:00</updated>
+  <updated>2013-09-01T23:23:22+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -25,35 +25,21 @@
 
 <p>Let&rsquo;s look at the following IRB session:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;puts &amp;ldquo;hello&amp;rdquo;</span>
-</span><span class='line'><span class="sr">hello</span>
-</span><span class='line'><span class="sr">=&gt; nil</span>
-</span><span class='line'><span class="sr">puts &amp;ldquo;world&amp;rdquo;</span>
-</span><span class='line'><span class="sr">world</span>
-</span><span class='line'><span class="sr">=&gt; nil</span>
-</span><span class='line'><span class="sr">def foo</span>
-</span><span class='line'><span class="sr">..   puts &amp;lsquo;bar&amp;rsquo;</span>
-</span><span class='line'><span class="sr">..   end</span>
-</span><span class='line'><span class="sr">=&gt; nil</span>
-</span><span class='line'><span class="sr">dumphist(3, &amp;lsquo;test.rb&amp;rsquo;)</span>
-</span><span class='line'><span class="sr">=&gt; [&amp;ldquo;def foo&amp;rdquo;, &amp;ldquo;puts &amp;lsquo;bar&amp;rsquo;&amp;rdquo;, &amp;ldquo;end&amp;rdquo;]</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote>
+<p>{% codeblock lang:ruby %}</p>
+
+<blockquote><blockquote><p>puts &ldquo;hello&rdquo;
+hello
+=> nil
+puts &ldquo;world&rdquo;
+world
+=> nil
+def foo
+..   puts &lsquo;bar&rsquo;
+..   end
+=> nil
+dumphist(3, &lsquo;test.rb&rsquo;)
+=> [&ldquo;def foo&rdquo;, &ldquo;puts &lsquo;bar&rsquo;&rdquo;, &ldquo;end&rdquo;]
+{% endcodeblock %}</p></blockquote></blockquote>
 
 <p>The last command created a file named test.rb for us, which contains only the method foo. :&ndash;)</p>
 ]]></content>

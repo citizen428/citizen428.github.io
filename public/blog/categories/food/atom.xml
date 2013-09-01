@@ -4,7 +4,7 @@
   <title><![CDATA[Category: food | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/food/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T01:28:13+08:00</updated>
+  <updated>2013-09-01T23:23:22+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -18,7 +18,9 @@
     <link href="http://citizen428.net/blog/2011/11/13/information-overload-2011-11-13/"/>
     <updated>2011-11-13T19:00:00+08:00</updated>
     <id>http://citizen428.net/blog/2011/11/13/information-overload-2011-11-13</id>
-    <content type="html"><![CDATA[<p><blockquote><p>[&hellip;] Iran has as much chance of stopping an Israeli strike as Prime Minister Benjamin Netanyahu does of becoming an ayatollah [&hellip;]</p><footer><strong>Michael Peck <a href="http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full">http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full</a> The Persian Incursion</strong></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Michael Peck <a href="http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full">http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full</a> The Persian Incursion %}
+[&hellip;] Iran has as much chance of stopping an Israeli strike as Prime Minister Benjamin Netanyahu does of becoming an ayatollah [&hellip;]
+{% endblockquote %}</p>
 
 <ul>
 <li><a href="http://www.economist.com/blogs/babbage/2011/11/artificial-intelligence">Difference Engine: Luddite legacy</a><br>Will more and more jobs be done by machines instead of people?</li>
@@ -34,7 +36,9 @@
 </ul>
 
 
-<p><blockquote><p>We’re from Shanghai. We care only about money. You want to talk politics, go to Beijing.</p><footer><strong>Unnamed businessman <a href="http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory">http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory</a> Shanghai Gets Supersized</strong></footer></blockquote></p>
+<p>{% blockquote Unnamed businessman <a href="http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory">http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory</a> Shanghai Gets Supersized %}
+We’re from Shanghai. We care only about money. You want to talk politics, go to Beijing.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   

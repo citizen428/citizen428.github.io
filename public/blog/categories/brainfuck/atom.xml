@@ -4,7 +4,7 @@
   <title><![CDATA[Category: brainfuck | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/brainfuck/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T01:28:13+08:00</updated>
+  <updated>2013-09-01T23:23:22+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -62,26 +62,16 @@
 
 
 <p>Here we go for the source:
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;blockquote>&lt;p>++++++++[&lt;++++++++>&ndash;]&lt;+++.
-</span><span class='line'>&mdash;.
-</span><span class='line'>++++++++[&lt;++>&ndash;]&lt;+.
-</span><span class='line'>+++++[&lt;&mdash;>&ndash;]&lt;&ndash;.
-</span><span class='line'>&mdash;&mdash;&mdash;.
-</span><span class='line'>++[&lt;+++++>&ndash;]&lt;+.
-</span><span class='line'>[&ndash;]+++++++[&lt;&mdash;&mdash;&mdash;>&ndash;]&lt;&ndash;.
-</span><span class='line'>[&ndash;]++++++++++.</span></code></pre></td></tr></table></div></figure></notextile></div>
+{% codeblock %}</p>
+
+<blockquote><p>++++++++[&lt;++++++++>&ndash;]&lt;+++.
+&mdash;.
+++++++++[&lt;++>&ndash;]&lt;+.
++++++[&lt;&mdash;>&ndash;]&lt;&ndash;.
+&mdash;&mdash;&mdash;.
+++[&lt;+++++>&ndash;]&lt;+.
+[&ndash;]+++++++[&lt;&mdash;&mdash;&mdash;>&ndash;]&lt;&ndash;.
+[&ndash;]++++++++++.{% endcodeblock %}
 Programming in BF gives me a rewarding feeling in a very strange way, which makes me fear that I will spend more time with it, especially now that I know about &ldquo;app-vim/brainfuck-syntax&rdquo;:<a href="http://www.vim.org/scripts/script.php?script_id=716...">http://www.vim.org/scripts/script.php?script_id=716...</a> ;) However, I still wonder how &ldquo;Markus Schaber&rdquo;:<a href="http://www.ulm.ccc.de/~schabi/">http://www.ulm.ccc.de/~schabi/</a> had the patience to implement a multi-threading library for (and of course in) BF.</p></blockquote>
 ]]></content>
   </entry>

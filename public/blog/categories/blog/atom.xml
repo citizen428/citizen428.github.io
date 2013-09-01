@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blog | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T01:28:13+08:00</updated>
+  <updated>2013-09-01T23:23:22+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -22,69 +22,42 @@
 
 <p>First I changed some colors in <code>sass/custom/_colors.scss</code>:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="na">$header-bg</span><span class="o">:</span> <span class="mh">#000</span><span class="err">;</span>
-</span><span class='line'><span class="na">$subtitle-color</span><span class="o">:</span> <span class="nf">lighten</span><span class="p">(</span><span class="nv">$header-bg</span><span class="o">,</span> <span class="mi">58</span><span class="p">)</span><span class="err">;</span>
-</span><span class='line'><span class="na">$nav-bg</span><span class="o">:</span> <span class="nf">desaturate</span><span class="p">(</span><span class="nf">lighten</span><span class="p">(</span><span class="mh">#FF7100</span><span class="o">,</span> <span class="mi">18</span><span class="p">)</span><span class="o">,</span> <span class="mi">5</span><span class="p">)</span>
-</span><span class='line'><span class="na">$link-color</span><span class="o">:</span> <span class="mh">#FF7100</span><span class="err">;</span>
-</span><span class='line'><span class="na">$footer-bg</span><span class="o">:</span> <span class="mh">#CCC</span><span class="err">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:sass %}
+$header-bg: #000;
+$subtitle-color: lighten($header-bg, 58);
+$nav-bg: desaturate(lighten(#FF7100, 18), 5)
+$link-color: #FF7100;
+$footer-bg: #CCC;
+{% endcodeblock %}</p>
 
 <p>Then I reduced the width of the body, the size of the dates and article titles as well as the codeblocks (all of this can be done in <code>sass/custom/_styles.scss</code>):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">body</span> <span class="err">{</span>
-</span><span class='line'>  <span class="na">max-width</span><span class="o">:</span> <span class="mi">1100</span><span class="kt">px</span><span class="err">;</span>
-</span><span class='line'><span class="err">}</span>
-</span><span class='line'><span class="nt">time</span> <span class="err">{</span>
-</span><span class='line'>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">14</span><span class="kt">px</span><span class="err">;</span>
-</span><span class='line'><span class="err">}</span>
-</span><span class='line'><span class="nt">h1</span> <span class="err">{</span>
-</span><span class='line'>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">2</span><span class="mf">.2</span><span class="kt">em</span><span class="err">;</span>
-</span><span class='line'><span class="err">}</span>
-</span><span class='line'><span class="nt">section</span> <span class="err">{</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nt">blockquote</span><span class="o">&gt;&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="nt">h1</span> <span class="err">{</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="na">&lt;pre&gt;&lt;code&gt;font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span><span class="err">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="nt">code</span><span class="o">&gt;&lt;/</span><span class="nt">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>  <span class="err">}</span>
-</span><span class='line'><span class="err">}</span>
-</span><span class='line'><span class="nt">codeblock</span> <span class="err">{</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="na">&lt;pre&gt;&lt;code&gt;font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.1</span><span class="kt">em</span><span class="err">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="nt">code</span><span class="o">&gt;&lt;/</span><span class="nt">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="err">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote>
+<p>{% codeblock lang:sass %}
+body {
+  max-width: 1100px;
+}
+time {
+  font-size: 14px;
+}
+h1 {
+  font-size: 2.2em;
+}
+section {</p>
+
+<blockquote><p>h1 {</p>
+
+<pre><code>font-size: 1.5em;
+</code></pre>
+
+<p>  }
+}
+codeblock {</p>
+
+<pre><code>font-size: 1.1em;
+</code></pre>
+
+<p>}
+{% endcodeblock %}</p></blockquote>
 
 <p>Last but not least I found some <a href="http://www.elegantthemes.com/blog/resources/free-social-media-icon-set">excellent free social media icons</a> for the sidebar.</p>
 
@@ -103,71 +76,40 @@
 
 <p>I created a new Rake task named &ldquo;new_overload&rdquo;, that looks like this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">desc</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Create</span> <span class="n">a</span> <span class="kp">new</span> <span class="no">Information</span> <span class="no">Overload</span> <span class="n">template</span> <span class="c1">#{source_dir}/#{posts_dir}&amp;rdquo;</span>
-</span><span class='line'><span class="n">task</span> <span class="ss">:new_overload</span> <span class="k">do</span>
-</span><span class='line'>  <span class="k">raise</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="c1">### You haven&amp;rsquo;t set anything up yet. First run &lt;code&gt;rake install&lt;/code&gt; to set up an Octopress theme.&amp;rdquo; unless File.directory?(source_dir)</span>
-</span><span class='line'>  <span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">date</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
-</span><span class='line'>  <span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">.</span><span class="n">/plugins</span><span class="o">/</span><span class="n">titlecase</span><span class="o">.</span><span class="n">rb</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">mkdir_p</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="c1">#{source_dir}/#{posts_dir}&amp;rdquo;</span>
-</span><span class='line'>  <span class="n">date</span> <span class="o">=</span> <span class="p">(</span><span class="no">Date</span><span class="o">.</span><span class="n">today</span> <span class="o">+</span> <span class="p">(</span><span class="mi">7</span><span class="o">-</span><span class="no">Date</span><span class="o">.</span><span class="n">today</span><span class="o">.</span><span class="n">wday</span><span class="p">))</span>
-</span><span class='line'>  <span class="n">title</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Information</span> <span class="no">Overload</span> <span class="c1">#{date.strftime(&amp;rdquo;%Y-%m-%d&quot;)}&amp;ldquo;</span>
-</span><span class='line'>  <span class="n">filename</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="c1">#{source_dir}/#{posts_dir}/#{date.strftime(&amp;lsquo;%Y-%m-%d&amp;rsquo;)}&amp;ndash;#{title.to_url}.#{new_post_ext}&amp;ldquo;</span>
-</span><span class='line'>  <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;abort(&quot;rake aborted!&quot;) if ask(&quot;</span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="sr"> already exists. Do you want to overwrite?&quot;, [&#39;y&#39;, &#39;n&#39;]) == &#39;n&#39;</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">  puts &amp;ldquo;Creating new post: </span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="sr">&amp;rdquo;</span>
-</span><span class='line'><span class="sr">  open(filename, &amp;lsquo;w&amp;rsquo;) do |post|&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nb">system</span> <span class="s2">&quot;mkdir -p </span><span class="si">#{</span><span class="n">source_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">posts_dir</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;---&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;layout: post&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;title: </span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">title</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;amp;/</span><span class="p">,</span><span class="s1">&#39;&amp;amp;amp;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">titlecase</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;date: </span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-%d %H:%M&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;comments: true&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;categories: &quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;published: false&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;---&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;* []()</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">*</span> <span class="mi">10</span>
-</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+desc &ldquo;Create a new Information Overload template #{source_dir}/#{posts_dir}&rdquo;
+task :new_overload do
+  raise &ldquo;### You haven&rsquo;t set anything up yet. First run <code>rake install</code> to set up an Octopress theme.&rdquo; unless File.directory?(source_dir)
+  require &lsquo;date&rsquo;
+  require &lsquo;./plugins/titlecase.rb&rsquo;
+  mkdir_p &ldquo;#{source_dir}/#{posts_dir}&rdquo;
+  date = (Date.today + (7-Date.today.wday))
+  title = &ldquo;Information Overload #{date.strftime(&rdquo;%Y-%m-%d")}&ldquo;
+  filename = &rdquo;#{source_dir}/#{posts_dir}/#{date.strftime(&lsquo;%Y-%m-%d&rsquo;)}&ndash;#{title.to_url}.#{new_post_ext}&ldquo;
+  if File.exist?(filename)</p>
+
+<pre><code>abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+</code></pre>
+
+<p>  end
+  puts &ldquo;Creating new post: #{filename}&rdquo;
+  open(filename, &lsquo;w&rsquo;) do |post|</p>
+
+<pre><code>system "mkdir -p #{source_dir}/#{posts_dir}/";
+post.puts "---"
+post.puts "layout: post"
+post.puts "title: \"#{title.gsub(/&amp;/,'&amp;amp;').titlecase}\""
+post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+post.puts "comments: true"
+post.puts "categories: "
+post.puts "published: false"
+post.puts "---"
+post.puts "* []()\n" * 10
+</code></pre>
+
+<p>  end
+end
+{% endcodeblock %}</p>
 
 <p>This is very similar to the standard &ldquo;new_post&rdquo; task, but generates
 the post with the date of the current week&rsquo;s Sunday. It also marks it
@@ -205,69 +147,7 @@ XML. This can be done in the administration backend under &ldquo;Tools &ndash;
 Export&rdquo;. Once I had this XML, I used the following script to convert
 the posts to individual files for Octopress:</p>
 
-<p><div><script src='https://gist.github.com/1240781.js'></script>
-<noscript><pre><code>require 'fileutils'
-require 'date'
-require 'yaml'
-require 'rexml/document'
-
-include REXML
-
-doc = Document.new(File.new(ARGV[0]))
-
-FileUtils.mkdir_p &quot;_posts&quot;
-
-doc.elements.each(&quot;rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']&quot;) do |e|
-  p e.elements['wp:post_name'].text
-  post = e.elements
-  slug = post['wp:post_name'].text
-  date = DateTime.parse(post['wp:post_date'].text)
-  name = &quot;%02d-%02d-%02d-%s.textile&quot; % [date.year, date.month, date.day, slug]
-  date_string = &quot;#{date.year}-#{date.month}-#{date.day}&quot;
-
-  # convert all tags and categories into categories
-  categories = []
-  post.each('category') do |cat|
-    categories &lt;&lt; cat.text
-  end
-
-  content = post['content:encoded'].text.encode(&quot;UTF-8&quot;)
-
-  # convert &lt;code&gt;&lt;/code&gt; blocks to {% codeblock %}{% encodebloc %}
-  #content = content.gsub(/&lt;code&gt;(.*?)&lt;\/code&gt;/, '`\1`')
-  content = content.gsub(/&lt;code&gt;/, '{% codeblock %}')
-  content = content.gsub(/&lt;\/code&gt;/, '{% endcodeblock %}')
-
-  # convert &lt;pre&gt;&lt;/pre&gt; blocks to {% codeblock %}{% encodebloc %}
-  #content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;(.*?)&lt;\/pre&gt;/m, '`\1`')
-  content = content.gsub(/&lt;pre&gt;/, '{% codeblock %}')
-  content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;/, '{% codeblock %}')
-  content = content.gsub(/&lt;\/pre&gt;/m, '{% endcodeblock %}')
-
-  # convert headers
-  (1..3).each do |i|
-    content = content.gsub(/&lt;h#{i}&gt;([^&lt;]*)&lt;\/h#{i}&gt;/, ('#'*i) + ' \1')
-  end
-
-  puts &quot;Converting: #{name}&quot;
-
-  data = {
-    'layout' =&gt; 'post',
-    'title' =&gt; post['title'].text,
-    'date' =&gt; date_string,
-    'comments' =&gt; true,
-    'categories' =&gt; categories,
-  }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
-
-  File.open(&quot;_posts/#{name}&quot;, &quot;w&quot;) do |f|
-    f.puts data
-    f.puts &quot;---&quot;
-    f.puts content
-  end
-
-end
-</code></pre></noscript></div>
-</p>
+<p>{% gist 1240781 %}</p>
 
 <p>This was a fork of
 <a href="https://gist.github.com/1240781/ac8a139bf73232c4333f0cc5734151cf8e5d1f87">another script</a>,
@@ -280,35 +160,7 @@ a plugin).</p>
 didn&rsquo;t want to loose my old links. I therefore wrote another script
 that created 301 redirects for all of them:</p>
 
-<p><div><script src='https://gist.github.com/1241762.js'></script>
-<noscript><pre><code>require 'date'
-require 'rexml/document'
-
-include REXML
-
-doc = Document.new(File.new(ARGV[0]))
-format = ARGV[1] || &quot;apache&quot;
-
-formats = {
-  :apache =&gt; &quot;RewriteRule ^%s$ /%s [R=301,L]&quot;,
-  :nginx =&gt; &quot;rewrite ^%s /%s permanent;&quot;
-}
-
-File.open(&quot;redirects.txt&quot;, &quot;w&quot;) do |f|
-  doc.elements.each(&quot;rss/channel/item[wp:status = 'publish' and wp:post_type = 'post']&quot;) do |e|
-    post = e.elements
-    date = DateTime.parse(post['wp:post_date'].text)
-    slug = post['wp:post_name'].text
-
-    post['link'].text =~ %r{.*(/archives/\d+)}
-    old_url = $1
-    new_url = &quot;blog/#{date.strftime(&quot;%Y/%m/%d&quot;)}/#{slug}/&quot;
-
-    f.puts formats[format.intern] % [old_url, new_url]
-  end
-end
-</code></pre></noscript></div>
-</p>
+<p>{% gist 1241762 %}</p>
 
 <p>The script can generate the necessary directives for Apache or Nginx,
 so all you have to do is copy them into your web server

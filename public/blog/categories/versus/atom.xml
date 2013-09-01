@@ -4,7 +4,7 @@
   <title><![CDATA[Category: versus | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/versus/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T01:28:13+08:00</updated>
+  <updated>2013-09-01T23:23:22+08:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -36,11 +36,10 @@
 
 <p>Alas the age of the paper shows a bit. While some of the points are still valid, there undoubtedly is a much wider appreciation of the benefits of applicative style programming nowadays, as can be seen by various functional languages slowly finding their way into the mainstream. It&rsquo;s still very interesting to see how early Backus already thought about all of this though, and also that the language he envisioned seemed to be more in line with the <a href="http://en.wikipedia.org/wiki/Apl">APL</a> school of thought that e.g. Haskell, which in all fairness wasn&rsquo;t around back then. I wonder how Backus felt about the latter,  which can be very declarative (see <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a>). For example, here is the inner product function from section 5 of the paper translated to Haskell:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="nf">ip</span> <span class="ow">::</span> <span class="p">[[</span><span class="kt">Integer</span><span class="p">]]</span> <span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;</span> <span class="kt">Integer</span>
-</span><span class='line'><span class="nf">ip</span> <span class="ow">=</span> <span class="n">sum</span> <span class="o">.</span> <span class="n">map</span> <span class="n">product</span> <span class="o">.</span> <span class="n">transpose</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:haskell %}
+ip :: [[Integer]] &ndash;> Integer
+ip = sum . map product . transpose
+{% endcodeblock %}</p>
 
 <p>If you like programming languages and also like to think about them, and learn about their history, this is an interesting paper to read. Also it&rsquo;s quite ironic that Backus actually won in large parts for his contributions to Fortran, a language that influenced so many other imperative languages.</p>
 ]]></content>
@@ -106,68 +105,40 @@ I know that for some people the math might look scary, but if you take some time
 <p>OOP is a paradigm which uses &ldquo;objects&rdquo; to encapsulate behavior and state in a programming language. This can be accomplished in a few ways, two of the more popular being class based and prototype based object orientation. In class based object models (e.g. Java) a class will be written to define the behavior and state that the object will embody. A class can be inherited from and extended to provide new functionality. In prototype based object models (e.g. ECMAScript, Io), there are no classes, only objects which can be cloned and altered to provide new features. Here&rsquo;s a quick comparison of the two approaches in Ruby and ECMAScript:</p>
 
 <p>Ruby:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;define a class&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">Hello</span>
-</span><span class='line'>   <span class="k">def</span> <span class="nf">hello</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt; puts &quot;Hello&quot;</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;   end</span>
-</span><span class='line'><span class="sr">end #=&gt; nil&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">create</span> <span class="n">an</span> <span class="n">object</span> <span class="n">instance</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;h = Hello.new #=&gt; #&amp;lt;Hello:0x00000100a2f520&gt;&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">call</span> <span class="n">a</span> <span class="nb">method</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;h.hello #=&gt; nil</span>
-</span><span class='line'><span class="sr">Hello</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock lang:ruby %}</p>
+
+<h1>define a class</h1>
+
+<p>class Hello
+   def hello</p>
+
+<pre><code> puts "Hello"
+</code></pre>
+
+<p>   end
+end #=> nil</p>
+
+<h1>create an object instance</h1>
+
+<p>h = Hello.new #=> #&lt;Hello:0x00000100a2f520></p>
+
+<h1>call a method</h1>
+
+<p>h.hello #=> nil
+Hello
+{% endcodeblock %}</p>
 
 <p>ECMAScript:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// create object using a function</span>
-</span><span class='line'><span class="kd">function</span> <span class="nx">Hello</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">hello</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">Hello</span><span class="o">!&amp;</span><span class="nx">rdquo</span><span class="p">;)</span> <span class="p">}</span> <span class="p">};</span>
-</span><span class='line'><span class="c1">// create instance</span>
-</span><span class='line'><span class="nx">h</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Hello</span><span class="p">();</span>
-</span><span class='line'><span class="nx">h</span><span class="p">.</span><span class="nx">hello</span><span class="p">();</span> <span class="c1">// pops up an alert</span>
-</span><span class='line'><span class="c1">// alternatively we can use an object literal</span>
-</span><span class='line'><span class="nx">h</span> <span class="o">=</span> <span class="p">{</span><span class="nx">hello</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">Hello</span><span class="o">!&amp;</span><span class="nx">rdquo</span><span class="p">;)</span> <span class="p">}</span> <span class="p">};</span>
-</span><span class='line'><span class="nx">h</span><span class="p">.</span><span class="nx">hello</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock lang:javascript %}
+// create object using a function
+function Hello() { this.hello = function() { alert(&ldquo;Hello!&rdquo;) } };
+// create instance
+h = new Hello();
+h.hello(); // pops up an alert
+// alternatively we can use an object literal
+h = {hello: function() { alert(&ldquo;Hello!&rdquo;) } };
+h.hello();
+{% endcodeblock %}</p>
 
 <p>Class based inheritance purports many organizational benefits. Do prototype based languages share them? The paper looks at each benefit in turn and shows approaches to add these features into classless languages or even improve upon them.</p>
 
@@ -176,109 +147,67 @@ I know that for some people the math might look scary, but if you take some time
 
 <p>In prototype based languages a clone/copy method is written on a prototypical object which can define which data members and methods are copied to the new object. This idea can be refined to an object whose sole purpose is to supply behavior, a trait. This can be a parent object of the new object to provide its functionality. As this trait object is shared amongst all clones, any changes to it affect the clones, just as with the class and subclass of class based programming. Here&rsquo;s an example on behavior sharing in a prototype based language (Io):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">A</span> <span class="o">:=</span> <span class="nb">Object</span> <span class="nx">clone</span>
-</span><span class='line'><span class="nx">A</span> <span class="nx">m</span> <span class="o">:=</span> <span class="nx">method</span><span class="p">(</span><span class="nx">write</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="k">in</span> <span class="nx">A</span><span class="err">\</span><span class="nx">n</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;))</span>
-</span><span class='line'><span class="nx">A</span> <span class="nx">m</span>
-</span><span class='line'><span class="nx">B</span> <span class="o">:=</span> <span class="nx">A</span> <span class="nx">clone</span>
-</span><span class='line'><span class="nx">B</span> <span class="nx">m</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+A := Object clone
+A m := method(write(&ldquo;in A\n&rdquo;))
+A m
+B := A clone
+B m
+{% endcodeblock %}</p>
 
 <p>This will print:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>in A
-</span><span class='line'>in B
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock lang:bash %}
+in A
+in B
+{% endcodeblock %}</p>
 
 <p><em>Representation Sharing:</em>
 In class based languages, subclassing gives the child class access to the member variables of the parent, its representation. In prototype based languages, a trait object provides only behavior, not data. This job is performed by a prototype instance of the object, one every other object will be cloned from. Its clone method will copy across its data slots (member variables) with any default values the programmer has provided. This is called a &ldquo;Data Parent&rdquo;.</p>
 
 <p>In Ruby:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">A</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;@member = &quot;fred&quot;</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr"> def method_a</span>
-</span><span class='line'><span class="sr">   puts &amp;ldquo;in A with </span><span class="si">#{</span><span class="vi">@member</span><span class="si">}</span><span class="sr">&amp;rdquo;</span>
-</span><span class='line'><span class="sr"> end</span>
-</span><span class='line'><span class="sr">end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">B</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">A</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">method_b</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;puts &quot;in B with </span><span class="si">#{</span><span class="vi">@member</span><span class="si">}</span><span class="sr">&quot;</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">A</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">method_a</span>
-</span><span class='line'><span class="n">B</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">method_b</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;in A with fred&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="k">in</span> <span class="n">B</span> <span class="n">with</span> <span class="n">fred</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock lang:ruby %}
+class A
+  def initialize</p>
+
+<pre><code>@member = "fred"
+</code></pre>
+
+<p>  end
+ def method_a
+   puts &ldquo;in A with #{@member}&rdquo;
+ end
+end</p>
+
+<p>class B &lt; A
+  def method_b</p>
+
+<pre><code>puts "in B with #{@member}"
+</code></pre>
+
+<p>  end
+end</p>
+
+<p>A.new.method_a
+B.new.method_b</p>
+
+<h1>in A with fred</h1>
+
+<h1>in B with fred</h1>
+
+<p>{% endcodeblock %}</p>
 
 <p>In IO:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Food</span> <span class="o">:=</span> <span class="nb">Object</span> <span class="nx">clone</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">pizza</span> <span class="o">:=</span> <span class="nx">Food</span> <span class="nx">clone</span>
-</span><span class='line'><span class="nx">pizza</span> <span class="nx">name</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">Meat</span> <span class="nx">Feast</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span>
-</span><span class='line'><span class="nx">pizza</span> <span class="nx">price</span> <span class="o">:=</span> <span class="mi">10</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">pasta</span> <span class="o">:=</span> <span class="nx">pizza</span> <span class="nx">clone</span>
-</span><span class='line'><span class="nx">pasta</span> <span class="nx">name</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">Macaroni</span> <span class="nx">Cheese</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span>
-</span><span class='line'><span class="nx">pasta</span> <span class="nx">price</span> <span class="o">=</span> <span class="mi">5</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+{% codeblock lang:javascript %}
+Food := Object clone</p>
+
+<p>pizza := Food clone
+pizza name := &ldquo;Meat Feast&rdquo;
+pizza price := 10</p>
+
+<p>pasta := pizza clone
+pasta name = &ldquo;Macaroni Cheese&rdquo;
+pasta price = 5
+{% endcodeblock %}
 <em>Dynamic Behaviour Changes &ndash; Changing an instance&rsquo;s class and dynamic inheritance:
 </em><em>Tom:</em> This was a section of particular interest, mainly because I think it&rsquo;s not quite as skewed as they portray it. The idea is that because in a prototype based model the reference to the parent object (traits, data) is simply a reference it can be changed very easily depending on the state the object is in. This provides new functionality as the object goes through its life. In a class based model, changing an instance&rsquo;s class is difficult at best and not a good idea, however the idea of changing behavior based on state is still a useful concept. The authors however seem to miss the concept of composition and delegation, it&rsquo;s next to trivial to change the behavior of an object simply by changing the object that is providing a function, just take a look at the Strategy Pattern for an example.
 <em>Michael:</em> This paper is from 1991, the &ldquo;Gang of Four book on Design Patterns&rdquo;:<a href="http://en.wikipedia.org/wiki/Design_Patterns">http://en.wikipedia.org/wiki/Design_Patterns</a> from 1994, so I guess you&rsquo;re blaming the authors for not knowing about something that hasn&rsquo;t been published when they wrote their paper.
@@ -286,29 +215,18 @@ In class based languages, subclassing gives the child class access to the member
 <em>Michael:</em> According to <a href="http://en.wikipedia.org/wiki/Delegation_(programming)">Wikipedia</a> in a paper from 1986, &ldquo;Using Prototypical Objects to Implement Shared Behavior in Object-Oriented Systems&rdquo;.</p>
 
 <p>In ECMAScript:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">circle</span><span class="p">(){}</span>
-</span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">circle</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">ellipse</span><span class="p">(){}</span>
-</span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">ellipse</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock lang:javascript %}
+function circle(){}
+circle.prototype</p>
+
+<h1>circle</h1>
+
+<p>circle.prototype = function ellipse(){}
+circle.prototype</p>
+
+<h1>ellipse</h1>
+
+<p>{% endcodeblock %}</p>
 
 <p>Changing the prototype can entirely change the behavior of an object.</p>
 
@@ -316,35 +234,24 @@ In class based languages, subclassing gives the child class access to the member
 </em>This feature is vital in any nontrivial system, without being able to find code to serve its purpose the programmer would be constantly rewriting the same code over and over. Class based languages tend to provide a globally accessible name for a set of functions. They also tend to provide namespaces to prevent naming collisions or categorisation. Prototype based languages need to be able to access the prototype anywhere in the system to be cloned, but as they are just regular objects, they have no internal names. The authors of the paper propose that namespace objects can be used to fill this need. Essentially a globally accessible hash map, which can contain nested namespace objects to provide categorisation. This later emerged as a fairly common pattern in ECMAScript.</p>
 
 <p>In Ruby:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">A</span><span class="p">;</span> <span class="k">end</span>
-</span><span class='line'><span class="n">A</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;A&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+{% codeblock lang:ruby %}
+class A; end
+A</p>
+
+<h1>A</h1>
+
+<p>{% endcodeblock %}
 A is a globally defined constant which points to an Object.</p>
 
 <p>In ECMAScript:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">TopLevel</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">TopLevel</span> <span class="o">||</span> <span class="p">{}</span>
-</span><span class='line'><span class="nx">TopLevel</span><span class="p">.</span><span class="nx">SecondLevel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">member</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-</span><span class='line'>  <span class="kd">function</span> <span class="nx">memberMethod</span><span class="p">(){</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock lang:javascript %}
+TopLevel = window.TopLevel || {}
+TopLevel.SecondLevel = function(){
+  var member = null;
+  function memberMethod(){
+  }
+}
+{% endcodeblock %}</p>
 
 <p>Note that TopLevel is simply an object literal.</p>
 
@@ -508,57 +415,31 @@ Brian Beckman recorded an &ldquo;awesome 67 minute video&rdquo;:<a href="http://
 
 <p>I hacked together a little something in IRB to illustrate the basic workings of the algorithm (it&rsquo;s not perfect, but good enough for our purposes):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;words = &amp;ldquo;foo bar baz qux foo bar lala&amp;rdquo;&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;=&gt;</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">foo</span> <span class="n">bar</span> <span class="n">baz</span> <span class="n">qux</span> <span class="n">foo</span> <span class="n">bar</span> <span class="n">lala</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;map (user-supplied)&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;.</span><span class="n">.</span>   <span class="n">mapped</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/ /</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="o">|</span> <span class="o">[</span><span class="n">w</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; [[&amp;ldquo;foo&amp;rdquo;, 1], [&amp;ldquo;bar&amp;rdquo;, 1], [&amp;ldquo;baz&amp;rdquo;, 1], [&amp;ldquo;qux&amp;rdquo;, 1], [&amp;ldquo;foo&amp;rdquo;, 1], [&amp;ldquo;bar&amp;rdquo;, 1], [&amp;ldquo;lala&amp;rdquo;, 1]]&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">aggregate</span> <span class="p">(</span><span class="n">built</span><span class="o">-</span><span class="k">in</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;..   aggregated = mapped.group_by { |w, c| w }&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;=&gt;</span> <span class="p">{</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">=&gt;[[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="o">[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">bar</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">=&gt;[[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">bar</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="o">[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">bar</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">baz</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">=&gt;[[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">baz</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">qux</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">=&gt;[[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">qux</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">lala</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">=&gt;[[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">lala</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;reduce (user-supplied)&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">aggregated</span><span class="o">.</span><span class="n">each_with_object</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">),</span> <span class="n">h</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="ss">:last</span><span class="p">)</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;=&gt; {&amp;ldquo;foo&amp;rdquo;=&gt;2, &amp;ldquo;bar&amp;rdquo;=&gt;2, &amp;ldquo;baz&amp;rdquo;=&gt;1, &amp;ldquo;qux&amp;rdquo;=&gt;1, &amp;ldquo;lala&amp;rdquo;=&gt;1}&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote>
+<p>{% codeblock lang:ruby %}</p>
+
+<blockquote><blockquote><p>words = &ldquo;foo bar baz qux foo bar lala&rdquo;</p>
+
+<h1>=> &ldquo;foo bar baz qux foo bar lala&rdquo;</h1>
+
+<h1>map (user-supplied)</h1>
+
+<p>..   mapped = words.split(/ /).map { |w| [w,1] }</p>
+
+<h1>=> [[&ldquo;foo&rdquo;, 1], [&ldquo;bar&rdquo;, 1], [&ldquo;baz&rdquo;, 1], [&ldquo;qux&rdquo;, 1], [&ldquo;foo&rdquo;, 1], [&ldquo;bar&rdquo;, 1], [&ldquo;lala&rdquo;, 1]]</h1>
+
+<h1>aggregate (built-in)</h1>
+
+<p>..   aggregated = mapped.group_by { |w, c| w }</p>
+
+<h1>=> {&ldquo;foo&rdquo;=>[[&ldquo;foo&rdquo;, 1], [&ldquo;foo&rdquo;, 1]], &ldquo;bar&rdquo;=>[[&ldquo;bar&rdquo;, 1], [&ldquo;bar&rdquo;, 1]], &ldquo;baz&rdquo;=>[[&ldquo;baz&rdquo;, 1]], &ldquo;qux&rdquo;=>[[&ldquo;qux&rdquo;, 1]], &ldquo;lala&rdquo;=>[[&ldquo;lala&rdquo;, 1]]}</h1>
+
+<h1>reduce (user-supplied)</h1>
+
+<p>aggregated.each_with_object({}) { |(k, v), h| h[k] = v.map(&amp;:last).inject(:+) }</p>
+
+<h1>=> {&ldquo;foo&rdquo;=>2, &ldquo;bar&rdquo;=>2, &ldquo;baz&rdquo;=>1, &ldquo;qux&rdquo;=>1, &ldquo;lala&rdquo;=>1}</h1>
+
+<p>{% endcodeblock %}</p></blockquote></blockquote>
 
 <p>When thinking about the algorithm a bit more, it also dawned on me that MapReduce sounds a lot like a &ldquo;Monad&rdquo;:<a href="http://en.wikipedia.org/wiki/Monad.">http://en.wikipedia.org/wiki/Monad.</a> When I started searching for this, it soon turned out that someone else had the same idea:</p>
 
