@@ -23,7 +23,6 @@ blog_index_dir  = 'source'    # directory for your blog's index page (if you put
 deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
-drafts_dir      = "_drafts"   # directory for post drafts
 themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
@@ -92,7 +91,7 @@ task :preview do
 end
 
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
-desc "Begin a new post in #{source_dir}/#{drafts_dir}"
+desc "Begin a new post in #{source_dir}/#{posts_dir}"
 task :new_post, :title do |t, args|
   if args.title
     title = args.title
@@ -100,10 +99,10 @@ task :new_post, :title do |t, args|
     title = get_stdin("Enter a title for your post: ")
   end
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  mkdir_p "#{source_dir}/#{drafts_dir}"
+  mkdir_p "#{source_dir}/#{posts_dir}"
   args.with_defaults(:title => 'new-post')
   title = args.title
-  filename = "#{source_dir}/#{drafts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -154,6 +153,7 @@ task :new_page, :filename do |t, args|
       page.puts "footer: true"
       page.puts "---"
     end
+    Rake::Task["isolate"].invoke(filename)
     Rake::Task["edit"].invoke(file)
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
@@ -165,10 +165,10 @@ task :new_overload do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   require 'date'
   require './plugins/titlecase.rb'
-  mkdir_p "#{source_dir}/#{drafts_dir}"
+  mkdir_p "#{source_dir}/#{source_dir}"
   date = (Date.today + (7-Date.today.wday))
   title = "Information Overload #{date.strftime("%Y-%m-%d")}"
-  filename = "#{source_dir}/#{drafts_dir}/#{date.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  filename = "#{source_dir}/#{posts_dir}/#{date.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -184,6 +184,7 @@ task :new_overload do
     post.puts "---"
     post.puts "* []()<br>\n" * 10
   end
+  Rake::Task["isolate"].invoke(filename)
   Rake::Task["edit"].invoke(filename)
 end
 
@@ -242,22 +243,22 @@ end
 desc "Open newly generated post in Emacs"
 task :edit, :filename do |t, args|
   puts "Opening post in Emacs"
-  `emacsclient -n #{args.filename}`
+  `emacsclient -nc #{args.filename}`
 end
 
-desc "Promote a draft to a post"
-task :promote do
-  puts "Avaiable drafts:"
-  Dir.chdir("#{source_dir}/#{drafts_dir}") do
-    drafts = Dir['*']
-    drafts.each.with_index do |fn, id|
-      puts "%d: %s" % [id, fn]
-    end
-    print "Promote draft number: "
-    to_move = drafts[STDIN.gets.chomp.to_i]
-    FileUtils.mv(to_move, "../#{posts_dir}/#{to_move}")
-  end
-end
+# desc "Promote a draft to a post"
+# task :promote do
+#   puts "Available drafts:"
+#   Dir.chdir("#{source_dir}/#{drafts_dir}") do
+#     drafts = Dir['*']
+#     drafts.each.with_index(1) do |fn, id|
+#       puts "%d: %s" % [id, fn]
+#     end
+#     print "Promote draft number: "
+#     to_move = drafts[STDIN.gets.chomp.to_i]
+#     FileUtils.mv(to_move, "../#{posts_dir}/#{to_move}")
+#   end
+# end
 
 
 ##############
