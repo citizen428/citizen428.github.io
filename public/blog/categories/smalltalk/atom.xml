@@ -4,7 +4,7 @@
   <title><![CDATA[Category: smalltalk | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/smalltalk/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Clever documentation]]></title>
     <link href="http://citizen428.net/blog/2009/04/26/clever-documentation/"/>
-    <updated>2009-04-26T00:00:00+08:00</updated>
+    <updated>2009-04-26T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/04/26/clever-documentation</id>
     <content type="html"><![CDATA[<p>Playing with <a href="http://www.squeak.org/">Squeak</a>&rsquo;s Method Finder, I discovered a really neat feature that I wish would be available for Ruby documentation. Here&rsquo;s the description from the built-in help:</p>
 

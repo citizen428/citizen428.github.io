@@ -4,7 +4,7 @@
   <title><![CDATA[Category: media | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/media/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-22]]></title>
     <link href="http://citizen428.net/blog/2012/07/22/information-overload-2012-07-22/"/>
-    <updated>2012-07-22T00:00:00+08:00</updated>
+    <updated>2012-07-22T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/07/22/information-overload-2012-07-22</id>
     <content type="html"><![CDATA[<p>I was busy last week, so this issue of the Information Overload is very short and a bit late.</p>
 
@@ -32,7 +32,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-15]]></title>
     <link href="http://citizen428.net/blog/2012/07/15/information-overload-2012-07-15/"/>
-    <updated>2012-07-15T00:00:00+08:00</updated>
+    <updated>2012-07-15T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/07/15/information-overload-2012-07-15</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://what-if.xkcd.com/1/">Relativistic Baseball</a><br><a href="http://en.wikipedia.org/wiki/Randall_Munroe">Randal Munroe</a> of xkcd fame has a new blog where he answers hypothetical questions about physics.</li>
@@ -51,13 +51,11 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-05-25]]></title>
     <link href="http://citizen428.net/blog/2012/05/25/information-overload-2012-05-25/"/>
-    <updated>2012-05-25T00:00:00+08:00</updated>
+    <updated>2012-05-25T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/05/25/information-overload-2012-05-25</id>
     <content type="html"><![CDATA[<p>Due to a trip this week&rsquo;s Information Overload is a bit earlier and shorter than usual. There won&rsquo;t be a new issue next week by the way.</p>
 
-<p>{% blockquote David Peter <a href="http://davidpeter.me/stories/being-deaf">http://davidpeter.me/stories/being-deaf</a> Being deaf %}
-You should never want to be average — unless you are below average. This is a cry for normalcy, when so many others wish to be abnormal.
-{% endblockquote %}</p>
+<p><blockquote><p>You should never want to be average — unless you are below average. This is a cry for normalcy, when so many others wish to be abnormal.</p><footer><strong>David Peter <a href="http://davidpeter.me/stories/being-deaf">http://davidpeter.me/stories/being-deaf</a> Being deaf</strong></footer></blockquote></p>
 
 <ul>
 <li><a href="http://davidpeter.me/stories/being-deaf">Being deaf</a><br>If you ever wondered how it&rsquo;s like to be deaf, you should read this.</li>
@@ -74,7 +72,7 @@ You should never want to be average — unless you are below average. This is a 
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-03-25]]></title>
     <link href="http://citizen428.net/blog/2012/03/25/information-overload-2012-03-25/"/>
-    <updated>2012-03-25T00:00:00+08:00</updated>
+    <updated>2012-03-25T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/03/25/information-overload-2012-03-25</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.guardian.co.uk/music/2012/mar/17/punk-rock-state-oppression-burma">Punk rock … alive and kicking in a repressive state near you</a><br>On the state of punk music in Iraq, Russia, Burma and Indonesia.</li>
@@ -95,7 +93,7 @@ You should never want to be average — unless you are below average. This is a 
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-11-06]]></title>
     <link href="http://citizen428.net/blog/2011/11/06/information-overload-2011-11-06/"/>
-    <updated>2011-11-06T20:36:00+08:00</updated>
+    <updated>2011-11-06T20:36:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/11/06/information-overload-2011-11-06</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://motherjones.com/kevin-drum/2011/10/climate-skepticism-takes-another-hit">Climate Skeptics Take Another Hit</a><br>A scientist who was skeptical about climate change set out to prove others wrong and found out that they actually were right.</li>

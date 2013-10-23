@@ -4,7 +4,7 @@
   <title><![CDATA[Category: disobey | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/disobey/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Irrepressible - An Amnesty International campaign]]></title>
     <link href="http://citizen428.net/blog/2007/07/14/irrepressible-an-amnesty-international-campaign/"/>
-    <updated>2007-07-14T00:00:00+08:00</updated>
+    <updated>2007-07-14T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2007/07/14/irrepressible-an-amnesty-international-campaign</id>
     <content type="html"><![CDATA[<p><em>The web is a great tool for sharing ideas and freedom of expression. However, efforts to try and control the Internet are growing. Internet repression is reported in countries like China, Vietnam, Tunisia, Iran, Saudi Arabia and Syria. People are persecuted and imprisoned simply for criticising their government, calling for democracy and greater press freedom, or exposing human rights abuses, online.</em></p>
 
@@ -38,7 +38,7 @@
   <entry>
     <title type="html"><![CDATA[Happy Fair Use Day!]]></title>
     <link href="http://citizen428.net/blog/2007/07/11/happy-fair-use-day/"/>
-    <updated>2007-07-11T00:00:00+08:00</updated>
+    <updated>2007-07-11T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2007/07/11/happy-fair-use-day</id>
     <content type="html"><![CDATA[<p>&ldquo;Fair Use Day&rdquo;:<a href="http://www.fairuseday.com/index.php/about-fairuse/">http://www.fairuseday.com/index.php/about-fairuse/</a></p>
 
@@ -49,7 +49,7 @@
   <entry>
     <title type="html"><![CDATA[Tor mirror set up!]]></title>
     <link href="http://citizen428.net/blog/2006/09/24/tor-mirror-set-up/"/>
-    <updated>2006-09-24T00:00:00+08:00</updated>
+    <updated>2006-09-24T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/09/24/tor-mirror-set-up</id>
     <content type="html"><![CDATA[<p>After running a &ldquo;Tor&rdquo;:<a href="http://tor.eff.org">http://tor.eff.org</a> server for more than half a year already and having donated some money to support Tor&rsquo;s development, I was looking for new ways to help out the project. That&rsquo;s why I decided to set up a mirror, which can be reached &ldquo;here&rdquo;:<a href="http://tor.blingblingsquad.net">http://tor.blingblingsquad.net</a> (&ldquo;dist/ mirror&rdquo;:<a href="http://tor.blingblingsquad.net">http://tor.blingblingsquad.net</a>). The initial sync is still running, but the site should be fully functional soon. Once this is finished, I&rsquo;ll also try to set up another mirror on the Vienna based server hosting this domain.</p>
 
@@ -60,7 +60,7 @@
   <entry>
     <title type="html"><![CDATA[Tor servers confiscated in Germany]]></title>
     <link href="http://citizen428.net/blog/2006/09/10/tor-servers-confiscated-in-germany/"/>
-    <updated>2006-09-10T00:00:00+08:00</updated>
+    <updated>2006-09-10T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/09/10/tor-servers-confiscated-in-germany</id>
     <content type="html"><![CDATA[<p>Since I was pretty busy with personal stuff during the last few days, I hadn&rsquo;t noticed that two days ago German authorities started confiscating &ldquo;Tor&rdquo;:<a href="http://tor.eff.org/">http://tor.eff.org/</a> middleman servers. That changed when earlier today I received an email from the owner of a confiscated system, who wants to get in touch with other Tor admins, in order to start a kind of &ldquo;Knowledge Base&rdquo; for people who were affected by the recent confiscations or who (still) want to set up their own Tor server. Since I&rsquo;m also running &ldquo;such a baby&rdquo;:<a href="http://serifos.eecs.harvard.edu/cgi-bin/desc.pl?q=blingblingserver">http://serifos.eecs.harvard.edu/cgi-bin/desc.pl?q=blingblingserver</a> (which never was an exit node though) on a virtual server in Germany, I&rsquo;m of course interested in this recent development, so I want to share the informative links provided in his mail with you.</p>
 
@@ -94,7 +94,7 @@ Wikipedia article on Tor (&ldquo;English&rdquo;:<a href="http://en.wikipedia.org
   <entry>
     <title type="html"><![CDATA[Interesting times indeed...]]></title>
     <link href="http://citizen428.net/blog/2006/04/13/interesting-times-indeed/"/>
-    <updated>2006-04-13T00:00:00+08:00</updated>
+    <updated>2006-04-13T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/04/13/interesting-times-indeed</id>
     <content type="html"><![CDATA[<p>&ldquo;Jennifer Government&rdquo;:<a href="http://www.amazon.com/gp/product/1400030927/sr=8-1/qid=1144962014/ref=pd_bbs_1/002-7034558-6000856?%5Fencoding=UTF8">http://www.amazon.com/gp/product/1400030927/sr=8-1/qid=1144962014/ref=pd_bbs_1/002-7034558-6000856?%5Fencoding=UTF8</a> for &ldquo;real&rdquo;:<a href="http://www.cbsnews.com/stories/2005/03/30/earlyshow/living/caught/main683960.shtml?">http://www.cbsnews.com/stories/2005/03/30/earlyshow/living/caught/main683960.shtml?</a></p>
 

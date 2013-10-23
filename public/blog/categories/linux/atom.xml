@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,61 +16,99 @@
   <entry>
     <title type="html"><![CDATA[Fixing Grub on a LUKS-encrypted Disk]]></title>
     <link href="http://citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk/"/>
-    <updated>2011-10-17T15:41:00+08:00</updated>
+    <updated>2011-10-17T15:41:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk</id>
     <content type="html"><![CDATA[<p>When I rebooted my new work notebook (a very nice x201s, with a dual-core i7, 8GB RAM and an SSD by the way), it seemed that for whatever reason there was no Grub installed. Strange, but not the only problem I had with the alternate Ubuntu installer that I used for setting up <a href="http://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS-encrypted</a> root and swap partitions. Since this turned out to be more involved than I originally thought, I decided to document what I did to maybe save others the trouble. BTW: You&rsquo;ll need a Linux Live-CD for this, I recommend the excellent Debian-based <a href="http://grml.org/">Grml</a>.</p>
 
 <p>First we need to open the LUKS partition, which can be done with <a href="http://linux.die.net/man/8/cryptsetup">cryptsetup</a>.</p>
 
-<p>{% codeblock lang:bash Step 1: Unlock LUKS %}
-$ cryptsetup luksOpen /dev/<device> <name></p>
-
-<h1>you&rsquo;ll be asked for your password</h1>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Step 1: Unlock LUKS </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cryptsetup luksOpen /dev/&lt;device&gt; &lt;name&gt;&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;you&amp;rsquo;ll be asked <span class="k">for </span>your password&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>With that out of the way, you&rsquo;ll have to mount your LVM volumes. This took me a bit because my VG wasn&rsquo;t active, but thanks to an excellent blog post I found (see sources) this problem was solved quickly.</p>
 
-<p>{% codeblock lang:bash Step 2: Mounting LVM %}</p>
-
-<h1>do a lvm disk scan</h1>
-
-<p>$ lvmdiskscan</p>
-
-<h1>activate the volume group</h1>
-
-<p>$ vgchange -ay</p>
-
-<h1>make sure the VG is active now</h1>
-
-<p>$ lvscan</p>
-
-<h1>mount the actual volume</h1>
-
-<p>$ mount /dev/&lt;volume_group_name>/<volume> /mnt/external
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Step 2: Mounting LVM </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;do a lvm disk scan&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>lvmdiskscan&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;activate the volume group&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>vgchange -ay&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;make sure the VG is active now&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>lvscan&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;mount the actual volume&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>mount /dev/&amp;lt;volume_group_name&gt;/&lt;volume&gt; /mnt/external
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>I then needed to mount the unencrypted <code>/boot</code> partition as well as some special filesystems (with bind mounts) at the appropriate mount points.</p>
 
-<p>{% codeblock lang:bash Step 3: Preparing for the chroot %}</p>
-
-<h1>mount the boot partion</h1>
-
-<p>$ mount /dev/<device> /mnt/external/boot</p>
-
-<h1>bind mount some things we need in the chroot env</h1>
-
-<p>$ mount &mdash;bind /dev /mnt/external/dev
-$ mount &mdash;bind /proc /mnt/external/proc
-$ mount &mdash;bind /sys /mnt/external/sys
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Step 3: Preparing for the chroot </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;mount the boot partion&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>mount /dev/&lt;device&gt; /mnt/external/boot&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;bind mount some things we need in the chroot env&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>mount &amp;mdash;bind /dev /mnt/external/dev
+</span><span class='line'><span class="nv">$ </span>mount &amp;mdash;bind /proc /mnt/external/proc
+</span><span class='line'><span class="nv">$ </span>mount &amp;mdash;bind /sys /mnt/external/sys
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>With everything set up, all that&rsquo;s left to do is <code>chroot</code>ing into the system and fixing Grub.</p>
 
-<p>{% codeblock lang:bash Step 4: chrooting and fixing Grub %}
-$ chroot /mnt/external
-chroot$  grub-setup # grub-install, whatever you need
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Step 4: chrooting and fixing Grub </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>chroot /mnt/external
+</span><span class='line'>chroot<span class="nv">$ </span> grub-setup <span class="c"># grub-install, whatever you need</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Sources:</p>
 
@@ -85,7 +123,7 @@ chroot$  grub-setup # grub-install, whatever you need
   <entry>
     <title type="html"><![CDATA[Finally...]]></title>
     <link href="http://citizen428.net/blog/2006/11/05/finally/"/>
-    <updated>2006-11-05T00:00:00+08:00</updated>
+    <updated>2006-11-05T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/11/05/finally</id>
     <content type="html"><![CDATA[<p>&hellip;some random stuff I wanted to blog about for quite some time already:</p>
 
@@ -131,7 +169,7 @@ chroot$  grub-setup # grub-install, whatever you need
   <entry>
     <title type="html"><![CDATA[Breaking news: Update to citizen428.blog(), situation unclear!]]></title>
     <link href="http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
-    <updated>2006-07-01T00:00:00+08:00</updated>
+    <updated>2006-07-01T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
     <content type="html"><![CDATA[<p>June was pretty busy, so I only managed to blog once. So here&rsquo;s a little update of what happened during the past few weeks:</p>
 
@@ -162,7 +200,7 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
   <entry>
     <title type="html"><![CDATA[First day in my new job]]></title>
     <link href="http://citizen428.net/blog/2006/01/05/first-day-in-my-new-job/"/>
-    <updated>2006-01-05T00:00:00+08:00</updated>
+    <updated>2006-01-05T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/01/05/first-day-in-my-new-job</id>
     <content type="html"><![CDATA[<p>/me is now working as a &ldquo;Junior System Engineer&rdquo;, whatever that is supposed to mean&hellip; ;)</p>
 
@@ -175,7 +213,7 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
   <entry>
     <title type="html"><![CDATA[linuxConverts++]]></title>
     <link href="http://citizen428.net/blog/2005/11/23/linuxconverts/"/>
-    <updated>2005-11-23T00:00:00+08:00</updated>
+    <updated>2005-11-23T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2005/11/23/linuxconverts</id>
     <content type="html"><![CDATA[<p>While my girlfriend was visiting her sister in Rotterdam, I finally set up her notebook to dual boot Windows XP and Ubuntu Linux. Before you think bad of me: I didn&rsquo;t sneakily do this without her knowing, but instead because she once mentioned that she&rsquo;d like to try out another OS.</p>
 

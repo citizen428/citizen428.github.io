@@ -4,7 +4,7 @@
   <title><![CDATA[Category: webtips | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/webtips/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[happynerds.net is online!]]></title>
     <link href="http://citizen428.net/blog/2009/12/13/happynerds-net-is-online/"/>
-    <updated>2009-12-13T00:00:00+08:00</updated>
+    <updated>2009-12-13T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/12/13/happynerds-net-is-online</id>
     <content type="html"><![CDATA[<p>In my <a href="http://citizen428.net/archives/404-Fun-with-Sinatra,-Heroku-and-MongoDB.html">previous blog post</a> I mentioned how much fun I have in creating a small web project with Sinatra, Heroku and MongoHQ and today said project finally went online:</p>
 
@@ -29,7 +29,7 @@
   <entry>
     <title type="html"><![CDATA[javascript:alert("Nothing to see here, please move on!")]]></title>
     <link href="http://citizen428.net/blog/2005/11/01/javascriptalertnothing-to-see-here-please-move-on/"/>
-    <updated>2005-11-01T00:00:00+08:00</updated>
+    <updated>2005-11-01T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2005/11/01/javascriptalertnothing-to-see-here-please-move-on</id>
     <content type="html"><![CDATA[<p>You probably don&rsquo;t want to know what I&rsquo;ve been up to lately, but mean bastard that I am, I&rsquo;m going to tell you anyway.</p>
 

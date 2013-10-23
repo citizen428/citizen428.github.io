@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gentoo | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/gentoo/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Delusions of grandeur]]></title>
     <link href="http://citizen428.net/blog/2006/08/12/delusions-of-grandeur/"/>
-    <updated>2006-08-12T00:00:00+08:00</updated>
+    <updated>2006-08-12T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/08/12/delusions-of-grandeur</id>
     <content type="html"><![CDATA[<p>As my PR manager told me, large numbers of fans have already complained about the recent lack of updates. Since I&rsquo;m only my reader&rsquo;s humble servant, I of course have to comply with this wishes, so here are the long awaited news about yours truly:</p>
 
@@ -46,7 +46,7 @@ Found an &ldquo;article&rdquo;:<a href="http://www.explosm.net/articles/6135/4/"
   <entry>
     <title type="html"><![CDATA[Breaking news: Update to citizen428.blog(), situation unclear!]]></title>
     <link href="http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
-    <updated>2006-07-01T00:00:00+08:00</updated>
+    <updated>2006-07-01T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
     <content type="html"><![CDATA[<p>June was pretty busy, so I only managed to blog once. So here&rsquo;s a little update of what happened during the past few weeks:</p>
 
@@ -77,7 +77,7 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
   <entry>
     <title type="html"><![CDATA[Mac Mini ordered]]></title>
     <link href="http://citizen428.net/blog/2006/04/09/mac-mini-ordered/"/>
-    <updated>2006-04-09T00:00:00+08:00</updated>
+    <updated>2006-04-09T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/04/09/mac-mini-ordered</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve done it. I decided to finally get my first Mac and ordered one of those nifty new Intel Mac Minis. Since it will mainly be used for mailing, surfing the web and other things which don&rsquo;t need lots of CPU cycles, I&rsquo;ve decided to go for the Core Solo, which should be more than enough for my needs.</p>
 
@@ -90,7 +90,7 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
   <entry>
     <title type="html"><![CDATA[Look, it's still alive...]]></title>
     <link href="http://citizen428.net/blog/2006/03/24/look-its-still-alive/"/>
-    <updated>2006-03-24T00:00:00+08:00</updated>
+    <updated>2006-03-24T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/03/24/look-its-still-alive</id>
     <content type="html"><![CDATA[<p>After a pretty long period of not doing any work related to Gentoo (blame my boss) I&rsquo;ve finally come around to put together the upgrade of the &ldquo;Gentoo/FreeBSD documentation&rdquo;:<a href="http://www.gentoo.org/doc/en/gentoo-freebsd.xml">http://www.gentoo.org/doc/en/gentoo-freebsd.xml</a> I promised &ldquo;Diego&rdquo;:<a href="http://dev.gentoo.org/~flameeyes/">http://dev.gentoo.org/~flameeyes/</a> quite some time ago. I&rsquo;m sure that our nice documentation developers will commit this soon!</p>
 
@@ -103,7 +103,7 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
   <entry>
     <title type="html"><![CDATA[Back. Kind of.]]></title>
     <link href="http://citizen428.net/blog/2006/02/01/back-kind-of/"/>
-    <updated>2006-02-01T00:00:00+08:00</updated>
+    <updated>2006-02-01T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/02/01/back-kind-of</id>
     <content type="html"><![CDATA[<p>Just a little info for the people who may wonder about my lack of activity lately (mainly the Ruby herd and some guys of the Gentoo/ALT project): I&rsquo;ve started a new job as a Junior Systems Engineer for a company providing open source solutions for enterprise customers, which means I&rsquo;ve recently been playing around with stuff like Linux Heartbeat and other cool technologies. It&rsquo;s quite stressful, but also pretty interesting so far and I quite like it (despite my constant rambling about having a regular job).</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: opinion | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/opinion/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[C#/Mono: first impressions, IDEs]]></title>
     <link href="http://citizen428.net/blog/2005/09/03/cmono-first-impressions-ides/"/>
-    <updated>2005-09-03T00:00:00+08:00</updated>
+    <updated>2005-09-03T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2005/09/03/cmono-first-impressions-ides</id>
     <content type="html"><![CDATA[<p>Now that I&rsquo;m working through my &ldquo;Mono Developer&rsquo;s Notebook&rdquo;:<a href="http://www.amazon.de/exec/obidos/tg/detail/-/0596007922/qid=1125743180/sr=8-1/ref=pd_bbs_1/302-8376596-0194421?v=glance&amp;s=books&amp;n=507846,">http://www.amazon.de/exec/obidos/tg/detail/-/0596007922/qid=1125743180/sr=8-1/ref=pd_bbs_1/302-8376596-0194421?v=glance&amp;s=books&amp;n=507846,</a> I thought it&rsquo;s time for some first impressions on C# and Mono. Ok, they are not really first impressions, as I&rsquo;ve played with the framework before. But not until now have I done so methodically, with the aim of <em>really</em> learning C# and the &ldquo;class libraries&rdquo;:<a href="http://www.go-mono.com/docs/.">http://www.go-mono.com/docs/.</a><!--more--><em>Firsts impressions:</em>
 First off, C# is a pretty modern language which features stuff like automatic garbage collection, support for interfaces, versioning, delegates and much more. I really like the &ldquo;StringBuilder&rdquo;:<a href="http://www.go-mono.com/docs/index.aspx?link=T%3aSystem.Text.StringBuilder,">http://www.go-mono.com/docs/index.aspx?link=T%3aSystem.Text.StringBuilder,</a> and think that regular expressions are handled &ldquo;in a nice way&rdquo;:<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconUsingRegularExpressionClasses.asp.">http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconUsingRegularExpressionClasses.asp.</a> &ldquo;Collections&rdquo;:<a href="http://www.go-mono.com/docs/monodoc.ashx?tlink=7@N%3aSystem.Collections">http://www.go-mono.com/docs/monodoc.ashx?tlink=7@N%3aSystem.Collections</a> and &ldquo;Indexers&rdquo;:<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcerrusingindexers.asp">http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcerrusingindexers.asp</a> are pretty neat too, and I yet have to look into &ldquo;Attributes and Reflection&rdquo;:<a href="http://www.oreilly.com/catalog/progcsharp/chapter/ch18.html">http://www.oreilly.com/catalog/progcsharp/chapter/ch18.html</a> a little more. I also like the great documentation that can either be found on the &ldquo;MSDN library&rdquo;:<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcoriCProgrammersReference.asp">http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcoriCProgrammersReference.asp</a> or the &ldquo;Mono website&rdquo;:<a href="http://www.go-mono.com/docs/.">http://www.go-mono.com/docs/.</a></p>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/osx/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[A little Pow helper]]></title>
     <link href="http://citizen428.net/blog/2011/11/22/a-little-pow-helper/"/>
-    <updated>2011-11-22T21:08:00+08:00</updated>
+    <updated>2011-11-22T21:08:00+07:00</updated>
     <id>http://citizen428.net/blog/2011/11/22/a-little-pow-helper</id>
     <content type="html"><![CDATA[<p>If you are a Ruby developer on MacOS X, you probably love <a href="http://pow.cx">Pow</a> as much as I do. While skimming the <a href="http://pow.cx/manual.html">fine manual</a> today, I noticed <a href="http://pow.cx/manual.html#section_3.2">section 3.2</a>, &ldquo;Reading the Current Configuration&rdquo;, which explains that you can query Pow&rsquo;s config and status via simple HTTP requests:</p>
 
@@ -80,7 +80,7 @@ end</p>
   <entry>
     <title type="html"><![CDATA[Fixing MacPorts on Snow Leopard]]></title>
     <link href="http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard/"/>
-    <updated>2009-10-19T00:00:00+08:00</updated>
+    <updated>2009-10-19T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard</id>
     <content type="html"><![CDATA[<pre><code>&lt;p&gt;After upgrading to Snow Leopard I had quite a bit of trouble with my &lt;a href="http://www.macports.org/"&gt;MacPorts&lt;/a&gt; installation, since most builds just failed with configure errors. After the obvious first steps of installing a newer version for SL and making sure I have the most recent XCode, I was a bit stumped until I finally found this site:&lt;/p&gt;
 
@@ -94,7 +94,7 @@ end</p>
   <entry>
     <title type="html"><![CDATA[Easy setup for Clojure on Mac OS X Leopard]]></title>
     <link href="http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
-    <updated>2009-08-24T00:00:00+08:00</updated>
+    <updated>2009-08-24T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
     <content type="html"><![CDATA[<p>&ldquo;Clojure&rdquo;:<a href="http://clojure.org/">http://clojure.org/</a> definitely is one of the hottest new programming languages around and just recently hit a &ldquo;very important milestone&rdquo;:<a href="http://clojure.blogspot.com/2009/05/clojure-10.html.">http://clojure.blogspot.com/2009/05/clojure-10.html.</a> Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand &ldquo;one of those&rdquo;:<a href="http://github.com/carlism/Clojure-MacOSX/tree">http://github.com/carlism/Clojure-MacOSX/tree</a> into &ldquo;ClojureX&rdquo;:<a href="http://github.com/citizen428/ClojureX/tree/master,">http://github.com/citizen428/ClojureX/tree/master,</a> which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
 
@@ -122,7 +122,7 @@ end</p>
   <entry>
     <title type="html"><![CDATA[Create your own (Ruby) API browser in 3 easy steps]]></title>
     <link href="http://citizen428.net/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps/"/>
-    <updated>2009-05-17T00:00:00+08:00</updated>
+    <updated>2009-05-17T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps</id>
     <content type="html"><![CDATA[<ul>
   <li><b>Step 1:</b> Download "Fluid":http://fluidapp.com/, an awesome little application to create site specific browsers.</li>
@@ -144,7 +144,7 @@ end</p>
   <entry>
     <title type="html"><![CDATA[A TextMate command for the RubyLearning forums]]></title>
     <link href="http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/"/>
-    <updated>2009-05-10T00:00:00+08:00</updated>
+    <updated>2009-05-10T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums</id>
     <content type="html"><![CDATA[<p>As we all know posting code to &ldquo;Moodle&rdquo;:<a href="http://moodle.org/">http://moodle.org/</a> (the software that powers &ldquo;RubyLearning&rdquo;:<a href="http://rubylearning.org">http://rubylearning.org</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
 

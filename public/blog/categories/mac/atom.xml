@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mac | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/mac/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Major changes in ClojureX]]></title>
     <link href="http://citizen428.net/blog/2010/02/21/major-changes-in-clojurex/"/>
-    <updated>2010-02-21T00:00:00+08:00</updated>
+    <updated>2010-02-21T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2010/02/21/major-changes-in-clojurex</id>
     <content type="html"><![CDATA[<p>When ClojureX was started it tried to be everything for everybody. Not only did it checkout and compile the git HEADs of clojure, clojure-contrib and jline, it also (optionally) downloaded packages for Clojure support in TextMate or Emacs, configured and installed them. This has two obvious drawbacks. First off, people end up downloading stuff they don&rsquo;t need. With current disk sizes and connection speeds that&rsquo;s probably not much of a problem, but some users may still find annoying. More importantly though it was hard to keep up with the upstream changes, e.g. clojure-contrib&rsquo;s recent switch to Maven.</p>
 
@@ -32,7 +32,7 @@
   <entry>
     <title type="html"><![CDATA[Fixing MacPorts on Snow Leopard]]></title>
     <link href="http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard/"/>
-    <updated>2009-10-19T00:00:00+08:00</updated>
+    <updated>2009-10-19T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard</id>
     <content type="html"><![CDATA[<pre><code>&lt;p&gt;After upgrading to Snow Leopard I had quite a bit of trouble with my &lt;a href="http://www.macports.org/"&gt;MacPorts&lt;/a&gt; installation, since most builds just failed with configure errors. After the obvious first steps of installing a newer version for SL and making sure I have the most recent XCode, I was a bit stumped until I finally found this site:&lt;/p&gt;
 
@@ -46,7 +46,7 @@
   <entry>
     <title type="html"><![CDATA[RubyOSA: Google lyrics for current iTunes track]]></title>
     <link href="http://citizen428.net/blog/2009/03/18/rubyosa-google-lyrics-for-current-itunes-track/"/>
-    <updated>2009-03-18T00:00:00+08:00</updated>
+    <updated>2009-03-18T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/03/18/rubyosa-google-lyrics-for-current-itunes-track</id>
     <content type="html"><![CDATA[<script src="http://gist.github.com/81399.js"></script>
 
@@ -58,7 +58,7 @@
   <entry>
     <title type="html"><![CDATA[RubyLearning got a new mentor with shiny Shoes and a Mac]]></title>
     <link href="http://citizen428.net/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac/"/>
-    <updated>2009-02-01T00:00:00+08:00</updated>
+    <updated>2009-02-01T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac</id>
     <content type="html"><![CDATA[<p>Since I currently have quite a lot of time but am slightly on the poor side (as we all know: &lsquo;money = has_time ? 0 : loads.to_i&rsquo;) I decided to join batch 10 of <a href="http://rubylearning.org/class/">RubyLearning&rsquo;s</a> free online core Ruby programming course. In my opinion the course is <em>very</em> good, so if you always wanted to learn Ruby but couldn&rsquo;t find the motivation alone, definitely give this a try! But since I myself am not exactly new to Ruby, it so happened that after the first week of the course I now joined the RubyLearning team as a mentor. Glad to be part of the gang, folks! :)</p>
 
@@ -75,7 +75,7 @@
   <entry>
     <title type="html"><![CDATA[Freie Editoren braucht das Land]]></title>
     <link href="http://citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land/"/>
-    <updated>2009-01-29T00:00:00+08:00</updated>
+    <updated>2009-01-29T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land</id>
     <content type="html"><![CDATA[<p>Geht es um Text-Editoren für MacOS X führt kaum ein Weg an <a href="http://macromates.com/">TextMate</a> vorbei, als freie Alternative ist <a href="http://tuppis.com/smultron/">Smultron</a> sehr beliebt.</p>
 

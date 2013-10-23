@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.net/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T01:28:13+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -14,9 +14,18 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Great, greater, Greater China!]]></title>
+    <link href="http://citizen428.net/blog/2013/09/08/great-greater-greater-china/"/>
+    <updated>2013-09-08T00:10:00+07:00</updated>
+    <id>http://citizen428.net/blog/2013/09/08/great-greater-greater-china</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Extending Nmap with Lua]]></title>
     <link href="http://citizen428.net/blog/2013/08/31/extending-nmap-with-lua/"/>
-    <updated>2013-08-31T17:49:00+08:00</updated>
+    <updated>2013-08-31T17:49:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/08/31/extending-nmap-with-lua</id>
     <content type="html"><![CDATA[<p><em>I originally wrote this piece for a pentesting magazine, but after some unprofessional behavior by their editor I lost my cool and decided not too publish it there. It&rsquo;d be a shame to let it go to waste though, so I after almost three month I finally decided to put it up on my blog.</em></p>
 
@@ -357,7 +366,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   <entry>
     <title type="html"><![CDATA[¡Viva Mexico!]]></title>
     <link href="http://citizen428.net/blog/2013/07/27/viva-mexico/"/>
-    <updated>2013-07-27T20:04:00+08:00</updated>
+    <updated>2013-07-27T20:04:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/07/27/viva-mexico</id>
     <content type="html"><![CDATA[<p>Oh man, this is one overdue post. I wanted to write about Mexico forever, but then we were traveling in Taiwan, and suddenly the whole Latin America experience just seemed so far away already&hellip; Anyway, we are now in Vietnam (Hanoi to be more specific), so I thought I&rsquo;d finally sit down and write up my impressions.</p>
 
@@ -374,7 +383,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   <entry>
     <title type="html"><![CDATA[My Kindle Fire and I]]></title>
     <link href="http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i/"/>
-    <updated>2013-06-07T16:52:00+08:00</updated>
+    <updated>2013-06-07T16:52:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i</id>
     <content type="html"><![CDATA[<p>Back in October I broke my trusty old <a href="http://www.amazon.com/gp/product/B004HZYA6E/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004HZYA6E&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Keyboard</a>, a rather
 annoying thing to happen at the beginning of a long trip. As a
@@ -539,7 +548,7 @@ and read some comics, all on the same device.</p>
   <entry>
     <title type="html"><![CDATA[South America: The summary]]></title>
     <link href="http://citizen428.net/blog/2013/05/31/south-america-the-summary/"/>
-    <updated>2013-05-31T17:52:00+08:00</updated>
+    <updated>2013-05-31T17:52:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/05/31/south-america-the-summary</id>
     <content type="html"><![CDATA[<p>After a three day layover in the U.S., Mexico seems like the perfect place to write up my thoughts and the roughly 7.5 months we spent in South America. I&rsquo;m sure there are plenty of omissions, but it should be enough to give you an idea.</p>
 
@@ -620,7 +629,7 @@ Another place many people love and that has a lot of hype surrounding it. Coming
   <entry>
     <title type="html"><![CDATA[Living with the Hare Krishna]]></title>
     <link href="http://citizen428.net/blog/2013/04/24/living-with-the-hare-krishna/"/>
-    <updated>2013-04-24T18:43:00+08:00</updated>
+    <updated>2013-04-24T18:43:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/04/24/living-with-the-hare-krishna</id>
     <content type="html"><![CDATA[<p>I know there&rsquo;s lots of other things I could tell you about (like Peru), but we spent last week at a Hare Krishna temple/farm in the Ecuadorian jungle at that&rsquo;s gonna be today&rsquo;s story.</p>
 
@@ -656,7 +665,7 @@ Another place many people love and that has a lot of hype surrounding it. Coming
   <entry>
     <title type="html"><![CDATA[Filling in the blanks]]></title>
     <link href="http://citizen428.net/blog/2013/03/23/filling-in-the-blanks/"/>
-    <updated>2013-03-23T17:20:00+08:00</updated>
+    <updated>2013-03-23T17:20:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/03/23/filling-in-the-blanks</id>
     <content type="html"><![CDATA[<p>As should be clear by now, I&rsquo;m not overly good at writing these things regularly, so I won&rsquo;t even pretend to be sorry it&rsquo;s been over a month
 since the last one, and I also won&rsquo;t promise that the next one will come any sooner. I also kinda gave up hope on ever properly filling you in on Argentina part 2 and 3 and Chile, so a very short summary will have to do:</p>
@@ -701,7 +710,7 @@ place, hard to leave.</li>
   <entry>
     <title type="html"><![CDATA[Mix it up!]]></title>
     <link href="http://citizen428.net/blog/2013/02/13/mix-it-up/"/>
-    <updated>2013-02-13T18:56:00+08:00</updated>
+    <updated>2013-02-13T18:56:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/02/13/mix-it-up</id>
     <content type="html"><![CDATA[<p>I know I didn&rsquo;t write in way too long (and I still didn&rsquo;t talk about Argentina and Chile), but that just happens when you are traveling. Especially when that takes you to Bolivia, where Internet connection speeds are still stuck in the 1990s.</p>
 
@@ -720,7 +729,7 @@ place, hard to leave.</li>
   <entry>
     <title type="html"><![CDATA[Cono Sur reflections]]></title>
     <link href="http://citizen428.net/blog/2013/01/25/cono-sur-reflections/"/>
-    <updated>2013-01-25T12:00:00+08:00</updated>
+    <updated>2013-01-25T12:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/01/25/cono-sur-reflections</id>
     <content type="html"><![CDATA[<p>I know I&rsquo;m far behind on telling you about the places we visited, but
 I will eventually catch up, or at least I hope so. For now I wanted to
@@ -818,7 +827,7 @@ missing)</li>
   <entry>
     <title type="html"><![CDATA[2012 travel review]]></title>
     <link href="http://citizen428.net/blog/2013/01/09/2012-travel-review/"/>
-    <updated>2013-01-09T13:25:00+08:00</updated>
+    <updated>2013-01-09T13:25:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/01/09/2012-travel-review</id>
     <content type="html"><![CDATA[<p>I know it&rsquo;s a bit late for a 2012 review post, but we spent the last couple of days in a wonderfully isolated place on the Chilean coast without an Internet connection. Anyway, I thought better late than never, so here are some thoughts on the first 3 month of our trip.</p>
 
@@ -853,7 +862,7 @@ missing)</li>
   <entry>
     <title type="html"><![CDATA[2012 reading list]]></title>
     <link href="http://citizen428.net/blog/2013/01/02/2012-reading-list/"/>
-    <updated>2013-01-02T20:44:00+08:00</updated>
+    <updated>2013-01-02T20:44:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/01/02/2012-reading-list</id>
     <content type="html"><![CDATA[<p>Once again here&rsquo;s a list of all the books I read in the past year, in
 reading order. I&rsquo;m surprised I made it to 52 again, since there were
@@ -929,7 +938,7 @@ Ivo Balbaert: <em>The Way to Go</em><br></p>
   <entry>
     <title type="html"><![CDATA[Feliz Navidad!]]></title>
     <link href="http://citizen428.net/blog/2012/12/24/feliz-navidad/"/>
-    <updated>2012-12-24T10:01:00+08:00</updated>
+    <updated>2012-12-24T10:01:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/12/24/feliz-navidad</id>
     <content type="html"><![CDATA[<p>I even have a present for you, the long overdue post about Uruguay,
 one of the highlights of our trip so far!</p>
@@ -985,7 +994,7 @@ the post about the month we just spent in Argentina!</p>
   <entry>
     <title type="html"><![CDATA[A first glimpse of Argentina]]></title>
     <link href="http://citizen428.net/blog/2012/11/21/a-first-glimpse-of-argentina/"/>
-    <updated>2012-11-21T23:37:00+08:00</updated>
+    <updated>2012-11-21T23:37:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/11/21/a-first-glimpse-of-argentina</id>
     <content type="html"><![CDATA[<p>Ladies and gentlemen,</p>
 
@@ -1089,7 +1098,7 @@ this thought when I tell you about Uruguay and the rest of Argentina&hellip;</p>
   <entry>
     <title type="html"><![CDATA[In the land of Tereré]]></title>
     <link href="http://citizen428.net/blog/2012/11/12/in-the-land-of-terere/"/>
-    <updated>2012-11-12T19:36:00+08:00</updated>
+    <updated>2012-11-12T19:36:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/11/12/in-the-land-of-terere</id>
     <content type="html"><![CDATA[<p>Considering we left Paraguay almost three weeks ago, it&rsquo;s a shame I
 haven&rsquo;t told you anything about this wonderful place yet. But let&rsquo;s
@@ -1191,7 +1200,7 @@ to Uruguay from where I&rsquo;m currently writing this.</p>
   <entry>
     <title type="html"><![CDATA[A quick one for the road]]></title>
     <link href="http://citizen428.net/blog/2012/10/31/a-quick-one-for-the-road/"/>
-    <updated>2012-10-31T19:30:00+08:00</updated>
+    <updated>2012-10-31T19:30:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/10/31/a-quick-one-for-the-road</id>
     <content type="html"><![CDATA[<p>After a lovely time in Paraguay (a separate post will follow), we explored the Northeast of Argentina a bit (Posadas, San Ignacio,
 Iguazu Falls). Today we&rsquo;ll take an overnight bus to Colon were we&rsquo;ll cross into Paysandu (Uruguay) on Friday or so. We don&rsquo;t know how long we&rsquo;ll stay there yet, but after that we&rsquo;ll head back to Argentina to finally visit some cities.</p>
@@ -1209,7 +1218,7 @@ Iguazu Falls). Today we&rsquo;ll take an overnight bus to Colon were we&rsquo;ll
   <entry>
     <title type="html"><![CDATA[Curacao! Curawow?]]></title>
     <link href="http://citizen428.net/blog/2012/10/20/curacao-curawow/"/>
-    <updated>2012-10-20T23:15:00+08:00</updated>
+    <updated>2012-10-20T23:15:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/10/20/curacao-curawow</id>
     <content type="html"><![CDATA[<p>Last time I promised you all a bit more information about backpacking on a Caribbean island, so here we go: before we set out, we didn&rsquo;t exactly know how much time to plan for Curacao, so we decided on 12 days, which also had to do with P.&rsquo;s birthday. Considering this island isn&rsquo;t too big this seems like a rather long time, but things here are slow, especially when travelling on a budget&hellip;</p>
 
@@ -1234,7 +1243,7 @@ Iguazu Falls). Today we&rsquo;ll take an overnight bus to Colon were we&rsquo;ll
   <entry>
     <title type="html"><![CDATA[Bon bini]]></title>
     <link href="http://citizen428.net/blog/2012/10/12/bon-bini/"/>
-    <updated>2012-10-12T17:55:00+08:00</updated>
+    <updated>2012-10-12T17:55:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/10/12/bon-bini</id>
     <content type="html"><![CDATA[<p><em>This was originally written on October 6th as an email, but I only got around to modify and post it here now.</em></p>
 
@@ -1274,7 +1283,7 @@ backpacking on a Caribbean island in the next post.</p>
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-30]]></title>
     <link href="http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30/"/>
-    <updated>2012-09-30T00:00:00+08:00</updated>
+    <updated>2012-09-30T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30</id>
     <content type="html"><![CDATA[<blockquote><p>[W]e’re rushing to meet so many deadlines that we hardly register that what we need most are lifelines.</p><footer><strong>Pico Iyer</strong> <cite><a href='http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&pagewanted=all'>The Joy of Quiet</a></cite></footer></blockquote>
 
@@ -1295,7 +1304,7 @@ backpacking on a Caribbean island in the next post.</p>
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-23]]></title>
     <link href="http://citizen428.net/blog/2012/09/23/information-overload-2012-09-23/"/>
-    <updated>2012-09-23T00:00:00+08:00</updated>
+    <updated>2012-09-23T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/09/23/information-overload-2012-09-23</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://derstandard.at/1345166255203/In-Wien-fehlt-der-Diskurs-zu-Gentrifizierung">&ldquo;In Wien fehlt der Diskurs zu Gentrifizierung&rdquo;</a><br>On urban gentrification in Vienna (in German).</li>
@@ -1313,7 +1322,7 @@ backpacking on a Caribbean island in the next post.</p>
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-16]]></title>
     <link href="http://citizen428.net/blog/2012/09/16/information-overload-2012-09-16/"/>
-    <updated>2012-09-16T00:00:00+08:00</updated>
+    <updated>2012-09-16T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/09/16/information-overload-2012-09-16</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://wilwheaton.net/2012/09/depression-lies/">depression lies</a><br>A very personal blog post by Wil Wheaton, and one I can relate to very much on several levels.</li>
@@ -1322,22 +1331,6 @@ backpacking on a Caribbean island in the next post.</p>
 <li><a href="http://www.skepticblog.org/2012/09/11/the-hidden-price-of-immoral-acts/">What Is Seen and What Is Unseen</a><br>What starts as an article about doping, becomes a look at cheating in general.</li>
 <li><a href="http://newswatch.nationalgeographic.com/2012/09/06/caribbean-coral-reefs-mostly-dead-iucn-says/">Caribbean Coral Reefs Mostly Dead, IUCN Says</a><br>This is very sad&hellip;</li>
 <li><a href="http://arstechnica.com/security/2012/09/crime-hijacks-https-sessions/">Crack in Internet&rsquo;s foundation of trust allows HTTPS session hijacking</a><br>Poor SSL had to put up with a lot these past few years&hellip;</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2012-09-09]]></title>
-    <link href="http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09/"/>
-    <updated>2012-09-09T00:00:00+08:00</updated>
-    <id>http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09</id>
-    <content type="html"><![CDATA[<p>I was rather busy this week, so this Information Overload is super short.</p>
-
-<ul>
-<li><a href="http://lubutu.com/soso/condition-handling-for-non-lispers">Condition Handling for Non-Lispers</a><br>If you ever need to explain condition handling to a non-Lisper, this is a sensible post to point them too.</li>
-<li><a href="http://www.handelsblatt.com/politik/oekonomie/nachrichten/vollgeld-iwf-forscher-spielen-radikale-bankreform-durch-seite-all/7008170-all.html">IWF-Forscher spielen radikale Bankreform durch</a><br>Two IMF economist test a model where banks can&rsquo;t create new money in the form of loans (in German).</li>
-<li><a href="http://news.discovery.com/history/preserved-brain-bog-england-110406.html">Prehistoric human brain found pickled in bog</a><br>A bit older, but still very insteresting for science.</li>
 </ul>
 
 ]]></content>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacking | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/hacking/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Create script from IRB session]]></title>
     <link href="http://citizen428.net/blog/2009/03/18/create-script-from-irb-session/"/>
-    <updated>2009-03-18T00:00:00+08:00</updated>
+    <updated>2009-03-18T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/03/18/create-script-from-irb-session</id>
     <content type="html"><![CDATA[<p>We all know the feeling: before starting a new script you hack around in IRB to try out some things, but once you&rsquo;re done you realize that now you either have to type everything again or copy/paste from the IRB session (or the history file if you keep one). So I set out on my search for a solution and found an &ldquo;old ruby-talk post by Gavin Sinclair&rdquo;:<a href="http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results,">http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results,</a> which implemented a method called <b>dumphist</b>, which I modified to my needs and put in my ~/.irbrc:</p>
 
@@ -25,21 +25,35 @@
 
 <p>Let&rsquo;s look at the following IRB session:</p>
 
-<p>{% codeblock lang:ruby %}</p>
-
-<blockquote><blockquote><p>puts &ldquo;hello&rdquo;
-hello
-=> nil
-puts &ldquo;world&rdquo;
-world
-=> nil
-def foo
-..   puts &lsquo;bar&rsquo;
-..   end
-=> nil
-dumphist(3, &lsquo;test.rb&rsquo;)
-=> [&ldquo;def foo&rdquo;, &ldquo;puts &lsquo;bar&rsquo;&rdquo;, &ldquo;end&rdquo;]
-{% endcodeblock %}</p></blockquote></blockquote>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;puts &amp;ldquo;hello&amp;rdquo;</span>
+</span><span class='line'><span class="sr">hello</span>
+</span><span class='line'><span class="sr">=&gt; nil</span>
+</span><span class='line'><span class="sr">puts &amp;ldquo;world&amp;rdquo;</span>
+</span><span class='line'><span class="sr">world</span>
+</span><span class='line'><span class="sr">=&gt; nil</span>
+</span><span class='line'><span class="sr">def foo</span>
+</span><span class='line'><span class="sr">..   puts &amp;lsquo;bar&amp;rsquo;</span>
+</span><span class='line'><span class="sr">..   end</span>
+</span><span class='line'><span class="sr">=&gt; nil</span>
+</span><span class='line'><span class="sr">dumphist(3, &amp;lsquo;test.rb&amp;rsquo;)</span>
+</span><span class='line'><span class="sr">=&gt; [&amp;ldquo;def foo&amp;rdquo;, &amp;ldquo;puts &amp;lsquo;bar&amp;rsquo;&amp;rdquo;, &amp;ldquo;end&amp;rdquo;]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote>
 
 <p>The last command created a file named test.rb for us, which contains only the method foo. :&ndash;)</p>
 ]]></content>
@@ -48,7 +62,7 @@ dumphist(3, &lsquo;test.rb&rsquo;)
   <entry>
     <title type="html"><![CDATA[Tweet active Safari tab from command line]]></title>
     <link href="http://citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
-    <updated>2009-02-27T00:00:00+08:00</updated>
+    <updated>2009-02-27T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
     <content type="html"><![CDATA[<p>Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn&rsquo;t already running, copy  the URL, shorten it, paste it into the client&hellip;</p>
 
@@ -62,7 +76,7 @@ dumphist(3, &lsquo;test.rb&rsquo;)
   <entry>
     <title type="html"><![CDATA[Summer Chaos]]></title>
     <link href="http://citizen428.net/blog/2007/01/25/summer-chaos/"/>
-    <updated>2007-01-25T00:00:00+08:00</updated>
+    <updated>2007-01-25T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2007/01/25/summer-chaos</id>
     <content type="html"><![CDATA[<p>The date and location for the &ldquo;Chaos Communication Camp 2007&rdquo;:<a href="http://events.ccc.de/camp/">http://events.ccc.de/camp/</a> have now been confirmed! Hope to see you all there!</p>
 
@@ -73,7 +87,7 @@ dumphist(3, &lsquo;test.rb&rsquo;)
   <entry>
     <title type="html"><![CDATA[23C3 here we come]]></title>
     <link href="http://citizen428.net/blog/2006/12/25/23c3-here-we-come/"/>
-    <updated>2006-12-25T00:00:00+08:00</updated>
+    <updated>2006-12-25T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2006/12/25/23c3-here-we-come</id>
     <content type="html"><![CDATA[<p>In a little less than four hours, &ldquo;berq&rdquo;:<a href="http:berq.net,">http:berq.net,</a> &ldquo;lippi&rdquo;:<a href="http://twoday.tuwien.ac.at/perm,">http://twoday.tuwien.ac.at/perm,</a> &ldquo;red667&rdquo;:<a href="http://red667.org,">http://red667.org,</a> and me will leave for Berlin where we&rsquo;re going to attend the &ldquo;23C3&rdquo;:<a href="http://events.ccc.de/congress/2006/Home.">http://events.ccc.de/congress/2006/Home.</a> Since the &ldquo;Ã–BB&rdquo;:<a href="http://oebb.at">http://oebb.at</a> still sucks, we&rsquo;re once again going by bus, arriving tomorrow at around 6:30am. Judging from last year the time between our arrival until we can check into our &ldquo;hostel&rdquo;:<a href="http://www.hostels.com/en/availability.php/HostelNumber.10594">http://www.hostels.com/en/availability.php/HostelNumber.10594</a> at around noon will be spent drinking beer, which definitely isn&rsquo;t a recommended breakfast option. Kids, don&rsquo;t try this at home!</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: freedom | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/freedom/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-09-01T23:23:22+08:00</updated>
+  <updated>2013-10-24T00:37:53+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,11 +16,9 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-30]]></title>
     <link href="http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30/"/>
-    <updated>2012-09-30T00:00:00+08:00</updated>
+    <updated>2012-09-30T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/09/30/information-overload-2012-09-30</id>
-    <content type="html"><![CDATA[<p>{% blockquote Pico Iyer <a href="http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&amp;pagewanted=all">http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&amp;pagewanted=all</a> The Joy of Quiet %}
-[W]e’re rushing to meet so many deadlines that we hardly register that what we need most are lifelines.
-{% endblockquote %}</p>
+    <content type="html"><![CDATA[<p><blockquote><p>[W]e’re rushing to meet so many deadlines that we hardly register that what we need most are lifelines.</p><footer><strong>Pico Iyer <a href="http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&amp;pagewanted=all">http://www.nytimes.com/2012/01/01/opinion/sunday/the-joy-of-quiet.html?_r=2&amp;pagewanted=all</a> The Joy of Quiet</strong></footer></blockquote></p>
 
 <ul>
 <li><a href="http://www.motherjones.com/politics/2012/02/mac-mcclelland-free-online-shipping-warehouses-labor">I Was a Warehouse Wage Slave</a><br>This sounds like early 19th century, not early 21st.</li>
@@ -38,7 +36,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-23]]></title>
     <link href="http://citizen428.net/blog/2012/09/23/information-overload-2012-09-23/"/>
-    <updated>2012-09-23T00:00:00+08:00</updated>
+    <updated>2012-09-23T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/09/23/information-overload-2012-09-23</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://derstandard.at/1345166255203/In-Wien-fehlt-der-Diskurs-zu-Gentrifizierung">&ldquo;In Wien fehlt der Diskurs zu Gentrifizierung&rdquo;</a><br>On urban gentrification in Vienna (in German).</li>
@@ -56,7 +54,7 @@
   <entry>
     <title type="html"><![CDATA[No Tor, no more customer]]></title>
     <link href="http://citizen428.net/blog/2012/04/18/no-tor/"/>
-    <updated>2012-04-18T00:10:00+08:00</updated>
+    <updated>2012-04-18T00:10:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/04/18/no-tor</id>
     <content type="html"><![CDATA[<p><em>Update:</em> Server4You rebooted the server into a recovery system for me. I removed the Tor packages and the system is back up again, which means at least the <a href="http://tor.blingblingsquad.net/">mirror</a> is back. I&rsquo;d also like to state explicitly that this whole post is based on a single phone conversation with a Server4You support employee, so it&rsquo;s hard to tell if the company per se really considers Tor to be illegal in Germany. Personally I think it&rsquo;s just a bad excuse for shutting down the service on shared hosts, which is just as bad in my book.</p>
 
@@ -73,11 +71,9 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-02-05]]></title>
     <link href="http://citizen428.net/blog/2012/02/05/information-overload-2012-02-05/"/>
-    <updated>2012-02-05T00:00:00+08:00</updated>
+    <updated>2012-02-05T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/02/05/information-overload-2012-02-05</id>
-    <content type="html"><![CDATA[<p>{% blockquote William Gibson <a href="http://www.theverge.com/2012/1/24/2724370/william-gibson-intervie">http://www.theverge.com/2012/1/24/2724370/william-gibson-intervie</a> An interview with William Gibson %}
-[T]oday&rsquo;s strangeness, while only a few mouse-clicks away from anyone, becomes difficult to find because it has to occur to you to Google it. You may be able to Google everything, but the trick is figuring what you need to Google.
-{% endblockquote %}</p>
+    <content type="html"><![CDATA[<p><blockquote><p>[T]oday&rsquo;s strangeness, while only a few mouse-clicks away from anyone, becomes difficult to find because it has to occur to you to Google it. You may be able to Google everything, but the trick is figuring what you need to Google.</p><footer><strong>William Gibson <a href="http://www.theverge.com/2012/1/24/2724370/william-gibson-intervie">http://www.theverge.com/2012/1/24/2724370/william-gibson-intervie</a> An interview with William Gibson</strong></footer></blockquote></p>
 
 <ul>
 <li><a href="http://www.wired.com/geekdad/2012/01/everything-about-learning/">Everything You Thought You Knew About Learning Is Wrong</a><br>I like articles on learning, this one has a few good tips.</li>
@@ -93,16 +89,14 @@
 </ul>
 
 
-<p>{% blockquote Paul Tassi <a href="http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/">http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/</a> You Will Never Kill Piracy, and Piracy Will Never Kill You %}
-The only other thing you could get the internet to agree on was if they tried to institute a ban on cat pictures.
-{% endblockquote %}</p>
+<p><blockquote><p>The only other thing you could get the internet to agree on was if they tried to institute a ban on cat pictures.</p><footer><strong>Paul Tassi <a href="http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/">http://www.forbes.com/sites/insertcoin/2012/02/03/you-will-never-kill-piracy-and-piracy-will-never-kill-you/</a> You Will Never Kill Piracy</strong> <cite>And Piracy Will Never Kill You</cite></footer></blockquote></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-01-29]]></title>
     <link href="http://citizen428.net/blog/2012/01/29/information-overload-2012-01-29/"/>
-    <updated>2012-01-29T00:00:00+08:00</updated>
+    <updated>2012-01-29T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/01/29/information-overload-2012-01-29</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://benwerd.com/blog/2012/01/22/die-hollywood-die/">Die, Hollywood, die!</a><br>A voice of reason in the <a href="http://ycombinator.com/rfs9.html">&ldquo;Kill Hollywood&rdquo;</a> discussion.</li>
