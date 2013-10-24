@@ -105,7 +105,6 @@ The script we are looking at uses the *http* library for communication, *shortpo
 
 ### Metadata
 {% codeblock lang:lua %}
-{% raw %}
 description = [[ Displays the contents of the "generator" meta tag of a web page(default: /) if there is one.
 ]]
 
@@ -131,7 +130,6 @@ categories = {"default", "discovery", "safe"}
 -- 2011-12-23 Michael Kohl <citizen428@gmail.com>:
 --   + Initial version
 ...
-{% endraw %}
 {% endcodeblock %}
 
 After the library imports, scripts contain some metadata that is used for documentation and internal purposes. The *description* and author variables are self-explanatory, the syntax used for the former is Lua's way of creating so-called "heredocs", string literals that preserve white space and line breaks. In regard to the *license* script authors have two choices, the GPL-like Nmap license, as well as a simplified (2-clause) BSD license. Last but not least there's documentation in the NSEDoc format. It's customary to include usage documentation, example output, descriptions of all the available arguments (if any) as well as a changelog.

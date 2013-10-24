@@ -36,7 +36,7 @@ module HighlightCode
     else
       highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8', :startinline => true})
     end
-    highlighted_code
+    highlighted_code || ''
   end
   def tableize_code (str, lang = '')
     table = '<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers">'
