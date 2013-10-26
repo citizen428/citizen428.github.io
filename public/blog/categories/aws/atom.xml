@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aws | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/aws/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-10-24T23:57:51+07:00</updated>
+  <updated>2013-10-26T23:15:34+06:30</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Move EC2 AMIs between regions]]></title>
     <link href="http://citizen428.net/blog/2010/03/03/move-ec2-amis-between-regions/"/>
-    <updated>2010-03-03T00:00:00+07:00</updated>
+    <updated>2010-03-03T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2010/03/03/move-ec2-amis-between-regions</id>
     <content type="html"><![CDATA[<p>Today I spent some time figuring out how to move <a href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/index.html?creating-an-ami-ebs.html">EBS-backed AMIs</a> between different EC2 regions. To save you the effort, here&#8217;s a quick summary:</p>
 
@@ -41,7 +41,7 @@
   <entry>
     <title type="html"><![CDATA[Plot EC2 instance usage with Clojure and Incanter]]></title>
     <link href="http://citizen428.net/blog/2010/02/25/plot-ec2-instance-usage-with-clojure-and-incanter/"/>
-    <updated>2010-02-25T00:00:00+07:00</updated>
+    <updated>2010-02-25T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2010/02/25/plot-ec2-instance-usage-with-clojure-and-incanter</id>
     <content type="html"><![CDATA[<p>Have you ever wondered which instance types you use most when dealing with Amazon&rsquo;s EC2? I have, so I came up with a short Clojure/<a href="http://incanter.org">Incanter</a> program to plot a nice chart like this:</p>
 
@@ -61,7 +61,7 @@
   <entry>
     <title type="html"><![CDATA[Simple AWS scripting with boto]]></title>
     <link href="http://citizen428.net/blog/2009/12/28/simple-aws-scripting-with-boto/"/>
-    <updated>2009-12-28T00:00:00+07:00</updated>
+    <updated>2009-12-28T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2009/12/28/simple-aws-scripting-with-boto</id>
     <content type="html"><![CDATA[<p><a href="http://code.google.com/p/boto/">boto</a> is a very nice Python interface to the Amazon Web Services which I can heartily recommend for your cloud scripting needs. Here&rsquo;s a quick example program I whipped up around 2 weeks ago (be gentle, I&rsquo;m not a Python guy and this is just a throwaway quickie), which will list all your AMIs (excluding public ones), used S3 buckets plus a list of currently running instances with some information like instance type, start time etc. The nice part is that you can connect to any instance via SSH directly from this lsit which I find more convenient than copy/pasting the public DNS name from the AWS console:</p>
 

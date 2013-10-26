@@ -4,7 +4,7 @@
   <title><![CDATA[Category: FOSS | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/foss/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-10-24T23:57:51+07:00</updated>
+  <updated>2013-10-26T23:15:34+06:30</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Freie Editoren braucht das Land]]></title>
     <link href="http://citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land/"/>
-    <updated>2009-01-29T00:00:00+07:00</updated>
+    <updated>2009-01-29T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land</id>
     <content type="html"><![CDATA[<p>Geht es um Text-Editoren für MacOS X führt kaum ein Weg an <a href="http://macromates.com/">TextMate</a> vorbei, als freie Alternative ist <a href="http://tuppis.com/smultron/">Smultron</a> sehr beliebt.</p>
 
@@ -35,7 +35,7 @@
   <entry>
     <title type="html"><![CDATA[Werbefrei]]></title>
     <link href="http://citizen428.net/blog/2009/01/22/werbefrei/"/>
-    <updated>2009-01-22T00:00:00+07:00</updated>
+    <updated>2009-01-22T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2009/01/22/werbefrei</id>
     <content type="html"><![CDATA[<p>Werbung in Webseiten ist lästig, da sie nicht nur die Ladezeit der aufgerufenen Seite unnötig erhöht, sondern &ndash; besonders im Fall großer animierter Flashbanner &ndash; auch von der Benutzung der Seite ablenkt bzw. den eigentlichen Inhalt manchmal sogar gänzlich verdeckt. Aus diesem Grund gibt es auch diverse Tools um sich ihrer zu entledigen, so zum Beispiel das bekannte Firefox-Plugin <a href="https://addons.mozilla.org/en-US/firefox/addon/1865">Adblock Plus</a>. Anders sah es da bisher bei Safari aus, wo diverse Werbeblocker gemeinhin als Hacks implementiert wurden, welche einerseits die Stabilität des Browsers beeinträchtigen konnten und andererseits nach Updates auch oft den Dienst verweigerten. Damit ist jetzt aber Schluss, denn mit <a title="GlimmerBlocker" href="http://glimmerblocker.org/">GlimmerBlocker</a> gibt es endlich eine stabile und zukunftssichere Lösung, welche darüber hinaus auch noch browserunabhängig ist.</p>
 
@@ -50,7 +50,7 @@
   <entry>
     <title type="html"><![CDATA[Nützliches für die Kommandozeile]]></title>
     <link href="http://citizen428.net/blog/2009/01/22/nutzliches-fur-die-kommandozeile/"/>
-    <updated>2009-01-22T00:00:00+07:00</updated>
+    <updated>2009-01-22T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2009/01/22/nutzliches-fur-die-kommandozeile</id>
     <content type="html"><![CDATA[<p>Nachdem MacOS X ja bekanntlich über einen <a title="Wikipedia: Darwin" href="http://de.wikipedia.org/wiki/Darwin_(Betriebssystem)">Unix-Kern</a> verfügt, steht ein Großteil der bekannten Kommandozeilen-Werkzeuge zur Verfügung. Zusätzlich gibt es aber auch noch einige macspezifische Kommandos, von denen wir heute einige vorstellen wollen.</p>
 
@@ -71,7 +71,7 @@
   <entry>
     <title type="html"><![CDATA[Finally...]]></title>
     <link href="http://citizen428.net/blog/2006/11/05/finally/"/>
-    <updated>2006-11-05T00:00:00+07:00</updated>
+    <updated>2006-11-05T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2006/11/05/finally</id>
     <content type="html"><![CDATA[<p>&hellip;some random stuff I wanted to blog about for quite some time already:</p>
 
@@ -117,7 +117,7 @@
   <entry>
     <title type="html"><![CDATA[Delusions of grandeur]]></title>
     <link href="http://citizen428.net/blog/2006/08/12/delusions-of-grandeur/"/>
-    <updated>2006-08-12T00:00:00+07:00</updated>
+    <updated>2006-08-12T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2006/08/12/delusions-of-grandeur</id>
     <content type="html"><![CDATA[<p>As my PR manager told me, large numbers of fans have already complained about the recent lack of updates. Since I&rsquo;m only my reader&rsquo;s humble servant, I of course have to comply with this wishes, so here are the long awaited news about yours truly:</p>
 

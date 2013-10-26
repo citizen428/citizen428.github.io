@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cloud | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/cloud/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-10-24T23:57:51+07:00</updated>
+  <updated>2013-10-26T23:15:34+06:30</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Cloud link collection]]></title>
     <link href="http://citizen428.net/blog/2011/03/29/cloud-link-collection/"/>
-    <updated>2011-03-29T00:00:00+07:00</updated>
+    <updated>2011-03-29T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2011/03/29/cloud-link-collection</id>
     <content type="html"><![CDATA[<p>In late 2009 and early 2010 I worked on a very interesting cloud computing project. In the process I accrued a fairly comprehensive link list on the topic, which I already briefly mentioned <a href="http://citizen428.net/archives/417">here</a>. The list was also published on the blog of my back then employer, but since the company doesn&rsquo;t exist anymore and their site is offline, I figured I might as well put it up here. The <a href="https://gist.github.com/314445">gist</a> where I originally collected this is still on GitHub, feel free to fork, add etc.</p>
 
@@ -125,7 +125,7 @@
   <entry>
     <title type="html"><![CDATA[Comprehensive list of cloud-related links]]></title>
     <link href="http://citizen428.net/blog/2010/02/25/comprehensive-list-of-cloud-related-links/"/>
-    <updated>2010-02-25T00:00:00+07:00</updated>
+    <updated>2010-02-25T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2010/02/25/comprehensive-list-of-cloud-related-links</id>
     <content type="html"><![CDATA[<p>Lately a lot of my working time is spent on cloud technologies, most notably the <a href="http://aws.amazon.com/">Amazon Web Services</a>. In recent month I compiled a rather comprehensive list of cloud-related links which I now decided to share with you all.</p>
 
@@ -138,7 +138,7 @@
   <entry>
     <title type="html"><![CDATA[Simple AWS scripting with boto]]></title>
     <link href="http://citizen428.net/blog/2009/12/28/simple-aws-scripting-with-boto/"/>
-    <updated>2009-12-28T00:00:00+07:00</updated>
+    <updated>2009-12-28T00:00:00+06:30</updated>
     <id>http://citizen428.net/blog/2009/12/28/simple-aws-scripting-with-boto</id>
     <content type="html"><![CDATA[<p><a href="http://code.google.com/p/boto/">boto</a> is a very nice Python interface to the Amazon Web Services which I can heartily recommend for your cloud scripting needs. Here&rsquo;s a quick example program I whipped up around 2 weeks ago (be gentle, I&rsquo;m not a Python guy and this is just a throwaway quickie), which will list all your AMIs (excluding public ones), used S3 buckets plus a list of currently running instances with some information like instance type, start time etc. The nice part is that you can connect to any instance via SSH directly from this lsit which I find more convenient than copy/pasting the public DNS name from the AWS console:</p>
 
