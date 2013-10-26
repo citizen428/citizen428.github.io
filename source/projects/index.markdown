@@ -14,13 +14,13 @@ This is a list of some of my (personal) projects. Since I contribute quite regul
 
 * [MethodFinder](http://citizen428.github.com/methodfinder/): A port of [Squeak](http://www.squeak.org/)'s Method Finder to Ruby. Mentioned on [Ruby5](http://ruby5.envylabs.com/episodes/165-episode-162-march-29-2011/stories/1451-find-that-method-you-ve-been-looking-for-with-ruby-method-finder) and [RailsCasts](http://railscasts.com/episodes/48-console-tricks-revised) (view on [Rubygems](https://rubygems.org/gems/methodfinder)).
 
+* [Revolver](http://citizen428.github.com/revolver/): A fixed-size LIFO data structure. Mentioned on [Ruby5](http://ruby5.envylabs.com/episodes/305-episode-301-august-28-2012/stories/2663-revolver) (view on [Rubygems](https://rubygems.org/gems/revolver)).
+
+* [ivar_encapsulation](https://github.com/citizen428/ivar_encapsulation): A declarative way to provide Smalltalk-like encapsulation around instance variables. Mentioned on [Ruby5](http://ruby5.envylabs.com/episodes/450-episode-414-october-25th-2013/stories/3642-ivar_encapsulation) (view on [Rubygems](https://rubygems.org/gems/ivar_encapsulation)).
+
 * [Shenanigans](http://citizen428.github.com/shenanigans/): My personal Ruby extension library (view on [Rubygems](https://rubygems.org/gems/shenanigans)).
 
 * [try_to](https://github.com/citizen428/try_to/): Flexible error handling in surprisingly little Ruby (view on [Rubygems](https://rubygems.org/gems/try_to)).
-
-* [Revolver](http://citizen428.github.com/revolver/): A fixed-size LIFO data structure. Mentioned on [Ruby5](http://ruby5.envylabs.com/episodes/305-episode-301-august-28-2012/stories/2663-revolver) (view on [Rubygems](https://rubygems.org/gems/revolver)).
-
-* [ivar_encapsulation](https://github.com/citizen428/ivar_encapsulation): A declarative way to provide Smalltalk-like encapsulation around instance variables (view on [Rubygems](https://rubygems.org/gems/ivar_encapsulation)).
 
 * [JRuby](https://github.com/jruby/jruby): I sometimes use JRuby and while doing so [fixed 2 bugs in it](https://github.com/jruby/jruby/commits?author=citizen428).
 
