@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Update: The code is on Github now &ndash; https://github.com/citizen428/MethodFinder I changed the argument order (so you don&rsquo;t have to always &hellip;">
+  <meta name="description" content="unsavory has reached maturity (meaning I can&rsquo;t really come up with any more stuff I want to add), so i decided it&rsquo;s enough with the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +99,106 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/11/unsavory-1-0-0-and-methodfinder-1-0-1/">Unsavory 1.0.0 and Methodfinder 1.0.1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-11T00:00:00+06:30" pubdate data-updated="true">Mar 11<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://github.com/citizen428/unsavory">unsavory</a> has reached maturity (meaning I can&rsquo;t really come up with any more stuff I want to add), so i decided it&rsquo;s enough with the conservative versioning and jumped from 0.3.3 to 1.0.0 :&ndash;) Right before Christmas I had changed it from Delicious to <a href="http://pinboard.in">Pinboard</a> and today I replaced the previous &ndash; rather verbose &ndash; output with a nice little <a href="http://0xcc.net/ruby-progressbar/index.html.en">progressbar</a> and a log file.</p>
+
+<p>I also did a mini update to <a href="https://github.com/citizen428/methodfinder">methodfinder</a>, which now uses <a href="http://www.ruby-doc.org/stdlib/libdoc/stringio/rdoc/index.html">StringIO</a> objects instead of <code>/dev/null</code> for output redirection, which should make the Windows users out there happy.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/09/haskell-like-zip_with-for-ruby/">Haskell Like &#8220;Zip_with&#8221; for Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-09T00:00:00+06:30" pubdate data-updated="true">Mar 9<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I always liked Haskell&#8217;s <a href="http://hackage.haskell.org/packages/archive/base/latest/doc/html/Prelude.html#v:zipWith">zipWith</a> and sometimes miss it in Ruby, so I wrote my own a couple of weeks ago. I also submitted a pull request to <a href="http://rubyworks.github.com/facets/">Facets</a>, but since it&#8217;s still not included I decided to post the code here in case it&#8217;s useful for anyone:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">zip_with</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="kp">nil</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="o">[]</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">empty?</span> <span class="o">||</span> <span class="n">other</span><span class="o">.</span><span class="n">empty?</span>
+</span><span class='line'>  <span class="n">clipped</span> <span class="o">=</span> <span class="nb">self</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.other</span><span class="o">.</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">zipped</span> <span class="o">=</span> <span class="n">clipped</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">op</span>
+</span><span class='line'>    <span class="n">zipped</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="n">zipped</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="k">yield</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Usage examples:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">].</span><span class="n">zip_with</span><span class="p">(</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="ss">:+</span><span class="p">)</span> <span class="c1">#=&gt; [7, 7, 7]</span>
+</span><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">].</span><span class="n">zip_with</span><span class="p">(</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span> <span class="p">}</span> <span class="c1">#=&gt; [15, 16, 17]</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -652,98 +752,6 @@
 <li><a href="http://www.newyorker.com/arts/critics/atlarge/2011/01/10/110110crat_atlarge_acocella?currentPage=all">Man of Mistery</a><br>Interesting article on the success of Stieg Larsson&#8217;s &#8220;Millennium Trilogy&#8221;. Contains lots of spoilers, so don&#8217;t read this if you still want to read the books.</li>
 <li><a href="http://blog.okcupid.com/index.php/the-mathematics-of-beauty/">The Mathematics Of Beauty</a><br>Entertaining post on the OkCupid blog about male messaging behavior in regard to women&#8217;s attractiveness.</li>
 <li><a href="http://medcrun.ch/2011/01/why-physicians-don%E2%80%99t-cry/">Why Physicians Don&#8217;t Cry</a><br>Former colleague and M.D. <a href="http://twitter.com/zinnaglism">Lukas</a> published this in his new online magazine <a href="http://medcrun.ch/">MedCrunch</a>.</li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/01/09/information-overload-2011-01-09/">Information Overload 2011-01-09</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-09T00:00:00+06:30" pubdate data-updated="true">Jan 9<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.wired.com/threatlevel/2010/12/transcending-the-human-diy-style">Transcending the Human, <span class="caps">DIY</span> Style</a><br><span class="caps">DIY</span> biohacking and transhumanism. I have a feeling we&#8217;ll see more of this in the not too distant future.</li>
-<li><a href="http://www.bbc.co.uk/news/world-us-canada-11963364">Six ads that changed the way you think</a><br>I&#8217;ve always been interested in <em>good</em> ads and this <span class="caps">BBC</span> article lists some that each changed the industry in their own way.</li>
-<li><a href="http://web.mit.edu/newsoffice/2010/fuzzy-logic-0103.html">The surprising usefulness of sloppy arithmetic</a><br>A computer chip providing imprecise answers could speed up tasks like video processing or human-computer interaction.</li>
-<li><a href="http://blogs.wsj.com/digits/2010/12/22/everything-the-internet-knows-about-me-because-i-asked-it-to">Everything the Internet Knows About Me</a><br>&#8220;Lifelogging&#8221; can indeed be quite interesting, which is why I use sites like Foursquare (but often don&#8217;t share my checkins etc.).</li>
-<li><a href="http://www.math.niu.edu/~rusin/known-math/index/mathmap.html">Clickable Index Map of Mathematics</a><br>While not exactly visually pleasing, this is an interesting way to browse through the body of modern mathematics.</li>
-<li><a href="http://www.ft.com/cms/s/2/aacd3c7a-185e-11e0-88c9-00144feab49a.html">Game on for the virtual sweatshop</a><br>The Financial Times on WoW, gold farming and digital economies.</li>
-<li><a href="http://gizmodo.com/5726667/the-agonizing-last-words-of-bill-zeller">The Agonizing Last Words of Programmer Bill Zeller</a><br>Bill Zeller&#8217;s suicide note, a talented individual who took his own life because he was sexually abused as a child.</li>
-<li><a href="http://blog.jolieodell.com/2011/01/06/the-subject-of-suicide-why-im-alive-today/">The subject of suicide &amp; why I&#8217;m alive today</a><br>Mashable journalist Jolie O&#8217;Dell tells the story of her own attempted suicide as a reaction to Bill Zeller&#8217;s.</li>
-<li><a href="http://the99percent.com/articles/6973/Francis-Ford-Coppola-On-Risk-Money-Craft-Collaboration">Francis Ford Coppola: On Risk, Money, Craft &amp; Collaboration</a><br>Very nice Q&amp;A session with Francis Ford Coppola.</li>
-<li><a href="http://www.zeit.de/2011/01/DOS-Ziegler?page=all">&#8220;Ich bin ein weisser Neger&#8221;</a><br>Very interesting interview with author, former professor of sociology and UN Special Rapporteur on the Right to Food, Jean Ziegler.</li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/01/02/information-overload-2011-01-02/">Information Overload 2011-01-02</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-02T00:00:00+06:30" pubdate data-updated="true">Jan 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.wired.com/magazine/2010/12/st_essay_totalitarians/">Why the Internet Is a Great Tool for Totalitarians</a><br>It&#8217;s always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
-<li><a href="http://www.theatlantic.com/magazine/archive/2003/03/caring-for-your-introvert/2696/">Caring for Your Introvert</a><br>While I think the author&#8217;s overly satirical tone actually does a disservice to the content of the article, as an introvert I still urge you to read this.</li>
-<li><a href="http://gameinternals.com/post/2072558330/understanding-pac-man-ghost-behavior">Understanding Pac-Man Ghost Behavior</a><br>This is a great example how a few simple rules can create complex looking behavior patterns in AI opponents.</li>
-<li><a href="http://www.guardian.co.uk/science/2011/jan/01/how-to-better-person-2011">Abandon resolutions. Stop looking for a soulmate. Reject positive thinking</a><br>For once somebody managed to write a sensible article regarding new year&#8217;s resolutions.</li>
-<li><a href="http://www.grist.org/article/food-2010-12-29-farmer-scientists-want-to-hack-society">Farmer-scientist group wants to &#8216;hack society&#8217; through open-source technology</a><br>About <a href="http://openfarmtech.org/wiki/">Open Source Ecology</a> and the <a href="http://openfarmtech.org/wiki/Global_Village_Construction_Set">Global Village Construction Set</a>. Awesome!</li>
-<li><a href="http://chouser.github.com/snow/">The New Year in Snowflakes</a><br>Very nice little Clojure doodle by Chris Houser.</li>
-<li><a href="http://www.codecommit.com/blog/ruby/monads-are-not-metaphors">Monads Are Not Metaphors</a><br>A pretty good explanation of monads for everyone struggling with the concept. It should be easy to follow even if your Scala is less than fluent (like mine is).</li>
-<li><a href="http://heavens-above.com/solar-escape.asp">Spacecraft escaping the Solar System</a><br>Positions and other data of the 5 spacecraft leaving our solar system on escape trajectories. The space geek in me likes this a lot.</li>
-<li><a href="http://www.zeit.de/2011/01/Gentechnik-Patent-Nahrungsmittel?page=all">Wem gehoert der Brokkoli?</a><br>Companies are trying to get patents on vegetables, fruits and even animals (in German).</li>
-<li><a href="http://ngm.nationalgeographic.com/7-billion">7 Billion</a><br>A National Geographic special series about the world&#8217;s population reaching 7 billion in 2011.</li>
 </ul></div>
   
   

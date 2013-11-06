@@ -9,7 +9,10 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="After reading Scripting Java Libraries With Ruby on the Engine Yard blog, I decided to translate the two example programs to Clojure. Please keep in &hellip;">
+  <meta name="description" content="unsavory is now available as a gem, which means that you can comfortably install it like this:
+1
+2
+$ gem sources -a http://gems.github.com $ sudo gem &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +102,209 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/08/unsavory-now-available-as-gem/">Unsavory Now Available as Gem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-08T00:00:00+06:30" pubdate data-updated="true">Sep 8<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://github.com/citizen428/unsavory/tree/master">unsavory</a> is now available as a gem, which means that you can comfortably install it like this:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem sources -a http://gems.github.com 
+</span><span class='line'>$ sudo gem install citizen428-unsavory</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;, which you can use to start the program so you finally can get rid of all these outdated bookmarks.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/06/using-java-libraries-from-clojure/">Using Java Libraries From Clojure</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-06T00:00:00+06:30" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After reading <a href="http://www.engineyard.com/blog/2009/scripting-java-libraries-with-jruby/">Scripting Java Libraries With Ruby</a> on the <a href="http://www.engineyard.com/">Engine Yard blog</a>, I decided to translate the two example programs to Clojure. Please keep in mind though that I&rsquo;m pretty much a Clojure newbie myself, so the code shown here might not be very idiomatic. In case you have any suggestions on how to improve the code examples presented here, please leave a comment, thank you! To get the most out of this post, you should probably read the <a href="http://java.ociweb.com/mark/clojure/article.html#JavaInterop">section on Java Interoperability</a> in <a href="http://java.ociweb.com/mark/">Mark Volkmann</a>&rsquo;s excellent <a href="http://java.ociweb.com/mark/clojure/article.html">Clojure tutorial</a> first.</p>
+
+<p><b>A MIDI Keyboard</b></p>
+
+
+<p>The first example listens for a line of text which then gets converted into a playable MIDI sequence. Let&rsquo;s start with importing the classes we need.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">ns</span> <span class="nv">midi/keyboard</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">:import</span> <span class="p">[</span><span class="nv">javax</span><span class="o">.</span><span class="nv">sound</span><span class="o">.</span><span class="nv">midi</span> <span class="nv">MidiSystem</span> <span class="nv">Sequence</span> <span class="nv">MidiEvent</span> <span class="nv">ShortMessage</span><span class="p">])</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">:use</span> <span class="p">[</span><span class="nv">clojure</span><span class="o">.</span><span class="nv">contrib</span><span class="o">.</span><span class="nv">seq-utils</span> <span class="nv">:only</span> <span class="p">(</span><span class="nf">indexed</span><span class="p">)]))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next we set up a <a href="http://clojure.org/special_forms#toc9">loop</a> and an exit clause.  In case the user enters the word &ldquo;exit&rdquo;, we call System.exit to shut down all the threads that got started by Java&rsquo;s MIDI support.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nb">loop </span><span class="p">[</span><span class="nv">line</span> <span class="p">(</span><span class="nf">read-line</span><span class="p">)]</span>
+</span><span class='line'>  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">re-find </span><span class="o">#</span><span class="s">&quot;exit&quot;</span> <span class="nv">line</span><span class="p">)</span> <span class="p">(</span><span class="nf">System/exit</span> <span class="mi">0</span><span class="p">))</span>
+</span><span class='line'>  <span class="o">...</span> <span class="nv">other</span> <span class="nv">code</span> <span class="nv">snipped</span><span class="o">...</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">recur</span> <span class="p">(</span><span class="nf">read-line</span><span class="p">)))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The main part of the application constructs a new MIDI sequence by creating a NOTE_ON event for every character in the entered text and then finishing the sequence with a STOP event. The original article states that it favors simplicity over efficiency, so the same also holds true for my &ldquo;translation&rdquo;.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'>  <span class="p">(</span><span class="k">def </span><span class="nv">sq</span> <span class="p">(</span><span class="nf">Sequence</span><span class="o">.</span> <span class="nv">Sequence/PPQ</span> <span class="mi">2</span><span class="p">))</span>
+</span><span class='line'>  <span class="p">(</span><span class="k">def </span><span class="nv">track</span> <span class="p">(</span><span class="o">.</span><span class="nv">createTrack</span> <span class="nv">sq</span><span class="p">))</span>
+</span><span class='line'>  <span class="p">(</span><span class="nb">doseq </span><span class="p">[[</span><span class="nv">idx</span> <span class="nv">note</span><span class="p">]</span> <span class="p">(</span><span class="nf">indexed</span> <span class="nv">line</span><span class="p">)]</span>
+</span><span class='line'>    <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">msg</span> <span class="p">(</span><span class="nf">ShortMessage</span><span class="o">.</span><span class="p">)]</span>
+</span><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">setMessage</span> <span class="nv">msg</span> <span class="nv">ShortMessage/NOTE_ON</span> <span class="p">(</span><span class="nb">int </span><span class="nv">note</span><span class="p">)</span> <span class="mi">64</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">add</span> <span class="nv">track</span> <span class="p">(</span><span class="nf">MidiEvent</span><span class="o">.</span> <span class="nv">msg</span> <span class="nv">idx</span><span class="p">))))</span>
+</span><span class='line'>  <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">msg</span> <span class="p">(</span><span class="nf">ShortMessage</span><span class="o">.</span><span class="p">)]</span>
+</span><span class='line'>    <span class="p">(</span><span class="o">.</span><span class="nv">setMessage</span> <span class="nv">msg</span> <span class="nv">ShortMessage/STOP</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">(</span><span class="o">.</span><span class="nv">add</span> <span class="nv">track</span> <span class="p">(</span><span class="nf">MidiEvent</span><span class="o">.</span> <span class="nv">msg</span> <span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="o">.</span><span class="nv">length</span> <span class="nv">line</span><span class="p">)</span> <span class="mi">1</span><span class="p">))))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To finish off our first program we play the sequence before prompting for more input (see the loop snippet above).</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'>  <span class="p">(</span><span class="nb">doto </span><span class="p">(</span><span class="nf">MidiSystem/getSequencer</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">(</span><span class="o">.</span><span class="nv">open</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">(</span><span class="o">.</span><span class="nv">setSequence</span> <span class="nv">sq</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">(</span><span class="o">.</span><span class="nv">start</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/keyboard.clj">Full source for the first example</a></p>
+
+<p><b>Making It More Interactive</b></p>
+
+
+<p>While the first example was fun, it wasn&rsquo;t as interactive as it could be. Therefore the second program launches a GUI window to receive keystroke events, turning a note on or off when a key is pressed or released. Since we don&rsquo;t have to create MIDI sequences this time, our import statement becomes a lot shorter:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">ns</span> <span class="nv">midi/interactive</span>
+</span><span class='line'>  <span class="p">(</span><span class="nf">:import</span> <span class="p">[</span><span class="nv">javax</span><span class="o">.</span><span class="nv">sound</span><span class="o">.</span><span class="nv">midi</span> <span class="nv">MidiSystem</span><span class="p">]</span>
+</span><span class='line'>           <span class="p">[</span><span class="nv">javax</span><span class="o">.</span><span class="nv">swing</span> <span class="nv">JFrame</span><span class="p">]</span> <span class="p">[</span><span class="nv">java</span><span class="o">.</span><span class="nv">awt</span><span class="o">.</span><span class="nv">event</span> <span class="nv">KeyListener</span><span class="p">]))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This example directly accesses the system synthesizer. The following lines open the default synthesizer&rsquo;s channel 0 (and also create a JFrame object which we&rsquo;ll use later):</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">synth</span> <span class="p">(</span><span class="nf">MidiSystem/getSynthesizer</span><span class="p">)</span>
+</span><span class='line'>      <span class="nv">frame</span> <span class="p">(</span><span class="nf">JFrame</span><span class="o">.</span> <span class="s">&quot;Music Frame&quot;</span><span class="p">)]</span>
+</span><span class='line'>  <span class="p">(</span><span class="o">.</span><span class="nv">open</span> <span class="nv">synth</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">channel</span> <span class="p">(</span><span class="nb">aget </span><span class="p">(</span><span class="o">.</span><span class="nv">getChannels</span> <span class="nv">synth</span><span class="p">)</span> <span class="mi">0</span><span class="p">)]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We then launch a GUI frame as a simple and cross-platform way to receive keystroke events. The KeyListener interface is implemented using Clojure&rsquo;s <a href="http://clojure.org/java_interop#toc26">proxy macro</a>, using keyPressed and keyReleased events to turn notes on or off.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nb">doto </span><span class="nv">frame</span>
+</span><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">setSize</span> <span class="mi">300</span> <span class="mi">300</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">setDefaultCloseOperation</span> <span class="nv">JFrame/EXIT_ON_CLOSE</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">addKeyListener</span>
+</span><span class='line'>       <span class="p">(</span><span class="nb">proxy </span><span class="p">[</span><span class="nv">KeyListener</span><span class="p">]</span> <span class="p">[]</span>
+</span><span class='line'>         <span class="p">(</span><span class="nf">keyPressed</span> <span class="p">[</span><span class="nv">e</span><span class="p">]</span>
+</span><span class='line'>                     <span class="p">(</span><span class="o">.</span><span class="nv">noteOn</span> <span class="nv">channel</span> <span class="p">(</span><span class="nb">int </span><span class="p">(</span><span class="o">.</span><span class="nv">getKeyChar</span> <span class="nv">e</span><span class="p">))</span> <span class="mi">64</span><span class="p">))</span>
+</span><span class='line'>         <span class="p">(</span><span class="nf">keyReleased</span> <span class="p">[</span><span class="nv">e</span><span class="p">]</span>
+</span><span class='line'>                      <span class="p">(</span><span class="o">.</span><span class="nv">noteOff</span> <span class="nv">channel</span> <span class="p">(</span><span class="nb">int </span><span class="p">(</span><span class="o">.</span><span class="nv">getKeyChar</span> <span class="nv">e</span><span class="p">))))</span>
+</span><span class='line'>         <span class="p">(</span><span class="nf">keyTyped</span> <span class="p">[</span><span class="nv">e</span><span class="p">])))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Last but not least we display our frame to let the fun begin.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">setVisible</span> <span class="nv">true</span><span class="p">))))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://github.com/citizen428/codequickies/blob/master/clojure/midi/interactive.clj">Full source for the second example</a><br>
+I hope this article helped to illustrate how easy it is to use the plethora of existing Java libraries from Clojure. In case you have any feedback or questions, please feel free to leave a comment!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -526,111 +732,6 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
 
   <div class="entry-content"><p>Since my trip last year I have been fitter than I&#8217;ve been for ages, thanks to a weight-loss of about 25kg, more exercise and a healthier diet. Through <a href="http://twitter.com/kyrah">kyrah&#8217;s tweets</a> I learned about a workout program called <a href="http://hundredpushups.com/">one hundred pushups</a> and decided to have a closer look today. I took the initial test and only managed a meager 12 good-form pushups, but they were always one of my weak spots. At least I start from the most challenging category. Through the site I also found the two related programs <a href="http://www.twohundredsitups.com/">two hundred situps</a> and <a href="http://www.twohundredsquats.com">two hundred squats</a>, where the initial tests looked a lot friendlier: with 35 situps and 40+ squats both programs suggest that I start from week 3. :-)</p>
 <p>Now let&#8217;s see how effective these workouts will turn out to be.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/06/06/unsavory-%25e2%2580%2594-get-rid-of-stale-delicious-bookmarks/">Unsavory — Get Rid of Stale Delicious Bookmarks</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-06-06T00:00:00+06:30" pubdate data-updated="true">Jun 6<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>While browsing through <a href="http://delicious.com/citizen428">my Delicious bookmarks</a> the other day, I realized that over time I had accumulated quite a few dead links (about 5% of my collection). I then looked for a <strong>simple</strong> tool to automatically remove them, but couldn&#8217;t find one that appealed to me, so I wrote my own script called <em>unsavory</em> which you can find on GitHub:</p>
-<p><a href="http://github.com/citizen428/unsavory/tree/master">http://github.com/citizen428/unsavory/tree/master</a></p>
-<p>It uses HTTParty to generate a list of all your bookmarks, which then get checked individually with Net::<span class="caps">HTTP</span>. Every link that returns an <span class="caps">HTTP</span> status code of 404 will automatically be removed (no questions asked, no undo), links with a status code other than 200 (OK) won&#8217;t be changed but will display some information in case you want to fix them manually. Here&#8217;s some example output (links anonymized for this post):</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Enter Delicious username: citizen428
-</span><span class='line'>  Enter Delicious password: *********
-</span><span class='line'>
-</span><span class='line'>  citizen428 has 664 bookmarks.
-</span><span class='line'>  Processing URL #0001: OK
-</span><span class='line'>  Processing URL #0002: OK
-</span><span class='line'>  Processing URL #0003: OK
-</span><span class='line'>  Processing URL #0004: OK
-</span><span class='line'>  Processing URL #0005: OK
-</span><span class='line'>  ...
-</span><span class='line'>  Processing URL #0013: 405: http://...
-</span><span class='line'>  ...
-</span><span class='line'>  Processing URL #0074: 302: http://...
-</span><span class='line'>  ...
-</span><span class='line'>  Processing URL #0086: Connection reset by peer - https://...</span></code></pre></td></tr></table></div></figure></div></notextile></p>
-<p>Not bad for under 60 lines of code. :-) I hope this is useful to some of you, I do have some features I plan on adding to this in the future.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/05/25/review-functional-programming-with-clojure-peepcode-screencast/">Review: Functional Programming With Clojure (PeepCode Screencast)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-05-25T00:00:00+06:30" pubdate data-updated="true">May 25<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A couple of month ago I first heard about <a href="http://clojure.org/">Clojure</a>, a <a href="http://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a>-like language sitting on top of the <a href="http://en.wikipedia.org/wiki/Java_virtual_machine"><span class="caps">JVM</span></a>. Alas I didn&#8217;t yet have time to have a closer look at it, so I decided to get myself the <a href="https://peepcode.com/products/functional-programming-with-clojure">PeepCode screencast</a>.</p>
-<p>This 65 minute video is the first to use PeepCode&#8217;s new post-production workflow, and it&#8217;s very well done! In just a little over an hour you go from learning about Clojure&#8217;s basic concepts and syntax to writing a <a href="http://github.com/technomancy/mire/tree/master">multi-user text based adventure game</a>, tackling topics such as data structures, thread safety, lazy collections, unit testing and packaging of Clojure apps. All of that is clearly presented and easy to follow, which makes for an ideal first overview of the language. If you are curious about Clojure but have little time, consider investing the money for this screencast!</p>
-<p>On a more general note it&#8217;s interesting to see that more and more languages seem to target the <span class="caps">JVM</span>. I never really had any interest in Java and also totally ignored <a href="http://groovy.codehaus.org/">Groovy</a>, but now that <a href="http://jruby.codehaus.org/">JRuby</a>, <a href="http://www.scala-lang.org/">Scala</a> and Clojure entered the stage, I might start looking into the Java platform a bit more. Especially Scala with its mixed Ruby/Haskell feel appeals to me, but as <a href="http://boinkor.net/">antifuchs</a> showed, there&#8217;s also <a href="http://boinkor.net/archives/2009/03/clojure_and_art_of_illusion_bf.html">pretty neat stuff</a> (<a href="http://github.com/antifuchs/aoi-swank-plugin/">GitHub project</a>) one can do with Clojure.</p></div>
   
   
 

@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Although I do love my Soup, Twitter and all those other microblogs, tumblelogs and whatgotyou, I recently feel the urge to sometimes write proper &hellip;">
+  <meta name="description" content="Werbung in Webseiten ist lästig, da sie nicht nur die Ladezeit der aufgerufenen Seite unnötig erhöht, sondern &#8211; besonders im Fall großer &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +99,87 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/01/22/werbefrei/">Werbefrei</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-22T00:00:00+06:30" pubdate data-updated="true">Jan 22<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Werbung in Webseiten ist lästig, da sie nicht nur die Ladezeit der aufgerufenen Seite unnötig erhöht, sondern &#8211; besonders im Fall großer animierter Flashbanner &#8211; auch von der Benutzung der Seite ablenkt bzw. den eigentlichen Inhalt manchmal sogar gänzlich verdeckt. Aus diesem Grund gibt es auch diverse Tools um sich ihrer zu entledigen, so zum Beispiel das bekannte Firefox-Plugin <a href="https://addons.mozilla.org/en-US/firefox/addon/1865">Adblock Plus</a>. Anders sah es da bisher bei Safari aus, wo diverse Werbeblocker gemeinhin als Hacks implementiert wurden, welche einerseits die Stabilität des Browsers beeinträchtigen konnten und andererseits nach Updates auch oft den Dienst verweigerten. Damit ist jetzt aber Schluss, denn mit <a title="GlimmerBlocker" href="http://glimmerblocker.org/">GlimmerBlocker</a> gibt es endlich eine stabile und zukunftssichere Lösung, welche darüber hinaus auch noch browserunabhängig ist.</p>
+<p>GlimmerBlocker ist als <span class="caps">HTTP</span>-Proxy implementiert, welcher bequem über ein PrefPane konfiguriert wird. Bei der Installation werden auch die Netzwerkeinstellungen automatisch angepasst, so dass alle Applikationen welche ihre Proxykonfiguration von dort beziehen von nun an den neuen Proxy verwenden (Firefox oder der Windows Messenger müssen manuell konfiguriert werden). Diese Architektur erlaubt es GlimmerBlocker und den eingesetzten Browser unabhängig voneinander aktualisieren zu können ohne Wechselwirkungen befürchten zu müssen. Allerdings hat dies auch zur Folge, dass gewisse Funktionen die man von anderen Werbeblockern kennt nicht zur Verfügung stehen, so z.B. das Blockieren eines Bildes per Rechtsklick oder das Filtern von Drittanbieter-Cookies. Durch seine vielfältigen Konfigurationsmöglichkeiten und Flexibilität (<span class="caps">CSS</span>-Regeln, JavaScript und <span class="caps">HTML</span>-Transformation) macht GlimmerBlocker dieses Manko aber durchaus wett, besonders nett ist dabei die Funktion den Proxy-Server im Netz freizugeben, so dass dieser auch von eventuell vorhandenen iPhones, iPods und anderen Computern verwendet werden kann.</p>
+<p>GlimmerBlocker ist freie Software und steht unter der <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>.</p>
+<p>(Originally published by me on <a href="http://www.opensourcemac.de/2009/01/14/werbefrei/">open.source.mac</a> on Jan 14th 2009.)</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/01/22/nutzliches-fur-die-kommandozeile/">Nützliches Für Die Kommandozeile</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-22T00:00:00+06:30" pubdate data-updated="true">Jan 22<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Nachdem MacOS X ja bekanntlich über einen <a title="Wikipedia: Darwin" href="http://de.wikipedia.org/wiki/Darwin_(Betriebssystem)">Unix-Kern</a> verfügt, steht ein Großteil der bekannten Kommandozeilen-Werkzeuge zur Verfügung. Zusätzlich gibt es aber auch noch einige macspezifische Kommandos, von denen wir heute einige vorstellen wollen.<br />
+<ul><br />
+	<li><a title="pbcopy/pbpaste manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man1/pbcopy.1.html">pbcopy / pbpaste</a>: mit Hilfe dieser beiden kleinen Helfer hat man von der Kommandozeile aus Zugriff auf die Zwischenablage.  So kopiert z.B. <em>cat .ssh/id_pub.dsa | pbcopy</em> einen öffentlichen <span class="caps">SSH</span>-Schlüssel in diese, so dass man diesen dann einfach mittels Apfel-V in der grafischen Oberfläche einfügen kann. Analog kann so im <span class="caps">GUI</span> kopierter Text im Terminal verwendet werden, beispielsweise um diesen mit &#8220;grep&#8221; zu durchsuchen: &#8220;<em>pbpaste | grep foo</em>&#8221;</li><br />
+	<li><a title="say manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man1/say.1.html">say</a>: dieses nette Tool erlaubt die Verwendung des systemeigenen Speechsynthesizers in der Shell: <em>say &#8220;Hello&#8221;</em>. Alternativ kann man mit dem Parameter &#8220;<em>-f</em>&#8221; auch ein zu lesendes File übergeben. Standardmäßig kommt dabei die in den Systemeinstellungen verwendete Stimme zum Einsatz, dies kann mittels &#8220;<em>-v</em>&#8221; aber geändert werden.  Dies ist einerseits eine unterhaltsame Spielerei, kann aber andererseits auch von echtem Nutzen sein, zum Beispiel wenn man über die Beendigung eines lange laufenden Shell-Prozesses benachrichtigt werden will, in diesem Fall einem Download mittels <a title="curl manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man1/curl.1.html">curl</a>: <em>curl -O http://link.to.file/bigfile &amp;&amp; say &#8220;Download finished&#8221;</em></li><br />
+	<li><a title="softwareupdate manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man8/softwareupdate.8.html">softwareupdate</a>: dieses Kommando erlaubt das Einspielen von Systemaktualisierungen von der Kommandozeile. So zeigt etwa <em>softwareupdate -l </em>eine Liste aller verfügbarer Aktualisierungen, während <em>softwareupdate -i -a </em>alle verfügbaren Updates automatisch installiert, womit es sich hervorragend für die Automatisierung mittels <a title="at manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man1/at.1.html">at</a> oder <a title="cron manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man8/cron.8.html">cron</a> eignet. </li><br />
+	<li><a title="screencapture manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man1/screencapture.1.html">screencapture</a>: OS X-Neueinsteiger fragen sich oft wie man denn auf einfache Weise einen Screenshot erstellen kann, die nicht unbedingt intuitive Antwort lautet Apfel-Shift-3. Alternativ kann dies aber auch von der Kommandozeile erfolgen. So erzeugt beispielsweise das Kommando  <em>screencapture ~/Desktop/`date +&quot;%Y%m%d&quot;`.png </em>einen Screenshot mit dem aktuellen Datum (im Format <span class="caps">JJJJMMTT</span>) auf dem Desktop des jeweiligen Benutzers. Das Tool verfügt über einige Parameter, mit denen sich auch interaktive Screenshots (Apfel-Shift-4)  anfertigen lassen.</li></p>
+</ul>
+<p>Viel Spaß beim Arbeiten mit der Kommandozeile!</p>
+<p>(Origally published by me on <a href="http://www.opensourcemac.de/2009/01/21/nutzliches-fur-die-kommandozeile/">open.source.mac</a> on Jan 21st 2009.)</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -446,79 +527,6 @@ A: Awesome! Their hospitality puts us all to shame and the young people are well
   <div class="entry-content"><p>After quitting my job and my apartment I finally left Austria last Friday. Since I found a really cheap flight with Sky Europe (22 Euro), I made Athens my first destination. For the first 4 nights I stayed at Kostas&#8217; place in Kipseli and we had loads of fun! Among the highlights were eating in tradtional taverns, going out in Psiiri (pretty cool drum&#8217;n&#8217;bass party on the first night), drinking my first <a href="http://en.wikipedia.org/wiki/Rakomelo">Rakomelo</a> at the CouchSurfing meeting before watching anarchists attacking police with molotows in <a href="http://en.wikipedia.org/wiki/Exarcheia">Exarcheia</a>, going to a party till 7.15am the next morning (and going back home in a way too crowded car), playing Go at cafes and other places, having Suvlaki on the roof of a house on the way up to Acropolis overlooking the city and smoking shisha and drinking Raki in a small Turkish bar.</p>
 <p>On Tuesday I moved to Natalia&#8217;s and Dinos&#8217; place, where we had a really fun game evening accompanied by quite some Rakomelo (I love this drink by the way, Christmas markets in Austria better sell this once I get back!). Yesterday I finally did some touristy stuff and went to the Acropolis. To be honest the 12 Euro admission fee seems a bit much, but the stunning views over the city make up for it. After that I bumped into an Italian guy who seems to be a pretty well known scammer in the area. He is trying to lure tourists into a somewhat dodgy place called &#8220;Love Pub&#8221;. Although my ingenious plan to use his own weapons against him so he would pay for my drink didn&#8217;t work out, a good Ouzo and his disappointed face when I left without buying any drinks for him and the prosti&#8230;girls we &#8220;met&#8221; at this bar were definitely worth the 45 minutes I invested. There&#8217;s another CS meeting tomorrow and I guess it will become a late night out again. I&#8217;m glad my flight to Istanbul isn&#8217;t before 7pm on Saturday!</p>
 <p>Anyway, Athens is a kickass place, with good nightlife, awesome food (go eat the Tandoori chicken wraps with freshly baked bread the Indian guy in Exarcheia sells!) and attractive people in every possible demographic group you might be interested in! I&#8217;ve only been here for a week, but I already know that I&#8217;m going to miss this place&#8230;</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/12/12/t-44-days/">T-44 Days</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-12-12T00:00:00+06:30" pubdate data-updated="true">Dec 12<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Had my last day of work on Monday, 44 more days till I leave Austria for a good long time. Not too many real plans yet, just a bunch of random ideas. All I know right know is that I will start in Athens from where I&#8217;ll fly to the United Arab Emirates before heading to Oman by bus. Woohoo!</p>
-<p>Setting Orange, Bureaucracy 66, 3173 <span class="caps">YOLD</span></p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/10/30/how-not-to-book-flights-yes-again/">How NOT to Book Flights (Yes, Again)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-10-30T00:00:00+06:30" pubdate data-updated="true">Oct 30<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A friend and I decided that we don&#8217;t want to spend New Year&#8217;s Eve in Vienna, so we&#8217;ve been discussing various options since last Friday. Since I couldn&#8217;t convince him to celebrate in <a href="http://wikitravel.org/en/Tirana">Tirana</a>, we finally settled on <a href="http://en.wikipedia.org/wiki/Rome">Rome</a>. So today we start hunting for tickets, find some semi-decent ones with <a href="http://www.aua.com">Austrian</a>, but somehow don&#8217;t book them right away. A couple hours pass and when we finally get our lazy butts to the online booking site, we discover that the return flight for January 2nd is gone. Anyway, a couple of mishaps and coordination problems later, I finally have tickets for December 28 and January 1st. However, when my friend tried to book the same itinerary, it turns out that the flights already became more expensive, so he didn&#8217;t book them. This is kinda awkward, since he was the one who originally wanted to go to Rome, whereas I would have been open for a lot of other options too. We&#8217;re currently discussing splitting the additional costs for his tickets, so I really hope that they will still be available at the time he tries to book them&#8230;</p>
-<p>And in case you wonder: Yes, it&#8217;s the friend who was also involved in the <a href="http://blog.citizen428.net/archives/321-HOWTO-Discover-a-country-you-never-planned-seeing.html">Romania incident</a>.</p>
-<p>Pungenday, The Aftermath 11, 3173 <span class="caps">YOLD</span></p></div>
   
   
 

@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="When reading John Derbyshire&#8217;s excellent book Prime Obsession, I stumbled upon the following interesting footnote about Euler&#8217;s number &hellip;">
+  <meta name="description" content="I love questions that start with &#8220;Wouldn&#8217;t it be nice if Ruby &lt;insert perceived missing feature&gt;?&#8221; because more often than &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +99,83 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/04/13/wouldnt-it-be-nice-if-ruby/">Wouldn&#8217;t It Be Nice if Ruby&#8230;?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-13T00:00:00+06:30" pubdate data-updated="true">Apr 13<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I love questions that start with &#8220;Wouldn&#8217;t it be nice if Ruby &lt;insert perceived missing feature&gt;?&#8221; because more often than not the answer is: &#8220;Just tell it to!&#8221;</p>
+<p>Something like this happened on RubyLearning today, when fellow mentor José asked &#8220;<i>Wouldn&#8217;t it be nice if Ruby was smart enough to realize that when a division has a remainder then it should use a floating result?</i>&#8221; and once again the answer was &#8220;You mean like this?&#8221;:</p>
+<script src="http://gist.github.com/365000.js?file=gistfile1.ru"></script><p>I&#8217;m definitely not saying monkey-patching core classes with unexpected behavior is a smart idea (it&#8217;s <span class="caps">NOT</span>), but I always like how you can add behavior to Ruby if you really feel it&#8217;s necessary (and once again, I don&#8217;t in this case).</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/04/13/the-birthday-paradox-in-clojure/">The Birthday Paradox in Clojure</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-13T00:00:00+06:30" pubdate data-updated="true">Apr 13<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <a href="http://en.wikipedia.org/wiki/Birthday_problem">Birthday Paradox</a> is an interesting little problem in probability theory. To quote Wikipedia:</p>
+<blockquote><p>[&#8230;] the birthday problem, or birthday paradox pertains to the probability that in a set of randomly chosen people some pair of them will have the same birthday. In a group of at least 23 randomly chosen people, there is more than 50% probability that some pair of them will have the same birthday. Such a result is counter-intuitive to many.</p></blockquote>
+<p>I don&#8217;t really find this counter-intuitive, but as Kalid from <a href="http://betterexplained.com/">BetterExplained</a> accurately <a href="http://betterexplained.com/articles/understanding-the-birthday-paradox/">observed</a> &#8220;exponents aren&#8217;t intuitive&#8221; and &#8220;humans are a tad bit selfish&#8221;. Here&#8217;s a quote regarding that last comment:</p>
+<blockquote><p>In a room of 23, do you think of the 22 comparisons where your birthday is being compared against someone else’s? Probably.</p><p>Do you think of the 231 comparisons where someone you don’t know is being checked against someone else you don’t know? Do you realize there are so many? Probably not.</p><p>The fact that we neglect the 10 times as many comparisons that don’t include us helps us see why the “paradox” can happen.</p><footer><strong>Kalid Azad</strong> <cite><a href='http://betterexplained.com/articles/understanding-the-birthday-paradox/'>Understanding the Birthday Paradox</a></cite></footer></blockquote>
+<p>So let&#8217;s use Clojure to see why math works better than people&#8217;s intuition:</p>
+<script src="http://gist.github.com/365172.js?file=gistfile1.clj"></script><p>Happy birthday everyone!</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -415,140 +492,6 @@
 <li><a href="http://ooc-lang.org/">ooc</a>, <i>a modern, object-oriented, functional-ish, high-level, low-level, sexy programming language. It&#8217;s translated to pure C with a source-to-source compiler. It strives to be powerful, modular, extensible, portable, yet simple and fast.</i></li><br />
 <li><a href="http://mth.github.com/yeti/">Yeti</a>, <i>ML style functional programming language, that runs on the <span class="caps">JVM</span>.</i></li><br /></p>
 </ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/02/2009-reading-list/">2009 Reading List</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-02T00:00:00+06:30" pubdate data-updated="true">Jan 2<span>nd</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here&#8217;s what I read in 2009, in the order I read them:</p>
-<p><b>Brick Lane</b>: Monica Ali<br />
-<b>Die Angst des Tormanns beim Elfmeter</b>: Peter Handke<br />
-<b>Soweto Stories</b>: Miriam Tzali<br />
-<b>The Eighth Day</b>: John Case<br />
-<b>A Language in Common</b>: Marion Molteno<br />
-<b>The Lover</b>: A. B. Yehoshua<br />
-<b>Everything Is Illuminated</b>: Jonathan Safran Foer<br />
-<b>Ali Smith&#8217;s Supersonic 70s</b>: Ali Smith<br />
-<b>Die Memoiren des Rodriguez Fazantas</b>: Helge Schneider<br />
-<b>German Amok</b>: Feridun Zaimoglu<br />
-<b>Imaginings of Sand</b>: Andre Brink<br />
-<b>Leinwand</b>: Feridun Zaimoglu<br />
-<b>Bitter Fruit</b>: Achmat Dangor<br />
-<b>Die Betrogene</b>: Thomas Mann<br />
-<b>The Crow Road</b>: Iain Banks<br />
-<b>The White Tiger</b>: Aravind Adiga<br />
-<b>Kali: Eine Vorwintergeschichte</b>: Peter Handke<br />
-<b>The Icarus Girl</b>: Helen Oyeyemi<br />
-<b>Der Hund aus Terracotta</b>: Andrea Camilleri<br />
-<b>Ansichten eines Clowns</b>: Heinrich Böll<br />
-<b>Lust</b>: Elfriede Jelinek<br />
-<b>Transmission</b>: Hari Kunzru<br />
-<b>Zwölf Gramm Glück</b>: Feridun Zaimoglu<br />
-<b>Hokkaido Highway Blues</b>: Will Ferguson<br />
-<b>Never Let Me Go</b>: Kazuo Ishiguro<br />
-<b>Lunar Park</b>: Bret Easton Ellis<br />
-<b>The Burial Brothers</b>: Simon Mayle<br />
-<b>Ruby in Practice</b>: Jeremy McAnally<br />
-<b>An der Arche um Acht</b>: Ulrich Hub<br />
-<b>Ubik</b>: Philip Kindred Dick<br />
-<b>A Loyal Character Dancer</b>: Qiu Xiaolong<br />
-<b>Bartleby The Scrivener</b>: Herman Melville<br />
-<b>2 B R 0 2 B</b>: Kurt Vonnegut<br />
-<b>Handbuch des Kriegers des Lichts</b>: Paulo Coelho<br />
-<b>The Well-Grounded Rubyist</b>: David A. Black<br />
-<b>The Accidental</b>: Ali Smith<br />
-<b>Rice Boy</b>: Evan Dahm<br />
-<b>South Africa: The Rise and Fall of Apartheid</b>: Nancy L. Clark<br />
-<b>Squeak by Example</b>: Andrew P. Black<br />
-<b>Rabbit, Run</b>: John Updike<br />
-<b>Heartland</b>: Joey Goebel<br />
-<b>Guards! Guards!</b>: Terry Pratchett<br />
-<b>Die Girls von Riad</b>: Rajaa Alsanea<br />
-<b>Angela&#8217;s Ashes</b>: Frank McCourt<br />
-<b>Verblendung</b>: Stieg Larsson<br />
-<b>Der Tote im Sumida</b>: Sujata Massey<br />
-<b>Crime</b>: Irvine Welsh<br />
-<b>Interesting Times</b>: Terry Pratchett<br />
-<b>Sacred Games</b>: Vikram Chandra<br />
-<b>The God of Small Things</b>: Arundhati Roy<br />
-<b>Programming Clojure</b>: Stuart Halloway<br />
-<b>Armageddon</b>: Leon Uris<br />
-<b>Small Gods</b>: Terry Pratchett<br />
-<b>The Dice Man</b>: Luke Rhinehart<br />
-<b>Verdammnis</b>: Stieg Larsson<br />
-<b>Oranges Are Not the Only Fruit</b>: Jeanette Winterson<br />
-<b>Vergebung</b>: Stieg Larsson<br />
-<b>JavaScript: The Good Parts</b>: Douglas Crockford<br />
-<b>Going Postal</b>: Terry Pratchett<br /></p>
-<p>Started in 2009 but not finished:<br /></p>
-<p><b>Gödel, Escher, Bach</b>: Douglas R. Hofstadter<br />
-<b>Brückenkurs Mathematik</b>: Guido Walz<br /></p>
-<p>This list is not taking into account stuff that didn&#8217;t have ISBNs like some eBooks or scientific papers.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/12/28/simple-aws-scripting-with-boto/">Simple AWS Scripting With Boto</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-12-28T00:00:00+06:30" pubdate data-updated="true">Dec 28<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://code.google.com/p/boto/">boto</a> is a very nice Python interface to the Amazon Web Services which I can heartily recommend for your cloud scripting needs. Here&#8217;s a quick example program I whipped up around 2 weeks ago (be gentle, I&#8217;m not a Python guy and this is just a throwaway quickie), which will list all your AMIs (excluding public ones), used S3 buckets plus a list of currently running instances with some information like instance type, start time etc. The nice part is that you can connect to any instance via <span class="caps">SSH</span> directly from this lsit which I find more convenient than copy/pasting the public <span class="caps">DNS</span> name from the <span class="caps">AWS</span> console:</p>
-<script src="http://gist.github.com/264696.js?file=cloudwtf.py"></script></div>
   
   
 
