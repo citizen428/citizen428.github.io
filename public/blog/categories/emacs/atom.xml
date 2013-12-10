@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-11-06T18:41:03+06:30</updated>
+  <updated>2013-12-10T21:45:38+05:30</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Emacs twittering-mode]]></title>
     <link href="http://citizen428.net/blog/2011/01/21/emacs-twittering-mode/"/>
-    <updated>2011-01-21T00:00:00+06:30</updated>
+    <updated>2011-01-21T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2011/01/21/emacs-twittering-mode</id>
     <content type="html"><![CDATA[<p>When my <a href="http://nambu.com/">usual Twitter client</a> stopped working last Tuesday, I got inspired by <a href="http://www.mostlymaths.net/2010/12/emacs-30-day-challenge.html">Ruben&rsquo;s Emacs 30 Day Challenge</a> and decided to look what Emacs had to offer in terms of Twitter clients. On the always helpful EmacsWiki I found a <a href="http://emacswiki.org/emacs/Twitter">list of available options</a> and after some browsing settled on <a href="http://twmode.sourceforge.net/">twittering-mode</a>. I got hooked really fast, so even after getting Nambu to work again (somehow authentication got screwed up), I decided to stay with Emacs for my Twitter needs.</p>
 
@@ -121,7 +121,7 @@
   <entry>
     <title type="html"><![CDATA[emacsclient on OS X]]></title>
     <link href="http://citizen428.net/blog/2010/09/22/emacsclient-on-os-x/"/>
-    <updated>2010-09-22T00:00:00+06:30</updated>
+    <updated>2010-09-22T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2010/09/22/emacsclient-on-os-x</id>
     <content type="html"><![CDATA[<p>If you are running a non-system Emacs on OS X and have tried to use &ldquo;emacsclient&rdquo;, you may have seen the following error message despite having started the Emacs server:</p>
 
@@ -155,7 +155,7 @@
   <entry>
     <title type="html"><![CDATA[Emacs for Rubyists]]></title>
     <link href="http://citizen428.net/blog/2010/07/06/emacs-for-rubyists/"/>
-    <updated>2010-07-06T00:00:00+06:30</updated>
+    <updated>2010-07-06T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2010/07/06/emacs-for-rubyists</id>
     <content type="html"><![CDATA[<p>If you are interested in using Emacs for Ruby development, here are the relevant parts from my config file with some additional comments:</p>
 
@@ -169,7 +169,7 @@
   <entry>
     <title type="html"><![CDATA[Fullscreen Emacs on MacOS X]]></title>
     <link href="http://citizen428.net/blog/2010/06/26/fullscreen-emacs-on-macos-x/"/>
-    <updated>2010-06-26T00:00:00+06:30</updated>
+    <updated>2010-06-26T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2010/06/26/fullscreen-emacs-on-macos-x</id>
     <content type="html"><![CDATA[<p>After years of being an avid Vim user, I recently succumbed to the temptation of Emacs and haven&rsquo;t looked back since. Now that I slowly understand the concept of &ldquo;living in Emacs&rdquo;, I also wanted a fullscreen mode. Turns out you&rsquo;ll have to patch and build Emacs yourself for that if you are on OSX, so here&rsquo;s a step by step guide on what I did to build the current Git HEAD (&ldquo;About Emacs&rdquo; reports the version as 24.0.50 by the way) with fullscreen support, based on <a href="http://www.sanityinc.com/full-screen-support-for-cocoa-emacs-on-osx">Steve Purcell&rsquo;s post</a> from last January:</p>
 
@@ -185,7 +185,7 @@
   <entry>
     <title type="html"><![CDATA[Easy setup for Clojure on Mac OS X Leopard]]></title>
     <link href="http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
-    <updated>2009-08-24T00:00:00+06:30</updated>
+    <updated>2009-08-24T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
     <content type="html"><![CDATA[<p>&ldquo;Clojure&rdquo;:<a href="http://clojure.org/">http://clojure.org/</a> definitely is one of the hottest new programming languages around and just recently hit a &ldquo;very important milestone&rdquo;:<a href="http://clojure.blogspot.com/2009/05/clojure-10.html.">http://clojure.blogspot.com/2009/05/clojure-10.html.</a> Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand &ldquo;one of those&rdquo;:<a href="http://github.com/carlism/Clojure-MacOSX/tree">http://github.com/carlism/Clojure-MacOSX/tree</a> into &ldquo;ClojureX&rdquo;:<a href="http://github.com/citizen428/ClojureX/tree/master,">http://github.com/citizen428/ClojureX/tree/master,</a> which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
 

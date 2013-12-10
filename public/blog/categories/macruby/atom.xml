@@ -4,7 +4,7 @@
   <title><![CDATA[Category: macruby | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/macruby/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-11-06T18:41:03+06:30</updated>
+  <updated>2013-12-10T21:45:38+05:30</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby implementations and why we should care]]></title>
     <link href="http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care/"/>
-    <updated>2009-03-12T00:00:00+06:30</updated>
+    <updated>2009-03-12T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2009/03/12/ruby-implementations-and-why-we-should-care</id>
     <content type="html"><![CDATA[<p>Not too lang ago our &ldquo;favorite language&rdquo;:<a href="http://www.ruby-lang.org/en/">http://www.ruby-lang.org/en/</a> had only implementation, the one made by &ldquo;Matz&rdquo;:<a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">http://en.wikipedia.org/wiki/Yukihiro_Matsumoto</a> (now commonly referred to as MatzRuby or MRI). This has changed quite a lot lately, so I decided to give you an overview of the various Ruby interpreters I use, why I use them and why they also might be interesting for you.</p>
 

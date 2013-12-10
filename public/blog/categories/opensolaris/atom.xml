@@ -4,7 +4,7 @@
   <title><![CDATA[Category: opensolaris | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/opensolaris/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-11-06T18:41:03+06:30</updated>
+  <updated>2013-12-10T21:45:38+05:30</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[OpenSolaris cheat sheet]]></title>
     <link href="http://citizen428.net/blog/2010/01/26/opensolaris-cheat-sheet/"/>
-    <updated>2010-01-26T00:00:00+06:30</updated>
+    <updated>2010-01-26T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2010/01/26/opensolaris-cheat-sheet</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve always been a big fan of the handy little utility <a href="http://cheat.errtheblog.com">cheat</a> and recently became interested in <a href="http://hub.opensolaris.org/bin/view/Main/">OpenSolaris</a> (which btw runs fine on my Thinkpad x200s), so I did the obvious and created an OpenSolaris cheat sheet:</p>
 

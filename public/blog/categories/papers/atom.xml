@@ -4,7 +4,7 @@
   <title><![CDATA[Category: papers | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/papers/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-11-06T18:41:03+06:30</updated>
+  <updated>2013-12-10T21:45:38+05:30</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs. John Von Neumann]]></title>
     <link href="http://citizen428.net/blog/2011/10/23/tom-and-michael-vs-john-von-neumann/"/>
-    <updated>2011-10-23T19:55:00+06:30</updated>
+    <updated>2011-10-23T19:55:00+05:30</updated>
     <id>http://citizen428.net/blog/2011/10/23/tom-and-michael-vs-john-von-neumann</id>
     <content type="html"><![CDATA[<p>In case you wonder if <a href="http://mrjaba.posterous.com/">Tom</a> and I gave up on <a href="http://citizen428.net/blog/categories/versus/">reading papers</a>, the answer is a resounding no! In fact there&rsquo;s one we finished sometime around mid-September, which for various reasons hasn&rsquo;t been summarized yet. This is about to change.</p>
 
@@ -49,7 +49,7 @@
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs The Good Grief Algorithm]]></title>
     <link href="http://citizen428.net/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm/"/>
-    <updated>2011-07-30T00:00:00+06:30</updated>
+    <updated>2011-07-30T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm</id>
     <content type="html"><![CDATA[<p>This week &ldquo;Tom&rdquo;:<a href="http://mrjaba.posterous.com/">http://mrjaba.posterous.com/</a> &mdash; who is now a happily married man :&ndash;) &mdash; and yours truly finally read another paper and since I&rsquo;m sick and barely left bed for the last 2 days I decided to fight my boredom by writing about it.</p>
 
@@ -97,7 +97,7 @@ I know that for some people the math might look scary, but if you take some time
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs Prototypical Inheritance]]></title>
     <link href="http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/"/>
-    <updated>2011-07-11T00:00:00+06:30</updated>
+    <updated>2011-07-11T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance</id>
     <content type="html"><![CDATA[<p>&ldquo;Tom&rdquo;:<a href="http://mrjaba.posterous.com/">http://mrjaba.posterous.com/</a> and I read another paper, this time on prototypical inheritance: &ldquo;Organizing Programs Without Classes&rdquo;:<a href="http://selflanguage.org/documentation/published/organizing-programs.html.">http://selflanguage.org/documentation/published/organizing-programs.html.</a> You can find his post &ldquo;here&rdquo;:<a href="http://mrjaba.posterous.com/organizing-programs-without-classes">http://mrjaba.posterous.com/organizing-programs-without-classes</a> and I have to admit that he also did almost the entire summary this time whereas I only added some minor things and code examples.</p>
 
@@ -369,7 +369,7 @@ A is a globally defined constant which points to an Object.</p>
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs The Monad]]></title>
     <link href="http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad/"/>
-    <updated>2011-05-18T00:00:00+06:30</updated>
+    <updated>2011-05-18T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad</id>
     <content type="html"><![CDATA[<p>So, over the last few weeks &ldquo;Tom Crinson&rdquo;:<a href="http://mrjaba.posterous.com/">http://mrjaba.posterous.com/</a> and I read another paper, this time &ldquo;The essence of functional programming&rdquo; (available &ldquo;here&rdquo;:<a href="http://homepages.inf.ed.ac.uk/wadler/topics/monads.html">http://homepages.inf.ed.ac.uk/wadler/topics/monads.html</a>) by Philip Wadler, one of the principal designers of Haskell. Tom&rsquo;s post is &ldquo;here&rdquo;:<a href="http://mrjaba.posterous.com/michael-and-tom-vs-the-monad.">http://mrjaba.posterous.com/michael-and-tom-vs-the-monad.</a></p>
 
@@ -461,7 +461,7 @@ Brian Beckman recorded an &ldquo;awesome 67 minute video&rdquo;:<a href="http://
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs Google's MapReduce]]></title>
     <link href="http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce/"/>
-    <updated>2011-05-02T00:00:00+06:30</updated>
+    <updated>2011-05-02T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce</id>
     <content type="html"><![CDATA[<p>The other day on Twitter I complained about my own laziness when it comes to reading academic papers, and &ldquo;Tom Crinson&rdquo;:<a href="http://mrjaba.posterous.com/">http://mrjaba.posterous.com/</a> chimed in to let me know that he&rsquo;d also like to read more of them. That&rsquo;s how we decided to set up a sort of online based reading group for this type of thing, where we&rsquo;ll choose a paper to read, discuss it via email and then blog about it (&ldquo;Tom&rsquo;s post is here&rdquo;:<a href="http://mrjaba.posterous.com/mapreduce-simplified-data-processing-on-large">http://mrjaba.posterous.com/mapreduce-simplified-data-processing-on-large</a>).</p>
 

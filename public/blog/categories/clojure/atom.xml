@@ -4,7 +4,7 @@
   <title><![CDATA[Category: clojure | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/clojure/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-11-06T18:41:03+06:30</updated>
+  <updated>2013-12-10T21:45:38+05:30</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[So you want to learn Clojure?]]></title>
     <link href="http://citizen428.net/blog/2011/05/04/so-you-want-to-learn-clojure/"/>
-    <updated>2011-05-04T00:00:00+06:30</updated>
+    <updated>2011-05-04T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2011/05/04/so-you-want-to-learn-clojure</id>
     <content type="html"><![CDATA[<p>For last Monday&rsquo;s <a href="http://metalab.at/wiki/Lambdaheads">Lambdaheads</a> meeting I prepared a list of resources for people interested in learning Clojure, so I thought I&rsquo;ll share it here. The actual presentation had a lot of comments, but I&rsquo;m afraid I&rsquo;m too lazy to repeat them in writing. Maybe the list is still useful for some people though:</p>
 
@@ -87,7 +87,7 @@
   <entry>
     <title type="html"><![CDATA[ClojureX is back]]></title>
     <link href="http://citizen428.net/blog/2011/04/14/clojurex-is-back/"/>
-    <updated>2011-04-14T00:00:00+06:30</updated>
+    <updated>2011-04-14T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2011/04/14/clojurex-is-back</id>
     <content type="html"><![CDATA[<p>Considering how many tools for getting up and running with Clojure are available nowadays (e.g. &ldquo;cljr&rdquo;:<a href="https://github.com/liebke/cljr,">https://github.com/liebke/cljr,</a> &ldquo;cake&rdquo;:<a href="http://github.com/ninjudd/cake">http://github.com/ninjudd/cake</a> or &ldquo;Dejour&rdquo;:<a href="https://github.com/russolsen/dejour">https://github.com/russolsen/dejour</a>) I&rsquo;m not sure if anyone still cares, but as of today I&rsquo;m actively working on &ldquo;ClojureX&rdquo;:<a href="https://github.com/citizen428/ClojureX">https://github.com/citizen428/ClojureX</a> again.</p>
 
@@ -98,7 +98,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-02-06]]></title>
     <link href="http://citizen428.net/blog/2011/02/06/information-overload-2011-02-06/"/>
-    <updated>2011-02-06T00:00:00+06:30</updated>
+    <updated>2011-02-06T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2011/02/06/information-overload-2011-02-06</id>
     <content type="html"><![CDATA[<ul>
 <li>"Plenty Of Fish Hacked":http://grumomedia.com/plenty-of-fish-hacked-chris-russos-explains-how-he-did-it/<br>Once again a security researcher gets into trouble for reporting a vulnerability. Will people never learn?</li>
@@ -119,7 +119,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-01-02]]></title>
     <link href="http://citizen428.net/blog/2011/01/02/information-overload-2011-01-02/"/>
-    <updated>2011-01-02T00:00:00+06:30</updated>
+    <updated>2011-01-02T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2011/01/02/information-overload-2011-01-02</id>
     <content type="html"><![CDATA[<ul>
 <li>"Why the Internet Is a Great Tool for Totalitarians":http://www.wired.com/magazine/2010/12/st_essay_totalitarians/<br>It's always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
@@ -140,7 +140,7 @@
   <entry>
     <title type="html"><![CDATA[Clojure: Deriving the Y Combinator in 7 Stolen Steps ]]></title>
     <link href="http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/"/>
-    <updated>2010-12-14T00:00:00+06:30</updated>
+    <updated>2010-12-14T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps</id>
     <content type="html"><![CDATA[<p>&ldquo;Fixed point combinators&rdquo;:<a href="http://en.wikipedia.org/wiki/Fixed_point_combinator">http://en.wikipedia.org/wiki/Fixed_point_combinator</a> are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that don&rsquo;t explicitly support it. This might be slightly academic, but that doesn&rsquo;t make it less fun.</p>
 

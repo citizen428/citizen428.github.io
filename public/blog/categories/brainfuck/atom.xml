@@ -4,7 +4,7 @@
   <title><![CDATA[Category: brainfuck | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/brainfuck/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-11-06T18:41:03+06:30</updated>
+  <updated>2013-12-10T21:45:38+05:30</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Loads of links]]></title>
     <link href="http://citizen428.net/blog/2005/12/10/loads-of-links/"/>
-    <updated>2005-12-10T00:00:00+06:30</updated>
+    <updated>2005-12-10T00:00:00+06:00</updated>
     <id>http://citizen428.net/blog/2005/12/10/loads-of-links</id>
     <content type="html"><![CDATA[<p>I haven&rsquo;t blogged for quite some time now, so I decided I could at least entertain you with one of my semi-regular link dumps until I&rsquo;m motivated enough to write a proper entry again&hellip;</p>
 
@@ -54,7 +54,7 @@
   <entry>
     <title type="html"><![CDATA[Getting brainf*cked]]></title>
     <link href="http://citizen428.net/blog/2005/04/12/getting-brainfcked/"/>
-    <updated>2005-04-12T00:00:00+06:30</updated>
+    <updated>2005-04-12T00:00:00+06:00</updated>
     <id>http://citizen428.net/blog/2005/04/12/getting-brainfcked</id>
     <content type="html"><![CDATA[<p>After knowing &ldquo;Brainfuck&rdquo;:<a href="http://en.wikipedia.org/wiki/Brainfuck">http://en.wikipedia.org/wiki/Brainfuck</a> for quite a while alreay, I today have decided to write my very first &ldquo;program&rdquo; in this funny little language. It does nothing more than displaying the string &ldquo;"CARGAL&rdquo;:<a href="http://www.cargal.org!">http://www.cargal.org!</a>&ldquo; followed by a newline, but nonetheless it was good excercise for getting used to BF.</p>
 

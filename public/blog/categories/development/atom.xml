@@ -4,7 +4,7 @@
   <title><![CDATA[Category: development | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/development/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-11-06T18:41:03+06:30</updated>
+  <updated>2013-12-10T21:45:38+05:30</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Easy setup for Clojure on Mac OS X Leopard]]></title>
     <link href="http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
-    <updated>2009-08-24T00:00:00+06:30</updated>
+    <updated>2009-08-24T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
     <content type="html"><![CDATA[<p>&ldquo;Clojure&rdquo;:<a href="http://clojure.org/">http://clojure.org/</a> definitely is one of the hottest new programming languages around and just recently hit a &ldquo;very important milestone&rdquo;:<a href="http://clojure.blogspot.com/2009/05/clojure-10.html.">http://clojure.blogspot.com/2009/05/clojure-10.html.</a> Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand &ldquo;one of those&rdquo;:<a href="http://github.com/carlism/Clojure-MacOSX/tree">http://github.com/carlism/Clojure-MacOSX/tree</a> into &ldquo;ClojureX&rdquo;:<a href="http://github.com/citizen428/ClojureX/tree/master,">http://github.com/citizen428/ClojureX/tree/master,</a> which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
 
@@ -44,7 +44,7 @@
   <entry>
     <title type="html"><![CDATA[RegEx madness]]></title>
     <link href="http://citizen428.net/blog/2007/04/05/regex-madness/"/>
-    <updated>2007-04-05T00:00:00+06:30</updated>
+    <updated>2007-04-05T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2007/04/05/regex-madness</id>
     <content type="html"><![CDATA[<p>Today at work we needed to find a regular expression to extract the name of a backup job from an SNMP trap. The trap looks as follows:</p>
 
@@ -63,7 +63,7 @@
   <entry>
     <title type="html"><![CDATA[XPath (good|mad)ness]]></title>
     <link href="http://citizen428.net/blog/2007/01/04/xpath-goodmadness/"/>
-    <updated>2007-01-04T00:00:00+06:30</updated>
+    <updated>2007-01-04T00:00:00+05:30</updated>
     <id>http://citizen428.net/blog/2007/01/04/xpath-goodmadness</id>
     <content type="html"><![CDATA[<p>Today I started writing a useful little &ldquo;Greasemonkey&rdquo;:<a href="http://greasemonkey.mozdev.org/">http://greasemonkey.mozdev.org/</a> &ldquo;userscript&rdquo;:<a href="http://userscripts.org/">http://userscripts.org/</a> for a &ldquo;browser-based MMRPG&rdquo;:<a href="http://www.pardus.at">http://www.pardus.at</a> I&rsquo;m playing. Although I&rsquo;m no JavaScript guru I feel somewhat confident in the language and am quite fond of &ldquo;XPath&rdquo;:<a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a> ever since I joined the &ldquo;hoodwink.d&rdquo;:<a href="http://hoodwinkd.hobix.com/">http://hoodwinkd.hobix.com/</a> community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. &ldquo;funky&rdquo;) from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here&rsquo;s the working result:</p>
 
