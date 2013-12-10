@@ -6,7 +6,7 @@ comments: true
 categories:
   - travel
 ---
-After roughly two month of silence, it's time for another long overdue update. It covers our stay in Vietnam, or the period from end of July until end of August.
+After roughly two months of silence, it's time for another long overdue update. It covers our stay in Vietnam, or the period from end of July until end of August.
 
 Having spent some time in Taiwan and Hong Kong, we were curious to explore Vietnam, a country that's supposed to be a bridge between the Chinese world and Southeast Asia. We arrived in Hanoi and I instantly liked what I saw: chaos, street food, old colonial architecture and more street food. Not to forget the bia hoi, delicious (and cheap) beer which is brewed daily. While the traffic is at times insane, Hanoi is a very likable city, featuring some great cafes, excellent food and nice old French houses. Unfortunately a typhoon stopped us from going to Halong Bay, but the Perfume Pagoda made for a nice day trip too.
 

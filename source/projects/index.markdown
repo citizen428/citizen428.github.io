@@ -18,9 +18,9 @@ This is a list of some of my (personal) projects. Since I contribute quite regul
 
 * [ivar_encapsulation](https://github.com/citizen428/ivar_encapsulation): A declarative way to provide Smalltalk-like encapsulation around instance variables. Mentioned on [Ruby5](http://ruby5.envylabs.com/episodes/450-episode-414-october-25th-2013/stories/3642-ivar_encapsulation) (view on [Rubygems](https://rubygems.org/gems/ivar_encapsulation)).
 
-* [Shenanigans](http://citizen428.github.com/shenanigans/): My personal Ruby extension library (view on [Rubygems](https://rubygems.org/gems/shenanigans)).
+* [try_to](https://github.com/citizen428/try_to/): Flexible error handling in surprisingly little Ruby. Mentioned on [Ruby5](http://ruby5.envylabs.com/episodes/451-episode-415-october-29th-2013/stories/3648-tryto-allows-custom-exception-handling) (view on [Rubygems](https://rubygems.org/gems/try_to)).
 
-* [try_to](https://github.com/citizen428/try_to/): Flexible error handling in surprisingly little Ruby (view on [Rubygems](https://rubygems.org/gems/try_to)).
+* [Shenanigans](http://citizen428.github.com/shenanigans/): My personal Ruby extension library (view on [Rubygems](https://rubygems.org/gems/shenanigans)).
 
 * [JRuby](https://github.com/jruby/jruby): I sometimes use JRuby and while doing so [fixed 2 bugs in it](https://github.com/jruby/jruby/commits?author=citizen428).
 
