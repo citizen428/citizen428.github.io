@@ -4,7 +4,7 @@
   <title><![CDATA[Category: papers | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/papers/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-12-10T21:45:38+05:30</updated>
+  <updated>2013-12-24T19:12:30+01:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs. John Von Neumann]]></title>
     <link href="http://citizen428.net/blog/2011/10/23/tom-and-michael-vs-john-von-neumann/"/>
-    <updated>2011-10-23T19:55:00+05:30</updated>
+    <updated>2011-10-23T19:55:00+02:00</updated>
     <id>http://citizen428.net/blog/2011/10/23/tom-and-michael-vs-john-von-neumann</id>
     <content type="html"><![CDATA[<p>In case you wonder if <a href="http://mrjaba.posterous.com/">Tom</a> and I gave up on <a href="http://citizen428.net/blog/categories/versus/">reading papers</a>, the answer is a resounding no! In fact there&rsquo;s one we finished sometime around mid-September, which for various reasons hasn&rsquo;t been summarized yet. This is about to change.</p>
 
@@ -36,7 +36,7 @@
 
 <p>Alas the age of the paper shows a bit. While some of the points are still valid, there undoubtedly is a much wider appreciation of the benefits of applicative style programming nowadays, as can be seen by various functional languages slowly finding their way into the mainstream. It&rsquo;s still very interesting to see how early Backus already thought about all of this though, and also that the language he envisioned seemed to be more in line with the <a href="http://en.wikipedia.org/wiki/Apl">APL</a> school of thought that e.g. Haskell, which in all fairness wasn&rsquo;t around back then. I wonder how Backus felt about the latter,  which can be very declarative (see <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a>). For example, here is the inner product function from section 5 of the paper translated to Haskell:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="nf">ip</span> <span class="ow">::</span> <span class="p">[[</span><span class="kt">Integer</span><span class="p">]]</span> <span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;</span> <span class="kt">Integer</span>
 </span><span class='line'><span class="nf">ip</span> <span class="ow">=</span> <span class="n">sum</span> <span class="o">.</span> <span class="n">map</span> <span class="n">product</span> <span class="o">.</span> <span class="n">transpose</span>
@@ -49,7 +49,7 @@
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs The Good Grief Algorithm]]></title>
     <link href="http://citizen428.net/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm/"/>
-    <updated>2011-07-30T00:00:00+05:30</updated>
+    <updated>2011-07-30T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm</id>
     <content type="html"><![CDATA[<p>This week &ldquo;Tom&rdquo;:<a href="http://mrjaba.posterous.com/">http://mrjaba.posterous.com/</a> &mdash; who is now a happily married man :&ndash;) &mdash; and yours truly finally read another paper and since I&rsquo;m sick and barely left bed for the last 2 days I decided to fight my boredom by writing about it.</p>
 
@@ -97,7 +97,7 @@ I know that for some people the math might look scary, but if you take some time
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs Prototypical Inheritance]]></title>
     <link href="http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/"/>
-    <updated>2011-07-11T00:00:00+05:30</updated>
+    <updated>2011-07-11T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance</id>
     <content type="html"><![CDATA[<p>&ldquo;Tom&rdquo;:<a href="http://mrjaba.posterous.com/">http://mrjaba.posterous.com/</a> and I read another paper, this time on prototypical inheritance: &ldquo;Organizing Programs Without Classes&rdquo;:<a href="http://selflanguage.org/documentation/published/organizing-programs.html.">http://selflanguage.org/documentation/published/organizing-programs.html.</a> You can find his post &ldquo;here&rdquo;:<a href="http://mrjaba.posterous.com/organizing-programs-without-classes">http://mrjaba.posterous.com/organizing-programs-without-classes</a> and I have to admit that he also did almost the entire summary this time whereas I only added some minor things and code examples.</p>
 
@@ -106,7 +106,7 @@ I know that for some people the math might look scary, but if you take some time
 <p>OOP is a paradigm which uses &ldquo;objects&rdquo; to encapsulate behavior and state in a programming language. This can be accomplished in a few ways, two of the more popular being class based and prototype based object orientation. In class based object models (e.g. Java) a class will be written to define the behavior and state that the object will embody. A class can be inherited from and extended to provide new functionality. In prototype based object models (e.g. ECMAScript, Io), there are no classes, only objects which can be cloned and altered to provide new features. Here&rsquo;s a quick comparison of the two approaches in Ruby and ECMAScript:</p>
 
 <p>Ruby:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -151,7 +151,7 @@ I know that for some people the math might look scary, but if you take some time
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>ECMAScript:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -176,7 +176,7 @@ I know that for some people the math might look scary, but if you take some time
 
 <p>In prototype based languages a clone/copy method is written on a prototypical object which can define which data members and methods are copied to the new object. This idea can be refined to an object whose sole purpose is to supply behavior, a trait. This can be a parent object of the new object to provide its functionality. As this trait object is shared amongst all clones, any changes to it affect the clones, just as with the class and subclass of class based programming. Here&rsquo;s an example on behavior sharing in a prototype based language (Io):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -189,7 +189,7 @@ I know that for some people the math might look scary, but if you take some time
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>This will print:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>in A
 </span><span class='line'>in B
@@ -199,7 +199,7 @@ I know that for some people the math might look scary, but if you take some time
 In class based languages, subclassing gives the child class access to the member variables of the parent, its representation. In prototype based languages, a trait object provides only behavior, not data. This job is performed by a prototype instance of the object, one every other object will be cloned from. Its clone method will copy across its data slots (member variables) with any default values the programmer has provided. This is called a &ldquo;Data Parent&rdquo;.</p>
 
 <p>In Ruby:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -260,7 +260,7 @@ In class based languages, subclassing gives the child class access to the member
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>In IO:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -286,7 +286,7 @@ In class based languages, subclassing gives the child class access to the member
 <em>Michael:</em> According to <a href="http://en.wikipedia.org/wiki/Delegation_(programming)">Wikipedia</a> in a paper from 1986, &ldquo;Using Prototypical Objects to Implement Shared Behavior in Object-Oriented Systems&rdquo;.</p>
 
 <p>In ECMAScript:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -316,7 +316,7 @@ In class based languages, subclassing gives the child class access to the member
 </em>This feature is vital in any nontrivial system, without being able to find code to serve its purpose the programmer would be constantly rewriting the same code over and over. Class based languages tend to provide a globally accessible name for a set of functions. They also tend to provide namespaces to prevent naming collisions or categorisation. Prototype based languages need to be able to access the prototype anywhere in the system to be cloned, but as they are just regular objects, they have no internal names. The authors of the paper propose that namespace objects can be used to fill this need. Essentially a globally accessible hash map, which can contain nested namespace objects to provide categorisation. This later emerged as a fairly common pattern in ECMAScript.</p>
 
 <p>In Ruby:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -332,7 +332,7 @@ In class based languages, subclassing gives the child class access to the member
 A is a globally defined constant which points to an Object.</p>
 
 <p>In ECMAScript:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -369,7 +369,7 @@ A is a globally defined constant which points to an Object.</p>
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs The Monad]]></title>
     <link href="http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad/"/>
-    <updated>2011-05-18T00:00:00+05:30</updated>
+    <updated>2011-05-18T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad</id>
     <content type="html"><![CDATA[<p>So, over the last few weeks &ldquo;Tom Crinson&rdquo;:<a href="http://mrjaba.posterous.com/">http://mrjaba.posterous.com/</a> and I read another paper, this time &ldquo;The essence of functional programming&rdquo; (available &ldquo;here&rdquo;:<a href="http://homepages.inf.ed.ac.uk/wadler/topics/monads.html">http://homepages.inf.ed.ac.uk/wadler/topics/monads.html</a>) by Philip Wadler, one of the principal designers of Haskell. Tom&rsquo;s post is &ldquo;here&rdquo;:<a href="http://mrjaba.posterous.com/michael-and-tom-vs-the-monad.">http://mrjaba.posterous.com/michael-and-tom-vs-the-monad.</a></p>
 
@@ -461,7 +461,7 @@ Brian Beckman recorded an &ldquo;awesome 67 minute video&rdquo;:<a href="http://
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs Google's MapReduce]]></title>
     <link href="http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce/"/>
-    <updated>2011-05-02T00:00:00+05:30</updated>
+    <updated>2011-05-02T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce</id>
     <content type="html"><![CDATA[<p>The other day on Twitter I complained about my own laziness when it comes to reading academic papers, and &ldquo;Tom Crinson&rdquo;:<a href="http://mrjaba.posterous.com/">http://mrjaba.posterous.com/</a> chimed in to let me know that he&rsquo;d also like to read more of them. That&rsquo;s how we decided to set up a sort of online based reading group for this type of thing, where we&rsquo;ll choose a paper to read, discuss it via email and then blog about it (&ldquo;Tom&rsquo;s post is here&rdquo;:<a href="http://mrjaba.posterous.com/mapreduce-simplified-data-processing-on-large">http://mrjaba.posterous.com/mapreduce-simplified-data-processing-on-large</a>).</p>
 
@@ -508,7 +508,7 @@ Brian Beckman recorded an &ldquo;awesome 67 minute video&rdquo;:<a href="http://
 
 <p>I hacked together a little something in IRB to illustrate the basic workings of the algorithm (it&rsquo;s not perfect, but good enough for our purposes):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>

@@ -27,7 +27,7 @@ $ gem sources -a http://gems.github.com $ sudo gem &hellip;">
   <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -90,10 +90,10 @@ $ gem sources -a http://gems.github.com $ sudo gem &hellip;">
 <ul class="main-navigation">
   <li><a href="/about/">About</a></li>
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/projects">Projects</a></li>
-  <li><a href="/talks_and_publications">Talks/Publications</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
   <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/imprint/">Imprint</a></li>
 </ul>
 
@@ -124,7 +124,7 @@ $ gem sources -a http://gems.github.com $ sudo gem &hellip;">
   
 
 
-<time datetime="2009-09-08T00:00:00+05:30" pubdate data-updated="true">Sep 8<span>th</span>, 2009</time>
+<time datetime="2009-09-08T00:00:00+02:00" pubdate data-updated="true">Sep 8<span>th</span>, 2009</time>
         
       </p>
     
@@ -164,7 +164,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
   
 
 
-<time datetime="2009-09-06T00:00:00+05:30" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
+<time datetime="2009-09-06T00:00:00+02:00" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
         
       </p>
     
@@ -178,7 +178,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 
 <p>The first example listens for a line of text which then gets converted into a playable MIDI sequence. Let&rsquo;s start with importing the classes we need.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">ns</span> <span class="nv">midi/keyboard</span>
@@ -189,7 +189,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 
 <p>Next we set up a <a href="http://clojure.org/special_forms#toc9">loop</a> and an exit clause.  In case the user enters the word &ldquo;exit&rdquo;, we call System.exit to shut down all the threads that got started by Java&rsquo;s MIDI support.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -202,7 +202,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 
 <p>The main part of the application constructs a new MIDI sequence by creating a NOTE_ON event for every character in the entered text and then finishing the sequence with a STOP event. The original article states that it favors simplicity over efficiency, so the same also holds true for my &ldquo;translation&rdquo;.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -225,7 +225,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 
 <p>To finish off our first program we play the sequence before prompting for more input (see the loop snippet above).</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -243,7 +243,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 
 <p>While the first example was fun, it wasn&rsquo;t as interactive as it could be. Therefore the second program launches a GUI window to receive keystroke events, turning a note on or off when a key is pressed or released. Since we don&rsquo;t have to create MIDI sequences this time, our import statement becomes a lot shorter:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">ns</span> <span class="nv">midi/interactive</span>
@@ -254,7 +254,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 
 <p>This example directly accesses the system synthesizer. The following lines open the default synthesizer&rsquo;s channel 0 (and also create a JFrame object which we&rsquo;ll use later):</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -267,7 +267,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 
 <p>We then launch a GUI frame as a simple and cross-platform way to receive keystroke events. The KeyListener interface is implemented using Clojure&rsquo;s <a href="http://clojure.org/java_interop#toc26">proxy macro</a>, using keyPressed and keyReleased events to turn notes on or off.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -292,7 +292,7 @@ Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;
 
 <p>Last but not least we display our frame to let the fun begin.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='clojure'><span class='line'>      <span class="p">(</span><span class="o">.</span><span class="nv">setVisible</span> <span class="nv">true</span><span class="p">))))</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -327,7 +327,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   
 
 
-<time datetime="2009-09-06T00:00:00+05:30" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
+<time datetime="2009-09-06T00:00:00+02:00" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
         
       </p>
     
@@ -461,7 +461,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   
 
 
-<time datetime="2009-08-26T00:00:00+05:30" pubdate data-updated="true">Aug 26<span>th</span>, 2009</time>
+<time datetime="2009-08-26T00:00:00+02:00" pubdate data-updated="true">Aug 26<span>th</span>, 2009</time>
         
       </p>
     
@@ -504,7 +504,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   
 
 
-<time datetime="2009-08-24T00:00:00+05:30" pubdate data-updated="true">Aug 24<span>th</span>, 2009</time>
+<time datetime="2009-08-24T00:00:00+02:00" pubdate data-updated="true">Aug 24<span>th</span>, 2009</time>
         
       </p>
     
@@ -549,7 +549,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   
 
 
-<time datetime="2009-06-29T00:00:00+05:30" pubdate data-updated="true">Jun 29<span>th</span>, 2009</time>
+<time datetime="2009-06-29T00:00:00+02:00" pubdate data-updated="true">Jun 29<span>th</span>, 2009</time>
         
       </p>
     
@@ -557,7 +557,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
 
 
   <div class="entry-content"><p>On ruby-talk somebody <a href="http://www.ruby-forum.com/topic/190552">was asking</a> for a method which will be used to generate a random string, by returning either a lowercase letter or one of the digits 0-9 when called. As an example he posted the following Pascal program:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -608,7 +608,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   
 
 
-<time datetime="2009-06-18T00:00:00+05:30" pubdate data-updated="true">Jun 18<span>th</span>, 2009</time>
+<time datetime="2009-06-18T00:00:00+02:00" pubdate data-updated="true">Jun 18<span>th</span>, 2009</time>
         
       </p>
     
@@ -644,7 +644,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   
 
 
-<time datetime="2009-06-15T00:00:00+05:30" pubdate data-updated="true">Jun 15<span>th</span>, 2009</time>
+<time datetime="2009-06-15T00:00:00+02:00" pubdate data-updated="true">Jun 15<span>th</span>, 2009</time>
         
       </p>
     
@@ -684,7 +684,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   
 
 
-<time datetime="2009-06-09T00:00:00+05:30" pubdate data-updated="true">Jun 9<span>th</span>, 2009</time>
+<time datetime="2009-06-09T00:00:00+02:00" pubdate data-updated="true">Jun 9<span>th</span>, 2009</time>
         
       </p>
     
@@ -723,7 +723,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   
 
 
-<time datetime="2009-06-07T00:00:00+05:30" pubdate data-updated="true">Jun 7<span>th</span>, 2009</time>
+<time datetime="2009-06-07T00:00:00+02:00" pubdate data-updated="true">Jun 7<span>th</span>, 2009</time>
         
       </p>
     
@@ -834,7 +834,7 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>

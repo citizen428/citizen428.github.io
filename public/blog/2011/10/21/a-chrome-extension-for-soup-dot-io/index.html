@@ -24,7 +24,7 @@
   <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -87,10 +87,10 @@
 <ul class="main-navigation">
   <li><a href="/about/">About</a></li>
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/projects">Projects</a></li>
-  <li><a href="/talks_and_publications">Talks/Publications</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
   <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/imprint/">Imprint</a></li>
 </ul>
 
@@ -118,7 +118,7 @@
   
 
 
-<time datetime="2011-10-21T08:53:00+05:30" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
+<time datetime="2011-10-21T08:53:00+02:00" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
         
       </p>
     
@@ -135,7 +135,7 @@
 <p>The heart of every Chrome extension is a file called <code>manifest.json</code>, which in the case of the Soup.io extension looks like this:</p>
 
 <figure class='code'><figcaption><span>manifest.json </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -187,7 +187,7 @@
 <p>The core of my background page is a simple JavaScript function, which calls the bookmarklet provided by Soup.io (which I <a href="http://meyerweb.com/eric/tools/dencoder/">URL decoded</a> and formatted nicely):</p>
 
 <figure class='code'><figcaption><span>background.html (1/2) </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">chrome</span><span class="p">.</span><span class="nx">browserAction</span><span class="p">.</span><span class="nx">onClicked</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">tab</span><span class="p">)</span> <span class="p">{</span>
@@ -199,7 +199,7 @@
 <p>Easy so far, and I got to a first working version in about half an hour. I then wanted to add some keyboard shortcuts, which was slightly more involved, since Chrome doesn&rsquo;t provide an API for that. Instead you use JavaScript listeners and <a href="http://code.google.com/chrome/extensions/messaging.html">message passing</a> to implement this. If you look back at the manifest, you&rsquo;ll see a section called <code>content_script</code>, which specifies a file that runs in the context of the web page you are looking at. Here I set up a listener for <code>keyup</code> events.</p>
 
 <figure class='code'><figcaption><span>keyboard.js </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -219,7 +219,7 @@
 <p>When the user presses the right combination (Alt-Shift-S in this case), a request named <code>openPopUp</code> gets sent, which we deal with in another listener in <code>background.html</code>:</p>
 
 <figure class='code'><figcaption><span>background.html (2/2) </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -261,7 +261,7 @@
   
 
 
-<time datetime="2011-10-21T08:53:00+05:30" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
+<time datetime="2011-10-21T08:53:00+02:00" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
       
 
 <span class="categories">
@@ -407,7 +407,7 @@
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>

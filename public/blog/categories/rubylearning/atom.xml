@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rubylearning | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/rubylearning/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-12-10T21:45:38+05:30</updated>
+  <updated>2013-12-24T19:12:30+01:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[What's new pussycat?]]></title>
     <link href="http://citizen428.net/blog/2009/10/06/whats-new-pussycat/"/>
-    <updated>2009-10-06T00:00:00+05:30</updated>
+    <updated>2009-10-06T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2009/10/06/whats-new-pussycat</id>
     <content type="html"><![CDATA[<p>Quite a bit actually:<ul>
 <li>I live in Vienna again. Seriously.</li>
@@ -31,7 +31,7 @@
   <entry>
     <title type="html"><![CDATA[Review: The Well-Grounded Rubyist (Manning Publications)]]></title>
     <link href="http://citizen428.net/blog/2009/06/09/review-the-well-grounded-rubyist-manning-publications/"/>
-    <updated>2009-06-09T00:00:00+05:30</updated>
+    <updated>2009-06-09T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2009/06/09/review-the-well-grounded-rubyist-manning-publications</id>
     <content type="html"><![CDATA[<p>As part of &ldquo;Rubylearning&rsquo;s&rdquo;:<a href="http://www.rubylearning.org/class/">http://www.rubylearning.org/class/</a> &ldquo;current book promotion&rdquo;:<a href="http://rubylearning.com/blog/2009/05/29/book-promotion-the-well-grounded-rubyist/">http://rubylearning.com/blog/2009/05/29/book-promotion-the-well-grounded-rubyist/</a> I&rsquo;m reading &ldquo;The Well-Grounded Rubyist&rdquo;:<a href="http://www.manning.com/black2/">http://www.manning.com/black2/</a> by David A. Black. Here are my thoughts on the book:</p>
 
@@ -48,7 +48,7 @@
   <entry>
     <title type="html"><![CDATA[Review: Ruby in Practice (Manning Publications)]]></title>
     <link href="http://citizen428.net/blog/2009/05/18/review-ruby-in-practice-manning-publications/"/>
-    <updated>2009-05-18T00:00:00+05:30</updated>
+    <updated>2009-05-18T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2009/05/18/review-ruby-in-practice-manning-publications</id>
     <content type="html"><![CDATA[<p>I read &ldquo;Ruby in Practice&rdquo;:<a href="http://www.manning.com/mcanally/">http://www.manning.com/mcanally/</a> for the &ldquo;upcoming book promotion&rdquo;:<a href="http://rubylearning.com/blog/2009/05/12/book-promotion-ruby-in-practice/">http://rubylearning.com/blog/2009/05/12/book-promotion-ruby-in-practice/</a> on &ldquo;RubyLearning&rdquo;:<a href="http://www.rubylearning.org,">http://www.rubylearning.org,</a> and I have to say it&rsquo;s a pretty neat book which will be well worth your time and money. Over the course of 360 pages Jeremy McAnally and Assaf Arkin tackle lots of different topics of interest to developers. The book is structured in 3 main parts:</p>
 
@@ -68,7 +68,7 @@
   <entry>
     <title type="html"><![CDATA[A TextMate command for the RubyLearning forums]]></title>
     <link href="http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/"/>
-    <updated>2009-05-10T00:00:00+05:30</updated>
+    <updated>2009-05-10T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums</id>
     <content type="html"><![CDATA[<p>As we all know posting code to &ldquo;Moodle&rdquo;:<a href="http://moodle.org/">http://moodle.org/</a> (the software that powers &ldquo;RubyLearning&rdquo;:<a href="http://rubylearning.org">http://rubylearning.org</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
 
@@ -93,7 +93,7 @@
   <entry>
     <title type="html"><![CDATA[My way: Ruby, Sinatra, Heroku]]></title>
     <link href="http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku/"/>
-    <updated>2009-03-25T00:00:00+05:30</updated>
+    <updated>2009-03-25T00:00:00+01:00</updated>
     <id>http://citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku</id>
     <content type="html"><![CDATA[<p>&ldquo;RubyLearning&rdquo;:<a href="http://rubylearning.org">http://rubylearning.org</a> just had a nice one week introductory course on &ldquo;Sinatra&rdquo;:<a href="http://www.sinatrarb.com/,">http://www.sinatrarb.com/,</a> a &ldquo;DSL&rdquo;:<a href="http://en.wikipedia.org/wiki/Domain-specific_programming_language">http://en.wikipedia.org/wiki/Domain-specific_programming_language</a> for easily creating web applications. The next batch will start on May 2nd (and I&rsquo;ll probably be around as a mentor again), you can &ldquo;join here&rdquo;:<a href="http://rubylearning.org/class/course/enrol.php?id=32">http://rubylearning.org/class/course/enrol.php?id=32</a> if you are interested.</p>
 

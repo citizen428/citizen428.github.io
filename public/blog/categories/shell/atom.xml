@@ -4,7 +4,7 @@
   <title><![CDATA[Category: shell | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/shell/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-12-10T21:45:38+05:30</updated>
+  <updated>2013-12-24T19:12:30+01:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-05-22]]></title>
     <link href="http://citizen428.net/blog/2011/05/22/information-overload-2011-05-22/"/>
-    <updated>2011-05-22T00:00:00+05:30</updated>
+    <updated>2011-05-22T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2011/05/22/information-overload-2011-05-22</id>
     <content type="html"><![CDATA[<ul>
 <li>"Understanding the Fourier transform by Stuart Riffle":http://altdevblogaday.org/2011/05/17/understanding-the-fourier-transform/<br>You know I'm a big fan of good (math) explanations and this is no exception. I really like the color coded formula!</li>
@@ -37,7 +37,7 @@
   <entry>
     <title type="html"><![CDATA[ XML diffs with bash and awk]]></title>
     <link href="http://citizen428.net/blog/2010/10/01/xml-diffs-with-bash-and-awk/"/>
-    <updated>2010-10-01T00:00:00+05:30</updated>
+    <updated>2010-10-01T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2010/10/01/xml-diffs-with-bash-and-awk</id>
     <content type="html"><![CDATA[<p><i>Slightly modified version of a &ldquo;post&rdquo;:<a href="http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/">http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/</a> I originally wrote for our &ldquo;company blog&rdquo;:<a href="http://tupalo.com/en/blog/.">http://tupalo.com/en/blog/.</a></i></p>
 
@@ -49,7 +49,7 @@
 
 <p>Let&rsquo;s look at an interesting snippet from the script:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -98,7 +98,7 @@
 
 <p>Now that we are able to create a daily list of MD5 sums, it&rsquo;s easy to generate the diff feed:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -133,7 +133,7 @@
   <entry>
     <title type="html"><![CDATA[Most used shell commands]]></title>
     <link href="http://citizen428.net/blog/2009/05/25/most-used-shell-commands/"/>
-    <updated>2009-05-25T00:00:00+05:30</updated>
+    <updated>2009-05-25T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2009/05/25/most-used-shell-commands</id>
     <content type="html"><![CDATA[<p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
 
@@ -146,7 +146,7 @@
 
 
 <p>Here&rsquo;s the output on my MacBook:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>

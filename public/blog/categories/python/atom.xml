@@ -4,7 +4,7 @@
   <title><![CDATA[Category: python | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-12-10T21:45:38+05:30</updated>
+  <updated>2013-12-24T19:12:30+01:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Simple AWS scripting with boto]]></title>
     <link href="http://citizen428.net/blog/2009/12/28/simple-aws-scripting-with-boto/"/>
-    <updated>2009-12-28T00:00:00+05:30</updated>
+    <updated>2009-12-28T00:00:00+01:00</updated>
     <id>http://citizen428.net/blog/2009/12/28/simple-aws-scripting-with-boto</id>
     <content type="html"><![CDATA[<p><a href="http://code.google.com/p/boto/">boto</a> is a very nice Python interface to the Amazon Web Services which I can heartily recommend for your cloud scripting needs. Here&rsquo;s a quick example program I whipped up around 2 weeks ago (be gentle, I&rsquo;m not a Python guy and this is just a throwaway quickie), which will list all your AMIs (excluding public ones), used S3 buckets plus a list of currently running instances with some information like instance type, start time etc. The nice part is that you can connect to any instance via SSH directly from this lsit which I find more convenient than copy/pasting the public DNS name from the AWS console:</p>
 

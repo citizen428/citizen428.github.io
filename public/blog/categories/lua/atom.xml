@@ -4,7 +4,7 @@
   <title><![CDATA[Category: lua | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/lua/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-12-10T21:45:38+05:30</updated>
+  <updated>2013-12-24T19:12:30+01:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,11 +16,11 @@
   <entry>
     <title type="html"><![CDATA[Writing nmap scripts with Lua]]></title>
     <link href="http://citizen428.net/blog/2011/12/23/writing-nmap-scripts-with-lua/"/>
-    <updated>2011-12-23T13:54:00+05:30</updated>
+    <updated>2011-12-23T13:54:00+01:00</updated>
     <id>http://citizen428.net/blog/2011/12/23/writing-nmap-scripts-with-lua</id>
     <content type="html"><![CDATA[<p>About 2 weeks ago I finally started looking into <a href="http://www.lua.org/">Lua</a>, a language that&rsquo;s been on my radar for a while but that I never really got around to play with so far. Then I realized that the <a href="http://nmap.org/book/nse.html">Nmap Scripting Engine</a> uses Lua scripts, so I had an excuse to hack on this stuff for work. Here&rsquo;s my first small <code>nmap</code> script, which will extract the contents of the generator meta tag if there is one. It&rsquo;s nothing funky, but it shows how easy it is to write custom scripts for <code>nmap</code> thanks to the provided libraries like <code>http</code> and <code>shortport</code>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -102,7 +102,7 @@
 
 <p><strong>Update:</strong> Here&rsquo;s the version that&rsquo;s now part of <code>nmap</code>, it even made it to the default category.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>

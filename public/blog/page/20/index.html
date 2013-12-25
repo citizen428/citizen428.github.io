@@ -24,7 +24,7 @@
   <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -87,10 +87,10 @@
 <ul class="main-navigation">
   <li><a href="/about/">About</a></li>
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/projects">Projects</a></li>
-  <li><a href="/talks_and_publications">Talks/Publications</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
   <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/imprint/">Imprint</a></li>
 </ul>
 
@@ -121,7 +121,7 @@
   
 
 
-<time datetime="2010-08-10T00:00:00+05:30" pubdate data-updated="true">Aug 10<span>th</span>, 2010</time>
+<time datetime="2010-08-10T00:00:00+02:00" pubdate data-updated="true">Aug 10<span>th</span>, 2010</time>
         
       </p>
     
@@ -175,7 +175,7 @@
   
 
 
-<time datetime="2010-07-06T00:00:00+05:30" pubdate data-updated="true">Jul 6<span>th</span>, 2010</time>
+<time datetime="2010-07-06T00:00:00+02:00" pubdate data-updated="true">Jul 6<span>th</span>, 2010</time>
         
       </p>
     
@@ -211,7 +211,7 @@
   
 
 
-<time datetime="2010-06-26T00:00:00+05:30" pubdate data-updated="true">Jun 26<span>th</span>, 2010</time>
+<time datetime="2010-06-26T00:00:00+02:00" pubdate data-updated="true">Jun 26<span>th</span>, 2010</time>
         
       </p>
     
@@ -248,7 +248,7 @@
   
 
 
-<time datetime="2010-06-09T00:00:00+05:30" pubdate data-updated="true">Jun 9<span>th</span>, 2010</time>
+<time datetime="2010-06-09T00:00:00+02:00" pubdate data-updated="true">Jun 9<span>th</span>, 2010</time>
         
       </p>
     
@@ -295,7 +295,7 @@ I know that there are several gems for interacting with GitHub, but thanks to th
   
 
 
-<time datetime="2010-06-08T00:00:00+05:30" pubdate data-updated="true">Jun 8<span>th</span>, 2010</time>
+<time datetime="2010-06-08T00:00:00+02:00" pubdate data-updated="true">Jun 8<span>th</span>, 2010</time>
         
       </p>
     
@@ -343,7 +343,7 @@ I know that there are several gems for interacting with GitHub, but thanks to th
   
 
 
-<time datetime="2010-05-12T00:00:00+05:30" pubdate data-updated="true">May 12<span>th</span>, 2010</time>
+<time datetime="2010-05-12T00:00:00+02:00" pubdate data-updated="true">May 12<span>th</span>, 2010</time>
         
       </p>
     
@@ -351,13 +351,13 @@ I know that there are several gems for interacting with GitHub, but thanks to th
 
 
   <div class="entry-content"><p>I love all the little discussions on RubyLearning, especially when they lead to me writing stupid code the world doesn&#8217;t need. ;-) Today: a poor man&#8217;s <a href="http://en.wikipedia.org/wiki/Read-eval-print_loop"><span class="caps">REPL</span></a> in 2 lines of Ruby 1.9:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">repl</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="n">prompt</span> <span class="p">{</span> <span class="nb">print</span> <span class="n">prompt</span><span class="p">;</span> <span class="nb">puts</span><span class="p">(</span><span class="s2">&quot; =&gt; %s&quot;</span> <span class="o">%</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">gets</span><span class="o">.</span><span class="n">chomp!</span><span class="p">))</span> <span class="p">}</span>
 </span><span class='line'><span class="kp">loop</span> <span class="p">{</span> <span class="n">repl</span><span class="o">[</span><span class="s2">&quot;&gt;&gt; &quot;</span><span class="o">]</span> <span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></div></notextile><br />
 Behold the wonder:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -401,7 +401,7 @@ Behold the wonder:<br />
   
 
 
-<time datetime="2010-04-29T00:00:00+05:30" pubdate data-updated="true">Apr 29<span>th</span>, 2010</time>
+<time datetime="2010-04-29T00:00:00+02:00" pubdate data-updated="true">Apr 29<span>th</span>, 2010</time>
         
       </p>
     
@@ -409,7 +409,7 @@ Behold the wonder:<br />
 
 
   <div class="entry-content"><p>When we &#8220;swap variables in Ruby&#8221;, what really happens is something called &#8220;a destructuring binding&#8221; in other languages:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -439,7 +439,7 @@ Behold the wonder:<br />
 </span><span class='line'><span class="o">=&gt;</span> <span class="mi">21</span>
 </span></code></pre></td></tr></table></div></figure></div></notextile><br />
 This is only the beginning though:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -542,7 +542,7 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
   
 
 
-<time datetime="2010-04-24T00:00:00+05:30" pubdate data-updated="true">Apr 24<span>th</span>, 2010</time>
+<time datetime="2010-04-24T00:00:00+02:00" pubdate data-updated="true">Apr 24<span>th</span>, 2010</time>
         
       </p>
     
@@ -550,7 +550,7 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
 
 
   <div class="entry-content"><p>I generally observed that people tend to bring up the <span class="caps">POLS</span> when <i>they</i> find one specific aspect counter-intuitive. For example you sometimes will hear people complain about how the &#8220;modulo operator&#8221; (String#% really) is used for formatting strings in Ruby which in their opinion violates the <span class="caps">POLS</span>:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="s2">&quot;%05d&quot;</span> <span class="o">%</span> <span class="mi">123</span>
 </span><span class='line'><span class="o">=&gt;</span> <span class="s2">&quot;00123&quot;</span>
@@ -585,7 +585,7 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
   
 
 
-<time datetime="2010-04-23T00:00:00+05:30" pubdate data-updated="true">Apr 23<span>rd</span>, 2010</time>
+<time datetime="2010-04-23T00:00:00+02:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2010</time>
         
       </p>
     
@@ -624,7 +624,7 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
   
 
 
-<time datetime="2010-04-15T00:00:00+05:30" pubdate data-updated="true">Apr 15<span>th</span>, 2010</time>
+<time datetime="2010-04-15T00:00:00+02:00" pubdate data-updated="true">Apr 15<span>th</span>, 2010</time>
         
       </p>
     
@@ -740,7 +740,7 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>

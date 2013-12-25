@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-12-10T21:45:38+05:30</updated>
+  <updated>2013-12-24T19:12:30+01:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Extending Nmap with Lua]]></title>
     <link href="http://citizen428.net/blog/2013/08/31/extending-nmap-with-lua/"/>
-    <updated>2013-08-31T17:49:00+05:30</updated>
+    <updated>2013-08-31T17:49:00+02:00</updated>
     <id>http://citizen428.net/blog/2013/08/31/extending-nmap-with-lua</id>
     <content type="html"><![CDATA[<p><em>I originally wrote this piece for a pentesting magazine, but after some unprofessional behavior by their editor I lost my cool and decided not too publish it there. It&rsquo;d be a shame to let it go to waste though, so I after almost three month I finally decided to put it up on my blog.</em></p>
 
@@ -56,7 +56,7 @@ easy to understand a given snippet of Lua code even with little or no previous e
 
 <p>There&rsquo;s is however one more feature of Lua that&rsquo;s worth discussing in a bit more detail, namely its reliance on a single compound data structure, the table. Tables are in essence what other languages commonly refer to as associative arrays or dictionaries, or key-value pairs. This is how you create a simple table:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">table</span> <span class="o">=</span> <span class="p">{</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">foo</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -64,7 +64,7 @@ easy to understand a given snippet of Lua code even with little or no previous e
 
 <p>One special feature of Lua&rsquo;s tables is that they are also optimized for use as arrays, which can be created like this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">array</span> <span class="o">=</span> <span class="p">{</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">citizen</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="mi">428</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">blog</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -76,13 +76,13 @@ easy to understand a given snippet of Lua code even with little or no previous e
 
 <p>Enough theory, let’s look at some example Lua code. First the customary “Hello world” program:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="nb">print</span> <span class="err">“</span><span class="n">Hello</span> <span class="n">world</span><span class="err">”</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>This will just output <em>Hello world</em>. Now for a function definition:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">function</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
@@ -92,7 +92,7 @@ easy to understand a given snippet of Lua code even with little or no previous e
 
 <p>To generate the same output as above, we would have to call the function with the appropriate argument: <em>sayHello(“world”)</em>. Alternatively, the same function could be defined like this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">sayHello</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
@@ -102,7 +102,7 @@ easy to understand a given snippet of Lua code even with little or no previous e
 
 <p>Last but not least a small loop that iterates over an array and prints out each element (<em>ipairs</em> returns the index-value pairs of an array):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">str</span> <span class="k">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="k">do</span>
@@ -123,7 +123,7 @@ easy to understand a given snippet of Lua code even with little or no previous e
 
 <h3>Library imports</h3>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -138,7 +138,7 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <h3>Metadata</h3>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -191,7 +191,7 @@ The script we are looking at uses the <em>http</em> library for communication, <
 </span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span> <span class="n">Specify</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">redirects</span> <span class="n">to</span> <span class="n">follow</span> <span class="p">(</span><span class="n">defaults</span> <span class="n">to</span> <span class="mi">3</span><span class="p">).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">Changelog</span><span class="p">:</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">23</span> <span class="n">Michael</span> <span class="n">Kohl</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#116;&amp;#x6f;&amp;#58;&amp;#99;&amp;#x69;&amp;#116;&amp;#x69;&amp;#122;&amp;#101;&amp;#x6e;&amp;#52;&amp;#x32;&amp;#x38;&amp;#64;&amp;#x67;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#x6d;&quot;</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x63</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">116</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">122</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">101</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">110</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">52</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">50</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">56</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x40</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">103</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6d</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x61</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6c</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x2e</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">111</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">109</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">:</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">23</span> <span class="n">Michael</span> <span class="n">Kohl</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#x63;&amp;#105;&amp;#x74;&amp;#105;&amp;#122;&amp;#101;&amp;#110;&amp;#52;&amp;#50;&amp;#x38;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&quot;</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">116</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">122</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">101</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">110</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x34</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">50</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">56</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x40</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x67</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">109</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">97</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">108</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x2e</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">111</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6d</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">:</span>
 </span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span>   <span class="o">+</span> <span class="n">Initial</span> <span class="n">version</span>
 </span><span class='line'><span class="err">&amp;</span><span class="n">hellip</span><span class="p">;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
@@ -204,13 +204,13 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <p>Now that we know a bit more about categories, let&rsquo;s see how we can use that knowledge for more interesting Nmap runs. Let’s start by running all the default scripts:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap -sC example.com
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>or</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap &amp;mdash;script<span class="o">=</span>default example.com
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -222,13 +222,13 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <p>As an example for a rather complex invocation, the following command will run all scripts from the three specified categories, except for the ones whose name starts with &ldquo;http-&rdquo;.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap &amp;mdash;script &amp;ldquo;<span class="o">(</span>default or safe or intrusive<span class="o">)</span> and not http-*&amp;rdquo; example.com
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Last but not least it’s also possible to run user scripts which are not part of the standard Nmap distribution, as show in the following example:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap &amp;mdash;script default,banner,/home/user/customscripts example.com
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -240,7 +240,7 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <p>The rule definition in our example script is very simple since it uses the very handy <em>shortport</em> library, which has several predefined rules for common scenarios:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">rule</span> <span class="o">=</span> <span class="n">shortport</span><span class="p">.</span><span class="n">http</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -248,7 +248,7 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <h3>Action</h3>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -294,7 +294,7 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <p>The function starts with checking for the presence of two arguments and specifies defaults in case the user didn’t provide any values for them. Arguments can be passed to the script in the following way:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">nmap</span> <span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">script</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span> <span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">script</span><span class="o">-</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span><span class="o">=/</span><span class="n">cms</span><span class="p">,</span><span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span><span class="o">=</span><span class="mi">2</span> <span class="n">example</span><span class="p">.</span><span class="n">com</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -314,7 +314,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
 
 <p>As you may have noticed I didn’t yet show you the helper function mentioned above, so while it’s not very interesting in itself, I’ll include it for completeness’ sake:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -359,7 +359,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-09]]></title>
     <link href="http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09/"/>
-    <updated>2012-09-09T00:00:00+05:30</updated>
+    <updated>2012-09-09T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09</id>
     <content type="html"><![CDATA[<p>I was rather busy this week, so this Information Overload is super short.</p>
 
@@ -375,11 +375,11 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   <entry>
     <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
     <link href="http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
-    <updated>2012-07-30T23:24:00+05:30</updated>
+    <updated>2012-07-30T23:24:00+02:00</updated>
     <id>http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
     <content type="html"><![CDATA[<p>Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today&rsquo;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&rsquo;s an example:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="err">λ</span><span class="o">&gt;</span> <span class="n">map</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">]</span>
 </span><span class='line'><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -389,19 +389,19 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
 
 <p>Here&rsquo;s how we would have to write the same code in Ruby:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>This could also be written in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree</a> way, but alas that would make the code rather hard to understand for less experienced Rubyists:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="ss">:+</span><span class="p">))</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>But because Ruby is as flexible as it is, adding partial application is actually really trivial:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -425,7 +425,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
 
 <p>And now we can do this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">+</span><span class="p">)</span> <span class="c1">#=&gt; [3, 4, 5]</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -436,7 +436,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
     <link href="http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
-    <updated>2012-07-28T10:15:00+05:30</updated>
+    <updated>2012-07-28T10:15:00+02:00</updated>
     <id>http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
     <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
 
@@ -453,7 +453,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   <entry>
     <title type="html"><![CDATA[Shenanigans]]></title>
     <link href="http://citizen428.net/blog/2012/07/03/shenanigans/"/>
-    <updated>2012-07-03T19:46:00+05:30</updated>
+    <updated>2012-07-03T19:46:00+02:00</updated>
     <id>http://citizen428.net/blog/2012/07/03/shenanigans</id>
     <content type="html"><![CDATA[<p>About 1.5 month ago I finally packaged some of my Ruby extension methods into the aptly named <a href="https://rubygems.org/gems/shenanigans">Shenanigans</a> gem. It&rsquo;s similar to <a href="http://rubyworks.github.com/facets/">Facets</a> or <a href="http://as.rubyonrails.org/">ActiveSupport</a>, but probably less useful to most people. Also some of the methods actually are in Facets, although sometimes with different names or slightly different semantics. Anyway, since some people told me they actually do like the gem, here&rsquo;s a quick summary of what the different methods do and how they can be useful.</p>
 

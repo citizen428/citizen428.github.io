@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/erlang/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-12-10T21:45:38+05:30</updated>
+  <updated>2013-12-24T19:12:30+01:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,11 +16,11 @@
   <entry>
     <title type="html"><![CDATA[Erlang bit syntax and ID3]]></title>
     <link href="http://citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3/"/>
-    <updated>2010-09-04T00:00:00+05:30</updated>
+    <updated>2010-09-04T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3</id>
     <content type="html"><![CDATA[<p>A couple of days ago I finally started properly looking at &ldquo;Erlang&rdquo;:<a href="http://www.erlang.org/">http://www.erlang.org/</a> for the first time. One aspect I find especially interesting is the &ldquo;bit syntax&rdquo;:<a href="http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html,">http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html,</a> so I wrote a small program for parsing &ldquo;ID3v1 tags&rdquo;:<a href="http://www.id3.org/ID3v1">http://www.id3.org/ID3v1</a> for practice. There&rsquo;s definitely room for improvement (I ignored ID3v1.1), but it  was a fun little exercise. Here&rsquo;s the code:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -96,7 +96,7 @@
 
 <p>Lets see this in action in the Erlang shell (the MP3 comes from a similar exercise in &ldquo;RubyLearning&rsquo;s core Ruby course&rdquo;:<a href="http://rubylearning.org/class/course/category.php?id=2">http://rubylearning.org/class/course/category.php?id=2</a>):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -136,7 +136,7 @@
 
 <p>I&rsquo;m too new to Erlang to judge if this is a proper use of a &ldquo;property list&rdquo;:<a href="http://www.erlang.org/doc/man/proplists.html,">http://www.erlang.org/doc/man/proplists.html,</a> but it allowed me to write <em>get_tags/2</em> as a wrapper for <em>proplists:get_value/2</em> which is rather nice:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-12-10T21:45:38+05:30</updated>
+  <updated>2013-12-24T19:12:30+01:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Using Java libraries from Clojure]]></title>
     <link href="http://citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure/"/>
-    <updated>2009-09-06T00:00:00+05:30</updated>
+    <updated>2009-09-06T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure</id>
     <content type="html"><![CDATA[<br />
 
@@ -212,7 +212,7 @@
   <entry>
     <title type="html"><![CDATA[Using Java libraries from Clojure]]></title>
     <link href="http://citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure/"/>
-    <updated>2009-09-06T00:00:00+05:30</updated>
+    <updated>2009-09-06T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure</id>
     <content type="html"><![CDATA[<p>After reading <a href="http://www.engineyard.com/blog/2009/scripting-java-libraries-with-jruby/">Scripting Java Libraries With Ruby</a> on the <a href="http://www.engineyard.com/">Engine Yard blog</a>, I decided to translate the two example programs to Clojure. Please keep in mind though that I&rsquo;m pretty much a Clojure newbie myself, so the code shown here might not be very idiomatic. In case you have any suggestions on how to improve the code examples presented here, please leave a comment, thank you! To get the most out of this post, you should probably read the <a href="http://java.ociweb.com/mark/clojure/article.html#JavaInterop">section on Java Interoperability</a> in <a href="http://java.ociweb.com/mark/">Mark Volkmann</a>&rsquo;s excellent <a href="http://java.ociweb.com/mark/clojure/article.html">Clojure tutorial</a> first.</p>
 
@@ -220,7 +220,7 @@
 
 
 <p>The first example listens for a line of text which then gets converted into a playable MIDI sequence. Let&rsquo;s start with importing the classes we need.
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">ns</span> <span class="nv">midi/keyboard</span>
@@ -228,7 +228,7 @@
 </span><span class='line'>  <span class="p">(</span><span class="nf">:use</span> <span class="p">[</span><span class="nv">clojure</span><span class="o">.</span><span class="nv">contrib</span><span class="o">.</span><span class="nv">seq-utils</span> <span class="nv">:only</span> <span class="p">(</span><span class="nf">indexed</span><span class="p">)]))</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 Next we set up a <a href="http://clojure.org/special_forms#toc9">loop</a> and an exit clause.  In case the user enters the word &ldquo;exit&rdquo;, we call System.exit to shut down all the threads that got started by Java&rsquo;s MIDI support.
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -238,7 +238,7 @@ Next we set up a <a href="http://clojure.org/special_forms#toc9">loop</a> and an
 </span><span class='line'>  <span class="p">(</span><span class="nf">recur</span> <span class="p">(</span><span class="nf">read-line</span><span class="p">)))</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 The main part of the application constructs a new MIDI sequence by creating a NOTE_ON event for every character in the entered text and then finishing the sequence with a STOP event. The original article states that it favors simplicity over efficiency, so the same also holds true for my &ldquo;translation&rdquo;.
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -272,7 +272,7 @@ The main part of the application constructs a new MIDI sequence by creating a NO
 </span><span class='line'><span class="nv">&lt;p&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 To finish off our first program we play the sequence before prompting for more input (see the loop snippet above).
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -295,7 +295,7 @@ To finish off our first program we play the sequence before prompting for more i
 
 
 <p>While the first example was fun, it wasn&rsquo;t as interactive as it could be. Therefore the second program launches a GUI window to receive keystroke events, turning a note on or off when a key is pressed or released. Since we don&rsquo;t have to create MIDI sequences this time, our import statement becomes a lot shorter:
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -311,7 +311,7 @@ To finish off our first program we play the sequence before prompting for more i
 </span><span class='line'><span class="nv">&lt;p&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 This example directly accesses the system synthesizer. The following lines open the default synthesizer&rsquo;s channel 0 (and also create a JFrame object which we&rsquo;ll use later):
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -327,7 +327,7 @@ This example directly accesses the system synthesizer. The following lines open 
 </span><span class='line'>  <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">channel</span> <span class="p">(</span><span class="nb">aget </span><span class="p">(</span><span class="o">.</span><span class="nv">getChannels</span> <span class="nv">synth</span><span class="p">)</span> <span class="mi">0</span><span class="p">)]</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 We then launch a GUI frame as a simple and cross-platform way to receive keystroke events. The KeyListener interface is implemented using Clojure&rsquo;s <a href="http://clojure.org/java_interop#toc26">proxy macro</a>, using keyPressed and keyReleased events to turn notes on or off.
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -357,7 +357,7 @@ We then launch a GUI frame as a simple and cross-platform way to receive keystro
 </span><span class='line'><span class="nv">&lt;p&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 Last but not least we display our frame to let the fun begin.
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>

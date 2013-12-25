@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gnome | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/gnome/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2013-12-10T21:45:38+05:30</updated>
+  <updated>2013-12-24T19:12:30+01:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[linuxConverts++]]></title>
     <link href="http://citizen428.net/blog/2005/11/23/linuxconverts/"/>
-    <updated>2005-11-23T00:00:00+06:00</updated>
+    <updated>2005-11-23T00:00:00+01:00</updated>
     <id>http://citizen428.net/blog/2005/11/23/linuxconverts</id>
     <content type="html"><![CDATA[<p>While my girlfriend was visiting her sister in Rotterdam, I finally set up her notebook to dual boot Windows XP and Ubuntu Linux. Before you think bad of me: I didn&rsquo;t sneakily do this without her knowing, but instead because she once mentioned that she&rsquo;d like to try out another OS.</p>
 
@@ -31,7 +31,7 @@
   <entry>
     <title type="html"><![CDATA[So what's the word? RUBY!]]></title>
     <link href="http://citizen428.net/blog/2005/11/18/so-whats-the-word-ruby/"/>
-    <updated>2005-11-18T00:00:00+06:00</updated>
+    <updated>2005-11-18T00:00:00+01:00</updated>
     <id>http://citizen428.net/blog/2005/11/18/so-whats-the-word-ruby</id>
     <content type="html"><![CDATA[<p>This week I finally had a little more time to work on Gentoo related things again, so I commited some overdue packages to the tree.</p>
 
@@ -48,7 +48,7 @@
   <entry>
     <title type="html"><![CDATA[Lazy sunday afternoon]]></title>
     <link href="http://citizen428.net/blog/2005/09/11/lazy-sunday-afternoon/"/>
-    <updated>2005-09-11T00:00:00+06:00</updated>
+    <updated>2005-09-11T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2005/09/11/lazy-sunday-afternoon</id>
     <content type="html"><![CDATA[<p>Today is the perfect example of a nice and lazy afternoon, and I just love it! After having a great brunch at &ldquo;HighTea&rdquo;:<a href="http://hightea.at/">http://hightea.at/</a> where we had toasties, antipasti, bagles and lots of other really good stuff, I&rsquo;m just hanging around in front of my PC reading, doing some Gentoo work and generally having a good time. Live can be so easy&hellip; :)</p>
 
@@ -102,7 +102,7 @@
   <entry>
     <title type="html"><![CDATA[A first look at GNOME 2.12_rc1]]></title>
     <link href="http://citizen428.net/blog/2005/09/06/a-first-look-at-gnome-2-12_rc1/"/>
-    <updated>2005-09-06T00:00:00+06:00</updated>
+    <updated>2005-09-06T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2005/09/06/a-first-look-at-gnome-2-12_rc1</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve &ldquo;already blogged&rdquo;:<a href="http://citizen428.net/archives/198-GNOME-goodness.html">http://citizen428.net/archives/198-GNOME-goodness.html</a> about this &ldquo;preview of GNOME 2.12&rdquo;:<a href="http://www.gnome.org/~davyd/gnome-2-12/">http://www.gnome.org/~davyd/gnome-2-12/</a> a while ago and talked about how eager I am to try out this new release. So when Gentoo developer John N. Laliberte &ldquo;asked&rdquo;:<a href="http://www.mail-archive.com/gentoo-dev@lists.gentoo.org/msg04235.html">http://www.mail-archive.com/gentoo-dev@lists.gentoo.org/msg04235.html</a> for some people willing to test the ebuilds for GNOME-2.12_rc1, I immediately went ahead and installed them.</p>
 
@@ -124,7 +124,7 @@
   <entry>
     <title type="html"><![CDATA[Mono: A Developer's Notebook]]></title>
     <link href="http://citizen428.net/blog/2005/08/24/mono-a-developers-notebook/"/>
-    <updated>2005-08-24T00:00:00+06:00</updated>
+    <updated>2005-08-24T00:00:00+02:00</updated>
     <id>http://citizen428.net/blog/2005/08/24/mono-a-developers-notebook</id>
     <content type="html"><![CDATA[<p>Yeah, today my copy of &ldquo;Mono: A Developer&rsquo;s Notebook&rdquo;:<a href="http://www.amazon.com/exec/obidos/tg/detail/-/0596007922/qid=1124917941/sr=8-1/ref=pd_bbs_1/002-4699908-2098445?v=glance&amp;s=books&amp;n=507846">http://www.amazon.com/exec/obidos/tg/detail/-/0596007922/qid=1124917941/sr=8-1/ref=pd_bbs_1/002-4699908-2098445?v=glance&amp;s=books&amp;n=507846</a> finally arrived! I ordered this book because I&rsquo;m a fan of &ldquo;Mono&rdquo;:<a href="http://www.mono-project.com/Main_Page">http://www.mono-project.com/Main_Page</a> pretty much since I&rsquo;ve first heard about it, and examples like this &ldquo;tutorial on writing a web browser&rdquo;:<a href="http://primates.ximian.com/~edasque/projects/Tutorial/glade2.html">http://primates.ximian.com/~edasque/projects/Tutorial/glade2.html</a> show that the framework is quite capable. Additionally there are all this cool new GNOME apps like Blam!, Beagle, f-spot, Tomboy etc., that demonstrate the possibilites of Mono.</p>
 
