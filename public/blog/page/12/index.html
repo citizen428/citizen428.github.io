@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Why My Father Hated IndiaA half Indian/half Pakistani sheds some light on the animosity between the two countries.
-How Khan Academy Is Changing the &hellip;">
+  <meta name="description" content="This week Tom &mdash; who is now a happily married man :-) &mdash; and yours truly finally read another paper and since I&#8217;m sick and barely &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -100,6 +99,64 @@ How Khan Academy Is Changing the &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm/">Tom and Michael vs the Good Grief Algorithm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-30T00:00:00+02:00" pubdate data-updated="true">Jul 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This week <a href="http://mrjaba.posterous.com/">Tom</a> &mdash; who is now a happily married man :-) &mdash; and yours truly finally read another paper and since I&#8217;m sick and barely left bed for the last 2 days I decided to fight my boredom by writing about it.</p>
+<p><strong>The paper</strong><br />
+&#8220;Multiple Aspect Ranking using the Good Grief Algorithm&#8221; by Benjamin Snyder and Regina Barzilay from the <span class="caps">MIT</span> CS and AI Lab.</p>
+<ul>
+<li><a href="http://people.csail.mit.edu/regina/my_papers/ggranker.ps">Paper</a></li>
+<li><a href="http://pages.cs.wisc.edu/~bsnyder/presentations/naacl07.pdf">Presentation</a></li>
+<li><a href="http://people.csail.mit.edu/bsnyder/naacl07/">Data and code</a></li>
+</ul>
+<p><strong>Summary</strong><br />
+The paper is in the field of sentiment analysis &mdash; extracting opinions from a text &mdash; and uses restaurant reviews as a corpus. The prime assumption is that such texts will contain more than one opinion (e.g. quality of food, price range, interior, quality of service), which the authors believe is not properly reflected by previous work in this area, where one opinion per text is assumed.</p>
+<p>The problem the authors try to solve is assigning a rank from a fixed scale (e.g. 1-5) to several related aspects. They dismiss the easy approach of treating every aspect as a separate ranking problem, since they believe that a real text relates the different aspects in a coherent way (e.g. through phrases like &#8220;but&#8221;, &#8220;one problem was&#8221; etc.).</p>
+<p>They built on previous work in the natural language processing field, namely linear models trained with <a href="http://en.wikipedia.org/wiki/Perceptron">&#8220;Perceptron&#8221;</a> and extended this framework with a sort of &#8220;meta-model&#8221; that predicts relations (agreement or disagreement) between the individually ranked aspects. By relating the different aspects in such a way, it&#8217;s easier to reflect the contrasting views in real text like &#8220;good <span class="caps">BUT</span> pricey&#8221; in a meaningful way.</p>
+<p>What follows is some math, where each input (a review) gets assigned an m-dimensional ranking vector (reflecting m aspects). For example if you try to rank 3 different aspects (food, service, price) on a scale of 1-5 a ranking vector might look like &lt;5,5,3&gt; (&#8220;food and service were great, but it was a bit pricey&#8221;). The joint ranking model then combines the individual ranks with an &#8220;agreement model&#8221; to introduce &#8220;grief terms&#8221; which express dissatisfaction in a certain aspect. The algorithm than tries to minimize the sum of this &#8220;grief&#8221; &mdash; which is what gave the algorithm its name &mdash; in a joint rank. This step then gets incorporated into the training of the individual rankers (there&#8217;s some pseudo-code for the joint training), where features of an aspect get represented through presence or absence of words and word <a href="http://en.wikipedia.org/wiki/Bigram">bigrams</a>. This is obviously a very simplified description of the algorithm, but it seems moot to repeat the entire math here, which is very well laid out in the presentation. There&#8217;s also a very nice illustration about decoding and relating the various aspects at the end of the <span class="caps">PDF</span>.</p>
+<p>What then follows is a comparison of the Good Grief algorithm with similar algorithms on a corpus of 4500 restaurant reviews ranking restaurants on 5 different aspects, where it outperforms the &#8220;competition&#8221; in a statistically relevant way.</p>
+<p><strong>Takeaway</strong><br />
+As someone who works in an area where sentiment analyses could come in handy I do have an interest in the topic, but alas we don&#8217;t have the time and resources to develop our own system to do this properly. I once hacked something together with JRuby and the OpenNLP library, which wasn&#8217;t really sentiment analysis but an attempt to extract useful phrases from reviews. It was crude and had its faults, but worked surprisingly well for the amount of time it took to write. It did however get abandoned in a prototype stage and after reading the paper it&#8217;s quite clear to me that that probably was a good choice. Sentiment analysis is a non-trivial problem that can&#8217;t properly be tackled in the ad-hoc fashion we tried. Should this topic ever resurface at my company I&#8217;ll definitely try to go for a more elaborate and scientific approach.</p>
+<p><strong>Difficulty of the paper</strong><br />
+I know that for some people the math might look scary, but if you take some time and look at it carefully you&#8217;ll notice that it&#8217;s actually rather simple. It probably doesn&#8217;t hurt to be acquainted with some basic concepts of <span class="caps">NLP</span> and machine learning, but if you have those it&#8217;s quite an enjoyable paper even if you are not an absolute crack in the field.</p>
+<p><strong>Further reading</strong></p>
+<ul>
+	<li><a href="http://en.wikipedia.org/wiki/Natural_language_processing">Natural language processing</a></li>
+	<li><a href="http://en.wikipedia.org/wiki/Sentiment_analysis">Sentiment analysis</a></li>
+	<li><a href="http://incubator.apache.org/opennlp/">OpenNLP</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -768,52 +825,6 @@ A is a globally defined constant which points to an Object.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/19/information-overload-2011-06-19/">Information Overload 2011-06-19</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-19T00:00:00+02:00" pubdate data-updated="true">Jun 19<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://io9.com/5806767/">Take a look at the world&#8217;s oldest mathematical object</a><br>A short article about the Ishango bone, apparently the &quot;<a href="http://mathworld.wolfram.com/IshangoBone.html">oldest known object containing logical carvings</a>&quot;.</li>
-<li><a href="http://www.scienceblogs.de/astrodicticum-simplex/2011/06/nemesis-der-todesstern-und-die-dinosaurier.php">Nemesis: Der Todesstern und die Dinosaurier</a><br>Somehow I&#8217;ve missed the <a href="http://en.wikipedia.org/wiki/Nemesis_(hypothetical_star)">Nemesis theory</a> until now, but it sure is interesting (in German).</li>
-<li><a href="http://www.codequarterly.com/2011/rich-hickey/">Rich Hickey Q&amp;A</a><br>Great interview with Rich Hickey in Code Quarterly. Whenever I hear/read something by Rich, I understand why Clojure is such an awesome language.</li>
-<li><a href="http://www.theregister.co.uk/2011/06/14/ice_age/">Earth may be headed into a mini Ice Age within a decade</a><br>Hm, finally a good excuse to move to warmer places for good? <a href="http://www.newscientist.com/blogs/shortsharpscience/2011/06/new-ice-age-dont-count-on-it.html">Or not</a>?</li>
-<li><a href="http://www.theatlantic.com/infocus/2011/06/diy-weapons-of-the-libyan-rebels/100086/"><span class="caps">DIY</span> Weapons of the Libyan Rebels</a><br>The creativity of humans when it comes to killing each other never ceases to amaze and sadden me.</li>
-<li><a href="http://techcrunch.com/2011/06/17/indian-village-renamed-snapdeal-com-and-its-not-a-cheap-marketing-stunt/">Indian Village Renamed Snapdeal.com. And It&#8217;s Not A Cheap Marketing Stunt!</a><br><span class="caps">IMHO</span> as long as people get helped, it doesn&#8217;t even matter if it&#8217;s a marketing stunt or not. More companies should do something for their local communities.</li>
-<li><a href="http://pastebin.com/HZtH523f">LulzSec &#8211; 1000th tweet statement</a><br>Since LulzSec was all over the news this week, I decided to include their open letter. There also was an <a href="http://pastebin.com/pbhBQLKy">answer</a>.</li>
-<li><a href="http://www.digitaltrends.com/computing/translation-technology-may-let-humans-speak-with-dolphins/">Translation technology may let humans speak with dolphins</a><br>That would be awesome.</li>
-<li><a href="http://www.thecompulsiveliar.com/top-10-media-manipulation-strategies.html">Top 10 media manipulation strategies</a><br>A list compiled by Noam Chomsky.</li>
-<li><a href="http://www.digitaltrends.com/computing/wow-high-school-grad-builds-8-bit-computer-from-scratch-complete-with-custom-os-and-pong/">High school grad builds 8-bit computer from scratch, complete with custom OS and Pong</a><br>Simply amazing, an 18 yo builds a computer from scratch and then implements a custom OS and some games.</li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/13/">&larr; Older</a>
@@ -895,7 +906,7 @@ A is a globally defined constant which points to an Object.</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Michael Kohl -
+  Copyright &copy; 2014 - Michael Kohl -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

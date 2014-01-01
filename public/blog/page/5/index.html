@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="[S]omeone who takes MDPV may find himself feeling extremely paranoid and panicky, but he’s unlikely to believe that a giant lizard wearing a tuxedo &hellip;">
+  <meta name="description" content="At work we are building a Rails app that&rsquo;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +99,56 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/12/rails-display-branch-in-development-mode/">Rails — Display Branch in Development Mode</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T21:33:00+02:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At work we are building a Rails app that&rsquo;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it&rsquo;d be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn&rsquo;t have been any simpler:</p>
+
+<figure class='code'><figcaption><span>app/helpers/application_helper.rb </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">version_div</span>
+</span><span class='line'>  <span class="n">version</span> <span class="o">=</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">development?</span> <span class="p">?</span> <span class="o">::</span><span class="no">Grit</span><span class="o">::</span><span class="no">Repo</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="o">::</span><span class="no">OurApp</span><span class="o">::</span><span class="no">Application</span><span class="o">::</span><span class="no">Version</span>
+</span><span class='line'>  <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:span</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;version&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -635,50 +685,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/18/no-tor/">No Tor, No More Customer</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-18T00:10:00+02:00" pubdate data-updated="true">Apr 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Update:</em> Server4You rebooted the server into a recovery system for me. I removed the Tor packages and the system is back up again, which means at least the <a href="http://tor.blingblingsquad.net/">mirror</a> is back. I&rsquo;d also like to state explicitly that this whole post is based on a single phone conversation with a Server4You support employee, so it&rsquo;s hard to tell if the company per se really considers Tor to be illegal in Germany. Personally I think it&rsquo;s just a bad excuse for shutting down the service on shared hosts, which is just as bad in my book.</p>
-
-<p>I&rsquo;ve been running a <a href="https://www.torproject.org/">Tor</a> relay since sometime in early 2006. There&rsquo;s many good reasons for doing so, but what motivated me personally was my experience of studying in China for one year and having to live with a censored Internet connection myself (theoretically, as there was an <a href="http://embraceubuntu.com/2006/12/08/ssh-tunnel-socks-proxy-forwarding-secure-browsing/">easy way around it</a> if you had a server outside of China to SSH to). Alas our system hasn&rsquo;t been an exit node in a while, but it&rsquo;s still better than nothing.</p>
-
-<p>Today I was contacted by my <a href="http://server4you.de">hosting provider</a>&rsquo;s abuse team, telling me that my server has been shut down because of a ToS violation. I <a href="https://twitter.com/#!/citizen428/status/192189329177718784">immediately was afraid</a> that they might complain about the Tor relay, but still had hope that I might be wrong. Ten hours later, after I got no reply to about five support requests, I decided to call their hotline. The employee first told me that he has no way to see why the abuse team blocked my server, but then said that running a Tor node may have been the reason. What ensued was a five minute conversation full of WTFs, facepalms and headdesks on my part, but the bottom line is that Server4You is of the opinion that it is illegal to run a Tor relay in Germany because of the <a href="http://de.wikipedia.org/wiki/Hackerparagraf">&ldquo;Hackerparagraf&rdquo;</a>. If you don&rsquo;t know what that is, <a href="http://hackingexpose.blogspot.com/2012/04/watch-out-white-hats-european-union_3977.html">read up</a> on recent pushes to enforce similar legislation EU wide.</p>
-
-<p>After a fruitless discussion of said law, the — admittely nice — guy on the phone reassured me that my server will be restarted if I agree to disable the Tor node. I politely told him that I have no interest in using their services at all if I can&rsquo;t use them the way I want to, so I&rsquo;ll cancel my contract with Server4You as soon as possible. For the time being I donated some money to Tor, moved my blog over to <a href="http://www.heroku.com/">Heroku</a> (yay <a href="http://octopress.org/">Octopress</a>) and started evaluating hosting providers in countries with saner legislation (as long as there still are some).</p>
-
-<p>Sure, there&rsquo;s probably a lot of really bad things happening over the Tor network, but those shouldn&rsquo;t be used to discredit the tool&rsquo;s legitimate uses. If we start blaming technology instead of people, we might as well turn off the Internet.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -760,7 +766,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Michael Kohl -
+  Copyright &copy; 2014 - Michael Kohl -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

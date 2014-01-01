@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Spontane Demo am Wiener Gürtel!Little recap of the demonstration that followed the eviction of squatters in Vienna last week (in German).
-Who? Are? &hellip;">
+  <meta name="description" content="If you are a Ruby developer on MacOS X, you probably love Pow as much as I do. While skimming the fine manual today, I noticed section 3.2, &ldquo; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -100,6 +99,128 @@ Who? Are? &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/22/a-little-pow-helper/">A Little Pow Helper</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-22T21:08:00+01:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you are a Ruby developer on MacOS X, you probably love <a href="http://pow.cx">Pow</a> as much as I do. While skimming the <a href="http://pow.cx/manual.html">fine manual</a> today, I noticed <a href="http://pow.cx/manual.html#section_3.2">section 3.2</a>, &ldquo;Reading the Current Configuration&rdquo;, which explains that you can query Pow&rsquo;s config and status via simple HTTP requests:</p>
+
+<figure class='code'><figcaption><span>Query Pow&#8217;s status</span><a href='http://pow.cx/manual.html#section_3.2'>Pow manual</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>curl -H host:pow localhost/status.json
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Since I know I&rsquo;d probably forget that sooner than later, I immediately wrapped it up in a small script, which I called <code>pow-show</code> and put in <code>~/bin</code>:</p>
+
+<figure class='code'><figcaption><span>~/bin/pow-show</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#!/usr/bin/env ruby</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;json&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">unless</span> <span class="sx">%w(status config)</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;Usage: </span><span class="si">#{</span><span class="no">File</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="vg">$0</span><span class="p">)</span><span class="si">}</span><span class="s2"> status|config&quot;</span>
+</span><span class='line'>  <span class="nb">exit</span> <span class="mi">1</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">jj</span> <span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="sb">`curl -s -H host:pow localhost/</span><span class="si">#{</span><span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="sb">.json`</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s some example output:</p>
+
+<figure class='code'><figcaption><span>pow-show status</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">802</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;0.3.2&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;requestCount&quot;</span><span class="o">:</span> <span class="mi">134</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>pow-show config</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s2">&quot;bin&quot;</span><span class="o">:</span> <span class="s2">&quot;/Users/name/Library/Application Support/Pow/Versions/0.3.2/bin/pow&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;dstPort&quot;</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;httpPort&quot;</span><span class="o">:</span> <span class="mi">20559</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;dnsPort&quot;</span><span class="o">:</span> <span class="mi">20560</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;timeout&quot;</span><span class="o">:</span> <span class="mi">900</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;workers&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;domains&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>    <span class="s2">&quot;dev&quot;</span>
+</span><span class='line'>  <span class="p">],</span>
+</span><span class='line'>  <span class="s2">&quot;extDomains&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="p">],</span>
+</span><span class='line'>  <span class="s2">&quot;hostRoot&quot;</span><span class="o">:</span> <span class="s2">&quot;/Users/name/Library/Application Support/Pow/Hosts&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;logRoot&quot;</span><span class="o">:</span> <span class="s2">&quot;/Users/name/Library/Logs/Pow&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;rvmPath&quot;</span><span class="o">:</span> <span class="s2">&quot;/Users/name/.rvm/scripts/rvm&quot;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Maybe that&rsquo;s useful for someone else too.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -608,62 +729,6 @@ Who? Are? &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/10/16/information-overload-2011-10-16/">Information Overload 2011-10-16</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-10-16T20:00:00+02:00" pubdate data-updated="true">Oct 16<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>Above all, remember the more harm you cause, the more hate you feel, and the more kindness you deal into the world the more you come to love the people you help.</p><footer><strong>David McRaney</strong> <cite><a href='http://youarenotsosmart.com/2011/10/05/the-benjamin-franklin-effect/'>The Benjamin Franklin Effect</a></cite></footer></blockquote>
-
-
-<ul>
-<li><a href="http://youarenotsosmart.com/2011/10/05/the-benjamin-franklin-effect/">The Benjamin Franklin Effect</a><br>A very interesting article on cognitive dissonance and how we tend to rationalize things.</li>
-<li><a href="http://www.twitlonger.com/show/dh5l3q">Letter from a psychopath</a><br>An email copy/pasted into TwitLonger, giving great insight into the world of a (claimed) psychopath.</li></li>
-<li><a href="http://www.nytimes.com/2011/10/11/health/views/11klass.html">Hearing Bilingual: How Babies Sort Out Language</a><br>Research shows that language development starts really early on, and that the brain adopts to bilingualism easily.</li></li>
-<li><a href="http://econerdfood.blogspot.com/2011/10/benfords-law-and-decreasing-reliability.html">Benford&rsquo;s Law and the Decreasing Reliability of Accounting Data for US Firms</a><br>This article uses some math to show that accounting data is becoming less reliable and also how deviations from Benford&rsquo;s Law seem to coincide with outside events.</li></li>
-<li><a href="http://www.guardian.co.uk/world/2011/oct/06/huaxi-village-tower-china">Huaxi: the village that towers above China</a><br>A small town in China builds a 328m high skyscraper because of one very influential man.</li></li>
-<li><a href="http://www.zeit.de/campus/2011/05/autismus/komplettansicht">Die Andersdenkenden</a><br>Autistic identical twins are studying philosophy at a German university and surprise their teachers and fellow students with the depth of their though processes (in German).</li></li>
-<li><a href="http://www.slate.com/articles/news_and_politics/foreigners/2011/10/silvio_berlusconi_a_new_book_reveals_why_italians_put_up_with_hi.html">That’s Italian</a><br>Italian journalists Beppe Seevergnini gives 10 reasons why Silvio Berlusconi gets away with being how he is.</li></li>
-<li><a href="http://norvig.com/chomsky.html">On Chomsky and the Two Cultures of Statistical Learning</a><br>Peter Norvig&rsquo;s rebuttal to a statement by Chomsky on statistical learning in regards to language.</li></li>
-<li><a href="http://www.npr.org/blogs/krulwich/2011/09/14/140467059/the-toughest-little-bird-youve-never-heard-of">The Toughest Little Bird You&rsquo;ve Never Heard Of</a><br>A small species of birds migrates every year from Alaska to New Zealand.</li></li>
-<li><a href="http://zenhabits.net/tired/">Tired of Being Tired</a><br>I know that occasionally I should take some of the advice offered in this article.</li>
-</ul>
-
-
-<blockquote><p>If he went to see a basketball game, he’d walk out taller.</p><footer><strong>Beppe Severgnini</strong> <cite><a href='http://www.slate.com/articles/news_and_politics/foreigners/2011/10/silvio_berlusconi_a_new_book_reveals_why_italians_put_up_with_hi.html'>That’s Italian</a></cite></footer></blockquote>
-
-
-<p></ul></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/10/">&larr; Older</a>
@@ -745,7 +810,7 @@ Who? Are? &hellip;">
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Michael Kohl -
+  Copyright &copy; 2014 - Michael Kohl -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
