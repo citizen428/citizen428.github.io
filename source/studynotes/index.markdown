@@ -15,3 +15,4 @@ I use Emacs' awesome [org-mode](http://orgmode.org/) for taking notes when I wor
 * [MySQL Performance Tuning](studynotes/mysql/)
 * [Postgres Performance Tuning](studynotes/postgres/)
 * [The Typeclassopedia - A summary](studynotes/typeclassopedia/)
+* [Rails 4 best practices](studynotes/rails4/)
