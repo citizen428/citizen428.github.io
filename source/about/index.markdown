@@ -12,9 +12,7 @@ I'm a big programming language nerd and used to run a functional programming use
 <hr>
 Besides all the techy stuff I really enjoy traveling, and so far have visited the following countries:
 <div align="center">
-<img
-src="http://chart.apis.google.com/chart?cht=map:fixed=-70,-180,80,180&chs=450x300&chf=bg,s,336699&chco=d0d0d0,cc0000&chd=s:9999999999999999999999999999999999999999999&chld=AR|BO|CL|CO|EC|MX|PY|PE|US|UY|BD|IN|LA|MY|NP|SG|TW|TH|TR|AE|AT|BE|BG|HR|CZ|FI|FR|DE|GR|HU|IE|IT|LV|NL|PL|RO|SK|SI|ES|CH|VA|AN|CN"
-width="450" height="300" ><br/>visited 43 states (19.1%)<br>
+<img src="http://www.traveltip.org/pix/user_countries.php?user=citizen428&s=md" alt="travel map" />
 </div>
 I also lived in Shanghai (China, 1 year), Istanbul (Turkey, 3 month), Kathmandu (Nepal, 3 month) and Milan (Italy, 10 month).
 
