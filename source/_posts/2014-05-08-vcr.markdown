@@ -1,0 +1,16 @@
+---
+layout: post
+title: "VCR case woes"
+date: 2014-05-08 22:32:55 +0700
+comments: true
+categories:
+  - programming
+  - ruby
+---
+Today I spent quite some time on a rather hard to track down problem. I had some specs using [VCR](), which worked perfectly locally, but just wouldn't run on [CircleCI](https://circleci.com/). In fact, it seemed like CircleCI didn't in fact use the VCR cassettes at all, but instead make a real API call, which failed because the necessary credentials weren't available in the environment (which was kinda the point of using VCR in the first place).
+
+Turns out the problem lay in the combination of using the VCR setting `configure_rspec_metadata!` and the option `core.ignorecase = true`, which is standard in newer versions of [Git](http://git-scm.com/). What happened was that at one point I changed the case of a word in a test description, which changes the auto-generated name of the folder VCR will create the cassette in. But since the folder name wasn't changed from git's perspective, I never realized that. So when the code was checked out on CircleCI, VCR encountered the spec with the metadata (`vcr: true`), but couldn't find the cassette since the checked out folder had the wrong case. It therefore proceeded to run the spec against the live API which failed.
+
+All in all this cost me about 1.5 hours, and I only managed to find a solution thanks to a helpful colleague and CircleCI's option of letting you SSH into the machine the tests run on, which is how we discovered the second folder that was created.
+
+TIL that git's not case-sensitive. I'd rather have found out another way.

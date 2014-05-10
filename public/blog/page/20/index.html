@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Since this post got quite popular I decided to incorporate some of the excellent suggestions posted in the comments, so this list now has more than &hellip;">
+  <meta name="description" content="Ever since I started this blog in January 2005 it was powered by Serendipity (aka S9Y). Lately however I became more and more dissatisfied with it &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -105,6 +105,51 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2010/08/13/blog-moved-from-serendipity-to-wordpress/">Blog Moved From Serendipity to Wordpress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-13T00:00:00+07:00" pubdate data-updated="true">Aug 13<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ever since I started this blog in January 2005 it was powered by <a href="http://s9y.org/">Serendipity</a> (aka S9Y). Lately however I became more and more dissatisfied with it for various reasons, so I finally took the plunge and moved it over to Wordpress. The whole process was surprisingly painless, but did have some caveats, so I decided to post a short description of what I did:</p>
+<p>There is a script for migrating S9Y to Wordpress that has been floating around for a while and has been patched/modified by various people. Luckily I found version <a href="http://snowulf.com/2010/06/11/serendipity-to-wordpress-post-import/">1.4</a>, which got updated very recently (June 2010). For some reason it didn&#8217;t work for me when I tried to migrate between S9Y 1.5.3 and Wordpress 3.0.1 directly, so I installed Wordpress 2.9.2 first, migrated the content and then upgraded to the most recent version. The import itself was very smooth and successful, categories (which I stopped using a long time ago), users, posts and comments all made it to the new blog! Once you are done importing, you can run several <span class="caps">SQL</span> statements provided in <a href="http://code.google.com/p/snowulf/source/browse/trunk/wordpress/s9y-to-wp/readme.txt">readme.txt</a>, so that your new posts will have the same IDs as the old ones, which is necessary for redirecting. For that purpose I added some <a href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html">Apache mod_rewrite </a> rules, so that old post URLs will redirect to the new locations (and so will the <span class="caps">RSS</span> and Atom feed so subscriptions don&#8217;t get interrupted):<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RewriteEngine on
+</span><span class='line'>RewriteRule ^/archives/([0-9]+)-.*$ /archives/$1 [R,L]
+</span><span class='line'>RewriteRule ^/feeds/index.rss2 /feed [R,L]
+</span><span class='line'>RewriteRule ^/feeds/atom.xml /feed/atom [R,L]</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+There&#8217;s still quite a bit to do though: first I need to find a theme I like (I might even stick with the one I&#8217;m using now and just tweak it a bit), then lots of posts need fixes to their formatting because they were written in <a href="http://www.textism.com/tools/textile/">Textile</a> (I fixed the most recent 2 so far, it&#8217;s rather quick and painless). There are also some widgets and static pages I want to move over from the old blog, so I guess this site will be a work in progress for a while. I am however very satisfied with Wordpress and glad I finally did this move I put off for so long.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2010/08/12/30-free-programming-ebooks/">30 Free Programming eBooks</a></h1>
     
     
@@ -121,7 +166,7 @@
   
 
 
-<time datetime="2010-08-12T00:00:00+02:00" pubdate data-updated="true">Aug 12<span>th</span>, 2010</time>
+<time datetime="2010-08-12T00:00:00+07:00" pubdate data-updated="true">Aug 12<span>th</span>, 2010</time>
         
       </p>
     
@@ -236,7 +281,7 @@
   
 
 
-<time datetime="2010-08-10T00:00:00+02:00" pubdate data-updated="true">Aug 10<span>th</span>, 2010</time>
+<time datetime="2010-08-10T00:00:00+07:00" pubdate data-updated="true">Aug 10<span>th</span>, 2010</time>
         
       </p>
     
@@ -290,7 +335,7 @@
   
 
 
-<time datetime="2010-07-06T00:00:00+02:00" pubdate data-updated="true">Jul 6<span>th</span>, 2010</time>
+<time datetime="2010-07-06T00:00:00+07:00" pubdate data-updated="true">Jul 6<span>th</span>, 2010</time>
         
       </p>
     
@@ -326,7 +371,7 @@
   
 
 
-<time datetime="2010-06-26T00:00:00+02:00" pubdate data-updated="true">Jun 26<span>th</span>, 2010</time>
+<time datetime="2010-06-26T00:00:00+07:00" pubdate data-updated="true">Jun 26<span>th</span>, 2010</time>
         
       </p>
     
@@ -363,7 +408,7 @@
   
 
 
-<time datetime="2010-06-09T00:00:00+02:00" pubdate data-updated="true">Jun 9<span>th</span>, 2010</time>
+<time datetime="2010-06-09T00:00:00+07:00" pubdate data-updated="true">Jun 9<span>th</span>, 2010</time>
         
       </p>
     
@@ -410,7 +455,7 @@ I know that there are several gems for interacting with GitHub, but thanks to th
   
 
 
-<time datetime="2010-06-08T00:00:00+02:00" pubdate data-updated="true">Jun 8<span>th</span>, 2010</time>
+<time datetime="2010-06-08T00:00:00+07:00" pubdate data-updated="true">Jun 8<span>th</span>, 2010</time>
         
       </p>
     
@@ -458,7 +503,7 @@ I know that there are several gems for interacting with GitHub, but thanks to th
   
 
 
-<time datetime="2010-05-12T00:00:00+02:00" pubdate data-updated="true">May 12<span>th</span>, 2010</time>
+<time datetime="2010-05-12T00:00:00+07:00" pubdate data-updated="true">May 12<span>th</span>, 2010</time>
         
       </p>
     
@@ -516,7 +561,7 @@ Behold the wonder:<br />
   
 
 
-<time datetime="2010-04-29T00:00:00+02:00" pubdate data-updated="true">Apr 29<span>th</span>, 2010</time>
+<time datetime="2010-04-29T00:00:00+07:00" pubdate data-updated="true">Apr 29<span>th</span>, 2010</time>
         
       </p>
     
@@ -657,7 +702,7 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
   
 
 
-<time datetime="2010-04-24T00:00:00+02:00" pubdate data-updated="true">Apr 24<span>th</span>, 2010</time>
+<time datetime="2010-04-24T00:00:00+07:00" pubdate data-updated="true">Apr 24<span>th</span>, 2010</time>
         
       </p>
     
@@ -673,45 +718,6 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
 <p>Well, when you start out from the wrong assumption that the percent sign is the &#8220;modulo operator&#8221;, you can only reach wrong conclusions.</p>
 <p>In mathematical textbooks you will generally find &#8216;mod&#8217; used in this context, which is also the operator used in e.g. Haskell. The surprise in this case stems from the assumption that the symbol % is in some way tied to the modulo operation, which it only is in some programming languages (mod, rem, &#92;, remainder, modulo, |~, %% and <span class="caps">IDIV</span> being some other options).</p>
 <p>This is not intended to sound harsh, I just think that whenever you feel Ruby violates the <span class="caps">POLS</span>, it&#8217;s probably a good time to check your own assumptions and find out that for people with a better understanding of the topic at hand, the <span class="caps">POLS</span> most likely did not get violated. Don&#8217;t confuse &#8220;what I would expect&#8221; with &#8220;what the majority of people knowledgeable in a given area find surprising&#8221;. When I traveled in Bulgaria I found it very confusing that people there shake their head for &#8220;yes&#8221; and nod for &#8220;no&#8221;. Turns out all the locals were perfectly fine with it&#8230; ;-)</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/04/23/good-math-teachers-are-like-unicorns/">Good Math Teachers Are Like Unicorns</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-04-23T00:00:00+02:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There&#8217;s a striking similarity between unicorns and good math teachers: both are mythical creatures you really wish existed whereas empirical evidence strongly suggests they don&#8217;t.</p>
-<p>Looking back at my own experience in Austrian public schools, the average quality of math teaching was atrocious. It&#8217;s only partly the teachers&#8217; fault though, since math generally seems to be taught in a rather frustrating way. There&#8217;s a definite tendency to leave out vital information like why a mathematical method was created, what problem it was meant to solve and how it evolved over time. Instead of starting from the perspective of a tangible problem and looking at the development of methods to solve it, we get a high-level abstract view and are kinda left in the dark as to how that ever may be useful, leading to the common misconception that &#8220;math is useless in everyday life&#8221;. It&#8217;s a bit like teaching kids about <span class="caps">DNA</span> and expecting them to see deer frolicking in the forest before their mental eye. That being said, it still often <i>is</i> the teacher&#8217;s fault: sometimes it feels like schools are elephant graveyards where old mathematicians go to die, so poor students often end up with grumpy frustrated people who barely seem to remember why they got into math in the first place and therefore definitely don&#8217;t create the spark necessary to ignite a young person&#8217;s mind.</p>
-<p>In retrospect, this makes me quite angry. As long as I can remember I have loved numbers in an almost obsessive way. When I get bored I start counting things around me, try to find patterns in tiles or do random calculations. So of course I always loved math in school and tended to do very well. Then 7th grade came and the subject slowly started to get more abstract. Bad methodology, combined with awful teaching and beginning puberty on my part were enough to make math my most feared subject in the years to come. Occasionally my original enthusiasm for the subject resurfaced and my grades got a bit better again when we began with calculus. Math still mainly was a major pain in the behind for me though. This only changed when at age 17 I finally convinced my parents of how broken the Austrian public school system was and switched to a private school where class attendance was voluntary and everything more or less worked like it later would at uni. This was the only time I can remember where I was lucky enough to have a good math teacher. In fact he wasn&#8217;t only good, he was excellent and is probably one of the main reasons why I&#8217;m now studying math. He did an incredible job making us understand the beauty of the subject and managed to get good results out of almost everyone by never accepting an &#8220;I don&#8217;t understand this&#8221;. He would just go back to the last line the student understood and start working from there: &#8220;How did we get to this line?&#8221;, &#8220;Do you see what substitution we did?&#8221;, &#8220;Now how do you think we got from B to C?&#8221; etc. Using this method, the students generally managed to solve the exercises and obviously were proud and therefore slowly got over the &#8220;math is not for me&#8221; type of thinking. As an additional benefit everyone who was afraid of asking also got a very detailed explanation and would be more likely to ask a question him- or herself next time. Our teacher also was very good at assessing a student&#8217;s level and therefore could give you tailor-made exercises to avoid frustration or boredom. His classes were definitely among the best I saw in almost 20 years of formal education.</p>
-<p>Anyway, when it was time to decide what to study at uni, part of me wanted to do math because of my original love for the subject and the great classes I just had experienced. The greater part however still hadn&#8217;t gotten over the feeling of insufficiency accumulated over the years of lost interest due to bad teaching, so in the end I settled on studying Chinese, which was fun but a rather random choice and not all that useful in hindsight. Only after I turned 30 last summer I finally decided I want to give math at university level a try and signed up for an undergrad math degree at a distance learning university. So far everything seems to be going well &#8211; given the fact that I didn&#8217;t do much math in the last 10 years except for reading the occasional book on the subject &#8211; and I&#8217;m really enjoying it.</p>
-<p>I don&#8217;t really believe I will ever become a great mathematician, but it is quite frustrating that school almost stopped me from at least trying.</p></div>
   
   
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/erlang/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2014-01-28T11:23:46+01:00</updated>
+  <updated>2014-05-08T23:13:27+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Erlang bit syntax and ID3]]></title>
     <link href="http://citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3/"/>
-    <updated>2010-09-04T00:00:00+02:00</updated>
+    <updated>2010-09-04T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3</id>
     <content type="html"><![CDATA[<p>A couple of days ago I finally started properly looking at &ldquo;Erlang&rdquo;:<a href="http://www.erlang.org/">http://www.erlang.org/</a> for the first time. One aspect I find especially interesting is the &ldquo;bit syntax&rdquo;:<a href="http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html,">http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html,</a> so I wrote a small program for parsing &ldquo;ID3v1 tags&rdquo;:<a href="http://www.id3.org/ID3v1">http://www.id3.org/ID3v1</a> for practice. There&rsquo;s definitely room for improvement (I ignored ID3v1.1), but it  was a fun little exercise. Here&rsquo;s the code:</p>
 

@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="The Prisoner’s DilemmaNice article on the prisoner&rsquo;s dillema, including an interactive toy to play with various strategies.
-How Big is the &hellip;">
+  <meta name="description" content="Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -106,6 +105,93 @@ How Big is the &hellip;">
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/07/30/ruby-left-section-for-infix-operators/">Ruby — Left Section for Infix Operators</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T23:24:00+07:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today&rsquo;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&rsquo;s an example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="err">λ</span><span class="o">&gt;</span> <span class="n">map</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">]</span>
+</span><span class='line'><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see the function to be <code>map</code>ped is specified with the <a href="http://www.haskell.org/haskellwiki/Partial_application">partially applied</a> function <code>(2+)</code> (or <code>(+2)</code> for that matter).</p>
+
+<p>Here&rsquo;s how we would have to write the same code in Ruby:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This could also be written in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree</a> way, but alas that would make the code rather hard to understand for less experienced Rubyists:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="ss">:+</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But because Ruby is as flexible as it is, adding partial application is actually really trivial:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
+</span><span class='line'>  <span class="k">alias</span> <span class="ss">:add</span> <span class="ss">:+</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">+</span><span class="p">(</span><span class="n">o</span><span class="o">=</span><span class="kp">nil</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">o</span> <span class="p">?</span> <span class="nb">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">o</span><span class="p">)</span> <span class="p">:</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">self</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And now we can do this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">.</span><span class="n">+</span><span class="p">)</span> <span class="c1">#=&gt; [3, 4, 5]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Not too bad I think and rather consistent with Ruby&rsquo;s overall style. Alas I don&rsquo;t think we are likely to see partial application on a language level any time soon though&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/07/29/information-overload-2012-07-29/">Information Overload 2012-07-29</a></h1>
     
     
@@ -122,7 +208,7 @@ How Big is the &hellip;">
   
 
 
-<time datetime="2012-07-29T00:00:00+02:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
+<time datetime="2012-07-29T00:00:00+07:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
         
       </p>
     
@@ -167,7 +253,7 @@ How Big is the &hellip;">
   
 
 
-<time datetime="2012-07-28T10:15:00+02:00" pubdate data-updated="true">Jul 28<span>th</span>, 2012</time>
+<time datetime="2012-07-28T10:15:00+07:00" pubdate data-updated="true">Jul 28<span>th</span>, 2012</time>
         
       </p>
     
@@ -211,7 +297,7 @@ How Big is the &hellip;">
   
 
 
-<time datetime="2012-07-22T00:00:00+02:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
+<time datetime="2012-07-22T00:00:00+07:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
         
       </p>
     
@@ -254,7 +340,7 @@ How Big is the &hellip;">
   
 
 
-<time datetime="2012-07-15T00:00:00+02:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
+<time datetime="2012-07-15T00:00:00+07:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
         
       </p>
     
@@ -300,7 +386,7 @@ How Big is the &hellip;">
   
 
 
-<time datetime="2012-07-08T00:00:00+02:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>
+<time datetime="2012-07-08T00:00:00+07:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>
         
       </p>
     
@@ -345,7 +431,7 @@ How Big is the &hellip;">
   
 
 
-<time datetime="2012-07-03T19:46:00+02:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2012</time>
+<time datetime="2012-07-03T19:46:00+07:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2012</time>
         
       </p>
     
@@ -395,7 +481,7 @@ How Big is the &hellip;">
   
 
 
-<time datetime="2012-07-01T00:00:00+02:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
+<time datetime="2012-07-01T00:00:00+07:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
         
       </p>
     
@@ -443,7 +529,7 @@ How Big is the &hellip;">
   
 
 
-<time datetime="2012-06-24T00:00:00+02:00" pubdate data-updated="true">Jun 24<span>th</span>, 2012</time>
+<time datetime="2012-06-24T00:00:00+07:00" pubdate data-updated="true">Jun 24<span>th</span>, 2012</time>
         
       </p>
     
@@ -494,7 +580,7 @@ How Big is the &hellip;">
   
 
 
-<time datetime="2012-06-20T15:05:00+02:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+<time datetime="2012-06-20T15:05:00+07:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
         
       </p>
     
@@ -512,55 +598,6 @@ How Big is the &hellip;">
 <p>The writing was clear and to the point, with tons of footnotes and references to provide the interested reader with the chance to further research the presented topics. The author clearly knows what he&rsquo;s talking about and manages to present it in a very approachable way. Due to it&rsquo;s limited size the book still has to be a bit dense though, so I never really felt like reading more than one chapter at a time, otherwise it&rsquo;d have been to much information to take in at once.</p>
 
 <p>Whether you work in IT security or are a web application developer, this definitely is a book you don&rsquo;t want to miss.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/17/information-overload-2012-06-17/">Information Overload 2012-06-17</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-17T00:00:00+02:00" pubdate data-updated="true">Jun 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>[H]e worries that economic and ecological collapse will come much sooner than we think, and that the time to start behaving in an anarchic way—taking care of ourselves instead of deferring to government and big business—is now. He wants, in his words, for people to have a &#8220;soft landing&#8221; when the global shit hits the global fan.</p><footer><strong>Brendan Kiley</strong> <cite><a href='http://www.thestranger.com/seattle/anarchy-is-boring/Content?oid=13597692'>Anarchy Is Boring</a></cite></footer></blockquote>
-
-
-<ul>
-<li><a href="http://esr.ibiblio.org/?p=4386">Why I think RMS is a fanatic, and why that matters.</a><br>The most current &ldquo;RMS is a fanatic&rdquo; post by ESR. While he may be right that pragmatism sells better, I always admired Stallman&rsquo;s approach.</li>
-<li><a href="http://chronicle.com/article/Why-Privacy-Matters-Even-if/127461/">Why Privacy Matters Even if You Have &lsquo;Nothing to Hide&rsquo;</a><br>Most of the readers of my blog are probably aware of everything written in this article, but it&rsquo;s a very good resource for sending to people who don&rsquo;t follow the privacy debate much.</li>
-<li><a href="http://arstechnica.com/security/2012/06/flame-crypto-breakthrough/">Crypto breakthrough shows Flame was designed by world-class scientists</a><br>Some more background on <a href="http://en.wikipedia.org/wiki/Flame_(malware)">Flame</a>.</li>
-<li><a href="http://www.thestranger.com/seattle/anarchy-is-boring/Content?oid=13597692">Anarchy Is Boring</a><br>This is a good article a lot of people calling themselves anarchists should read.</li>
-<li><a href="http://www.heise.de/tp/artikel/37/37094/1.html">G8-Gipfel in Genua &ndash; Letzter Akt mit hohen Haftstrafen?</a><br>11 years after the <a href="http://en.wikipedia.org/wiki/27th_G8_summit#Protests">protests</a> it seems like several protesters will have to go for a long time (in German).</li>
-<li><a href="http://www.whatwherewhy.me/blog/2012/06/11/the-male-gaze/">The Male Gaze</a><br>I hope that one day I can stop including articles about discrimation against women in tech.</li>
-<li><a href="http://home.tiac.net/~cri/1998/toilet.html">A game theoretic approach to the toilet seat problem</a><br>Mathematics to the rescue.</li>
-<li><a href="http://www-cs-students.stanford.edu/~cale/cs201/apartheid.comp.html">The Use of Computers to Support Oppression</a><br>On the role of computers in the South African apartheid system.</li>
-</ul>
-
 </div>
   
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2014-01-28T11:23:46+01:00</updated>
+  <updated>2014-05-08T23:13:27+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -14,9 +14,24 @@
 
   
   <entry>
+    <title type="html"><![CDATA[VCR case woes]]></title>
+    <link href="http://citizen428.net/blog/2014/05/08/vcr/"/>
+    <updated>2014-05-08T22:32:55+07:00</updated>
+    <id>http://citizen428.net/blog/2014/05/08/vcr</id>
+    <content type="html"><![CDATA[<p>Today I spent quite some time on a rather hard to track down problem. I had some specs using <a href="">VCR</a>, which worked perfectly locally, but just wouldn&rsquo;t run on <a href="https://circleci.com/">CircleCI</a>. In fact, it seemed like CircleCI didn&rsquo;t in fact use the VCR cassettes at all, but instead make a real API call, which failed because the necessary credentials weren&rsquo;t available in the environment (which was kinda the point of using VCR in the first place).</p>
+
+<p>Turns out the problem lay in the combination of using the VCR setting <code>configure_rspec_metadata!</code> and the option <code>core.ignorecase = true</code>, which is standard in newer versions of <a href="http://git-scm.com/">Git</a>. What happened was that at one point I changed the case of a word in a test description, which changes the auto-generated name of the folder VCR will create the cassette in. But since the folder name wasn&rsquo;t changed from git&rsquo;s perspective, I never realized that. So when the code was checked out on CircleCI, VCR encountered the spec with the metadata (<code>vcr: true</code>), but couldn&rsquo;t find the cassette since the checked out folder had the wrong case. It therefore proceeded to run the spec against the live API which failed.</p>
+
+<p>All in all this cost me about 1.5 hours, and I only managed to find a solution thanks to a helpful colleague and CircleCI&rsquo;s option of letting you SSH into the machine the tests run on, which is how we discovered the second folder that was created.</p>
+
+<p>TIL that git&rsquo;s not case-sensitive. I&rsquo;d rather have found out another way.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Extending Nmap with Lua]]></title>
     <link href="http://citizen428.net/blog/2013/08/31/extending-nmap-with-lua/"/>
-    <updated>2013-08-31T17:49:00+02:00</updated>
+    <updated>2013-08-31T17:49:00+07:00</updated>
     <id>http://citizen428.net/blog/2013/08/31/extending-nmap-with-lua</id>
     <content type="html"><![CDATA[<p><em>I originally wrote this piece for a pentesting magazine, but after some unprofessional behavior by their editor I lost my cool and decided not too publish it there. It&rsquo;d be a shame to let it go to waste though, so I after almost three month I finally decided to put it up on my blog.</em></p>
 
@@ -138,63 +153,7 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <h3>Metadata</h3>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">description</span> <span class="o">=</span> <span class="s">[[ Displays the contents of the &amp;ldquo;generator&amp;rdquo; meta tag of a web page(default: /) if there is one.</span>
-</span><span class='line'><span class="s">]]</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">author</span> <span class="o">=</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Michael</span> <span class="n">Kohl</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
-</span><span class='line'><span class="n">license</span> <span class="o">=</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Same</span> <span class="n">as</span> <span class="n">Nmap</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">See</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">http://nmap.org/book/man-legal.html&quot;</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">nmap</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">book</span><span class="o">/</span><span class="n">man</span><span class="o">-</span><span class="n">legal</span><span class="p">.</span><span class="n">html</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
-</span><span class='line'><span class="n">categories</span> <span class="o">=</span> <span class="p">{</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">default</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">discovery</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">safe</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">hr</span> <span class="o">/&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">usage</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">nmap</span> <span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">script</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span> <span class="p">[</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">script</span><span class="o">-</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span><span class="o">=&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">,</span><span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span><span class="o">=&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="p">,</span><span class="err">&amp;</span><span class="n">hellip</span><span class="p">;]</span> <span class="o">&lt;</span><span class="n">host</span><span class="o">&gt;&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">output</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">PORT</span>    <span class="n">STATE</span> <span class="n">SERVICE</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">80</span><span class="o">/</span><span class="n">tcp</span>  <span class="n">open</span>  <span class="n">http</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">|</span><span class="n">_http</span><span class="o">-</span><span class="n">generator</span><span class="p">:</span> <span class="n">TYPO3</span> <span class="mf">4.2</span> <span class="n">CMS</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">443</span><span class="o">/</span><span class="n">tcp</span> <span class="n">open</span>  <span class="n">https</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">|</span><span class="n">_http</span><span class="o">-</span><span class="n">generator</span><span class="p">:</span> <span class="n">TYPO3</span> <span class="mf">4.2</span> <span class="n">CMS</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span> <span class="n">Specify</span> <span class="n">the</span> <span class="n">path</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">check</span> <span class="k">for</span> <span class="n">a</span> <span class="n">generator</span> <span class="n">meta</span> <span class="n">tag</span> <span class="p">(</span><span class="n">default</span> <span class="n">to</span> <span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;).</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span> <span class="n">Specify</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">redirects</span> <span class="n">to</span> <span class="n">follow</span> <span class="p">(</span><span class="n">defaults</span> <span class="n">to</span> <span class="mi">3</span><span class="p">).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">Changelog</span><span class="p">:</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">23</span> <span class="n">Michael</span> <span class="n">Kohl</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#111;&amp;#58;&amp;#x63;&amp;#x69;&amp;#116;&amp;#105;&amp;#122;&amp;#101;&amp;#x6e;&amp;#x34;&amp;#50;&amp;#x38;&amp;#x40;&amp;#103;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#x6d;&quot;</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">116</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">122</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">101</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">110</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">52</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x32</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">56</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">64</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">103</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">109</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">97</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">108</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">46</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6f</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">109</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">:</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span>   <span class="o">+</span> <span class="n">Initial</span> <span class="n">version</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">hellip</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"></pre></td><td class='code'><pre><code class='lua'></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>After the library imports, scripts contain some metadata that is used for documentation and internal purposes. The <em>description</em> and author variables are self-explanatory, the syntax used for the former is Lua&rsquo;s way of creating so-called &ldquo;heredocs&rdquo;, string literals that preserve white space and line breaks. In regard to the <em>license</em> script authors have two choices, the GPL-like Nmap license, as well as a simplified (2-clause) BSD license. Last but not least there&rsquo;s documentation in the NSEDoc format. It&rsquo;s customary to include usage documentation, example output, descriptions of all the available arguments (if any) as well as a changelog.</p>
 
@@ -359,7 +318,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-09]]></title>
     <link href="http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09/"/>
-    <updated>2012-09-09T00:00:00+02:00</updated>
+    <updated>2012-09-09T00:00:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/09/09/information-overload-2012-09-09</id>
     <content type="html"><![CDATA[<p>I was rather busy this week, so this Information Overload is super short.</p>
 
@@ -375,7 +334,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   <entry>
     <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
     <link href="http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
-    <updated>2012-07-30T23:24:00+02:00</updated>
+    <updated>2012-07-30T23:24:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
     <content type="html"><![CDATA[<p>Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today&rsquo;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&rsquo;s an example:</p>
 
@@ -436,7 +395,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
     <link href="http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
-    <updated>2012-07-28T10:15:00+02:00</updated>
+    <updated>2012-07-28T10:15:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
     <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
 
@@ -447,29 +406,6 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
 <p>While the author does tackle some more advanced topics, they are clearly not the focus of this book (it&rsquo;s subtitled &ldquo;Beginner&rsquo;s Guide&rdquo; for a reason) which will leave more experienced developers wanting for more. However, the presented material is well written, chapters build on each other and if you are new to web development with Ruby/RoR and/or MongoDB, this is a good title to get you up to speed in just 300 pages.</p>
 
 <p>If you are a more experienced Ruby developer or are already very familiar with MongoDB, this is probably not the book for you, even though you&rsquo;ll probably still get something out of it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Shenanigans]]></title>
-    <link href="http://citizen428.net/blog/2012/07/03/shenanigans/"/>
-    <updated>2012-07-03T19:46:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/07/03/shenanigans</id>
-    <content type="html"><![CDATA[<p>About 1.5 month ago I finally packaged some of my Ruby extension methods into the aptly named <a href="https://rubygems.org/gems/shenanigans">Shenanigans</a> gem. It&rsquo;s similar to <a href="http://rubyworks.github.com/facets/">Facets</a> or <a href="http://as.rubyonrails.org/">ActiveSupport</a>, but probably less useful to most people. Also some of the methods actually are in Facets, although sometimes with different names or slightly different semantics. Anyway, since some people told me they actually do like the gem, here&rsquo;s a quick summary of what the different methods do and how they can be useful.</p>
-
-<ul>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:%5E">Array#^</a>: Ruby defines <a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/set/rdoc/Set.html#method-i-5E">Set#^</a>, which returns the elements exclusive between the set and a given enum. Since a lot of people use arrays instead of proper sets in Ruby, I found it makes a nice addition to <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-7C">Array#|</a> and <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-26">Array#&amp;</a>.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:random_subarray">Array#random_subarray</a>: Generates one or more random subarrays of an array, using the fact that Ruby can index integers to get the bit values to ensure fast uniform distributions. Similar to <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-sample">Array#sample</a>, but can generate several subarrays at once.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:zip_with">Array#zip_with</a>: The more general form of <code>zip</code> (e.g. in Haskell you could define <code>zip = zipWith (,)</code>). Like Ruby&rsquo;s <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject">Enumerable#inject</a> it can take a symbol argument or a block, and like Haskell&rsquo;s <code>zip</code> it discards excess array elements if one list is shorter than the other, whereas Ruby&rsquo;s <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-zip">Array#zip</a> only does that if the receiver is shorter than the argument (it adds <code>nil</code>s in the other case).</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Hash:has_shape%3F">Hash#has_shape?</a>: A quick way to check if a hash&rsquo;s keys are of certain classes. This does feel a bit strange in a duck-typed language like Ruby, but someone asked for it on StackOverflow and it was easy enough to write. This could be useful in validations or unit tests though.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Hash:to_ostruct">Hash#to_ostruct</a>: I really like the <a href="https://github.com/railsjedi/rails_config">rails_config</a> gem. I therefore decided to write something that gives me similar functionality (although a lot simpler) for plain Ruby projects. Basically this recursively converts a hash and all nested hashes into <a href="http://ruby-doc.org/stdlib-1.9.3/libdoc/ostruct/rdoc/OpenStruct.html">OpenStruct</a> instances. Populate the hash with Ruby&rsquo;s <a href="http://corelib.rubyonrails.org/classes/YAML.html">YAML</a> support and you have an instant settings object.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:fn">Kernel#fn</a>: I admit, this was more of a &ldquo;because I can&rdquo; method. Originally I wrote this so I could compose blocks in <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a>, but later added support for <a href="http://www.ruby-doc.org/core-1.9.3/Proc.html">Proc</a> instances too.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:prompt">Kernel#prompt</a>: While it&rsquo;s great that Ruby&rsquo;s <a href="http://www.ruby-doc.org/core-1.9.3/IO.html#method-i-gets">IO#gets</a> is so general, I always wanted something like Python&rsquo;s <a href="http://docs.python.org/library/functions.html#raw_input">raw_input</a> for command line apps. Additionally you can also automatically call any of the numeric conversions, and I&rsquo;m pondering adding support for every unary string method.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:with">Kernel#with</a>: I think <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> is great. However, I sometimes see it used as a replacement for <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject">Enumerable#inject</a> or <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_with_object">Enumerable#each_with_object</a>, but for some reason I never really liked the semantics of it. And since I&rsquo;m anal about that sort of thing I added this Pascal/ActionScript like <code>with</code> statement.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Object:display">Object#display</a>: Having no proper object-oriented way to print objects in Ruby always kinda bothered me, so I abused <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> as a wrapper around <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html#method-i-puts">Kernel#puts</a> and <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html#method-i-print">Kernel#print</a>. Additionally this is aliased to the name <code>d</code>, which I stole from <a href="https://github.com/janlelis/irbtools">irbtools</a>. The latter form makes it great for debugging method chains and the likes.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Object:it">Object#it</a>: I always disliked blocks of the form <code>{ |x| x }</code> that sometimes crop up when using  <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-group_by">Enumerable#group_by</a> or similar methods. Since Ruby lacks an identity method and <code>id</code> has historically been taken, I decided to name it <code>it</code>.</p></li>
-</ul>
-
 ]]></content>
   </entry>
   

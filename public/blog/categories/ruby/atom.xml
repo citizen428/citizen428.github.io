@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2014-01-28T11:23:46+01:00</updated>
+  <updated>2014-05-08T23:13:27+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -14,9 +14,24 @@
 
   
   <entry>
+    <title type="html"><![CDATA[VCR case woes]]></title>
+    <link href="http://citizen428.net/blog/2014/05/08/vcr/"/>
+    <updated>2014-05-08T22:32:55+07:00</updated>
+    <id>http://citizen428.net/blog/2014/05/08/vcr</id>
+    <content type="html"><![CDATA[<p>Today I spent quite some time on a rather hard to track down problem. I had some specs using <a href="">VCR</a>, which worked perfectly locally, but just wouldn&rsquo;t run on <a href="https://circleci.com/">CircleCI</a>. In fact, it seemed like CircleCI didn&rsquo;t in fact use the VCR cassettes at all, but instead make a real API call, which failed because the necessary credentials weren&rsquo;t available in the environment (which was kinda the point of using VCR in the first place).</p>
+
+<p>Turns out the problem lay in the combination of using the VCR setting <code>configure_rspec_metadata!</code> and the option <code>core.ignorecase = true</code>, which is standard in newer versions of <a href="http://git-scm.com/">Git</a>. What happened was that at one point I changed the case of a word in a test description, which changes the auto-generated name of the folder VCR will create the cassette in. But since the folder name wasn&rsquo;t changed from git&rsquo;s perspective, I never realized that. So when the code was checked out on CircleCI, VCR encountered the spec with the metadata (<code>vcr: true</code>), but couldn&rsquo;t find the cassette since the checked out folder had the wrong case. It therefore proceeded to run the spec against the live API which failed.</p>
+
+<p>All in all this cost me about 1.5 hours, and I only managed to find a solution thanks to a helpful colleague and CircleCI&rsquo;s option of letting you SSH into the machine the tests run on, which is how we discovered the second folder that was created.</p>
+
+<p>TIL that git&rsquo;s not case-sensitive. I&rsquo;d rather have found out another way.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
     <link href="http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
-    <updated>2012-07-30T23:24:00+02:00</updated>
+    <updated>2012-07-30T23:24:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
     <content type="html"><![CDATA[<p>Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today&rsquo;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&rsquo;s an example:</p>
 
@@ -77,7 +92,7 @@
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
     <link href="http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
-    <updated>2012-07-28T10:15:00+02:00</updated>
+    <updated>2012-07-28T10:15:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
     <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
 
@@ -94,7 +109,7 @@
   <entry>
     <title type="html"><![CDATA[Shenanigans]]></title>
     <link href="http://citizen428.net/blog/2012/07/03/shenanigans/"/>
-    <updated>2012-07-03T19:46:00+02:00</updated>
+    <updated>2012-07-03T19:46:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/07/03/shenanigans</id>
     <content type="html"><![CDATA[<p>About 1.5 month ago I finally packaged some of my Ruby extension methods into the aptly named <a href="https://rubygems.org/gems/shenanigans">Shenanigans</a> gem. It&rsquo;s similar to <a href="http://rubyworks.github.com/facets/">Facets</a> or <a href="http://as.rubyonrails.org/">ActiveSupport</a>, but probably less useful to most people. Also some of the methods actually are in Facets, although sometimes with different names or slightly different semantics. Anyway, since some people told me they actually do like the gem, here&rsquo;s a quick summary of what the different methods do and how they can be useful.</p>
 
@@ -117,7 +132,7 @@
   <entry>
     <title type="html"><![CDATA[Rails — Display branch in development mode]]></title>
     <link href="http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/"/>
-    <updated>2012-06-12T21:33:00+02:00</updated>
+    <updated>2012-06-12T21:33:00+07:00</updated>
     <id>http://citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode</id>
     <content type="html"><![CDATA[<p>At work we are building a Rails app that&rsquo;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it&rsquo;d be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn&rsquo;t have been any simpler:</p>
 
@@ -133,77 +148,6 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tap dance]]></title>
-    <link href="http://citizen428.net/blog/2012/05/14/tap-dance/"/>
-    <updated>2012-05-14T23:14:00+02:00</updated>
-    <id>http://citizen428.net/blog/2012/05/14/tap-dance</id>
-    <content type="html"><![CDATA[<p>Ruby&rsquo;s <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> is a really nice and useful method. One of my favorite uses is <code>Object#d</code>, which I think I originally saw in <a href="https://github.com/janlelis/irbtools">irbtools</a>. Personally, I&rsquo;m using the following version in my <code>~/.irbrc</code>:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Object</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">d</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;self.tap { |s| puts s }</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Inserting this in a chain of calls can be very enlightening as to where a value changes unexpectedly.</p>
-
-<p>However, recently I&rsquo;ve seen more and more use of <code>tap</code> where I&rsquo;d traditionally have used <code>inject/reduce</code>. People who know me can attest to the fact that I&rsquo;m a big fan of the latter, but for some reason there seem to be quite a few developers who find these methods hard to grok. For this reason recent Ruby versions added <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_with_object">Enumerable#each_with_object</a>, which seems to be easier to use for some people, but which isn&rsquo;t very popular because of it&rsquo;s lengthy name. See for example the following blog post that was written as a result of a discussion I had with the author on StackOverflow: <a href="http://phrogz.net/tap-vs-each_with_object">tap vs. each_with_object: tap is faster and less typing.</a></p>
-
-<p>As I said in the comment there, my main problem is that you have to call <code>tap</code> on what is to become the result, not the data you want to transform. While this is not a problem per se, I somehow don&rsquo;t like the semantics of it. However, once I decided to hide it behind a Pascal-like <a href="http://www.freepascal.org/docs-html/ref/refsu53.html">with statement</a>, I immediately started liking it:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Kernel</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">with</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">blk</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;o.tap(&amp;amp;blk)</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Here are the examples from the blog post linked above, including a new version for <code>with</code>. Decide which one you like best:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">nums</span><span class="o">.</span><span class="n">inject</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="p">,</span> <span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">;</span> <span class="n">h</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;nums.each_with_object({}) { |n, h| h[n] = n }&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="p">{}</span><span class="o">.</span><span class="n">tap</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="o">|</span> <span class="n">nums</span><span class="o">.</span><span class="n">each</span><span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">}</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;with({}) { |h| nums.each { |n| h[n]=n } }</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Sure, putting it in <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html">Kernel</a> and therefore calling it without a receiver seems a little strange at first, but I kinda like how it reads. I know this is probably a case of me being anal about semantics, but I really think that <code>with</code> transports the intent a lot better than <code>tap</code> in cases like the one shown here.</p>
 ]]></content>
   </entry>
   

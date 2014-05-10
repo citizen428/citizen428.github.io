@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="tl;dr: Kindle 3 == teh awesum.
-One week ago I finally got my Kindle 3 and it&#8217;s about time for a review. Here we go: Awesome! That&#8217;s it &hellip;">
+  <meta name="description" content="Being kinda sick I decided to use the weekend for emptying out my Instapaper account a little. Doing so I finally read Rubinius wants to help YOU &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -106,6 +105,58 @@ One week ago I finally got my Kindle 3 and it&#8217;s about time for a review. H
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2010/09/18/rubinius-has-a-new-fan/">Rubinius Has a New Fan</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-18T00:00:00+07:00" pubdate data-updated="true">Sep 18<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Being kinda sick I decided to use the weekend for emptying out my <a href="http://www.instapaper.com/">Instapaper</a> account a little. Doing so I finally read <a href="http://www.engineyard.com/blog/2010/rubinius-wants-to-help-you-make-ruby-better/">Rubinius wants to help <span class="caps">YOU</span> make Ruby better</a> on the <a href="http://www.engineyard.com/blog/">Engine Yard blog</a>. This reminded me that it&#8217;s been over a year since I last looked at Rubinius, so I used the excellent <a href="http://rvm.beginrescueend.com/"><span class="caps">RVM</span></a> to get the latest version and started my experiments. Basically everything I threw at it just worked, except for some of my scripts using 1.9&#8217;s new lambda syntax. Speedwise it seems to be more in the <span class="caps">MRI</span> 1.8.7 than the 1.9.2 range, but that&#8217;s fair enough. Getting adventurous I decided to try how Rubinius would handle one of my all-time favorite Ruby annoyances, the inability to override <i>to_s</i> in subclasses of <i>String</I> (don&#8217;t ask, but this once cost me almost an entire afternoon).</p>
+<p>Example:<br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">SubclassedString</span> <span class="o">&lt;</span> <span class="nb">String</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">to_s</span>
+</span><span class='line'>    <span class="s2">&quot;overriden&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">puts</span> <span class="no">SubclassedString</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;original&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>In <span class="caps">MRI</span> 1.8.7, <span class="caps">MRI</span> 1.9.2, JRuby <span class="caps">HEAD</span> and MacRuby 0.6 this will output &#8220;original&#8221;, which I believe to have tracked down to <i>rb_obj_as_string</i> in string.c in the <span class="caps">MRI</span> source (no idea about the other implementations). To my great surprise Rubinius 1.0.1 actually output &#8220;overriden&#8221;, which instantly won it a new fan. :-)</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2010/09/14/my-first-week-with-the-kindle-3/">My First Week With the Kindle 3</a></h1>
     
     
@@ -122,7 +173,7 @@ One week ago I finally got my Kindle 3 and it&#8217;s about time for a review. H
   
 
 
-<time datetime="2010-09-14T00:00:00+02:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
+<time datetime="2010-09-14T00:00:00+07:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
         
       </p>
     
@@ -162,7 +213,7 @@ One week ago I finally got my Kindle 3 and it&#8217;s about time for a review. H
   
 
 
-<time datetime="2010-09-13T00:00:00+02:00" pubdate data-updated="true">Sep 13<span>th</span>, 2010</time>
+<time datetime="2010-09-13T00:00:00+07:00" pubdate data-updated="true">Sep 13<span>th</span>, 2010</time>
         
       </p>
     
@@ -201,7 +252,7 @@ One week ago I finally got my Kindle 3 and it&#8217;s about time for a review. H
   
 
 
-<time datetime="2010-09-05T00:00:00+02:00" pubdate data-updated="true">Sep 5<span>th</span>, 2010</time>
+<time datetime="2010-09-05T00:00:00+07:00" pubdate data-updated="true">Sep 5<span>th</span>, 2010</time>
         
       </p>
     
@@ -245,7 +296,7 @@ One week ago I finally got my Kindle 3 and it&#8217;s about time for a review. H
   
 
 
-<time datetime="2010-09-04T00:00:00+02:00" pubdate data-updated="true">Sep 4<span>th</span>, 2010</time>
+<time datetime="2010-09-04T00:00:00+07:00" pubdate data-updated="true">Sep 4<span>th</span>, 2010</time>
         
       </p>
     
@@ -375,7 +426,7 @@ One week ago I finally got my Kindle 3 and it&#8217;s about time for a review. H
   
 
 
-<time datetime="2010-08-29T00:00:00+02:00" pubdate data-updated="true">Aug 29<span>th</span>, 2010</time>
+<time datetime="2010-08-29T00:00:00+07:00" pubdate data-updated="true">Aug 29<span>th</span>, 2010</time>
         
       </p>
     
@@ -421,7 +472,7 @@ One week ago I finally got my Kindle 3 and it&#8217;s about time for a review. H
   
 
 
-<time datetime="2010-08-28T00:00:00+02:00" pubdate data-updated="true">Aug 28<span>th</span>, 2010</time>
+<time datetime="2010-08-28T00:00:00+07:00" pubdate data-updated="true">Aug 28<span>th</span>, 2010</time>
         
       </p>
     
@@ -480,7 +531,7 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
   
 
 
-<time datetime="2010-08-22T00:00:00+02:00" pubdate data-updated="true">Aug 22<span>nd</span>, 2010</time>
+<time datetime="2010-08-22T00:00:00+07:00" pubdate data-updated="true">Aug 22<span>nd</span>, 2010</time>
         
       </p>
     
@@ -526,7 +577,7 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
   
 
 
-<time datetime="2010-08-20T00:00:00+02:00" pubdate data-updated="true">Aug 20<span>th</span>, 2010</time>
+<time datetime="2010-08-20T00:00:00+07:00" pubdate data-updated="true">Aug 20<span>th</span>, 2010</time>
         
       </p>
     
@@ -642,7 +693,7 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
   
 
 
-<time datetime="2010-08-16T00:00:00+02:00" pubdate data-updated="true">Aug 16<span>th</span>, 2010</time>
+<time datetime="2010-08-16T00:00:00+07:00" pubdate data-updated="true">Aug 16<span>th</span>, 2010</time>
         
       </p>
     
@@ -684,51 +735,6 @@ Filter out the elements with index 0 (0 (<a href="http://www.jsoftware.com/help/
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>+/ ~. ,0 ([: I. =) (3 5|/i.1000)</span></code></pre></td></tr></table></div></figure></div></notextile></p>
 <p>Overall playing with my first non-<a href="http://en.wikipedia.org/wiki/Von_Neumann_programming_languages">von Neumann programming language</a> was a rather fun experience, especially after getting over the somewhat strange syntax and the fact that most &#8220;words&#8221; have monadic and dyadic versions. From my cursory glances J&#8217;s documentation looks pretty solid and the language starts making sense a lot quicker than one might expect. It&#8217;s definitely stimulating to play around with and I think I&#8217;ll do a bit more of that over the next few weeks, especially since I haven&#8217;t yet explored the <a href="http://www.jsoftware.com/jwiki/Plot">plotting</a> and <a href="http://www.jsoftware.com/jwiki/OpenGL">OpenGL</a> frameworks.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/08/13/blog-moved-from-serendipity-to-wordpress/">Blog Moved From Serendipity to Wordpress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-08-13T00:00:00+02:00" pubdate data-updated="true">Aug 13<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Ever since I started this blog in January 2005 it was powered by <a href="http://s9y.org/">Serendipity</a> (aka S9Y). Lately however I became more and more dissatisfied with it for various reasons, so I finally took the plunge and moved it over to Wordpress. The whole process was surprisingly painless, but did have some caveats, so I decided to post a short description of what I did:</p>
-<p>There is a script for migrating S9Y to Wordpress that has been floating around for a while and has been patched/modified by various people. Luckily I found version <a href="http://snowulf.com/2010/06/11/serendipity-to-wordpress-post-import/">1.4</a>, which got updated very recently (June 2010). For some reason it didn&#8217;t work for me when I tried to migrate between S9Y 1.5.3 and Wordpress 3.0.1 directly, so I installed Wordpress 2.9.2 first, migrated the content and then upgraded to the most recent version. The import itself was very smooth and successful, categories (which I stopped using a long time ago), users, posts and comments all made it to the new blog! Once you are done importing, you can run several <span class="caps">SQL</span> statements provided in <a href="http://code.google.com/p/snowulf/source/browse/trunk/wordpress/s9y-to-wp/readme.txt">readme.txt</a>, so that your new posts will have the same IDs as the old ones, which is necessary for redirecting. For that purpose I added some <a href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html">Apache mod_rewrite </a> rules, so that old post URLs will redirect to the new locations (and so will the <span class="caps">RSS</span> and Atom feed so subscriptions don&#8217;t get interrupted):<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>RewriteEngine on
-</span><span class='line'>RewriteRule ^/archives/([0-9]+)-.*$ /archives/$1 [R,L]
-</span><span class='line'>RewriteRule ^/feeds/index.rss2 /feed [R,L]
-</span><span class='line'>RewriteRule ^/feeds/atom.xml /feed/atom [R,L]</span></code></pre></td></tr></table></div></figure></div></notextile><br />
-There&#8217;s still quite a bit to do though: first I need to find a theme I like (I might even stick with the one I&#8217;m using now and just tweak it a bit), then lots of posts need fixes to their formatting because they were written in <a href="http://www.textism.com/tools/textile/">Textile</a> (I fixed the most recent 2 so far, it&#8217;s rather quick and painless). There are also some widgets and static pages I want to move over from the old blog, so I guess this site will be a work in progress for a while. I am however very satisfied with Wordpress and glad I finally did this move I put off for so long.</p></div>
   
   
 
