@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2010-08-28T00:00:00+07:00" pubdate data-updated="true">Aug 28<span>th</span>, 2010</time>
+<time datetime="2010-08-28T00:00:00+07:00" pubdate data-updated="true">Aug 28<sup>th</sup>, 2010</time>
         
       </p>
     
@@ -128,26 +116,26 @@
 <div class="entry-content"><p>Since my <a href="http://citizen428.net/archives/436">previous post</a> on <span class="caps">APL</span> and J I&#8217;ve read the 45 or so pages of  <a href="http://www.jsoftware.com/books/pdf/easyj.pdf">Easy J</a> and am quite impressed by this nifty language. It may seem strange at first, but is very logically structured and not difficult to understand at all. That said I still need to constantly have the <a href="http://www.jsoftware.com/help/dictionary/vocabul.htm">vocabulary</a> open to write anything remotely useful, but I&#8217;m slowly starting to remember more and more of it.</p>
 <p>Here are a couple of examples of J&#8217;s expressiveness, with the first two based on exercises from our &#8220;Core Ruby&#8221; course on <a href="http://www.rubylearning.org/class/">RubyLearning.org</a>.</p>
 <p><em>How old is a person if he/she is 1 billion seconds old?</em><br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>0 365 24 60 60 #: 1000000000
-</span><span class='line'>31 259 1 46 40</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+</span><span class='line'>31 259 1 46 40</span></code></pre></td></tr></table></div></figure></div><br />
 Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (#:) it&#8217;s easy to see that the answer is 31 years, 259 days, 1 hour, 46 minutes and 40 seconds.</p>
 <p><em>Convert degress Fahrenheit to degrees Celsius.</em><br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>toc =: %&1.8@-&32
 </span><span class='line'>  toc 100
-</span><span class='line'>37.7778</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span><span class='line'>37.7778</span></code></pre></td></tr></table></div></figure></div></p>
 <p>Divide by 1.8 after (<a href="http://www.jsoftware.com/help/dictionary/d620.htm">Atop</a>,  @) subtracting 32. I suspect there&#8217;s a better way to write this, but it&#8217;s the first thing that came to my mind&#8230;</p>
 <p><em>Create a sorted set from a list of numbers.</em><br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>toset =: ({~/:)@~.
 </span><span class='line'>  toset 3 4 1 2 4 2 3 5
-</span><span class='line'>1 2 3 4 5</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span><span class='line'>1 2 3 4 5</span></code></pre></td></tr></table></div></figure></div></p>
 <p>Sort (<a href="http://www.jsoftware.com/help/dictionary/d422.htm">/:</a>) the distinct items (<a href="http://www.jsoftware.com/help/dictionary/d221.htm">nub</a>) of the list. Don&#8217;t concern yourself too much with the passive (<a href="http://www.jsoftware.com/help/dictionary/d220v.htm">~</a>) for now, it&#8217;s just there so the arguments to <a href="http://www.jsoftware.com/help/dictionary/d521.htm">take</a> end up in the right spot.</p>
 <p>That&#8217;s it for today, in my next post on J I want to focus on the language&#8217;s excellent plotting capabilities.</p></div>
 
@@ -171,24 +159,13 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
   
 
 
-<time datetime="2010-08-28T00:00:00+07:00" pubdate data-updated="true">Aug 28<span>th</span>, 2010</time>
+<time datetime="2010-08-28T00:00:00+07:00" pubdate data-updated="true">Aug 28<sup>th</sup>, 2010</time>
       
 
 
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="More tinkering with J"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2010/08/28/more-tinkering-with-j/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2010/08/28/more-tinkering-with-j/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2010/08/28/more-tinkering-with-j/" >Tweet</a>
@@ -237,6 +214,32 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

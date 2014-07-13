@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2010-08-16T00:00:00+07:00" pubdate data-updated="true">Aug 16<span>th</span>, 2010</time>
+<time datetime="2010-08-16T00:00:00+07:00" pubdate data-updated="true">Aug 16<sup>th</sup>, 2010</time>
         
       </p>
     
@@ -131,34 +119,34 @@
 <p>Being extremely impressed by what I saw, I realized that I never wrote anything in a language from the <a href="http://en.wikipedia.org/wiki/Category:APL_programming_language_family"><span class="caps">APL</span> family</a>, so I decided to change that. I couldn&#8217;t find a free version of <span class="caps">APL</span> running on <span class="caps">OSX</span> that wasn&#8217;t time limited or required me to apply for an educational license, so I finally settled on <a href="http://www.jsoftware.com/">J</a> (<a href="http://en.wikipedia.org/wiki/J_(programming_language)">Wikipedia article</a>), skimmed the docs and wrote solutions to 4 different <a href="http://projecteuler.net/">Project Euler</a> problems. They are all extremely terse, but I lack the <span class="caps">APL</span>/J knowledge to further comment on their quality. If you have experience in either language, I&#8217;d really appreciate some comments!</p>
 <p><em>Problem 7: Find the 10001st prime.</em></p>
 <p>This ones fairly easy, since the vocabulary contains <a href="http://www.jsoftware.com/help/dictionary/dpco.htm">p:</a> which will return the n-th prime (0 indexed):<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>p: 10000</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p: 10000</span></code></pre></td></tr></table></div></figure></div></p>
 <p><em>Problem 3: What is the largest prime factor of the number 600851475143?</em><br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{: q: 600851475143</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{: q: 600851475143</span></code></pre></td></tr></table></div></figure></div></p>
 <p>Get the tail (<a href="http://www.jsoftware.com/help/dictionary/d522.htm">{:</a>) of the list of prime factors (<a href="http://www.jsoftware.com/help/dictionary/dqco.htm">q:</a>)</p>
 <p><em>Problem 5: What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?</em><br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>*./ }. i.20</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*./ }. i.20</span></code></pre></td></tr></table></div></figure></div><br />
 Behead (<a href="http://www.jsoftware.com/help/dictionary/d531.htm">}.</a>) the list of all non-negative integers up to 20 (<a href="http://www.jsoftware.com/help/dictionary/didot.htm">i.20</a>) and apply (<a href="http://www.jsoftware.com/help/dictionary/d420.htm">/</a>) the least common multiple (<a href="http://www.jsoftware.com/help/dictionary/d111.htm">*.</a>).</p>
 <p><em>Problem 1: Find the sum of all the multiples of 3 or 5 below 1000.</em></p>
 <p>This one took me a bit, so we&#8217;ll do it step by step. First, apply (<a href="http://www.jsoftware.com/help/dictionary/d420.htm">/</a>) the residue (<a href="http://www.jsoftware.com/help/dictionary/d230.htm">|</a>) to the non-negative integers up to (non-inclusive) 1000 (i.1000):<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>(3 5|/i.1000)
 </span><span class='line'>0 1 2 0 1 2 0 1 2 0 1 2 ...
-</span><span class='line'>0 1 2 3 4 0 1 2 3 4 0 1 ...</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+</span><span class='line'>0 1 2 3 4 0 1 2 3 4 0 1 ...</span></code></pre></td></tr></table></div></figure></div><br />
 Filter out the elements with index 0 (0 (<a href="http://www.jsoftware.com/help/dictionary/d502.htm">[:</a> <a href="http://www.jsoftware.com/help/dictionary/dicapdot.htm">I.</a> <a href="http://www.jsoftware.com/help/dictionary/d000.htm">=</a>)):<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>0 ([: I. =) (3 5|/i.1000)
 </span><span class='line'>0 3  6  9 12 15 18 21 24 27 30 ...
-</span><span class='line'>0 5 10 15 20 25 30 35 40 45 50 ...</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span><span class='line'>0 5 10 15 20 25 30 35 40 45 50 ...</span></code></pre></td></tr></table></div></figure></div></p>
 <p>Finally append the two lists (<a href="http://www.jsoftware.com/help/dictionary/d320.htm">,</a>), remove duplicates (<a href="http://www.jsoftware.com/help/dictionary/d221.htm">~.</a>) and apply (<a href="http://www.jsoftware.com/help/dictionary/d420.htm">/</a>) <a href="http://www.jsoftware.com/help/dictionary/d100.htm">+</a>:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>+/ ~. ,0 ([: I. =) (3 5|/i.1000)</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>+/ ~. ,0 ([: I. =) (3 5|/i.1000)</span></code></pre></td></tr></table></div></figure></div></p>
 <p>Overall playing with my first non-<a href="http://en.wikipedia.org/wiki/Von_Neumann_programming_languages">von Neumann programming language</a> was a rather fun experience, especially after getting over the somewhat strange syntax and the fact that most &#8220;words&#8221; have monadic and dyadic versions. From my cursory glances J&#8217;s documentation looks pretty solid and the language starts making sense a lot quicker than one might expect. It&#8217;s definitely stimulating to play around with and I think I&#8217;ll do a bit more of that over the next few weeks, especially since I haven&#8217;t yet explored the <a href="http://www.jsoftware.com/jwiki/Plot">plotting</a> and <a href="http://www.jsoftware.com/jwiki/OpenGL">OpenGL</a> frameworks.</p></div>
 
 
@@ -181,7 +169,7 @@ Filter out the elements with index 0 (0 (<a href="http://www.jsoftware.com/help/
   
 
 
-<time datetime="2010-08-16T00:00:00+07:00" pubdate data-updated="true">Aug 16<span>th</span>, 2010</time>
+<time datetime="2010-08-16T00:00:00+07:00" pubdate data-updated="true">Aug 16<sup>th</sup>, 2010</time>
       
 
 <span class="categories">
@@ -194,17 +182,6 @@ Filter out the elements with index 0 (0 (<a href="http://www.jsoftware.com/help/
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Rewiring my brain: APL and J"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2010/08/16/rewiring-my-brain-apl-and-j/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2010/08/16/rewiring-my-brain-apl-and-j/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2010/08/16/rewiring-my-brain-apl-and-j/" >Tweet</a>
@@ -253,6 +230,32 @@ Filter out the elements with index 0 (0 (<a href="http://www.jsoftware.com/help/
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

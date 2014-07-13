@@ -16,7 +16,12 @@ And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#
 3
 4
 5
-require &#39;rubygems &hellip;">
+1
+2
+3
+4
+5
+&lt;span &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -40,18 +45,6 @@ require &#39;rubygems &hellip;">
 <meta name="verify-postrank" content="q9zqqyw" />
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
-
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
 
 
   
@@ -84,7 +77,7 @@ require &#39;rubygems &hellip;">
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -125,7 +118,7 @@ require &#39;rubygems &hellip;">
   
 
 
-<time datetime="2009-05-03T00:00:00+07:00" pubdate data-updated="true">May 3<span>rd</span>, 2009</time>
+<time datetime="2009-05-03T00:00:00+07:00" pubdate data-updated="true">May 3<sup>rd</sup>, 2009</time>
         
       </p>
     
@@ -134,17 +127,22 @@ require &#39;rubygems &hellip;">
 
 <div class="entry-content"><p>From <a href="http://rubyquiz.strd6.com/quizzes/202">Ruby Quiz #202</a>:</p>
 <p><em>And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#8217;s solution:</em></p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;hpricot&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
-</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Hpricot</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;http://www.eveandersson.com/pi/digits/100000&#39;</span><span class="p">))</span>
-</span><span class='line'><span class="nb">puts</span> <span class="p">(</span><span class="n">doc</span><span class="o">/</span><span class="s1">&#39;pre&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">inner_html</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;rubygems&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hpricot&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;open-uri&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Hpricot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://www.eveandersson.com/pi/digits/100000&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pre&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inner_html&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p><em>It finishes in less than one second for the entire 100,000 digits!</em></p>
 <p>And no, this wasn&#8217;t a serious submission&#8230; :-)</p></div>
 
@@ -168,7 +166,7 @@ require &#39;rubygems &hellip;">
   
 
 
-<time datetime="2009-05-03T00:00:00+07:00" pubdate data-updated="true">May 3<span>rd</span>, 2009</time>
+<time datetime="2009-05-03T00:00:00+07:00" pubdate data-updated="true">May 3<sup>rd</sup>, 2009</time>
       
 
 <span class="categories">
@@ -181,17 +179,6 @@ require &#39;rubygems &hellip;">
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="I'm in your Pi, crunching your numbers ;-)"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2009/05/03/im-in-your-pi-crunching-your-numbers/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2009/05/03/im-in-your-pi-crunching-your-numbers/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2009/05/03/im-in-your-pi-crunching-your-numbers/" >Tweet</a>
@@ -240,6 +227,32 @@ require &#39;rubygems &hellip;">
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

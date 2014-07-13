@@ -35,18 +35,6 @@ Now &hellip;">
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -78,7 +66,7 @@ Now &hellip;">
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -119,7 +107,7 @@ Now &hellip;">
   
 
 
-<time datetime="2005-09-04T00:00:00+07:00" pubdate data-updated="true">Sep 4<span>th</span>, 2005</time>
+<time datetime="2005-09-04T00:00:00+07:00" pubdate data-updated="true">Sep 4<sup>th</sup>, 2005</time>
         
       </p>
     
@@ -130,21 +118,27 @@ Now &hellip;">
 <p>Now wouldn&#8217;t it be cool if you also could use Vim to view your man pages, syntax highlighting included? If you answered this question with &#8220;yes&#8221;, here are some good news, you really can do that!</p>
 <p align="center"><a href="http://gallery.symbion.at/Misc/man_vith_vim"><img src="http://gallery.symbion.at/albums/Misc/man_vith_vim.thumb.png" alt="Vim as man pager" target="_blank" /></a></p><p><!--more-->I got this idea from a screenshot I saw somewhere else. Some googling led me to <a href="http://www.vim.org/tips/tip.php?tip_id=167">Vim Tip #167</a>, which explains how to set up Vim as your $<span class="caps">MANPAGER</span>. Make sure you also add the vimscript posted there to your ~/.vim/after/syntax/man.vim, it really makes for some cool syntax highlighting and you can set extra options there (for example I use it to disable line numbers and code folding which I set in my default <a href="http://dev.gentoo.org/~citizen428/configs/vimrc">.vimrc</a> but which I don&#8217;t need in manual pages).</p>
 <p>Now wouldn&#8217;t it be even cooler if you also had Vim&#8217;s syntax highlighting in less? Well, you can, and it&#8217;s not even hard (inspired by <a href="http://www.vim.org/tips/tip.php?tip_id=121">Vim tip #121</a>)!</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ln -s $VIMRUNTIME/macros/less.sh /usr/local/bin/less
-</span><span class='line'>$ chmod +x /usr/local/bin/less</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;$ ln -s $VIMRUNTIME/macros/less.sh /usr/local/bin/less
+&lt;/span&gt;&lt;span class='line'&gt;$ chmod +x /usr/local/bin/less&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>Now that you have this symlink, you need to edit your ~/.vim/scripts.vim and put the following into it:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>if did_filetype()       " filetype already set..
-</span><span class='line'>elseif getline(1) =~ '^\(.\+\)(\d\{1}).\+\1(\d\{1})$'
-</span><span class='line'>    set filetype=man
-</span><span class='line'>endif</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;if did_filetype()       " filetype already set..
+&lt;/span&gt;&lt;span class='line'&gt;elseif getline(1) =~ '^\(.\+\)(\d\{1}).\+\1(\d\{1})$'
+&lt;/span&gt;&lt;span class='line'&gt;    set filetype=man
+&lt;/span&gt;&lt;span class='line'&gt;endif&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>Finally you have to export the the correct <span class="caps">PAGER</span> value to your environment (my example uses the bash shell, insert the following code either in your ~/.bashrc or your ~/.bash_profile):</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -153,15 +147,24 @@ Now &hellip;">
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>if [[ -x /usr/local/bin/vless && -x /usr/bin/col ]] ; then
-</span><span class='line'>    export PAGER="col -b | vless"
-</span><span class='line'>    alias less="vless"
-</span><span class='line'>    alias more="vless"
-</span><span class='line'>else
-</span><span class='line'>    export PAGER="less"
-</span><span class='line'>    export LESS="-e"
-</span><span class='line'>    alias more="less"
-</span><span class='line'>fi</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;if [[ -x /usr/local/bin/vless &amp;&amp; -x /usr/bin/col ]] ; then
+&lt;/span&gt;&lt;span class='line'&gt;    export PAGER="col -b | vless"
+&lt;/span&gt;&lt;span class='line'&gt;    alias less="vless"
+&lt;/span&gt;&lt;span class='line'&gt;    alias more="vless"
+&lt;/span&gt;&lt;span class='line'&gt;else
+&lt;/span&gt;&lt;span class='line'&gt;    export PAGER="less"
+&lt;/span&gt;&lt;span class='line'&gt;    export LESS="-e"
+&lt;/span&gt;&lt;span class='line'&gt;    alias more="less"
+&lt;/span&gt;&lt;span class='line'&gt;fi&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>Enjoy!</p></div>
 
 
@@ -184,12 +187,12 @@ Now &hellip;">
   
 
 
-<time datetime="2005-09-04T00:00:00+07:00" pubdate data-updated="true">Sep 4<span>th</span>, 2005</time>
+<time datetime="2005-09-04T00:00:00+07:00" pubdate data-updated="true">Sep 4<sup>th</sup>, 2005</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/foss/'>FOSS</a>, <a class='category' href='/blog/categories/tips/'>tips</a>
+    <a class='category' href='/blog/categories/foss/'>foss</a>, <a class='category' href='/blog/categories/tips/'>tips</a>
   
 </span>
 
@@ -197,17 +200,6 @@ Now &hellip;">
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Vim goodness"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2005/09/04/vim-goodness/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2005/09/04/vim-goodness/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2005/09/04/vim-goodness/" >Tweet</a>
@@ -256,6 +248,32 @@ Now &hellip;">
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

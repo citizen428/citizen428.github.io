@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2010-08-13T00:00:00+07:00" pubdate data-updated="true">Aug 13<span>th</span>, 2010</time>
+<time datetime="2010-08-13T00:00:00+07:00" pubdate data-updated="true">Aug 13<sup>th</sup>, 2010</time>
         
       </p>
     
@@ -127,14 +115,14 @@
 
 <div class="entry-content"><p>Ever since I started this blog in January 2005 it was powered by <a href="http://s9y.org/">Serendipity</a> (aka S9Y). Lately however I became more and more dissatisfied with it for various reasons, so I finally took the plunge and moved it over to Wordpress. The whole process was surprisingly painless, but did have some caveats, so I decided to post a short description of what I did:</p>
 <p>There is a script for migrating S9Y to Wordpress that has been floating around for a while and has been patched/modified by various people. Luckily I found version <a href="http://snowulf.com/2010/06/11/serendipity-to-wordpress-post-import/">1.4</a>, which got updated very recently (June 2010). For some reason it didn&#8217;t work for me when I tried to migrate between S9Y 1.5.3 and Wordpress 3.0.1 directly, so I installed Wordpress 2.9.2 first, migrated the content and then upgraded to the most recent version. The import itself was very smooth and successful, categories (which I stopped using a long time ago), users, posts and comments all made it to the new blog! Once you are done importing, you can run several <span class="caps">SQL</span> statements provided in <a href="http://code.google.com/p/snowulf/source/browse/trunk/wordpress/s9y-to-wp/readme.txt">readme.txt</a>, so that your new posts will have the same IDs as the old ones, which is necessary for redirecting. For that purpose I added some <a href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html">Apache mod_rewrite </a> rules, so that old post URLs will redirect to the new locations (and so will the <span class="caps">RSS</span> and Atom feed so subscriptions don&#8217;t get interrupted):<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>RewriteEngine on
 </span><span class='line'>RewriteRule ^/archives/([0-9]+)-.*$ /archives/$1 [R,L]
 </span><span class='line'>RewriteRule ^/feeds/index.rss2 /feed [R,L]
-</span><span class='line'>RewriteRule ^/feeds/atom.xml /feed/atom [R,L]</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+</span><span class='line'>RewriteRule ^/feeds/atom.xml /feed/atom [R,L]</span></code></pre></td></tr></table></div></figure></div><br />
 There&#8217;s still quite a bit to do though: first I need to find a theme I like (I might even stick with the one I&#8217;m using now and just tweak it a bit), then lots of posts need fixes to their formatting because they were written in <a href="http://www.textism.com/tools/textile/">Textile</a> (I fixed the most recent 2 so far, it&#8217;s rather quick and painless). There are also some widgets and static pages I want to move over from the old blog, so I guess this site will be a work in progress for a while. I am however very satisfied with Wordpress and glad I finally did this move I put off for so long.</p></div>
 
 
@@ -157,7 +145,7 @@ There&#8217;s still quite a bit to do though: first I need to find a theme I lik
   
 
 
-<time datetime="2010-08-13T00:00:00+07:00" pubdate data-updated="true">Aug 13<span>th</span>, 2010</time>
+<time datetime="2010-08-13T00:00:00+07:00" pubdate data-updated="true">Aug 13<sup>th</sup>, 2010</time>
       
 
 <span class="categories">
@@ -170,17 +158,6 @@ There&#8217;s still quite a bit to do though: first I need to find a theme I lik
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Blog moved from Serendipity to Wordpress"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2010/08/13/blog-moved-from-serendipity-to-wordpress/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2010/08/13/blog-moved-from-serendipity-to-wordpress/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2010/08/13/blog-moved-from-serendipity-to-wordpress/" >Tweet</a>
@@ -229,6 +206,32 @@ There&#8217;s still quite a bit to do though: first I need to find a theme I lik
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: FOSS | citizen428.blog()]]></title>
+  <title><![CDATA[Category: foss | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/foss/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2014-05-08T23:13:27+07:00</updated>
+  <updated>2014-07-13T20:56:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>

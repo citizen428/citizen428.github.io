@@ -1,0 +1,994 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Yesterday afternoon I decided it&#8217;s about time I finally learn how to write Ruby C extensions, so I went ahead and rewrote one of our &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.net/posts/13">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+<meta name="verify-postrank" content="q9zqqyw" />
+<link rel="openid.server" href="http://www.myopenid.com/server" />
+<link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/24/ruby-going-to-c-side/">Ruby: Going to the C Side</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-24T00:00:00+07:00" pubdate data-updated="true">Jun 24<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yesterday afternoon I decided it&#8217;s about time I finally learn how to write Ruby C extensions, so I went ahead and rewrote one of our <a href="http://www.rubylearning.org/class/">RubyLearning.org</a> exercises in C. Here&#8217;s the exercise description:</p>
+<blockquote><p>Write a class called Person, that has balance as an instance variable and<br/>the following public method: show_balance.</p><p>I shall create the Person object as follows:</p><p>p = Person.new(40000)<br/>puts p.show_balance # calling the method</p></blockquote>
+<p>Here&#8217;s the program in C, with relevant function signatures included as comments:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+<span class='line-number'>15</span><br />
+<span class='line-number'>16</span><br />
+<span class='line-number'>17</span><br />
+<span class='line-number'>18</span><br />
+<span class='line-number'>19</span><br />
+<span class='line-number'>20</span><br />
+<span class='line-number'>21</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt;&lt;span class="cp"&gt;#include &amp;lt;ruby.h&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="nf"&gt;initialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_iv_set(VALUE obj, char *name, VALUE value)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_iv_set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="nf"&gt;show_balance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_iv_get(VALUE obj, char *name)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;rb_iv_get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Init_person&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_define_class(char *name, VALUE superclass)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;cPerson&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rb_define_class&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Person&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rb_cObject&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// void rb_define_method(VALUE classmod, char *name, VALUE(*func)(), int argc)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_define_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cPerson&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;initialize&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;initialize&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_define_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cPerson&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;show_balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;show_balance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>I think the code is very self-explanatory, almost like writing Ruby in C. As you can see we define a class called &#8220;Person&#8221; in the &#8220;Init_person&#8221; function (which is called by Ruby when it loads our module), where we add the functions as instance methods with &#8220;rb_define_method&#8221;. To compile this, we need an extconf.rb, which contains the following:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt;&lt;span class="n"&gt;require&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;mkmf&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;extension_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;create_makefile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extension_name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Now we can build and run it:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+</pre></td><td class='code'><pre><code class='bash'>&lt;span class='line'&gt;→ ruby extconf.rb
+&lt;/span&gt;&lt;span class='line'&gt;creating Makefile
+&lt;/span&gt;&lt;span class='line'&gt;→ make
+&lt;/span&gt;&lt;span class='line'&gt;gcc -I. &lt;span class="o"&gt;[&lt;/span&gt;output snipped&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;→ irb
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; &lt;span class="nv"&gt;$:&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class="s1"&gt;&amp;#39;.&amp;#39;&lt;/span&gt; &lt;span class="c"&gt;#=&amp;gt; [..., &amp;#39;.&amp;#39;]&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; require &lt;span class="s1"&gt;&amp;#39;person&amp;#39;&lt;/span&gt; &lt;span class="c"&gt;#=&amp;gt; true&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; &lt;span class="nv"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Person.new&lt;span class="o"&gt;(&lt;/span&gt;3000&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="c"&gt;#=&amp;gt; #&amp;lt;Person:0x00000100a01940 @balance=3000&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; p.show_balance &lt;span class="c"&gt;#=&amp;gt; 3000&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>As you can see everything works as if we had defined the class in Ruby. Let&#8217;s add another method to deposit some money, which gives us a chance to demonstrate &#8220;rb_funcall&#8221;:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="nf"&gt;deposit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_funcall(VALUE recv, ID id, int argc, ... )&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rb_funcall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rb_iv_get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;rb_intern&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;+&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_iv_set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>We also need to add this function as a method in &#8220;Init_person&#8221;:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt; &lt;span class="n"&gt;rb_define_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cPerson&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;deposit&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;deposit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Does it work?</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deposit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#=&amp;gt; 3400&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>It does and we&#8217;ve successfully created a Ruby class from C. Probably not the type of class you&#8217;d really implement this way, but good enough as an example.</p>
+<p>Recommended reading:</p>
+<ul>
+<li><a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ext_ruby.html">Extending Ruby</a> from the PickAxe</li>
+<li>Mark Volkmann&#8217;s presentation <a href="http://java.ociweb.com/mark/NFJS/RubyCExtensions.pdf">Ruby C Extensions</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/19/information-overload-2011-06-19/">Information Overload 2011-06-19</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-19T00:00:00+07:00" pubdate data-updated="true">Jun 19<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://io9.com/5806767/">Take a look at the world&#8217;s oldest mathematical object</a><br>A short article about the Ishango bone, apparently the &quot;<a href="http://mathworld.wolfram.com/IshangoBone.html">oldest known object containing logical carvings</a>&quot;.</li>
+<li><a href="http://www.scienceblogs.de/astrodicticum-simplex/2011/06/nemesis-der-todesstern-und-die-dinosaurier.php">Nemesis: Der Todesstern und die Dinosaurier</a><br>Somehow I&#8217;ve missed the <a href="http://en.wikipedia.org/wiki/Nemesis_(hypothetical_star)">Nemesis theory</a> until now, but it sure is interesting (in German).</li>
+<li><a href="http://www.codequarterly.com/2011/rich-hickey/">Rich Hickey Q&amp;A</a><br>Great interview with Rich Hickey in Code Quarterly. Whenever I hear/read something by Rich, I understand why Clojure is such an awesome language.</li>
+<li><a href="http://www.theregister.co.uk/2011/06/14/ice_age/">Earth may be headed into a mini Ice Age within a decade</a><br>Hm, finally a good excuse to move to warmer places for good? <a href="http://www.newscientist.com/blogs/shortsharpscience/2011/06/new-ice-age-dont-count-on-it.html">Or not</a>?</li>
+<li><a href="http://www.theatlantic.com/infocus/2011/06/diy-weapons-of-the-libyan-rebels/100086/"><span class="caps">DIY</span> Weapons of the Libyan Rebels</a><br>The creativity of humans when it comes to killing each other never ceases to amaze and sadden me.</li>
+<li><a href="http://techcrunch.com/2011/06/17/indian-village-renamed-snapdeal-com-and-its-not-a-cheap-marketing-stunt/">Indian Village Renamed Snapdeal.com. And It&#8217;s Not A Cheap Marketing Stunt!</a><br><span class="caps">IMHO</span> as long as people get helped, it doesn&#8217;t even matter if it&#8217;s a marketing stunt or not. More companies should do something for their local communities.</li>
+<li><a href="http://pastebin.com/HZtH523f">LulzSec &#8211; 1000th tweet statement</a><br>Since LulzSec was all over the news this week, I decided to include their open letter. There also was an <a href="http://pastebin.com/pbhBQLKy">answer</a>.</li>
+<li><a href="http://www.digitaltrends.com/computing/translation-technology-may-let-humans-speak-with-dolphins/">Translation technology may let humans speak with dolphins</a><br>That would be awesome.</li>
+<li><a href="http://www.thecompulsiveliar.com/top-10-media-manipulation-strategies.html">Top 10 media manipulation strategies</a><br>A list compiled by Noam Chomsky.</li>
+<li><a href="http://www.digitaltrends.com/computing/wow-high-school-grad-builds-8-bit-computer-from-scratch-complete-with-custom-os-and-pong/">High school grad builds 8-bit computer from scratch, complete with custom OS and Pong</a><br>Simply amazing, an 18 yo builds a computer from scratch and then implements a custom OS and some games.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/03/information-overload-2011-06-03/">Information Overload 2011-06-03</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-03T00:00:00+07:00" pubdate data-updated="true">Jun 3<sup>rd</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Information Overload is a bit early this week and may be skipped altogether next Sunday. After that it should be back to the regular schedule.</p>
+<ul>
+<li><a href="http://dorophone.blogspot.com/2011/05/hyperturtle-monad-makes-pretty-pictures.html">A Hyperturtle Monad Makes Pretty Pictures</a><br>This article on monads isn&#8217;t only awesome because it develops a novel one instead of reiterating one of the well-known simple monads, but also because it does so using <a href="http://racket-lang.org/">Racket</a>.</li>
+<li><a href="http://online.wsj.com/article/SB10001424052748704889404576277391449002016.html">Iran Vows to Unplug Internet</a><br>Not that it&#8217;s that suprising, but the amount of world wide censorship efforts we saw recently is shocking.</li>
+<li><a href="http://www.guardian.co.uk/books/2011/may/21/jon-ronson-how-to-spot-a-psychopath">How to spot a psychopath</a><br>In case you ever wondered, you&#8217;ll find answers in this interesting article. As always, things are not really black and white, there&#8217;s a lot of gray in between.</li>
+<li><a href="http://www.slate.com/id/2295413/">The Case&mdash;Please Hear Me Out&mdash;Against the Em Dash</a><br>What a delightful read, especially thanks to the ironic overuse of em-dashes. Personally I&#8217;m more of a parenthesis man.</li>
+<li><a href="http://www.voxeu.org/index.php?q=node/6596">How the long-gone Habsburg Empire is still visible in Eastern European bureaucracies today</a><br>This is quite an interesting result, I want to read more on this.</li>
+<li><a href="http://www.physorg.com/news/2011-05-track-secret-feral-free-roaming-house.html">Researchers track the secret lives of feral and free-roaming house cats</a><br>Cats are cool.</li>
+<li><a href="http://flavorwire.com/180906/hacking-museums-our-retrospective-of-interventionists-and-crashers">Hacking Museums: Our Retrospective of Interventionists and Crashers</a><br>Stirring up emotion, provoking, pushing the limits, isn&#8217;t this what art really is about?</li>
+<li><a href="http://lesswrong.com/lw/60y/action_and_habit/">Action and habit</a><br>Sometimes &#8220;This is just what I do&#8221; is a good answer after all. This is in the same vain as the article about ritualizing I posted not too long ago and is something I&#8217;ve observed in many smart people as a basically subconscious action.</li>
+<li><a href="http://online.wsj.com/article/SB10001424052748703691804575254533386933138.html">Humans: Why They Triumphed</a><br>While it makes me somewhat wary when an economics magazine identifies trade as most important aspect of human evolution, the argument presented seems to have some merit, so I&#8217;ll let you make up your own mind.</li>
+<li><a href="http://the-gay-bar.com/2011/06/01/eine-neue-hackerethik/">Eine neue Hackerethik</a><br>Trying to establish a new hacker ethic (in German).</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/29/information-overload-2011-05-29/">Information Overload 2011-05-29</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T00:00:00+07:00" pubdate data-updated="true">May 29<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.businessweek.com/print/magazine/content/11_22/b4230064852768.htm">Red Bull&#8217;s Billionaire Maniac</a><br>Interesting article about Austrian entrepreneur and founder of Red Bull, Dietrich Mateschitz.</li>
+<li><a href="http://www.slate.com/id/2295099/pagenum/all/">Prophecy Fail</a><br>How the human mind deals with failed prophecies.</li>
+<li><a href="http://blogs.hbr.org/schwartz/2011/05/the-only-way-to-get-important.html">The Only Way to Get Important Things Done</a><br>That&#8217;s interesting, I noticed a similar pattern of ritual building in myself and it works really quite well.</li>
+<li><a href="http://www.untoldentertainment.com/blog/2011/05/24/sissys-magical-ponycorn-adventure/">5-Year-Old Girl Makes Video Game</a><br>Awesome parenting, this is great!</li>
+<li><a href="http://www.untoldentertainment.com/blog/2011/05/24/sissys-magical-ponycorn-adventure/">Depixelizing Pixel Art: Upscaling Retro 8-bit Games</a><br>There are some amazing results in there, I&#8217;ll definitely have to read the paper.</li>
+<li><a href="http://www.wired.com/wiredscience/2011/05/ads-implant-false-memories/">Ads Implant False Memories</a><br>This is pretty fascinating, the human brain is full of wonder. On a side note I realized how few ads I&#8217;m exposed to due to not having a TV and mainly consuming newspapers and magazines through their web sites (with an ad blocker).</li>
+<li><a href="http://www.zeit.de/politik/ausland/2011-05/fpoe-oesterreich-umfragen/seite-1">Heinz-Christian Strache &#8211; Aufstieg eines Hasspredigers</a><br>If you are not Austrian but can read German, this might be an interesting article about Austria&#8217;s right wing party which is currently leading the opinion polls.</li>
+<li><a href="http://www.paulgraham.com/nerds.html">Why Nerds Are Unpolular</a><br>Very good article by Paul Graham. While my school was far (in fact very far) from perfect, I&#8217;m still glad I didn&#8217;t have to go to a US high-school.</li>
+<li><a href="http://www.physorg.com/news/2011-04-scientists-spacetime-dimension.html">Scientists suggest spacetime has no time dimension</a><br>And this is why I like physics so much as a subject.</li>
+<li><a href="http://www.dnaftb.org/"><span class="caps">DNA</span> From The Beginning</a><br>Interested in genetics? You&#8217;ll love this site!</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/22/information-overload-2011-05-22/">Information Overload 2011-05-22</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-22T00:00:00+07:00" pubdate data-updated="true">May 22<sup>nd</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://altdevblogaday.org/2011/05/17/understanding-the-fourier-transform/">Understanding the Fourier transform by Stuart Riffle</a><br>You know I&#8217;m a big fan of good (math) explanations and this is no exception. I really like the color coded formula!</li>
+<li><a href="http://inoveryourhead.net/the-complete-guide-to-not-giving-a-fuck/">The Complete Guide to Not Giving a Fuck</a><br>Some good advice in there, but like with most things in life, the right balance is the key.</li>
+<li><a href="http://www.scientificamerican.com/blog/post.cfm?id=you-can-increase-your-intelligence-2011-03-07">You can increase your intelligence: 5 ways to maximize your cognitive potential</a><br>Interesting article in the Scientific American. Funny tidbit: I regularly observe all the described behaviors in the hacker community, seems we are doing well in this regard.</li>
+<li><a href="http://acko.net/blog/on-termkit">On TermKit</a><br>While I&#8217;m not sure I&#8217;d use this, it&#8217;s interesting to see the Unix terminal re-imagined.</li>
+<li><a href="http://www.rollingstone.com/politics/news/the-people-vs-goldman-sachs-20110511">The People vs. Goldman Sachs</a><br>To get an idea what this is about, here&#8217;s a quote from the article: &#8220;This is America: Corporate stealing is practically the national pastime, and Goldman Sachs is far from the only company to get away with doing it&#8221;.</li>
+<li><a href="http://www.foreignpolicy.com/articles/2011/04/25/how_food_explains_the_world?page=full">How Food Explains the World</a><br>I really like this Foreign Policy article on food, a topic we should really tackle on a global scale.</li>
+<li><a href="http://www.cosmosmagazine.com/news/4321/first-habitable-exoplanet-confirmed">First &#8216;habitable&#8217; exoplanet confirmed</a><br>Don&#8217;t pack your bags just yet, but this is still cool.</li>
+<li><a href="http://sz-magazin.sueddeutsche.de/texte/anzeigen/35651">Ein Job zum Davonlaufen</a><br>Police officer, a job to run away from? (in German)</li>
+<li><a href="http://www.viceland.com/int/v18n5/htdocs/life-is-a-cosmic-giggle-803.php?page=1">Life is a cosmic giggle on the breath of the universe</a><br>Wow, once again real life is much more screwed up than TV. If you think <a href="http://en.wikipedia.org/wiki/Breaking_Bad">Breaking Bad</a> is hardcore, read this article/interview.</li>
+<li><a href="http://science.nasa.gov/science-news/science-at-nasa/2011/04may_epic/"><span class="caps">NASA</span> Announces Results Of Epic Space-Time Experiment</a><br>47 years in the making, this experiment proves the existence of a space-time vortex around Earth.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/18/tom-and-michael-vs-the-monad/">Tom and Michael vs the Monad</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-18T00:00:00+07:00" pubdate data-updated="true">May 18<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, over the last few weeks <a href="http://mrjaba.posterous.com/">Tom Crinson</a> and I read another paper, this time &#8220;The essence of functional programming&#8221; (available <a href="http://homepages.inf.ed.ac.uk/wadler/topics/monads.html">here</a>) by Philip Wadler, one of the principal designers of Haskell. Tom&#8217;s post is <a href="http://mrjaba.posterous.com/michael-and-tom-vs-the-monad">here</a>.</p>
+<p><strong>The paper</strong></p>
+<p>Don&#8217;t let yourself be fooled by the title, this is <strong>not</strong> an introduction to functional programming or lambda calculus. Instead it talks about monads, a topic one reads a lot about and that&#8217;s often made out to be a lot more complicated than it really is.</p>
+<p>The whole paper is 23 pages long, so I won&#8217;t really summarize it all, but rather try to give you an idea if it might be an interesting read for you. Section 1 lays out some basics and explains the difference between pure and impure code. In section 2 the reader finally encounters the monad, defined using the usual triple <em>(M, unitM, bindM)</em>. After that we see several versions of a simple call-by-value interpreter, demonstrating various well-known monads (identity, state, error, list etc), as well as a rewrite of the interpreter to implement call-by-name semantics. For some more theory Wadler lays down the monadic laws and provides a definition of monads in terms of <em>mapM</em> and <em>joinM</em>.  He also mentions that list comprehension notation generalizes to arbitrary monads, which I found to be quite interesting. Section 3 introduces continuation passing style (<span class="caps">CPS</span>) and its relation to monads, before section 4 talks about the influence of monads on Haskell, including some cool info tidbits about early Haskell versions that seem to lack do-notation and the bind operator (the paper is from 1992 after all). Last but not least there&#8217;s the wrap-up and the work is put in context of other research.</p>
+<p><strong>Takeaway</strong></p>
+<p>Monads are not rocket science, they are just another tool in a programmer&#8217;s toolbox, especially of a programmer in a pure functional language. In the end, a monad really isn&#8217;t much more than a formalized computation, following certain rules like &#8220;I put in an A and get out a B, so what ever comes next has to take a B&#8221;. Ok, maybe that was a bit oversimplified, but it&#8217;s definitely not magic. In fact I wrote up an explanation for Tom, trying to get the basic idea across:</p>
+<blockquote>
+<p>If you imagine a Monad as some sort of box, UnitM is what puts an item into the box. Bind extracts such a value (M a), processes it with a function (a &#8594; M b) and returns another item in a box (M b). Why is that cool, because you can&#8217;t leave the box! If you think about it &#8211; and that&#8217;s an oversimplification &#8211; it&#8217;s a bit like aligning your types so you can chain method calls (just that Unit and Bind have to follow the Monadic laws). Imagine in Ruby you have an intermediary result but instead of returning a plain value OR an array, you always make sure to return [*values]. This way you can chain anything that expects an array, no matter how many intermediary values there were. That&#8217;s a bit like having an item wrapped up in some sort of array monad (once again, we are in oversimplification land here, but maybe the analogy helps).</p>
+</blockquote>
+<p><strong>Difficulty of the paper</strong></p>
+<p>The author states that he assumes no previous knowledge of category theory or Haskell (the language used in the examples), but judging Tom&#8217;s reaction to the paper, I&#8217;m not convinced by that. For somebody who has seen Haskell before and/or has a basic understanding of Monads already this is a pretty good and easy to follow read though.</p>
+<p><strong>Q&amp;A</strong></p>
+<p>Since Tom had some trouble with the paper &#8211; but bravely fought his way through it &#8211; we exchanged quite some emails on the actual content. This is cool, because it&#8217;s exactly the reason we are doing this! First we needed to get some Haskell syntax out of the way:</p>
+<blockquote>
+<p>Let&#8217;s do it slow with actual Haskell (this is a stupid function though, you could just do add = (+)):</p>
+<p>add :: Int &#8594; Int &#8594; Int<br />
+add x y = x + y</p>
+<p>This means that &#8220;add&#8221; is a function that takes two &#8220;Ints&#8221; and returns an &#8220;Int&#8221;. The value after the last &#8594; is the actual return value of the function. If you wonder about the intermediate arrows, that&#8217;s because Haskell functions technically only take one argument and return a new function which takes another argument etc.</p>
+<p>So what happens when you call</p>
+<p>add 5 6</p>
+<p>is that &#8220;add&#8221; gets applied to the argument 5, which returns another function that looks roughly like (add y = 5 + y) which in the end returns the number 11. This is a result of Haskell being based on the lambda calculus, where the equivalent expression would be \x.\y.x+y. For practical purposes it&#8217;s enough to remember the following though: whatever goes before the last &#8594; are the arguments to the function, the thing after the last &#8594; is the return type.</p>
+<p>What about polymorphic functions? Easy:</p>
+<p>add :: (Num a) =&gt; a &#8594; a &#8594; a<br />
+add x y = x + y</p>
+<p>Here we just say that we take 2 arguments of type &#8220;a&#8221; and return another &#8220;a&#8221;, with the constraint that &#8220;a&#8221; has to be numeric.</p>
+<p>Since it also is covered in the paper, here&#8217;s an example of a higher order function, good old map (that&#8217;s the same as Ruby&#8217;s map):</p>
+<p>map :: (a &#8594; b) &#8594; [a] &#8594; [b]<br />
+map f []     = []<br />
+map f (x:xs) = f x : map f xs</p>
+<p>This basically tells us that &#8220;map&#8221; takes two arguments. The first is itself a one-argument function ((a &#8594; b)) the second a list of values ([a]) and we return another list of values ([b]). Note that &#8220;a&#8221; and &#8220;b&#8221; can be the same type, but don&#8217;t have to be.</p>
+</blockquote>
+<p><em>Could you please, as simply as possible, define a Monad?</em><br />
+I have to quote Brian Beckman on that, &#8220;Monads are a theory for interacting things&#8221;. Or to paraphrase, Monads are an abstraction that allows you to define how the various stages of a computation interact. It&#8217;s a sequence of operations, put into context.</p>
+<p><em>What would you use a Monad for?</em><br />
+As seen in the paper, Monads are quite a flexible abstraction and can be used for many different things (take for example the <a href="http://haskell.org/haskellwiki/MapReduce_as_a_monad">MapReduce Monad</a>). Personally I&#8217;ve never used one outside of my limited Haskell experience, but .Net developers may find it interesting to know that <a href="http://msdn.microsoft.com/en-us/library/bb397926.aspx"><span class="caps">LINQ</span></a> is a monad (more on that <a href="http://devhawk.net/2008/07/30/monadic-philosophy-part-2-the-linq-monad/">here</a>).</p>
+<p><em>Can I use them in Ruby?</em><br />
+You can, in fact there&#8217;s a link listed below that shows simple Monads implemented in Ruby. It&#8217;s more a question of how useful they actually are in a mostly object oriented language that allows for side-effects.</p>
+<p><em>If I wanted to learn more about this sort of thing where should I go?</em><br />
+Brian Beckman recorded an <a href="http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads">awesome 67 minute video</a> on the topic, which is probably the best introduction I ever saw.</p>
+<p><strong>Links</strong></p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Monad_(functional_programming)">Wikipedia: Monad (functional programming)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Continuation-passing_style">Wikipedia: Continuation-passing style</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Call-with-current-continuation">Call-with-current-continuation</a></li>
+<li><a href="http://www.ruby-doc.org/core/classes/Kernel.html#M001422">call/cc in Ruby</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_comprehension">Wikipedia: List comprehension</a></li>
+<li><a href="http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads">Brian Beckman: Don&#8217;t fear the Monad</a></li>
+<li><a href="http://moonbase.rydia.net/mental/writings/programming/monads-in-ruby/00introduction.html">Monads in Ruby</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/15/information-overload-2011-05-15/">Information Overload 2011-05-15</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-15T00:00:00+07:00" pubdate data-updated="true">May 15<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://1000memories.com/blog/75-number-of-people-who-have-ever-lived">Crunching the numbers: How many people have ever lived?</a><br>Why is math awesome? Because it answers questions like this one. Don&#8217;t worry, no spoilers ;-)</li>
+<li><a href="http://torrentfreak.com/the-pirate-bay-the-battle-of-internets-is-about-to-begin-110509/">The Pirate Bay: &#8216;The Battle of Internets is About to Begin&#8217;</a><br>TPB&#8217;s answer to the threat of a &#8220;Great Firewall&#8221; in Europe.</li>
+<li><a href="http://www.logolounge.com/article.asp?aid=lnPf">2011 Trends</a><br><a href="http://www.logolounge.com/default.asp">LongoLounge.com</a>&#8217;s annual logo design trends.</li>
+<li><a href="http://www.douglasadams.com/dna/19990901-00-a.html">How to Stop Worrying and Learn to Love the Internet</a><br>Wow, Douglas Adams already had a better grasp of the internet in 1999 than a lot of the people in decision-making positions have today.</li>
+<li><a href="http://www.blackhat.com/presentations/bh-europe-06/bh-eu-06-biondi/bh-eu-06-biondi-up.pdf">Silver Needle in the Skype</a><br>Since everyone was talking about Skype this week, I thought I&#8217;d include this very interesting presentation from Black Hat 2006.</li>
+<li><a href="http://scienceblogs.com/startswithabang/2011/04/the_history_of_pretty_much_eve.php">The History of Pretty Much Everything</a><br>If you like astronomy and/or physics, you&#8217;ll probably like this too.</li>
+<li><a href="http://www.guardian.co.uk/technology/2011/may/11/anonymous-behind-the-mask">Anonymous: peering behind the mask</a><br>Pretty good article by <a href="http://twitter.com/#!/digiom">Jana Herwig</a> on Anonymous.</li>
+<li><a href="http://worrydream.com/KillMath/">Kill Math</a><br>While I don&#8217;t agree with everything said, this article does have some interesting points and a great visualization of integration.</li>
+<li><a href="http://singularityhub.com/2011/05/12/satellite-images-of-north-korea-prison-camps-find-200000-living-as-slaves/">Satellite Images of North Korea Prison Camps Find 200,000 Living as Slaves</a><br>A follow-up to last week&#8217;s article by Amnesty International, because this is something we shouldn&#8217;t forget about.</li>
+<li><a href="http://www.simulation-argument.com/simulation.html">Are you living in a computer simulation?</a><br>That&#8217;s exactly the kind of question I want answered by Oxford&#8217;s philosophy department.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/08/information-overload-2011-05-08/">Information Overload 2011-05-08</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-08T00:00:00+07:00" pubdate data-updated="true">May 8<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.guardian.co.uk/technology/2011/apr/30/computers-v-humans-loebner-artificial-intelligence?CMP=twt_iph">Computer says: um, er&#8230;</a><br>Very nice article by Brian Christian who participated as a human confederate in the 2009 <a href="http://en.wikipedia.org/wiki/Turing_Award">Turing Award</a>.</li>
+<li><a href="http://www.foreignpolicy.com/articles/2011/04/27/how_goldman_sachs_created_the_food_crisis">How Goldman Sachs Created the Food Crisis</a><br>I lack the data and insight to fully judge the truth of this article, but I&#8217;m fairly certain that a non-trivial percentage of the world-wide rise in food prices was due to speculation. Isn&#8217;t it great how cynical humans can be?</li>
+<li><a href="http://www.news.com.au/travel/news/man-builds-worlds-largest-model-airport-the-knuffingen/story-e6frfq80-1226050348557">World&#8217;s largest model airport the Knuffingen goes on show</a><br>After 7 years and millions of Euros the world&#8217;s largest model airport goes on show. This is impressive, make sure to check out the video and photo series in the article!</li>
+<li><a href="http://amnesty.org/en/news-and-updates/images-reveal-scale-north-korean-political-prison-camps-2011-05-03">Images Reveal Scale Of North Korean Political Prison Camps</a><br>If Amnesty calls something &#8220;some of the worst circumstances we&#8217;ve documented in the last 50 years&#8221; it must be really, really bad.</li>
+<li><a href="http://lifehacker.com/?_escaped_fragment_=5798308/how-to-identify-and-avoid-spreading-misinformation-myths-and-urban-legends-on-the-internet">How to Identify and Avoid Spreading Misinformation, Myths, and Urban Legends on the Internet</a><br>I know I&#8217;ve posted links like this one before, but some things really do need to be repeated.</li>
+<li><a href="http://www.freitag.de/wissen/1118-das-herz-des-attentaeters">Das Herz des Attentäters</a><br>It&#8217;s probably not as simple as this, but definitely something to think about (in German).</li>
+<li><a href="http://www.theregister.co.uk/2011/05/05/google_go/">Google Go boldly goes where no code has gone before</a><br>While I don&#8217;t necessarily agree with the title, it&#8217;s still a nice article on a language we here surprising little about.</li>
+<li><a href="http://www.cracktwo.com/2011/04/25-abandoned-soviet-monuments-that-look.html">25 Abandoned Yugoslavia Monuments that look like they&#8217;re from the Future</a><br>I always was attracted to socialist architecture and the monuments in this article are no exception.</li>
+<li><a href="http://arstechnica.com/science/news/2011/04/if-you-only-feel-half-awake-you-probably-are.ars">Small areas of the brain go to sleep when we&#8217;re up too late</a><br>Sleep is a strange beast I&#8217;ve been struggling with to varying degrees for almost as long as I can remember, which is one reason why I like reading about it.</li>
+<li><a href="http://www.scientificamerican.com/article.cfm?id=the-neuroscience-of-gut">The Neuroscience of the Gut</a><br>This is quite interesting, especially since this week I also found out about <a href="http://en.wikipedia.org/wiki/Fecal_bacteriotherapy">fecal transplants</a>.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/04/so-you-want-to-learn-clojure/">So You Want to Learn Clojure?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-04T00:00:00+07:00" pubdate data-updated="true">May 4<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For last Monday&rsquo;s <a href="http://metalab.at/wiki/Lambdaheads">Lambdaheads</a> meeting I prepared a list of resources for people interested in learning Clojure, so I thought I&rsquo;ll share it here. The actual presentation had a lot of comments, but I&rsquo;m afraid I&rsquo;m too lazy to repeat them in writing. Maybe the list is still useful for some people though:</p>
+
+<h1>Books</h1>
+
+<ul>
+<li><a href="http://pragprog.com/titles/shcloj/programming-clojure">Programming Clojure</a></li>
+<li><a href="http://www.apress.com/9781430272311">Practical Clojure</a></li>
+<li><a href="http://joyofclojure.com/">The Joy of Clojure</a></li>
+</ul>
+
+
+<h1>Books WIP</h1>
+
+<ul>
+<li><a href="http://www.manning.com/rathore/">Clojure in Action</a></li>
+<li><a href="http://oreilly.com/catalog/0636920013754">Clojure Programming</a></li>
+<li><a href="http://daly.axiom-developer.org/clojure.pdf">Clojure in Small Pieces</a></li>
+</ul>
+
+
+<h1>Online reading</h1>
+
+<ul>
+<li><a href="http://clojure.org/Reference">Clojure Reference</a></li>
+<li><a href="http://clojure.org/cheatsheet">Clojure Cheat Sheet</a></li>
+<li><a href="http://clojure.github.com/clojure/">Clojure API</a></li>
+<li><a href="http://clojuredocs.org/">Clojure Docs</a></li>
+<li><a href="http://java.ociweb.com/mark/clojure/article.html">Clojure - Functional Programming for the JVM</a></li>
+<li><a href="http://clojure-notes.rubylearning.org/">Clojure Notes</a></li>
+<li><a href="http://devcheatsheet.com/tag/clojure/">Clojure Cheat Sheets</a></li>
+<li><a href="http://www.clojureatlas.com/">Clojure Atlas</a> (WIP)</li>
+</ul>
+
+
+<h1>Coding</h1>
+
+<ul>
+<li><a href="https://www.4clojure.com/">4Clojure</a></li>
+<li><a href="https://github.com/functional-koans/clojure-koans">clojure-koans</a></li>
+<li><a href="https://github.com/relevance/labrepl">labrepl</a></li>
+<li><a href="http://try-clojure.org/">Try Clojure</a></li>
+</ul>
+
+
+<h1>Screencasts / Videos</h1>
+
+<ul>
+<li><a href="http://peepcode.com/products/functional-programming-with-clojure">Functional Programming with Clojure</a></li>
+<li><a href="http://www.learnivore.com/search/source/full_disclojure">Full Disclojure</a></li>
+<li><a href="http://www.infoq.com/clojure/">Clojure Content on InfoQ</a></li>
+<li><a href="http://alexott.net/en/clojure/video.html">Collection of video links</a></li>
+<li><a href="http://www.pluralsight-training.net/microsoft/OLT/Course/Toc.aspx?n=clojure-concurrency-tutorial">Clojure Concurrency</a></li>
+</ul>
+
+
+<h1>Community</h1>
+
+<ul>
+<li><a href="http://groups.google.com/group/clojure">Clojure Google Group</a></li>
+<li><a href="http://planet.clojure.in/">Planet Clojure</a></li>
+<li><a href="http://disclojure.org/">disclojure</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce/">Tom and Michael vs Google&#8217;s MapReduce</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-02T00:00:00+07:00" pubdate data-updated="true">May 2<sup>nd</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The other day on Twitter I complained about my own laziness when it comes to reading academic papers, and <a href="http://mrjaba.posterous.com/">Tom Crinson</a> chimed in to let me know that he&#8217;d also like to read more of them. That&#8217;s how we decided to set up a sort of online based reading group for this type of thing, where we&#8217;ll choose a paper to read, discuss it via email and then blog about it (<a href="http://mrjaba.posterous.com/mapreduce-simplified-data-processing-on-large">Tom&#8217;s post is here</a>).</p>
+<p>The first in this series of blog posts is about Google&#8217;s <a href="http://en.wikipedia.org/wiki/MapReduce">MapReduce</a> framework:</p>
+<p><strong>MapReduce: Simplified Data Processing on Large Clusters</strong></p>
+<p><a href="http://labs.google.com/papers/mapreduce.html">The paper</a> and <a href="http://labs.google.com/papers/mapreduce-osdi04-slides/index.html">a presentation based on the paper</a></p>
+<p><strong>Summary (by Tom Crinson)</strong></p>
+<p>This is a paper on an architectural software paradigm and framework that Google uses to process or generate vast amounts of data on commodity hardware.</p>
+<p>The basic elements are that each task is split into two stages:</p>
+<ul>
+<li>Mapping &#8211; a user defined processing task is applied to each job and converted to an intermediate key value format.</li>
+<li>Reducing &#8211; a second stage of processing takes in the intermediate output from the mapping stage and performs user defined aggregation functions to generate the desired output.</li>
+</ul>
+<p>The paper indicates that many different types of tasks can be split up in this way. Obvious ones for Google are processing pages, indexes and links etc, but people are also using the framework to do artificial intelligence tasks. This variety proofs the flexibility of the paradigm.</p>
+<p>The idea itself is pretty simple, we do it a lot in day to day programming: get a set of data, do some operation on all of the elements and then perform some kind of aggregation; sum for example. Google just took it one step further and on a huge scale. They talk about setting up clusters of thousands of machines to do the processing. This is where their framework comes in.</p>
+<p>The framework takes all of the pain out of distributing the tasks, setting workers onto individual jobs and handling input and output from each. It also takes care of the nitty gritty of fault tolerance, so for example if a worker dies the master process will notice and assign another worker to re-execute all of the tasks that the dead worker had done. The master will also take care of dealing with de-duplicating the jobs so your results are as they should be. It also has a pretty nice feature to handle &#8220;stragglers&#8221; (slow tasks): the framework preemptively sets another set of workers to duplicate the effort on the last few jobs just in case there is an issue with a worker machine that is slowing the process down. This was shown to have a huge effect in task completion time, an increase of something like 44% was seen without the backup processing.</p>
+<p>In case of master failure the whole process stops, but as it goes along the master has been setting &#8220;checkpoints&#8221; so in case of a crash, a new master can be started up and can continue on from the last checkpoint. This is a manual process though as the user should probably check to see if any of the input caused the failure.</p>
+<p>Another very handy feature is bad record detection. If there is a spurious data element that for some reason causes a worker to hang repeatedly, the master is notified and on the next attempt to process that record set, the bad record is skipped.</p>
+<p>There are some other key elements to the system, like splitting he input so it can be assigned to the different workers. This has a default hash function on the key, but can be user specified if you don&#8217;t simply want hash(key) mod numWorkers as this is quite simplistic. See an article on consistent hashing for alternatives and why it&#8217;s bad. The input data tends to consist of just input files, however an <span class="caps">API</span> is exposed to allow custom data providers which is a nice feature.</p>
+<p><strong>Takeaway</strong></p>
+<p>For me the key takeaway was the following sentence: <em>&#8220;[it] allows programmers who have no experience with distributed and/or parallel systems to exploit large amounts of resources easily&#8221;</em>, which basically means that MapReduce tries to take an inherently complex task and abstracts all the difficult bits away, so that programmers can focus solely on the data manipulation/transformation aspects.</p>
+<p><strong>Difficulty of the paper</strong></p>
+<p>Very easy. It&#8217;s a simple textual description of MapReduce including good examples. There&#8217;s basically no math and the language is easy to understand and not full of computer science jargon, so even less technical oriented people should be able to understand most of it. The presentation also serves an excellent summary.</p>
+<p><strong>Examples and further reading, food for thought</strong></p>
+<p>I hacked together a little something in <span class="caps">IRB</span> to illustrate the basic workings of the algorithm (it&#8217;s not perfect, but good enough for our purposes):</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;words&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;foo bar baz qux foo bar lala&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;foo bar baz qux foo bar lala&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# map (user-supplied)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;   &lt;span class="n"&gt;mapped&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/ /&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;#=&amp;gt; [[&amp;quot;foo&amp;quot;, 1], [&amp;quot;bar&amp;quot;, 1], [&amp;quot;baz&amp;quot;, 1], [&amp;quot;qux&amp;quot;, 1], [&amp;quot;foo&amp;quot;, 1], [&amp;quot;bar&amp;quot;, 1], [&amp;quot;lala&amp;quot;, 1]]&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# aggregate (built-in)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;   &lt;span class="n"&gt;aggregated&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mapped&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group_by&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;#=&amp;gt; {&amp;quot;foo&amp;quot;=&amp;gt;[[&amp;quot;foo&amp;quot;, 1], [&amp;quot;foo&amp;quot;, 1]], &amp;quot;bar&amp;quot;=&amp;gt;[[&amp;quot;bar&amp;quot;, 1], [&amp;quot;bar&amp;quot;, 1]], &amp;quot;baz&amp;quot;=&amp;gt;[[&amp;quot;baz&amp;quot;, 1]], &amp;quot;qux&amp;quot;=&amp;gt;[[&amp;quot;qux&amp;quot;, 1]], &amp;quot;lala&amp;quot;=&amp;gt;[[&amp;quot;lala&amp;quot;, 1]]}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# reduce (user-supplied)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;aggregated&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each_with_object&lt;/span&gt;&lt;span class="p"&gt;({})&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="ss"&gt;:last&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:+&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;#=&amp;gt; {&amp;quot;foo&amp;quot;=&amp;gt;2, &amp;quot;bar&amp;quot;=&amp;gt;2, &amp;quot;baz&amp;quot;=&amp;gt;1, &amp;quot;qux&amp;quot;=&amp;gt;1, &amp;quot;lala&amp;quot;=&amp;gt;1}&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>When thinking about the algorithm a bit more, it also dawned on me that MapReduce sounds a lot like a <a href="http://en.wikipedia.org/wiki/Monad">Monad</a>. When I started searching for this, it soon turned out that someone else had the same idea:</p>
+<p><a href="http://haskell.org/haskellwiki/MapReduce_as_a_monad">MapReduce as a monad</a></p>
+<p>Then there&#8217;s also a nice article I found on this last week, more or less by accident:</p>
+<p><a href="http://ayende.com/Blog/archive/2010/03/14/map-reduce-ndash-a-visual-explanation.aspx">Map / Reduce &#8211; A visual explanation</a></p>
+<p>Last but not least some links to MapReduce related frameworks and libraries:</p>
+<p><a href="http://hadoop.apache.org/">Hadoop</a><br />
+<a href="https://github.com/erikfrey/bashreduce">BashReduce</a><br />
+<a href="http://skynet.rubyforge.org/">Skynet</a><br />
+<a href="https://github.com/nathanmarz/cascalog">Cascalog</a></p></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/14">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/12">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I&#8217;m Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

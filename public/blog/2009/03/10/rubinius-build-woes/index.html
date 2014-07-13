@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2009-03-10T00:00:00+07:00" pubdate data-updated="true">Mar 10<span>th</span>, 2009</time>
+<time datetime="2009-03-10T00:00:00+07:00" pubdate data-updated="true">Mar 10<sup>th</sup>, 2009</time>
         
       </p>
     
@@ -128,10 +116,12 @@
 <div class="entry-content"><p>A couple of days ago I decided that I want to play around with <a href="http://rubini.us">Rubinius</a>, so I cloned the <a href="http://github.com/evanphx/rubinius/tree/master">source</a> from GitHub and thought I was ready to go. As it turned out that wasn&#8217;t quite the case, since my first attempt to build it ended in the second error can see here:</p>
 <script src="http://gist.github.com/77119.js"></script><p>I hopped into #rubinius to find out if more people have this problem, but that doesn&#8217;t seem to be the case. At least I learnt that most active develop is going into the &#8216;stackfull&#8217; branch, so I did a &#8216;git checkout origin/stackfull&#8217; and gave the build another try, which resulted in the first error message you see above.</p>
 <p>Determined not to give up, I decided to try one last time with &#8216;rake vm:clean&#8217; and &#8216;rake build:debug&#8217; and to my surprise ended up with a working Rubinius install :-)</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ bin/rbx -v
-</span><span class='line'>rubinius 0.11.0-dev (ruby 1.8.6) (f5260b581 12/31/2009) [i686-apple-darwin9.6.0]</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;$ bin/rbx -v
+&lt;/span&gt;&lt;span class='line'&gt;rubinius 0.11.0-dev (ruby 1.8.6) (f5260b581 12/31/2009) [i686-apple-darwin9.6.0]&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>That made me somewhat curious, so I tried &#8216;rake vm:clean&#8217; and &#8216;rake build&#8217; which now also worked (still can&#8217;t build master though). I have to admit that I&#8217;m slightly confused, but at least I have a working Rubinius version to play around with for the time being.</p></div>
 
 
@@ -154,7 +144,7 @@
   
 
 
-<time datetime="2009-03-10T00:00:00+07:00" pubdate data-updated="true">Mar 10<span>th</span>, 2009</time>
+<time datetime="2009-03-10T00:00:00+07:00" pubdate data-updated="true">Mar 10<sup>th</sup>, 2009</time>
       
 
 <span class="categories">
@@ -167,17 +157,6 @@
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Rubinius build woes"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2009/03/10/rubinius-build-woes/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2009/03/10/rubinius-build-woes/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2009/03/10/rubinius-build-woes/" >Tweet</a>
@@ -226,6 +205,32 @@
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

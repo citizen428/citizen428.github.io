@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2009-06-29T00:00:00+07:00" pubdate data-updated="true">Jun 29<span>th</span>, 2009</time>
+<time datetime="2009-06-29T00:00:00+07:00" pubdate data-updated="true">Jun 29<sup>th</sup>, 2009</time>
         
       </p>
     
@@ -126,7 +114,7 @@
 
 
 <div class="entry-content"><p>On ruby-talk somebody <a href="http://www.ruby-forum.com/topic/190552">was asking</a> for a method which will be used to generate a random string, by returning either a lowercase letter or one of the digits 0-9 when called. As an example he posted the following Pascal program:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -136,17 +124,27 @@
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='pascal'><span class='line'><span class="k">function</span> <span class="nf">GetRandomChar</span><span class="o">:</span> <span class="kt">char</span><span class="o">;</span>
-</span><span class='line'><span class="k">var</span>
-</span><span class='line'> <span class="n">r</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
-</span><span class='line'><span class="k">begin</span>
-</span><span class='line'> <span class="n">r</span> <span class="o">:=</span> <span class="nb">random</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span><span class="o">;</span>
-</span><span class='line'> <span class="k">case</span> <span class="n">r</span> <span class="k">of</span>
-</span><span class='line'>   <span class="mi">0</span><span class="o">..</span><span class="mi">25</span><span class="o">:</span> <span class="bp">result</span> <span class="o">:=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span><span class="o">;</span>
-</span><span class='line'>   <span class="k">else</span> <span class="o">:</span> <span class="bp">result</span> <span class="o">:=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s">&#39;0&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span><span class="o">;</span>
-</span><span class='line'> <span class="k">end</span><span class="o">;</span>
-</span><span class='line'><span class="k">end</span><span class="o">;</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+</pre></td><td class='code'><pre><code class='pascal'>&lt;span class='line'&gt;&lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;GetRandomChar&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;var&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;integer&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;random&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt; &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;   &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;..&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="bp"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;chr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;   &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="bp"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;chr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt; &lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>&#8220;Translating&#8221; this to Ruby, this is what I got:</p>
 <script src="http://gist.github.com/137675.js"></script><p>In your face, Niklaus Wirth! ;-)</p>
 <p>P.S. Actually I <i>do</i> have fond memories of the good old <a href="http://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a> days.</p></div>
@@ -171,7 +169,7 @@
   
 
 
-<time datetime="2009-06-29T00:00:00+07:00" pubdate data-updated="true">Jun 29<span>th</span>, 2009</time>
+<time datetime="2009-06-29T00:00:00+07:00" pubdate data-updated="true">Jun 29<sup>th</sup>, 2009</time>
       
 
 <span class="categories">
@@ -184,17 +182,6 @@
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Pascal vs. Ruby"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2009/06/29/pascal-vs-ruby/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2009/06/29/pascal-vs-ruby/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2009/06/29/pascal-vs-ruby/" >Tweet</a>
@@ -243,6 +230,32 @@
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

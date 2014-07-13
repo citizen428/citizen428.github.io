@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2011-05-02T00:00:00+07:00" pubdate data-updated="true">May 2<span>nd</span>, 2011</time>
+<time datetime="2011-05-02T00:00:00+07:00" pubdate data-updated="true">May 2<sup>nd</sup>, 2011</time>
         
       </p>
     
@@ -148,7 +136,7 @@
 <p>Very easy. It&#8217;s a simple textual description of MapReduce including good examples. There&#8217;s basically no math and the language is easy to understand and not full of computer science jargon, so even less technical oriented people should be able to understand most of it. The presentation also serves an excellent summary.</p>
 <p><strong>Examples and further reading, food for thought</strong></p>
 <p>I hacked together a little something in <span class="caps">IRB</span> to illustrate the basic workings of the algorithm (it&#8217;s not perfect, but good enough for our purposes):</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -159,18 +147,29 @@
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="n">words</span> <span class="o">=</span> <span class="s2">&quot;foo bar baz qux foo bar lala&quot;</span>
-</span><span class='line'><span class="c1">#=&gt; &quot;foo bar baz qux foo bar lala&quot;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># map (user-supplied)</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span>   <span class="n">mapped</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/ /</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="o">|</span> <span class="o">[</span><span class="n">w</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span> <span class="p">}</span>
-</span><span class='line'><span class="c1">#=&gt; [[&quot;foo&quot;, 1], [&quot;bar&quot;, 1], [&quot;baz&quot;, 1], [&quot;qux&quot;, 1], [&quot;foo&quot;, 1], [&quot;bar&quot;, 1], [&quot;lala&quot;, 1]]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># aggregate (built-in)</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span>   <span class="n">aggregated</span> <span class="o">=</span> <span class="n">mapped</span><span class="o">.</span><span class="n">group_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">|</span> <span class="n">w</span> <span class="p">}</span>
-</span><span class='line'><span class="c1">#=&gt; {&quot;foo&quot;=&gt;[[&quot;foo&quot;, 1], [&quot;foo&quot;, 1]], &quot;bar&quot;=&gt;[[&quot;bar&quot;, 1], [&quot;bar&quot;, 1]], &quot;baz&quot;=&gt;[[&quot;baz&quot;, 1]], &quot;qux&quot;=&gt;[[&quot;qux&quot;, 1]], &quot;lala&quot;=&gt;[[&quot;lala&quot;, 1]]}</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="c1"># reduce (user-supplied)</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">aggregated</span><span class="o">.</span><span class="n">each_with_object</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">),</span> <span class="n">h</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:last</span><span class="p">)</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span> <span class="p">}</span>
-</span><span class='line'><span class="c1">#=&gt; {&quot;foo&quot;=&gt;2, &quot;bar&quot;=&gt;2, &quot;baz&quot;=&gt;1, &quot;qux&quot;=&gt;1, &quot;lala&quot;=&gt;1}</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;words&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;foo bar baz qux foo bar lala&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;foo bar baz qux foo bar lala&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# map (user-supplied)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;   &lt;span class="n"&gt;mapped&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/ /&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;#=&amp;gt; [[&amp;quot;foo&amp;quot;, 1], [&amp;quot;bar&amp;quot;, 1], [&amp;quot;baz&amp;quot;, 1], [&amp;quot;qux&amp;quot;, 1], [&amp;quot;foo&amp;quot;, 1], [&amp;quot;bar&amp;quot;, 1], [&amp;quot;lala&amp;quot;, 1]]&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# aggregate (built-in)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;   &lt;span class="n"&gt;aggregated&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mapped&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group_by&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;#=&amp;gt; {&amp;quot;foo&amp;quot;=&amp;gt;[[&amp;quot;foo&amp;quot;, 1], [&amp;quot;foo&amp;quot;, 1]], &amp;quot;bar&amp;quot;=&amp;gt;[[&amp;quot;bar&amp;quot;, 1], [&amp;quot;bar&amp;quot;, 1]], &amp;quot;baz&amp;quot;=&amp;gt;[[&amp;quot;baz&amp;quot;, 1]], &amp;quot;qux&amp;quot;=&amp;gt;[[&amp;quot;qux&amp;quot;, 1]], &amp;quot;lala&amp;quot;=&amp;gt;[[&amp;quot;lala&amp;quot;, 1]]}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# reduce (user-supplied)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;aggregated&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each_with_object&lt;/span&gt;&lt;span class="p"&gt;({})&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="ss"&gt;:last&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:+&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;#=&amp;gt; {&amp;quot;foo&amp;quot;=&amp;gt;2, &amp;quot;bar&amp;quot;=&amp;gt;2, &amp;quot;baz&amp;quot;=&amp;gt;1, &amp;quot;qux&amp;quot;=&amp;gt;1, &amp;quot;lala&amp;quot;=&amp;gt;1}&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>When thinking about the algorithm a bit more, it also dawned on me that MapReduce sounds a lot like a <a href="http://en.wikipedia.org/wiki/Monad">Monad</a>. When I started searching for this, it soon turned out that someone else had the same idea:</p>
 <p><a href="http://haskell.org/haskellwiki/MapReduce_as_a_monad">MapReduce as a monad</a></p>
 <p>Then there&#8217;s also a nice article I found on this last week, more or less by accident:</p>
@@ -201,7 +200,7 @@
   
 
 
-<time datetime="2011-05-02T00:00:00+07:00" pubdate data-updated="true">May 2<span>nd</span>, 2011</time>
+<time datetime="2011-05-02T00:00:00+07:00" pubdate data-updated="true">May 2<sup>nd</sup>, 2011</time>
       
 
 <span class="categories">
@@ -214,17 +213,6 @@
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Tom and Michael vs Google's MapReduce"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/05/02/tom-and-michael-vs-googles-mapreduce/" >Tweet</a>
@@ -273,6 +261,32 @@
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

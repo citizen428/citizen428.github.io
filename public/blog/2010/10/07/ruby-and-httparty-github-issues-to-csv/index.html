@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2010-10-07T00:00:00+07:00" pubdate data-updated="true">Oct 7<span>th</span>, 2010</time>
+<time datetime="2010-10-07T00:00:00+07:00" pubdate data-updated="true">Oct 7<sup>th</sup>, 2010</time>
         
       </p>
     
@@ -126,7 +114,7 @@
 
 
 <div class="entry-content"><p>To fill our backlog at work, our project manager needed a list of our current <a href="https://github.com/">GitHub</a> issues, ideally in a spreadsheet format. A couple lines of Ruby produce <span class="caps">CSV</span> output consisting of issue title, creation date, reporter and labels, which then can be redirected to a file and opened with any spreadsheet program.</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -142,23 +130,39 @@
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;httparty&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">class</span> <span class="nc">GitHubIssues</span>
-</span><span class='line'>  <span class="kp">include</span> <span class="no">HTTParty</span>
-</span><span class='line'>  <span class="n">base_uri</span> <span class="s1">&#39;http://github.com/api/v2/yaml&#39;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">show</span>
-</span><span class='line'>    <span class="c1"># username must be of the form &#39;&lt;username&gt;/token:&lt;token&gt;&#39;</span>
-</span><span class='line'>    <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:basic_auth</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:username</span> <span class="o">=&gt;</span> <span class="s1">&#39;&#39;</span><span class="p">}}</span>
-</span><span class='line'>    <span class="nb">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/issues/list/&lt;user&gt;/&lt;projects&gt;/open&#39;</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span><span class="o">[</span><span class="s2">&quot;issues&quot;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">issue</span><span class="o">|</span>
-</span><span class='line'>      <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">issue</span><span class="o">[</span><span class="s2">&quot;title&quot;</span><span class="o">]</span><span class="si">}</span><span class="s2">;</span><span class="si">#{</span><span class="n">issue</span><span class="o">[</span><span class="s2">&quot;created_at&quot;</span><span class="o">]</span><span class="si">}</span><span class="s2">;</span><span class="si">#{</span><span class="n">issue</span><span class="o">[</span><span class="s2">&quot;user&quot;</span><span class="o">]</span><span class="si">}</span><span class="s2">;</span><span class="si">#{</span><span class="n">issue</span><span class="o">[</span><span class="s2">&quot;labels&quot;</span><span class="o">].</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="no">GitHubIssues</span><span class="o">.</span><span class="n">show</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+<span class='line-number'>15</span><br />
+<span class='line-number'>16</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;httparty&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;GitHubIssues&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="kp"&gt;include&lt;/span&gt; &lt;span class="no"&gt;HTTParty&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;base_uri&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http://github.com/api/v2/yaml&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nc"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;show&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="c1"&gt;# username must be of the form &amp;#39;&amp;lt;username&amp;gt;/token:&amp;lt;token&amp;gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;opts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="ss"&gt;:basic_auth&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="ss"&gt;:username&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="nb"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/issues/list/&amp;lt;user&amp;gt;/&amp;lt;projects&amp;gt;/open&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;opts&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;issues&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;issue&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;issue&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;issue&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;created_at&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;issue&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;user&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;issue&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;labels&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="no"&gt;GitHubIssues&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>It&#8217;s quick and dirty (e.g. will die if there are no issues), but does exactly what we needed in just a couple of lines thanks to the awesome <a href="http://github.com/jnunemaker/httparty">HTTParty</a>.</p>
 <p><i>This also has been <a href="http://tupalo.com/en/blog/github-issues-as-csv-with-ruby-and-httparty/">published</a> in slightly different form on our <a href="http://tupalo.com/en/blog/">company blog</a>.</i></p></div>
 
@@ -182,7 +186,7 @@
   
 
 
-<time datetime="2010-10-07T00:00:00+07:00" pubdate data-updated="true">Oct 7<span>th</span>, 2010</time>
+<time datetime="2010-10-07T00:00:00+07:00" pubdate data-updated="true">Oct 7<sup>th</sup>, 2010</time>
       
 
 <span class="categories">
@@ -195,17 +199,6 @@
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Ruby and HTTParty: GitHub issues to CSV"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv/" >Tweet</a>
@@ -254,6 +247,32 @@
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

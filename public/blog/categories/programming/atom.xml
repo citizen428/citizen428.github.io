@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | citizen428.blog()]]></title>
   <link href="http://citizen428.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://citizen428.net/"/>
-  <updated>2014-05-08T23:13:27+07:00</updated>
+  <updated>2014-07-13T20:56:03+07:00</updated>
   <id>http://citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -153,7 +153,63 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <h3>Metadata</h3>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"></pre></td><td class='code'><pre><code class='lua'></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">description</span> <span class="o">=</span> <span class="s">[[ Displays the contents of the &amp;ldquo;generator&amp;rdquo; meta tag of a web page(default: /) if there is one.</span>
+</span><span class='line'><span class="s">]]</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">author</span> <span class="o">=</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Michael</span> <span class="n">Kohl</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">license</span> <span class="o">=</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Same</span> <span class="n">as</span> <span class="n">Nmap</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">See</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">http://nmap.org/book/man-legal.html&quot;</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">nmap</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">book</span><span class="o">/</span><span class="n">man</span><span class="o">-</span><span class="n">legal</span><span class="p">.</span><span class="n">html</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">categories</span> <span class="o">=</span> <span class="p">{</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">default</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">discovery</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">safe</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">hr</span> <span class="o">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">usage</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">nmap</span> <span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">script</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span> <span class="p">[</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">script</span><span class="o">-</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span><span class="o">=&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">,</span><span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span><span class="o">=&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="p">,</span><span class="err">&amp;</span><span class="n">hellip</span><span class="p">;]</span> <span class="o">&lt;</span><span class="n">host</span><span class="o">&gt;&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">output</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">PORT</span>    <span class="n">STATE</span> <span class="n">SERVICE</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">80</span><span class="o">/</span><span class="n">tcp</span>  <span class="n">open</span>  <span class="n">http</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">|</span><span class="n">_http</span><span class="o">-</span><span class="n">generator</span><span class="p">:</span> <span class="n">TYPO3</span> <span class="mf">4.2</span> <span class="n">CMS</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">443</span><span class="o">/</span><span class="n">tcp</span> <span class="n">open</span>  <span class="n">https</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">|</span><span class="n">_http</span><span class="o">-</span><span class="n">generator</span><span class="p">:</span> <span class="n">TYPO3</span> <span class="mf">4.2</span> <span class="n">CMS</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span> <span class="n">Specify</span> <span class="n">the</span> <span class="n">path</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">check</span> <span class="k">for</span> <span class="n">a</span> <span class="n">generator</span> <span class="n">meta</span> <span class="n">tag</span> <span class="p">(</span><span class="n">default</span> <span class="n">to</span> <span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;).</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span> <span class="n">Specify</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">redirects</span> <span class="n">to</span> <span class="n">follow</span> <span class="p">(</span><span class="n">defaults</span> <span class="n">to</span> <span class="mi">3</span><span class="p">).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">Changelog</span><span class="p">:</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">23</span> <span class="n">Michael</span> <span class="n">Kohl</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#x63;&amp;#x69;&amp;#x74;&amp;#105;&amp;#122;&amp;#101;&amp;#110;&amp;#x34;&amp;#50;&amp;#56;&amp;#x40;&amp;#103;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x63</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x74</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x7a</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x65</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">110</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">52</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">50</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x38</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">64</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x67</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">109</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x61</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">108</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">46</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6f</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">109</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">:</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span>   <span class="o">+</span> <span class="n">Initial</span> <span class="n">version</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">hellip</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>After the library imports, scripts contain some metadata that is used for documentation and internal purposes. The <em>description</em> and author variables are self-explanatory, the syntax used for the former is Lua&rsquo;s way of creating so-called &ldquo;heredocs&rdquo;, string literals that preserve white space and line breaks. In regard to the <em>license</em> script authors have two choices, the GPL-like Nmap license, as well as a simplified (2-clause) BSD license. Last but not least there&rsquo;s documentation in the NSEDoc format. It&rsquo;s customary to include usage documentation, example output, descriptions of all the available arguments (if any) as well as a changelog.</p>
 

@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2011-07-11T00:00:00+07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2011</time>
+<time datetime="2011-07-11T00:00:00+07:00" pubdate data-updated="true">Jul 11<sup>th</sup>, 2011</time>
         
       </p>
     
@@ -129,7 +117,7 @@
 <p><strong>Summary</strong></p>
 <p><span class="caps">OOP</span> is a paradigm which uses &#8220;objects&#8221; to encapsulate behavior and state in a programming language. This can be accomplished in a few ways, two of the more popular being class based and prototype based object orientation. In class based object models (e.g. Java) a class will be written to define the behavior and state that the object will embody. A class can be inherited from and extended to provide new functionality. In prototype based object models (e.g. ECMAScript, Io), there are no classes, only objects which can be cloned and altered to provide new features. Here&#8217;s a quick comparison of the two approaches in Ruby and ECMAScript:</p>
 <p>Ruby:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -151,9 +139,9 @@
 </span><span class='line'><span class="c1"># call a method</span>
 </span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">hello</span> <span class="c1">#=&gt; nil</span>
 </span><span class='line'><span class="no">Hello</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span></code></pre></td></tr></table></div></figure></div></p>
 <p>ECMAScript:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -169,32 +157,37 @@
 </span><span class='line'><span class="c1">// alternatively we can use an object literal</span>
 </span><span class='line'><span class="nx">h</span> <span class="o">=</span> <span class="p">{</span><span class="nx">hello</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span> <span class="p">}</span> <span class="p">};</span>
 </span><span class='line'><span class="nx">h</span><span class="p">.</span><span class="nx">hello</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span></code></pre></td></tr></table></div></figure></div></p>
 <p>Class based inheritance purports many organizational benefits. Do prototype based languages share them? The paper looks at each benefit in turn and shows approaches to add these features into classless languages or even improve upon them.</p>
 <p><em>Behaviour Sharing:<br />
 </em>In class based programming languages code re-use is easy, you can inherit from a class and you&#8217;ll get access to that class&#8217;s methods and member variables.</p>
 <p>In prototype based languages a clone/copy method is written on a prototypical object which can define which data members and methods are copied to the new object. This idea can be refined to an object whose sole purpose is to supply behavior, a trait. This can be a parent object of the new object to provide its functionality. As this trait object is shared amongst all clones, any changes to it affect the clones, just as with the class and subclass of class based programming. Here&#8217;s an example on behavior sharing in a prototype based language (Io):</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">A</span> <span class="o">:=</span> <span class="nb">Object</span> <span class="nx">clone</span>
-</span><span class='line'><span class="nx">A</span> <span class="nx">m</span> <span class="o">:=</span> <span class="nx">method</span><span class="p">(</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;in A\n&quot;</span><span class="p">))</span>
-</span><span class='line'><span class="nx">A</span> <span class="nx">m</span>
-</span><span class='line'><span class="nx">B</span> <span class="o">:=</span> <span class="nx">A</span> <span class="nx">clone</span>
-</span><span class='line'><span class="nx">B</span> <span class="nx">m</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+</pre></td><td class='code'><pre><code class='javascript'>&lt;span class='line'&gt;&lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;Object&lt;/span&gt; &lt;span class="nx"&gt;clone&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;m&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;in A\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;m&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;clone&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="nx"&gt;m&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>This will print:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>in A
 </span><span class='line'>in B
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span></code></pre></td></tr></table></div></figure></div></p>
 <p><em>Representation Sharing:</em><br />
 In class based languages, subclassing gives the child class access to the member variables of the parent, its representation. In prototype based languages, a trait object provides only behavior, not data. This job is performed by a prototype instance of the object, one every other object will be cloned from. Its clone method will copy across its data slots (member variables) with any default values the programmer has provided. This is called a &#8220;Data Parent&#8221;.</p>
 <p>In Ruby:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -234,9 +227,9 @@ In class based languages, subclassing gives the child class access to the member
 </span><span class='line'>
 </span><span class='line'><span class="c1">#in A with fred</span>
 </span><span class='line'><span class="c1">#in B with fred</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span></code></pre></td></tr></table></div></figure></div></p>
 <p>In IO:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -254,14 +247,14 @@ In class based languages, subclassing gives the child class access to the member
 </span><span class='line'><span class="nx">pasta</span> <span class="o">:=</span> <span class="nx">pizza</span> <span class="nx">clone</span>
 </span><span class='line'><span class="nx">pasta</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Macaroni Cheese&quot;</span>
 </span><span class='line'><span class="nx">pasta</span> <span class="nx">price</span> <span class="o">=</span> <span class="mi">5</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+</span></code></pre></td></tr></table></div></figure></div><br />
 <em>Dynamic Behaviour Changes &#8211; Changing an instance&#8217;s class and dynamic inheritance:<br />
 </em><em>Tom:</em> This was a section of particular interest, mainly because I think it&#8217;s not quite as skewed as they portray it. The idea is that because in a prototype based model the reference to the parent object (traits, data) is simply a reference it can be changed very easily depending on the state the object is in. This provides new functionality as the object goes through its life. In a class based model, changing an instance&#8217;s class is difficult at best and not a good idea, however the idea of changing behavior based on state is still a useful concept. The authors however seem to miss the concept of composition and delegation, it&#8217;s next to trivial to change the behavior of an object simply by changing the object that is providing a function, just take a look at the Strategy Pattern for an example.<br />
 <em>Michael:</em> This paper is from 1991, the <a href="http://en.wikipedia.org/wiki/Design_Patterns">Gang of Four book on Design Patterns</a> from 1994, so I guess you&#8217;re blaming the authors for not knowing about something that hasn&#8217;t been published when they wrote their paper.<br />
 <em>Tom:</em> Fair point! I wonder when the concept of delegation was first coined?<br />
 <em>Michael:</em> According to <a href="http://en.wikipedia.org/wiki/Delegation_(programming)">Wikipedia</a> in a paper from 1986, &#8220;Using Prototypical Objects to Implement Shared Behavior in Object-Oriented Systems&#8221;.</p>
 <p>In ECMAScript:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -273,21 +266,21 @@ In class based languages, subclassing gives the child class access to the member
 </span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">ellipse</span><span class="p">(){}</span>
 </span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span>
 </span><span class='line'><span class="err">#</span><span class="nx">ellipse</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span></code></pre></td></tr></table></div></figure></div></p>
 <p>Changing the prototype can entirely change the behavior of an object.</p>
 <p><em>Naming and Categorising:<br />
 </em>This feature is vital in any nontrivial system, without being able to find code to serve its purpose the programmer would be constantly rewriting the same code over and over. Class based languages tend to provide a globally accessible name for a set of functions. They also tend to provide namespaces to prevent naming collisions or categorisation. Prototype based languages need to be able to access the prototype anywhere in the system to be cloned, but as they are just regular objects, they have no internal names. The authors of the paper propose that namespace objects can be used to fill this need. Essentially a globally accessible hash map, which can contain nested namespace objects to provide categorisation. This later emerged as a fairly common pattern in ECMAScript.</p>
 <p>In Ruby:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">A</span><span class="p">;</span> <span class="k">end</span>
 </span><span class='line'><span class="n">A</span>
 </span><span class='line'><span class="c1">#A</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile><br />
+</span></code></pre></td></tr></table></div></figure></div><br />
 A is a globally defined constant which points to an Object.</p>
 <p>In ECMAScript:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -299,7 +292,7 @@ A is a globally defined constant which points to an Object.</p>
 </span><span class='line'>  <span class="kd">function</span> <span class="nx">memberMethod</span><span class="p">(){</span>
 </span><span class='line'>  <span class="p">}</span>
 </span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span></code></pre></td></tr></table></div></figure></div></p>
 <p>Note that TopLevel is simply an object literal.</p>
 <p>The naming of these type of systems is highly dependent on the structure of the system, this type of naming is called Extensional naming. Intensional naming is the term given to systems where the name of classes is defined by the programmer and not necessarily related to the structure of the system. The authors claim that Extensional naming has a few key advantages:</p>
 <p>1) It&#8217;s free with a classless language; no other constructs are required for this behaviour to work.<br />
@@ -331,7 +324,7 @@ A is a globally defined constant which points to an Object.</p>
   
 
 
-<time datetime="2011-07-11T00:00:00+07:00" pubdate data-updated="true">Jul 11<span>th</span>, 2011</time>
+<time datetime="2011-07-11T00:00:00+07:00" pubdate data-updated="true">Jul 11<sup>th</sup>, 2011</time>
       
 
 <span class="categories">
@@ -344,17 +337,6 @@ A is a globally defined constant which points to an Object.</p>
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Tom and Michael vs Prototypical Inheritance"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/" >Tweet</a>
@@ -403,6 +385,32 @@ A is a globally defined constant which points to an Object.</p>
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

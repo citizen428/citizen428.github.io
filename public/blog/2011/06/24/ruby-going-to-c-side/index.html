@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2011-06-24T00:00:00+07:00" pubdate data-updated="true">Jun 24<span>th</span>, 2011</time>
+<time datetime="2011-06-24T00:00:00+07:00" pubdate data-updated="true">Jun 24<sup>th</sup>, 2011</time>
         
       </p>
     
@@ -128,7 +116,7 @@
 <div class="entry-content"><p>Yesterday afternoon I decided it&#8217;s about time I finally learn how to write Ruby C extensions, so I went ahead and rewrote one of our <a href="http://www.rubylearning.org/class/">RubyLearning.org</a> exercises in C. Here&#8217;s the exercise description:</p>
 <blockquote><p>Write a class called Person, that has balance as an instance variable and<br/>the following public method: show_balance.</p><p>I shall create the Person object as follows:</p><p>p = Person.new(40000)<br/>puts p.show_balance # calling the method</p></blockquote>
 <p>Here&#8217;s the program in C, with relevant function signatures included as comments:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -149,40 +137,65 @@
 <span class='line-number'>19</span>
 <span class='line-number'>20</span>
 <span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;ruby.h&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">static</span> <span class="n">VALUE</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">VALUE</span> <span class="n">self</span><span class="p">,</span> <span class="n">VALUE</span> <span class="n">amount</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// VALUE rb_iv_set(VALUE obj, char *name, VALUE value)</span>
-</span><span class='line'>  <span class="n">rb_iv_set</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="s">&quot;@balance&quot;</span><span class="p">,</span> <span class="n">amount</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">return</span> <span class="n">self</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">static</span> <span class="n">VALUE</span> <span class="nf">show_balance</span><span class="p">(</span><span class="n">VALUE</span> <span class="n">self</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// VALUE rb_iv_get(VALUE obj, char *name)</span>
-</span><span class='line'>  <span class="k">return</span> <span class="n">rb_iv_get</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="s">&quot;@balance&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">void</span> <span class="nf">Init_person</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// VALUE rb_define_class(char *name, VALUE superclass)</span>
-</span><span class='line'>  <span class="n">VALUE</span> <span class="n">cPerson</span> <span class="o">=</span> <span class="n">rb_define_class</span><span class="p">(</span><span class="s">&quot;Person&quot;</span><span class="p">,</span> <span class="n">rb_cObject</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// void rb_define_method(VALUE classmod, char *name, VALUE(*func)(), int argc)</span>
-</span><span class='line'>  <span class="n">rb_define_method</span><span class="p">(</span><span class="n">cPerson</span><span class="p">,</span> <span class="s">&quot;initialize&quot;</span><span class="p">,</span> <span class="n">initialize</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-</span><span class='line'>  <span class="n">rb_define_method</span><span class="p">(</span><span class="n">cPerson</span><span class="p">,</span> <span class="s">&quot;show_balance&quot;</span><span class="p">,</span> <span class="n">show_balance</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+<span class='line-number'>15</span><br />
+<span class='line-number'>16</span><br />
+<span class='line-number'>17</span><br />
+<span class='line-number'>18</span><br />
+<span class='line-number'>19</span><br />
+<span class='line-number'>20</span><br />
+<span class='line-number'>21</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt;&lt;span class="cp"&gt;#include &amp;lt;ruby.h&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="nf"&gt;initialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_iv_set(VALUE obj, char *name, VALUE value)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_iv_set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="nf"&gt;show_balance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_iv_get(VALUE obj, char *name)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;rb_iv_get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Init_person&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_define_class(char *name, VALUE superclass)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;cPerson&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rb_define_class&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Person&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rb_cObject&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// void rb_define_method(VALUE classmod, char *name, VALUE(*func)(), int argc)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_define_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cPerson&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;initialize&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;initialize&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_define_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cPerson&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;show_balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;show_balance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>I think the code is very self-explanatory, almost like writing Ruby in C. As you can see we define a class called &#8220;Person&#8221; in the &#8220;Init_person&#8221; function (which is called by Ruby when it loads our module), where we add the functions as instance methods with &#8220;rb_define_method&#8221;. To compile this, we need an extconf.rb, which contains the following:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">require</span> <span class="err">&#39;</span><span class="n">mkmf</span><span class="err">&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">extension_name</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">person</span><span class="err">&#39;</span>
-</span><span class='line'><span class="n">create_makefile</span><span class="p">(</span><span class="n">extension_name</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt;&lt;span class="n"&gt;require&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;mkmf&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;extension_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;create_makefile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extension_name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>Now we can build and run it:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -191,38 +204,55 @@
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>→ ruby extconf.rb
-</span><span class='line'>creating Makefile
-</span><span class='line'>→ make
-</span><span class='line'>gcc -I. <span class="o">[</span>output snipped<span class="o">]</span>
-</span><span class='line'>→ irb
-</span><span class='line'>&gt;&gt; <span class="nv">$:</span>&lt;&lt;<span class="s1">&#39;.&#39;</span> <span class="c">#=&gt; [..., &#39;.&#39;]</span>
-</span><span class='line'>&gt;&gt; require <span class="s1">&#39;person&#39;</span> <span class="c">#=&gt; true</span>
-</span><span class='line'>&gt;&gt; <span class="nv">p</span> <span class="o">=</span> Person.new<span class="o">(</span>3000<span class="o">)</span> <span class="c">#=&gt; #&lt;Person:0x00000100a01940 @balance=3000&gt;</span>
-</span><span class='line'>&gt;&gt; p.show_balance <span class="c">#=&gt; 3000</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+</pre></td><td class='code'><pre><code class='bash'>&lt;span class='line'&gt;→ ruby extconf.rb
+&lt;/span&gt;&lt;span class='line'&gt;creating Makefile
+&lt;/span&gt;&lt;span class='line'&gt;→ make
+&lt;/span&gt;&lt;span class='line'&gt;gcc -I. &lt;span class="o"&gt;[&lt;/span&gt;output snipped&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;→ irb
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; &lt;span class="nv"&gt;$:&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class="s1"&gt;&amp;#39;.&amp;#39;&lt;/span&gt; &lt;span class="c"&gt;#=&amp;gt; [..., &amp;#39;.&amp;#39;]&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; require &lt;span class="s1"&gt;&amp;#39;person&amp;#39;&lt;/span&gt; &lt;span class="c"&gt;#=&amp;gt; true&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; &lt;span class="nv"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Person.new&lt;span class="o"&gt;(&lt;/span&gt;3000&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="c"&gt;#=&amp;gt; #&amp;lt;Person:0x00000100a01940 @balance=3000&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; p.show_balance &lt;span class="c"&gt;#=&amp;gt; 3000&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>As you can see everything works as if we had defined the class in Ruby. Let&#8217;s add another method to deposit some money, which gives us a chance to demonstrate &#8220;rb_funcall&#8221;:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="k">static</span> <span class="n">VALUE</span> <span class="nf">deposit</span><span class="p">(</span><span class="n">VALUE</span> <span class="n">self</span><span class="p">,</span> <span class="n">VALUE</span> <span class="n">amount</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// VALUE rb_funcall(VALUE recv, ID id, int argc, ... )</span>
-</span><span class='line'>  <span class="n">VALUE</span> <span class="n">result</span> <span class="o">=</span> <span class="n">rb_funcall</span><span class="p">(</span><span class="n">rb_iv_get</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="s">&quot;@balance&quot;</span><span class="p">),</span> <span class="n">rb_intern</span><span class="p">(</span><span class="s">&quot;+&quot;</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">amount</span><span class="p">);</span>
-</span><span class='line'>  <span class="n">rb_iv_set</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="s">&quot;@balance&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="nf"&gt;deposit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_funcall(VALUE recv, ID id, int argc, ... )&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rb_funcall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rb_iv_get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;rb_intern&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;+&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_iv_set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>We also need to add this function as a method in &#8220;Init_person&#8221;:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'> <span class="n">rb_define_method</span><span class="p">(</span><span class="n">cPerson</span><span class="p">,</span> <span class="s">&quot;deposit&quot;</span><span class="p">,</span> <span class="n">deposit</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt; &lt;span class="n"&gt;rb_define_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cPerson&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;deposit&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;deposit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>Does it work?</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span> <span class="c1">#=&gt; 3400</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deposit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#=&amp;gt; 3400&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>It does and we&#8217;ve successfully created a Ruby class from C. Probably not the type of class you&#8217;d really implement this way, but good enough as an example.</p>
 <p>Recommended reading:</p>
 <ul>
@@ -250,7 +280,7 @@
   
 
 
-<time datetime="2011-06-24T00:00:00+07:00" pubdate data-updated="true">Jun 24<span>th</span>, 2011</time>
+<time datetime="2011-06-24T00:00:00+07:00" pubdate data-updated="true">Jun 24<sup>th</sup>, 2011</time>
       
 
 <span class="categories">
@@ -263,17 +293,6 @@
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Ruby: Going to the C side"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2011/06/24/ruby-going-to-c-side/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2011/06/24/ruby-going-to-c-side/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2011/06/24/ruby-going-to-c-side/" >Tweet</a>
@@ -322,6 +341,32 @@
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

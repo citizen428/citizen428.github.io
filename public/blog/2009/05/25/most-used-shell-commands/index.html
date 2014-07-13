@@ -11,7 +11,8 @@
   
   <meta name="description" content="I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:
 1
-history | awk &hellip;">
+1
+&lt;span &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -35,18 +36,6 @@ history | awk &hellip;">
 <meta name="verify-postrank" content="q9zqqyw" />
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
-
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
 
 
   
@@ -79,7 +68,7 @@ history | awk &hellip;">
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -120,7 +109,7 @@ history | awk &hellip;">
   
 
 
-<time datetime="2009-05-25T00:00:00+07:00" pubdate data-updated="true">May 25<span>th</span>, 2009</time>
+<time datetime="2009-05-25T00:00:00+07:00" pubdate data-updated="true">May 25<sup>th</sup>, 2009</time>
         
       </p>
     
@@ -128,11 +117,12 @@ history | awk &hellip;">
 
 
 <div class="entry-content"><p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>Although there was no real point in doing so, I felt the need to write a short Ruby script to do the same:</p>
 <script src="http://gist.github.com/117571.js"></script><p>Here&#8217;s the output on my MacBook:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -154,7 +144,7 @@ history | awk &hellip;">
 </span><span class='line'>ruby: 15
 </span><span class='line'>scala: 15
 </span><span class='line'>vim: 12
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span></code></pre></td></tr></table></div></figure></div></p>
 <p>If you are surprised by how many times (no pun intended) I called <em>time</em>, it&#8217;s just because I was benchmarking <a href="http://projecteuler.net/">Project Euler</a> solutions in several languages, everything else is quite regular (and suggests I don&#8217;t use the Finder much ;) ).</p></div>
 
 
@@ -177,7 +167,7 @@ history | awk &hellip;">
   
 
 
-<time datetime="2009-05-25T00:00:00+07:00" pubdate data-updated="true">May 25<span>th</span>, 2009</time>
+<time datetime="2009-05-25T00:00:00+07:00" pubdate data-updated="true">May 25<sup>th</sup>, 2009</time>
       
 
 <span class="categories">
@@ -190,17 +180,6 @@ history | awk &hellip;">
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Most used shell commands"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2009/05/25/most-used-shell-commands/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2009/05/25/most-used-shell-commands/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2009/05/25/most-used-shell-commands/" >Tweet</a>
@@ -249,6 +228,32 @@ history | awk &hellip;">
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

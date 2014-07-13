@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2005-04-23T00:00:00+07:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2005</time>
+<time datetime="2005-04-23T00:00:00+07:00" pubdate data-updated="true">Apr 23<sup>rd</sup>, 2005</time>
         
       </p>
     
@@ -128,12 +116,12 @@
 <div class="entry-content"><p>Not to long ago I&#8217;ve <a href="http://citizen428.net/index.php?/archives/185-This-space-for-rent.html#extended">blogged about</a> how happy the current state of the <span class="caps">GNU</span>/Linux desktop makes me. I briefly mentioned the <a href="http://citizen428.net/exit.php?url=aHR0cDovL2NpdGl6ZW40MjgubmV0L2V4aXQucGhwP3VybF9pZD01NjYmYW1wO2VudHJ5X2lkPTE4NQ==&amp;entry_id=185">Project Utopia stack</a> in this entry and today I want to show you something that makes uses of this exciting technology: <a href="http://ivman.sourceforge.net/">Ivman</a><br />
 <!--more-->To quote the homepage, here&#8217;s a short summary of what this tool is all about: <i>Ivman is an extremely flexible desktop independent frontend to <span class="caps">HAL</span>, the userspace Hardware Abstraction Layer for Linux. It can be used to execute arbitrary commands when devices are added to or removed from your system, or when device properties change. Any properties of the new or changed device can be included within the executed command.</i></p>
 <p>If you don&#8217;t think that&#8217;s cool, read the above paragraph again! Read it carefully and slowly and notice the phrase <b>arbitrary commands</b> and <b>any properties of the new or changed device</b>. Now for some real world example: You may know my friend Steve. He&#8217;s got an incredible collection of pr0n he wishes to sneak onto my innocent little computer. If you&#8217;d know Steve, you also know he&#8217;s a nasty little guy, so he sure doesn&#8217;t have any pr0n sane persons would be interested in. So, how to prevent Steve from copying his favourite diversion to my notebook? Well, that&#8217;s fairly easy: Suppose Steve is backing up his pr0n collection to DVDs or CDs and is nice enough to name them something like &#8220;steves_pr0n&#8221;. Now all I have to do is edit the file /etc/ivman/IvmConfigActions.xml and add the following little rule there:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ivm:Match name="hal.volume.label" value="steves_pr0n">
 </span><span class='line'>&lt;ivm:Option name="exec" value="/usr/bin/eject $hal.block.device$" />
-</span><span class='line'>&lt;/ivm:match></span></code></pre></td></tr></table></div></figure></div></notextile><br />
+</span><span class='line'>&lt;/ivm:match></span></code></pre></td></tr></table></div></figure></div><br />
 Now, when a disk is entered into my <span class="caps">DVD</span> drive, Ivman will check all his rules. The one we&#8217;ve added above will check for the disk label and, if it matches the string &#8220;steves_pr0n&#8221; will immediately eject the disc again! None of Steve&#8217;s pr0n for me, which definitely is good for my mental health! That&#8217;s all so far, good night kids and have some fun playing around with Ivman!</p></div>
 
 
@@ -156,12 +144,12 @@ Now, when a disk is entered into my <span class="caps">DVD</span> drive, Ivman w
   
 
 
-<time datetime="2005-04-23T00:00:00+07:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2005</time>
+<time datetime="2005-04-23T00:00:00+07:00" pubdate data-updated="true">Apr 23<sup>rd</sup>, 2005</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/foss/'>FOSS</a>
+    <a class='category' href='/blog/categories/foss/'>foss</a>
   
 </span>
 
@@ -169,17 +157,6 @@ Now, when a disk is entered into my <span class="caps">DVD</span> drive, Ivman w
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Keep your pr0n, Steve!"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2005/04/23/keep-your-pr0n-steve/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2005/04/23/keep-your-pr0n-steve/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2005/04/23/keep-your-pr0n-steve/" >Tweet</a>
@@ -228,6 +205,32 @@ Now, when a disk is entered into my <span class="caps">DVD</span> drive, Ivman w
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

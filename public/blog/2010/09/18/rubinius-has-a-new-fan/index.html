@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2010-09-18T00:00:00+07:00" pubdate data-updated="true">Sep 18<span>th</span>, 2010</time>
+<time datetime="2010-09-18T00:00:00+07:00" pubdate data-updated="true">Sep 18<sup>th</sup>, 2010</time>
         
       </p>
     
@@ -127,7 +115,7 @@
 
 <div class="entry-content"><p>Being kinda sick I decided to use the weekend for emptying out my <a href="http://www.instapaper.com/">Instapaper</a> account a little. Doing so I finally read <a href="http://www.engineyard.com/blog/2010/rubinius-wants-to-help-you-make-ruby-better/">Rubinius wants to help <span class="caps">YOU</span> make Ruby better</a> on the <a href="http://www.engineyard.com/blog/">Engine Yard blog</a>. This reminded me that it&#8217;s been over a year since I last looked at Rubinius, so I used the excellent <a href="http://rvm.beginrescueend.com/"><span class="caps">RVM</span></a> to get the latest version and started my experiments. Basically everything I threw at it just worked, except for some of my scripts using 1.9&#8217;s new lambda syntax. Speedwise it seems to be more in the <span class="caps">MRI</span> 1.8.7 than the 1.9.2 range, but that&#8217;s fair enough. Getting adventurous I decided to try how Rubinius would handle one of my all-time favorite Ruby annoyances, the inability to override <i>to_s</i> in subclasses of <i>String</I> (don&#8217;t ask, but this once cost me almost an entire afternoon).</p>
 <p>Example:<br />
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -141,7 +129,7 @@
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'><span class="nb">puts</span> <span class="no">SubclassedString</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;original&quot;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+</span></code></pre></td></tr></table></div></figure></div></p>
 <p>In <span class="caps">MRI</span> 1.8.7, <span class="caps">MRI</span> 1.9.2, JRuby <span class="caps">HEAD</span> and MacRuby 0.6 this will output &#8220;original&#8221;, which I believe to have tracked down to <i>rb_obj_as_string</i> in string.c in the <span class="caps">MRI</span> source (no idea about the other implementations). To my great surprise Rubinius 1.0.1 actually output &#8220;overriden&#8221;, which instantly won it a new fan. :-)</p></div>
 
 
@@ -164,7 +152,7 @@
   
 
 
-<time datetime="2010-09-18T00:00:00+07:00" pubdate data-updated="true">Sep 18<span>th</span>, 2010</time>
+<time datetime="2010-09-18T00:00:00+07:00" pubdate data-updated="true">Sep 18<sup>th</sup>, 2010</time>
       
 
 <span class="categories">
@@ -177,17 +165,6 @@
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="Rubinius has a new fan"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2010/09/18/rubinius-has-a-new-fan/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2010/09/18/rubinius-has-a-new-fan/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2010/09/18/rubinius-has-a-new-fan/" >Tweet</a>
@@ -236,6 +213,32 @@
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

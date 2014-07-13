@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2009-06-06T00:00:00+07:00" pubdate data-updated="true">Jun 6<span>th</span>, 2009</time>
+<time datetime="2009-06-06T00:00:00+07:00" pubdate data-updated="true">Jun 6<sup>th</sup>, 2009</time>
         
       </p>
     
@@ -128,7 +116,7 @@
 <div class="entry-content"><p>While browsing through <a href="http://delicious.com/citizen428">my Delicious bookmarks</a> the other day, I realized that over time I had accumulated quite a few dead links (about 5% of my collection). I then looked for a <strong>simple</strong> tool to automatically remove them, but couldn&#8217;t find one that appealed to me, so I wrote my own script called <em>unsavory</em> which you can find on GitHub:</p>
 <p><a href="http://github.com/citizen428/unsavory/tree/master">http://github.com/citizen428/unsavory/tree/master</a></p>
 <p>It uses HTTParty to generate a list of all your bookmarks, which then get checked individually with Net::<span class="caps">HTTP</span>. Every link that returns an <span class="caps">HTTP</span> status code of 404 will automatically be removed (no questions asked, no undo), links with a status code other than 200 (OK) won&#8217;t be changed but will display some information in case you want to fix them manually. Here&#8217;s some example output (links anonymized for this post):</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -143,21 +131,36 @@
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Enter Delicious username: citizen428
-</span><span class='line'>  Enter Delicious password: *********
-</span><span class='line'>
-</span><span class='line'>  citizen428 has 664 bookmarks.
-</span><span class='line'>  Processing URL #0001: OK
-</span><span class='line'>  Processing URL #0002: OK
-</span><span class='line'>  Processing URL #0003: OK
-</span><span class='line'>  Processing URL #0004: OK
-</span><span class='line'>  Processing URL #0005: OK
-</span><span class='line'>  ...
-</span><span class='line'>  Processing URL #0013: 405: http://...
-</span><span class='line'>  ...
-</span><span class='line'>  Processing URL #0074: 302: http://...
-</span><span class='line'>  ...
-</span><span class='line'>  Processing URL #0086: Connection reset by peer - https://...</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+<span class='line-number'>15</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;Enter Delicious username: citizen428
+&lt;/span&gt;&lt;span class='line'&gt;  Enter Delicious password: *********
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  citizen428 has 664 bookmarks.
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0001: OK
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0002: OK
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0003: OK
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0004: OK
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0005: OK
+&lt;/span&gt;&lt;span class='line'&gt;  ...
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0013: 405: http://...
+&lt;/span&gt;&lt;span class='line'&gt;  ...
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0074: 302: http://...
+&lt;/span&gt;&lt;span class='line'&gt;  ...
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0086: Connection reset by peer - https://...&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>Not bad for under 60 lines of code. :-) I hope this is useful to some of you, I do have some features I plan on adding to this in the future.</p></div>
 
 
@@ -180,7 +183,7 @@
   
 
 
-<time datetime="2009-06-06T00:00:00+07:00" pubdate data-updated="true">Jun 6<span>th</span>, 2009</time>
+<time datetime="2009-06-06T00:00:00+07:00" pubdate data-updated="true">Jun 6<sup>th</sup>, 2009</time>
       
 
 <span class="categories">
@@ -193,17 +196,6 @@
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="unsavory — get rid of stale Delicious bookmarks"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2009/06/06/unsavory-%25e2%2580%2594-get-rid-of-stale-delicious-bookmarks/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2009/06/06/unsavory-%25e2%2580%2594-get-rid-of-stale-delicious-bookmarks/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2009/06/06/unsavory-%25e2%2580%2594-get-rid-of-stale-delicious-bookmarks/" >Tweet</a>
@@ -252,6 +244,32 @@
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>

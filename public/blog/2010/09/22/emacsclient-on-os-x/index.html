@@ -34,18 +34,6 @@
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://citizen428.myopenid.com/" />
 
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
-
 
   
   <script type="text/javascript">
@@ -77,7 +65,7 @@
   
 </ul>
   
-<form action="http://google.com/search" method="get">
+<form action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:citizen428.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -118,7 +106,7 @@
   
 
 
-<time datetime="2010-09-22T00:00:00+07:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2010</time>
+<time datetime="2010-09-22T00:00:00+07:00" pubdate data-updated="true">Sep 22<sup>nd</sup>, 2010</time>
         
       </p>
     
@@ -126,20 +114,27 @@
 
 
 <div class="entry-content"><p>If you are running a non-system Emacs on OS X and have tried to use &#8220;emacsclient&#8221;, you may have seen the following error message despite having started the Emacs server:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>emacsclient: can't find socket; have you started the server?
-</span><span class='line'>To start the server in Emacs, type "M-x server-start".
-</span><span class='line'>emacsclient: No socket or alternate editor.  Please use:
-</span><span class='line'>
-</span><span class='line'>	--socket-name
-</span><span class='line'>	--server-file      (or environment variable EMACS_SERVER_FILE)
-</span><span class='line'>	--alternate-editor (or environment variable ALTERNATE_EDITOR)</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;emacsclient: can't find socket; have you started the server?
+&lt;/span&gt;&lt;span class='line'&gt;To start the server in Emacs, type "M-x server-start".
+&lt;/span&gt;&lt;span class='line'&gt;emacsclient: No socket or alternate editor.  Please use:
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;	--socket-name
+&lt;/span&gt;&lt;span class='line'&gt;	--server-file      (or environment variable EMACS_SERVER_FILE)
+&lt;/span&gt;&lt;span class='line'&gt;	--alternate-editor (or environment variable ALTERNATE_EDITOR)&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
 <p>This doesn&#8217;t work because you are invoking &#8220;/usr/bin/emacsclient&#8221; which came with the OS, instead of &#8220;/Applications/Emacs.app/Contents/MacOS/bin/emacsclient&#8221;. This can easily be fixed by symlinking the latter to &#8220;/usr/local/bin/emacsclient&#8221; and making sure that &#8220;/usr/local/bin&#8221; is listed in your path before &#8220;/usr/bin&#8221;.</p>
 <p>Not a big deal, but it took me a couple of minutes to figure out and I thought I might as well save others some time&#8230;</p></div>
 
@@ -163,7 +158,7 @@
   
 
 
-<time datetime="2010-09-22T00:00:00+07:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2010</time>
+<time datetime="2010-09-22T00:00:00+07:00" pubdate data-updated="true">Sep 22<sup>nd</sup>, 2010</time>
       
 
 <span class="categories">
@@ -176,17 +171,6 @@
     </p>
     
       <div class="sharing">
-  
-    <a class="FlattrButton" style="display:none;"
-    title="emacsclient on OS X"
-    data-flattr-uid="citizen428"
-    data-flattr-tags=""
-    data-flattr-button="compact"
-    data-flattr-category="text"
-    href="http://citizen428.net/blog/2010/09/22/emacsclient-on-os-x/">
-    
-</a>
-
   
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.net/blog/2010/09/22/emacsclient-on-os-x/" data-via="citizen428" data-counturl="http://citizen428.net/blog/2010/09/22/emacsclient-on-os-x/" >Tweet</a>
@@ -235,6 +219,32 @@
 <a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
                                              alt="Twitter" /></a>
 </div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
+      </li>
+    
+  </ul>
 </section>
 
 <section>
