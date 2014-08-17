@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="When my usual Twitter client stopped working last Tuesday, I got inspired by Ruben&rsquo;s Emacs 30 Day Challenge and decided to look what Emacs had &hellip;">
+  <meta name="description" content="When working through SICP while you are tired, you might end up solving the wrong problems. This happened to me today with exercise 1.12, which asks &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +87,99 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/21/sicp-1-12-kind-of/">SICP 1.12, Kind Of&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-21T00:00:00+07:00" pubdate data-updated="true">Jan 21<sup>st</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When working through <a href="http://en.wikipedia.org/wiki/Structure_and_Interpretation_of_Computer_Programs"><span class="caps">SICP</span></a> while you are tired, you might end up solving the wrong problems. This happened to me today with exercise 1.12, which asks the reader to &#8220;<em>[w]rite a procedure that computes elements of Pascal&#8217;s triangle by means of a recursive process</em>&#8221;. I somehow missed the &#8220;computes elements&#8221; part, and instead wrote a program which generates <a href="http://en.wikipedia.org/wiki/Pascal's_triangle">Pascal&#8217;s triangle</a> up to a certain row. Anyway, here it is as a reference for the next guy who can&#8217;t read:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+<span class='line-number'>15</span><br />
+<span class='line-number'>16</span><br />
+<span class='line-number'>17</span><br />
+<span class='line-number'>18</span><br />
+<span class='line-number'>19</span><br />
+</pre></td><td class='code'><pre><code class='scheme'>&lt;span class='line'&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;define &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;pascal-sums&lt;/span&gt; &lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;empty?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;cdr &lt;/span&gt;&lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;cons &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;+ &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;car &lt;/span&gt;&lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;cadr &lt;/span&gt;&lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;pascal-sums&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;cdr &lt;/span&gt;&lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;)))))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;define &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;pascal-triangle&lt;/span&gt; &lt;span class="nv"&gt;depth&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;define &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;triangle-iter&lt;/span&gt; &lt;span class="nv"&gt;lst&lt;/span&gt; &lt;span class="nv"&gt;n&lt;/span&gt; &lt;span class="nv"&gt;acc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;cond &lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nb"&gt;zero? &lt;/span&gt;&lt;span class="nv"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;           &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;reverse &lt;/span&gt;&lt;span class="nv"&gt;acc&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;          &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;           &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;triangle-iter&lt;/span&gt; &lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;,@&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;pascal-sums&lt;/span&gt; &lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;                          &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;sub1&lt;/span&gt; &lt;span class="nv"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;                          &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;cons &lt;/span&gt;&lt;span class="nv"&gt;lst&lt;/span&gt; &lt;span class="nv"&gt;acc&lt;/span&gt;&lt;span class="p"&gt;)))))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;triangle-iter&lt;/span&gt; &lt;span class="o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;depth&lt;/span&gt; &lt;span class="o"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;()))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;;; &amp;gt; (time (pascal-triangle 7))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;;; cpu time: 0 real time: 0 gc time: 0&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="c1"&gt;;; ((1) (1 1) (1 2 1) (1 3 3 1) (1 4 6 4 1) (1 5 10 10 5 1) (1 6 15 20 15 6 1))&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -664,58 +757,6 @@ Ruby, Clojure, Bash, Python, JavaScript, Scheme, Haskell, <span class="caps">SQL
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/">Clojure: Deriving the Y Combinator in 7 Stolen Steps</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-12-14T00:00:00+07:00" pubdate data-updated="true">Dec 14<sup>th</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/Fixed_point_combinator">Fixed point combinators</a> are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that don&#8217;t explicitly support it. This might be slightly academic, but that doesn&#8217;t make it less fun.</p>
-<p>The most well-known fixed point combinator is probably <a href="http://en.wikipedia.org/wiki/Haskell_Curry">Haskell B. Curry&#8217;s</a> <a href="http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator">Y combinator</a>, which will be the topic of this post. If you read <a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825">The Little Schemer</a> &#8211; which I whole-heartedly recommend doing by the way &#8211; you already implemented it once, but if you are like me chances are you didn&#8217;t entirely get it the first time around. So when I found this nice post on <a href="http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html">Deriving the Y Combinator in 7 Easy Steps</a>, I decided to &#8220;translate&#8221; it from JavaScript to Clojure.</p>
-<p><strong>Step 1</strong></p>
-<p>Let&#8217;s start with a &#8220;classical&#8221; recursive factorial function (while we are at it, I think factorial is a way better example for a fold than for recursion, but everybody seems to do this):<br />
-<script src="https://gist.github.com/741070.js?file=ycombinator-step1.clj"></script></p>
-<p><strong>Step 2</strong></p>
-<p>Now if we wouldn&#8217;t have explicit recursion, what could we do? One solution would be to call a function with itself as an argument, then call this argument with itself as an argument and on and on until the stack blows. Not so useful. To avoid this, we write a <a href="http://en.wikipedia.org/wiki/Higher-order_function">higher-order function</a> which will return a function taking a numeric argument, which will then be used to calculate the factorial:</p>
-<script src="https://gist.github.com/741070.js?file=ycombinator-step2.clj"></script><p><strong>Step 3</strong></p>
-<p>While the above code works, all that duplicated code is really quite ugly, don&#8217;t you think? Let&#8217;s write a little helper to avoid that (I was too lazy for a proper <a href="http://richhickey.github.com/clojure/clojure.core-api.html#clojure.core/refer-clojure">refer-clojure</a> statement, so I decided to name the helper &#8220;yrecur&#8221; instead of &#8220;recur&#8221;):</p>
-<script src="https://gist.github.com/741070.js?file=ycombinator-step3.clj"></script><p><strong>Step 4</strong></p>
-<p>This is better, but the double function call in the body of &#8220;fact&#8221; is still kinda ugly. Let&#8217;s hide this within another helper function called &#8220;g&#8221;,  which has to be definied inside the closure of &#8220;f&#8221; in order to be able to call this function:</p>
-<script src="https://gist.github.com/741070.js?file=ycombinator-step4.clj"></script><p><strong>Step 5</strong></p>
-<p>Now we are getting somewhere! To make our factorial function look almost like the original recursive version, we can factor out some code to a separate wrapper:</p>
-<script src="https://gist.github.com/741070.js?file=ycombinator-step5.clj"></script><p><strong>Step 6</strong></p>
-<p>Instead of actually binding our helper from step 4 to &#8220;g&#8221;, we just inline it since it&#8217;s only called once anyway:</p>
-<script src="https://gist.github.com/741070.js?file=ycombinator-step6.clj"></script><p><strong>Step 7</strong></p>
-<p>Last but not least we also inline the wrapper from step 5, et voila, the Y combinator:</p>
-<script src="https://gist.github.com/741070.js?file=ycombinator-step7.clj"></script></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/17">&larr; Older</a>
@@ -748,6 +789,10 @@ Ruby, Clojure, Bash, Python, JavaScript, Scheme, Haskell, <span class="caps">SQL
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/08/17/re-kindling-my-love-affair-with-the-kindle-fire/">Re-kindling My Love Affair With the Kindle Fire</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
       </li>
     
@@ -761,10 +806,6 @@ Ruby, Clojure, Bash, Python, JavaScript, Scheme, Haskell, <span class="caps">SQL
     
       <li class="post">
         <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/08/great-greater-greater-china/">Great, Greater, Greater China!</a>
       </li>
     
   </ul>
