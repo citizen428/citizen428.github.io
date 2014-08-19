@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: hacking | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/hacking/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/hacking/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Create script from IRB session]]></title>
-    <link href="http://citizen428.net/blog/2009/03/18/create-script-from-irb-session/"/>
+    <link href="http://www.citizen428.net/blog/2009/03/18/create-script-from-irb-session/"/>
     <updated>2009-03-18T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/03/18/create-script-from-irb-session</id>
+    <id>http://www.citizen428.net/blog/2009/03/18/create-script-from-irb-session</id>
     <content type="html"><![CDATA[<p>We all know the feeling: before starting a new script you hack around in IRB to try out some things, but once you&rsquo;re done you realize that now you either have to type everything again or copy/paste from the IRB session (or the history file if you keep one). So I set out on my search for a solution and found an &ldquo;old ruby-talk post by Gavin Sinclair&rdquo;:<a href="http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results,">http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results,</a> which implemented a method called <b>dumphist</b>, which I modified to my needs and put in my ~/.irbrc:</p>
 
 <script src="http://gist.github.com/71624.js"></script>
@@ -61,9 +61,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tweet active Safari tab from command line]]></title>
-    <link href="http://citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
+    <link href="http://www.citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
     <updated>2009-02-27T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
+    <id>http://www.citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
     <content type="html"><![CDATA[<p>Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn&rsquo;t already running, copy  the URL, shorten it, paste it into the client&hellip;</p>
 
 <p>I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It&rsquo;s just a quick and dirty hack, feel free to change it according to your needs&hellip; :&ndash;)</p>
@@ -75,9 +75,9 @@
   
   <entry>
     <title type="html"><![CDATA[Summer Chaos]]></title>
-    <link href="http://citizen428.net/blog/2007/01/25/summer-chaos/"/>
+    <link href="http://www.citizen428.net/blog/2007/01/25/summer-chaos/"/>
     <updated>2007-01-25T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2007/01/25/summer-chaos</id>
+    <id>http://www.citizen428.net/blog/2007/01/25/summer-chaos</id>
     <content type="html"><![CDATA[<p>The date and location for the &ldquo;Chaos Communication Camp 2007&rdquo;:<a href="http://events.ccc.de/camp/">http://events.ccc.de/camp/</a> have now been confirmed! Hope to see you all there!</p>
 
 <p>Setting Orange, Chaos 25, 3173 YOLD</p>
@@ -86,9 +86,9 @@
   
   <entry>
     <title type="html"><![CDATA[23C3 here we come]]></title>
-    <link href="http://citizen428.net/blog/2006/12/25/23c3-here-we-come/"/>
+    <link href="http://www.citizen428.net/blog/2006/12/25/23c3-here-we-come/"/>
     <updated>2006-12-25T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/12/25/23c3-here-we-come</id>
+    <id>http://www.citizen428.net/blog/2006/12/25/23c3-here-we-come</id>
     <content type="html"><![CDATA[<p>In a little less than four hours, &ldquo;berq&rdquo;:<a href="http:berq.net,">http:berq.net,</a> &ldquo;lippi&rdquo;:<a href="http://twoday.tuwien.ac.at/perm,">http://twoday.tuwien.ac.at/perm,</a> &ldquo;red667&rdquo;:<a href="http://red667.org,">http://red667.org,</a> and me will leave for Berlin where we&rsquo;re going to attend the &ldquo;23C3&rdquo;:<a href="http://events.ccc.de/congress/2006/Home.">http://events.ccc.de/congress/2006/Home.</a> Since the &ldquo;Ã–BB&rdquo;:<a href="http://oebb.at">http://oebb.at</a> still sucks, we&rsquo;re once again going by bus, arriving tomorrow at around 6:30am. Judging from last year the time between our arrival until we can check into our &ldquo;hostel&rdquo;:<a href="http://www.hostels.com/en/availability.php/HostelNumber.10594">http://www.hostels.com/en/availability.php/HostelNumber.10594</a> at around noon will be spent drinking beer, which definitely isn&rsquo;t a recommended breakfast option. Kids, don&rsquo;t try this at home!</p>
 
 <p>I&rsquo;m pretty sure we&rsquo;ll once again have loads of fun, and unlike the last years I plan on regularly blogging and posting pics from the event, so stay tuned! Anyone interested in meeting up at the 23C3 either post a comment here or send a mail to my GMail account.</p>

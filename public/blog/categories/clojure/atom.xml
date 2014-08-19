@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: clojure | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/clojure/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/clojure/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[So you want to learn Clojure?]]></title>
-    <link href="http://citizen428.net/blog/2011/05/04/so-you-want-to-learn-clojure/"/>
+    <link href="http://www.citizen428.net/blog/2011/05/04/so-you-want-to-learn-clojure/"/>
     <updated>2011-05-04T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2011/05/04/so-you-want-to-learn-clojure</id>
+    <id>http://www.citizen428.net/blog/2011/05/04/so-you-want-to-learn-clojure</id>
     <content type="html"><![CDATA[<p>For last Monday&rsquo;s <a href="http://metalab.at/wiki/Lambdaheads">Lambdaheads</a> meeting I prepared a list of resources for people interested in learning Clojure, so I thought I&rsquo;ll share it here. The actual presentation had a lot of comments, but I&rsquo;m afraid I&rsquo;m too lazy to repeat them in writing. Maybe the list is still useful for some people though:</p>
 
 <h1>Books</h1>
@@ -86,9 +86,9 @@
   
   <entry>
     <title type="html"><![CDATA[ClojureX is back]]></title>
-    <link href="http://citizen428.net/blog/2011/04/14/clojurex-is-back/"/>
+    <link href="http://www.citizen428.net/blog/2011/04/14/clojurex-is-back/"/>
     <updated>2011-04-14T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2011/04/14/clojurex-is-back</id>
+    <id>http://www.citizen428.net/blog/2011/04/14/clojurex-is-back</id>
     <content type="html"><![CDATA[<p>Considering how many tools for getting up and running with Clojure are available nowadays (e.g. &ldquo;cljr&rdquo;:<a href="https://github.com/liebke/cljr,">https://github.com/liebke/cljr,</a> &ldquo;cake&rdquo;:<a href="http://github.com/ninjudd/cake">http://github.com/ninjudd/cake</a> or &ldquo;Dejour&rdquo;:<a href="https://github.com/russolsen/dejour">https://github.com/russolsen/dejour</a>) I&rsquo;m not sure if anyone still cares, but as of today I&rsquo;m actively working on &ldquo;ClojureX&rdquo;:<a href="https://github.com/citizen428/ClojureX">https://github.com/citizen428/ClojureX</a> again.</p>
 
 <p>There&rsquo;s not really a good reason for that, but I noticed I&rsquo;ve been absent from the Clojure community for way too long and would like to change that again, so see this as a first step.</p>
@@ -97,9 +97,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-02-06]]></title>
-    <link href="http://citizen428.net/blog/2011/02/06/information-overload-2011-02-06/"/>
+    <link href="http://www.citizen428.net/blog/2011/02/06/information-overload-2011-02-06/"/>
     <updated>2011-02-06T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2011/02/06/information-overload-2011-02-06</id>
+    <id>http://www.citizen428.net/blog/2011/02/06/information-overload-2011-02-06</id>
     <content type="html"><![CDATA[<ul>
 <li>"Plenty Of Fish Hacked":http://grumomedia.com/plenty-of-fish-hacked-chris-russos-explains-how-he-did-it/<br>Once again a security researcher gets into trouble for reporting a vulnerability. Will people never learn?</li>
 <li>"Sourceforge Attack: Full Report":http://sourceforge.net/blog/sourceforge-attack-full-report/<br>Speaking of security, here's the full report of the recent Sourceforge hack.</li>
@@ -118,9 +118,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-01-02]]></title>
-    <link href="http://citizen428.net/blog/2011/01/02/information-overload-2011-01-02/"/>
+    <link href="http://www.citizen428.net/blog/2011/01/02/information-overload-2011-01-02/"/>
     <updated>2011-01-02T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2011/01/02/information-overload-2011-01-02</id>
+    <id>http://www.citizen428.net/blog/2011/01/02/information-overload-2011-01-02</id>
     <content type="html"><![CDATA[<ul>
 <li>"Why the Internet Is a Great Tool for Totalitarians":http://www.wired.com/magazine/2010/12/st_essay_totalitarians/<br>It's always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
 <li>"Caring for Your Introvert":http://www.theatlantic.com/magazine/archive/2003/03/caring-for-your-introvert/2696/<br>While I think the author's overly satirical tone actually does a disservice to the content of the article, as an introvert I still urge you to read this.</li>
@@ -139,9 +139,9 @@
   
   <entry>
     <title type="html"><![CDATA[Clojure: Deriving the Y Combinator in 7 Stolen Steps ]]></title>
-    <link href="http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/"/>
+    <link href="http://www.citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/"/>
     <updated>2010-12-14T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps</id>
+    <id>http://www.citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps</id>
     <content type="html"><![CDATA[<p>&ldquo;Fixed point combinators&rdquo;:<a href="http://en.wikipedia.org/wiki/Fixed_point_combinator">http://en.wikipedia.org/wiki/Fixed_point_combinator</a> are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that don&rsquo;t explicitly support it. This might be slightly academic, but that doesn&rsquo;t make it less fun.</p>
 
 <p>The most well-known fixed point combinator is probably &ldquo;Haskell B. Curry&rsquo;s&rdquo;:<a href="http://en.wikipedia.org/wiki/Haskell_Curry">http://en.wikipedia.org/wiki/Haskell_Curry</a> &ldquo;Y combinator&rdquo;:<a href="http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator,">http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator,</a> which will be the topic of this post. If you read &ldquo;The Little Schemer&rdquo;:<a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825">http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825</a> &ndash; which I whole-heartedly recommend doing by the way &ndash; you already implemented it once, but if you are like me chances are you didn&rsquo;t entirely get it the first time around. So when I found this nice post on &ldquo;Deriving the Y Combinator in 7 Easy Steps&rdquo;:<a href="http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html,">http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html,</a> I decided to &ldquo;translate&rdquo; it from JavaScript to Clojure.</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: sysadmin | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/sysadmin/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/sysadmin/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Fixing Grub on a LUKS-encrypted Disk]]></title>
-    <link href="http://citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk/"/>
+    <link href="http://www.citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk/"/>
     <updated>2011-10-17T15:41:00+07:00</updated>
-    <id>http://citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk</id>
+    <id>http://www.citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk</id>
     <content type="html"><![CDATA[<p>When I rebooted my new work notebook (a very nice x201s, with a dual-core i7, 8GB RAM and an SSD by the way), it seemed that for whatever reason there was no Grub installed. Strange, but not the only problem I had with the alternate Ubuntu installer that I used for setting up <a href="http://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS-encrypted</a> root and swap partitions. Since this turned out to be more involved than I originally thought, I decided to document what I did to maybe save others the trouble. BTW: You&rsquo;ll need a Linux Live-CD for this, I recommend the excellent Debian-based <a href="http://grml.org/">Grml</a>.</p>
 
 <p>First we need to open the LUKS partition, which can be done with <a href="http://linux.die.net/man/8/cryptsetup">cryptsetup</a>.</p>

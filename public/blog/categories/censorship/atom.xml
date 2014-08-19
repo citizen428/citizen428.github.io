@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: censorship | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/censorship/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/censorship/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Irrepressible - An Amnesty International campaign]]></title>
-    <link href="http://citizen428.net/blog/2007/07/14/irrepressible-an-amnesty-international-campaign/"/>
+    <link href="http://www.citizen428.net/blog/2007/07/14/irrepressible-an-amnesty-international-campaign/"/>
     <updated>2007-07-14T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2007/07/14/irrepressible-an-amnesty-international-campaign</id>
+    <id>http://www.citizen428.net/blog/2007/07/14/irrepressible-an-amnesty-international-campaign</id>
     <content type="html"><![CDATA[<p><em>The web is a great tool for sharing ideas and freedom of expression. However, efforts to try and control the Internet are growing. Internet repression is reported in countries like China, Vietnam, Tunisia, Iran, Saudi Arabia and Syria. People are persecuted and imprisoned simply for criticising their government, calling for democracy and greater press freedom, or exposing human rights abuses, online.</em></p>
 
 <p><em>But Internet repression is not just about governments. IT companies have helped build the systems that enable surveillance and censorship to take place. Yahoo! have supplied email usersâ€™ private data to the Chinese authorities, helping to facilitate cases of wrongful imprisonment. Microsoft and Google have both complied with government demands to actively censor Chinese users of their services.</em></p>
@@ -37,9 +37,9 @@
   
   <entry>
     <title type="html"><![CDATA[A closer look at Google.cn filtering]]></title>
-    <link href="http://citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering/"/>
+    <link href="http://www.citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering/"/>
     <updated>2006-01-27T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering</id>
+    <id>http://www.citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering</id>
     <content type="html"><![CDATA[<p>While reading &ldquo;netzpolitik.org&rdquo;:netzpolitik.org yesterday, I found a link to an article on the &ldquo;OpenNet Initiative Blog&rdquo;:<a href="http://opennetinitiative.net/blog/,">http://opennetinitiative.net/blog/,</a> explaining &ldquo;how the filtering of Google.cn works&rdquo;:<a href="http://www.opennetinitiative.net/blog/?p=87.">http://www.opennetinitiative.net/blog/?p=87.</a> Now let&rsquo;s have a closer look at some of the blocked sites:</p>
 
 <p>site:hrw.org
@@ -102,9 +102,9 @@ site:epochtimes.com</p>
   
   <entry>
     <title type="html"><![CDATA[Free speech or bust]]></title>
-    <link href="http://citizen428.net/blog/2006/01/22/free-speech-or-bust/"/>
+    <link href="http://www.citizen428.net/blog/2006/01/22/free-speech-or-bust/"/>
     <updated>2006-01-22T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/01/22/free-speech-or-bust</id>
+    <id>http://www.citizen428.net/blog/2006/01/22/free-speech-or-bust</id>
     <content type="html"><![CDATA[<p>Today when I talked with a non-techy friend from the Midde East on IM, the topic of free speech on the net came up. I then started telling him about &ldquo;Tor&rdquo;:<a href="http://tor.eff.org/overview.html.en">http://tor.eff.org/overview.html.en</a> and how hidden services could be a solution to this. But when I sent him the links, he couldn&rsquo;t open them, but instead saw the following:</p>
 
 <p><em>We apologize the site you are attempting to visit has been blocked due to its content being inconsistent with the religious, cultural, political and moral values of [insert country here]</em>.</p>

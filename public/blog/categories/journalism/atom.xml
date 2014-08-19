@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: journalism | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/journalism/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/journalism/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-01-23]]></title>
-    <link href="http://citizen428.net/blog/2011/01/23/information-overload-2011-01-23/"/>
+    <link href="http://www.citizen428.net/blog/2011/01/23/information-overload-2011-01-23/"/>
     <updated>2011-01-23T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2011/01/23/information-overload-2011-01-23</id>
+    <id>http://www.citizen428.net/blog/2011/01/23/information-overload-2011-01-23</id>
     <content type="html"><![CDATA[<ul>
 <li>"All-Seeing Blimp Could Be Afghanistan's Biggest Brain":http://www.wired.com/dangerroom/2011/01/all-seeing-blimp/<br>The US military has plans to deploy a giant "blimp":http://en.wikipedia.org/wiki/Blimp over Afghanistan. While kinda cool from a technological perspective, this is also quite scary.</li>
 <li>"I Can Crack Your App With Just A Shell (And How To Stop Me)":http://kswizz.com/post/2785664228/hacking-mac-apps<br>If you like OSX, assembler and security, you'll probably find this interesting. Also contains hints for developers on how to make their apps harder to crack.</li>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mac | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/mac/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/mac/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Major changes in ClojureX]]></title>
-    <link href="http://citizen428.net/blog/2010/02/21/major-changes-in-clojurex/"/>
+    <link href="http://www.citizen428.net/blog/2010/02/21/major-changes-in-clojurex/"/>
     <updated>2010-02-21T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2010/02/21/major-changes-in-clojurex</id>
+    <id>http://www.citizen428.net/blog/2010/02/21/major-changes-in-clojurex</id>
     <content type="html"><![CDATA[<p>When ClojureX was started it tried to be everything for everybody. Not only did it checkout and compile the git HEADs of clojure, clojure-contrib and jline, it also (optionally) downloaded packages for Clojure support in TextMate or Emacs, configured and installed them. This has two obvious drawbacks. First off, people end up downloading stuff they don&rsquo;t need. With current disk sizes and connection speeds that&rsquo;s probably not much of a problem, but some users may still find annoying. More importantly though it was hard to keep up with the upstream changes, e.g. clojure-contrib&rsquo;s recent switch to Maven.</p>
 
 <p>So now instead of trying to provide a one-size-fits-all solution I&rsquo;m taking a totally different approach: from now on ClojureX will only contain the most recent <em>stable</em> releases of clojure, clojure-contrib and jline, as well as a very full-featured clj script:</p>
@@ -31,9 +31,9 @@
   
   <entry>
     <title type="html"><![CDATA[Fixing MacPorts on Snow Leopard]]></title>
-    <link href="http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard/"/>
+    <link href="http://www.citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard/"/>
     <updated>2009-10-19T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard</id>
+    <id>http://www.citizen428.net/blog/2009/10/19/fixing-macports-on-snow-leopard</id>
     <content type="html"><![CDATA[<pre><code>&lt;p&gt;After upgrading to Snow Leopard I had quite a bit of trouble with my &lt;a href="http://www.macports.org/"&gt;MacPorts&lt;/a&gt; installation, since most builds just failed with configure errors. After the obvious first steps of installing a newer version for SL and making sure I have the most recent XCode, I was a bit stumped until I finally found this site:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://trac.macports.org/wiki/Migration"&gt;Migrating a MacPorts install to a new major OS version or CPU architecture&lt;/a&gt;&lt;/p&gt;
@@ -45,9 +45,9 @@
   
   <entry>
     <title type="html"><![CDATA[RubyOSA: Google lyrics for current iTunes track]]></title>
-    <link href="http://citizen428.net/blog/2009/03/18/rubyosa-google-lyrics-for-current-itunes-track/"/>
+    <link href="http://www.citizen428.net/blog/2009/03/18/rubyosa-google-lyrics-for-current-itunes-track/"/>
     <updated>2009-03-18T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/03/18/rubyosa-google-lyrics-for-current-itunes-track</id>
+    <id>http://www.citizen428.net/blog/2009/03/18/rubyosa-google-lyrics-for-current-itunes-track</id>
     <content type="html"><![CDATA[<script src="http://gist.github.com/81399.js"></script>
 
 
@@ -57,9 +57,9 @@
   
   <entry>
     <title type="html"><![CDATA[RubyLearning got a new mentor with shiny Shoes and a Mac]]></title>
-    <link href="http://citizen428.net/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac/"/>
+    <link href="http://www.citizen428.net/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac/"/>
     <updated>2009-02-01T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac</id>
+    <id>http://www.citizen428.net/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac</id>
     <content type="html"><![CDATA[<p>Since I currently have quite a lot of time but am slightly on the poor side (as we all know: &lsquo;money = has_time ? 0 : loads.to_i&rsquo;) I decided to join batch 10 of <a href="http://rubylearning.org/class/">RubyLearning&rsquo;s</a> free online core Ruby programming course. In my opinion the course is <em>very</em> good, so if you always wanted to learn Ruby but couldn&rsquo;t find the motivation alone, definitely give this a try! But since I myself am not exactly new to Ruby, it so happened that after the first week of the course I now joined the RubyLearning team as a mentor. Glad to be part of the gang, folks! :)</p>
 
 <p>Yesterday &ldquo;I blogged&rdquo;:<a href="http://citizen428.net/archives/353-The-first-steps-in-new-Shoes.html">http://citizen428.net/archives/353-The-first-steps-in-new-Shoes.html</a> about my first experiments with &ldquo;Shoes&rdquo;:<a href="http://shoooes.net/">http://shoooes.net/</a> and thanks to some feedback by &ldquo;ashbb&rdquo;:<a href="http://ashbb.github.com/">http://ashbb.github.com/</a> a newer version of the &ldquo;Little Helper&rdquo;:<a href="http://the-shoebox.org/apps/126">http://the-shoebox.org/apps/126</a> is now available. And since I plan on doing some more experiments with Shoes, I also started a &ldquo;repo called littlesteps&rdquo;:<a href="http://github.com/citizen428/littlesteps/tree/master">http://github.com/citizen428/littlesteps/tree/master</a> on Github where I will keep the source for all those nice little application.</p>
@@ -74,9 +74,9 @@
   
   <entry>
     <title type="html"><![CDATA[Freie Editoren braucht das Land]]></title>
-    <link href="http://citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land/"/>
+    <link href="http://www.citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land/"/>
     <updated>2009-01-29T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land</id>
+    <id>http://www.citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land</id>
     <content type="html"><![CDATA[<p>Geht es um Text-Editoren für MacOS X führt kaum ein Weg an <a href="http://macromates.com/">TextMate</a> vorbei, als freie Alternative ist <a href="http://tuppis.com/smultron/">Smultron</a> sehr beliebt.</p>
 
 <p>Mit <a href="http://code.google.com/p/macvim/">MacVim</a> steht nun aber auch endlich ein vernünftiger Port des Unix-Veteranen <a href="http://www.vim.org/">Vim</a> zur Verfügung, welcher nichts mit der veralteten <a href="http://macvim.org/">Carbon-Version</a> zu tun hat. Vim hat zwar eine deutlich steilere Lernkurve als andere Editoren, hat man die Bedienung aber einmal gemeistert, wird man mit ungeahnter Flexibilität und Effizienz belohnt. Da MacVim typische Tastaturkürzel wie ?Z, ?V und ?A versteht, können sich Neulinge langsam an die Bedienung des Editors heranzutasten ohne sofort eine Vielzahl an Kommandos lernen zu müssen. Darüber hinaus bietet das Programm transparente Hintergründe, einen Vollbild-Modus sowie volle Unterstützung für Multibyte-Text. Insgesamt eine sehr gelungene Portierung, welche die Vorzüge von Vim und MacOS X optimal verbindet.</p>

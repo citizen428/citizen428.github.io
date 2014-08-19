@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: book | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/book/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/book/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: Create Your Own Programming Language]]></title>
-    <link href="http://citizen428.net/blog/2010/11/08/review-create-your-own-programming-language/"/>
+    <link href="http://www.citizen428.net/blog/2010/11/08/review-create-your-own-programming-language/"/>
     <updated>2010-11-08T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2010/11/08/review-create-your-own-programming-language</id>
+    <id>http://www.citizen428.net/blog/2010/11/08/review-create-your-own-programming-language</id>
     <content type="html"><![CDATA[<p><strong>Synopsis:</strong>
 &ldquo;Create Your Own Programming Language&rdquo;:<a href="http://createyourproglang.com/">http://createyourproglang.com/</a> by Marc-Andre Cournoyer is a guide on &ndash; surprise &ndash; creating your own programming language, consisting of a 53 page PDF, exercises and solutions, a toy language written in Ruby and a more full-featured one hosted on the JVM. There&rsquo;s also a 10 minute long screencast on extending the latter, as well as an &ldquo;online community&rdquo;:<a href="http://createyourproglang.com/community/.">http://createyourproglang.com/community/.</a></p>
 

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: kids | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/kids/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/kids/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[happynerds.net is online!]]></title>
-    <link href="http://citizen428.net/blog/2009/12/13/happynerds-net-is-online/"/>
+    <link href="http://www.citizen428.net/blog/2009/12/13/happynerds-net-is-online/"/>
     <updated>2009-12-13T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/12/13/happynerds-net-is-online</id>
+    <id>http://www.citizen428.net/blog/2009/12/13/happynerds-net-is-online</id>
     <content type="html"><![CDATA[<p>In my <a href="http://citizen428.net/archives/404-Fun-with-Sinatra,-Heroku-and-MongoDB.html">previous blog post</a> I mentioned how much fun I have in creating a small web project with Sinatra, Heroku and MongoHQ and today said project finally went online:</p>
 
 <p><a href="http://www.happynerds.net/">Happynerds &#8211; Programming Links for Kids</a></p>

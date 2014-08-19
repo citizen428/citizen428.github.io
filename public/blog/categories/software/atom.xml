@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: software | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/software/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/software/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Freie Editoren braucht das Land]]></title>
-    <link href="http://citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land/"/>
+    <link href="http://www.citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land/"/>
     <updated>2009-01-29T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land</id>
+    <id>http://www.citizen428.net/blog/2009/01/29/freie-editoren-braucht-das-land</id>
     <content type="html"><![CDATA[<p>Geht es um Text-Editoren für MacOS X führt kaum ein Weg an <a href="http://macromates.com/">TextMate</a> vorbei, als freie Alternative ist <a href="http://tuppis.com/smultron/">Smultron</a> sehr beliebt.</p>
 
 <p>Mit <a href="http://code.google.com/p/macvim/">MacVim</a> steht nun aber auch endlich ein vernünftiger Port des Unix-Veteranen <a href="http://www.vim.org/">Vim</a> zur Verfügung, welcher nichts mit der veralteten <a href="http://macvim.org/">Carbon-Version</a> zu tun hat. Vim hat zwar eine deutlich steilere Lernkurve als andere Editoren, hat man die Bedienung aber einmal gemeistert, wird man mit ungeahnter Flexibilität und Effizienz belohnt. Da MacVim typische Tastaturkürzel wie ?Z, ?V und ?A versteht, können sich Neulinge langsam an die Bedienung des Editors heranzutasten ohne sofort eine Vielzahl an Kommandos lernen zu müssen. Darüber hinaus bietet das Programm transparente Hintergründe, einen Vollbild-Modus sowie volle Unterstützung für Multibyte-Text. Insgesamt eine sehr gelungene Portierung, welche die Vorzüge von Vim und MacOS X optimal verbindet.</p>
@@ -34,9 +34,9 @@
   
   <entry>
     <title type="html"><![CDATA[Werbefrei]]></title>
-    <link href="http://citizen428.net/blog/2009/01/22/werbefrei/"/>
+    <link href="http://www.citizen428.net/blog/2009/01/22/werbefrei/"/>
     <updated>2009-01-22T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/01/22/werbefrei</id>
+    <id>http://www.citizen428.net/blog/2009/01/22/werbefrei</id>
     <content type="html"><![CDATA[<p>Werbung in Webseiten ist lästig, da sie nicht nur die Ladezeit der aufgerufenen Seite unnötig erhöht, sondern &ndash; besonders im Fall großer animierter Flashbanner &ndash; auch von der Benutzung der Seite ablenkt bzw. den eigentlichen Inhalt manchmal sogar gänzlich verdeckt. Aus diesem Grund gibt es auch diverse Tools um sich ihrer zu entledigen, so zum Beispiel das bekannte Firefox-Plugin <a href="https://addons.mozilla.org/en-US/firefox/addon/1865">Adblock Plus</a>. Anders sah es da bisher bei Safari aus, wo diverse Werbeblocker gemeinhin als Hacks implementiert wurden, welche einerseits die Stabilität des Browsers beeinträchtigen konnten und andererseits nach Updates auch oft den Dienst verweigerten. Damit ist jetzt aber Schluss, denn mit <a title="GlimmerBlocker" href="http://glimmerblocker.org/">GlimmerBlocker</a> gibt es endlich eine stabile und zukunftssichere Lösung, welche darüber hinaus auch noch browserunabhängig ist.</p>
 
 <p>GlimmerBlocker ist als HTTP-Proxy implementiert, welcher bequem über ein PrefPane konfiguriert wird. Bei der Installation werden auch die Netzwerkeinstellungen automatisch angepasst, so dass alle Applikationen welche ihre Proxykonfiguration von dort beziehen von nun an den neuen Proxy verwenden (Firefox oder der Windows Messenger müssen manuell konfiguriert werden). Diese Architektur erlaubt es GlimmerBlocker und den eingesetzten Browser unabhängig voneinander aktualisieren zu können ohne Wechselwirkungen befürchten zu müssen. Allerdings hat dies auch zur Folge, dass gewisse Funktionen die man von anderen Werbeblockern kennt nicht zur Verfügung stehen, so z.B. das Blockieren eines Bildes per Rechtsklick oder das Filtern von Drittanbieter-Cookies. Durch seine vielfältigen Konfigurationsmöglichkeiten und Flexibilität (CSS-Regeln, JavaScript und HTML-Transformation) macht GlimmerBlocker dieses Manko aber durchaus wett, besonders nett ist dabei die Funktion den Proxy-Server im Netz freizugeben, so dass dieser auch von eventuell vorhandenen iPhones, iPods und anderen Computern verwendet werden kann.</p>
@@ -49,9 +49,9 @@
   
   <entry>
     <title type="html"><![CDATA[Nützliches für die Kommandozeile]]></title>
-    <link href="http://citizen428.net/blog/2009/01/22/nutzliches-fur-die-kommandozeile/"/>
+    <link href="http://www.citizen428.net/blog/2009/01/22/nutzliches-fur-die-kommandozeile/"/>
     <updated>2009-01-22T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/01/22/nutzliches-fur-die-kommandozeile</id>
+    <id>http://www.citizen428.net/blog/2009/01/22/nutzliches-fur-die-kommandozeile</id>
     <content type="html"><![CDATA[<p>Nachdem MacOS X ja bekanntlich über einen <a title="Wikipedia: Darwin" href="http://de.wikipedia.org/wiki/Darwin_(Betriebssystem)">Unix-Kern</a> verfügt, steht ein Großteil der bekannten Kommandozeilen-Werkzeuge zur Verfügung. Zusätzlich gibt es aber auch noch einige macspezifische Kommandos, von denen wir heute einige vorstellen wollen.</p>
 
 <ul>
@@ -70,9 +70,9 @@
   
   <entry>
     <title type="html"><![CDATA[Two nice little helpers]]></title>
-    <link href="http://citizen428.net/blog/2007/06/17/two-nice-little-helpers/"/>
+    <link href="http://www.citizen428.net/blog/2007/06/17/two-nice-little-helpers/"/>
     <updated>2007-06-17T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2007/06/17/two-nice-little-helpers</id>
+    <id>http://www.citizen428.net/blog/2007/06/17/two-nice-little-helpers</id>
     <content type="html"><![CDATA[<p>&ldquo;Mozy Online Backup: Mac Mozy&rdquo;:<a href="https://mozy.com/mozy/macmozy">https://mozy.com/mozy/macmozy</a>
 Been using this for around 2 weeks now, really sweet! If you want to sign up, please use this &ldquo;referal link&rdquo;:<a href="https://mozy.com/?ref=ABK655">https://mozy.com/?ref=ABK655</a> which gives both of us more space (of course this also works when you&rsquo;re going to sign up to use the Windows version).</p>
 
@@ -85,9 +85,9 @@ Been using this for around 2 weeks now, really sweet! If you want to sign up, pl
   
   <entry>
     <title type="html"><![CDATA[What a waste]]></title>
-    <link href="http://citizen428.net/blog/2005/11/06/what-a-waste/"/>
+    <link href="http://www.citizen428.net/blog/2005/11/06/what-a-waste/"/>
     <updated>2005-11-06T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2005/11/06/what-a-waste</id>
+    <id>http://www.citizen428.net/blog/2005/11/06/what-a-waste</id>
     <content type="html"><![CDATA[<p>I just wasted two hours fixing a problem that maybe wasn&rsquo;t one to begin with. Don&rsquo;t you just love it when software starts acting strange for no obvious reason, and you have nfc what&rsquo;s going on? And then suddenly, when you&rsquo;re about to finally throw that frigging PC out of the window so you can once and for all start your new career as buddhist mendicant, it just starts working again as if nothing ever happened.</p>
 
 <p>Given that my free time is currently rather limited, I&rsquo;m pretty pissed at the moment, as I&rsquo;ve tried really hard to have some spare hours this afternoon to spend on some personal projects of mine. Ok, I&rsquo;m talking about software projects, and maybe I also would have wasted hours chasing some stupid bug. But at least it would have been <em>MY</em> bug, and I would even have considered it to be fun. Strange, eh?</p>

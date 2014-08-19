@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: job | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/job/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/job/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Why working in Business IT sucks]]></title>
-    <link href="http://citizen428.net/blog/2006/02/07/why-working-in-business-it-sucks/"/>
+    <link href="http://www.citizen428.net/blog/2006/02/07/why-working-in-business-it-sucks/"/>
     <updated>2006-02-07T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/02/07/why-working-in-business-it-sucks</id>
+    <id>http://www.citizen428.net/blog/2006/02/07/why-working-in-business-it-sucks</id>
     <content type="html"><![CDATA[<ol>
 <li><p>You&rsquo;ll turn into a bitter cynic. This in fact is probably the best thing about your job, which really  should make you think&hellip;</p></li>
 <li><p>Only wackos and smartasses work in this field. Depending on which group you belong to, this might even be fun. More often though you&rsquo;re screwed.</p></li>
@@ -37,9 +37,9 @@
   
   <entry>
     <title type="html"><![CDATA[First day in my new job]]></title>
-    <link href="http://citizen428.net/blog/2006/01/05/first-day-in-my-new-job/"/>
+    <link href="http://www.citizen428.net/blog/2006/01/05/first-day-in-my-new-job/"/>
     <updated>2006-01-05T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/01/05/first-day-in-my-new-job</id>
+    <id>http://www.citizen428.net/blog/2006/01/05/first-day-in-my-new-job</id>
     <content type="html"><![CDATA[<p>/me is now working as a &ldquo;Junior System Engineer&rdquo;, whatever that is supposed to mean&hellip; ;)</p>
 
 <p>After succesfully avoiding anything even remotely resembling regular payed work for some years now, this feels pretty strange, but at least my job is all about open source business solutions (clustering, heartbeat, Nagios setups, etc.), the company desktops run Linux (Debian) and code I write is licensed under the GPL.</p>

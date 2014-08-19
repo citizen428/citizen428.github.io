@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: technology | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/technology/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/technology/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[My Kindle Fire and I]]></title>
-    <link href="http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i/"/>
+    <link href="http://www.citizen428.net/blog/2013/06/07/my-kindle-fire-and-i/"/>
     <updated>2013-06-07T16:52:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i</id>
+    <id>http://www.citizen428.net/blog/2013/06/07/my-kindle-fire-and-i</id>
     <content type="html"><![CDATA[<p>Back in October I broke my trusty old <a href="http://www.amazon.com/gp/product/B004HZYA6E/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004HZYA6E&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Keyboard</a>, a rather
 annoying thing to happen at the beginning of a long trip. As a
 workaround I started to use the Kindle app on my iPod Touch, and while
@@ -180,9 +180,9 @@ and read some comics, all on the same device.</p>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-08-26]]></title>
-    <link href="http://citizen428.net/blog/2012/08/26/information-overload-2012-08-26/"/>
+    <link href="http://www.citizen428.net/blog/2012/08/26/information-overload-2012-08-26/"/>
     <updated>2012-08-26T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/08/26/information-overload-2012-08-26</id>
+    <id>http://www.citizen428.net/blog/2012/08/26/information-overload-2012-08-26</id>
     <content type="html"><![CDATA[<p>Remember how I said there probably won&rsquo;t be an Information Overload this week? Turns out I was wrong :&ndash;)</p>
 
 <ul>
@@ -201,9 +201,9 @@ and read some comics, all on the same device.</p>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-08-19]]></title>
-    <link href="http://citizen428.net/blog/2012/08/19/information-overload-2012-08-19/"/>
+    <link href="http://www.citizen428.net/blog/2012/08/19/information-overload-2012-08-19/"/>
     <updated>2012-08-19T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/08/19/information-overload-2012-08-19</id>
+    <id>http://www.citizen428.net/blog/2012/08/19/information-overload-2012-08-19</id>
     <content type="html"><![CDATA[<p>Note: I&rsquo;ll probably be too busy this upcoming week, so don&rsquo;t expect an Information Overload next Sunday.</p>
 
 <ul>
@@ -223,9 +223,9 @@ and read some comics, all on the same device.</p>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-08-05]]></title>
-    <link href="http://citizen428.net/blog/2012/08/05/information-overload-2012-08-05/"/>
+    <link href="http://www.citizen428.net/blog/2012/08/05/information-overload-2012-08-05/"/>
     <updated>2012-08-05T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/08/05/information-overload-2012-08-05</id>
+    <id>http://www.citizen428.net/blog/2012/08/05/information-overload-2012-08-05</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="https://plus.google.com/101960720994009339267/posts/R58WgWwN9jp">A lesson in shortcuts</a><br>A nice piece of Unix history by Rob Pike.</li>
 <li><a href="http://www.raptitude.com/2012/06/why-we-fck/">Why we f*ck</a><br>I like different perspectives. Whether you buy into this or not, it&rsquo;s a good read with some interesting discussion in the comments.</li>
@@ -244,9 +244,9 @@ and read some comics, all on the same device.</p>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-08]]></title>
-    <link href="http://citizen428.net/blog/2012/07/08/information-overload-2012-07-08/"/>
+    <link href="http://www.citizen428.net/blog/2012/07/08/information-overload-2012-07-08/"/>
     <updated>2012-07-08T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/07/08/information-overload-2012-07-08</id>
+    <id>http://www.citizen428.net/blog/2012/07/08/information-overload-2012-07-08</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.bbc.co.uk/news/magazine-18706597">Why Russia locks up so many entrepreneurs</a><br>Being a business man in Russia can be dangerous it seems.</li>
 <li><a href="http://www.esquire.com/features/how-to-compliment-1009">The Perfect Compliment</a><br>This is not some cheesy &ldquo;how to&rdquo;, but actually a nice story to read.</li>

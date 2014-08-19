@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: twitter | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/twitter/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/twitter/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Fun with Twitter and Ruby]]></title>
-    <link href="http://citizen428.net/blog/2009/11/23/fun-with-twitter-and-ruby/"/>
+    <link href="http://www.citizen428.net/blog/2009/11/23/fun-with-twitter-and-ruby/"/>
     <updated>2009-11-23T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/11/23/fun-with-twitter-and-ruby</id>
+    <id>http://www.citizen428.net/blog/2009/11/23/fun-with-twitter-and-ruby</id>
     <content type="html"><![CDATA[<p>I&rsquo;m currently toying around with some ideas for Twitter bots etc. so I had a look at some of the available gems out there. Sometimes Ruby makes stuff almost too simple&hellip; ;&ndash;) Here are a few nice snippets of what you could do with a couple of minutes time and some Ruby:</p>
 
 <p><em>Automatically translate all tweets for a given keyword:</em></p>
@@ -45,9 +45,9 @@ Curious of getting a list of current trends on Twitter, without hashtags? There 
   
   <entry>
     <title type="html"><![CDATA[Tweet active Safari tab from command line]]></title>
-    <link href="http://citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
+    <link href="http://www.citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
     <updated>2009-02-27T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
+    <id>http://www.citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
     <content type="html"><![CDATA[<p>Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn&rsquo;t already running, copy  the URL, shorten it, paste it into the client&hellip;</p>
 
 <p>I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It&rsquo;s just a quick and dirty hack, feel free to change it according to your needs&hellip; :&ndash;)</p>
@@ -59,9 +59,9 @@ Curious of getting a list of current trends on Twitter, without hashtags? There 
   
   <entry>
     <title type="html"><![CDATA[Blog reactivated, Feedburner feeds history]]></title>
-    <link href="http://citizen428.net/blog/2009/01/21/blog-reactivated-feedburner-feeds-history/"/>
+    <link href="http://www.citizen428.net/blog/2009/01/21/blog-reactivated-feedburner-feeds-history/"/>
     <updated>2009-01-21T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/01/21/blog-reactivated-feedburner-feeds-history</id>
+    <id>http://www.citizen428.net/blog/2009/01/21/blog-reactivated-feedburner-feeds-history</id>
     <content type="html"><![CDATA[<p>Although I do love &ldquo;my Soup&rdquo;:<a href="http://soup.citizen428.net,">http://soup.citizen428.net,</a> &ldquo;Twitter&rdquo;:<a href="http://twitter.com/citizen428">http://twitter.com/citizen428</a> and all those other microblogs, tumblelogs and whatgotyou, I recently feel the urge to sometimes write proper long blog posts rising again. Therefore I once again resurrected this blog (I slowly start feeling like the &ldquo;George Romero&rdquo;:<a href="http://en.wikipedia.org/wiki/George_Romero">http://en.wikipedia.org/wiki/George_Romero</a> of blogging), gave it a proper facelift and am now ready to roll again.</p>
 
 <p>On a related note, I&rsquo;d like to inform you that my 2 Feedburner feeds will get deactivated in 30 days. To be honest, I can&rsquo;t even remember why I got them in the first place, but I&rsquo;m pretty sure I had a really good reason back then (&ldquo;Are you pondering what I&rsquo;m pondering?&rdquo;). Anyway, there&rsquo;s still plenty of subscription options here and on Soup, so you really don&rsquo;t have to stop stalking me if you don&rsquo;t fell like it.</p>

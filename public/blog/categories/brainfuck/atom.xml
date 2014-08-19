@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: brainfuck | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/brainfuck/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/brainfuck/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Loads of links]]></title>
-    <link href="http://citizen428.net/blog/2005/12/10/loads-of-links/"/>
+    <link href="http://www.citizen428.net/blog/2005/12/10/loads-of-links/"/>
     <updated>2005-12-10T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2005/12/10/loads-of-links</id>
+    <id>http://www.citizen428.net/blog/2005/12/10/loads-of-links</id>
     <content type="html"><![CDATA[<p>I haven&rsquo;t blogged for quite some time now, so I decided I could at least entertain you with one of my semi-regular link dumps until I&rsquo;m motivated enough to write a proper entry again&hellip;</p>
 
 <p><em><em>Ruby</em></em></p>
@@ -53,9 +53,9 @@
   
   <entry>
     <title type="html"><![CDATA[Getting brainf*cked]]></title>
-    <link href="http://citizen428.net/blog/2005/04/12/getting-brainfcked/"/>
+    <link href="http://www.citizen428.net/blog/2005/04/12/getting-brainfcked/"/>
     <updated>2005-04-12T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2005/04/12/getting-brainfcked</id>
+    <id>http://www.citizen428.net/blog/2005/04/12/getting-brainfcked</id>
     <content type="html"><![CDATA[<p>After knowing &ldquo;Brainfuck&rdquo;:<a href="http://en.wikipedia.org/wiki/Brainfuck">http://en.wikipedia.org/wiki/Brainfuck</a> for quite a while alreay, I today have decided to write my very first &ldquo;program&rdquo; in this funny little language. It does nothing more than displaying the string &ldquo;"CARGAL&rdquo;:<a href="http://www.cargal.org!">http://www.cargal.org!</a>&ldquo; followed by a newline, but nonetheless it was good excercise for getting used to BF.</p>
 
 <!--more-->

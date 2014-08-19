@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: plan9 | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/plan9/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/plan9/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Breaking news: Update to citizen428.blog(), situation unclear!]]></title>
-    <link href="http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
+    <link href="http://www.citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
     <updated>2006-07-01T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
+    <id>http://www.citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
     <content type="html"><![CDATA[<p>June was pretty busy, so I only managed to blog once. So here&rsquo;s a little update of what happened during the past few weeks:</p>
 
 <p><em>Work:</em>

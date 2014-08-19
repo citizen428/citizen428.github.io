@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[citizen428.blog()]]></title>
-  <link href="http://citizen428.net/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Re-kindling My Love Affair With the Kindle Fire]]></title>
-    <link href="http://citizen428.net/blog/2014/08/17/re-kindling-my-love-affair-with-the-kindle-fire/"/>
+    <link href="http://www.citizen428.net/blog/2014/08/17/re-kindling-my-love-affair-with-the-kindle-fire/"/>
     <updated>2014-08-17T18:19:31+07:00</updated>
-    <id>http://citizen428.net/blog/2014/08/17/re-kindling-my-love-affair-with-the-kindle-fire</id>
+    <id>http://www.citizen428.net/blog/2014/08/17/re-kindling-my-love-affair-with-the-kindle-fire</id>
     <content type="html"><![CDATA[<p>When I originally bought my Kindle Fire HD 7&#8221;, I was madly in love with it. However, after the initial euphoria was over, I got very annoyed with the dumbed down user interface and the limited availability of apps in Amazon&rsquo;s app store.</p>
 
 <p>So yesterday morning I finally set aside around 2 hours to do the following:</p>
@@ -38,9 +38,9 @@
   
   <entry>
     <title type="html"><![CDATA[VCR Case Woes]]></title>
-    <link href="http://citizen428.net/blog/2014/05/08/vcr/"/>
+    <link href="http://www.citizen428.net/blog/2014/05/08/vcr/"/>
     <updated>2014-05-08T22:32:55+07:00</updated>
-    <id>http://citizen428.net/blog/2014/05/08/vcr</id>
+    <id>http://www.citizen428.net/blog/2014/05/08/vcr</id>
     <content type="html"><![CDATA[<p>Today I spent quite some time on a rather hard to track down problem. I had some specs using <a href="">VCR</a>, which worked perfectly locally, but just wouldn&rsquo;t run on <a href="https://circleci.com/">CircleCI</a>. In fact, it seemed like CircleCI didn&rsquo;t in fact use the VCR cassettes at all, but instead make a real API call, which failed because the necessary credentials weren&rsquo;t available in the environment (which was kinda the point of using VCR in the first place).</p>
 
 <p>Turns out the problem lay in the combination of using the VCR setting <code>configure_rspec_metadata!</code> and the option <code>core.ignorecase = true</code>, which is standard in newer versions of <a href="http://git-scm.com/">Git</a>. What happened was that at one point I changed the case of a word in a test description, which changes the auto-generated name of the folder VCR will create the cassette in. But since the folder name wasn&rsquo;t changed from git&rsquo;s perspective, I never realized that. So when the code was checked out on CircleCI, VCR encountered the spec with the metadata (<code>vcr: true</code>), but couldn&rsquo;t find the cassette since the checked out folder had the wrong case. It therefore proceeded to run the spec against the live API which failed.</p>
@@ -53,9 +53,9 @@
   
   <entry>
     <title type="html"><![CDATA[2013 Reading List]]></title>
-    <link href="http://citizen428.net/blog/2014/01/01/2013-reading-list/"/>
+    <link href="http://www.citizen428.net/blog/2014/01/01/2013-reading-list/"/>
     <updated>2014-01-01T16:52:04+07:00</updated>
-    <id>http://citizen428.net/blog/2014/01/01/2013-reading-list</id>
+    <id>http://www.citizen428.net/blog/2014/01/01/2013-reading-list</id>
     <content type="html"><![CDATA[<p>Same post as every year, here are the book I read last year. However, this time around there are several novelties: first off, my Spanish got good enough to actually read books, so there are 3 languages now (English, German, Spanish). Also my Kindle Fire allowed me to get back into comics, so I (re-)read a lot of the classics and great stuff I missed out on over the years. Last but not least this is also the year where I started listening to audiobooks, mostly because they are really practical on long bus journeys because they keep you occupied but you can still enjoy the landscape.</p>
 
 <p>The links are affiliate links by the way, I have to finance my reading habit somehow ;&ndash;)</p>
@@ -188,9 +188,9 @@ Eduardo Mendoza (Spanish)</li>
   
   <entry>
     <title type="html"><![CDATA[Around Southeast Asia]]></title>
-    <link href="http://citizen428.net/blog/2013/12/10/around-southeast-asia/"/>
+    <link href="http://www.citizen428.net/blog/2013/12/10/around-southeast-asia/"/>
     <updated>2013-12-10T18:27:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/12/10/around-southeast-asia</id>
+    <id>http://www.citizen428.net/blog/2013/12/10/around-southeast-asia</id>
     <content type="html"><![CDATA[<p>Still trying to catch up on updates, this one will cover the time from
 end of August until late October. The countries: Malaysia, Thailand,
 Cambodia.</p>
@@ -325,9 +325,9 @@ them brought back some good memories.</p>
   
   <entry>
     <title type="html"><![CDATA[The Missing Update]]></title>
-    <link href="http://citizen428.net/blog/2013/11/06/the-missing-update/"/>
+    <link href="http://www.citizen428.net/blog/2013/11/06/the-missing-update/"/>
     <updated>2013-11-06T14:07:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/11/06/the-missing-update</id>
+    <id>http://www.citizen428.net/blog/2013/11/06/the-missing-update</id>
     <content type="html"><![CDATA[<p>After roughly two months of silence, it&rsquo;s time for another long overdue update. It covers our stay in Vietnam, or the period from end of July until end of August.</p>
 
 <p>Having spent some time in Taiwan and Hong Kong, we were curious to explore Vietnam, a country that&rsquo;s supposed to be a bridge between the Chinese world and Southeast Asia. We arrived in Hanoi and I instantly liked what I saw: chaos, street food, old colonial architecture and more street food. Not to forget the bia hoi, delicious (and cheap) beer which is brewed daily. While the traffic is at times insane, Hanoi is a very likable city, featuring some great cafes, excellent food and nice old French houses. Unfortunately a typhoon stopped us from going to Halong Bay, but the Perfume Pagoda made for a nice day trip too.</p>
@@ -354,9 +354,9 @@ them brought back some good memories.</p>
   
   <entry>
     <title type="html"><![CDATA[Great, Greater, Greater China!]]></title>
-    <link href="http://citizen428.net/blog/2013/09/08/great-greater-greater-china/"/>
+    <link href="http://www.citizen428.net/blog/2013/09/08/great-greater-greater-china/"/>
     <updated>2013-09-08T00:10:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/09/08/great-greater-greater-china</id>
+    <id>http://www.citizen428.net/blog/2013/09/08/great-greater-greater-china</id>
     <content type="html"><![CDATA[<p>By now it&rsquo;s quite standard that my posts lack behind my travels&hellip; This update is no exception, it&rsquo;s about our travels from end of June to end of July.</p>
 
 <p>The topic: <a href="http://en.wikipedia.org/wiki/Greater_China">Greater China</a>, or more precisely Shanghai, Taiwan and Hong Kong.</p>
@@ -395,9 +395,9 @@ old factories and warehouses on the docks now serve as amazingcontemporary art s
   
   <entry>
     <title type="html"><![CDATA[Extending Nmap With Lua]]></title>
-    <link href="http://citizen428.net/blog/2013/08/31/extending-nmap-with-lua/"/>
+    <link href="http://www.citizen428.net/blog/2013/08/31/extending-nmap-with-lua/"/>
     <updated>2013-08-31T17:49:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/08/31/extending-nmap-with-lua</id>
+    <id>http://www.citizen428.net/blog/2013/08/31/extending-nmap-with-lua</id>
     <content type="html"><![CDATA[<p><em>I originally wrote this piece for a pentesting magazine, but after some unprofessional behavior by their editor I lost my cool and decided not too publish it there. It&rsquo;d be a shame to let it go to waste though, so I after almost three month I finally decided to put it up on my blog.</em></p>
 
 <p>Whether you are working as a security professional or a network administrator, chances are that <a href="http://nmap.org/">Nmap</a> (“Network Mapper”) is part of your regular toolkit. For many people this project, which was started by Gordon &ldquo;Fyodor&rdquo; Lyon in 1997, is the first choice when it comes to host and service discovery. But thanks to the Nmap Scripting Engine (NSE), it can do much more than that, allowing users to easily develop and share their own scripts, thus turning it into a versatile security scanner.</p>
@@ -736,9 +736,9 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   
   <entry>
     <title type="html"><![CDATA[¡Viva Mexico!]]></title>
-    <link href="http://citizen428.net/blog/2013/07/27/viva-mexico/"/>
+    <link href="http://www.citizen428.net/blog/2013/07/27/viva-mexico/"/>
     <updated>2013-07-27T20:04:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/07/27/viva-mexico</id>
+    <id>http://www.citizen428.net/blog/2013/07/27/viva-mexico</id>
     <content type="html"><![CDATA[<p>Oh man, this is one overdue post. I wanted to write about Mexico forever, but then we were traveling in Taiwan, and suddenly the whole Latin America experience just seemed so far away already&hellip; Anyway, we are now in Vietnam (Hanoi to be more specific), so I thought I&rsquo;d finally sit down and write up my impressions.</p>
 
 <p>Mexico was one of the places I wanted to visit for a long time, so before we went, I was a bit nervous that it may not live up to my expectations. But not only did it do that, it actually far exceeded them! There are fantastic things to see, the food is exceptionally good (also for vegetarians) and the people amazingly friendly. Also it felt like a really safe and easy place to travel: as opposed to big parts of South America the security situation in Mexico is pretty relaxed, even though stuff does of course happen. On top of that there are good roads everywhere and ADO is a very nice bus company, so we generally didn&rsquo;t dread moving from A to B. With that said it&rsquo;s quite unfortunate we only had 4 weeks there, but we had booked the flight to Taiwan beforehand in order to avoid getting stuck in the Americas for all of our trip. Turns out that was a good idea, because Mexico alone could easily have kept me entertained for several more month.</p>
@@ -753,9 +753,9 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   
   <entry>
     <title type="html"><![CDATA[My Kindle Fire and I]]></title>
-    <link href="http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i/"/>
+    <link href="http://www.citizen428.net/blog/2013/06/07/my-kindle-fire-and-i/"/>
     <updated>2013-06-07T16:52:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i</id>
+    <id>http://www.citizen428.net/blog/2013/06/07/my-kindle-fire-and-i</id>
     <content type="html"><![CDATA[<p>Back in October I broke my trusty old <a href="http://www.amazon.com/gp/product/B004HZYA6E/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004HZYA6E&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Keyboard</a>, a rather
 annoying thing to happen at the beginning of a long trip. As a
 workaround I started to use the Kindle app on my iPod Touch, and while
@@ -918,9 +918,9 @@ and read some comics, all on the same device.</p>
   
   <entry>
     <title type="html"><![CDATA[South America: The Summary]]></title>
-    <link href="http://citizen428.net/blog/2013/05/31/south-america-the-summary/"/>
+    <link href="http://www.citizen428.net/blog/2013/05/31/south-america-the-summary/"/>
     <updated>2013-05-31T17:52:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/05/31/south-america-the-summary</id>
+    <id>http://www.citizen428.net/blog/2013/05/31/south-america-the-summary</id>
     <content type="html"><![CDATA[<p>After a three day layover in the U.S., Mexico seems like the perfect place to write up my thoughts and the roughly 7.5 months we spent in South America. I&rsquo;m sure there are plenty of omissions, but it should be enough to give you an idea.</p>
 
 <p><strong>Paraguay</strong><br>
@@ -999,9 +999,9 @@ Another place many people love and that has a lot of hype surrounding it. Coming
   
   <entry>
     <title type="html"><![CDATA[Living With the Hare Krishna]]></title>
-    <link href="http://citizen428.net/blog/2013/04/24/living-with-the-hare-krishna/"/>
+    <link href="http://www.citizen428.net/blog/2013/04/24/living-with-the-hare-krishna/"/>
     <updated>2013-04-24T18:43:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/04/24/living-with-the-hare-krishna</id>
+    <id>http://www.citizen428.net/blog/2013/04/24/living-with-the-hare-krishna</id>
     <content type="html"><![CDATA[<p>I know there&rsquo;s lots of other things I could tell you about (like Peru), but we spent last week at a Hare Krishna temple/farm in the Ecuadorian jungle at that&rsquo;s gonna be today&rsquo;s story.</p>
 
 <p>First off, if you want to know more about the Hare Krishna, head of to Wikipedia and read about <a href="http://en.wikipedia.org/wiki/Gaudiya_Vaishnava">Vaishnavism</a>. How did we come up with the idea of staying there? Well, P. read a blog post by a Canadian woman who stayed for a while at the <a href="http://ecoyogavillages.org/en/peru/lima/eco-truly-park">Eco Truly Park</a> close to Lima, Peru. What she wrote sounded interesting, so we considered going there. For various reasons we didn&rsquo;t though, so we decided to go to a place that&rsquo;s part of the same network, namely the <a href="http://ecoyogavillages.org/en/ecuador/banos/ecological-garden-vrindavan">Finca Vrindavan</a> close to Rio Negro in Ecuador.</p>
@@ -1035,9 +1035,9 @@ Another place many people love and that has a lot of hype surrounding it. Coming
   
   <entry>
     <title type="html"><![CDATA[Filling in the Blanks]]></title>
-    <link href="http://citizen428.net/blog/2013/03/23/filling-in-the-blanks/"/>
+    <link href="http://www.citizen428.net/blog/2013/03/23/filling-in-the-blanks/"/>
     <updated>2013-03-23T17:20:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/03/23/filling-in-the-blanks</id>
+    <id>http://www.citizen428.net/blog/2013/03/23/filling-in-the-blanks</id>
     <content type="html"><![CDATA[<p>As should be clear by now, I&rsquo;m not overly good at writing these things regularly, so I won&rsquo;t even pretend to be sorry it&rsquo;s been over a month
 since the last one, and I also won&rsquo;t promise that the next one will come any sooner. I also kinda gave up hope on ever properly filling you in on Argentina part 2 and 3 and Chile, so a very short summary will have to do:</p>
 
@@ -1080,9 +1080,9 @@ place, hard to leave.</li>
   
   <entry>
     <title type="html"><![CDATA[Mix It Up!]]></title>
-    <link href="http://citizen428.net/blog/2013/02/13/mix-it-up/"/>
+    <link href="http://www.citizen428.net/blog/2013/02/13/mix-it-up/"/>
     <updated>2013-02-13T18:56:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/02/13/mix-it-up</id>
+    <id>http://www.citizen428.net/blog/2013/02/13/mix-it-up</id>
     <content type="html"><![CDATA[<p>I know I didn&rsquo;t write in way too long (and I still didn&rsquo;t talk about Argentina and Chile), but that just happens when you are traveling. Especially when that takes you to Bolivia, where Internet connection speeds are still stuck in the 1990s.</p>
 
 <p>Anyway, we made it to our 5th South American country now, and after 3.5 month in the Cono Sur, this feels distinctly more &ldquo;foreign&rdquo;. That&rsquo;s probably related to the fact that 60% of the population are indigenous, so there are a lot less European looking people than in Argentina or Chile. Many of the women still wear traditional dress, and coca is quite omnipresent, be it in the form of tea (mate de coca), sweets or as leaves. All of them are supposed to help with altitude sickness, and considering that we never really went below 2500m since we got here (and up to 5000m maximum) we&rsquo;ve consumed our fair share too. And I strongly deny all rumors that I actually enjoy chewing coca, it&rsquo;s purely for medical purposes&hellip; ;&ndash;)</p>
@@ -1099,9 +1099,9 @@ place, hard to leave.</li>
   
   <entry>
     <title type="html"><![CDATA[Cono Sur Reflections]]></title>
-    <link href="http://citizen428.net/blog/2013/01/25/cono-sur-reflections/"/>
+    <link href="http://www.citizen428.net/blog/2013/01/25/cono-sur-reflections/"/>
     <updated>2013-01-25T12:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/01/25/cono-sur-reflections</id>
+    <id>http://www.citizen428.net/blog/2013/01/25/cono-sur-reflections</id>
     <content type="html"><![CDATA[<p>I know I&rsquo;m far behind on telling you about the places we visited, but
 I will eventually catch up, or at least I hope so. For now I wanted to
 reflect a bit on the past 3.5 month, which we spent in the Cono Sur
@@ -1197,9 +1197,9 @@ missing)</li>
   
   <entry>
     <title type="html"><![CDATA[2012 Travel Review]]></title>
-    <link href="http://citizen428.net/blog/2013/01/09/2012-travel-review/"/>
+    <link href="http://www.citizen428.net/blog/2013/01/09/2012-travel-review/"/>
     <updated>2013-01-09T13:25:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/01/09/2012-travel-review</id>
+    <id>http://www.citizen428.net/blog/2013/01/09/2012-travel-review</id>
     <content type="html"><![CDATA[<p>I know it&rsquo;s a bit late for a 2012 review post, but we spent the last couple of days in a wonderfully isolated place on the Chilean coast without an Internet connection. Anyway, I thought better late than never, so here are some thoughts on the first 3 month of our trip.</p>
 
 <p><em>Favorite places visited</em></p>
@@ -1232,9 +1232,9 @@ missing)</li>
   
   <entry>
     <title type="html"><![CDATA[2012 Reading List]]></title>
-    <link href="http://citizen428.net/blog/2013/01/02/2012-reading-list/"/>
+    <link href="http://www.citizen428.net/blog/2013/01/02/2012-reading-list/"/>
     <updated>2013-01-02T20:44:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/01/02/2012-reading-list</id>
+    <id>http://www.citizen428.net/blog/2013/01/02/2012-reading-list</id>
     <content type="html"><![CDATA[<p>Once again here&rsquo;s a list of all the books I read in the past year, in
 reading order. I&rsquo;m surprised I made it to 52 again, since there were
 several periods where I didn&rsquo;t read much for various reasons.</p>
@@ -1308,9 +1308,9 @@ Ivo Balbaert: <em>The Way to Go</em><br></p>
   
   <entry>
     <title type="html"><![CDATA[Feliz Navidad!]]></title>
-    <link href="http://citizen428.net/blog/2012/12/24/feliz-navidad/"/>
+    <link href="http://www.citizen428.net/blog/2012/12/24/feliz-navidad/"/>
     <updated>2012-12-24T10:01:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/12/24/feliz-navidad</id>
+    <id>http://www.citizen428.net/blog/2012/12/24/feliz-navidad</id>
     <content type="html"><![CDATA[<p>I even have a present for you, the long overdue post about Uruguay,
 one of the highlights of our trip so far!</p>
 
@@ -1364,9 +1364,9 @@ the post about the month we just spent in Argentina!</p>
   
   <entry>
     <title type="html"><![CDATA[A First Glimpse of Argentina]]></title>
-    <link href="http://citizen428.net/blog/2012/11/21/a-first-glimpse-of-argentina/"/>
+    <link href="http://www.citizen428.net/blog/2012/11/21/a-first-glimpse-of-argentina/"/>
     <updated>2012-11-21T23:37:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/11/21/a-first-glimpse-of-argentina</id>
+    <id>http://www.citizen428.net/blog/2012/11/21/a-first-glimpse-of-argentina</id>
     <content type="html"><![CDATA[<p>Ladies and gentlemen,</p>
 
 <p>with a delay of only 3 weeks I present to you our first impressions of
@@ -1468,9 +1468,9 @@ this thought when I tell you about Uruguay and the rest of Argentina&hellip;</p>
   
   <entry>
     <title type="html"><![CDATA[In the Land of Tereré]]></title>
-    <link href="http://citizen428.net/blog/2012/11/12/in-the-land-of-terere/"/>
+    <link href="http://www.citizen428.net/blog/2012/11/12/in-the-land-of-terere/"/>
     <updated>2012-11-12T19:36:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/11/12/in-the-land-of-terere</id>
+    <id>http://www.citizen428.net/blog/2012/11/12/in-the-land-of-terere</id>
     <content type="html"><![CDATA[<p>Considering we left Paraguay almost three weeks ago, it&rsquo;s a shame I
 haven&rsquo;t told you anything about this wonderful place yet. But let&rsquo;s
 backtrack for a second and explore how we got to Paraguay. When we
@@ -1570,9 +1570,9 @@ to Uruguay from where I&rsquo;m currently writing this.</p>
   
   <entry>
     <title type="html"><![CDATA[A Quick One for the Road]]></title>
-    <link href="http://citizen428.net/blog/2012/10/31/a-quick-one-for-the-road/"/>
+    <link href="http://www.citizen428.net/blog/2012/10/31/a-quick-one-for-the-road/"/>
     <updated>2012-10-31T19:30:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/10/31/a-quick-one-for-the-road</id>
+    <id>http://www.citizen428.net/blog/2012/10/31/a-quick-one-for-the-road</id>
     <content type="html"><![CDATA[<p>After a lovely time in Paraguay (a separate post will follow), we explored the Northeast of Argentina a bit (Posadas, San Ignacio,
 Iguazu Falls). Today we&rsquo;ll take an overnight bus to Colon were we&rsquo;ll cross into Paysandu (Uruguay) on Friday or so. We don&rsquo;t know how long we&rsquo;ll stay there yet, but after that we&rsquo;ll head back to Argentina to finally visit some cities.</p>
 

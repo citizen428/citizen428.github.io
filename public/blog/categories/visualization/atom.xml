@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: visualization | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/visualization/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/visualization/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-03-13]]></title>
-    <link href="http://citizen428.net/blog/2011/03/13/information-overload-2011-03-13/"/>
+    <link href="http://www.citizen428.net/blog/2011/03/13/information-overload-2011-03-13/"/>
     <updated>2011-03-13T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2011/03/13/information-overload-2011-03-13</id>
+    <id>http://www.citizen428.net/blog/2011/03/13/information-overload-2011-03-13</id>
     <content type="html"><![CDATA[<ul>
 <li>"Galleon's Web":http://online.wsj.com/article/SB10001424052748703386704576186592268116056.html<br>Great visualization of the Galleon insider trading case by the "Wall Street Journal":http://europe.wsj.com/home-page.</li>
 <li>"PISA based Wealth Comparison":http://opendata.zeit.de/pisa-wohlstands-vergleich/visualisierung.php#/en/DEU-OECD<br>More visualization, this time by German weekly "Die Zeit":http://www.zeit.de/ (also available in "German":http://opendata.zeit.de/pisa-wohlstands-vergleich/visualisierung.php#/de/DEU-OECD).</li>

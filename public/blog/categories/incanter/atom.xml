@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: incanter | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/incanter/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/incanter/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[GitHub stats with Incanter]]></title>
-    <link href="http://citizen428.net/blog/2010/08/10/github-stats-with-incanter/"/>
+    <link href="http://www.citizen428.net/blog/2010/08/10/github-stats-with-incanter/"/>
     <updated>2010-08-10T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2010/08/10/github-stats-with-incanter</id>
+    <id>http://www.citizen428.net/blog/2010/08/10/github-stats-with-incanter</id>
     <content type="html"><![CDATA[<p>Today I stumbled upon a post called <a href="http://www.r-chart.com/2010/08/github-stats-on-programming-languages.html">GitHub Stats on Programming Languages</a>, where the author uses <a href="http://www.r-project.org/">R</a> to create various graphs about GitHub&rsquo;s top 10 programming languages. He was nice and posted his <a href="http://github.com/ezgraphs/R-Programs/blob/master/git_lang_stats.txt">data set</a>, so I had a go at it with <a href="http://data-sorcery.org/">Incanter</a>.</p>
 
 <p>Load the necessary libraries:</p>
@@ -81,9 +81,9 @@
   
   <entry>
     <title type="html"><![CDATA[Incanter and the Birthday Paradox ]]></title>
-    <link href="http://citizen428.net/blog/2010/04/15/incanter-and-the-birthday-paradox/"/>
+    <link href="http://www.citizen428.net/blog/2010/04/15/incanter-and-the-birthday-paradox/"/>
     <updated>2010-04-15T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2010/04/15/incanter-and-the-birthday-paradox</id>
+    <id>http://www.citizen428.net/blog/2010/04/15/incanter-and-the-birthday-paradox</id>
     <content type="html"><![CDATA[<p>As a little follow-up to <a href="http://citizen428.net/archives/423-The-Birthday-Paradox-in-Clojure.html">my recent post on the Birthday Paradox</a> I decided to clean up the code and also plot the relationship between group size and the probability of a shared birthday with <a href="http://incanter.org/">Incanter</a> (mostly because I wanted to show off 1.2&#8217;s <a href="http://data-sorcery.org/2010/04/04/new-chart-theme/">hot new default theme</a>).</p>
 
 <p>Code:</p>

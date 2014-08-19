@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: gentoo | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/gentoo/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/gentoo/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Delusions of grandeur]]></title>
-    <link href="http://citizen428.net/blog/2006/08/12/delusions-of-grandeur/"/>
+    <link href="http://www.citizen428.net/blog/2006/08/12/delusions-of-grandeur/"/>
     <updated>2006-08-12T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/08/12/delusions-of-grandeur</id>
+    <id>http://www.citizen428.net/blog/2006/08/12/delusions-of-grandeur</id>
     <content type="html"><![CDATA[<p>As my PR manager told me, large numbers of fans have already complained about the recent lack of updates. Since I&rsquo;m only my reader&rsquo;s humble servant, I of course have to comply with this wishes, so here are the long awaited news about yours truly:</p>
 
 <p><em>Gentoo:</em>
@@ -45,9 +45,9 @@ Found an &ldquo;article&rdquo;:<a href="http://www.explosm.net/articles/6135/4/"
   
   <entry>
     <title type="html"><![CDATA[Breaking news: Update to citizen428.blog(), situation unclear!]]></title>
-    <link href="http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
+    <link href="http://www.citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
     <updated>2006-07-01T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
+    <id>http://www.citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
     <content type="html"><![CDATA[<p>June was pretty busy, so I only managed to blog once. So here&rsquo;s a little update of what happened during the past few weeks:</p>
 
 <p><em>Work:</em>
@@ -76,9 +76,9 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
   
   <entry>
     <title type="html"><![CDATA[Mac Mini ordered]]></title>
-    <link href="http://citizen428.net/blog/2006/04/09/mac-mini-ordered/"/>
+    <link href="http://www.citizen428.net/blog/2006/04/09/mac-mini-ordered/"/>
     <updated>2006-04-09T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/04/09/mac-mini-ordered</id>
+    <id>http://www.citizen428.net/blog/2006/04/09/mac-mini-ordered</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve done it. I decided to finally get my first Mac and ordered one of those nifty new Intel Mac Minis. Since it will mainly be used for mailing, surfing the web and other things which don&rsquo;t need lots of CPU cycles, I&rsquo;ve decided to go for the Core Solo, which should be more than enough for my needs.</p>
 
 <p>I&rsquo;m really looking forward to have a new machine to play around with, and I think I&rsquo;ll have lots of fun installing Gentoo on the Mac Mini (dual boot) and giving &ldquo;Gentoo for MacOS X&rdquo;:<a href="http://www.gentoo.org/proj/en/gentoo-alt/macos/">http://www.gentoo.org/proj/en/gentoo-alt/macos/</a> a try.</p>
@@ -89,9 +89,9 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
   
   <entry>
     <title type="html"><![CDATA[Look, it's still alive...]]></title>
-    <link href="http://citizen428.net/blog/2006/03/24/look-its-still-alive/"/>
+    <link href="http://www.citizen428.net/blog/2006/03/24/look-its-still-alive/"/>
     <updated>2006-03-24T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/03/24/look-its-still-alive</id>
+    <id>http://www.citizen428.net/blog/2006/03/24/look-its-still-alive</id>
     <content type="html"><![CDATA[<p>After a pretty long period of not doing any work related to Gentoo (blame my boss) I&rsquo;ve finally come around to put together the upgrade of the &ldquo;Gentoo/FreeBSD documentation&rdquo;:<a href="http://www.gentoo.org/doc/en/gentoo-freebsd.xml">http://www.gentoo.org/doc/en/gentoo-freebsd.xml</a> I promised &ldquo;Diego&rdquo;:<a href="http://dev.gentoo.org/~flameeyes/">http://dev.gentoo.org/~flameeyes/</a> quite some time ago. I&rsquo;m sure that our nice documentation developers will commit this soon!</p>
 
 <p>Next week will again be rather busy because my girlfriend and me are moving to a new apartment, but after that I hope I&rsquo;ll be able to regularly contribute to Gentoo again.</p>
@@ -102,9 +102,9 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
   
   <entry>
     <title type="html"><![CDATA[Back. Kind of.]]></title>
-    <link href="http://citizen428.net/blog/2006/02/01/back-kind-of/"/>
+    <link href="http://www.citizen428.net/blog/2006/02/01/back-kind-of/"/>
     <updated>2006-02-01T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/02/01/back-kind-of</id>
+    <id>http://www.citizen428.net/blog/2006/02/01/back-kind-of</id>
     <content type="html"><![CDATA[<p>Just a little info for the people who may wonder about my lack of activity lately (mainly the Ruby herd and some guys of the Gentoo/ALT project): I&rsquo;ve started a new job as a Junior Systems Engineer for a company providing open source solutions for enterprise customers, which means I&rsquo;ve recently been playing around with stuff like Linux Heartbeat and other cool technologies. It&rsquo;s quite stressful, but also pretty interesting so far and I quite like it (despite my constant rambling about having a regular job).</p>
 
 <p>However, in January I also had to finish the last few classes of my college career, so there actually was nearly no time left for Gentoo, as the measly 4 commits I did demonstrate pretty well. I still have a seminar this Friday where I&rsquo;ll present the concept of my diploma thesis, but starting from next week I&rsquo;ll try to do more Gentoo related things again. :)</p>

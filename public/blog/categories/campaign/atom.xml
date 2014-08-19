@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: campaign | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/campaign/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/campaign/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Consumers Digital Rights - Support this Campaign]]></title>
-    <link href="http://citizen428.net/blog/2005/11/10/consumers-digital-rights-support-this-campaign/"/>
+    <link href="http://www.citizen428.net/blog/2005/11/10/consumers-digital-rights-support-this-campaign/"/>
     <updated>2005-11-10T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2005/11/10/consumers-digital-rights-support-this-campaign</id>
+    <id>http://www.citizen428.net/blog/2005/11/10/consumers-digital-rights-support-this-campaign</id>
     <content type="html"><![CDATA[<p align="center"><a href="http://www.consumersdigitalrights.org/cms/petition_en.php"><img src="http://www.consumersdigitalrights.org/media/logo_24567.PNG" /></a></p>
 
 

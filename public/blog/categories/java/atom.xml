@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: java | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/java/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using Java libraries from Clojure]]></title>
-    <link href="http://citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure/"/>
+    <link href="http://www.citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure/"/>
     <updated>2009-09-06T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure</id>
+    <id>http://www.citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure</id>
     <content type="html"><![CDATA[<br />
 
 
@@ -211,9 +211,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using Java libraries from Clojure]]></title>
-    <link href="http://citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure/"/>
+    <link href="http://www.citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure/"/>
     <updated>2009-09-06T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure</id>
+    <id>http://www.citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure</id>
     <content type="html"><![CDATA[<p>After reading <a href="http://www.engineyard.com/blog/2009/scripting-java-libraries-with-jruby/">Scripting Java Libraries With Ruby</a> on the <a href="http://www.engineyard.com/">Engine Yard blog</a>, I decided to translate the two example programs to Clojure. Please keep in mind though that I&rsquo;m pretty much a Clojure newbie myself, so the code shown here might not be very idiomatic. In case you have any suggestions on how to improve the code examples presented here, please leave a comment, thank you! To get the most out of this post, you should probably read the <a href="http://java.ociweb.com/mark/clojure/article.html#JavaInterop">section on Java Interoperability</a> in <a href="http://java.ociweb.com/mark/">Mark Volkmann</a>&rsquo;s excellent <a href="http://java.ociweb.com/mark/clojure/article.html">Clojure tutorial</a> first.</p>
 
 <p><b>A MIDI Keyboard</b></p>

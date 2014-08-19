@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: webculture | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/webculture/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/webculture/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Damn...]]></title>
-    <link href="http://citizen428.net/blog/2006/11/19/damn/"/>
+    <link href="http://www.citizen428.net/blog/2006/11/19/damn/"/>
     <updated>2006-11-19T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/11/19/damn</id>
+    <id>http://www.citizen428.net/blog/2006/11/19/damn</id>
     <content type="html"><![CDATA[<p>I just lost the <a href="http://losethegame.com/">game</a>.</p>
 
 <p>RULE 1: You are playing The Game.
@@ -30,9 +30,9 @@ RULE 3: Loss must be announced.</p>
   
   <entry>
     <title type="html"><![CDATA[Tor mirror set up!]]></title>
-    <link href="http://citizen428.net/blog/2006/09/24/tor-mirror-set-up/"/>
+    <link href="http://www.citizen428.net/blog/2006/09/24/tor-mirror-set-up/"/>
     <updated>2006-09-24T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/09/24/tor-mirror-set-up</id>
+    <id>http://www.citizen428.net/blog/2006/09/24/tor-mirror-set-up</id>
     <content type="html"><![CDATA[<p>After running a &ldquo;Tor&rdquo;:<a href="http://tor.eff.org">http://tor.eff.org</a> server for more than half a year already and having donated some money to support Tor&rsquo;s development, I was looking for new ways to help out the project. That&rsquo;s why I decided to set up a mirror, which can be reached &ldquo;here&rdquo;:<a href="http://tor.blingblingsquad.net">http://tor.blingblingsquad.net</a> (&ldquo;dist/ mirror&rdquo;:<a href="http://tor.blingblingsquad.net">http://tor.blingblingsquad.net</a>). The initial sync is still running, but the site should be fully functional soon. Once this is finished, I&rsquo;ll also try to set up another mirror on the Vienna based server hosting this domain.</p>
 
 <p>Boomtime, Bureaucracy 48, 3172 YOLD</p>
@@ -41,9 +41,9 @@ RULE 3: Loss must be announced.</p>
   
   <entry>
     <title type="html"><![CDATA[A closer look at Google.cn filtering]]></title>
-    <link href="http://citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering/"/>
+    <link href="http://www.citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering/"/>
     <updated>2006-01-27T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering</id>
+    <id>http://www.citizen428.net/blog/2006/01/27/a-closer-look-at-google-cn-filtering</id>
     <content type="html"><![CDATA[<p>While reading &ldquo;netzpolitik.org&rdquo;:netzpolitik.org yesterday, I found a link to an article on the &ldquo;OpenNet Initiative Blog&rdquo;:<a href="http://opennetinitiative.net/blog/,">http://opennetinitiative.net/blog/,</a> explaining &ldquo;how the filtering of Google.cn works&rdquo;:<a href="http://www.opennetinitiative.net/blog/?p=87.">http://www.opennetinitiative.net/blog/?p=87.</a> Now let&rsquo;s have a closer look at some of the blocked sites:</p>
 
 <p>site:hrw.org
@@ -106,9 +106,9 @@ site:epochtimes.com</p>
   
   <entry>
     <title type="html"><![CDATA[Happy hoodwinking!]]></title>
-    <link href="http://citizen428.net/blog/2005/11/29/happy-hoodwinking/"/>
+    <link href="http://www.citizen428.net/blog/2005/11/29/happy-hoodwinking/"/>
     <updated>2005-11-29T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2005/11/29/happy-hoodwinking</id>
+    <id>http://www.citizen428.net/blog/2005/11/29/happy-hoodwinking</id>
     <content type="html"><![CDATA[<p><i>You have nil shillings. You are a simple cleric, you have 10 more shillings to earn before you have proven your xpath/regexen charming skills on par with the druids. A real druid will check your work and pay you soon enough.</i> &ndash; &ldquo;<a href="http://hoodwink.d/">http://hoodwink.d/</a>&rdquo;:<a href="http://hoodwink.d/">http://hoodwink.d/</a></p>
 
 <p>But I&rsquo;ve been working hard and tried to prove these druids that my xpath and regex skills are up to their standards. I have hopefully earned my first shilling and I&rsquo;ve earned it with my very own site! :) So you hoodwinkers out there, feel free to leave your winks instead of regular comments from now on!</p>
@@ -121,9 +121,9 @@ site:epochtimes.com</p>
   
   <entry>
     <title type="html"><![CDATA[Why blogging is cool]]></title>
-    <link href="http://citizen428.net/blog/2005/10/19/why-blogging-is-cool/"/>
+    <link href="http://www.citizen428.net/blog/2005/10/19/why-blogging-is-cool/"/>
     <updated>2005-10-19T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2005/10/19/why-blogging-is-cool</id>
+    <id>http://www.citizen428.net/blog/2005/10/19/why-blogging-is-cool</id>
     <content type="html"><![CDATA[<p>I have to admit that I was really sceptical when this whole blogging thing started a few years back, mostly because I had the feeling that this will only add to all the noise that already makes finding information on the web harder than it needs to be. However, as time moved on and the blogging scene developed, I really came to appreciate this form of communication. Blogs are not only a great way to keep people updated on what you&rsquo;re currently up to (or to stalk other people for that matter), comments and the possibility of trackbacks also provide great facilities for interesting discussions with a wide variety of people and their differing opinions, especially when aggregators like &ldquo;Technorati&rdquo;:<a href="http://www.technorati.com/">http://www.technorati.com/</a> and &ldquo;Planet&rdquo;:<a href="http://www.planetplanet.org/">http://www.planetplanet.org/</a> come into play&hellip;</p>
 
 <p>Why am I writing this today? Well, not long ago &ldquo;I&rsquo;ve blogged about my favourite music&rdquo;:<a href="http://citizen428.net/archives/227-Hits-galore.html">http://citizen428.net/archives/227-Hits-galore.html</a> and mentioned the band &ldquo;Ninja High School&rdquo;. And then yesterday I get an email from band member Gregory Collins, telling me that he  appreciates I&rsquo;ve been writing about them and that they are big Linux geeks themselves. Or do you remember that &ldquo;blog&rdquo;:<a href="http://citizen428.net/archives/204-Dawn-of-the-Dead,-Ruby-Monday,-Doc-FreeBSD.html">http://citizen428.net/archives/204-Dawn-of-the-Dead,-Ruby-Monday,-Doc-FreeBSD.html</a> where I was really surprised that jabber4r got resurrected? Jabber&rsquo;s very own &ldquo;patron saint&rdquo; &ldquo;Peter Saint-Andre&rdquo;:<a href="http://www.saint-andre.com/blog/">http://www.saint-andre.com/blog/</a> chipped in to tell me about netxmpp-ruby. And then there is all this other valuable input by people like RL friend &ldquo;Martin &lsquo;m3&rsquo; Leyrer&rdquo;:<a href="http://www.leyrer.priv.at/martin">http://www.leyrer.priv.at/martin</a> or Gentoo Universe reader &ldquo;George Prowse&rdquo;:<a href="http://cokehabit.homelinux.org/,">http://cokehabit.homelinux.org/,</a> whom I&rsquo;ve never met in person but who seems to have taken a certain interest in what I&rsquo;m writing.</p>

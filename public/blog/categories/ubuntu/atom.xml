@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ubuntu | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/ubuntu/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[linuxConverts++]]></title>
-    <link href="http://citizen428.net/blog/2005/11/23/linuxconverts/"/>
+    <link href="http://www.citizen428.net/blog/2005/11/23/linuxconverts/"/>
     <updated>2005-11-23T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2005/11/23/linuxconverts</id>
+    <id>http://www.citizen428.net/blog/2005/11/23/linuxconverts</id>
     <content type="html"><![CDATA[<p>While my girlfriend was visiting her sister in Rotterdam, I finally set up her notebook to dual boot Windows XP and Ubuntu Linux. Before you think bad of me: I didn&rsquo;t sneakily do this without her knowing, but instead because she once mentioned that she&rsquo;d like to try out another OS.</p>
 
 <p>Now you may wonder why I chose Ubuntu over Gentoo, but I&rsquo;m afraid the answer is rather pragmatic and uninspired: I had a magazine CD of the current release, so I dind&rsquo;t have to download an ISO. Also installation is fast and painless and there are lots of nice HOWTOs. Besides that I&rsquo;ve aleady used Ubuntu to convert one of my non-techy friends to Linux and it has worked pretty good. To sum it up: I think Ubuntu is a decent distro, but I maybe wouldn&rsquo;t use it on one of my own boxes.</p>

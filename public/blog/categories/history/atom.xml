@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: history | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/history/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/history/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-01-30]]></title>
-    <link href="http://citizen428.net/blog/2011/01/30/information-overload-2011-01-30/"/>
+    <link href="http://www.citizen428.net/blog/2011/01/30/information-overload-2011-01-30/"/>
     <updated>2011-01-30T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2011/01/30/information-overload-2011-01-30</id>
+    <id>http://www.citizen428.net/blog/2011/01/30/information-overload-2011-01-30</id>
     <content type="html"><![CDATA[<ul>
 <li>"Chicks Who Rip: Amy Chen":http://www.engineyard.com/blog/2011/chicks-who-rip-amy-chen/<br>Every initiative that wants to get more women into programming should get our support as male developers. It's frickin 2011, can we get over gender stereotypes and finally accept female steel-workers and male nurses?</li>
 <li>"Mauritius: A Glimmer of African Freedom":http://mises.org/daily/4985<br>We don't get good news about Africa often enough, so when they are there, we should share them despite the slightly liberterian undercurrent.</li>
@@ -36,9 +36,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2010-11-14]]></title>
-    <link href="http://citizen428.net/blog/2010/11/14/information-overload-2010-11-14/"/>
+    <link href="http://www.citizen428.net/blog/2010/11/14/information-overload-2010-11-14/"/>
     <updated>2010-11-14T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2010/11/14/information-overload-2010-11-14</id>
+    <id>http://www.citizen428.net/blog/2010/11/14/information-overload-2010-11-14</id>
     <content type="html"><![CDATA[<ul>
 <li>"JVM Bytecode for Dummies":http://www.slideshare.net/CharlesNutter/redev-2010-jvm-bytecode-for-dummies<br>Awesome presentation by "Charles Nutter":http://blog.headius.com/ on JVM Bytecode. No matter if you are just curious or want to write your own programming language, this is interesting!</li>
 <li>"Cutting out the middle men":http://www.economist.com/node/17420321?story_id=17420321&fsrc=scn/tw/te/rss/pe<br>Great pilot project in the UK, empowering homeless people instead by directly giving them money.</li>
@@ -57,9 +57,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2010-09-05]]></title>
-    <link href="http://citizen428.net/blog/2010/09/05/information-overload-2010-09-05/"/>
+    <link href="http://www.citizen428.net/blog/2010/09/05/information-overload-2010-09-05/"/>
     <updated>2010-09-05T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2010/09/05/information-overload-2010-09-05</id>
+    <id>http://www.citizen428.net/blog/2010/09/05/information-overload-2010-09-05</id>
     <content type="html"><![CDATA[<ul>
 <li>"Clojure or: How I Learned to Stop Worrying and Love the Parentheses":http://nathanmarz.com/blog/clojure-or-how-i-learned-to-stop-worrying-and-love-the-paren.html<br>Blog post explaining what draws the author - and many others - to Clojure.</li>
 <li>"tactics, tactics, tactics":http://dlowe-wfh.blogspot.com/2007/06/tactics-tactics-tactics.html<br>How to get better at programming. And chess.</li>

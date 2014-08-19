@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: review | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/review/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/review/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[My Kindle Fire and I]]></title>
-    <link href="http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i/"/>
+    <link href="http://www.citizen428.net/blog/2013/06/07/my-kindle-fire-and-i/"/>
     <updated>2013-06-07T16:52:00+07:00</updated>
-    <id>http://citizen428.net/blog/2013/06/07/my-kindle-fire-and-i</id>
+    <id>http://www.citizen428.net/blog/2013/06/07/my-kindle-fire-and-i</id>
     <content type="html"><![CDATA[<p>Back in October I broke my trusty old <a href="http://www.amazon.com/gp/product/B004HZYA6E/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004HZYA6E&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Keyboard</a>, a rather
 annoying thing to happen at the beginning of a long trip. As a
 workaround I started to use the Kindle app on my iPod Touch, and while
@@ -180,9 +180,9 @@ and read some comics, all on the same device.</p>
   
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
-    <link href="http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
+    <link href="http://www.citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
     <updated>2012-07-28T10:15:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
+    <id>http://www.citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
     <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
 
 <p>While I haven&rsquo;t received <a href="http://www.packtpub.com/ruby-and-mongodb-web-development-beginners-guide/book">the book</a> in its final form yet, I&rsquo;ve read all of it, and I can say that the author does a good job at introducing inexperienced programmers to web development with Ruby and MongoDB.</p>
@@ -197,9 +197,9 @@ and read some comics, all on the same device.</p>
   
   <entry>
     <title type="html"><![CDATA[Review: The Tangled Web]]></title>
-    <link href="http://citizen428.net/blog/2012/06/20/review-the-tangled-web/"/>
+    <link href="http://www.citizen428.net/blog/2012/06/20/review-the-tangled-web/"/>
     <updated>2012-06-20T15:05:00+07:00</updated>
-    <id>http://citizen428.net/blog/2012/06/20/review-the-tangled-web</id>
+    <id>http://www.citizen428.net/blog/2012/06/20/review-the-tangled-web</id>
     <content type="html"><![CDATA[<p><em>Disclaimer 1: The good folks of No Starch Press were kind enough to provide me with a review copy of this book, but this did not influence the following text.</em></p>
 
 <p><em>Disclaimer 2: Links to books are Amazon affiliate links.</em></p>
@@ -216,9 +216,9 @@ and read some comics, all on the same device.</p>
   
   <entry>
     <title type="html"><![CDATA[28C3 day 4]]></title>
-    <link href="http://citizen428.net/blog/2011/12/30/28c3-day-4/"/>
+    <link href="http://www.citizen428.net/blog/2011/12/30/28c3-day-4/"/>
     <updated>2011-12-30T13:01:00+07:00</updated>
-    <id>http://citizen428.net/blog/2011/12/30/28c3-day-4</id>
+    <id>http://www.citizen428.net/blog/2011/12/30/28c3-day-4</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4828.en.html">Antiforensik</a><br>How to work against forensics. Nothing revolutionary, but a solid talk.</li>
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4587.en.html">bup: Git for backups</a><br>An interesting backup project using git, this is open source and still needs help in case you are looking for something to work on.</li>
@@ -231,9 +231,9 @@ and read some comics, all on the same device.</p>
   
   <entry>
     <title type="html"><![CDATA[28C3 day 3]]></title>
-    <link href="http://citizen428.net/blog/2011/12/29/28c3-day-3/"/>
+    <link href="http://www.citizen428.net/blog/2011/12/29/28c3-day-3/"/>
     <updated>2011-12-29T16:24:00+07:00</updated>
-    <id>http://citizen428.net/blog/2011/12/29/28c3-day-3</id>
+    <id>http://www.citizen428.net/blog/2011/12/29/28c3-day-3</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4767.en.html">Security Log Visualization with a Correlation Engine</a><br>Nothing too special, but still rather interesting, especially since I need this for work at the moment.</li>
 <li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4746.en.html">Bitcoin &ndash; An Analysis</a><br>This was a great talk about the current state of Bitcoin, highly recommended if you have any interest in the topic.</li>

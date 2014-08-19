@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: communities | citizen428.blog()]]></title>
-  <link href="http://citizen428.net/blog/categories/communities/atom.xml" rel="self"/>
-  <link href="http://citizen428.net/"/>
-  <updated>2014-08-17T18:43:09+07:00</updated>
-  <id>http://citizen428.net/</id>
+  <link href="http://www.citizen428.net/blog/categories/communities/atom.xml" rel="self"/>
+  <link href="http://www.citizen428.net/"/>
+  <updated>2014-08-19T23:17:29+07:00</updated>
+  <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Loads of links]]></title>
-    <link href="http://citizen428.net/blog/2005/12/10/loads-of-links/"/>
+    <link href="http://www.citizen428.net/blog/2005/12/10/loads-of-links/"/>
     <updated>2005-12-10T00:00:00+07:00</updated>
-    <id>http://citizen428.net/blog/2005/12/10/loads-of-links</id>
+    <id>http://www.citizen428.net/blog/2005/12/10/loads-of-links</id>
     <content type="html"><![CDATA[<p>I haven&rsquo;t blogged for quite some time now, so I decided I could at least entertain you with one of my semi-regular link dumps until I&rsquo;m motivated enough to write a proper entry again&hellip;</p>
 
 <p><em><em>Ruby</em></em></p>
