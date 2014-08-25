@@ -4,7 +4,7 @@
   <title><![CDATA[Category: polyglot | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/polyglot/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2014-08-19T23:17:29+07:00</updated>
+  <updated>2014-08-25T22:53:49+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -18,7 +18,8 @@
     <link href="http://www.citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3/"/>
     <updated>2010-09-04T00:00:00+07:00</updated>
     <id>http://www.citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3</id>
-    <content type="html"><![CDATA[<p>A couple of days ago I finally started properly looking at &ldquo;Erlang&rdquo;:<a href="http://www.erlang.org/">http://www.erlang.org/</a> for the first time. One aspect I find especially interesting is the &ldquo;bit syntax&rdquo;:<a href="http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html,">http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html,</a> so I wrote a small program for parsing &ldquo;ID3v1 tags&rdquo;:<a href="http://www.id3.org/ID3v1">http://www.id3.org/ID3v1</a> for practice. There&rsquo;s definitely room for improvement (I ignored ID3v1.1), but it  was a fun little exercise. Here&rsquo;s the code:</p>
+    <content type="html"><![CDATA[<p>A couple of days ago I finally started properly looking at <a href="http://www.erlang.org/">Erlang</a> for the first time. One aspect I find especially interesting is the <a href="http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html">bit syntax</a>, so I wrote a small program for parsing <a href="http://www.id3.org/ID3v1">ID3v1 tags</a> for practice. There’s definitely room for improvement (I ignored ID3v1.1), but it was a fun little exercise.
+Here’s the code:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -94,7 +95,7 @@
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Lets see this in action in the Erlang shell (the MP3 comes from a similar exercise in &ldquo;RubyLearning&rsquo;s core Ruby course&rdquo;:<a href="http://rubylearning.org/class/course/category.php?id=2">http://rubylearning.org/class/course/category.php?id=2</a>):</p>
+<p>Lets see this in action in the Erlang shell (the MP3 comes from a similar exercise in <a href="http://rubylearning.org/class/course/category.php?id=2">RubyLearning’s core Ruby course</a>):</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -110,45 +111,38 @@
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">147</span><span class="o">&gt;</span> <span class="c">% file doesn&amp;rsquo;t exist</span>
-</span><span class='line'><span class="mi">147</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;.</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">txt</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;).</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">147</span><span class="o">&gt;</span> <span class="c">% file doesn’t exist</span>
+</span><span class='line'><span class="mi">147</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">“</span><span class="p">.</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">txt</span><span class="err">”</span><span class="p">).</span>
 </span><span class='line'><span class="n">enoent</span>
 </span><span class='line'><span class="mi">148</span><span class="o">&gt;</span> <span class="c">% file is not an MP3</span>
-</span><span class='line'><span class="mi">148</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;.</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">clj</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;).</span>
+</span><span class='line'><span class="mi">148</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">“</span><span class="p">.</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">clj</span><span class="err">”</span><span class="p">).</span>
 </span><span class='line'><span class="n">no_id3</span>
 </span><span class='line'><span class="mi">150</span><span class="o">&gt;</span> <span class="c">% get the tags</span>
-</span><span class='line'><span class="mi">150</span><span class="o">&gt;</span> <span class="p">{</span><span class="n">id3v1</span><span class="p">,</span> <span class="nv">Tags</span><span class="p">}</span> <span class="o">=</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">song</span><span class="p">.</span><span class="n">mp3</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;).</span>
-</span><span class='line'><span class="p">{</span><span class="n">id3v1</span><span class="p">,[{</span><span class="n">title</span><span class="p">,</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="nv">Dancing</span> <span class="nv">Shoes</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;},</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>    <span class="p">{</span><span class="n">artist</span><span class="p">,</span><span class="s">&quot;Cliff Richard and The Shadows&quot;</span><span class="p">},</span>
-</span><span class='line'>    <span class="p">{</span><span class="n">album</span><span class="p">,</span><span class="s">&quot;(SUMMER HOLIDAY  1963)&quot;</span><span class="p">},</span>
-</span><span class='line'>    <span class="p">{</span><span class="n">year</span><span class="p">,</span><span class="s">&quot;2000&quot;</span><span class="p">},</span>
-</span><span class='line'>    <span class="p">{</span><span class="n">comment</span><span class="p">,</span><span class="s">&quot;Rubylearning</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">},</span>
-</span><span class='line'>    <span class="p">{</span><span class="n">genre</span><span class="p">,[</span><span class="mi">24</span><span class="p">]}]}</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="mi">150</span><span class="o">&gt;</span> <span class="p">{</span><span class="n">id3v1</span><span class="p">,</span> <span class="nv">Tags</span><span class="p">}</span> <span class="o">=</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">“</span><span class="n">song</span><span class="p">.</span><span class="n">mp3</span><span class="err">”</span><span class="p">).</span>
+</span><span class='line'><span class="p">{</span><span class="n">id3v1</span><span class="p">,[{</span><span class="n">title</span><span class="p">,</span><span class="err">“</span><span class="nv">Dancing</span> <span class="nv">Shoes</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">artist</span><span class="p">,</span><span class="err">“</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">album</span><span class="p">,</span><span class="err">“</span><span class="p">(</span><span class="nv">SUMMER</span> <span class="nv">HOLIDAY</span> <span class="mi">1963</span><span class="p">)</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">year</span><span class="p">,</span><span class="err">“</span><span class="mi">2000</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">comment</span><span class="p">,</span><span class="err">“</span><span class="nv">Rubylearningr</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">genre</span><span class="p">,[</span><span class="mi">24</span><span class="p">]}]}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>I&rsquo;m too new to Erlang to judge if this is a proper use of a &ldquo;property list&rdquo;:<a href="http://www.erlang.org/doc/man/proplists.html,">http://www.erlang.org/doc/man/proplists.html,</a> but it allowed me to write <em>get_tags/2</em> as a wrapper for <em>proplists:get_value/2</em> which is rather nice:</p>
+<p>I’m too new to Erlang to judge if this is a proper use of a <a href="http://www.erlang.org/doc/man/proplists.html">property list</a>, but it allowed me to write <em>get_tags/2</em> as a wrapper for
+<em>proplists:get_value/2</em> which is rather nice:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">151</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_tags</span><span class="p">([</span><span class="n">artist</span><span class="p">],</span> <span class="nv">Tags</span><span class="p">).</span>
-</span><span class='line'><span class="p">[</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;]</span>
+</span><span class='line'><span class="p">[</span><span class="err">“</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">”</span><span class="p">]</span>
 </span><span class='line'><span class="mi">152</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_tags</span><span class="p">([</span><span class="n">artist</span><span class="p">,</span> <span class="n">year</span><span class="p">],</span> <span class="nv">Tags</span><span class="p">).</span>
-</span><span class='line'><span class="p">[</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="mi">2000</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;]</span>
+</span><span class='line'><span class="p">[</span><span class="err">“</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">”</span><span class="p">,</span><span class="err">“</span><span class="mi">2000</span><span class="err">”</span><span class="p">]</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Some initial help came from &ldquo;this related blog post&rdquo;:<a href="http://bigdingus.com/2007/05/27/id3v1-tags-via-erlang/,">http://bigdingus.com/2007/05/27/id3v1-tags-via-erlang/,</a> but I think our versions came out quite differently in the end.</p>
+<p>Some initial help came from <a href="http://bigdingus.com/2007/05/27/id3v1-tags-via-erlang/">this related blog post</a>, but I think our versions came out quite differently in the end.</p>
 
-<p>All in all Erlang feels quite nice, except for minor syntactic quirks like different statement modifiers depending on context or the need to &ldquo;extract&rdquo; a local function with <em>fun</em> for the call in <em>lists:map/2</em>. Any feedback would be much appreciated, I&rsquo;m sure there&rsquo;s plenty of things I could have done better.</p>
+<p>All in all Erlang feels quite nice, except for minor syntactic quirks like different statement modifiers depending on context or the need to “extract” a local function with <em>fun</em> for the call in <em>lists:map/2</em>. Any feedback would be much appreciated, I’m sure there’s plenty of things I could have done better.</p>
 ]]></content>
   </entry>
   

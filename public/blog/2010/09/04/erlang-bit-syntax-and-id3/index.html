@@ -113,8 +113,10 @@
   </header>
 
 
-<div class="entry-content"><p>A couple of days ago I finally started properly looking at <a href="http://www.erlang.org/">Erlang</a> for the first time. One aspect I find especially interesting is the <a href="http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html">bit syntax</a>, so I wrote a small program for parsing <a href="http://www.id3.org/ID3v1">ID3v1 tags</a> for practice. There&#8217;s definitely room for improvement (I ignored ID3v1.1), but it  was a fun little exercise. Here&#8217;s the code:</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="entry-content"><p>A couple of days ago I finally started properly looking at <a href="http://www.erlang.org/">Erlang</a> for the first time. One aspect I find especially interesting is the <a href="http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html">bit syntax</a>, so I wrote a small program for parsing <a href="http://www.id3.org/ID3v1">ID3v1 tags</a> for practice. There’s definitely room for improvement (I ignored ID3v1.1), but it was a fun little exercise.
+Here’s the code:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -140,61 +142,38 @@
 <span class='line-number'>24</span>
 <span class='line-number'>25</span>
 <span class='line-number'>26</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-<span class='line-number'>4</span><br />
-<span class='line-number'>5</span><br />
-<span class='line-number'>6</span><br />
-<span class='line-number'>7</span><br />
-<span class='line-number'>8</span><br />
-<span class='line-number'>9</span><br />
-<span class='line-number'>10</span><br />
-<span class='line-number'>11</span><br />
-<span class='line-number'>12</span><br />
-<span class='line-number'>13</span><br />
-<span class='line-number'>14</span><br />
-<span class='line-number'>15</span><br />
-<span class='line-number'>16</span><br />
-<span class='line-number'>17</span><br />
-<span class='line-number'>18</span><br />
-<span class='line-number'>19</span><br />
-<span class='line-number'>20</span><br />
-<span class='line-number'>21</span><br />
-<span class='line-number'>22</span><br />
-<span class='line-number'>23</span><br />
-<span class='line-number'>24</span><br />
-<span class='line-number'>25</span><br />
-<span class='line-number'>26</span><br />
-</pre></td><td class='code'><pre><code class='erlang'>&lt;span class='line'&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="ni"&gt;module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mp3&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="ni"&gt;export&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;get_id3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;get_tags&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nf"&gt;get_id3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;File&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nn"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;File&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;ok&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;MP3&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;            &lt;span class="nv"&gt;Result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nn"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;pread&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;MP3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;eof&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;128&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="mi"&gt;128&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;                &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;eof&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;eof&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;                &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;Reason&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;Reason&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;                &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;ok&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;TAG&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;parse_id3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;Tags&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;                &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;ok&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;_}&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;no_id3&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;            &lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;            &lt;span class="nn"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;MP3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;            &lt;span class="nv"&gt;Result&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;Reason&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;Reason&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nf"&gt;get_tags&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;Tags&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;L&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="nn"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;fun&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;Tag&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nn"&gt;proplists&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;get_value&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;Tag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;L&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;Tags&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nf"&gt;parse_id3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;T&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;Ar&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;Al&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;C&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;G&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="nv"&gt;Clean&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nn"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;fun&lt;/span&gt; &lt;span class="n"&gt;cleanup&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nv"&gt;T&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;Ar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;Al&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;C&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;G&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;id3v1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;artist&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;album&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;year&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;genre&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nv"&gt;Clean&lt;/span&gt;&lt;span class="p"&gt;)}.&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nf"&gt;cleanup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="nn"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;X&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;X&lt;/span&gt; &lt;span class="o"&gt;=/=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;binary_to_list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)).&lt;/span&gt;
-&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p>Lets see this in action in the Erlang shell (the MP3 comes from a similar exercise in <a href="http://rubylearning.org/class/course/category.php?id=2">RubyLearning&#8217;s core Ruby course</a>):</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">mp3</span><span class="p">).</span>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">get_id3</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="n">get_tags</span><span class="o">/</span><span class="mi">2</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">get_id3</span><span class="p">(</span><span class="nv">File</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="k">case</span> <span class="nn">file</span><span class="p">:</span><span class="n">open</span><span class="p">(</span><span class="nv">File</span><span class="p">,</span> <span class="p">[</span><span class="n">read</span><span class="p">,</span> <span class="n">binary</span><span class="p">])</span> <span class="k">of</span>
+</span><span class='line'>        <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="nv">MP3</span><span class="p">}</span> <span class="o">-&gt;</span>
+</span><span class='line'>            <span class="nv">Result</span> <span class="o">=</span> <span class="k">case</span> <span class="nn">file</span><span class="p">:</span><span class="n">pread</span><span class="p">(</span><span class="nv">MP3</span><span class="p">,</span> <span class="p">{</span><span class="n">eof</span><span class="p">,</span> <span class="o">-</span><span class="mi">128</span><span class="p">},</span> <span class="mi">128</span><span class="p">)</span> <span class="k">of</span>
+</span><span class='line'>                <span class="p">{</span><span class="n">eof</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="n">eof</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">{</span><span class="n">error</span><span class="p">,</span> <span class="nv">Reason</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="nv">Reason</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="o">&lt;&lt;</span><span class="s">&quot;TAG&quot;</span><span class="p">,</span> <span class="nv">Tags</span><span class="o">/</span><span class="n">binary</span><span class="o">&gt;&gt;</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="n">parse_id3</span><span class="p">(</span><span class="nv">Tags</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="p">_}</span> <span class="o">-&gt;</span> <span class="n">no_id3</span>
+</span><span class='line'>            <span class="k">end</span><span class="p">,</span>
+</span><span class='line'>            <span class="nn">file</span><span class="p">:</span><span class="n">close</span><span class="p">(</span><span class="nv">MP3</span><span class="p">),</span>
+</span><span class='line'>            <span class="nv">Result</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">{</span><span class="n">error</span><span class="p">,</span> <span class="nv">Reason</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="nv">Reason</span>
+</span><span class='line'>    <span class="k">end</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">get_tags</span><span class="p">(</span><span class="nv">Tags</span><span class="p">,</span> <span class="nv">L</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nn">lists</span><span class="p">:</span><span class="n">map</span><span class="p">(</span><span class="k">fun</span> <span class="p">(</span><span class="nv">Tag</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nn">proplists</span><span class="p">:</span><span class="n">get_value</span><span class="p">(</span><span class="nv">Tag</span><span class="p">,</span> <span class="nv">L</span><span class="p">)</span> <span class="k">end</span><span class="p">,</span> <span class="nv">Tags</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">parse_id3</span><span class="p">(</span><span class="o">&lt;&lt;</span><span class="nv">T</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">Ar</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">Al</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">Y</span><span class="p">:</span><span class="mi">4</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">C</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">G</span><span class="p">:</span><span class="mi">1</span><span class="o">/</span><span class="n">binary</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">Clean</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="n">map</span><span class="p">(</span><span class="k">fun</span> <span class="n">cleanup</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="nv">T</span><span class="p">,</span> <span class="nv">Ar</span><span class="p">,</span> <span class="nv">Al</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">C</span><span class="p">,</span> <span class="nv">G</span><span class="p">]),</span>
+</span><span class='line'>    <span class="p">{</span><span class="n">id3v1</span><span class="p">,</span> <span class="nn">lists</span><span class="p">:</span><span class="n">zip</span><span class="p">([</span><span class="n">title</span><span class="p">,</span> <span class="n">artist</span><span class="p">,</span> <span class="n">album</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">genre</span><span class="p">],</span> <span class="nv">Clean</span><span class="p">)}.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">cleanup</span><span class="p">(</span><span class="nv">T</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nn">lists</span><span class="p">:</span><span class="n">filter</span><span class="p">(</span><span class="k">fun</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">X</span> <span class="o">=/=</span> <span class="mi">0</span> <span class="k">end</span><span class="p">,</span> <span class="nb">binary_to_list</span><span class="p">(</span><span class="nv">T</span><span class="p">)).</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lets see this in action in the Erlang shell (the MP3 comes from a similar exercise in <a href="http://rubylearning.org/class/course/category.php?id=2">RubyLearning’s core Ruby course</a>):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -208,51 +187,41 @@
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-<span class='line-number'>4</span><br />
-<span class='line-number'>5</span><br />
-<span class='line-number'>6</span><br />
-<span class='line-number'>7</span><br />
-<span class='line-number'>8</span><br />
-<span class='line-number'>9</span><br />
-<span class='line-number'>10</span><br />
-<span class='line-number'>11</span><br />
-<span class='line-number'>12</span><br />
-<span class='line-number'>13</span><br />
-<span class='line-number'>14</span><br />
-</pre></td><td class='code'><pre><code class='erlang'>&lt;span class='line'&gt;&lt;span class="mi"&gt;147&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;% file doesn&amp;#39;t exist&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="mi"&gt;147&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nn"&gt;mp3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;get_id3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;./test.txt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;enoent&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="mi"&gt;148&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;% file is not an MP3&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="mi"&gt;148&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nn"&gt;mp3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;get_id3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;./test.clj&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;no_id3&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="mi"&gt;150&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;% get the tags&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="mi"&gt;150&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;id3v1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;Tags&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nn"&gt;mp3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;get_id3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;song.mp3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;id3v1&lt;/span&gt;&lt;span class="p"&gt;,[{&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Dancing Shoes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;artist&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Cliff Richard and The Shadows&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;album&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;(SUMMER HOLIDAY  1963)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;year&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;2000&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Rubylearning&lt;/span&gt;&lt;span class="se"&gt;\r&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;genre&lt;/span&gt;&lt;span class="p"&gt;,[&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;]}]}&lt;/span&gt;
-&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p>I&#8217;m too new to Erlang to judge if this is a proper use of a <a href="http://www.erlang.org/doc/man/proplists.html">property list</a>, but it allowed me to write <em>get_tags/2</em> as a wrapper for <em>proplists:get_value/2</em> which is rather nice:</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">147</span><span class="o">&gt;</span> <span class="c">% file doesn’t exist</span>
+</span><span class='line'><span class="mi">147</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">“</span><span class="p">.</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">txt</span><span class="err">”</span><span class="p">).</span>
+</span><span class='line'><span class="n">enoent</span>
+</span><span class='line'><span class="mi">148</span><span class="o">&gt;</span> <span class="c">% file is not an MP3</span>
+</span><span class='line'><span class="mi">148</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">“</span><span class="p">.</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">clj</span><span class="err">”</span><span class="p">).</span>
+</span><span class='line'><span class="n">no_id3</span>
+</span><span class='line'><span class="mi">150</span><span class="o">&gt;</span> <span class="c">% get the tags</span>
+</span><span class='line'><span class="mi">150</span><span class="o">&gt;</span> <span class="p">{</span><span class="n">id3v1</span><span class="p">,</span> <span class="nv">Tags</span><span class="p">}</span> <span class="o">=</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">“</span><span class="n">song</span><span class="p">.</span><span class="n">mp3</span><span class="err">”</span><span class="p">).</span>
+</span><span class='line'><span class="p">{</span><span class="n">id3v1</span><span class="p">,[{</span><span class="n">title</span><span class="p">,</span><span class="err">“</span><span class="nv">Dancing</span> <span class="nv">Shoes</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">artist</span><span class="p">,</span><span class="err">“</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">album</span><span class="p">,</span><span class="err">“</span><span class="p">(</span><span class="nv">SUMMER</span> <span class="nv">HOLIDAY</span> <span class="mi">1963</span><span class="p">)</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">year</span><span class="p">,</span><span class="err">“</span><span class="mi">2000</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">comment</span><span class="p">,</span><span class="err">“</span><span class="nv">Rubylearningr</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">genre</span><span class="p">,[</span><span class="mi">24</span><span class="p">]}]}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I’m too new to Erlang to judge if this is a proper use of a <a href="http://www.erlang.org/doc/man/proplists.html">property list</a>, but it allowed me to write <em>get_tags/2</em> as a wrapper for
+<em>proplists:get_value/2</em> which is rather nice:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-<span class='line-number'>4</span><br />
-</pre></td><td class='code'><pre><code class='erlang'>&lt;span class='line'&gt;&lt;span class="mi"&gt;151&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nn"&gt;mp3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;get_tags&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;artist&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nv"&gt;Tags&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Cliff Richard and The Shadows&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="mi"&gt;152&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nn"&gt;mp3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;get_tags&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;artist&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;year&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nv"&gt;Tags&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Cliff Richard and The Shadows&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;2000&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">151</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_tags</span><span class="p">([</span><span class="n">artist</span><span class="p">],</span> <span class="nv">Tags</span><span class="p">).</span>
+</span><span class='line'><span class="p">[</span><span class="err">“</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">”</span><span class="p">]</span>
+</span><span class='line'><span class="mi">152</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_tags</span><span class="p">([</span><span class="n">artist</span><span class="p">,</span> <span class="n">year</span><span class="p">],</span> <span class="nv">Tags</span><span class="p">).</span>
+</span><span class='line'><span class="p">[</span><span class="err">“</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">”</span><span class="p">,</span><span class="err">“</span><span class="mi">2000</span><span class="err">”</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
 <p>Some initial help came from <a href="http://bigdingus.com/2007/05/27/id3v1-tags-via-erlang/">this related blog post</a>, but I think our versions came out quite differently in the end.</p>
-<p>All in all Erlang feels quite nice, except for minor syntactic quirks like different statement modifiers depending on context or the need to &#8220;extract&#8221; a local function with <em>fun</em> for the call in <em>lists:map/2</em>. Any feedback would be much appreciated, I&#8217;m sure there&#8217;s plenty of things I could have done better.</p></div>
+
+<p>All in all Erlang feels quite nice, except for minor syntactic quirks like different statement modifiers depending on context or the need to “extract” a local function with <em>fun</em> for the call in <em>lists:map/2</em>. Any feedback would be much appreciated, I’m sure there’s plenty of things I could have done better.</p>
+</div>
 
 
   <footer>
