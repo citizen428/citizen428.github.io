@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="After upgrading to Snow Leopard I had quite a bit of trouble with my MacPorts installation, since most builds just failed with configure errors. &hellip;">
+  <meta name="description" content="I&#8217;m currently toying around with some ideas for Twitter bots etc. so I had a look at some of the available gems out there. Sometimes Ruby makes &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +87,50 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/11/23/fun-with-twitter-and-ruby/">Fun With Twitter and Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-23T00:00:00+07:00" pubdate data-updated="true">Nov 23<sup>rd</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;m currently toying around with some ideas for Twitter bots etc. so I had a look at some of the available gems out there. Sometimes Ruby makes stuff almost too simple&#8230; ;-) Here are a few nice snippets of what you could do with a couple of minutes time and some Ruby:</p>
+<p><em>Automatically translate all tweets for a given keyword:</em> <br />
+<script src="http://gist.github.com/241437.js?file=gistfile1.rb"></script></p>
+<p><em>Daemonize the above:</em><br />
+Alternatively you can also follow a userid instead of a keyword and daemonize the whole thing, thus making it super easy to create a bot which posts translations of Matz&#8217;s tweets:</p>
+<script src="http://gist.github.com/241437.js?file=gistfile2.rb"></script><p>If you put this into a file like transbot.rb,  the command ruby transbot.rb will give you all the regular daemon commands like start, stop, etc.</p>
+<p><em>Ruby is trendy:</em><br />
+Curious of getting a list of current trends on Twitter, without hashtags? There you go:<br />
+<script src="http://gist.github.com/241437.js?file=gistfile3.rb"></script><br />
+Combining all these ideas you could easily write a bot that follows the current Twitter trends and posts translations of them in only a couple of lines. :-)</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -697,42 +741,6 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/06/18/quick-and-dirty-lazy-lists-in-ruby/">Quick and Dirty Lazy Lists in Ruby</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-06-18T00:00:00+07:00" pubdate data-updated="true">Jun 18<sup>th</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hash.new with a block is a sexy beast: you can specify default hash values and when a key is first used, the value will be calculated and inserted into the Hash. Based on that behavior I took a couple of minutes to hack together a small proof of concept class for <a href="http://en.wikipedia.org/wiki/Lazy_evaluation">lazy lists</a>:</p>
-<script src="http://gist.github.com/131821.js"></script><p>As I said, this is quick and dirty, especially since you have to pass the entire Hash.new block to LazyList.new right now. Other than that I quite like it though. I know there are at least <a href="http://lazylist.rubyforge.org/">two</a> <a href="http://moonbase.rydia.net/software/lazy.rb/">other</a> lazy list implementations for Ruby, but it seems like both haven&#8217;t been updated in a while and I don&#8217;t particularly like their interfaces. Dunno, if I manage to simplify list definition, I may actually try to develop this into something. Don&#8217;t hold your breath though&#8230;</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/24">&larr; Older</a>
@@ -765,6 +773,10 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/09/21/information-overload-2014-09-21/">Information Overload 2014-09-21</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/08/17/re-kindling-my-love-affair-with-the-kindle-fire/">Re-kindling My Love Affair With the Kindle Fire</a>
       </li>
     
@@ -778,10 +790,6 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
     
       <li class="post">
         <a href="/blog/2013/12/10/around-southeast-asia/">Around Southeast Asia</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/06/the-missing-update/">The Missing Update</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2014-08-25T22:53:49+07:00</updated>
+  <updated>2014-09-21T11:52:58+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -35,55 +35,45 @@
     <id>http://www.citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
     <content type="html"><![CDATA[<p>Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today&rsquo;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&rsquo;s an example:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="err">λ</span><span class="o">&gt;</span> <span class="n">map</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">]</span>
-</span><span class='line'><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:haskell %}
+λ> map (2+) [1..3]
+[3,4,5]
+{% endcodeblock %}</p>
 
 <p>As you can see the function to be <code>map</code>ped is specified with the <a href="http://www.haskell.org/haskellwiki/Partial_application">partially applied</a> function <code>(2+)</code> (or <code>(+2)</code> for that matter).</p>
 
 <p>Here&rsquo;s how we would have to write the same code in Ruby:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+(1..3).map { |i| i + 2 }
+{% endcodeblock %}</p>
 
 <p>This could also be written in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree</a> way, but alas that would make the code rather hard to understand for less experienced Rubyists:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="ss">:+</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+(1..3).map(&amp;2.method(:+))
+{% endcodeblock %}</p>
 
 <p>But because Ruby is as flexible as it is, adding partial application is actually really trivial:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
-</span><span class='line'>  <span class="k">alias</span> <span class="ss">:add</span> <span class="ss">:+</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  def +(o=nil)&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">o</span> <span class="p">?</span> <span class="nb">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">o</span><span class="p">)</span> <span class="p">:</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">self</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span>
-</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+class Fixnum
+  alias :add :+</p>
+
+<p>  def +(o=nil)</p>
+
+<pre><code>o ? self.add(o) : lambda { |x| self + x }
+</code></pre>
+
+<p>  end
+end
+{% endcodeblock %}</p>
 
 <p>And now we can do this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">+</span><span class="p">)</span> <span class="c1">#=&gt; [3, 4, 5]</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+(1..3).map(&amp;2.+) #=> [3, 4, 5]
+{% endcodeblock %}</p>
 
 <p>Not too bad I think and rather consistent with Ruby&rsquo;s overall style. Alas I don&rsquo;t think we are likely to see partial application on a language level any time soon though&hellip;</p>
 ]]></content>
@@ -136,16 +126,12 @@
     <id>http://www.citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode</id>
     <content type="html"><![CDATA[<p>At work we are building a Rails app that&rsquo;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it&rsquo;d be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn&rsquo;t have been any simpler:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>app/helpers/application_helper.rb </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">version_div</span>
-</span><span class='line'>  <span class="n">version</span> <span class="o">=</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">development?</span> <span class="p">?</span> <span class="o">::</span><span class="ss">Grit</span><span class="p">:</span><span class="ss">:Repo</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="o">::</span><span class="ss">OurApp</span><span class="p">:</span><span class="ss">:Application</span><span class="o">::</span><span class="no">Version</span>
-</span><span class='line'>  <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:span</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">version</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock app/helpers/application_helper.rb lang:ruby %}
+def version_div
+  version = Rails.env.development? ? ::Grit::Repo.new(Rails.root).head.name : ::OurApp::Application::Version
+  content_tag(:div, content_tag(:span, version), :class => &ldquo;version&rdquo;)
+end
+{% endcodeblock %}</p>
 
 <p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
 ]]></content>
