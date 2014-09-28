@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/web/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2014-09-21T11:52:58+07:00</updated>
+  <updated>2014-09-28T11:49:53+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -24,23 +24,36 @@
 
 <p>It uses HTTParty to generate a list of all your bookmarks, which then get checked individually with Net::HTTP. Every link that returns an HTTP status code of 404 will automatically be removed (no questions asked, no undo), links with a status code other than 200 (OK) won&rsquo;t be changed but will display some information in case you want to fix them manually. Here&rsquo;s some example output (links anonymized for this post):</p>
 
-<p>{% codeblock %}
-  Enter Delicious username: citizen428
-  Enter Delicious password: *********</p>
-
-<p>  citizen428 has 664 bookmarks.
-  Processing URL #0001: OK
-  Processing URL #0002: OK
-  Processing URL #0003: OK
-  Processing URL #0004: OK
-  Processing URL #0005: OK
-  &hellip;
-  Processing URL #0013: 405: <a href="http://...">http://...</a>
-  &hellip;
-  Processing URL #0074: 302: <a href="http://...">http://...</a>
-  &hellip;
-  Processing URL #0086: Connection reset by peer &ndash; <a href="https://...">https://...</a>
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Enter Delicious username: citizen428
+</span><span class='line'>  Enter Delicious password: *********&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  citizen428 has 664 bookmarks.
+</span><span class='line'>  Processing URL #0001: OK
+</span><span class='line'>  Processing URL #0002: OK
+</span><span class='line'>  Processing URL #0003: OK
+</span><span class='line'>  Processing URL #0004: OK
+</span><span class='line'>  Processing URL #0005: OK
+</span><span class='line'>  &hellip;
+</span><span class='line'>  Processing URL #0013: 405: &lt;a href="http://...">http://...&lt;/a>
+</span><span class='line'>  &hellip;
+</span><span class='line'>  Processing URL #0074: 302: &lt;a href="http://...">http://...&lt;/a>
+</span><span class='line'>  &hellip;
+</span><span class='line'>  Processing URL #0086: Connection reset by peer &ndash; &lt;a href="https://...">https://...&lt;/a></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Not bad for under 60 lines of code. :&ndash;) I hope this is useful to some of you, I do have some features I plan on adding to this in the future.</p>
 ]]></content>
@@ -86,14 +99,18 @@
     <id>http://www.citizen428.net/blog/2007/01/04/xpath-goodmadness</id>
     <content type="html"><![CDATA[<p>Today I started writing a useful little &ldquo;Greasemonkey&rdquo;:<a href="http://greasemonkey.mozdev.org/">http://greasemonkey.mozdev.org/</a> &ldquo;userscript&rdquo;:<a href="http://userscripts.org/">http://userscripts.org/</a> for a &ldquo;browser-based MMRPG&rdquo;:<a href="http://www.pardus.at">http://www.pardus.at</a> I&rsquo;m playing. Although I&rsquo;m no JavaScript guru I feel somewhat confident in the language and am quite fond of &ldquo;XPath&rdquo;:<a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a> ever since I joined the &ldquo;hoodwink.d&rdquo;:<a href="http://hoodwinkd.hobix.com/">http://hoodwinkd.hobix.com/</a> community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. &ldquo;funky&rdquo;) from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here&rsquo;s the working result:</p>
 
-<p>{% codeblock %}
-var xpath = &ldquo;/html/frameset/frame[@name=&lsquo;main&rsquo;]&rdquo;;
-var frameResult = document.evaluate(xpath, document, null,
-   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
-var document2 = frameResult.contentDocument;
-var imgResult = document2.evaluate(&ldquo;//img[contains(@src,&lsquo;funky&rsquo;)]&rdquo;, document2, null,
-  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var xpath = &ldquo;/html/frameset/frame[@name=&lsquo;main&rsquo;]&rdquo;;
+</span><span class='line'>var frameResult = document.evaluate(xpath, document, null,
+</span><span class='line'>   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
+</span><span class='line'>var document2 = frameResult.contentDocument;
+</span><span class='line'>var imgResult = document2.evaluate(&ldquo;//img[contains(@src,&lsquo;funky&rsquo;)]&rdquo;, document2, null,
+</span><span class='line'>  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Of course if any of you know sbout a better way to achieve the same result, please don&rsquo;t hesitate to post a comment, thanks!</p>
 
