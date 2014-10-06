@@ -9,7 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Being sick this week I had a lot of time to read, but most if it went into Bruce Sterling&#8217;s Hacker Crackdown and Joe Dunthorne&#8217;s &hellip;">
+  <meta name="description" content="Slightly modified version of a post I originally wrote for our company blog.
+When importing data at work, we often have to deal with XML. This &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +88,132 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/01/xml-diffs-with-bash-and-awk/">XML Diffs With Bash and Awk</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-01T00:00:00+07:00" pubdate data-updated="true">Oct 1<sup>st</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><i>Slightly modified version of a <a href="http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/">post</a> I originally wrote for our <a href="http://tupalo.com/en/blog/">company blog</a>.</i></p>
+<p>When importing data at work, we often have to deal with <span class="caps">XML</span>. This generally works fine, but the format&#8217;s structured nature also means that you can&#8217;t just treat it like any old text file.</p>
+<p>That&#8217;s something we recently had to work around when we wanted to generate a daily <span class="caps">XML</span> diff, which only contains elements which changed since the previous feed. Of course there are several open source tools for diff-ing <span class="caps">XML</span> (e.g. <a href="http://diffxml.sourceforge.net/">diffxml</a> or <a href="http://www.logilab.org/859">xmldiff</a>) but since we didn&#8217;t get them to do what we want in a reasonable amount of time, we just decided to roll our own.</p>
+<p>The final solution is a 71 line bash script, which downloads a zip, extracts it, generates <a href="http://en.wikipedia.org/wiki/MD5">MD5</a> sums for every element and then creates a diff between this new file and the previous list of MD5 sums. Once we know which elements have changed we merge them into a new feed which then gets handed to our importer. The awesome <a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> was a great help in this, as was battle-tested old <a href="http://en.wikipedia.org/wiki/AWK">awk</a>.</p>
+<p>Let&#8217;s look at an interesting snippet from the script:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+</pre></td><td class='code'><pre><code class='bash'>&lt;span class='line'&gt;xmlstarlet sel -I -t -m &lt;span class="s2"&gt;&amp;quot;//item&amp;quot;&lt;/span&gt; -v &lt;span class="s2"&gt;&amp;quot;./guid&amp;quot;&lt;/span&gt; -o &lt;span class="s2"&gt;&amp;quot;|&amp;quot;&lt;/span&gt; -c &lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt; -n - |
+&lt;/span&gt;&lt;span class='line'&gt;  sed -e &lt;span class="s1"&gt;&amp;#39;...&amp;#39;&lt;/span&gt; |
+&lt;/span&gt;&lt;span class='line'&gt;  awk &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="s1"&gt;&amp;#39;BEGIN {&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;      FS=&amp;quot;|&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;      RS=&amp;quot;\n&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;    }&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;    {&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;      id=$1&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;      command=&amp;quot;printf \&amp;quot;%s\&amp;quot; \&amp;quot;&amp;quot; $2 &amp;quot;\&amp;quot; | md5sum | cut -d\&amp;quot; \&amp;quot; -f1&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;      command | getline md5&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;      close(command)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;      print id&amp;quot;:&amp;quot;md5&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;    }&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; &lt;span class="nv"&gt;$MD5_DIR&lt;/span&gt;/vendor-md5-&lt;span class="nv"&gt;$TODAY&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Here we use xmlstarlet to iterate over all the items in the feed (the <a href="http://www.w3.org/TR/xpath/">XPath</a> &#8220;//item&#8221;), print the value of the &#8220;guid&#8221; element (-v &#8220;./guid&#8221;), output a pipe character (-o &#8220;|&#8221;) and then copy the current element followed by a newline (-c &#8220;.&#8221; -n) . This then gets piped through sed for some cleaning up (which I omitted here for brevity&#8217;s sake) before awk takes the part after each &#8220;|&#8221;, generates an MD5 sum and finally produces a file that looks like this:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;rKKTZ:4012fced7c4cd77da607d294fbb8b5b6
+&lt;/span&gt;&lt;span class='line'&gt;hC7Jr:39245a0f9a976e6d47c0e2d76abf6238
+&lt;/span&gt;&lt;span class='line'&gt;...&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Now that we are able to create a daily list of MD5 sums, it&#8217;s easy to generate the diff feed:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+</pre></td><td class='code'><pre><code class='bash'>&lt;span class='line'&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -e &lt;span class="nv"&gt;$MD5_DIR&lt;/span&gt;/vendor-md5-last &lt;span class="o"&gt;]&lt;/span&gt; ; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;  &lt;/span&gt;&lt;span class="nv"&gt;changed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;diff &lt;span class="nv"&gt;$MD5_DIR&lt;/span&gt;/vendor-md5-last &lt;span class="nv"&gt;$MD5_DIR&lt;/span&gt;/vendor-md5-&lt;span class="nv"&gt;$TODAY&lt;/span&gt; |
+&lt;/span&gt;&lt;span class='line'&gt;	   grep &lt;span class="s2"&gt;&amp;quot;^&amp;gt;&amp;quot;&lt;/span&gt; |
+&lt;/span&gt;&lt;span class='line'&gt;           cut -d&lt;span class="s2"&gt;&amp;quot;:&amp;quot;&lt;/span&gt; -f 1 |
+&lt;/span&gt;&lt;span class='line'&gt;           cut -b 1-2 --complement&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;for &lt;/span&gt;record in &lt;span class="nv"&gt;$changed&lt;/span&gt; ; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;  &lt;/span&gt;&lt;span class="nv"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;fgrep -l &lt;span class="s2"&gt;&amp;quot;&amp;lt;guid&amp;gt;$record&amp;lt;/guid&amp;gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;$FILE_PATTERN&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  xmlstarlet sel -I -t -c &lt;span class="s2"&gt;&amp;quot;/rss/channel/item[guid=&amp;#39;$record&amp;#39;]&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;$f&lt;/span&gt; &amp;gt;&amp;gt; vendor-import-&lt;span class="nv"&gt;$TODAY&lt;/span&gt;.xml
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Here we create an array with the id of the changed elements over which we then iterate. In the loop we once again use xmlstarlet to extract the current item from the feed which contains the right guid.</p>
+<p>I&#8217;m quite happy with the result, it does exactly what we want it to do and is also reasonably fast. This is a good example of how familiar Unix tools can be combined to create fairly concise solutions for non-trivial problem.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -604,65 +731,6 @@ Here’s the code:</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/08/28/more-tinkering-with-j/">More Tinkering With J</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-08-28T00:00:00+07:00" pubdate data-updated="true">Aug 28<sup>th</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Since my <a href="http://citizen428.net/archives/436">previous post</a> on <span class="caps">APL</span> and J I&#8217;ve read the 45 or so pages of  <a href="http://www.jsoftware.com/books/pdf/easyj.pdf">Easy J</a> and am quite impressed by this nifty language. It may seem strange at first, but is very logically structured and not difficult to understand at all. That said I still need to constantly have the <a href="http://www.jsoftware.com/help/dictionary/vocabul.htm">vocabulary</a> open to write anything remotely useful, but I&#8217;m slowly starting to remember more and more of it.</p>
-<p>Here are a couple of examples of J&#8217;s expressiveness, with the first two based on exercises from our &#8220;Core Ruby&#8221; course on <a href="http://www.rubylearning.org/class/">RubyLearning.org</a>.</p>
-<p><em>How old is a person if he/she is 1 billion seconds old?</em><br />
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0 365 24 60 60 #: 1000000000
-</span><span class='line'>31 259 1 46 40</span></code></pre></td></tr></table></div></figure></div><br />
-Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (#:) it&#8217;s easy to see that the answer is 31 years, 259 days, 1 hour, 46 minutes and 40 seconds.</p>
-<p><em>Convert degress Fahrenheit to degrees Celsius.</em><br />
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>toc =: %&1.8@-&32
-</span><span class='line'>  toc 100
-</span><span class='line'>37.7778</span></code></pre></td></tr></table></div></figure></div></p>
-<p>Divide by 1.8 after (<a href="http://www.jsoftware.com/help/dictionary/d620.htm">Atop</a>,  @) subtracting 32. I suspect there&#8217;s a better way to write this, but it&#8217;s the first thing that came to my mind&#8230;</p>
-<p><em>Create a sorted set from a list of numbers.</em><br />
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>toset =: ({~/:)@~.
-</span><span class='line'>  toset 3 4 1 2 4 2 3 5
-</span><span class='line'>1 2 3 4 5</span></code></pre></td></tr></table></div></figure></div></p>
-<p>Sort (<a href="http://www.jsoftware.com/help/dictionary/d422.htm">/:</a>) the distinct items (<a href="http://www.jsoftware.com/help/dictionary/d221.htm">nub</a>) of the list. Don&#8217;t concern yourself too much with the passive (<a href="http://www.jsoftware.com/help/dictionary/d220v.htm">~</a>) for now, it&#8217;s just there so the arguments to <a href="http://www.jsoftware.com/help/dictionary/d521.htm">take</a> end up in the right spot.</p>
-<p>That&#8217;s it for today, in my next post on J I want to focus on the language&#8217;s excellent plotting capabilities.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/20">&larr; Older</a>
@@ -695,6 +763,10 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/10/05/information-overload-2014-10-05/">Information Overload 2014-10-05</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/09/28/information-overload-2014-09-28/">Information Overload 2014-09-28</a>
       </li>
     
@@ -708,10 +780,6 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
     
       <li class="post">
         <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a>
       </li>
     
   </ul>
