@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.1.2"
+ruby "2.1.4"
 
 group :development do
   gem 'rake', '~> 10.0'
