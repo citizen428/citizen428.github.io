@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Since I just compiled this list for the RubyLearning forums, I might as well post it here. Below you&#8217;ll find articles I often recommend to our &hellip;">
+  <meta name="description" content="Often when I want to tell someone about cool projects I&#8217;m watching on GitHub, I can&#8217;t remember their names. Now wouldn&#8217;t it be nice &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,53 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/06/09/fun-with-the-github-api-and-ruby/">Fun With the GitHub API and Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-09T00:00:00+07:00" pubdate data-updated="true">Jun 9<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Often when I want to tell someone about cool projects I&#8217;m watching on GitHub, I can&#8217;t remember their names. Now wouldn&#8217;t it be nice if I could look them up without actually having to open a browser tab, logging into the site and so on? Here&#8217;s a quick script to do just that:</p>
+<script src="http://gist.github.com/432255.js?file=watched_repos.rb"></script><p>Example output (shortened):<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mbabineau/cloudviz: Makes nice graphs of Amazon CloudWatch data using ...   (14)
+</span><span class='line'>quirkey/sinatra-gen: Rubigen based generator for new sinatra projects        (126)
+</span><span class='line'>      jcoglan/heist: Scheme in as little Ruby and as much Scheme as pos...   (125)
+</span><span class='line'>        red667/tecc: The Euler Coding Collective                             (7)
+</span><span class='line'>       fogus/potion: _why the lucky stiff's little language                  (39)</span></code></pre></td></tr></table></div></figure></div><br />
+I know that there are several gems for interacting with GitHub, but thanks to the awesome <a href="http://httparty.rubyforge.org/">HTTParty</a> it takes about as long to just implement the relevant part of the <span class="caps">API</span> yourself as it would take to actually find said gems, install them and glance over their docs. In case this looks a bit over-engineered, I have a couple more ideas I might add in the future, so I already prepared the code for that (e.g. the API_METHODS hash). Once I do that I&#8217;ll also not hardcode the user name, separate out&#8230; who am I kidding, it&#8217;s just another throwaway script, but at least it&#8217;s somewhat useful&#8230;</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -575,53 +622,6 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/03/03/move-ec2-amis-between-regions/">Move EC2 AMIs Between Regions</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-03-03T00:00:00+07:00" pubdate data-updated="true">Mar 3<sup>rd</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Today I spent some time figuring out how to move <a href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/index.html?creating-an-ami-ebs.html"><span class="caps">EBS</span>-backed AMIs</a> between different EC2 regions. To save you the effort, here&#8217;s a quick summary:<br />
-<ul><br />
-<li> create a volume from the snapshot backing the <span class="caps">AMI</span></li><br />
-<li> attach this volume to a running instance and mount it</li><br />
-<li> create a new volume in the target region</li><br />
-<li> attach to a running instance, format and mount</li><br />
-<li> in the source region, connect to your instance</li><br />
-<li> rsync (over ssh, so no messing with security groups) the mounted volume to the target volume</li><br />
-<li> once the rsync is done, create a snapshot in the target region</li><br />
-<li> register this snapsho as new <span class="caps">AMI</span> with <a href="http://docs.amazonwebservices.com/AmazonEC2/dg/2007-01-03/CLTRG-register.html">ec2-register</a></li></p>
-</ul>
-<p>Not rocket science, but definitely not as good as just being able to share your own AMIs between regions&#8230;</p>
-<p><strong>Update:</strong> Robert J. Berger wrote this <a href="http://blog.ibd.com/scalable-deployment/copy-an-ebs-ami-image-to-another-amazon-ec2-region/">detailed step by step guide</a> based on my short summary, you should go check it out!</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/22">&larr; Older</a>
@@ -654,6 +654,10 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/12/13/information-overload-2014-10-12/">Information Overload 2013-12-14</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/10/05/information-overload-2014-10-05/">Information Overload 2014-10-05</a>
       </li>
     
@@ -667,10 +671,6 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
     
       <li class="post">
         <a href="/blog/2014/08/17/re-kindling-my-love-affair-with-the-kindle-fire/">Re-kindling My Love Affair With the Kindle Fire</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/08/vcr/">VCR Case Woes</a>
       </li>
     
   </ul>
