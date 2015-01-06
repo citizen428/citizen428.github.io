@@ -244,10 +244,10 @@ task :update_source, :theme do |t, args|
   puts "## Updated #{source_dir} ##"
 end
 
-desc "Open newly generated post in Emacs"
+desc "Open newly generated post"
 task :edit, :filename do |t, args|
-  puts "Opening post in Emacs"
-  `emacsclient -nc #{args.filename}`
+  puts "Opening post in Atom"
+  `atom #{args.filename}`
 end
 
 # desc "Promote a draft to a post"

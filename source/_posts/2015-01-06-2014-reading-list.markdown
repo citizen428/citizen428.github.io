@@ -1,0 +1,104 @@
+---
+layout: post
+title: "2014 Reading List"
+date: 2015-01-06 11:38:10 +0700
+comments: true
+categories:
+  - books
+---
+Here's my annual reading list post. 2014 saw me read less than I wanted to, but exploring my new hometown (Bangkok) and learning Thai used up a lot of my free time. That said I still managed to get in a decent amount of books, caught up on more comics and added a 4th language (Thai) to my reading, although so far that's been limited to children's books.
+
+Books:
+---
+
+* Tom Vater: *The Cambodian Book of the Dead*<br>
+* A.C. Bhaktivedanta Swami Prabhupāda: *On the Way to Krisna*<br>
+* Timeri N. Murari: *The Taliban Cricket Club*<br>
+* Jonas Jonasson: *The 100-Year-Old Man Who Climbed Out the Window and Disappeared*<br>
+* Luis Sepúlveda: *Historia de una Gaviota y del Gato Que le Enseñó a Volar*<br> 
+* Charles Bukowski: *Post Office*<br>
+* David Sedaris: *Let's Explore Diabetes with Owls*<br>
+* Tom Vater: *The Devil's Road To Kathmandu*<br>
+* Jean-Claude Izzo: *The Lost Sailors*<br>
+* Sean Eads: *The Survivors*<br>
+* Charles Bukowski: *Factotum*<br>
+* Benny Lewis: *Fluent in 3 Months*<br>
+* Paco Ignacio Taibo II: *Some Clouds: A Hector Belascoaran Shayne Detective Novel*<br>
+* Charles Bukowski: *Women*<br>
+* Aldous Huxley: *Brave New World Revisited *<br>
+* NoViolet Bulawayo: *We Need New Names*<br>
+* Alex MacCaw: *The Little Book on CoffeeScript*<br>
+* Ernest Cline: *Ready Player One*<br>
+* Andreas Altmann: *Der Preis der Leichtigkeit : eine Reise durch Thailand, Kambodscha und Vietnam*<br>
+* Charles Bukowski: *Burning in Water, Drowning in Flame*<br>
+* อีสป: *ราคานิทานอีสป2ภาษา อินทรีกับชาวนา*<br>
+* Marco Ferrarese: *Nazi Goreng*<br>
+* Nnedi Okorafor: *Who Fears Death*<br>
+* Nick Wilgus: *Mindfulness and Murder: A Father Ananda Mystery*<br>
+* Vikas Swarup: *Six Suspects*<br>
+* Haruki Murakami: *Norwegian Wood*<br>
+* Shamini Flint: *A Most Peculiar Malaysian Murder*<br>
+* D.D. Johnston: *Peace, Love & Petrol Bombs*<br>
+* Mohsin Hamid: *How to Get Filthy Rich in Rising Asia*<br>
+* Rodolfo Pardi: *The most important Chess Pattern - Critical Squares*<br>
+* Dan Kennedy: *Loser Goes First: My Thirty-Something Years of Dumb Luck and Minor Humiliation*<br>
+* Junot Díaz: *This Is How You Lose Her*<br>
+* David Sedaris: *Dress Your Family in Corduroy and Denim*<br>
+* รัชนี ศรีไพรวรรณ: *หนังสือเรียนภาษาไทย*<br>
+* Ali Almossawi: *An Illustrated Book of Bad Arguments*<br>
+* Avdi Grimm: *Confident Ruby*<br>
+* Terry Pratchett: *Unseen Academicals*<br>
+* Ioan Grillo: *El Narco: Inside Mexico's Criminal Insurgency*<br>
+* Mikel Santiago: *Historia de un crimen perfecto*<br>
+* Charles Bukowski: *Mockingbird Wish Me Luck*<br>
+* Johnny Cash: *Cash*<br>
+* Marc-Uwe Kling: *Die Känguru-Chroniken: Ansichten eines vorlauten Beuteltiers*<br>
+* Barend Jan Terwiel: *Thailand's Political History: From the 13th century to recent times*<br>
+* John Siracusa: *OS X 10.10 Yosemite: The Ars Technica Review*<br>
+* Marc-Uwe Kling: *Das Känguru-Manifest*<br>
+* Marc-Uwe Kling: *Die Känguru-Offenbarung*<br>
+* Namita Gokhale: *The Book of Shiva*<br>
+* Julia Alvarez: *In the Time of the Butterflies*<br>
+* Peter F. Hamilton: *If at First...*<br>
+* Simon St. Laurent: *Introducing Elixir: Getting Started in Functional Programming*<br>
+* J. David Eisenberg: *Études for Elixir*<br>
+* Anthony Grey: *Saigon: An Epic Novel of Vietnam*<br>
+
+Comics:
+---
+
+* Scott Snyder: *American Vampire, Vol. 2*<br>
+* Jeff Lemire: *Sweet Tooth, Vol. 1: Out of the Deep Woods*<br>
+* Jeff Lemire: *Sweet Tooth, Vol. 2: In Captivity*<br>
+* Jeff Lemire: *Sweet Tooth, Vol. 3: Animal Armies*<br>
+* Jeff Lemire: *Sweet Tooth, Vol. 4: Endangered Species*<br>
+* Jeff Lemire: *Sweet Tooth, Vol. 5: Unnatural Habitats*<br>
+* Jeff Lemire: *Sweet Tooth, Vol. 6: Wild Game*<br>
+* Jason: *I Killed Adolf Hitler*<br>
+* Fábio Moon: *Daytripper*<br>
+* David Mazzucchelli: *Asterios Polyp*<br>
+* Brian K. Vaughan: *Saga, Volume 3 (Saga #13-18)*<br>
+* Fujiko F. Fujio: *DORAEMON Vol.4*<br>
+* Ed Brubaker: *Deadenders*<br>
+* Matt Fraction: *Sex Criminals, Vol. 1: One Weird Trick*<br>
+* Scott Snyder: *American Vampire, Vol. 3*<br>
+* Neil Gaiman: *Marvel 1602*<br>
+* Ales Kot: *Zero, Vol. 1 An Emergency*<br>
+* Fujiko F. Fujio: *DORAEMON Vol.5*<br>
+* Jeph Loeb: *Spider-Man: Blue*<br>
+* Mark Waid: *Irredeemable, Vol. 1*<br>
+* Mark Waid: *Irredeemable, Vol. 2*<br>
+* Mark Waid: *Irredeemable, Vol. 3*<br>
+* Jonathan Hickman: *The Manhattan Projects, Vol. 1: Science, Bad*<br>
+* Mark Waid: *Irredeemable, Vol. 4*<br>
+* Mark Waid: *Irredeemable, Vol. 5*<br>
+* Mark Waid: *Irredeemable, Vol. 6*<br>
+* Mark Waid: *Irredeemable, Vol. 7*<br>
+* Mark Waid: *Irredeemable, Vol. 8*<br>
+* Mark Waid: *Irredeemable, Vol. 9*<br>
+* Mark Waid: *Irredeemable, Vol. 10*<br>
+* Hugh Howey: *Wool: The Graphic Novel*<br>
+* Joe Sacco: *Palestine*<br>
+* Ales Kot: *Zero, Vol. 2: At the Heart of It All*<br>
+* Mike Richardson: *Crimson Empire, Volume 2: Council of Blood*<br>
+* Brian K. Vaughan: *Saga, Volume 4*<br>
