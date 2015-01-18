@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="If you are interested in finally learning Ruby, but don&#8217;t have the motivation to do it on your own, you should definitely check out &hellip;">
+  <meta name="description" content="Today I finished the free Git and GitHub course at RubyLearning and I have to say I&#8217;m really happy with it! Since its creation GitHub has &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/02/24/rubylearning-git-and-github-course-review/">RubyLearning Git and GitHub Course Review</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-24T00:00:00+07:00" pubdate data-updated="true">Feb 24<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I finished the <strong>free</strong> <a href="http://rubylearning.org/class/course/category.php?id=11">Git and GitHub course</a> at <a href="http://rubylearning.org">RubyLearning</a> and I have to say I&#8217;m really happy with it! Since its creation <a href="http://github.com">GitHub</a> has become a kind of de facto standard for Ruby-related projects (and probably also for <span class="caps">FOSS</span> development in general), so knowing it is quite essential if you want to contribute to any of them. That being said it&#8217;s not really hard to get up to speed with the technology, there are <a href="http://b.lesseverything.com/2008/3/25/got-git-howto-git-and-github">good tutorials</a> and other <a href="http://www.gitready.com/">useful sites</a> out there. But if you are just starting out with Git or <a href="http://en.wikipedia.org/wiki/Revision_Control_System">revision control systems</a> in general, this course is definitely a great way to learn all the basics and much more in a fun and collaborative way! And since the course covers quite a wide range of topics (including automatic gem creation, GH pages, Gists etc.), you&#8217;ll probably also find it useful if you already have some previous Git/GitHub experience. The next batch will start on March 28th, make sure you don&#8217;t miss it!</p>
+<p><em>Note: Actually the current batch is still going on for 2 more days, but I finished with the eBook today. One of the joys of RubyLearning is that you can do all the courses at your own speed, while still having the motivational and other effects of learning with a group of like-minded people.</em></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -447,49 +483,6 @@ Links:<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/01/22/nutzliches-fur-die-kommandozeile/">Nützliches Für Die Kommandozeile</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-01-22T00:00:00+07:00" pubdate data-updated="true">Jan 22<sup>nd</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Nachdem MacOS X ja bekanntlich über einen <a title="Wikipedia: Darwin" href="http://de.wikipedia.org/wiki/Darwin_(Betriebssystem)">Unix-Kern</a> verfügt, steht ein Großteil der bekannten Kommandozeilen-Werkzeuge zur Verfügung. Zusätzlich gibt es aber auch noch einige macspezifische Kommandos, von denen wir heute einige vorstellen wollen.<br />
-<ul><br />
-	<li><a title="pbcopy/pbpaste manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man1/pbcopy.1.html">pbcopy / pbpaste</a>: mit Hilfe dieser beiden kleinen Helfer hat man von der Kommandozeile aus Zugriff auf die Zwischenablage.  So kopiert z.B. <em>cat .ssh/id_pub.dsa | pbcopy</em> einen öffentlichen <span class="caps">SSH</span>-Schlüssel in diese, so dass man diesen dann einfach mittels Apfel-V in der grafischen Oberfläche einfügen kann. Analog kann so im <span class="caps">GUI</span> kopierter Text im Terminal verwendet werden, beispielsweise um diesen mit &#8220;grep&#8221; zu durchsuchen: &#8220;<em>pbpaste | grep foo</em>&#8221;</li><br />
-	<li><a title="say manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man1/say.1.html">say</a>: dieses nette Tool erlaubt die Verwendung des systemeigenen Speechsynthesizers in der Shell: <em>say &#8220;Hello&#8221;</em>. Alternativ kann man mit dem Parameter &#8220;<em>-f</em>&#8221; auch ein zu lesendes File übergeben. Standardmäßig kommt dabei die in den Systemeinstellungen verwendete Stimme zum Einsatz, dies kann mittels &#8220;<em>-v</em>&#8221; aber geändert werden.  Dies ist einerseits eine unterhaltsame Spielerei, kann aber andererseits auch von echtem Nutzen sein, zum Beispiel wenn man über die Beendigung eines lange laufenden Shell-Prozesses benachrichtigt werden will, in diesem Fall einem Download mittels <a title="curl manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man1/curl.1.html">curl</a>: <em>curl -O http://link.to.file/bigfile &amp;&amp; say &#8220;Download finished&#8221;</em></li><br />
-	<li><a title="softwareupdate manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man8/softwareupdate.8.html">softwareupdate</a>: dieses Kommando erlaubt das Einspielen von Systemaktualisierungen von der Kommandozeile. So zeigt etwa <em>softwareupdate -l </em>eine Liste aller verfügbarer Aktualisierungen, während <em>softwareupdate -i -a </em>alle verfügbaren Updates automatisch installiert, womit es sich hervorragend für die Automatisierung mittels <a title="at manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man1/at.1.html">at</a> oder <a title="cron manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man8/cron.8.html">cron</a> eignet. </li><br />
-	<li><a title="screencapture manual page" href="http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man1/screencapture.1.html">screencapture</a>: OS X-Neueinsteiger fragen sich oft wie man denn auf einfache Weise einen Screenshot erstellen kann, die nicht unbedingt intuitive Antwort lautet Apfel-Shift-3. Alternativ kann dies aber auch von der Kommandozeile erfolgen. So erzeugt beispielsweise das Kommando  <em>screencapture ~/Desktop/`date +&quot;%Y%m%d&quot;`.png </em>einen Screenshot mit dem aktuellen Datum (im Format <span class="caps">JJJJMMTT</span>) auf dem Desktop des jeweiligen Benutzers. Das Tool verfügt über einige Parameter, mit denen sich auch interaktive Screenshots (Apfel-Shift-4)  anfertigen lassen.</li></p>
-</ul>
-<p>Viel Spaß beim Arbeiten mit der Kommandozeile!</p>
-<p>(Origally published by me on <a href="http://www.opensourcemac.de/2009/01/21/nutzliches-fur-die-kommandozeile/">open.source.mac</a> on Jan 21st 2009.)</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/28">&larr; Older</a>
@@ -522,6 +515,10 @@ Links:<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/01/18/information-overload-2015-01-18/">Information Overload 2015-01-18</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/01/06/2014-reading-list/">2014 Reading List</a>
       </li>
     
@@ -535,10 +532,6 @@ Links:<br />
     
       <li class="post">
         <a href="/blog/2014/09/28/information-overload-2014-09-28/">Information Overload 2014-09-28</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/21/information-overload-2014-09-21/">Information Overload 2014-09-21</a>
       </li>
     
   </ul>
