@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="How I got a blank book to the top of the Amazon chartsA good example of what marketing can do for you.
-The Grand TourVery interesting insight into a &hellip;">
+  <meta name="description" content="As Ruby matured and became part of the programming mainstream (at least to a certain extent), publishers got on the bandwagon and supply us with more &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +83,59 @@ The Grand TourVery interesting insight into a &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/04/23/ruby-book-recommendations/">Ruby Book Recommendations</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-23T00:00:00+07:00" pubdate data-updated="true">Apr 23<sup>rd</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As Ruby matured and became part of the programming mainstream (at least to a certain extent), publishers got on the bandwagon and supply us with more and more Ruby books, many of which are really good. Alas time is limited and most of us won&#8217;t manage to read them all, so I thought I&#8217;ll write up my current recommendations.</p>
+<p><strong>From zero to hero</strong></p>
+<p>For people new to Ruby, there are 3 books I consider absolute must reads:</p>
+<ul>
+	<li><a href="http://www.manning.com/black2/">The Well-Grounded Rubyist</a> by David A. Black:<br />
+This book really lives up to its title and gives the reader a solid grounding that will be a great basis for diving deeper into the language (I wrote a longer review <a href="http://citizen428.net/archives/386">here</a>). Alternatively you might want to consider <a href="http://pragprog.com/titles/ruby3/programming-ruby-1-9">Programming Ruby</a> by Dave Thomas, with Chad Fowler and Andy Hunt, which is also an excellent book and a standard recommendation for Ruby newbies.</li>
+	<li><a href="http://www.pearsonhighered.com/educator/product/Eloquent-Ruby/9780321584106.page">Eloquent Ruby</a> by Russ Olsen:<br>This book is a true gem! Mostly written for people coming to Ruby from other programming languages, Russ Olsen doesn&#8217;t dwell on banalities, but instead teaches you good, idiomatic Ruby. The presented material is excellent and the writing is witty and clever. If you are new to programming this is probably not the best book for you, but if you have experience in some other language or &#8220;just&#8221; want to get more fluent in Ruby, &#8220;Eloquent Ruby&#8221; is hard to beat.</li>
+	<li><a href="http://rubybestpractices.com/">Ruby Best Practices</a> by Gregory T. Brown:<br>
+Once you worked your way to the other two books or have already coded in Ruby for a while, you definitely should check out &#8220;Ruby Best Practices&#8221;. As the title suggests this is not about learning Ruby, it&#8217;s about getting the most out of the language, for yourself as well as for potential collaborators and colleagues. No matter how long you&#8217;ve been doing Ruby, I&#8217;m almost certain you&#8217;ll still pick up a little trick here and there. </li>
+</ul>
+<p>Now obviously you can&#8217;t just sit down, read those 3 books and become a great Rubyist through reading. Start reading, work with the text, use <span class="caps">IRB</span> to experiment and find yourself some challenges to try your hands on (e.g. the <a href="https://github.com/edgecase/ruby_koans">Ruby Koans</a> or <a href="http://codekata.pragprog.com/">Code Katas</a>).</p>
+<p><strong>Advanced Rubyists</strong></p>
+<ul>
+	<li><a href="http://oreilly.com/catalog/9780596516178">The Ruby Programming Language</a> by David Flanagan, Yukihiro Matsumoto:<br>
+I guess this wouldn&#8217;t really need to be mentioned, but for completeness&#8217; sake I&#8217;ll include it here. While I don&#8217;t think it&#8217;s a great book for learning the language, it&#8217;s something every serious Ruby developer should own as a reference.</li>
+<li><a href="http://www.pearsonhighered.com/educator/product/Refactoring-Ruby-Edition/9780321603500.page">Refactoring: Ruby Edition</a> by Jay Fields:<br>Granted, this may not sound exciting, but &#8220;Refactoring Ruby&#8221; is a really good book, that will come in handy once you have to work on a somewhat significant Ruby codebase. Think of it as design patterns for refactoring.</li>
+</ul>
+<p>Of course &#8220;Ruby Best Practices&#8221; also falls in this category, but I already mentioned it in the first section.</p>
+<p>What Ruby books do you recommend and why?</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -581,44 +633,6 @@ The Grand TourVery interesting insight into a &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/03/11/unsavory-1-0-0-and-methodfinder-1-0-1/">Unsavory 1.0.0 and Methodfinder 1.0.1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-03-11T00:00:00+07:00" pubdate data-updated="true">Mar 11<sup>th</sup>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://github.com/citizen428/unsavory">unsavory</a> has reached maturity (meaning I can&rsquo;t really come up with any more stuff I want to add), so i decided it&rsquo;s enough with the conservative versioning and jumped from 0.3.3 to 1.0.0 :&ndash;) Right before Christmas I had changed it from Delicious to <a href="http://pinboard.in">Pinboard</a> and today I replaced the previous &ndash; rather verbose &ndash; output with a nice little <a href="http://0xcc.net/ruby-progressbar/index.html.en">progressbar</a> and a log file.</p>
-
-<p>I also did a mini update to <a href="https://github.com/citizen428/methodfinder">methodfinder</a>, which now uses <a href="http://www.ruby-doc.org/stdlib/libdoc/stringio/rdoc/index.html">StringIO</a> objects instead of <code>/dev/null</code> for output redirection, which should make the Windows users out there happy.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/16">&larr; Older</a>
@@ -651,6 +665,10 @@ The Grand TourVery interesting insight into a &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/01/25/information-overload-2015-01-25/">Information Overload 2015-01-25</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/01/18/information-overload-2015-01-18/">Information Overload 2015-01-18</a>
       </li>
     
@@ -664,10 +682,6 @@ The Grand TourVery interesting insight into a &hellip;">
     
       <li class="post">
         <a href="/blog/2014/10/05/information-overload-2014-10-05/">Information Overload 2014-10-05</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/28/information-overload-2014-09-28/">Information Overload 2014-09-28</a>
       </li>
     
   </ul>
