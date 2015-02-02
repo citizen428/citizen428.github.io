@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="The &#8216;Irrational&#8217; Way Humans Interact With DentistsAre our relationships with our dentists a form of the Stockholm Syndrome? Ask the &hellip;">
+  <meta name="description" content="Today at work we ended up talking about simhashing (a hash function which generates similar hashes for similar inputs) and I found this nice article &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,138 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/20/quick-and-dirty-simhash-in-ruby/">Quick and Dirty Simhash in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-20T00:00:00+07:00" pubdate data-updated="true">Oct 20<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today at work we ended up talking about simhashing (a hash function which generates similar hashes for similar inputs) and I found <a href="http://matpalm.com/resemblance/simhash/">this nice article</a> with a step by step explanation of the algorithm, so I wrote a quick Ruby version (needs 1.9):</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+<span class='line-number'>15</span><br />
+<span class='line-number'>16</span><br />
+<span class='line-number'>17</span><br />
+<span class='line-number'>18</span><br />
+<span class='line-number'>19</span><br />
+<span class='line-number'>20</span><br />
+<span class='line-number'>21</span><br />
+<span class='line-number'>22</span><br />
+<span class='line-number'>23</span><br />
+<span class='line-number'>24</span><br />
+<span class='line-number'>25</span><br />
+<span class='line-number'>26</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;String&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;shingles&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="nb"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;//&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each_cons&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="ss"&gt;:join&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;uniq&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;simhash&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Array&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;hashes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;shingles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="ss"&gt;:hash&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;hashes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nb"&gt;hash&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="nb"&gt;hash&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_s&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chars&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each_with_index&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;bit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;        &lt;span class="n"&gt;bit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_i&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hamming_distance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;other&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;other_sh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;other&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;simhash&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="nb"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;simhash&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chars&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each_with_index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;total&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;bit&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;other_sh&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="n"&gt;total&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Getting the &#8220;features&#8221; of a string:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="s2">&quot;This is a test string&quot;</span><span class="o">.</span><span class="n">shingles</span>
+</span><span class='line'><span class="c1">#=&gt; [&quot;Th&quot;, &quot;hi&quot;, &quot;is&quot;, &quot;s &quot;, &quot; i&quot;, &quot; a&quot;, &quot;a &quot;, &quot; t&quot;, &quot;te&quot;, &quot;es&quot;, ...]</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Simhashing a string:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="s2">&quot;This is a test string&quot;</span><span class="o">.</span><span class="n">simhash</span>
+</span><span class='line'><span class="c1">#=&gt; &quot;0100110001100001001100010000000010001001001000110110000010101100&quot;</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Calculating the <a href="http://en.wikipedia.org/wiki/Hamming_distance">Hamming distance</a> between the symhashes of two strings (higher numbers mean less similar, with 64 being the highest possible score):<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="s2">&quot;This is a test string&quot;</span><span class="o">.</span><span class="n">hamming_distance</span><span class="p">(</span><span class="s2">&quot;This is another test string&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="c1">#=&gt; 8</span>
+</span></code></pre></td></tr></table></div></figure></div></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -638,46 +770,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/09/14/my-first-week-with-the-kindle-3/">My First Week With the Kindle 3</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-14T00:00:00+07:00" pubdate data-updated="true">Sep 14<sup>th</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>tl;dr: Kindle 3 == teh awesum.</p>
-<p>One week ago I finally got my <a href="http://www.amazon.com/Kindle-Wireless-Reader-Wifi-Graphite/dp/B002Y27P3M">Kindle 3</a> and it&#8217;s about time for a review. Here we go: Awesome! That&#8217;s it, &#8217;nuff said. In all seriousness, the Kindle may well be my favorite gadget and that comes from somebody who owns a MacBook Pro, an Android phone, an iPod Touch and a Nintendo DS.</p>
-<p>First off, at around 180 Euro for the WiFi+3G version it&#8217;s quite a bargain. I love the form factor, and the software is quite ok too, especially after the latest update. The built-in dictionary has already proven to be useful on several occasions and I&#8217;m sure I&#8217;ll start using the annotation feature rather sooner than later. But now for the most important part, the <a href="http://en.wikipedia.org/wiki/Electronic_paper">e-paper</a> display. It&#8217;s an absolute pleasure to read on, I find the experience to be highly immersive. Since Saturday I read most of Cory Doctorow&#8217;s novel <a href="http://craphound.com/littlebrother/download/">Little Brother</a> on it, and am surprised how the Kindle just seems to disappear while I read. Hands-free reading without the need to keep the book open is pretty sweet too.</p>
-<p>As a book nerd and regular reader (I usually read between 50-60 books a year) I still can&#8217;t entirely abandon paper books though, there&#8217;s just something magical about their feel and smell. I also tend to pick up a lot of my reading material from second-hand shops, <a href="http://www.bookcrossing.com/">Bookcrossing</a> or <a href="http://www.offener-buecherschrank.at/">Offener Buecherschrank</a>, something which is not possible for eBooks (yet). However, the Kindle is great for reading all the great freely available books like Peter Watt&#8217;s <a href="http://www.rifters.com/real/shorts.htm">Rifters</a> trilogy, or the <a href="http://www.gutenberg.org/wiki/Main_Page">Project Gutenberg</a> texts which I mostly ignored so far because I find it too annoying to read them on a computer screen (programming eBooks are a different matter, I <strong>want</strong> to read them on my screen so I can easily switch to an editor and try out things).</p>
-<p>As should be obvious by now, I&#8217;m pretty stoked by my new toy. There is however one app that makes it even more awesome, <a href="http://calibre-ebook.com/">Calibre</a>. While it has a pretty ugly UI, it&#8217;s jam-packed with <a href="http://calibre-ebook.com/demo">useful features</a> every eBook user will appreciate. I especially love the ability to fetch <span class="caps">RSS</span> feeds and convert them into Kindle &#8220;magazines&#8221;: every morning Calibre fetches the feeds of several of my favorite online publications, converts them and emails them to my Kindle where I can later read them. Users can contribute their own recipes for this and some of them are just amazing (e.g. the one for Austrian newspaper <a href="http://derstandard.at/">Der Standard</a> is basically of equal &#8211; or better &#8211; quality as the commercial offers in the Kindle store). Of course the program also can deal with authentication, so it&#8217;s no problem to access my subscription of the English edition of <a href="http://mondediplo.com/">Le Monde diplomatique</a> or my unread <a href="http://www.instapaper.com/">Instapaper</a> items. Recipes are Python scripts by the way, so it&#8217;s easy to modify or create them. All in all an absolutely fantastic piece of software, which I happily donated money to! :-)</p>
-<p>If you are looking for an eBook reader, it&#8217;s probably hard to find better value for money than the new Kindle. I&#8217;ve been wanting to buy one for the last 6 month or so, but am very happy that I waited until now. It&#8217;s everything I expected from such a device, plus a bit more.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/20">&larr; Older</a>
@@ -710,6 +802,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/01/information-overload-2015-02-01/">Information Overload 2015-02-01</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/01/25/information-overload-2015-01-25/">Information Overload 2015-01-25</a>
       </li>
     
@@ -723,10 +819,6 @@
     
       <li class="post">
         <a href="/blog/2014/12/13/information-overload-2014-10-12/">Information Overload 2013-12-14</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/10/05/information-overload-2014-10-05/">Information Overload 2014-10-05</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="After knowing Brainfuck for quite a while alreay, I today have decided to write my very first &#8220;program&#8221; in this funny little language. It &hellip;">
+  <meta name="description" content="As most of the people who have met me in person know, I&#8217;m quite interested in languages, be they programming or natural languages. This blog &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/04/17/language-links/">Language Links</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-04-17T00:00:00+07:00" pubdate data-updated="true">Apr 17<sup>th</sup>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As most of the people who have met me in person know, I&#8217;m quite interested in languages, be they programming or natural languages. This blog however will deal with the latter, namely Chinese, Japanese, Korean, Vietnamese, Tibetan and German.<br />
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2005/04/17/language-links/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -430,66 +470,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/02/15/new-ruby-stuff/">New Ruby Stuff</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-02-15T00:00:00+07:00" pubdate data-updated="true">Feb 15<sup>th</sup>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It&#8217;s time for some good Ruby-related news again! After version bumping <a href="http://ncurses-ruby.berlios.de/">ncurses-ruby</a> I added two new packages to the tree.</p>
-<p>The first one is <a href="http://ruby-mp3info.rubyforge.org/">ruby-mp3info</a> and was submitted via Bugzilla. It&#8217;s written in pure Ruby and gives you access to a lot of low level information about mp3 files, like bitrate and samplerate. Besides that it can read and write id3v1 and read id3v2.</p>
-<p>But the really cool thing I&#8217;ve added today is <a href="http://rubytorrent.rubyforge.org/">RubyTorrent</a>. I&#8217;ve stumbled across this project a while ago and took the 0.3 release as a motivation to finally add it to the tree. Check it out, it&#8217;s really cool stuff.</p>
-<p>Here&#8217;s an example that I&#8217;ve stolen from the project&#8217;s website:<br />
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubytorrent&#39;</span>
-</span><span class='line'><span class="n">bt</span> <span class="o">=</span> <span class="no">RubyTorrent</span><span class="o">::</span><span class="no">BitTorrent</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">ARGV</span><span class="o">.</span><span class="n">shift</span><span class="p">)</span>
-</span><span class='line'><span class="n">thread</span> <span class="o">=</span> <span class="no">Thread</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span>
-</span><span class='line'>  <span class="k">while</span> <span class="kp">true</span>
-</span><span class='line'>    <span class="nb">puts</span> <span class="n">bt</span><span class="o">.</span><span class="n">percent_completed</span>
-</span><span class='line'>    <span class="nb">sleep</span> <span class="mi">15</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="n">bt</span><span class="o">.</span><span class="n">on_event</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">:complete</span><span class="p">)</span> <span class="p">{</span> <span class="n">thread</span><span class="o">.</span><span class="n">kill</span> <span class="p">}</span>
-</span><span class='line'><span class="n">thread</span><span class="o">.</span><span class="n">join</span>
-</span></code></pre></td></tr></table></div></figure></div><br />
-Yeah, that&#8217;s a BitTorrent client. Really. Nifty, isn&#8217;t it?</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/44">&larr; Older</a>
@@ -522,6 +502,10 @@ Yeah, that&#8217;s a BitTorrent client. Really. Nifty, isn&#8217;t it?</p></div>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/01/information-overload-2015-02-01/">Information Overload 2015-02-01</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/01/25/information-overload-2015-01-25/">Information Overload 2015-01-25</a>
       </li>
     
@@ -535,10 +519,6 @@ Yeah, that&#8217;s a BitTorrent client. Really. Nifty, isn&#8217;t it?</p></div>
     
       <li class="post">
         <a href="/blog/2014/12/13/information-overload-2014-10-12/">Information Overload 2013-12-14</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/10/05/information-overload-2014-10-05/">Information Overload 2014-10-05</a>
       </li>
     
   </ul>
