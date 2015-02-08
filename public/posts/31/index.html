@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Yesterday we played two games of 1000 Blank White Cards at the Metalab which was quite a lot of fun. The cards we created ranged from &#8220;Emo &hellip;">
+  <meta name="description" content="In poker the term &#8220;drawing dead&#8221; refers to the process of drawing to a hand which will lose even if you make it, e.g. drawing to a flush &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/02/21/drawing-dead/">Drawing Dead</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-02-21T00:00:00+07:00" pubdate data-updated="true">Feb 21<sup>st</sup>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In poker the term &#8220;drawing dead&#8221; refers to the process of drawing to a hand which will lose even if you make it, e.g. drawing to a flush when your opponent already has a full house. Learning to identify such situations will save you a lot of money and make you sleep better.</p>
+<p>But I think it&#8217;s pretty important to apply this principle &#8211; and many others found in poker &#8211; to your real life as well. Don&#8217;t waste your time and energy chasing something that won&#8217;t win you the pot (e.g. make you happy) anyway. Don&#8217;t feel committed to something or someone because you&#8217;ve already made a big investment in terms of time, money, feelings or whatever, when you realize that you&#8217;re essentially drawing dead. Learning to let go at the right moment is a very important skill, and even if it hurts quite badly at times, it will spare you from far more serious trouble in the long run.</p>
+<p>Boomtime, Chaos 52, 3173 <span class="caps">YOLD</span></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -418,62 +455,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/01/04/xpath-goodmadness/">XPath (Good|mad)ness</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-01-04T00:00:00+07:00" pubdate data-updated="true">Jan 4<sup>th</sup>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Today I started writing a useful little <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a> <a href="http://userscripts.org/">userscript</a> for a <a href="http://www.pardus.at">browser-based <span class="caps">MMRPG</span></a> I&#8217;m playing. Although I&#8217;m no JavaScript guru I feel somewhat confident in the language and am quite fond of <a href="http://www.w3.org/TR/xpath">XPath</a> ever since I joined the <a href="http://hoodwinkd.hobix.com/">hoodwink.d</a> community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. &#8220;funky&#8221;) from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here&#8217;s the working result:</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-<span class='line-number'>4</span><br />
-<span class='line-number'>5</span><br />
-<span class='line-number'>6</span><br />
-</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;var xpath = "/html/frameset/frame[@name='main']";
-&lt;/span&gt;&lt;span class='line'&gt;var frameResult = document.evaluate(xpath, document, null, 
-&lt;/span&gt;&lt;span class='line'&gt;   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
-&lt;/span&gt;&lt;span class='line'&gt;var document2 = frameResult.contentDocument;
-&lt;/span&gt;&lt;span class='line'&gt;var imgResult = document2.evaluate("//img[contains(@src,'funky')]", document2, null, 
-&lt;/span&gt;&lt;span class='line'&gt;  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p>Of course if any of you know sbout a better way to achieve the same result, please don&#8217;t hesitate to post a comment, thanks!</p>
-<p>On a completely unrelated note: I&#8217;m probably the last person to find out that <a href="http://sladhdot.org">Slashdot</a> features random Futurama quotes in its <span class="caps">HTTP</span> headers, but nonetheless I find it pretty cool to find stuff like &#8220;X-Fry: The less fortunate get all the breaks!&#8221; in there!</p>
-<p>Setting Orange, Chaos 5, 3173 <span class="caps">YOLD</span></p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/32">&larr; Older</a>
@@ -506,6 +487,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/08/information-overload-2015-02-08/">Information Overload 2015-02-08</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/01/information-overload-2015-02-01/">Information Overload 2015-02-01</a>
       </li>
     
@@ -519,10 +504,6 @@
     
       <li class="post">
         <a href="/blog/2015/01/06/2014-reading-list/">2014 Reading List</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/13/information-overload-2014-10-12/">Information Overload 2013-12-14</a>
       </li>
     
   </ul>

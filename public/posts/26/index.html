@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Since my reading time wasn&#8217;t influenced by distracting things like work or studies last year, I managed to read 69 books since end of April &hellip;">
+  <meta name="description" content="Playing with Squeak&#8216;s Method Finder, I discovered a really neat feature that I wish would be available for Ruby documentation. Here&#8217;s the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/26/clever-documentation/">Clever Documentation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-26T00:00:00+07:00" pubdate data-updated="true">Apr 26<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Playing with <a href="http://www.squeak.org/">Squeak</a>&#8216;s Method Finder, I discovered a really neat feature that I wish would be available for Ruby documentation. Here&#8217;s the description from the built-in help:</p>
+<p><i>[&#8230;] use an example to find a method in the system.  Type receiver, args, and answer in the top pane with periods between the items.  3. 4. 7</i></p>
+<p>Yes, this means that if you want to know how to do modulo in Smalltalk, you can open the Method Finder, type <i>7. 3. 1</i> and see that the answer is <i>Number&gt;&gt;&#92;</i>, whereas <I>&#8216;abc&#8217; . &#8216;<span class="caps">ABC</span>&#8217;</i> will tell us about <i>String&gt;&gt;asUppercase</i>.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -556,50 +593,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/03/10/rubinius-build-woes/">Rubinius Build Woes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-10T00:00:00+07:00" pubdate data-updated="true">Mar 10<sup>th</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A couple of days ago I decided that I want to play around with <a href="http://rubini.us">Rubinius</a>, so I cloned the <a href="http://github.com/evanphx/rubinius/tree/master">source</a> from GitHub and thought I was ready to go. As it turned out that wasn&#8217;t quite the case, since my first attempt to build it ended in the second error can see here:</p>
-<script src="http://gist.github.com/77119.js"></script><p>I hopped into #rubinius to find out if more people have this problem, but that doesn&#8217;t seem to be the case. At least I learnt that most active develop is going into the &#8216;stackfull&#8217; branch, so I did a &#8216;git checkout origin/stackfull&#8217; and gave the build another try, which resulted in the first error message you see above.</p>
-<p>Determined not to give up, I decided to try one last time with &#8216;rake vm:clean&#8217; and &#8216;rake build:debug&#8217; and to my surprise ended up with a working Rubinius install :-)</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;$ bin/rbx -v
-&lt;/span&gt;&lt;span class='line'&gt;rubinius 0.11.0-dev (ruby 1.8.6) (f5260b581 12/31/2009) [i686-apple-darwin9.6.0]&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p>That made me somewhat curious, so I tried &#8216;rake vm:clean&#8217; and &#8216;rake build&#8217; which now also worked (still can&#8217;t build master though). I have to admit that I&#8217;m slightly confused, but at least I have a working Rubinius version to play around with for the time being.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/27">&larr; Older</a>
@@ -632,6 +625,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/08/information-overload-2015-02-08/">Information Overload 2015-02-08</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/01/information-overload-2015-02-01/">Information Overload 2015-02-01</a>
       </li>
     
@@ -645,10 +642,6 @@
     
       <li class="post">
         <a href="/blog/2015/01/06/2014-reading-list/">2014 Reading List</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/13/information-overload-2014-10-12/">Information Overload 2013-12-14</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Above all, remember the more harm you cause, the more hate you feel, and the more kindness you deal into the world the more you come to love the &hellip;">
+  <meta name="description" content="When I rebooted my new work notebook (a very nice x201s, with a dual-core i7, 8GB RAM and an SSD by the way), it seemed that for whatever reason &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,110 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk/">Fixing Grub on a LUKS-encrypted Disk</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-17T15:41:00+07:00" pubdate data-updated="true">Oct 17<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I rebooted my new work notebook (a very nice x201s, with a dual-core i7, 8GB RAM and an SSD by the way), it seemed that for whatever reason there was no Grub installed. Strange, but not the only problem I had with the alternate Ubuntu installer that I used for setting up <a href="http://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS-encrypted</a> root and swap partitions. Since this turned out to be more involved than I originally thought, I decided to document what I did to maybe save others the trouble. BTW: You&rsquo;ll need a Linux Live-CD for this, I recommend the excellent Debian-based <a href="http://grml.org/">Grml</a>.</p>
+
+<p>First we need to open the LUKS partition, which can be done with <a href="http://linux.die.net/man/8/cryptsetup">cryptsetup</a>.</p>
+
+<figure class='code'><figcaption><span>Step 1: Unlock LUKS </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cryptsetup luksOpen /dev/&lt;device&gt; &lt;name&gt;
+</span><span class='line'><span class="c"># you&#39;ll be asked for your password</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With that out of the way, you&rsquo;ll have to mount your LVM volumes. This took me a bit because my VG wasn&rsquo;t active, but thanks to an excellent blog post I found (see sources) this problem was solved quickly.</p>
+
+<figure class='code'><figcaption><span>Step 2: Mounting LVM </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># do a lvm disk scan</span>
+</span><span class='line'><span class="nv">$ </span>lvmdiskscan
+</span><span class='line'><span class="c"># activate the volume group</span>
+</span><span class='line'><span class="nv">$ </span>vgchange -ay
+</span><span class='line'><span class="c"># make sure the VG is active now</span>
+</span><span class='line'><span class="nv">$ </span>lvscan
+</span><span class='line'><span class="c"># mount the actual volume</span>
+</span><span class='line'><span class="nv">$ </span>mount /dev/&lt;volume_group_name&gt;/&lt;volume&gt; /mnt/external
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I then needed to mount the unencrypted <code>/boot</code> partition as well as some special filesystems (with bind mounts) at the appropriate mount points.</p>
+
+<figure class='code'><figcaption><span>Step 3: Preparing for the chroot </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># mount the boot partion</span>
+</span><span class='line'><span class="nv">$ </span>mount /dev/&lt;device&gt; /mnt/external/boot
+</span><span class='line'><span class="c"># bind mount some things we need in the chroot env</span>
+</span><span class='line'><span class="nv">$ </span>mount --bind /dev /mnt/external/dev
+</span><span class='line'><span class="nv">$ </span>mount --bind /proc /mnt/external/proc
+</span><span class='line'><span class="nv">$ </span>mount --bind /sys /mnt/external/sys
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With everything set up, all that&rsquo;s left to do is <code>chroot</code>ing into the system and fixing Grub.</p>
+
+<figure class='code'><figcaption><span>Step 4: chrooting and fixing Grub </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>chroot /mnt/external
+</span><span class='line'>chroot<span class="nv">$ </span> grub-setup <span class="c"># grub-install, whatever you need</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sources:</p>
+
+<ul>
+<li><a href="http://www.shallowsky.com/blog/linux/luks-encryption.html">Creating and mounting a LUKS encrypted disk</a></li>
+<li><a href="http://pissedoffadmins.com/?p=481">mount: unknown filesystem type ‘LVM2_member’</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -703,52 +807,6 @@ my new blogging setup.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/18/information-overload-2011-09-18/">Information Overload 2011-09-18</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-18T00:00:00+07:00" pubdate data-updated="true">Sep 18<sup>th</sup>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.yosefk.com/blog/my-history-with-forth-stack-machines.html">My history with Forth &amp; stack machines</a><br>I haven&#8217;t included a proper programming article in a while, but this one is a really good read, even though it &#8220;only&#8221; covers one person&#8217;s experience with Forth.</li>
-<li><a href="http://www.opendemocracy.net/od-russia/svetlana-reiter-igor-kalyapin/behind-scenes-at-death-squads-of-chechnya">Behind the scenes at the death squads of Chechnya</a><br>A shocking account of the goings-on in Chechnya.</li>
-<li><a href="http://blog.uber.com/2011/09/13/uberdata-how-prostitution-and-alcohol-make-uber-better/">Uberdata: How prostitution and alcohol make Uber better</a><br>You know I like cool posts about math/statistics. This is one.</li>
-<li><a href="http://www.wired.com/dangerroom/2011/09/end-911-era/">How to Beat Terrorism: Refuse to Be Terrorized</a><br>I agree with the headline and the general position in the article, but find some things in it a bit strange.</li>
-<li><a href="http://www.latimes.com/news/nationworld/world/la-fg-china-elite-farm-20110917,0,7521747,full.story">In China, what you eat tells who you are</a><br>In a country stricken with food scandals, the rich and powerful establish their own supplies.</li>
-<li><a href="http://www.independent.co.uk/opinion/commentators/johann-hari/johann-hari-cheap-meat-mrsa-and-deadly-greed-2298567.html">Johann Hari: Cheap meat, <span class="caps">MRSA</span> and deadly greed</a><br>Another article on food safety and once again I don&#8217;t really understand how we as a species seem so keen on wiping ourselves out.</li>
-<li><a href="http://www.economist.com/node/21529062">Flipping the classroom</a><br>How online-based learned tools are changing the classroom.</li>
-<li><a href="http://www.nature.com/news/2011/110822/full/476373a.html">Stand up against the anti-technology terrorists</a><br>In Mexico scientists working in nano-technology and related fields are apparently becoming targets for letter/package bombs.</li>
-<li><a href="http://www.sciencedaily.com/releases/2011/09/110916152401.htm">Are Genes Our Destiny? Scientists Discover &#8216;Hidden&#8217; Code in <span class="caps">DNA</span> Evolves More Rapidly Than Genetic Code</a><br>Interesting new results on the role of epigenetics.</li>
-<li><a href="http://blogs.reuters.com/felix-salmon/2011/08/23/how-to-get-12-billion-of-gold-to-venezuela/">How to get $12 billion of gold to Venezuela</a><br>This is a bit older, but still interesting. How could Hugo Chavez get all the gold from the UK to Venezuela?</li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/12">&larr; Older</a>
@@ -781,6 +839,10 @@ my new blogging setup.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/08/information-overload-2015-02-08/">Information Overload 2015-02-08</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/01/information-overload-2015-02-01/">Information Overload 2015-02-01</a>
       </li>
     
@@ -794,10 +856,6 @@ my new blogging setup.</p>
     
       <li class="post">
         <a href="/blog/2015/01/06/2014-reading-list/">2014 Reading List</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/13/information-overload-2014-10-12/">Information Overload 2013-12-14</a>
       </li>
     
   </ul>
