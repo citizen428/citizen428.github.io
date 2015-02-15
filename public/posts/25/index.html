@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="As part of Rubylearning&#8217;s current book promotion I&#8217;m reading The Well-Grounded Rubyist by David A. Black. Here are my thoughts on the &hellip;">
+  <meta name="description" content="Today I felt like playing around with unsavory a bit more, which led to some minor improvements: code reorganization: the delicious class got moved &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/15/unsavory-updates/">Unsavory Updates</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-15T00:00:00+07:00" pubdate data-updated="true">Jun 15<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I felt like playing around with <a href="http://github.com/citizen428/unsavory/tree/master">unsavory</a> a bit more, which led to some minor improvements: <br />
+<ul><br />
+<li>code reorganization: the delicious class got moved to a separate file in lib/ and got a new method for easier retrieval of the URLs array</li><br />
+<li>login credentials can now be read from a config file, thus making HighLine optional</li></p>
+</ul>
+<p>Next on my list is packaging this up as a gem so people can simply install it with &#8216;gem install unsavory&#8217;.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -510,60 +550,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/05/03/im-in-your-pi-crunching-your-numbers/">I&#8217;m in Your Pi, Crunching Your Numbers ;-)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-05-03T00:00:00+07:00" pubdate data-updated="true">May 3<sup>rd</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>From <a href="http://rubyquiz.strd6.com/quizzes/202">Ruby Quiz #202</a>:</p>
-<p><em>And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#8217;s solution:</em></p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-<span class='line-number'>4</span><br />
-<span class='line-number'>5</span><br />
-</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;rubygems&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hpricot&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;open-uri&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Hpricot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://www.eveandersson.com/pi/digits/100000&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pre&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inner_html&lt;/span&gt;
-&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p><em>It finishes in less than one second for the entire 100,000 digits!</em></p>
-<p>And no, this wasn&#8217;t a serious submission&#8230; :-)</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/26">&larr; Older</a>
@@ -596,6 +582,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/15/information-overload-2015-02-15/">Information Overload 2015-02-15</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/08/information-overload-2015-02-08/">Information Overload 2015-02-08</a>
       </li>
     
@@ -609,10 +599,6 @@
     
       <li class="post">
         <a href="/blog/2015/01/18/information-overload-2015-01-18/">Information Overload 2015-01-18</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/06/2014-reading-list/">2014 Reading List</a>
       </li>
     
   </ul>

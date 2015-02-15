@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="There&#8217;s a striking similarity between unicorns and good math teachers: both are mythical creatures you really wish existed whereas empirical &hellip;">
+  <meta name="description" content="I generally observed that people tend to bring up the POLS when they find one specific aspect counter-intuitive. For example you sometimes will hear &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,49 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/04/24/ruby-and-the-principle-of-least-surprise/">Ruby and the Principle of Least Surprise</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-24T00:00:00+07:00" pubdate data-updated="true">Apr 24<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I generally observed that people tend to bring up the <span class="caps">POLS</span> when <i>they</i> find one specific aspect counter-intuitive. For example you sometimes will hear people complain about how the &#8220;modulo operator&#8221; (String#% really) is used for formatting strings in Ruby which in their opinion violates the <span class="caps">POLS</span>:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="s2">&quot;%05d&quot;</span> <span class="o">%</span> <span class="mi">123</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="s2">&quot;00123&quot;</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Well, when you start out from the wrong assumption that the percent sign is the &#8220;modulo operator&#8221;, you can only reach wrong conclusions.</p>
+<p>In mathematical textbooks you will generally find &#8216;mod&#8217; used in this context, which is also the operator used in e.g. Haskell. The surprise in this case stems from the assumption that the symbol % is in some way tied to the modulo operation, which it only is in some programming languages (mod, rem, &#92;, remainder, modulo, |~, %% and <span class="caps">IDIV</span> being some other options).</p>
+<p>This is not intended to sound harsh, I just think that whenever you feel Ruby violates the <span class="caps">POLS</span>, it&#8217;s probably a good time to check your own assumptions and find out that for people with a better understanding of the topic at hand, the <span class="caps">POLS</span> most likely did not get violated. Don&#8217;t confuse &#8220;what I would expect&#8221; with &#8220;what the majority of people knowledgeable in a given area find surprising&#8221;. When I traveled in Bulgaria I found it very confusing that people there shake their head for &#8220;yes&#8221; and nod for &#8220;no&#8221;. Turns out all the locals were perfectly fine with it&#8230; ;-)</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -446,43 +489,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/26/opensolaris-cheat-sheet/">OpenSolaris Cheat Sheet</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-26T00:00:00+07:00" pubdate data-updated="true">Jan 26<sup>th</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;ve always been a big fan of the handy little utility <a href="http://cheat.errtheblog.com">cheat</a> and recently became interested in <a href="http://hub.opensolaris.org/bin/view/Main/">OpenSolaris</a> (which btw runs fine on my Thinkpad x200s), so I did the obvious and created an OpenSolaris cheat sheet:</p>
-<p><a href="http://cheat.errtheblog.com/s/open_solaris">http://cheat.errtheblog.com/s/open_solaris</a></p>
-<p>It&#8217;s still missing information regarding <span class="caps">ZFS</span>, but I guess I&#8217;ll eventually add that too. And who knows, maybe I even get motivated enough for a nicely formatted Latex version&#8230;</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/23">&larr; Older</a>
@@ -515,6 +521,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/15/information-overload-2015-02-15/">Information Overload 2015-02-15</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/08/information-overload-2015-02-08/">Information Overload 2015-02-08</a>
       </li>
     
@@ -528,10 +538,6 @@
     
       <li class="post">
         <a href="/blog/2015/01/18/information-overload-2015-01-18/">Information Overload 2015-01-18</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/06/2014-reading-list/">2014 Reading List</a>
       </li>
     
   </ul>

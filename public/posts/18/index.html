@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="What to know before debating type systemsNow that I started to get more into Haskell, I&#8217;m reading up on type systems.
-Kleider machen &hellip;">
+  <meta name="description" content="Fixed point combinators are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +83,58 @@ Kleider machen &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/">Clojure: Deriving the Y Combinator in 7 Stolen Steps</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-14T00:00:00+07:00" pubdate data-updated="true">Dec 14<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/Fixed_point_combinator">Fixed point combinators</a> are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that don&#8217;t explicitly support it. This might be slightly academic, but that doesn&#8217;t make it less fun.</p>
+<p>The most well-known fixed point combinator is probably <a href="http://en.wikipedia.org/wiki/Haskell_Curry">Haskell B. Curry&#8217;s</a> <a href="http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator">Y combinator</a>, which will be the topic of this post. If you read <a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825">The Little Schemer</a> &#8211; which I whole-heartedly recommend doing by the way &#8211; you already implemented it once, but if you are like me chances are you didn&#8217;t entirely get it the first time around. So when I found this nice post on <a href="http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html">Deriving the Y Combinator in 7 Easy Steps</a>, I decided to &#8220;translate&#8221; it from JavaScript to Clojure.</p>
+<p><strong>Step 1</strong></p>
+<p>Let&#8217;s start with a &#8220;classical&#8221; recursive factorial function (while we are at it, I think factorial is a way better example for a fold than for recursion, but everybody seems to do this):<br />
+<script src="https://gist.github.com/741070.js?file=ycombinator-step1.clj"></script></p>
+<p><strong>Step 2</strong></p>
+<p>Now if we wouldn&#8217;t have explicit recursion, what could we do? One solution would be to call a function with itself as an argument, then call this argument with itself as an argument and on and on until the stack blows. Not so useful. To avoid this, we write a <a href="http://en.wikipedia.org/wiki/Higher-order_function">higher-order function</a> which will return a function taking a numeric argument, which will then be used to calculate the factorial:</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step2.clj"></script><p><strong>Step 3</strong></p>
+<p>While the above code works, all that duplicated code is really quite ugly, don&#8217;t you think? Let&#8217;s write a little helper to avoid that (I was too lazy for a proper <a href="http://richhickey.github.com/clojure/clojure.core-api.html#clojure.core/refer-clojure">refer-clojure</a> statement, so I decided to name the helper &#8220;yrecur&#8221; instead of &#8220;recur&#8221;):</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step3.clj"></script><p><strong>Step 4</strong></p>
+<p>This is better, but the double function call in the body of &#8220;fact&#8221; is still kinda ugly. Let&#8217;s hide this within another helper function called &#8220;g&#8221;,  which has to be definied inside the closure of &#8220;f&#8221; in order to be able to call this function:</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step4.clj"></script><p><strong>Step 5</strong></p>
+<p>Now we are getting somewhere! To make our factorial function look almost like the original recursive version, we can factor out some code to a separate wrapper:</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step5.clj"></script><p><strong>Step 6</strong></p>
+<p>Instead of actually binding our helper from step 4 to &#8220;g&#8221;, we just inline it since it&#8217;s only called once anyway:</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step6.clj"></script><p><strong>Step 7</strong></p>
+<p>Last but not least we also inline the wrapper from step 5, et voila, the Y combinator:</p>
+<script src="https://gist.github.com/741070.js?file=ycombinator-step7.clj"></script></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -492,52 +543,6 @@ The life of two brothers in a ghetto somewhere in the Philippine &#8211; violenc
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/10/31/information-overload-2010-10-31/">Information Overload 2010-10-31</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-31T00:00:00+07:00" pubdate data-updated="true">Oct 31<sup>st</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://theferrett.livejournal.com/1534590.html">Designing For Jedi</a><br>On libertarians and the Victorian Era.</li>
-<li><a href="http://www.vancouversun.com/travel/2941610/story.html">Full-body scanners are waste of money, Israeli expert says</a><br>The former chief security officer of Tel Aviv&#8217;s Ben Gurion airport explains why he thinks full-body scanner are a waste of money.</li>
-<li><a href="http://www.zdnet.com.au/sweet-bypass-for-student-finger-scanner-339306878.htm">Sweet bypass for student finger scanner</a><br>Australian school&#8217;s plan to use fingerprint readers to track students&#8217; attendance might be foiled by the good old <a href="http://www.theregister.co.uk/2002/05/16/gummi_bears_defeat_fingerprint_sensors/">gummy bear attack</a>?</li>
-<li><a href="http://primaxstudio.com/stuff/scale_of_universe/">Scale of Universe</a><br>An interactive tool to visualize the scale of the universe from <a href="http://en.wikipedia.org/wiki/Quantum_foam">quantum foam</a> to beyond the observable universe. Mind-boggling!</li>
-<li><a href="http://newsfeed.time.com/2010/10/26/what-a-rotten-world-it-can-be-report-says-three-fourths-of-world-is-corrupt/">What a Rotten World It Can Be: Report Says Three-Fourths of World Is Corrupt</a><br> Transparency International&#8217;s Corruption Perceptions Index 2010 is out, once again with depressing results.</li>
-<li><a href="http://kaleidic.com/2009/composing-j-in-my-mind/">Composing J in my mind</a><br>Also over a year old, this post by <a href="http://twitter.com/#!/kaleidic">@kaleidic</a> on <a href="http://www.jsoftware.com/">J</a> is a good reminder why it&#8217;s such an awesome language that I want to spend more time with.</li>
-<li><a href="http://www.guardian.co.uk/world/2010/oct/25/peter-bossman-first-black-major-eastern-europe-slovenia">Peter Bossman becomes Eastern Europe&#8217;s first black mayor</a><br>After many depressing elections in Europe, it&#8217;s good to have some positive news at last.</li>
-<li><a href="http://www.reversejobapplication.com/">Andrew Horner: The reverse job applicant</a><br>An interesting way to look for a job, good luck to the author!</li>
-<li><a href="http://www.foreignpolicy.com/articles/2010/10/11/think_again_global_aging?page=full">Think Again: Global Aging</a><br>Awesome article on global aging and the reasons for and consequences of demographic shifts.</li>
-<li><a href="http://www.1up.com/news/super-mario-bros-25th-miyamoto">Super Mario Bros.&#8217; 25th: Miyamoto Reveals All</a><br>Happy birthday Super Mario Bros!</li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/19">&larr; Older</a>
@@ -570,6 +575,10 @@ The life of two brothers in a ghetto somewhere in the Philippine &#8211; violenc
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/15/information-overload-2015-02-15/">Information Overload 2015-02-15</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/08/information-overload-2015-02-08/">Information Overload 2015-02-08</a>
       </li>
     
@@ -583,10 +592,6 @@ The life of two brothers in a ghetto somewhere in the Philippine &#8211; violenc
     
       <li class="post">
         <a href="/blog/2015/01/18/information-overload-2015-01-18/">Information Overload 2015-01-18</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/06/2014-reading-list/">2014 Reading List</a>
       </li>
     
   </ul>
