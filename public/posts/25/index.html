@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Today I felt like playing around with unsavory a bit more, which led to some minor improvements: code reorganization: the delicious class got moved &hellip;">
+  <meta name="description" content="Hash.new with a block is a sexy beast: you can specify default hash values and when a key is first used, the value will be calculated and inserted &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/18/quick-and-dirty-lazy-lists-in-ruby/">Quick and Dirty Lazy Lists in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-18T00:00:00+07:00" pubdate data-updated="true">Jun 18<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hash.new with a block is a sexy beast: you can specify default hash values and when a key is first used, the value will be calculated and inserted into the Hash. Based on that behavior I took a couple of minutes to hack together a small proof of concept class for <a href="http://en.wikipedia.org/wiki/Lazy_evaluation">lazy lists</a>:</p>
+<script src="http://gist.github.com/131821.js"></script><p>As I said, this is quick and dirty, especially since you have to pass the entire Hash.new block to LazyList.new right now. Other than that I quite like it though. I know there are at least <a href="http://lazylist.rubyforge.org/">two</a> <a href="http://moonbase.rydia.net/software/lazy.rb/">other</a> lazy list implementations for Ruby, but it seems like both haven&#8217;t been updated in a while and I don&#8217;t particularly like their interfaces. Dunno, if I manage to simplify list definition, I may actually try to develop this into something. Don&#8217;t hold your breath though&#8230;</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -505,51 +541,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/">A TextMate Command for the RubyLearning Forums</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-05-10T00:00:00+07:00" pubdate data-updated="true">May 10<sup>th</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>As we all know posting code to <a href="http://moodle.org/">Moodle</a> (the software that powers <a href="http://rubylearning.org">RubyLearning</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
-<ul>
-<li> take the currently active file</li>
-<li> replace all occurrences of &lt; with the <span class="caps">HTML</span>-entity</li>
-<li> wrap all of that in [code ruby] tags and</li>
-<li> copy it to the clipboard, ready to be pasted into the forums.</li>
-</ul>
-<p>Source:<br />
-<script src="http://gist.github.com/109576.js"></script></p>
-<p>Download:<br />
-<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/26">&larr; Older</a>
@@ -582,6 +573,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/22/information-overload-2015-02-22/">Information Overload 2015-02-22</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/15/information-overload-2015-02-15/">Information Overload 2015-02-15</a>
       </li>
     
@@ -595,10 +590,6 @@
     
       <li class="post">
         <a href="/blog/2015/01/25/information-overload-2015-01-25/">Information Overload 2015-01-25</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/18/information-overload-2015-01-18/">Information Overload 2015-01-18</a>
       </li>
     
   </ul>
