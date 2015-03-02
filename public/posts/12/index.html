@@ -9,7 +9,9 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="This week&#8217;s issue is shorter than usual since I spent 4 days in Helsinki to attend Frozen Rails and then had to prepare my talk for &hellip;">
+  <meta name="description" content="After using Wordpress as my blogging engine
+of choice for over a year (after moving away from S9Y), I decided to switch this site to
+Octopress. Why? &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +85,198 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/26/goodbye-wordpress/">Goodbye Wordpress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-26T21:00:00+07:00" pubdate data-updated="true">Sep 26<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After using <a href="http://wordpress.org/">Wordpress</a> as my blogging engine
+of choice for over a year (after moving away from <a href="http://s9y.org/">S9Y</a>), I decided to switch this site to
+<a href="http://octopress.org/">Octopress</a>. Why? Because it&rsquo;s cool!
+No, seriously. I was actually quite happy with WP, it just always felt
+like way more than I actually needed. OP on the other hand is super
+lightweight, ritten in Ruby and uses some of my favorite technologies,
+like Sinatra and Markdown. It doesn&rsquo;t stop there though: having the site rendered to static
+files means I can get rid of MySQL and PHP on my little VPS, which
+definitely is a plus. And it&rsquo;s also very cool to have all your posts
+in a directory on your local file system, so you can use all your
+favorite command line tools to search through or batch modify
+them. Last but not least I&rsquo;m now writing my posts in Emacs instead of
+some crappy web input form (ok, granted, I could have done that before
+too).</p>
+
+<p>Now to the actual migration. I started by exporting my WP blog to
+XML. This can be done in the administration backend under &ldquo;Tools &ndash;
+Export&rdquo;. Once I had this XML, I used the following script to convert
+the posts to individual files for Octopress:</p>
+
+<div><script src='https://gist.github.com/1240781.js'></script>
+<noscript><pre><code>require &#39;fileutils&#39;
+require &#39;date&#39;
+require &#39;yaml&#39;
+require &#39;rexml/document&#39;
+
+include REXML
+
+doc = Document.new(File.new(ARGV[0]))
+
+FileUtils.mkdir_p &quot;_posts&quot;
+
+doc.elements.each(&quot;rss/channel/item[wp:status = &#39;publish&#39; and wp:post_type = &#39;post&#39;]&quot;) do |e|
+  p e.elements[&#39;wp:post_name&#39;].text
+  post = e.elements
+  slug = post[&#39;wp:post_name&#39;].text
+  date = DateTime.parse(post[&#39;wp:post_date&#39;].text)
+  name = &quot;%02d-%02d-%02d-%s.textile&quot; % [date.year, date.month, date.day, slug]
+  date_string = &quot;#{date.year}-#{date.month}-#{date.day}&quot;
+
+  # convert all tags and categories into categories
+  categories = []
+  post.each(&#39;category&#39;) do |cat|
+    categories &lt;&lt; cat.text
+  end
+
+  content = post[&#39;content:encoded&#39;].text.encode(&quot;UTF-8&quot;)
+
+  # convert &lt;code&gt;&lt;/code&gt; blocks to {% codeblock %}{% encodebloc %}
+  #content = content.gsub(/&lt;code&gt;(.*?)&lt;\/code&gt;/, &#39;`\1`&#39;)
+  content = content.gsub(/&lt;code&gt;/, &#39;{% codeblock %}&#39;)
+  content = content.gsub(/&lt;\/code&gt;/, &#39;{% endcodeblock %}&#39;)
+
+  # convert &lt;pre&gt;&lt;/pre&gt; blocks to {% codeblock %}{% encodebloc %}
+  #content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;(.*?)&lt;\/pre&gt;/m, &#39;`\1`&#39;)
+  content = content.gsub(/&lt;pre&gt;/, &#39;{% codeblock %}&#39;)
+  content = content.gsub(/&lt;pre lang=&quot;([^&quot;]*)&quot;&gt;/, &#39;{% codeblock %}&#39;)
+  content = content.gsub(/&lt;\/pre&gt;/m, &#39;{% endcodeblock %}&#39;)
+
+  # convert headers
+  (1..3).each do |i|
+    content = content.gsub(/&lt;h#{i}&gt;([^&lt;]*)&lt;\/h#{i}&gt;/, (&#39;#&#39;*i) + &#39; \1&#39;)
+  end
+
+  puts &quot;Converting: #{name}&quot;
+
+  data = {
+    &#39;layout&#39; =&gt; &#39;post&#39;,
+    &#39;title&#39; =&gt; post[&#39;title&#39;].text,
+    &#39;date&#39; =&gt; date_string,
+    &#39;comments&#39; =&gt; true,
+    &#39;categories&#39; =&gt; categories,
+  }.delete_if { |k,v| v.nil? || v == &#39;&#39;}.to_yaml
+
+  File.open(&quot;_posts/#{name}&quot;, &quot;w&quot;) do |f|
+    f.puts data
+    f.puts &quot;---&quot;
+    f.puts content
+  end
+
+end
+</code></pre></noscript></div>
+
+
+<p>This was a fork of
+<a href="https://gist.github.com/1240781/ac8a139bf73232c4333f0cc5734151cf8e5d1f87">another script</a>,
+but tailored for my specific needs (e.g. all tags and categories of a
+post were converted to categories and I exported the files to Textile
+instead of Markdown because I used the former in my WP install through
+a plugin).</p>
+
+<p>Since some of my posts are quite popular and get linked to a lot, I
+didn&rsquo;t want to loose my old links. I therefore wrote another script
+that created 301 redirects for all of them:</p>
+
+<div><script src='https://gist.github.com/1241762.js'></script>
+<noscript><pre><code>require &#39;date&#39;
+require &#39;rexml/document&#39;
+
+include REXML
+
+doc = Document.new(File.new(ARGV[0]))
+format = ARGV[1] || &quot;apache&quot;
+
+formats = {
+  :apache =&gt; &quot;RewriteRule ^%s$ /%s [R=301,L]&quot;,
+  :nginx =&gt; &quot;rewrite ^%s /%s permanent;&quot;
+}
+
+File.open(&quot;redirects.txt&quot;, &quot;w&quot;) do |f|
+  doc.elements.each(&quot;rss/channel/item[wp:status = &#39;publish&#39; and wp:post_type = &#39;post&#39;]&quot;) do |e|
+    post = e.elements
+    date = DateTime.parse(post[&#39;wp:post_date&#39;].text)
+    slug = post[&#39;wp:post_name&#39;].text
+
+    post[&#39;link&#39;].text =~ %r{.*(/archives/\d+)}
+    old_url = $1
+    new_url = &quot;blog/#{date.strftime(&quot;%Y/%m/%d&quot;)}/#{slug}/&quot;
+
+    f.puts formats[format.intern] % [old_url, new_url]
+  end
+end
+</code></pre></noscript></div>
+
+
+<p>The script can generate the necessary directives for Apache or Nginx,
+so all you have to do is copy them into your web server
+configuration. I also added another redirect rule for the RSS feed to
+not annoy my subscribers:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RewriteRule ^/feed /atom.xml [R=301,L]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Of course I also didn&rsquo;t want to loose all my comments, so I had to
+come up with a solution for that. I first
+installed the WP <a href="http://disqus.com">Disqus</a> plugin and exported all
+my current comments. I then used some good old Emacs magic to convert
+the list of redirects I had already generated to a CSV for Disqus&#8217;
+<a href="http://docs.disqus.com/help/39/">URL map migration tool</a>. So far this
+has not migrated all comments to the correct location, but it should
+eventually work out (worst case I&rsquo;ll have to email Disqus support).</p>
+
+<p>Last but not least I used Octopress&#8217; excellent
+<a href="http://octopress.org/docs/theme/template/index.html">customization suport</a>
+to re-add some stuff to my headers, like the OpenID delegate.</p>
+
+<p>Of course there are still some things that need to be done, some of them more urgently
+then others. First off this site needs a better stylesheet. The
+default is actually quite ok, but I want something with more
+personality. I&rsquo;ll also have to go through my old posts and clean them
+up a bit, the automatic conversion did some funny things at
+times. I also want to re-integrate Flattr and PostRank, but I&rsquo;m not
+exactly in a hurry when it comes to that.</p>
+
+<p>I hope this post was useful to some of you, I&rsquo;m definitely happy with
+my new blogging setup.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -493,52 +687,6 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/08/21/information-overload-2011-08-21/">Information Overload 2011-08-21</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-21T00:00:00+07:00" pubdate data-updated="true">Aug 21<sup>st</sup>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.telegraph.co.uk/culture/film/8681025/Saddams-demon-seed.html">Saddam&#8217;s demon seed</a><br>Latif Yahia was forced to work as Uday Hussein&#8217;s (Saddam&#8217;s son) body double, now a movie has been made about his life.</li>
-<li><a href="http://www.hrw.org/news/2011/08/14/indonesia-military-documents-reveal-unlawful-spying-papua">Indonesia: Military Documents Reveal Unlawful Spying in Papua</a><br>Lately I&#8217;ve been quite interested in Indonesia, not least because it&#8217;s a place people don&#8217;t tend to talk about too much, which is kinda odd considering it&#8217;s the 4th biggest country in the world.</li>
-<li><a href="http://zachholman.com/posts/how-github-works-hours/">How GitHub Works: Hours are Bullshit</a><br>A 3 part series of blog posts explaining how GitHub works. This is not about technical stuff, but about working hours, internal communications and so on (<a href="http://zachholman.com/posts/how-github-works-asynchronous/">part 2</a>, <a href="http://zachholman.com/posts/how-github-works-creativity/">part 3</a>).</li>
-<li><a href="http://thegazette.com/2011/08/15/for-first-time-more-corn-to-be-used-for-ethanol-than-livestock/">For first time, more corn used for ethanol than livestock</a><br>While food prices rise and people are starving, more corn is used for ethanol than for feeding animals (and we are not even talking feeding people here).</li>
-<li><a href="http://www.hanselman.com/blog/ImAPhonyAreYou.aspx">I&#8217;m a phony. Are you?</a><br>I too noticed this lack of self-confidence in a lot of IT people and occasionally myself. Do you have any experience with it?</li>
-<li><a href="http://www.economist.com/node/21525851">Don&#8217;t look down</a><br>I&#8217;m always surprised by how many people adhere to the &#8220;as long as someone is worth of than me&#8221; principle.</li>
-<li><a href="http://articles.cnn.com/2011-08-17/tech/finishing.videogames.snow_1_red-dead-redemption-entertainment-software-association-avid-gamers?_s=PM:TECH">Why most people don&#8217;t finish video games</a><br>I barely play video games anymore, but when I do I also prefer short and/or multiplayer ones.</li>
-<li><a href="http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html" title="AES">A Stick Figure Guide to the Advanced Encryption Standard</a><br>Awesome post explaining crypto to the non-techies out there. In related news, a <a href="http://www.net-security.org/secworld.php?id=11474">new potential weakness</a> in <span class="caps">AES</span> as found this week.</li>
-<li><a href="http://www.businessinsider.com/karl-marx-is-hot-2011-8">Karl Marx Is Hot</a><br>When US economists start quoting Marx, I start wondering if the global economy is really screwed?</li>
-<li><a href="http://inhabitat.com/13-year-old-makes-solar-power-breakthrough-by-harnessing-the-fibonacci-sequence/">13-Year-Old Makes Solar Power Breakthrough by Harnessing the Fibonacci Sequence</a><br>A young boy looks at nature, sees a pattern and turns it into something useful. Here&#8217;s an <a href="http://www.amnh.org/nationalcenter/youngnaturalistawards/2011/aidan.html">essay</a></li> <p>he wrote for the Young Naturalist Award. Or maybe this all was a hoax, at least according to one <a href="http://webcache.googleusercontent.com/search?q=cache:JmlMNqVPKlsJ:uvdiv.blogspot.com/2011/08/solar-panel-trees-really-are-inferior.html+http://uvdiv.blogspot.com/2011/08/solar-panel-trees-really-are-inferior.html&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us">removed post on Blogger</a>.</p>
-</ul></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/13">&larr; Older</a>
@@ -571,6 +719,10 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/01/information-overload-2015-03-01/">Information Overload 2015-03-01</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/22/information-overload-2015-02-22/">Information Overload 2015-02-22</a>
       </li>
     
@@ -584,10 +736,6 @@ No9, <span class="caps">MAGAZIN</span>, Lust Gallery<br />
     
       <li class="post">
         <a href="/blog/2015/02/01/information-overload-2015-02-01/">Information Overload 2015-02-01</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/25/information-overload-2015-01-25/">Information Overload 2015-01-25</a>
       </li>
     
   </ul>
