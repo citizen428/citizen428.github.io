@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Note: I&rsquo;ll probably be too busy this upcoming week, so don&rsquo;t expect an Information Overload next Sunday. Dowling Duncan redesign the US &hellip;">
+  <meta name="description" content="Remember how I said there probably won&rsquo;t be an Information Overload this week? Turns out I was wrong :&ndash;) Burma ends advance press &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,54 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/26/information-overload-2012-08-26/">Information Overload 2012-08-26</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-26T00:00:00+07:00" pubdate data-updated="true">Aug 26<sup>th</sup>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Remember how I said there probably won&rsquo;t be an Information Overload this week? Turns out I was wrong :&ndash;)</p>
+
+<ul>
+<li><a href="http://www.guardian.co.uk/world/2012/aug/20/burma-ends-advance-press-censorship">Burma ends advance press censorship</a><br>This seems like a step in the right direction, let&rsquo;s hope it stays this way.</li>
+<li><a href="http://www.businessweek.com/news/2012-08-12/imf-says-bailouts-iceland-style-hold-lessons-for-crisis-nations">IMF Says Bailouts Iceland-Style Hold Lessons in Crisis Times</a><br>How Icenland recovered the economic crisis.</li>
+<li><a href="http://techcrunch.com/2012/08/23/indias-sms-hoax-panic-could-it-happen-in-the-u-s/">India’s SMS Hoax Panic: Could It Happen In The U.S.?</a><br>With the ubiquity of social media and text messages, this should be fairly easy to replicate anywhere.</li>
+<li><a href="http://apple.copydesk.org/2012/08/25/keep-in-mind-as-you-put-together-your-neil-armstrong-packages-tonight/">Keep in mind as you put together your Neil Armstrong packages tonight…</a><br>RIP Neil Armstrong!</li>
+<li><a href="http://techcrunch.com/2012/08/25/5-design-tricks-facebook-uses-to-affect-your-privacy-decisions/">5 Design Tricks Facebook Uses To Affect Your Privacy Decisions</a><br>Anyone surprised by this? No? Thought so.</li>
+<li><a href="http://www.theiacp.org/About/Governance/Divisions/StateAssociationsofChiefsofPoliceSACOP/CurrentSACOPProjects/MissingAlzheimersDiseasePatientInitiative/AlzheimersSuccessStory/tabid/1007/Default.aspx?id=1665">Fake Bus Stops for Alzheimer&rsquo;s Patients in Germany</a><br>I guess this qualifies as a mind hack.</li>
+<li><a href="http://www.scientificamerican.com/article.cfm?id=your-scientific-reasoning-more-flawed-than-you-think">Your Scientific Reasoning Is More Flawed Than You Think</a><br>Even scientifically minded peopel fall back to childhood ideas about how the world works.</li>
+<li><a href="http://www.nytimes.com/2012/08/26/sunday-review/how-long-do-you-want-to-live.html">How Long Do You Want to Live?</a><br>An interesting question to pose in light of ever-increasing life expectancy.</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -539,56 +587,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/03/shenanigans/">Shenanigans</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-03T19:46:00+07:00" pubdate data-updated="true">Jul 3<sup>rd</sup>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>About 1.5 month ago I finally packaged some of my Ruby extension methods into the aptly named <a href="https://rubygems.org/gems/shenanigans">Shenanigans</a> gem. It&rsquo;s similar to <a href="http://rubyworks.github.com/facets/">Facets</a> or <a href="http://as.rubyonrails.org/">ActiveSupport</a>, but probably less useful to most people. Also some of the methods actually are in Facets, although sometimes with different names or slightly different semantics. Anyway, since some people told me they actually do like the gem, here&rsquo;s a quick summary of what the different methods do and how they can be useful.</p>
-
-<ul>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:%5E">Array#^</a>: Ruby defines <a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/set/rdoc/Set.html#method-i-5E">Set#^</a>, which returns the elements exclusive between the set and a given enum. Since a lot of people use arrays instead of proper sets in Ruby, I found it makes a nice addition to <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-7C">Array#|</a> and <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-26">Array#&amp;</a>.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:random_subarray">Array#random_subarray</a>: Generates one or more random subarrays of an array, using the fact that Ruby can index integers to get the bit values to ensure fast uniform distributions. Similar to <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-sample">Array#sample</a>, but can generate several subarrays at once.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:zip_with">Array#zip_with</a>: The more general form of <code>zip</code> (e.g. in Haskell you could define <code>zip = zipWith (,)</code>). Like Ruby&rsquo;s <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject">Enumerable#inject</a> it can take a symbol argument or a block, and like Haskell&rsquo;s <code>zip</code> it discards excess array elements if one list is shorter than the other, whereas Ruby&rsquo;s <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-zip">Array#zip</a> only does that if the receiver is shorter than the argument (it adds <code>nil</code>s in the other case).</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Hash:has_shape%3F">Hash#has_shape?</a>: A quick way to check if a hash&rsquo;s keys are of certain classes. This does feel a bit strange in a duck-typed language like Ruby, but someone asked for it on StackOverflow and it was easy enough to write. This could be useful in validations or unit tests though.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Hash:to_ostruct">Hash#to_ostruct</a>: I really like the <a href="https://github.com/railsjedi/rails_config">rails_config</a> gem. I therefore decided to write something that gives me similar functionality (although a lot simpler) for plain Ruby projects. Basically this recursively converts a hash and all nested hashes into <a href="http://ruby-doc.org/stdlib-1.9.3/libdoc/ostruct/rdoc/OpenStruct.html">OpenStruct</a> instances. Populate the hash with Ruby&rsquo;s <a href="http://corelib.rubyonrails.org/classes/YAML.html">YAML</a> support and you have an instant settings object.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:fn">Kernel#fn</a>: I admit, this was more of a &ldquo;because I can&rdquo; method. Originally I wrote this so I could compose blocks in <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a>, but later added support for <a href="http://www.ruby-doc.org/core-1.9.3/Proc.html">Proc</a> instances too.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:prompt">Kernel#prompt</a>: While it&rsquo;s great that Ruby&rsquo;s <a href="http://www.ruby-doc.org/core-1.9.3/IO.html#method-i-gets">IO#gets</a> is so general, I always wanted something like Python&rsquo;s <a href="http://docs.python.org/library/functions.html#raw_input">raw_input</a> for command line apps. Additionally you can also automatically call any of the numeric conversions, and I&rsquo;m pondering adding support for every unary string method.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:with">Kernel#with</a>: I think <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> is great. However, I sometimes see it used as a replacement for <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject">Enumerable#inject</a> or <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_with_object">Enumerable#each_with_object</a>, but for some reason I never really liked the semantics of it. And since I&rsquo;m anal about that sort of thing I added this Pascal/ActionScript like <code>with</code> statement.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Object:display">Object#display</a>: Having no proper object-oriented way to print objects in Ruby always kinda bothered me, so I abused <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> as a wrapper around <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html#method-i-puts">Kernel#puts</a> and <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html#method-i-print">Kernel#print</a>. Additionally this is aliased to the name <code>d</code>, which I stole from <a href="https://github.com/janlelis/irbtools">irbtools</a>. The latter form makes it great for debugging method chains and the likes.</p></li>
-<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Object:it">Object#it</a>: I always disliked blocks of the form <code>{ |x| x }</code> that sometimes crop up when using  <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-group_by">Enumerable#group_by</a> or similar methods. Since Ruby lacks an identity method and <code>id</code> has historically been taken, I decided to name it <code>it</code>.</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/6">&larr; Older</a>
@@ -621,6 +619,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/08/information-overload-2015-03-08/">Information Overload 2015-03-08</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/01/information-overload-2015-03-01/">Information Overload 2015-03-01</a>
       </li>
     
@@ -634,10 +636,6 @@
     
       <li class="post">
         <a href="/blog/2015/02/08/information-overload-2015-02-08/">Information Overload 2015-02-08</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/01/information-overload-2015-02-01/">Information Overload 2015-02-01</a>
       </li>
     
   </ul>

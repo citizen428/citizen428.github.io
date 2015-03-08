@@ -9,8 +9,8 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Steve Rogers aka Captain America has died in Marvel&#8217;s recent Civil War story line.
-Although he never was among my favorite comic heroes, you &hellip;">
+  <meta name="description" content="Today at work we needed to find a regular expression to extract the name of a backup job from an SNMP trap. The trap looks as follows:
+&#8220;[ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +84,46 @@ Although he never was among my favorite comic heroes, you &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/04/05/regex-madness/">RegEx Madness</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-04-05T00:00:00+07:00" pubdate data-updated="true">Apr 5<sup>th</sup>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today at work we needed to find a regular expression to extract the name of a backup job from an <span class="caps">SNMP</span> trap. The trap looks as follows:</p>
+<p>&#8220;[beginning garbage]job name[more garbage]&#8221;</p>
+<p>The job name can consist of several words containing alphanumeric characters, separated by either a space, an underscore or a dash. Here&#8217;s the crucial part of the final solution I came up with:</p>
+<p><b>((?:&#92;w+[- ]?)<strong>&#92;w</strong>)</b></p>
+<p>When you use this in a longer regex that also filters out the beginning garbage, this works like a charm even for strange job names as &#8220;foo-bar_baz qux_ madness&#8221;.</p>
+<p>Setting Orange, Discord 22, 3173 <span class="caps">YOLD</span></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -437,42 +477,6 @@ Since I took that day off, I finally managed to get some sleep. I wasn&#8217;t a
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/01/25/summer-chaos/">Summer Chaos</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-01-25T00:00:00+07:00" pubdate data-updated="true">Jan 25<sup>th</sup>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The date and location for the <a href="http://events.ccc.de/camp/">Chaos Communication Camp 2007</a> have now been confirmed! Hope to see you all there!</p>
-<p>Setting Orange, Chaos 25, 3173 <span class="caps">YOLD</span></p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/32">&larr; Older</a>
@@ -505,6 +509,10 @@ Since I took that day off, I finally managed to get some sleep. I wasn&#8217;t a
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/08/information-overload-2015-03-08/">Information Overload 2015-03-08</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/01/information-overload-2015-03-01/">Information Overload 2015-03-01</a>
       </li>
     
@@ -518,10 +526,6 @@ Since I took that day off, I finally managed to get some sleep. I wasn&#8217;t a
     
       <li class="post">
         <a href="/blog/2015/02/08/information-overload-2015-02-08/">Information Overload 2015-02-08</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/01/information-overload-2015-02-01/">Information Overload 2015-02-01</a>
       </li>
     
   </ul>

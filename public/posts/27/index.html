@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Adjust to your liking. :)">
+  <meta name="description" content="RubyLearning just had a nice one week introductory course on Sinatra, a DSL for easily creating web applications. The next batch will start on May &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,44 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/25/my-way-ruby-sinatra-heroku/">My Way: Ruby, Sinatra, Heroku</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-25T00:00:00+07:00" pubdate data-updated="true">Mar 25<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://rubylearning.org">RubyLearning</a> just had a nice one week introductory course on <a href="http://www.sinatrarb.com/">Sinatra</a>, a <a href="http://en.wikipedia.org/wiki/Domain-specific_programming_language"><span class="caps">DSL</span></a> for easily creating web applications. The next batch will start on May 2nd (and I&#8217;ll probably be around as a mentor again), you can <a href="http://rubylearning.org/class/course/enrol.php?id=32">join here</a> if you are interested.</p>
+<p>Anyway, since it&#8217;s so easy to write applications with Sinatra, you probably don&#8217;t want to waste time deploying them. That&#8217;s where <a href="http://heroku.com/">Heroku</a> comes into play, a Ruby hosting platform which modeled it&#8217;s workflow around <a href="http://git-scm.com/">git</a>. In my &#8211; still somewhat limited &#8211; experience working with Heroku is painless and feels very natural, kudos to the team for providing us with such a nice option for hosting <a href="http://rack.rubyforge.org/">Rack</a> based apps! In fact I liked Heroku so much, that I wrote a patch for <a href="http://quirkey.com/">Aaron Quint</a>&#8216;s <a href="http://github.com/quirkey/sinatra-gen/tree/master">sinatra-gen</a> which will initialize git and create your app on Heroku for you. It&#8217;s not in the main branch yet, but Aaron said he likes the idea and that he will include it. Up until then you can get my version from <a href="http://github.com/citizen428/sinatra-gen/tree/master">here</a>.</p>
+<p><em>Update: Said patch &#8211; in slightly modified form &#8211; is now part of mainline sinatra-gen, so I recommend getting the &#8220;official&#8221; version, not mine.</em></p>
+<p>Oh yeah, once you are done creating all this shiny new webapps in Sinatra, don&#8217;t forget to take some snapshots of them with <a href="http://github.com/jurisgalang/snapurl/tree/master">snapurl</a>, another nifty little app I recently wrote a small patch for.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -470,42 +508,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/02/06/zber-fubrf/">Zber Fubrf!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-02-06T00:00:00+07:00" pubdate data-updated="true">Feb 6<sup>th</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Playing with <a href="http://shoooes.net/">Shoes</a> is kinda addictive, so I wrote my <a href="http://the-shoebox.org/apps/131">third little app</a> for the <a href="http://the-shoebox.org/">Shoebox</a>. This little experiment does <a href="http://en.wikipedia.org/wiki/ROT13">ROT13</a> which in itself is lame, but it was a good way to see how to read from and write to the system clipboard. Altogether this has 20 lines of code, of which 4 only consist of the word &#8220;end&#8221;, so I think Shoes really succeeded in providing us with a tiny and easy to use cross-platform toolkit :)</p>
-<p><em>Hint: If you don&#8217;t understand the title of this blog post, the little app mentioned above might be helpful&#8230;</em></p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/28">&larr; Older</a>
@@ -538,6 +540,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/08/information-overload-2015-03-08/">Information Overload 2015-03-08</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/01/information-overload-2015-03-01/">Information Overload 2015-03-01</a>
       </li>
     
@@ -551,10 +557,6 @@
     
       <li class="post">
         <a href="/blog/2015/02/08/information-overload-2015-02-08/">Information Overload 2015-02-08</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/01/information-overload-2015-02-01/">Information Overload 2015-02-01</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-03-02T10:27:50+07:00</updated>
+  <updated>2015-03-08T16:17:39+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2015-03-08]]></title>
+    <link href="http://www.citizen428.net/blog/2015/03/08/information-overload-2015-03-08/"/>
+    <updated>2015-03-08T00:00:00+07:00</updated>
+    <id>http://www.citizen428.net/blog/2015/03/08/information-overload-2015-03-08</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.newyorker.com/science/maria-konnikova/moral-mornings">No, Mornings Don’t Make You Moral</a><br>
+Luckily my job allows me to at least somewhat live my night owl tendencies.</li>
+<li><a href="http://uk.businessinsider.com/what-is-blue-and-how-do-we-see-color-2015-2">No one could see the color blue until modern times</a><br>
+While the title is borderline click bait, the actual article is very interesting.</li>
+<li><a href="http://derstandard.at/2000012314398/Pepe-Mujica-Vielleicht-bin-ich-ein-wenig-Anarchist">Pepe Mujica: &ldquo;Vielleicht bin ich ein wenig Anarchist&rdquo;</a><br>
+Nice interview (in German).</li>
+<li><a href="http://www.thoughtcrime.org/blog/gpg-and-me/">GPG And Me</a><br>
+While the actual blog post is a bit weak, the comments have some good discussions.</li>
+<li><a href="http://thediplomat.com/2015/03/araujos-vision-for-east-timor/">Araújo’s Vision for East Timor</a><br>
+Sometimes you also have to talk about the &ldquo;forgotten&rdquo; countries.</li>
+<li><a href="http://www.bbc.com/news/world-latin-america-29356232">Brazil releases &lsquo;good&rsquo; mosquitoes to fight dengue fever</a><br>
+This sounds like it could be a major step in the fight against dengue!</li>
+<li><a href="http://sea-globe.com/davao-philippines-tom-sykes-duterte-southeast-asia-globe/">The Punisher&rsquo;s Paradise</a><br>
+&ldquo;The state calls its own violence law, but that of the individual, crime.&rdquo; — Max Stirner.</li>
+<li><a href="http://www.salon.com/2015/03/05/i_found_myself_turning_into_an_idiot_david_graeber_explains_the_life_sapping_reality_of_bureaucratic_life/">“I found myself turning into an idiot!”: David Graeber explains the life-sapping reality of bureaucratic life</a><br>
+Interesting interview.</li>
+<li><a href="http://fivethirtyeight.com/features/in-the-end-people-may-really-just-want-to-date-themselves/">In the End, People May Really Just Want to Date Themselves</a><br>
+At least according to statistics done with data from various popular online dating sites.</li>
+<li><a href="http://news.nationalgeographic.com/2015/03/150302-honduras-lost-city-monkey-god-maya-ancient-archaeology/">Exclusive: Lost City Discovered in the Honduran Rain Forest</a><br>
+There may be remnats of a whole lost civilization, but they are threatened by greed.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-03-01]]></title>
@@ -1179,23 +1210,6 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
 <h2>Summary</h2>
 
 <p>Nmap is a popular tool for security and network professionals around the world, and its excellent scripting capabilities make it very versatile. The Nmap Scripting Engine relies on the popular and easy to learn Lua programming language, and provides useful libraries for quickly and efficiently developing your own custom scripts, which can then be shared with the wider Nmap user community.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[¡Viva Mexico!]]></title>
-    <link href="http://www.citizen428.net/blog/2013/07/27/viva-mexico/"/>
-    <updated>2013-07-27T20:04:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2013/07/27/viva-mexico</id>
-    <content type="html"><![CDATA[<p>Oh man, this is one overdue post. I wanted to write about Mexico forever, but then we were traveling in Taiwan, and suddenly the whole Latin America experience just seemed so far away already&hellip; Anyway, we are now in Vietnam (Hanoi to be more specific), so I thought I&rsquo;d finally sit down and write up my impressions.</p>
-
-<p>Mexico was one of the places I wanted to visit for a long time, so before we went, I was a bit nervous that it may not live up to my expectations. But not only did it do that, it actually far exceeded them! There are fantastic things to see, the food is exceptionally good (also for vegetarians) and the people amazingly friendly. Also it felt like a really safe and easy place to travel: as opposed to big parts of South America the security situation in Mexico is pretty relaxed, even though stuff does of course happen. On top of that there are good roads everywhere and ADO is a very nice bus company, so we generally didn&rsquo;t dread moving from A to B. With that said it&rsquo;s quite unfortunate we only had 4 weeks there, but we had booked the flight to Taiwan beforehand in order to avoid getting stuck in the Americas for all of our trip. Turns out that was a good idea, because Mexico alone could easily have kept me entertained for several more month.</p>
-
-<p>Our trip started in Tulum, which features a beautiful beach and a cute little set of ruins. Unfortunately Chaak (the Mayan rain god) wasn&rsquo;t on our side, so we only managed to get one and a half proper beach days. On the upside we got to taste tons of good food and also explore the nearby ruins of Coba. We then went to lovely Valladolid and the ruins of Ek Balam, both of which are a bit overlooked by tourists (or just crammed in on day tours). I&rsquo;m glad we stayed there, a super relaxed little town, and the ruins were among my favorites in Mexico. Next stop was Merida, which is a decent place in itself, but also the gateway to the ruins of Uxmal. A decent place, but slightly tainted by the memory of annoyingly obnoxious hostel neighbors. If you&rsquo;ve been to Mexico before and wonder, yes, we did in fact skip Chichen Itza. Based on the feedback of people we met, it really did not seem worth the effort in time and money. Instead we decided to give another little and often overlooked town a chance, and I&rsquo;m definitely happy that we went to Campeche. Quiet, with a small but pretty old town and very down to earth, this is the sort of place I really came to enjoy on this journey, and not only for the lack of a specific type of backpacker I detest. After this brief stop we went on to Palenque, a set of ruins I had heard lots about, and which I found to be a bit disappointing. Letting vendors onto the premises really doesn&rsquo;t add to the atmosphere, even if they don&rsquo;t hassle you&hellip; At least the setting of our hostel was very scenic, in that small cluster of hostels right at the beginning of the national park. The next stop was one of my absolute favorites, San Cristobal de las Casas where we ended up staying almost twice as long as we originally planned. True, it&rsquo;s small, but thanks to several cultural centers there&rsquo;s a surprising lot to do in town. It&rsquo;s also Zapatista heartland, so if you have any interest in the EZLN, this is THE place to be. Our trip to the coast around Puerto Escondido got canceled due to a hurricane, so we went straight to Oaxaca instead, which was also quite nice. Unfortunately P. got sick, so I mostly explored it by myself including a Mezcal factory, a petrified waterfall, and of course more ruins. Last but certainly not least was the D.F. (Distrito Federal), more commonly know as Mexico City outside of the country. You have to understand that I wanted to visit this city since my elementary school days, when I first heard that it&rsquo;s the biggest in the world. It may not be anymore, but it&rsquo;s still one of the most interesting places I ever visited. It&rsquo;s hard to put the city into words, but it has everything: the old, the new, the very poor, the super rich. It&rsquo;s a giant, it&rsquo;s a moloch, and yet, it&rsquo;s lovely. While not all of it is pretty, the parts that are, really are. When you walk into Coyoacan or San Angel for the first time, it&rsquo;s hard to believe that they are part of Mexico City at all. And given the size of the place, it&rsquo;s incredibly how friendly and helpful most of the people still are. BTW, thanks again for dinner and a great chat Hector! It&rsquo;s hard to put Mexico City into words, you better go there yourself!</p>
-
-<p>No post about Mexico could be complete without a separate mention of the food. I always considered Mexican cuisine to be one of my favorites, but I wasn&rsquo;t sure how authentic it was. Turns out that the things we know like tacos, burritos, quesadillas, enchilladas, fajitas, and guacamole traveled rather well to Europe, although unfortunately we can&rsquo;t find them at tasty little street stalls where they are almost ridiculously cheap at times. But there&rsquo;s just so much more: sope, gorditas, molletes, tortas, papadzules, brazo de reina, tlayudas, and a ton of delicious things I can&rsquo;t remember the name of. Just writing about it now makes we want to go back right away&hellip;</p>
-
-<p>Mexico definitely was one of the highlights of this trip for me (actually of all my travels so far), I&rsquo;d instantly go back.</p>
 ]]></content>
   </entry>
   
