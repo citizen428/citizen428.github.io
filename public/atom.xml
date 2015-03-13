@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-03-08T16:17:39+07:00</updated>
+  <updated>2015-03-13T23:48:18+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Programming Elixir]]></title>
+    <link href="http://www.citizen428.net/blog/2015/03/13/review-programming-elixir/"/>
+    <updated>2015-03-13T22:32:51+07:00</updated>
+    <id>http://www.citizen428.net/blog/2015/03/13/review-programming-elixir</id>
+    <content type="html"><![CDATA[<p><em><strong>Disclaimer</strong>: The good folks at <a href="https://pragprog.com/">The Pragmatic Bookshelf</a> were nice enough to provide me with a free copy of this book, but this has no influence on the contents of the review.</em></p>
+
+<p>My first contact with Dave Thomas was the famous &ldquo;<a href="https://pragprog.com/book/ruby/programming-ruby">Pickaxe book</a>&rdquo; for Ruby. It wasn&rsquo;t my first contact with the language, but it certainly helped in deepening my understanding of it. It&rsquo;s a great book, and I went back numerous times to re-read certain chapters. I already had a crush on Ruby, but &ldquo;the Pickaxe&rdquo; helped turning that into a solid and lasting love affair.</p>
+
+<p>Fast-forward some years. While I still love Ruby and work with it professionally, I have to admit to having a new language crush: <a href="http://elixir-lang.org/">Elixir</a>. I&rsquo;ve been interested in Erlang for several years, read some books, dabbled a bit, but never really got into the language. Elixir however got me hooked almost from the get-go. I find it&rsquo;s a simple, elegant language, that&rsquo;s easy to pick up, but has quite some depth.</p>
+
+<h3>The book</h3>
+
+<p>Let&rsquo;s start off by clearly stating what this book is not: a reference. It weighs in at around 340 pages and does not try to cover every aspect of Elixir/Erlang. It still is one of my all-time favorite programming books though. Why? Because I believe it does an amazing job in conveying the &ldquo;essence&rdquo; of Elixir. There&rsquo;s no point in documenting APIs, the language has <a href="http://elixir-lang.org/docs.html">great documentation online</a>. Instead Dave tries to teach the reader how to think in Elixir.</p>
+
+<p>&ldquo;Programming Elixir&rdquo; has three main parts. The first called &ldquo;Conventional Programming&rdquo; introduces some core concepts like pattern matching and immutability, before covering Elixir types, functions, modules, language constructs, and project organization. It&rsquo;s easy to read, but not too boring for seasoned developers. However, if you have some previous experience with Elixir, Erlang, or even some other functional programming language you may end up skimming this section a bit, at least I did.</p>
+
+<p>Where it starts to get really interesting is the next part called &ldquo;Concurrent Programming&rdquo;, which covers processes, nodes and the basics of OTP. This latter part can easily fill books of its own, so the author only manages to cover some <a href="http://www.erlang.org/doc/design_principles/des_princ.html">behaviours</a>, like servers (<em>gen_server</em> to be specific), supervisors and applications. It&rsquo;s some excellent material however, so unless you&rsquo;re a seasoned Erlang developer this part alone could be reason enough to read this book. Sure, it would have been great to go into some more detail or cover more of OTP, but I think it&rsquo;s more than enough to make people understand the core principles of the framework so they are able to continue their studies with a solid foundation. I&rsquo;ve seen many people struggle with the concept of processes and message passing concurrency, despite the relative simplicity of the <a href="http://www.wikiwand.com/en/Actor_model">Actor model</a>. But when Dave suggests thinking of processes somewhat like objects in the sense that they encapsulate state, sending messages suddenly will feel very familiar to OO programmers who find it hard to structure their code around Elixir/Erlang semantics.</p>
+
+<p>Last but not least there&rsquo;s &ldquo;More Advanced Elixir&rdquo;, which covers macros, protocols, the language&rsquo;s approach to mixins and a grab bag of topics that didn&rsquo;t quite warrant chapters of their own. I really liked this entire section, especially the parts on protocols and mixins. I feel like it gave me the tools to look at most Elixir code and figure out what&rsquo;s happening, which is quite an achievement for a book of this length.</p>
+
+<h3>Closing thoughts</h3>
+
+<p>The world of Erlang/OTP is somewhat different from other programming languages, so no matter what your background is, chances are that certain things may feel somewhat alien to you. This is were &ldquo;Programming Elixir&rdquo; shines: it doesn&rsquo;t just try to get you to write Elixir, it wants you to write good idiomatic code because you understand what makes the language tick. The writing has a good flow and is to the point. On top of that each chapter comes with some well thought-out exercises that should keep motivated readers busy for a while. It&rsquo;s hard to imagine a better introduction to the language than &ldquo;Programming Elixir&rdquo;, highly recommended!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-03-08]]></title>
@@ -869,347 +896,6 @@ old factories and warehouses on the docks now serve as amazingcontemporary art s
 <a href="http://www.flickr.com/photos/citizen428/sets/72157635262034054/">Hong Kong</a></p>
 
 <p>Confucius say &ldquo;Be good and travel more!&rdquo;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Extending Nmap With Lua]]></title>
-    <link href="http://www.citizen428.net/blog/2013/08/31/extending-nmap-with-lua/"/>
-    <updated>2013-08-31T17:49:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2013/08/31/extending-nmap-with-lua</id>
-    <content type="html"><![CDATA[<p><em>I originally wrote this piece for a pentesting magazine, but after some unprofessional behavior by their editor I lost my cool and decided not too publish it there. It&rsquo;d be a shame to let it go to waste though, so I after almost three month I finally decided to put it up on my blog.</em></p>
-
-<p>Whether you are working as a security professional or a network administrator, chances are that <a href="http://nmap.org/">Nmap</a> (“Network Mapper”) is part of your regular toolkit. For many people this project, which was started by Gordon &ldquo;Fyodor&rdquo; Lyon in 1997, is the first choice when it comes to host and service discovery. But thanks to the Nmap Scripting Engine (NSE), it can do much more than that, allowing users to easily develop and share their own scripts, thus turning it into a versatile security scanner.</p>
-
-<h3>What you will learn&hellip;</h3>
-
-<ul>
-<li>basics of the Lua programming language,</li>
-<li>walkthrough of a simple NSE script,</li>
-<li>where to find more information on scripting Nmap and Lua in general.</li>
-</ul>
-
-
-<h3>What you should know&hellip;</h3>
-
-<ul>
-<li>basic Nmap usage,</li>
-<li>an imperative programming language.</li>
-</ul>
-
-
-<h3>The Nmap Scripting Engine (NSE)</h3>
-
-<p>Scripting has been part of Nmap for a while, but version 6 includes a dramatically improved implementation of the NSE infrastructure. This also led to an enormous increase in <a href="http://nmap.org/nsedoc/">available scripts</a>, from 59 in version 5, to 347 in the latest release and more than 430 in the current SVN repository. The core of NSE is an embedded Lua interpreter. Before NSE’s implementation started, the Nmap developers considered various programming languages for inclusion, but finally settled on Lua because it&rsquo;s small, liberally licensed (MIT), fast, actively developed and designed with embeddability in mind. It&rsquo;s also used in other popular FOSS security tools like <a href="http://www.wireshark.org">Wireshark</a> and <a href="http://snort.org/">Snort</a>, as well as in popular projects such as <em>World of Warcraft</em> or the window manager <a href="http://awesome.naquadah.org/">Awesome</a>.</p>
-
-<h2>The Lua Programming Language</h2>
-
-<p>Development of <a href="http://lua.org/">Lua</a> started in 1993 at the Pontifical Catholic University of Rio de Janeiro, Brazil. It was designed by Roberto Ierusalimschy, Waldemar Celes and Luiz Henrique de Figueiredo, with the primary goals of being lightweight, cross-platform and easy to embed in other projects. These goals were achieved by writing the language in portable ISO C and giving it a comparatively simple C API. Also Lua&rsquo;s interpreter only takes up about 180 kB in compiled form, so embedding it does not incur a huge cost. Over the years it became a popular scripting and extension language, used in a wide variety of projects. The syntax of Lua should be familiar to anyone who has experience in Modula or C style languages (control structures like <em>if</em>, <em>while</em>, <em>for</em>), but the designers borrowed liberally from other languages as well: the semantics of Lua are heavily influenced by Scheme, and even though the different syntax obscures this a bit, it becomes rather clear the longer you use the language. In some ways it feels like a cleaner and better designed JavaScript, so it&rsquo;s normally
-easy to understand a given snippet of Lua code even with little or no previous exposure to the language.</p>
-
-<h3>Key features</h3>
-
-<p>Lua features first-class functions, thus allowing the developer to treat functions like any other data type. It also doesn&rsquo;t impose a certain programming paradigm, but instead provides meta-features to extend the language as needed. This for example makes it possible to implement things like inheritance in a rather simple and straightforward way without explicit language support. Lua is also garbage collected, features closures and proper tails calls and provides an infrastructure for cooperative multitasking in the form of coroutines. While most of this goes beyond the scope of this article (and NSE), interested readers can find more information in the excellent book &ldquo;Programming in Lua&rdquo;, <a href="http://www.lua.org/pil/">an older version of which is available for free on the project&rsquo;s web site</a>.</p>
-
-<h3>Tables</h3>
-
-<p>There&rsquo;s is however one more feature of Lua that&rsquo;s worth discussing in a bit more detail, namely its reliance on a single compound data structure, the table. Tables are in essence what other languages commonly refer to as associative arrays or dictionaries, or key-value pairs. This is how you create a simple table:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">table</span> <span class="o">=</span> <span class="p">{</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">foo&quot;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The values can be accessed like this: <em>t[&ldquo;x&rdquo;]</em> and <em>t[&ldquo;y&rdquo;]</em>. For string keys Lua supports a nice shorthand though, so <em>t.x</em> and <em>t.y</em> will produce the same result.</p>
-
-<p>One special feature of Lua&rsquo;s tables is that they are also optimized for use as arrays, which can be created like this:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">array</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="s">citizen&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">428&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">blog&quot;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Indices are assigned automatically and unlike in other languages start from 1, not 0 (although it is possible to explicitly assign to <em>array[0]</em>). So to get the string &ldquo;428&rdquo; out of our array, we have to use <em>array[2]</em>.</p>
-
-<p>With this comparatively simple data structure (and the powerful metatable feature) Lua not only implements arrays and dictionaries, but also records/structs, namespaces, classes, objects and much more.</p>
-
-<h3>Examples</h3>
-
-<p>Enough theory, let’s look at some example Lua code. First the customary “Hello world” program:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="nb">print</span> <span class="err">“</span><span class="n">Hello</span> <span class="n">world</span><span class="err">”</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This will just output <em>Hello world</em>. Now for a function definition:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">function</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-</span><span class='line'>  <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="s">Hello &quot;</span> <span class="o">..</span> <span class="n">name</span> <span class="o">..</span> <span class="s2">&quot;</span><span class="s">!&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To generate the same output as above, we would have to call the function with the appropriate argument: <em>sayHello(“world”)</em>. Alternatively, the same function could be defined like this:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">sayHello</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-</span><span class='line'>  <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="s">Hello &quot;</span> <span class="o">..</span> <span class="n">name</span> <span class="o">..</span> <span class="s2">&quot;</span><span class="s">!&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Last but not least a small loop that iterates over an array and prints out each element (<em>ipairs</em> returns the index-value pairs of an array):</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">str</span> <span class="k">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="k">do</span>
-</span><span class='line'>  <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="o">..</span><span class="s2">&quot;</span><span class="s">: &quot;</span><span class="o">..</span><span class="n">str</span><span class="p">)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Assuming the variable <em>array</em> contains the elements “citizen”, “428”, and “blog”, this will generate the following output:</p>
-
-<pre><code>1: citizen
-2: 428
-3: blog
-</code></pre>
-
-<h2>NSE example script</h2>
-
-<p>The Nmap web site contains some excellent documentation regarding NSE (<a href="http://nmap.org/book/man-nse.html">short intro</a>, <a href="http://nmap.org/book/nse.html">full book chapter</a>, <a href="http://nmap.org/book/nse-tutorial.html">tutorial</a>, so instead of repeating all of what’s written there, we’ll look at a practical example instead. The script shown here is <a href="http://nmap.org/nsedoc/scripts/http-generator.html">http_generator.nse</a>, which looks for the presence of an HTTP <em>generator</em> meta tag to determine which CMS the scanned hosts run (if any). This information can be useful, since outdated versions of such systems are common attack vectors.</p>
-
-<h3>Library imports</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">http</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;</span><span class="s">http&quot;</span>
-</span><span class='line'><span class="kd">local</span> <span class="n">shortport</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;</span><span class="s">shortport&quot;</span>
-</span><span class='line'><span class="kd">local</span> <span class="n">stdnse</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;</span><span class="s">stdnse&quot;</span>
-</span><span class='line'><span class="kd">local</span> <span class="n">string</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;</span><span class="s">string&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It&rsquo;s customary to start Nmap scripts by importing all the needed <a href="http://nmap.org/book/nse-library.html">libraries</a>. In the process they are assigned to local variables, so if you wanted to access them under a different (presumably shorter) name you could do so (for example <em>local s = require “string”</em>). There&rsquo;s a wide variety of available libraries, from protocols (<em>afp</em>, <em>dns</em>, <em>http</em>, <em>bitcoin</em>, <em>openssl</em> etc.) over encoding/decoding (<em>base32</em>, <em>base64</em>, <em>json</em>) and utility libraries (<em>nmap</em>, <em>packet</em>, <em>pcre</em>) to a framework for brute-force attacks against services (<em>brute</em>).
-The script we are looking at uses the <em>http</em> library for communication, <em>shortport</em> for an easier way to define portrules (more on that later), and <em>stdnse</em>, a collection of utility functions provided by NSE. The <em>string</em> library is a standard Lua library and used for string matching in this example.</p>
-
-<h3>Metadata</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">description</span> <span class="o">=</span> <span class="s">[[ Displays the contents of the &quot;generator&quot; meta tag of a web page(default: /) if there is one.</span>
-</span><span class='line'><span class="s">]]</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Michael Kohl&quot;</span>
-</span><span class='line'><span class="n">license</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Same as Nmap--See http://nmap.org/book/man-legal.html&quot;</span>
-</span><span class='line'><span class="n">categories</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;</span><span class="s">default&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">discovery&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">safe&quot;</span><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">---</span>
-</span><span class='line'><span class="c1">-- @usage</span>
-</span><span class='line'><span class="c1">-- nmap --script http-generator [--script-args http-generator.path=&lt;path&gt;,http-generator.redirects=&lt;number&gt;,...] &lt;host&gt;</span>
-</span><span class='line'><span class="c1">--</span>
-</span><span class='line'><span class="c1">-- @output</span>
-</span><span class='line'><span class="c1">-- PORT    STATE SERVICE</span>
-</span><span class='line'><span class="c1">-- 80/tcp  open  http</span>
-</span><span class='line'><span class="c1">-- |_http-generator: TYPO3 4.2 CMS</span>
-</span><span class='line'><span class="c1">-- 443/tcp open  https</span>
-</span><span class='line'><span class="c1">-- |_http-generator: TYPO3 4.2 CMS</span>
-</span><span class='line'><span class="c1">--</span>
-</span><span class='line'><span class="c1">-- @args http-generator.path Specify the path you want to check for a generator meta tag (default to &#39;/&#39;).</span>
-</span><span class='line'><span class="c1">-- @args http-generator.redirects Specify the maximum number of redirects to follow (defaults to 3).</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">-- Changelog:</span>
-</span><span class='line'><span class="c1">-- 2011-12-23 Michael Kohl &lt;citizen428@gmail.com&gt;:</span>
-</span><span class='line'><span class="c1">--   + Initial version</span>
-</span><span class='line'><span class="o">...</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After the library imports, scripts contain some metadata that is used for documentation and internal purposes. The <em>description</em> and author variables are self-explanatory, the syntax used for the former is Lua&rsquo;s way of creating so-called &ldquo;heredocs&rdquo;, string literals that preserve white space and line breaks. In regard to the <em>license</em> script authors have two choices, the GPL-like Nmap license, as well as a simplified (2-clause) BSD license. Last but not least there&rsquo;s documentation in the NSEDoc format. It&rsquo;s customary to include usage documentation, example output, descriptions of all the available arguments (if any) as well as a changelog.</p>
-
-<p>There&rsquo;s another important field that this specific script doesn&rsquo;t use, <em>dependencies</em>. This defines the order in which scripts should be run and is used for the case where one script works on the results of another script. It&rsquo;s important to keep in mind that scripts listed here will not be automatically run, they still have to be selected via <em>&mdash;script scriptname</em> or in another way (for example <em>&mdash;script=default</em>).</p>
-
-<p>The <em>categories</em> variable is a bit more interesting, it defines which groups of scripts our current program belongs to. Scripts marked as <em>default</em> will be run automatically when Nmap is started with the <em>-sC</em> or <em>-A</em> options.To qualify for inclusion in this category, scripts have to adhere to some criteria: they need to be fast, reliable, non-obstrusive and generally useful. There are no clear definitions for these criteria, it&rsquo;s up to the Nmap developers to add a script to this category. The <em>discovery</em> category collects all scripts that actively try to gather more information about the scan targets, in our case the &ldquo;generator&rdquo; HTML meta tag. If a script is marked as <em>safe</em>, that means that it was not written with the intent of crashing services or exploiting vulnerabilities and that it&rsquo;s unlikely to consume large amounts of resources. There are many more categories Nmap uses, for example <em>auth</em> (scripts dealing with authentication credentials), <em>brute</em> (tools for brute force attacks) or <em>vuln</em> (checking for specific vulnerabilities). For a full list, please consult Nmap&rsquo;s excellent documentation.</p>
-
-<p>Now that we know a bit more about categories, let&rsquo;s see how we can use that knowledge for more interesting Nmap runs. Let’s start by running all the default scripts:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap -sC example.com
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap --script<span class="o">=</span>default example.com
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The invocation <em>nmap -A example.com</em> (&ldquo;Aggressive/advanced scan options&rdquo;) enables OS and version detection, script scanning (equivalent to <em>nmap -sC</em>), and traceroute.</p>
-
-<p>If you just want to run a single script, you can do so by specifying the <em>&mdash;script</em> argument, for example <em>nmap &mdash;script http-generator example.com</em>.</p>
-
-<p>It’s also possible to run scripts from several categories, by using something like <em>nmap &mdash;script &ldquo;default,safe&rdquo; example.com</em> or <em>nmap &mdash;script &ldquo;default or safe&rdquo; example.com</em>. There is an analogous and operator, so <em>nmap &mdash;script &ldquo;default AND safe&rdquo; example.com</em> will only run scripts that are in all the listed categories.</p>
-
-<p>As an example for a rather complex invocation, the following command will run all scripts from the three specified categories, except for the ones whose name starts with &ldquo;http-&rdquo;.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap --script <span class="s2">&quot;(default or safe or intrusive) and not http-*&quot;</span> example.com
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Last but not least it’s also possible to run user scripts which are not part of the standard Nmap distribution, as show in the following example:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap --script default,banner,/home/user/customscripts example.com
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The above invocation will run all default scripts, the script named “banner” and all scripts which can be found in the directory <em>/home/user/customscripts</em>.</p>
-
-<h3>Rule</h3>
-
-<p>The <em>rule</em> definition is an important part of every NSE script, it determines when the script should run. A rule is a Lua function that returns <em>true</em> or <em>false</em> to decide whether or not the script&rsquo;s action function will be executed. There are several different rule types, depending on when the script is supposed to run (before or after hosts are scanned, <em>prerule</em> and <em>postrule</em>) or if the trigger is a specific host or port (<em>hostrule</em> and <em>portrule</em>).</p>
-
-<p>The rule definition in our example script is very simple since it uses the very handy <em>shortport</em> library, which has several predefined rules for common scenarios:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">rule</span> <span class="o">=</span> <span class="n">shortport</span><span class="p">.</span><span class="n">http</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This will match and return <em>true</em> when a given port is likely to be an HTTP port.</p>
-
-<h3>Action</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">action</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
-</span><span class='line'>    <span class="kd">local</span> <span class="n">path</span> <span class="o">=</span> <span class="n">stdnse</span><span class="p">.</span><span class="n">get_script_args</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">http-generator.path&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;</span><span class="s">/&#39;</span>
-</span><span class='line'>    <span class="kd">local</span> <span class="n">redirects</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">stdnse</span><span class="p">.</span><span class="n">get_script_args</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">http-generator.redirects&#39;</span><span class="p">))</span> <span class="ow">or</span> <span class="mi">3</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1">-- Worst case: &lt;meta name=Generator content=&quot;Microsoft Word 11&quot;&gt;</span>
-</span><span class='line'>    <span class="kd">local</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">&lt;meta name=&quot;?generator&quot;? content=&quot;([^</span><span class="se">\&quot;</span><span class="s">]*)&quot; ?/?&gt;&#39;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1">-- make pattern case-insensitive</span>
-</span><span class='line'>    <span class="n">pattern</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">:</span><span class="n">gsub</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">%a&quot;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span>
-</span><span class='line'>                  <span class="k">return</span> <span class="nb">string.format</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[%s%s]&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="nb">string.upper</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
-</span><span class='line'>              <span class="k">end</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="kd">local</span> <span class="n">response</span> <span class="o">=</span> <span class="n">follow_redirects</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">redirects</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span> <span class="n">response</span> <span class="ow">and</span> <span class="n">response</span><span class="p">.</span><span class="n">body</span> <span class="p">)</span> <span class="k">then</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The <em>action</em> function is the heart of every NSE script, it contains the code that will be performed when the rule matches. Basically <em>action</em> is just another Lua function that accepts the same arguments as the <em>rule</em> function (which is not as obvious in our example because of the use of the <em>shortport.http</em> rule).</p>
-
-<p>The function starts with checking for the presence of two arguments and specifies defaults in case the user didn’t provide any values for them. Arguments can be passed to the script in the following way:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">nmap</span> <span class="c1">--script http-generator --script-args http-generator.path=/cms,http-generator.redirects=2 example.com</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>They get stored in the table <em>nmap.registry.args</em>, but instead of using them directly you should use the function <em>stdnse.get_script_args</em> to access them.</p>
-
-<p>After the argument handling, a pattern matching the HTTP &ldquo;meta&rdquo; tag is specified. Standard Lua does not include a regular expression library, but uses its own patterns instead. While there is a library providing Perl-compatible regular expressions (PCRE) for Nmap, it seemed like overkill to drag it in for a single expression, so I relied on plain Lua for this, which explains the little workaround used in the next line to make the pattern case insensitive by replacing every letter (the pattern <em>%a</em>) with its lower and upper case version.
-After that the <em>follow_redirects</em> helper function is used to get an HTTP response, and if there is one, its body will be scanned for our pattern.</p>
-
-<p>If there is a match, the function will return the matching string and Nmap will automatically include it in its output as shown here:</p>
-
-<pre><code>PORT   STATE SERVICE
-80/tcp open  http
-| _http-generator: WordPress.com |
-</code></pre>
-
-<p>Instead of a string the action can also return tables consisting of name-value pairs which are then formatted in a structured fashion, whereas the return value <em>nil</em> generates no output at all.</p>
-
-<p>As you may have noticed I didn’t yet show you the helper function mentioned above, so while it’s not very interesting in itself, I’ll include it for completeness’ sake:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">follow_redirects</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-</span><span class='line'>    <span class="kd">local</span> <span class="n">loc</span>
-</span><span class='line'>    <span class="kd">local</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">^[hH][tT][tT][pP]/1.[01] 30[12]&quot;</span>
-</span><span class='line'>    <span class="kd">local</span> <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">while</span> <span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;</span><span class="s">status-line&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="s2">&quot;</span><span class="s">&quot;</span><span class="p">):</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">do</span>
-</span><span class='line'>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span class='line'>        <span class="n">loc</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;</span><span class="s">location&#39;</span><span class="p">]</span>
-</span><span class='line'>        <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get_url</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">response</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This helper function is a simple way to follow HTTP redirects. It first defines a pattern for recognizing the relevant HTTP status codes (301 and 302) before making a request to the specified host, port and path combination. It then checks for the presence of a redirect and if there is one, follows it to retrieve the location information from the new location. When there are no more redirects or the redirect limit (specified in the argument <em>n</em>) has been reached, the function returns the full HTTP response to the caller.</p>
-
-<h3>Digging deeper</h3>
-
-<p>And that’s all there is to it! Thanks to the excellent infrastructure provided by NSE and all its libraries, writing custom Nmap scripts is a pretty easy and straightforward task. Anybody with a bit of scripting experience should be able to pick up the basics in a very short time and then learn about the finer points while developing scripts. The Nmap development team has assembled some excellent documentation which can be found online at <a href="http://nmap.org/book/nse.html.">http://nmap.org/book/nse.html.</a> There’s also a great presentation by Fyodor and Nmap co-maintainer David Fifield available <a href="http://nmap.org/presentations/BHDC10/">online</a> which gets you started on developing your own NSE scripts in less than an hour.</p>
-
-<h2>Summary</h2>
-
-<p>Nmap is a popular tool for security and network professionals around the world, and its excellent scripting capabilities make it very versatile. The Nmap Scripting Engine relies on the popular and easy to learn Lua programming language, and provides useful libraries for quickly and efficiently developing your own custom scripts, which can then be shared with the wider Nmap user community.</p>
 ]]></content>
   </entry>
   

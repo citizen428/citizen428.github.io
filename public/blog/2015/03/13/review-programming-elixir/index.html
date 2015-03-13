@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Review: Programming Elixir - citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Disclaimer: The good folks at The Pragmatic Bookshelf were nice enough to provide me with a free copy of this book, but this has no influence on the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.citizen428.net/blog/2015/03/13/review-programming-elixir">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.citizen428.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Review: Programming Elixir</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-13T22:32:51+07:00" pubdate data-updated="true">Mar 13<sup>th</sup>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><em><strong>Disclaimer</strong>: The good folks at <a href="https://pragprog.com/">The Pragmatic Bookshelf</a> were nice enough to provide me with a free copy of this book, but this has no influence on the contents of the review.</em></p>
+
+<p>My first contact with Dave Thomas was the famous &ldquo;<a href="https://pragprog.com/book/ruby/programming-ruby">Pickaxe book</a>&rdquo; for Ruby. It wasn&rsquo;t my first contact with the language, but it certainly helped in deepening my understanding of it. It&rsquo;s a great book, and I went back numerous times to re-read certain chapters. I already had a crush on Ruby, but &ldquo;the Pickaxe&rdquo; helped turning that into a solid and lasting love affair.</p>
+
+<p>Fast-forward some years. While I still love Ruby and work with it professionally, I have to admit to having a new language crush: <a href="http://elixir-lang.org/">Elixir</a>. I&rsquo;ve been interested in Erlang for several years, read some books, dabbled a bit, but never really got into the language. Elixir however got me hooked almost from the get-go. I find it&rsquo;s a simple, elegant language, that&rsquo;s easy to pick up, but has quite some depth.</p>
+
+<h3>The book</h3>
+
+<p>Let&rsquo;s start off by clearly stating what this book is not: a reference. It weighs in at around 340 pages and does not try to cover every aspect of Elixir/Erlang. It still is one of my all-time favorite programming books though. Why? Because I believe it does an amazing job in conveying the &ldquo;essence&rdquo; of Elixir. There&rsquo;s no point in documenting APIs, the language has <a href="http://elixir-lang.org/docs.html">great documentation online</a>. Instead Dave tries to teach the reader how to think in Elixir.</p>
+
+<p>&ldquo;Programming Elixir&rdquo; has three main parts. The first called &ldquo;Conventional Programming&rdquo; introduces some core concepts like pattern matching and immutability, before covering Elixir types, functions, modules, language constructs, and project organization. It&rsquo;s easy to read, but not too boring for seasoned developers. However, if you have some previous experience with Elixir, Erlang, or even some other functional programming language you may end up skimming this section a bit, at least I did.</p>
+
+<p>Where it starts to get really interesting is the next part called &ldquo;Concurrent Programming&rdquo;, which covers processes, nodes and the basics of OTP. This latter part can easily fill books of its own, so the author only manages to cover some <a href="http://www.erlang.org/doc/design_principles/des_princ.html">behaviours</a>, like servers (<em>gen_server</em> to be specific), supervisors and applications. It&rsquo;s some excellent material however, so unless you&rsquo;re a seasoned Erlang developer this part alone could be reason enough to read this book. Sure, it would have been great to go into some more detail or cover more of OTP, but I think it&rsquo;s more than enough to make people understand the core principles of the framework so they are able to continue their studies with a solid foundation. I&rsquo;ve seen many people struggle with the concept of processes and message passing concurrency, despite the relative simplicity of the <a href="http://www.wikiwand.com/en/Actor_model">Actor model</a>. But when Dave suggests thinking of processes somewhat like objects in the sense that they encapsulate state, sending messages suddenly will feel very familiar to OO programmers who find it hard to structure their code around Elixir/Erlang semantics.</p>
+
+<p>Last but not least there&rsquo;s &ldquo;More Advanced Elixir&rdquo;, which covers macros, protocols, the language&rsquo;s approach to mixins and a grab bag of topics that didn&rsquo;t quite warrant chapters of their own. I really liked this entire section, especially the parts on protocols and mixins. I feel like it gave me the tools to look at most Elixir code and figure out what&rsquo;s happening, which is quite an achievement for a book of this length.</p>
+
+<h3>Closing thoughts</h3>
+
+<p>The world of Erlang/OTP is somewhat different from other programming languages, so no matter what your background is, chances are that certain things may feel somewhat alien to you. This is were &ldquo;Programming Elixir&rdquo; shines: it doesn&rsquo;t just try to get you to write Elixir, it wants you to write good idiomatic code because you understand what makes the language tick. The writing has a good flow and is to the point. On top of that each chapter comes with some well thought-out exercises that should keep motivated readers busy for a while. It&rsquo;s hard to imagine a better introduction to the language than &ldquo;Programming Elixir&rdquo;, highly recommended!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Kohl</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-13T22:32:51+07:00" pubdate data-updated="true">Mar 13<sup>th</sup>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/books/'>books</a>, <a class='category' href='/blog/categories/elixir/'>elixir</a>, <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/review/'>review</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.citizen428.net/blog/2015/03/13/review-programming-elixir/" data-via="citizen428" data-counturl="http://www.citizen428.net/blog/2015/03/13/review-programming-elixir/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/03/08/information-overload-2015-03-08/" title="Previous Post: Information Overload 2015-03-08">&laquo; Information Overload 2015-03-08</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I'm Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/03/13/review-programming-elixir/">Review: Programming Elixir</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/08/information-overload-2015-03-08/">Information Overload 2015-03-08</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/01/information-overload-2015-03-01/">Information Overload 2015-03-01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/22/information-overload-2015-02-22/">Information Overload 2015-02-22</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/15/information-overload-2015-02-15/">Information Overload 2015-02-15</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.citizen428.net/blog/2015/03/13/review-programming-elixir/';
+        var disqus_url = 'http://www.citizen428.net/blog/2015/03/13/review-programming-elixir/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

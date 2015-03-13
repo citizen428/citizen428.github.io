@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="SMS is now the world&#8217;s most intensively used data communication technology. One source claims that over 6 trillion texts were sent in 2010, for &hellip;">
+  <meta name="description" content="Ruby&rsquo;s Object#tap is a really nice and useful method. One of my favorite uses is Object#d, which I think I originally saw in irbtools. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,95 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/14/tap-dance/">Tap Dance</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-14T23:14:00+07:00" pubdate data-updated="true">May 14<sup>th</sup>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ruby&rsquo;s <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> is a really nice and useful method. One of my favorite uses is <code>Object#d</code>, which I think I originally saw in <a href="https://github.com/janlelis/irbtools">irbtools</a>. Personally, I&rsquo;m using the following version in my <code>~/.irbrc</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Object</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">d</span>
+</span><span class='line'>    <span class="nb">self</span><span class="o">.</span><span class="n">tap</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">s</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Inserting this in a chain of calls can be very enlightening as to where a value changes unexpectedly.</p>
+
+<p>However, recently I&rsquo;ve seen more and more use of <code>tap</code> where I&rsquo;d traditionally have used <code>inject/reduce</code>. People who know me can attest to the fact that I&rsquo;m a big fan of the latter, but for some reason there seem to be quite a few developers who find these methods hard to grok. For this reason recent Ruby versions added <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_with_object">Enumerable#each_with_object</a>, which seems to be easier to use for some people, but which isn&rsquo;t very popular because of it&rsquo;s lengthy name. See for example the following blog post that was written as a result of a discussion I had with the author on StackOverflow: <a href="http://phrogz.net/tap-vs-each_with_object">tap vs. each_with_object: tap is faster and less typing.</a></p>
+
+<p>As I said in the comment there, my main problem is that you have to call <code>tap</code> on what is to become the result, not the data you want to transform. While this is not a problem per se, I somehow don&rsquo;t like the semantics of it. However, once I decided to hide it behind a Pascal-like <a href="http://www.freepascal.org/docs-html/ref/refsu53.html">with statement</a>, I immediately started liking it:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Kernel</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">with</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">blk</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">o</span><span class="o">.</span><span class="n">tap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">blk</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here are the examples from the blog post linked above, including a new version for <code>with</code>. Decide which one you like best:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">nums</span><span class="o">.</span><span class="n">inject</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="p">,</span> <span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">;</span> <span class="n">h</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">nums</span><span class="o">.</span><span class="n">each_with_object</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="p">,</span> <span class="n">h</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">{}</span><span class="o">.</span><span class="n">tap</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="o">|</span> <span class="n">nums</span><span class="o">.</span><span class="n">each</span><span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">with</span><span class="p">({})</span> <span class="p">{</span> <span class="o">|</span><span class="n">h</span><span class="o">|</span> <span class="n">nums</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">h</span><span class="o">[</span><span class="n">n</span><span class="o">]=</span><span class="n">n</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sure, putting it in <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html">Kernel</a> and therefore calling it without a receiver seems a little strange at first, but I kinda like how it reads. I know this is probably a case of me being anal about semantics, but I really think that <code>with</code> transports the intent a lot better than <code>tap</code> in cases like the one shown here.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -573,54 +662,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/25/information-overload-2012-03-25/">Information Overload 2012-03-25</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-25T00:00:00+07:00" pubdate data-updated="true">Mar 25<sup>th</sup>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.guardian.co.uk/music/2012/mar/17/punk-rock-state-oppression-burma">Punk rock … alive and kicking in a repressive state near you</a><br>On the state of punk music in Iraq, Russia, Burma and Indonesia.</li>
-<li><a href="http://www.slate.com/articles/technology/technology/2012/03/ruby_ruby_on_rails_and__why_the_disappearance_of_one_of_the_world_s_most_beloved_computer_programmers_.html?tid=sm_p1_button_toolbar">Where’s _why?</a><br>An article on _why and Ruby in Slate. Hello, mainstream. :&ndash;)</li>
-<li><a href="http://www.aljazeera.com/indepth/opinion/2012/03/201231284336601364.html">Dangerous ignorance: The hysteria of Kony 2012</a><br>More negative feedback on the Kony 2012 campaign.</li>
-<li><a href="http://www.forbes.com/sites/matthewherper/2012/02/10/the-truly-staggering-cost-of-inventing-new-drugs/">The Truly Staggering Cost Of Inventing New Drugs</a><br>Make sure to also read the comments, some good stuff in there.</li>
-<li><a href="http://theradicalantfarm.blogspot.com/2009/07/russian-prison-tattoos-implied-in-ink.html">Russian Prison Tattoos &ndash; Implied In Ink</a><br>I first read this a couple of years ago, but it came up in conversation today, so I decided to include it.</li>
-<li><a href="http://libcom.org/library/%E2%80%98bout-explode-day-life-precarious-worker">&lsquo;Bout to explode: a day in the life of a precarious worker</a><br>What precarious working conditions do to people&hellip;</li>
-<li><a href="http://www.theregister.co.uk/2012/03/21/how_to_get_paid_more/">You&rsquo;re crap and paid too much for the little work you actually do</a><br>I don&rsquo;t really like this article and the author doesn&rsquo;t sound like someone I&rsquo;d want to have a beer with, but maybe some of you find this interesting.</li>
-<li><a href="http://therealkatie.net/blog/2012/mar/21/lighten-up/">Lighten Up</a><br>About the subtle sexism female programmers have to endure, although I&rsquo;m sure that&rsquo;s true in most professions.</li>
-<li><a href="http://www.physorg.com/news/2011-10-microbes-inherit-earth.html">And the microbes shall inherit the Earth</a><br>Looking at the past to predict what consequences global warming could have in the future.</li>
-<li><a href="http://www.zeit.de/politik/ausland/2012-03/fotografie-journalismus-ruben-salvadori/komplettansicht">Wie Pressefotos die Wirklichkeit manipulieren</a><br>Italian photographer Ruben Salvadori shows the truth behind press photos (in German).</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/8">&larr; Older</a>
@@ -653,6 +694,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/13/review-programming-elixir/">Review: Programming Elixir</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/08/information-overload-2015-03-08/">Information Overload 2015-03-08</a>
       </li>
     
@@ -666,10 +711,6 @@
     
       <li class="post">
         <a href="/blog/2015/02/15/information-overload-2015-02-15/">Information Overload 2015-02-15</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/08/information-overload-2015-02-08/">Information Overload 2015-02-08</a>
       </li>
     
   </ul>
