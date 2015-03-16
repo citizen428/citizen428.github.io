@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Often when I want to tell someone about cool projects I&#8217;m watching on GitHub, I can&#8217;t remember their names. Now wouldn&#8217;t it be nice &hellip;">
+  <meta name="description" content="After years of being an avid Vim user, I recently succumbed to the temptation of Emacs and haven&#8217;t looked back since. Now that I slowly &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/06/26/fullscreen-emacs-on-macos-x/">Fullscreen Emacs on MacOS X</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-26T00:00:00+07:00" pubdate data-updated="true">Jun 26<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After years of being an avid Vim user, I recently succumbed to the temptation of Emacs and haven&#8217;t looked back since. Now that I slowly understand the concept of &#8220;living in Emacs&#8221;, I also wanted a fullscreen mode. Turns out you&#8217;ll have to patch and build Emacs yourself for that if you are on <span class="caps">OSX</span>, so here&#8217;s a step by step guide on what I did to build the current Git <span class="caps">HEAD</span> (&#8220;About Emacs&#8221; reports the version as 24.0.50 by the way) with fullscreen support, based on <a href="http://www.sanityinc.com/full-screen-support-for-cocoa-emacs-on-osx">Steve Purcell&#8217;s post</a> from last January:</p>
+<script src="http://gist.github.com/454018.js?file=gistfile1.sh"></script><p>To toggle fullscreen mode call &#8220;M-x ns-toggle-fullscreen&#8221;, which I have bound to &#8220;M-<span class="caps">RET</span>&#8221;. Looking forward to try this on 1920&#215;1080 at work on Monday!</p>
+<p>If you can&#8217;t be bothered to build Emacs yourself, you can <a href="http://dl.dropbox.com/u/8492251/Emacs.zip">download the version I built</a>.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -578,50 +615,6 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/04/12/curious-clojure-to-the-rescue/">Curious? Clojure to the Rescue!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-04-12T00:00:00+07:00" pubdate data-updated="true">Apr 12<sup>th</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When reading John Derbyshire&#8217;s excellent book <a href="http://www.amazon.com/Prime-Obsession-Bernhard-Greatest-Mathematics/dp/0309085497">Prime Obsession</a>, I stumbled upon the following interesting footnote about <a href="http://en.wikipedia.org/wiki/E_(mathematical_constant)">Euler&#8217;s number</a>:</p>
-<p>&#8220;<i>Here is an example of e turning up unexpectedly. Select a random number between 0 and 1. Now select another and add it to the first. Keep doing this, piling on random numbers. How many random numbers, on average, do you need to make the total greater than 1? Answer: 2.71828&#8230;</i>&#8221;</p>
-<p>Personally I found this rather intriguing, so I decided to try this out for myself. Clojure seemed to be an obvious choice for this, since it&#8217;s very easy to express ones thoughts in code.</p>
-<p>Let&#8217;s start with a function that will tell us how many random numbers we needed to sum up to get over 1:</p>
-<script src="http://gist.github.com/363888.js?file=gistfile1.clj"></script><p>Next we will create a function that will take n elements from an infinite list generated from another function:</p>
-<script src="http://gist.github.com/363888.js?file=gistfile2.clj"></script><p>We are doing this because def-ing a seq will cache it:</p>
-<script src="http://gist.github.com/363888.js?file=gistfile3.clj"></script><p>Now we have to find out how many numbers it takes on average to go over 1:</p>
-<script src="http://gist.github.com/363888.js?file=gistfile4.clj"></script><p>Let&#8217;s wrap it all up and also display the results as floats:</p>
-<script src="http://gist.github.com/363888.js?file=gistfile5.clj"></script><p>Sure enough, the results seem to be around the value of e, curiosity satisfied. Last but not least the final program in all its glory:</p>
-<script src="http://gist.github.com/363888.js?file=gistfile6.clj"></script><p>Note: this will die with an <span class="caps">OOM</span> error when you try to calculate the average of a too long list. Fixing this is left as an exercise for the reader (&#8220;holding on to the head&#8221; will probably be useful as a search term).</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/23">&larr; Older</a>
@@ -654,6 +647,10 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/15/information-overload-2015-03-15/">Information Overload 2015-03-15</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/13/review-programming-elixir/">Review: Programming Elixir</a>
       </li>
     
@@ -667,10 +664,6 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
     
       <li class="post">
         <a href="/blog/2015/02/22/information-overload-2015-02-22/">Information Overload 2015-02-22</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/15/information-overload-2015-02-15/">Information Overload 2015-02-15</a>
       </li>
     
   </ul>

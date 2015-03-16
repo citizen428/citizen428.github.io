@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Today I spent some time figuring out how to move EBS-backed AMIs between different EC2 regions. To save you the effort, here&#8217;s a quick summary &hellip;">
+  <meta name="description" content="When reading John Derbyshire&#8217;s excellent book Prime Obsession, I stumbled upon the following interesting footnote about Euler&#8217;s number &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,50 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/04/12/curious-clojure-to-the-rescue/">Curious? Clojure to the Rescue!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-12T00:00:00+07:00" pubdate data-updated="true">Apr 12<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When reading John Derbyshire&#8217;s excellent book <a href="http://www.amazon.com/Prime-Obsession-Bernhard-Greatest-Mathematics/dp/0309085497">Prime Obsession</a>, I stumbled upon the following interesting footnote about <a href="http://en.wikipedia.org/wiki/E_(mathematical_constant)">Euler&#8217;s number</a>:</p>
+<p>&#8220;<i>Here is an example of e turning up unexpectedly. Select a random number between 0 and 1. Now select another and add it to the first. Keep doing this, piling on random numbers. How many random numbers, on average, do you need to make the total greater than 1? Answer: 2.71828&#8230;</i>&#8221;</p>
+<p>Personally I found this rather intriguing, so I decided to try this out for myself. Clojure seemed to be an obvious choice for this, since it&#8217;s very easy to express ones thoughts in code.</p>
+<p>Let&#8217;s start with a function that will tell us how many random numbers we needed to sum up to get over 1:</p>
+<script src="http://gist.github.com/363888.js?file=gistfile1.clj"></script><p>Next we will create a function that will take n elements from an infinite list generated from another function:</p>
+<script src="http://gist.github.com/363888.js?file=gistfile2.clj"></script><p>We are doing this because def-ing a seq will cache it:</p>
+<script src="http://gist.github.com/363888.js?file=gistfile3.clj"></script><p>Now we have to find out how many numbers it takes on average to go over 1:</p>
+<script src="http://gist.github.com/363888.js?file=gistfile4.clj"></script><p>Let&#8217;s wrap it all up and also display the results as floats:</p>
+<script src="http://gist.github.com/363888.js?file=gistfile5.clj"></script><p>Sure enough, the results seem to be around the value of e, curiosity satisfied. Last but not least the final program in all its glory:</p>
+<script src="http://gist.github.com/363888.js?file=gistfile6.clj"></script><p>Note: this will die with an <span class="caps">OOM</span> error when you try to calculate the average of a too long list. Fixing this is left as an exercise for the reader (&#8220;holding on to the head&#8221; will probably be useful as a search term).</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -495,49 +539,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/12/17/android-and-me/">Android and Me</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-12-17T00:00:00+07:00" pubdate data-updated="true">Dec 17<sup>th</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Last Monday I got an <a href="http://en.wikipedia.org/wiki/Android_(operating_system)">Android</a> phone from work (unfortunately A1 still only has the <span class="caps">HTC</span> Magic, but I don&#8217;t want to be ungrateful) and I obviously had to get into the whole community firmware thing and all. Here are some links that I hope are interesting and/or useful:<br />
-<ul><br />
-<li><a href="http://developer.htc.com/adp.html">Fastboot for Mac</a> (you have to scroll down a bit)</li><br />
-<li><a href="http://forum.xda-developers.com/showthread.php?t=529019">Engineering <span class="caps">SPL</span> for <span class="caps">HTC</span> Magic</a></li><br />
-<li><a href="http://forum.xda-developers.com/showpost.php?p=4029315&#38;postcount=1">Amon_RA Sapphire Recovery Image</li><br />
-<li><a href="http://wiki.smartphonefrance.info/firmware-htcmagic.ashx">Smartphone France Recovery and Firmware Image</a> (nice image, already rooted)</li><br />
-<li><a href="http://forum.xda-developers.com/showthread.php?t=556933%26highlight=theofficial%2Brogers">TheOfficial Rogers <span class="caps">ROM</span></a> (very nice Android 1.5 <span class="caps">ROM</span>, needs root before installing)</li><br /></p>
-</ul>
-<p>One last word of advice: save your <span class="caps">APN</span> settings before you flash your phone!</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/24">&larr; Older</a>
@@ -570,6 +571,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/15/information-overload-2015-03-15/">Information Overload 2015-03-15</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/13/review-programming-elixir/">Review: Programming Elixir</a>
       </li>
     
@@ -583,10 +588,6 @@
     
       <li class="post">
         <a href="/blog/2015/02/22/information-overload-2015-02-22/">Information Overload 2015-02-22</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/15/information-overload-2015-02-15/">Information Overload 2015-02-15</a>
       </li>
     
   </ul>

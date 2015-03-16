@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="How to feed the worldA nice 9 minute animation aimed mainly at kids. Interesting nonetheless and very well done.
-Danish volunteers build manned &hellip;">
+  <meta name="description" content="A couple of days ago I finally started properly looking at Erlang for the first time. One aspect I find especially interesting is the bit syntax, so &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +83,149 @@ Danish volunteers build manned &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/09/04/erlang-bit-syntax-and-id3/">Erlang Bit Syntax and ID3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-04T00:00:00+07:00" pubdate data-updated="true">Sep 4<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A couple of days ago I finally started properly looking at <a href="http://www.erlang.org/">Erlang</a> for the first time. One aspect I find especially interesting is the <a href="http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html">bit syntax</a>, so I wrote a small program for parsing <a href="http://www.id3.org/ID3v1">ID3v1 tags</a> for practice. There’s definitely room for improvement (I ignored ID3v1.1), but it was a fun little exercise.
+Here’s the code:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">mp3</span><span class="p">).</span>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">get_id3</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="n">get_tags</span><span class="o">/</span><span class="mi">2</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">get_id3</span><span class="p">(</span><span class="nv">File</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="k">case</span> <span class="nn">file</span><span class="p">:</span><span class="n">open</span><span class="p">(</span><span class="nv">File</span><span class="p">,</span> <span class="p">[</span><span class="n">read</span><span class="p">,</span> <span class="n">binary</span><span class="p">])</span> <span class="k">of</span>
+</span><span class='line'>        <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="nv">MP3</span><span class="p">}</span> <span class="o">-&gt;</span>
+</span><span class='line'>            <span class="nv">Result</span> <span class="o">=</span> <span class="k">case</span> <span class="nn">file</span><span class="p">:</span><span class="n">pread</span><span class="p">(</span><span class="nv">MP3</span><span class="p">,</span> <span class="p">{</span><span class="n">eof</span><span class="p">,</span> <span class="o">-</span><span class="mi">128</span><span class="p">},</span> <span class="mi">128</span><span class="p">)</span> <span class="k">of</span>
+</span><span class='line'>                <span class="p">{</span><span class="n">eof</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="n">eof</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">{</span><span class="n">error</span><span class="p">,</span> <span class="nv">Reason</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="nv">Reason</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="o">&lt;&lt;</span><span class="s">&quot;TAG&quot;</span><span class="p">,</span> <span class="nv">Tags</span><span class="o">/</span><span class="n">binary</span><span class="o">&gt;&gt;</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="n">parse_id3</span><span class="p">(</span><span class="nv">Tags</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="p">_}</span> <span class="o">-&gt;</span> <span class="n">no_id3</span>
+</span><span class='line'>            <span class="k">end</span><span class="p">,</span>
+</span><span class='line'>            <span class="nn">file</span><span class="p">:</span><span class="n">close</span><span class="p">(</span><span class="nv">MP3</span><span class="p">),</span>
+</span><span class='line'>            <span class="nv">Result</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">{</span><span class="n">error</span><span class="p">,</span> <span class="nv">Reason</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="nv">Reason</span>
+</span><span class='line'>    <span class="k">end</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">get_tags</span><span class="p">(</span><span class="nv">Tags</span><span class="p">,</span> <span class="nv">L</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nn">lists</span><span class="p">:</span><span class="n">map</span><span class="p">(</span><span class="k">fun</span> <span class="p">(</span><span class="nv">Tag</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nn">proplists</span><span class="p">:</span><span class="n">get_value</span><span class="p">(</span><span class="nv">Tag</span><span class="p">,</span> <span class="nv">L</span><span class="p">)</span> <span class="k">end</span><span class="p">,</span> <span class="nv">Tags</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">parse_id3</span><span class="p">(</span><span class="o">&lt;&lt;</span><span class="nv">T</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">Ar</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">Al</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">Y</span><span class="p">:</span><span class="mi">4</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">C</span><span class="p">:</span><span class="mi">30</span><span class="o">/</span><span class="n">binary</span><span class="p">,</span><span class="nv">G</span><span class="p">:</span><span class="mi">1</span><span class="o">/</span><span class="n">binary</span><span class="o">&gt;&gt;</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">Clean</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="n">map</span><span class="p">(</span><span class="k">fun</span> <span class="n">cleanup</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="nv">T</span><span class="p">,</span> <span class="nv">Ar</span><span class="p">,</span> <span class="nv">Al</span><span class="p">,</span> <span class="nv">Y</span><span class="p">,</span> <span class="nv">C</span><span class="p">,</span> <span class="nv">G</span><span class="p">]),</span>
+</span><span class='line'>    <span class="p">{</span><span class="n">id3v1</span><span class="p">,</span> <span class="nn">lists</span><span class="p">:</span><span class="n">zip</span><span class="p">([</span><span class="n">title</span><span class="p">,</span> <span class="n">artist</span><span class="p">,</span> <span class="n">album</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">genre</span><span class="p">],</span> <span class="nv">Clean</span><span class="p">)}.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">cleanup</span><span class="p">(</span><span class="nv">T</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nn">lists</span><span class="p">:</span><span class="n">filter</span><span class="p">(</span><span class="k">fun</span><span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">X</span> <span class="o">=/=</span> <span class="mi">0</span> <span class="k">end</span><span class="p">,</span> <span class="nb">binary_to_list</span><span class="p">(</span><span class="nv">T</span><span class="p">)).</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lets see this in action in the Erlang shell (the MP3 comes from a similar exercise in <a href="http://rubylearning.org/class/course/category.php?id=2">RubyLearning’s core Ruby course</a>):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">147</span><span class="o">&gt;</span> <span class="c">% file doesn’t exist</span>
+</span><span class='line'><span class="mi">147</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">“</span><span class="p">.</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">txt</span><span class="err">”</span><span class="p">).</span>
+</span><span class='line'><span class="n">enoent</span>
+</span><span class='line'><span class="mi">148</span><span class="o">&gt;</span> <span class="c">% file is not an MP3</span>
+</span><span class='line'><span class="mi">148</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">“</span><span class="p">.</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">clj</span><span class="err">”</span><span class="p">).</span>
+</span><span class='line'><span class="n">no_id3</span>
+</span><span class='line'><span class="mi">150</span><span class="o">&gt;</span> <span class="c">% get the tags</span>
+</span><span class='line'><span class="mi">150</span><span class="o">&gt;</span> <span class="p">{</span><span class="n">id3v1</span><span class="p">,</span> <span class="nv">Tags</span><span class="p">}</span> <span class="o">=</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_id3</span><span class="p">(</span><span class="err">“</span><span class="n">song</span><span class="p">.</span><span class="n">mp3</span><span class="err">”</span><span class="p">).</span>
+</span><span class='line'><span class="p">{</span><span class="n">id3v1</span><span class="p">,[{</span><span class="n">title</span><span class="p">,</span><span class="err">“</span><span class="nv">Dancing</span> <span class="nv">Shoes</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">artist</span><span class="p">,</span><span class="err">“</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">album</span><span class="p">,</span><span class="err">“</span><span class="p">(</span><span class="nv">SUMMER</span> <span class="nv">HOLIDAY</span> <span class="mi">1963</span><span class="p">)</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">year</span><span class="p">,</span><span class="err">“</span><span class="mi">2000</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">comment</span><span class="p">,</span><span class="err">“</span><span class="nv">Rubylearningr</span><span class="err">”</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="n">genre</span><span class="p">,[</span><span class="mi">24</span><span class="p">]}]}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I’m too new to Erlang to judge if this is a proper use of a <a href="http://www.erlang.org/doc/man/proplists.html">property list</a>, but it allowed me to write <em>get_tags/2</em> as a wrapper for
+<em>proplists:get_value/2</em> which is rather nice:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">151</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_tags</span><span class="p">([</span><span class="n">artist</span><span class="p">],</span> <span class="nv">Tags</span><span class="p">).</span>
+</span><span class='line'><span class="p">[</span><span class="err">“</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">”</span><span class="p">]</span>
+</span><span class='line'><span class="mi">152</span><span class="o">&gt;</span> <span class="nn">mp3</span><span class="p">:</span><span class="nf">get_tags</span><span class="p">([</span><span class="n">artist</span><span class="p">,</span> <span class="n">year</span><span class="p">],</span> <span class="nv">Tags</span><span class="p">).</span>
+</span><span class='line'><span class="p">[</span><span class="err">“</span><span class="nv">Cliff</span> <span class="nv">Richard</span> <span class="ow">and</span> <span class="nv">The</span> <span class="nv">Shadows</span><span class="err">”</span><span class="p">,</span><span class="err">“</span><span class="mi">2000</span><span class="err">”</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Some initial help came from <a href="http://bigdingus.com/2007/05/27/id3v1-tags-via-erlang/">this related blog post</a>, but I think our versions came out quite differently in the end.</p>
+
+<p>All in all Erlang feels quite nice, except for minor syntactic quirks like different statement modifiers depending on context or the need to “extract” a local function with <em>fun</em> for the call in <em>lists:map/2</em>. Any feedback would be much appreciated, I’m sure there’s plenty of things I could have done better.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -694,43 +836,6 @@ There&#8217;s still quite a bit to do though: first I need to find a theme I lik
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/06/26/fullscreen-emacs-on-macos-x/">Fullscreen Emacs on MacOS X</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-06-26T00:00:00+07:00" pubdate data-updated="true">Jun 26<sup>th</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After years of being an avid Vim user, I recently succumbed to the temptation of Emacs and haven&#8217;t looked back since. Now that I slowly understand the concept of &#8220;living in Emacs&#8221;, I also wanted a fullscreen mode. Turns out you&#8217;ll have to patch and build Emacs yourself for that if you are on <span class="caps">OSX</span>, so here&#8217;s a step by step guide on what I did to build the current Git <span class="caps">HEAD</span> (&#8220;About Emacs&#8221; reports the version as 24.0.50 by the way) with fullscreen support, based on <a href="http://www.sanityinc.com/full-screen-support-for-cocoa-emacs-on-osx">Steve Purcell&#8217;s post</a> from last January:</p>
-<script src="http://gist.github.com/454018.js?file=gistfile1.sh"></script><p>To toggle fullscreen mode call &#8220;M-x ns-toggle-fullscreen&#8221;, which I have bound to &#8220;M-<span class="caps">RET</span>&#8221;. Looking forward to try this on 1920&#215;1080 at work on Monday!</p>
-<p>If you can&#8217;t be bothered to build Emacs yourself, you can <a href="http://dl.dropbox.com/u/8492251/Emacs.zip">download the version I built</a>.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/22">&larr; Older</a>
@@ -763,6 +868,10 @@ There&#8217;s still quite a bit to do though: first I need to find a theme I lik
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/15/information-overload-2015-03-15/">Information Overload 2015-03-15</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/13/review-programming-elixir/">Review: Programming Elixir</a>
       </li>
     
@@ -776,10 +885,6 @@ There&#8217;s still quite a bit to do though: first I need to find a theme I lik
     
       <li class="post">
         <a href="/blog/2015/02/22/information-overload-2015-02-22/">Information Overload 2015-02-22</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/15/information-overload-2015-02-15/">Information Overload 2015-02-15</a>
       </li>
     
   </ul>

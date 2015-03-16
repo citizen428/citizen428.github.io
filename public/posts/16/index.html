@@ -9,8 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="A few of my Git tricks, tips and workflowsReally nice collection of Git tricks by Markus Prinz.
-Booted &#8211; What really ails Italy?Great New &hellip;">
+  <meta name="description" content="Considering how many tools for getting up and running with Clojure are available nowadays (e.g. cljr, cake or Dejour) I&#8217;m not sure if anyone &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +83,42 @@ Booted &#8211; What really ails Italy?Great New &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/04/14/clojurex-is-back/">ClojureX Is Back</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-14T00:00:00+07:00" pubdate data-updated="true">Apr 14<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Considering how many tools for getting up and running with Clojure are available nowadays (e.g. <a href="https://github.com/liebke/cljr">cljr</a>, <a href="http://github.com/ninjudd/cake">cake</a> or <a href="https://github.com/russolsen/dejour">Dejour</a>) I&#8217;m not sure if anyone still cares, but as of today I&#8217;m actively working on <a href="https://github.com/citizen428/ClojureX">ClojureX</a> again.</p>
+<p>There&#8217;s not really a good reason for that, but I noticed I&#8217;ve been absent from the Clojure community for way too long and would like to change that again, so see this as a first step.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -599,144 +634,6 @@ Booted &#8211; What really ails Italy?Great New &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/02/09/smalltalks-method-finder-in-ruby/">Smalltalk&#8217;s Method Finder in Ruby</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-02-09T00:00:00+07:00" pubdate data-updated="true">Feb 9<sup>th</sup>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Update: The code is on Github now &ndash; <a href="https://github.com/citizen428/MethodFinder"><a href="https://github.com/citizen428/MethodFinder">https://github.com/citizen428/MethodFinder</a></a></p>
-
-<p>I changed the argument order (so you don&rsquo;t have to always specify empty arrays), added support for blocks, do some method filtering based on arity and ensure that the streams get properly restored. I left the original code in this post for reference though.
-</em></p>
-
-<p>I always was quite fond of Squeak&rsquo;s Method Finder, which let&rsquo;s you enter a receiver, arguments and the desired result and will show you all methods that will return this result when sent to the receiver with the provided arguments. Since I started mentoring courses at RubyLearning 2 years ago I often thought that something like this might be nice for the students of our core course.</p>
-
-<p>Last night I was about to start looking for an implementation of Method Finder in Ruby I found some years ago, but then decided to just write my own, which is more fun and doesn&rsquo;t take long. Here we go:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">MethodFinder</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">find</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">redirect_streams</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">found</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">select</span> <span class="k">do</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span>
-</span><span class='line'>      <span class="n">o</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Numeric</span><span class="p">)</span> <span class="p">?</span> <span class="n">obj</span> <span class="p">:</span> <span class="n">obj</span><span class="o">.</span><span class="n">dup</span>
-</span><span class='line'>      <span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="k">rescue</span> <span class="kp">nil</span><span class="p">)</span> <span class="o">==</span> <span class="n">res</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">restore_streams</span>
-</span><span class='line'>    <span class="n">found</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">redirect_streams</span>
-</span><span class='line'>    <span class="vi">@orig_stdout</span> <span class="o">=</span> <span class="vg">$stdout</span>
-</span><span class='line'>    <span class="vi">@orig_stderr</span> <span class="o">=</span> <span class="vg">$stderr</span>
-</span><span class='line'>    <span class="vg">$stdout</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;/dev/null&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="vg">$stderr</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;/dev/null&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">restore_streams</span>
-</span><span class='line'>    <span class="vg">$stdout</span> <span class="o">=</span> <span class="vi">@orig_stdout</span>
-</span><span class='line'>    <span class="vg">$stderr</span> <span class="o">=</span> <span class="vi">@orig_stderr</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nb">private_class_method</span> <span class="ss">:redirect_streams</span><span class="p">,</span> <span class="ss">:restore_streams</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here&rsquo;s how you use it:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;divmod&quot;</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span><span class="o">[/.</span><span class="n">/</span><span class="o">]</span><span class="p">,</span><span class="sx">%w(a b c)</span><span class="p">)</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;scan&quot;</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;aBc&quot;</span><span class="p">,</span><span class="o">[]</span><span class="p">,</span><span class="s2">&quot;AbC&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;swapcase!&quot;</span><span class="p">,</span> <span class="s2">&quot;swapcase&quot;</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;**&quot;</span><span class="o">]</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">6</span><span class="o">]</span><span class="p">,</span><span class="o">[]</span><span class="p">,</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;compact&quot;</span><span class="p">,</span> <span class="s2">&quot;compact!&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I think I&rsquo;ll pack this up as a gem for our course participants to install and use in their IRBs, but before that I might add/change a couple of things:</p>
-
-<ul>
-    <li>Exclude method&#8217;s based on arity to reduce the number of message sends. <em>Done.</em></li>
-    <li>Add support for blocks which is trivial. <em>Done.</em></li>
-    <li>Maybe switch the order of arguments and expected result, so you don&#8217;t always have to specify an empty array for the arguments. I am a bit torn on this one though, since I like having the argument list explicit. <em>Done.</em></li>
-    <li>Redirect <code>stdout</code> and <code>stderr</code> to a StringIO object instead of <code>/dev/null</code> unless someone tells me that the latter works on Windows. <em>Done.</em></li>
-    <li>Maybe add some sort of method blacklist so they won&#8217;t get tried in the block. <em>Done.</em></i>
-</ul>
-
-
-<p>This shouldn&rsquo;t take long, but still may have to wait for a couple of weeks because of a trip I&rsquo;m taking.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/17">&larr; Older</a>
@@ -769,6 +666,10 @@ Booted &#8211; What really ails Italy?Great New &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/15/information-overload-2015-03-15/">Information Overload 2015-03-15</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/13/review-programming-elixir/">Review: Programming Elixir</a>
       </li>
     
@@ -782,10 +683,6 @@ Booted &#8211; What really ails Italy?Great New &hellip;">
     
       <li class="post">
         <a href="/blog/2015/02/22/information-overload-2015-02-22/">Information Overload 2015-02-22</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/15/information-overload-2015-02-15/">Information Overload 2015-02-15</a>
       </li>
     
   </ul>
