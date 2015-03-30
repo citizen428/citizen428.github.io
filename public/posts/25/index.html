@@ -9,7 +9,10 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="After reading Scripting Java Libraries With Ruby on the Engine Yard blog, I decided to translate the two example programs to Clojure. Please keep in &hellip;">
+  <meta name="description" content="unsavory is now available as a gem, which means that you can comfortably install it like this:
+1
+2
+$ gem sources -a http://gems.github.com $ sudo gem &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +86,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/08/unsavory-now-available-as-gem/">Unsavory Now Available as Gem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-08T00:00:00+07:00" pubdate data-updated="true">Sep 8<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://github.com/citizen428/unsavory/tree/master">unsavory</a> is now available as a gem, which means that you can comfortably install it like this:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem sources -a http://gems.github.com 
+</span><span class='line'>$ sudo gem install citizen428-unsavory</span></code></pre></td></tr></table></div></figure></div><br />
+Rubygems will automatically create a wrapper-script named &#8220;unsavory&#8221;, which you can use to start the program so you finally can get rid of all these outdated bookmarks.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -689,89 +732,6 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/06/06/unsavory-%25e2%2580%2594-get-rid-of-stale-delicious-bookmarks/">Unsavory — Get Rid of Stale Delicious Bookmarks</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-06-06T00:00:00+07:00" pubdate data-updated="true">Jun 6<sup>th</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>While browsing through <a href="http://delicious.com/citizen428">my Delicious bookmarks</a> the other day, I realized that over time I had accumulated quite a few dead links (about 5% of my collection). I then looked for a <strong>simple</strong> tool to automatically remove them, but couldn&#8217;t find one that appealed to me, so I wrote my own script called <em>unsavory</em> which you can find on GitHub:</p>
-<p><a href="http://github.com/citizen428/unsavory/tree/master">http://github.com/citizen428/unsavory/tree/master</a></p>
-<p>It uses HTTParty to generate a list of all your bookmarks, which then get checked individually with Net::<span class="caps">HTTP</span>. Every link that returns an <span class="caps">HTTP</span> status code of 404 will automatically be removed (no questions asked, no undo), links with a status code other than 200 (OK) won&#8217;t be changed but will display some information in case you want to fix them manually. Here&#8217;s some example output (links anonymized for this post):</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-<span class='line-number'>4</span><br />
-<span class='line-number'>5</span><br />
-<span class='line-number'>6</span><br />
-<span class='line-number'>7</span><br />
-<span class='line-number'>8</span><br />
-<span class='line-number'>9</span><br />
-<span class='line-number'>10</span><br />
-<span class='line-number'>11</span><br />
-<span class='line-number'>12</span><br />
-<span class='line-number'>13</span><br />
-<span class='line-number'>14</span><br />
-<span class='line-number'>15</span><br />
-</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;Enter Delicious username: citizen428
-&lt;/span&gt;&lt;span class='line'&gt;  Enter Delicious password: *********
-&lt;/span&gt;&lt;span class='line'&gt;
-&lt;/span&gt;&lt;span class='line'&gt;  citizen428 has 664 bookmarks.
-&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0001: OK
-&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0002: OK
-&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0003: OK
-&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0004: OK
-&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0005: OK
-&lt;/span&gt;&lt;span class='line'&gt;  ...
-&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0013: 405: http://...
-&lt;/span&gt;&lt;span class='line'&gt;  ...
-&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0074: 302: http://...
-&lt;/span&gt;&lt;span class='line'&gt;  ...
-&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0086: Connection reset by peer - https://...&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p>Not bad for under 60 lines of code. :-) I hope this is useful to some of you, I do have some features I plan on adding to this in the future.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/26">&larr; Older</a>
@@ -804,6 +764,10 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/29/information-overload-2015-03-29/">Information Overload 2015-03-29</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/22/information-overload-2015-03-22/">Information Overload 2015-03-22</a>
       </li>
     
@@ -817,10 +781,6 @@ I hope this article helped to illustrate how easy it is to use the plethora of e
     
       <li class="post">
         <a href="/blog/2015/03/08/information-overload-2015-03-08/">Information Overload 2015-03-08</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/01/information-overload-2015-03-01/">Information Overload 2015-03-01</a>
       </li>
     
   </ul>
