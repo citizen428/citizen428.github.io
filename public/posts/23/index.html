@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="I love questions that start with &#8220;Wouldn&#8217;t it be nice if Ruby &lt;insert perceived missing feature&gt;?&#8221; because more often than &hellip;">
+  <meta name="description" content="As a little follow-up to my recent post on the Birthday Paradox I decided to clean up the code and also plot the relationship between group size and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -39,7 +39,7 @@
 
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
@@ -83,6 +83,47 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/04/15/incanter-and-the-birthday-paradox/">Incanter and the Birthday Paradox</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-15T00:00:00+07:00" pubdate data-updated="true">Apr 15<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As a little follow-up to <a href="http://citizen428.net/archives/423-The-Birthday-Paradox-in-Clojure.html">my recent post on the Birthday Paradox</a> I decided to clean up the code and also plot the relationship between group size and the probability of a shared birthday with <a href="http://incanter.org/">Incanter</a> (mostly because I wanted to show off 1.2&#8217;s <a href="http://data-sorcery.org/2010/04/04/new-chart-theme/">hot new default theme</a>).</p>
+<p>Code:<br />
+<script src="http://gist.github.com/365172.js?file=gistfile2.clj"></script></p>
+<p>Screenshot:</p>
+<p><a href="http://twitpic.com/1ftr8f" title="Birthday Paradox plotted by Incanter on Twitpic"><img src="http://twitpic.com/show/thumb/1ftr8f.png" width="250" height="250" border="1" alt="Birthday Paradox plotted by Incanter on Twitpic" /></a></p>
+<p>I just love how easy it is to explore problems like this with Clojure and then use Incanter go get some cute little plot too! :-)</p>
+<p><b>Update</b>: Incanter&#8217;s author David Liebke sent me <a href="http://twitter.com/liebke/status/12242784190">a version of the above that fits into one tweet</a> and <a href="https://gist.github.com/6aa65685559cdb5b6e5e">another one with a Latex annotation</a>! I updated my code to incorporate some of his suggestions.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -440,48 +481,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/11/bored-dont-worry-heres-a-new-programming-language/">Bored? Don&#8217;t Worry, Here&#8217;s a New Programming Language&#8230;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-11T00:00:00+07:00" pubdate data-updated="true">Jan 11<sup>th</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Recently &#8211; for various degrees of recent that is &#8211; people really seem to be into programming language design and development. You&#8217;ve probably all heard about <a href="http://www.scala-lang.org/">Scala</a>, <a href="http://clojure.org/">Clojure</a> and <a href="http://golang.org/">Go</a> already, but here are some more new languages which may be new to you (descriptions taken from the projects&#8217; websites):<br />
-<ul><br />
-<li><a href="http://code.google.com/p/anic/"><span class="caps">ANI</span></a>, <i>the experimental, high-performance, statically-safe, fully implicitly parallel, object-oriented, general-purpose dataflow programming language.</i></li><br />
-<li><a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> <i>is a little language that compiles into JavaScript. [&#8230;] it compiles into clean JavaScript (the good parts) that can use existing JavaScript libraries seamlessly, and passes through JSLint without warnings. The compiled output is quite readable — pretty-printed, with comments preserved intact.</i></li><br />
-<li><a href="http://www.factorcode.org/">Factor</a> <i>is a concatenative programming language where references to dynamically-typed values are passed between words (functions) on a stack. [It] is expressive, fast, supports interactive development and has a full-featured library. </i></li><br />
-<li><a href="http://ooc-lang.org/">ooc</a>, <i>a modern, object-oriented, functional-ish, high-level, low-level, sexy programming language. It&#8217;s translated to pure C with a source-to-source compiler. It strives to be powerful, modular, extensible, portable, yet simple and fast.</i></li><br />
-<li><a href="http://mth.github.com/yeti/">Yeti</a>, <i>ML style functional programming language, that runs on the <span class="caps">JVM</span>.</i></li><br /></p>
-</ul></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/24">&larr; Older</a>
@@ -514,6 +513,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/04/05/information-overload-2015-04-05/">Information Overload 2015-04-05</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/29/information-overload-2015-03-29/">Information Overload 2015-03-29</a>
       </li>
     
@@ -527,10 +530,6 @@
     
       <li class="post">
         <a href="/blog/2015/03/13/review-programming-elixir/">Review: Programming Elixir</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/08/information-overload-2015-03-08/">Information Overload 2015-03-08</a>
       </li>
     
   </ul>

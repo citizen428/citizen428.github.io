@@ -9,11 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Lectures seen on day 3:
-Nintendo DS
-Subverting AJAX
-Geschichte der Automaten, Androiden und Homunculi
-Ãœberwachungsdruck &#8211; einige Experimente &hellip;">
+  <meta name="description" content="Say you live in a country where access to information isn&#8217;t as free as it should be. Sure, there are a lot of free proxy servers you could use &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -43,7 +39,7 @@ Geschichte der Automaten, Androiden und Homunculi
 
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
@@ -87,6 +83,52 @@ Geschichte der Automaten, Androiden und Homunculi
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/01/ssh-socks5-for-a-better-world/">SSH & SOCKS5 for a Better World</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-01T00:00:00+07:00" pubdate data-updated="true">Jan 1<sup>st</sup>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Say you live in a country where access to information isn&#8217;t as free as it should be. Sure, there are a lot of free proxy servers you could use, but unfortunately they tend to get blocked after a while. <a href="http://tor.eff.org">Tor</a> would also be an option, but unfortunately it&#8217;s not always as fast as we&#8217;d like it to be (run more servers, folks!).</p>
+<p>That&#8217;s why I thought I&#8217;ll show you another possibility to get the information you want without somebody censoring it:<ol><br />
+<li>Get yourself a <a href="http://www.ductape.net/~mitja/freeunix.shtml">free <span class="caps">UNIX</span> shell account</a> which is accessible by <span class="caps">SSH</span> (consider using <a href="http://pkeck.myweb.uga.edu/ssh/"><span class="caps">SSH</span> keys</a> for authentification).</li></p>
+<li>Use ssh&#8217;s cool &#8220;-D&#8221; option to start a local <a href="http://en.wikipedia.org/wiki/SOCKS"><span class="caps">SOCKS</span> proxy</a>.<br />
+<br />
+Example: ssh -D 9999 youraccount@somefreeshellserver.com. Consider adding this to some startup script to make life easier in the future.</li>
+<li>Configure your browser to use localhost:9999 as a SOCKS5 proxy. If you&#8217;re using Firefox, consider using <a href="https://addons.mozilla.org/firefox/2648/">MM3-ProxySwitch</a> or <a href="http://foxyproxy.mozdev.org/">FoxyProxy</a>.</li>
+<li>Voila, from now on every connection you make will go over an ecrypted connection to the <span class="caps">SSH</span> server which unlike the site you really want to access isn&#8217;t blocked. The server will then perform your originally planned connection and forward the results to you (once again encrypted and not coming from a blocked IP). And of course this doesn&#8217;t only work with browsers, but all applications supporting <span class="caps">SOCKS</span> proxies. Additionally <a href="http://tsocks.sourceforge.net/">tsocks</a> may help with applications which normally don&#8217;t support <span class="caps">SOCKS</span> servers.</li>
+<li>If you experience connection problems and are suspecting that someone has tampered with the name servers in order to deliver bogus results for certain sites (bad government, no cookie!) make sure that the option &#8220;network.proxy.socks_remote_dns&#8221; in Firefox&#8217;s about:config is set to true, because then <span class="caps">DNS</span> lookups will be performed at the <span class="caps">SSH</span> server.</li>
+</ol>
+<p>That&quot;s it, please leave a commentary if you have any questions or suggestions regarding this little tip or if you just want to provide me with some feedback how this worked for you.</p>
+<p>Sweetmorn, Chaos 1, 3173 <span class="caps">YOLD</span></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -479,47 +521,6 @@ Remember, if you wish, this is just a Christmas song</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2006/12/10/blog-tweaking/">Blog Tweaking</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2006-12-10T00:00:00+07:00" pubdate data-updated="true">Dec 10<sup>th</sup>, 2006</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This evening I found some time to work on my blog again, so here&#8217;s a quick rundown of things that changed:</p>
-<ul>
-<li><strong>Share and save:</strong> After reading the templates used by <a href="http://s9y.org">Serendipity</a> to get a hang of <a href="http://smarty.php.net/">Smarty</a>, I&#8217;ve edited entries.tpl to include a mailto link to share entries, as well as the possibility to digg posts or add them to del.icio.us. There ya go, Web 2.0 lovers.</li>
-<li><strong>Feed love:</strong> Syndication rocks, especially when using <a href="http://www.feedburner.com">Feedburner</a> which offers great features like the Link Splicer which automatically creates this &#8220;Links for the day&#8221; entries out of my del.icio.us bookmarks. But since I also got an account on <a href="http://citizen428.suprglu.com/">SuprGlu</a>, I&#8217;ve decided to additionally provide you with the <a href="http://feeds.feedburner.com/citizen428stalker">citizen428stalker</a> feed, which additionally contains my flickr photos, my Plazes traze, info from 43 Things and 43 Places and much more. So if you&#8217;re up for the whole citizen428 package, you might want to give this new feed a try.</li>
-</ul>
-<p>I haven&#8217;t come around to do any more <span class="caps">CSS</span> changes yet, but that&#8217;s next on my list.</p>
-<p>Prickle-Prickle, The Aftermath 52, 3172 <span class="caps">YOLD</span></p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/34">&larr; Older</a>
@@ -552,6 +553,10 @@ Remember, if you wish, this is just a Christmas song</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/04/05/information-overload-2015-04-05/">Information Overload 2015-04-05</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/29/information-overload-2015-03-29/">Information Overload 2015-03-29</a>
       </li>
     
@@ -565,10 +570,6 @@ Remember, if you wish, this is just a Christmas song</p>
     
       <li class="post">
         <a href="/blog/2015/03/13/review-programming-elixir/">Review: Programming Elixir</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/08/information-overload-2015-03-08/">Information Overload 2015-03-08</a>
       </li>
     
   </ul>
