@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -28,7 +28,7 @@
 
 <p>Here are the relevant parts of my Emacs config, with extra comments added for this post:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -60,12 +60,6 @@
 <span class='line-number'>30</span>
 <span class='line-number'>31</span>
 <span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
 </pre></td><td class='code'><pre><code class='scheme'><span class='line'><span class="p">(</span><span class="nf">require</span> <span class="nv">&amp;lsquo</span><span class="c1">;twittering-mode)</span>
 </span><span class='line'><span class="c1">; update every 10 minutes</span>
 </span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-timer-interval</span> <span class="mi">600</span><span class="p">)</span>
@@ -74,37 +68,31 @@
 </span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-show-minibuffer-length</span> <span class="nv">t</span><span class="p">)</span>
 </span><span class='line'><span class="c1">; I added is.gd support myself, pull request sent.</span>
 </span><span class='line'><span class="c1">; standard options are tinyurl and toly</span>
-</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-tinyurl-service</span> <span class="ss">&#39;is</span><span class="o">.</span><span class="nv">gd</span><span class="p">)</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-tinyurl-service</span> <span class="nv">&amp;</span><span class="o">#</span><span class="mi">8216</span><span class="c1">;is.gd)</span>
 </span><span class='line'><span class="c1">; See &lt;a href=&quot;http://www.reverttoconsole.com/blog/nix/twitter-mode-for-emacs-with-oauth/&quot;&gt;http://www.reverttoconsole.com/blog/nix/twitter-mode-for-emacs-with-oauth/&lt;/a&gt;</span>
 </span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-master-password</span> <span class="nv">t</span><span class="p">)</span><span class="nv">&lt;/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="nv">&lt;p&gt;</span><span class="c1">; This tells twittering-mode which time line buffers</span>
 </span><span class='line'><span class="c1">; to open when starting</span>
-</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-initial-timeline-spec-string&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">&lt;pre&gt;&lt;code&gt;</span>  <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;:friends&quot;</span>
-</span><span class='line'>    <span class="s">&quot;:replies&quot;</span>
-</span><span class='line'>    <span class="s">&quot;:direct_messages&quot;</span>
-</span><span class='line'>    <span class="s">&quot;:search/clojure/&quot;</span>
-</span><span class='line'>    <span class="s">&quot;:search/#jlang/&quot;</span>
-</span><span class='line'>    <span class="s">&quot;citizen428/tupaleros&quot;</span><span class="p">))</span>
-</span><span class='line'><span class="nv">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-initial-timeline-spec-string</span>
+</span><span class='line'>      <span class="nv">&amp;lsquo</span><span class="c1">;(&amp;ldquo;:friends&amp;rdquo;</span>
+</span><span class='line'>        <span class="nv">&amp;ldquo</span><span class="c1">;:replies&amp;rdquo;</span>
+</span><span class='line'>        <span class="nv">&amp;ldquo</span><span class="c1">;:direct_messages&amp;rdquo;</span>
+</span><span class='line'>        <span class="nv">&amp;ldquo</span><span class="c1">;:search/clojure/&amp;rdquo;</span>
+</span><span class='line'>        <span class="nv">&amp;ldquo</span><span class="c1">;:search/#jlang/&amp;rdquo;</span>
+</span><span class='line'>        <span class="nv">&amp;ldquo</span><span class="c1">;citizen428/tupaleros&amp;rdquo;))&lt;/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="nv">&lt;p&gt;</span><span class="c1">; some key bindings</span>
-</span><span class='line'><span class="p">(</span><span class="nf">add-hook</span> <span class="nv">&amp;lsquo</span><span class="c1">;twittering-mode-hook&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">&lt;pre&gt;&lt;code&gt;</span>      <span class="p">(</span><span class="k">lambda </span><span class="p">()</span>
-</span><span class='line'>        <span class="p">(</span><span class="nf">mapc</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">pair</span><span class="p">)</span>
-</span><span class='line'>                <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">key</span> <span class="p">(</span><span class="nb">car </span><span class="nv">pair</span><span class="p">))</span>
-</span><span class='line'>                      <span class="p">(</span><span class="nf">func</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">pair</span><span class="p">)))</span>
-</span><span class='line'>                  <span class="p">(</span><span class="nf">define-key</span> <span class="nv">twittering-mode-map</span>
-</span><span class='line'>                    <span class="p">(</span><span class="nf">read-kbd-macro</span> <span class="nv">key</span><span class="p">)</span> <span class="nv">func</span><span class="p">)))</span>
-</span><span class='line'>              <span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;R&quot;</span> <span class="o">.</span> <span class="nv">twittering-native-retweet</span><span class="p">)</span>
-</span><span class='line'>                <span class="p">(</span><span class="s">&quot;l&quot;</span> <span class="o">.</span> <span class="nv">twittering-goto-next-thing</span><span class="p">)))))</span>
-</span><span class='line'><span class="nv">&lt;/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">&lt;p&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'><span class="p">(</span><span class="nf">add-hook</span> <span class="nv">&amp;lsquo</span><span class="c1">;twittering-mode-hook</span>
+</span><span class='line'>          <span class="p">(</span><span class="k">lambda </span><span class="p">()</span>
+</span><span class='line'>            <span class="p">(</span><span class="nf">mapc</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">pair</span><span class="p">)</span>
+</span><span class='line'>                    <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">key</span> <span class="p">(</span><span class="nb">car </span><span class="nv">pair</span><span class="p">))</span>
+</span><span class='line'>                          <span class="p">(</span><span class="nf">func</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">pair</span><span class="p">)))</span>
+</span><span class='line'>                      <span class="p">(</span><span class="nf">define-key</span> <span class="nv">twittering-mode-map</span>
+</span><span class='line'>                        <span class="p">(</span><span class="nf">read-kbd-macro</span> <span class="nv">key</span><span class="p">)</span> <span class="nv">func</span><span class="p">)))</span>
+</span><span class='line'>                  <span class="nv">&amp;rsquo</span><span class="c1">;((&amp;ldquo;R&amp;rdquo; . twittering-native-retweet)</span>
+</span><span class='line'>                    <span class="p">(</span><span class="nf">&amp;ldquo</span><span class="c1">;l&amp;rdquo; . twittering-goto-next-thing)))))</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p><strong>TImelines</strong></p>
 
@@ -125,7 +113,7 @@
     <id>http://www.citizen428.net/blog/2010/09/22/emacsclient-on-os-x</id>
     <content type="html"><![CDATA[<p>If you are running a non-system Emacs on OS X and have tried to use &ldquo;emacsclient&rdquo;, you may have seen the following error message despite having started the Emacs server:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -144,7 +132,7 @@
 </span><span class='line'>--alternate-editor (or environment variable ALTERNATE_EDITOR)
 </span><span class='line'>&lt;/code>&lt;/pre>
 </span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></p>
 
 <p>This doesn&rsquo;t work because you are invoking &ldquo;/usr/bin/emacsclient&rdquo; which came with the OS, instead of &ldquo;/Applications/Emacs.app/Contents/MacOS/bin/emacsclient&rdquo;. This can easily be fixed by symlinking the latter to &ldquo;/usr/local/bin/emacsclient&rdquo; and making sure that &ldquo;/usr/local/bin&rdquo; is listed in your path before &ldquo;/usr/bin&rdquo;.</p>
 
@@ -192,7 +180,7 @@
 <p>ClojureX can</p>
 
 <ul>
-<li> download and build the source code for Clojure, "clojure-contrib":http://github.com/richhickey/clojure-contrib/tree/master and "JLine":http://jline.sourceforge.net/ (a readline like library for Java)</li>
+<li> download and build the source code for Clojure, &#8220;clojure-contrib&#8221;:http://github.com/richhickey/clojure-contrib/tree/master and &#8220;JLine&#8221;:http://jline.sourceforge.net/ (a readline like library for Java)</li>
 
 <li> download editor support packages for TextMate and Emacs</li>
 
@@ -200,9 +188,9 @@
 
 <li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
 
-<li> configure Emacs to use "clojure-mode":http://github.com/jochu/clojure-mode/tree/master, "Slime":http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
+<li> configure Emacs to use &#8220;clojure-mode&#8221;:http://github.com/jochu/clojure-mode/tree/master, &#8220;Slime&#8221;:http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
 
-<li> keep your Clojure installation up to date via a simple "git submodule update && ant"</li>
+<li> keep your Clojure installation up to date via a simple &#8220;git submodule update && ant&#8221;</li>
 </ul>
 
 

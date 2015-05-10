@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scifi | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/scifi/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -21,15 +21,15 @@
     <content type="html"><![CDATA[<p>Being sick this week I had a lot of time to read, but most if it went into Bruce Sterling&rsquo;s &ldquo;Hacker Crackdown&rdquo;:<a href="http://www.mit.edu/hacker/hacker.html">http://www.mit.edu/hacker/hacker.html</a> and Joe Dunthorne&rsquo;s &ldquo;Submarine&rdquo;:<a href="http://www.amazon.com/Submarine-Joe-Dunthorne/dp/0241143969.">http://www.amazon.com/Submarine-Joe-Dunthorne/dp/0241143969.</a> Anyway, here we go:</p>
 
 <ul>
-<li>"Did 'Star Wars' become a toy story? ":http://herocomplex.latimes.com/2010/08/12/star-wars-was-born-a-long-time-ago-but-not-all-that-far-far-away-in-1972-filmmakers-george-lucas-and-gary-kurtz-wer/<br>I admit to being quite a Star Wars nerd, the "Han shot first":http://en.wikipedia.org/wiki/Han_shot_first kind who pretends Episode I-III never happened and who actually sat through the entire "Holiday special":http://en.wikipedia.org/wiki/The_Star_Wars_Holiday_Special. If you are remotely like me, this article providing some insider information by "Gary Kurtz":http://en.wikipedia.org/wiki/Gary_Kurtz will be quite an interesting read.</li>
-<li>"Computers and Mathematical Notation":http://www.jsoftware.com/papers/camn.htm<br>Interesting thoughts on how programming languages (<a href="http://en.wikipedia.org/wiki/J_(programming_language">J</a> in this case) could influence mathematical notation by Turing Award winner "Kenneth E. Iverson":http://en.wikipedia.org/wiki/Kenneth_E._Iverson</li>
-<li>"Common Programmer Health Problems":http://sheddingbikes.com/posts/1281257293.html<br>Some sane advice we all occasionally are guilty of ignoring.</li>
-<li>"We Are All Talk Radio Hosts":http://www.wired.com/wiredscience/2010/08/we-are-all-talk-radio-hosts/<br>On strawberry jam, reasoning and cognitive bias.</li>
-<li>"The Millennium Development Goal that really does work has been forgotten":http://aidwatchers.com/2010/09/the-millennium-development-goal-that-really-does-work-has-been-forgotten/<br>Sure, we'll help you. Just not in a way so that you eventually can help yourself.</li>
-<li>"The Anthropology of Hackers":http://www.theatlantic.com/technology/archive/2010/09/the-anthropology-of-hackers/63308/<br>Outline of anthropologist Gabriella Coleman's course about hacker culture at NYU.</li>
-<li>"Ten things to look for in a circumvention tool":https://blog.torproject.org/blog/ten-things-look-circumvention-tool<br>By Roger Dingledine of Tor fame.</li>
-<li>"This Ain't Your Daddy's Wumpus":http://nostarch.com/download/Lisp08.pdf<br>Example chapter from the upcoming book "Land of Lisp":http://nostarch.com/lisp.htm (PDF).</li>
-<li>"In Arabian Desert, a Sustainable City Rises":http://www.nytimes.com/2010/09/26/arts/design/26masdar.html?_r=1&hp<br>The first residents are starting to move into "Masdar":http://en.wikipedia.org/wiki/Masdar_City, a planned city built in Abu Dhabi. There seems to be some discussion about how much of a "real" city Masdar will be, but then Dubai didn't feel like a "real" place to me either, but more like a soulless agglomeration of skyscrapers and shopping malls.</li>
+<li>&#8220;Did &#8216;Star Wars&#8217; become a toy story? &#8220;:http://herocomplex.latimes.com/2010/08/12/star-wars-was-born-a-long-time-ago-but-not-all-that-far-far-away-in-1972-filmmakers-george-lucas-and-gary-kurtz-wer/<br>I admit to being quite a Star Wars nerd, the &#8220;Han shot first&#8221;:http://en.wikipedia.org/wiki/Han_shot_first kind who pretends Episode I-III never happened and who actually sat through the entire &#8220;Holiday special&#8221;:http://en.wikipedia.org/wiki/The_Star_Wars_Holiday_Special. If you are remotely like me, this article providing some insider information by &#8220;Gary Kurtz&#8221;:http://en.wikipedia.org/wiki/Gary_Kurtz will be quite an interesting read.</li>
+<li>&#8220;Computers and Mathematical Notation&#8221;:http://www.jsoftware.com/papers/camn.htm<br>Interesting thoughts on how programming languages (<a href="http://en.wikipedia.org/wiki/J_(programming_language">J</a> in this case) could influence mathematical notation by Turing Award winner &#8220;Kenneth E. Iverson&#8221;:http://en.wikipedia.org/wiki/Kenneth_E._Iverson</li>
+<li>&#8220;Common Programmer Health Problems&#8221;:http://sheddingbikes.com/posts/1281257293.html<br>Some sane advice we all occasionally are guilty of ignoring.</li>
+<li>&#8220;We Are All Talk Radio Hosts&#8221;:http://www.wired.com/wiredscience/2010/08/we-are-all-talk-radio-hosts/<br>On strawberry jam, reasoning and cognitive bias.</li>
+<li>&#8220;The Millennium Development Goal that really does work has been forgotten&#8221;:http://aidwatchers.com/2010/09/the-millennium-development-goal-that-really-does-work-has-been-forgotten/<br>Sure, we&#8217;ll help you. Just not in a way so that you eventually can help yourself.</li>
+<li>&#8220;The Anthropology of Hackers&#8221;:http://www.theatlantic.com/technology/archive/2010/09/the-anthropology-of-hackers/63308/<br>Outline of anthropologist Gabriella Coleman&#8217;s course about hacker culture at NYU.</li>
+<li>&#8220;Ten things to look for in a circumvention tool&#8221;:https://blog.torproject.org/blog/ten-things-look-circumvention-tool<br>By Roger Dingledine of Tor fame.</li>
+<li>&#8220;This Ain&#8217;t Your Daddy&#8217;s Wumpus&#8221;:http://nostarch.com/download/Lisp08.pdf<br>Example chapter from the upcoming book &#8220;Land of Lisp&#8221;:http://nostarch.com/lisp.htm (PDF).</li>
+<li>&#8220;In Arabian Desert, a Sustainable City Rises&#8221;:http://www.nytimes.com/2010/09/26/arts/design/26masdar.html?_r=1&hp<br>The first residents are starting to move into &#8220;Masdar&#8221;:http://en.wikipedia.org/wiki/Masdar_City, a planned city built in Abu Dhabi. There seems to be some discussion about how much of a &#8220;real&#8221; city Masdar will be, but then Dubai didn&#8217;t feel like a &#8220;real&#8221; place to me either, but more like a soulless agglomeration of skyscrapers and shopping malls.</li>
 </ul>
 
 ]]></content>

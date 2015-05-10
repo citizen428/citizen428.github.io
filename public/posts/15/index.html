@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Take a look at the world&#8217;s oldest mathematical objectA short article about the Ishango bone, apparently the &quot;oldest known object &hellip;">
+  <meta name="description" content="Yesterday afternoon I decided it&#8217;s about time I finally learn how to write Ruby C extensions, so I went ahead and rewrote one of our &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,186 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/24/ruby-going-to-c-side/">Ruby: Going to the C Side</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-24T00:00:00+07:00" pubdate data-updated="true">Jun 24<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yesterday afternoon I decided it&#8217;s about time I finally learn how to write Ruby C extensions, so I went ahead and rewrote one of our <a href="http://www.rubylearning.org/class/">RubyLearning.org</a> exercises in C. Here&#8217;s the exercise description:</p>
+<blockquote><p>Write a class called Person, that has balance as an instance variable and<br/>the following public method: show_balance.</p><p>I shall create the Person object as follows:</p><p>p = Person.new(40000)<br/>puts p.show_balance # calling the method</p></blockquote>
+<p>Here&#8217;s the program in C, with relevant function signatures included as comments:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+<span class='line-number'>15</span><br />
+<span class='line-number'>16</span><br />
+<span class='line-number'>17</span><br />
+<span class='line-number'>18</span><br />
+<span class='line-number'>19</span><br />
+<span class='line-number'>20</span><br />
+<span class='line-number'>21</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt;&lt;span class="cp"&gt;#include &amp;lt;ruby.h&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="nf"&gt;initialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_iv_set(VALUE obj, char *name, VALUE value)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_iv_set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="nf"&gt;show_balance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_iv_get(VALUE obj, char *name)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;rb_iv_get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Init_person&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_define_class(char *name, VALUE superclass)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;cPerson&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rb_define_class&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Person&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rb_cObject&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// void rb_define_method(VALUE classmod, char *name, VALUE(*func)(), int argc)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_define_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cPerson&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;initialize&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;initialize&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_define_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cPerson&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;show_balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;show_balance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>I think the code is very self-explanatory, almost like writing Ruby in C. As you can see we define a class called &#8220;Person&#8221; in the &#8220;Init_person&#8221; function (which is called by Ruby when it loads our module), where we add the functions as instance methods with &#8220;rb_define_method&#8221;. To compile this, we need an extconf.rb, which contains the following:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt;&lt;span class="n"&gt;require&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;mkmf&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;extension_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;create_makefile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extension_name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Now we can build and run it:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+</pre></td><td class='code'><pre><code class='bash'>&lt;span class='line'&gt;→ ruby extconf.rb
+&lt;/span&gt;&lt;span class='line'&gt;creating Makefile
+&lt;/span&gt;&lt;span class='line'&gt;→ make
+&lt;/span&gt;&lt;span class='line'&gt;gcc -I. &lt;span class="o"&gt;[&lt;/span&gt;output snipped&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;→ irb
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; &lt;span class="nv"&gt;$:&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class="s1"&gt;&amp;#39;.&amp;#39;&lt;/span&gt; &lt;span class="c"&gt;#=&amp;gt; [..., &amp;#39;.&amp;#39;]&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; require &lt;span class="s1"&gt;&amp;#39;person&amp;#39;&lt;/span&gt; &lt;span class="c"&gt;#=&amp;gt; true&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; &lt;span class="nv"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Person.new&lt;span class="o"&gt;(&lt;/span&gt;3000&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="c"&gt;#=&amp;gt; #&amp;lt;Person:0x00000100a01940 @balance=3000&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&amp;gt;&amp;gt; p.show_balance &lt;span class="c"&gt;#=&amp;gt; 3000&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>As you can see everything works as if we had defined the class in Ruby. Let&#8217;s add another method to deposit some money, which gives us a chance to demonstrate &#8220;rb_funcall&#8221;:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="nf"&gt;deposit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="c1"&gt;// VALUE rb_funcall(VALUE recv, ID id, int argc, ... )&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rb_funcall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rb_iv_get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;rb_intern&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;+&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;rb_iv_set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;@balance&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>We also need to add this function as a method in &#8220;Init_person&#8221;:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+</pre></td><td class='code'><pre><code class='c'>&lt;span class='line'&gt; &lt;span class="n"&gt;rb_define_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cPerson&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;deposit&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;deposit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Does it work?</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deposit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#=&amp;gt; 3400&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>It does and we&#8217;ve successfully created a Ruby class from C. Probably not the type of class you&#8217;d really implement this way, but good enough as an example.</p>
+<p>Recommended reading:</p>
+<ul>
+<li><a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/ext_ruby.html">Extending Ruby</a> from the PickAxe</li>
+<li>Mark Volkmann&#8217;s presentation <a href="http://java.ociweb.com/mark/NFJS/RubyCExtensions.pdf">Ruby C Extensions</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -642,52 +822,6 @@ Brian Beckman recorded an <a href="http://channel9.msdn.com/Shows/Going+Deep/Bri
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/05/01/information-overload-2011-05-01/">Information Overload 2011-05-01</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-01T00:00:00+07:00" pubdate data-updated="true">May 1<sup>st</sup>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://web.mit.edu/newsoffice/2011/solar-virus-0425.html">Solar power goes viral</a><br>A genetically modified virus increases the efficiency of solar cells.</li>
-<li><a href="http://ajr.org/Article.asp?id=5078">Digging Deeper</a><br>In a time where it seems like a lot of journalists just seem to copy whatever they find online, it&#8217;s refreshing when a journalist from a small newspaper &#8211; who above all is a science and data geek &#8211; wins a Pulitzer Price.</li>
-<li><a href="http://www.guardian.co.uk/world/2011/apr/25/guantanamo-files-lift-lid-prison">Guantanamo leaks lift lid on world&#8217;s most controversial prison</a><br>The Guardian covers the Guantanamo leaks, Including a <a href="http://www.guardian.co.uk/world/video/2011/apr/25/guantanamo-bay-files-reprieve-video">video</a> interview with Clive Stafford Smith, legal director of Reprieve, as well as an <a href="http://www.guardian.co.uk/world/interactive/2011/apr/25/guantanamo-files-guantanamo-bay">interactive presentation</a> of all the prisoners&#8217; files.</li>
-<li><a href="http://www.miketuritzin.com/writing/eating-healthily-for-3-a-day/">Eating Healthily for $3 a Day</a><br>Bad eating habits are quite common in the hacker community, so I decided to include this link. For me the main problem when it comes to healthy eating is having to work, but even there you can manage without too much overhead.</li>
-<li><a href="http://v.cx/2010/04/feynman-brazil-education">Richard Feynman on education in Brazil</a><br>A good read. During my academic life I met enough people who considered memorizing more important than understanding.</li>
-<li><a href="http://www.newyorker.com/reporting/2011/05/02/110502fa_fact_lizza?printable=true">The Consequentialist</a><br>A very long and detailed article by the New Yorker that helps better understand the Obama administration&#8217;s foreign policy.</li>
-<li><a href="http://www.michaeleisen.org/blog/?p=358">Amazon&#8217;s $23,698,655.93 book about flies</a><br>On the wonders of algorithmic pricing.</li>
-<li><a href="http://www.wired.com/science/discoveries/news/2006/01/70015?currentPage=1"><span class="caps">LSD</span>: The Geek&#8217;s Wonder Drug?</a><br>This article is already 5 years old and I feel we still haven&#8217;t moved forward in rehabilitating certain drugs and using them for good.</li>
-<li><a href="http://www.codinghorror.com/blog/2006/05/the-ten-commandments-of-egoless-programming.html">The Ten Commandments of Egoless Programming</a><br>Another article from 2006, but still as true today as it was back then.</li>
-<li><a href="http://www.irishtimes.com/newspaper/finance/2011/0429/1224295670955.html?via=mr">Programming may one day be about getting the maths right</a><br>Yes, I&#8217;m an FP aficionado, so what? ;-)</li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/16">&larr; Older</a>
@@ -720,6 +854,10 @@ Brian Beckman recorded an <a href="http://channel9.msdn.com/Shows/Going+Deep/Bri
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/04/05/information-overload-2015-04-05/">Information Overload 2015-04-05</a>
       </li>
     
@@ -733,10 +871,6 @@ Brian Beckman recorded an <a href="http://channel9.msdn.com/Shows/Going+Deep/Bri
     
       <li class="post">
         <a href="/blog/2015/03/15/information-overload-2015-03-15/">Information Overload 2015-03-15</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/13/review-programming-elixir/">Review: Programming Elixir</a>
       </li>
     
   </ul>

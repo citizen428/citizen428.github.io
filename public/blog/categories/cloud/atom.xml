@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cloud | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/cloud/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -91,7 +91,7 @@
 <li><a href="http://www.cloudera.com/blog/2009/12/17/7-tips-for-improving-mapreduce-performance/">7 Tips for Improving MapReduce Performance</a></li>
 <li><a href="http://www.slideshare.net/cwensel/sam-sig-hadoop-architecture-mapreduce-patterns-and-best-practices-with-cascading">SAM SIG: Hadoop architecture, MapReduce patterns, and best practices with Cascading</a></li>
 <li><a href="http://www.cascading.org/">Cascading - API for defining and executing complex, scale-free, and fault tolerant data processing workflows on a Hadoop cluster</a></li>
-<li><a href="http://www.cloudera.com/blog/2010/03/why-europes-largest-ad-targeting-platform-uses-hadoop/">Why Europe's Largest Ad Targeting Platform Uses Hadoop</a></li>
+<li><a href="http://www.cloudera.com/blog/2010/03/why-europes-largest-ad-targeting-platform-uses-hadoop/">Why Europe&#8217;s Largest Ad Targeting Platform Uses Hadoop</a></li>
 </ul>
 
 
@@ -131,7 +131,7 @@
 
 <p><a href="http://gist.github.com/314445">Cloud Links</a></p>
 
-<p>It&rsquo;s just a markdown file copied into a Gist, so if you want to add any links just fork away! :&ndash;)</p>
+<p>It&rsquo;s just a markdown file copied into a Gist, so if you want to add any links just fork away! :-)</p>
 ]]></content>
   </entry>
   

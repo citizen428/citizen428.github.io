@@ -4,7 +4,7 @@
   <title><![CDATA[Category: regex | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/regex/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -24,7 +24,7 @@
 
 <p>The job name can consist of several words containing alphanumeric characters, separated by either a space, an underscore or a dash. Here&rsquo;s the crucial part of the final solution I came up with:</p>
 
-<p><b>((?:\w+[&ndash; ]?)<em>\w</em>)</b></p>
+<p><b>((?:\w+[- ]?)<em>\w</em>)</b></p>
 
 <p>When you use this in a longer regex that also filters out the beginning garbage, this works like a charm even for strange job names as &ldquo;foo-bar_baz qux_ madness&rdquo;.</p>
 

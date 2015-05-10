@@ -4,7 +4,7 @@
   <title><![CDATA[Category: videos | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/videos/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -21,37 +21,33 @@
     <content type="html"><![CDATA[<p>&hellip;some random stuff I wanted to blog about for quite some time already:</p>
 
 <ul>
-<li>*Pearl Jam concert (September 25th@Wiener Stadthalle):* I have to admit that I'm not the biggest "PJ":http://pearljam.com/ fan, but since Silvia was nice enough to invite me (thanks by the way!), I went to see one of the best concerts in a long time! The band and the atmosphere was great and I was quite surprised to see the traditionally rather lame crowd in Vienna so excited! (<a href="http://www.flickr.com/photos/citizen428/sets/72157594302284739">pics@flickr</a>)</li>
+<li>*Pearl Jam concert (September 25th@Wiener Stadthalle):* I have to admit that I&#8217;m not the biggest &#8220;PJ&#8221;:http://pearljam.com/ fan, but since Silvia was nice enough to invite me (thanks by the way!), I went to see one of the best concerts in a long time! The band and the atmosphere was great and I was quite surprised to see the traditionally rather lame crowd in Vienna so excited! (<a href="http://www.flickr.com/photos/citizen428/sets/72157594302284739">pics@flickr</a>)</li>
 
-<li>*Internet Explorer on Linux:* As we all know, IE sucks donkey balls. But some sites who don't care about standards - and whose developers definitely should be first against the wall when the revolution comes - only work with Microsoft's browser. But don't despair, help is available in form of "IEs4Linux":http://www.tatanka.com.br/ies4linux/page/Main_Page, a shellscript which downloads IE and automatically configures Wine for it. Flash 9 is also included and if you really insist on it, you can run 3 different versions of IE at the same time (5, 5.5 and 6), which is pretty handy for web developers. I have IE6 installed on my Kubuntu system for quite a while now, and in the rare cases I really need it, it works like a charm.</li>
+<li>*Internet Explorer on Linux:* As we all know, IE sucks donkey balls. But some sites who don&#8217;t care about standards - and whose developers definitely should be first against the wall when the revolution comes - only work with Microsoft&#8217;s browser. But don&#8217;t despair, help is available in form of &#8220;IEs4Linux&#8221;:http://www.tatanka.com.br/ies4linux/page/Main_Page, a shellscript which downloads IE and automatically configures Wine for it. Flash 9 is also included and if you really insist on it, you can run 3 different versions of IE at the same time (5, 5.5 and 6), which is pretty handy for web developers. I have IE6 installed on my Kubuntu system for quite a while now, and in the rare cases I really need it, it works like a charm.</li>
 
-<li>*Pokerstars client on Linux:* Most online Poker sites don't seem to be interested in Linux users, since the clients they offer are mostly only available for Windows. Some of them at least offer Java clients, but with my general dislike for most things Java and my strong preference of "Pokerstars":http://www.pokerstars.com/ over other Poker sites, I gave the client a shot under Wine and was really pleased to find out that it just works (tm). Of course it would be much nicer to have a native client, but for the time being I'm happy enough with this workaround.</li>
+<li>*Pokerstars client on Linux:* Most online Poker sites don&#8217;t seem to be interested in Linux users, since the clients they offer are mostly only available for Windows. Some of them at least offer Java clients, but with my general dislike for most things Java and my strong preference of &#8220;Pokerstars&#8221;:http://www.pokerstars.com/ over other Poker sites, I gave the client a shot under Wine and was really pleased to find out that it just works (tm). Of course it would be much nicer to have a native client, but for the time being I&#8217;m happy enough with this workaround.</li>
 
 <li>*UEFA cup Pasching vs. Livorno@Pasching:* Went with some other Sportclub fans to see the UEFA cup match Pasching vs. Livorno in Pasching. It was a great day, and I still laugh my ass off when I think about the policemen and -women who found our little group of around 25 people rooting for the away team  (as Austrian you were only able to buy tickets for the home sectors) so frightening, that they not only surrounded us for the whole match, but even put on their riot gear. And there I was, thinking every policeman in Austria already knows that we are only dangerous to ourselves. ;)</li>
 
-<li>*man pages:* Read them! You know you should! Even if you believe you know an application. E.g.: "man sshd", section "AUTHORIZED_KEYS FILE FORMAT". Or am I really the only person who didn't know about all the useful options like "from", "command", "no-port-forwarding", "no-pty" etc.?
+<li>*man pages:* Read them! You know you should! Even if you believe you know an application. E.g.: &#8220;man sshd&#8221;, section &#8220;AUTHORIZED_KEYS FILE FORMAT&#8221;. Or am I really the only person who didn&#8217;t know about all the useful options like &#8220;from&#8221;, &#8220;command&#8221;, &#8220;no-port-forwarding&#8221;, &#8220;no-pty&#8221; etc.?
 
-<li>*Mac stuff:* Here's some cool widgets and plugins which make the OS X experience even nicer: "iTunesShut":http://homepage.mac.com/WebObjects/FileSharing.woa/wa/iTunesShut.zip.zip?a=downloadFile&user=gugulino1&path=.Public/iTunesShut.zip, "VI Input Manager":http://www.corsofamily.net/jcorso/vi/, "Application Update Widget":http://www.dashboardwidgets.com/showcase/details.php?wid=1510 (thanks Moose!), "AppleScript Shell":http://hayne.net/MacDev/Ash/, "Doug's AppleScripts for iTunes":http://www.dougscripts.com/itunes/index.php
+<li>*Mac stuff:* Here&#8217;s some cool widgets and plugins which make the OS X experience even nicer: &#8220;iTunesShut&#8221;:http://homepage.mac.com/WebObjects/FileSharing.woa/wa/iTunesShut.zip.zip?a=downloadFile&user=gugulino1&path=.Public/iTunesShut.zip, &#8220;VI Input Manager&#8221;:http://www.corsofamily.net/jcorso/vi/, &#8220;Application Update Widget&#8221;:http://www.dashboardwidgets.com/showcase/details.php?wid=1510 (thanks Moose!), &#8220;AppleScript Shell&#8221;:http://hayne.net/MacDev/Ash/, &#8220;Doug&#8217;s AppleScripts for iTunes&#8221;:http://www.dougscripts.com/itunes/index.php
 </ul>
 
 
-
-
-<br />
-
-
-<p>Last but not least here are some funny/interesting things I found over the past few weeks:</p>
+<p><br />
+Last but not least here are some funny/interesting things I found over the past few weeks:</p>
 
 <ul>
-<li>"Programming Language Inventor or Serial Killer":http://www.malevole.com/mv/misc/killerquiz (via <a href="http://metalab.at/wiki/Hauptseite">metalab-members</a>)</li>
+<li>&#8220;Programming Language Inventor or Serial Killer&#8221;:http://www.malevole.com/mv/misc/killerquiz (via <a href="http://metalab.at/wiki/Hauptseite">metalab-members</a>)</li>
 
-<li>*Robot chicken:* Great stop motion animation. Examples: "1":http://video.google.com/videoplay?docid=-2660802447916665129&q=robot+chicken, "2":http://video.google.com/videoplay?docid=4651757054772769361&q=robot+chicken, "3":http://video.google.com/videoplay?docid=5395083952125133994&q=robot+chicken (thanks <a href="http://gnulords.org/~colo/serendipity/">colo</a>!)</li>
+<li>*Robot chicken:* Great stop motion animation. Examples: &#8220;1&#8221;:http://video.google.com/videoplay?docid=-2660802447916665129&q=robot+chicken, &#8220;2&#8221;:http://video.google.com/videoplay?docid=4651757054772769361&q=robot+chicken, &#8220;3&#8221;:http://video.google.com/videoplay?docid=5395083952125133994&q=robot+chicken (thanks <a href="http://gnulords.org/~colo/serendipity/">colo</a>!)</li>
 
-<li>"ELP Laser Turntable":http://elpj.com/: "bonki":http://bonki.net/blog/ posted this a while back, but I never came around to post it here.</li>
+<li>&#8220;ELP Laser Turntable&#8221;:http://elpj.com/: &#8220;bonki&#8221;:http://bonki.net/blog/ posted this a while back, but I never came around to post it here.</li>
 
-<li>"Bruce Schreier facts":http://geekz.co.uk/schneierfacts/fact/128: 'cause Chuck Norris isn't as cool as Bruce! And as we all know: Bruce Schneier tapdances in Morse Code. (via <a href="http://berq.net/">berq</a>)</li>
+<li>&#8220;Bruce Schreier facts&#8221;:http://geekz.co.uk/schneierfacts/fact/128: &#8216;cause Chuck Norris isn&#8217;t as cool as Bruce! And as we all know: Bruce Schneier tapdances in Morse Code. (via <a href="http://berq.net/">berq</a>)</li>
 
-<li>"China Makes a Sexy, Slutty Robot":http://www.gizmodo.com/gadgets/robots/china-makes-a-sexy-slutty-robot-210802.php: What can I say... (thanks <a href="http://www.leyrer.priv.at/martin/">m3</a>)</li>
+<li>&#8220;China Makes a Sexy, Slutty Robot&#8221;:http://www.gizmodo.com/gadgets/robots/china-makes-a-sexy-slutty-robot-210802.php: What can I say&#8230; (thanks <a href="http://www.leyrer.priv.at/martin/">m3</a>)</li>
 </ul>
 
 
@@ -86,17 +82,17 @@
     <content type="html"><![CDATA[<p>Over the last few weeks the ongoing struggle between good (aka going out to party) and evil (aka work) has led to a severe lack of sleep and a general feeling of exhaustion. That&rsquo;s why yesterday evening I only had some running sushi with friends and a few beers afterwards, before returning home before midnight. But instead of going to bed immediately, I made the fatal mistake of visiting &ldquo;YouTube&rdquo;:<a href="http://www.youtube.com/">http://www.youtube.com/</a> to watch the videos &ldquo;Lotussteve&rdquo;:<a href="http://www.cargal.org,">http://www.cargal.org,</a> &ldquo;m3&rdquo;:<a href="http://www.leyrer.priv.at/martin/">http://www.leyrer.priv.at/martin/</a> and &ldquo;Red&rdquo;:<a href="http://red667.org/">http://red667.org/</a> have recommended. Here are some of my favorites, thanks guys!</p>
 
 <ul>
-<li>"Live Super Mario Bros.":http://www.youtube.com/watch?v=E3IwiynxE3A - A bunch of high school students doing a rendition of Super Mario Bros. Great stuff and very funny.</li>
-<li>"The Internet Is A Series of Tubes":http://www.youtube.com/watch?v=1lYiDo0DjSk - "The Daily Show's":http://www.comedycentral.com/shows/the_daily_show/index.jhtml Jon Stewart explains how the internet works. You shouldn't miss that one!</li>
-<li>"New Super Mario Bros. Final Castle 105 seconds World Record":http://www.youtube.com/watch?v=jVXNL4n73-E - Amazing!</li>
-<li>"PS3 vs. Wii":http://www.youtube.com/watch?v=QpYgNz6W6Gs - I'm intending to buy a Wii anyway, but this video is just hilarious.</li>
-<li>"Almost - Cheese & Crackers":http://www.youtube.com/watch?v=aZtmrunVXs4 - Coolest miniramp skate session ever. Read my lips: EVER!</li>
+<li>&#8220;Live Super Mario Bros.&#8221;:http://www.youtube.com/watch?v=E3IwiynxE3A - A bunch of high school students doing a rendition of Super Mario Bros. Great stuff and very funny.</li>
+<li>&#8220;The Internet Is A Series of Tubes&#8221;:http://www.youtube.com/watch?v=1lYiDo0DjSk - &#8220;The Daily Show&#8217;s&#8221;:http://www.comedycentral.com/shows/the_daily_show/index.jhtml Jon Stewart explains how the internet works. You shouldn&#8217;t miss that one!</li>
+<li>&#8220;New Super Mario Bros. Final Castle 105 seconds World Record&#8221;:http://www.youtube.com/watch?v=jVXNL4n73-E - Amazing!</li>
+<li>&#8220;PS3 vs. Wii&#8221;:http://www.youtube.com/watch?v=QpYgNz6W6Gs - I&#8217;m intending to buy a Wii anyway, but this video is just hilarious.</li>
+<li>&#8220;Almost - Cheese & Crackers&#8221;:http://www.youtube.com/watch?v=aZtmrunVXs4 - Coolest miniramp skate session ever. Read my lips: EVER!</li>
 </ul>
 
 
 <p>When I finished watching the stuff my friends had recommended, I started browsing around the site and found the following gem I immediately subscribed to:</p>
 
-<p>&ldquo;Happy Slip Productions&rdquo;:<a href="http://www.youtube.com/profile?user=HappySlip">http://www.youtube.com/profile?user=HappySlip</a> &ndash; A Filipina actress who is doing some seriously funny stuff.</p>
+<p>&ldquo;Happy Slip Productions&rdquo;:<a href="http://www.youtube.com/profile?user=HappySlip">http://www.youtube.com/profile?user=HappySlip</a> - A Filipina actress who is doing some seriously funny stuff.</p>
 
 <p>After I freed myself from the black hole that YouTube is for one&rsquo;s free time, I decided to finally watch &ldquo;Elephants Dream&rdquo;:<a href="http://orange.blender.org/,">http://orange.blender.org/,</a> an animated movie realized entirely with free software, which I downloaded a few weeks ago but never had time to watch before. It&rsquo;s really great and of course CC licensed.</p>
 

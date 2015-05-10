@@ -4,7 +4,7 @@
   <title><![CDATA[Category: incanter | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/incanter/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -95,7 +95,7 @@
 
 <p><a href="http://twitpic.com/1ftr8f" title="Birthday Paradox plotted by Incanter on Twitpic"><img src="http://twitpic.com/show/thumb/1ftr8f.png" width="250" height="250" border="1" alt="Birthday Paradox plotted by Incanter on Twitpic" /></a></p>
 
-<p>I just love how easy it is to explore problems like this with Clojure and then use Incanter go get some cute little plot too! :&ndash;)</p>
+<p>I just love how easy it is to explore problems like this with Clojure and then use Incanter go get some cute little plot too! :-)</p>
 
 <p><b>Update</b>: Incanter&rsquo;s author David Liebke sent me <a href="http://twitter.com/liebke/status/12242784190">a version of the above that fits into one tweet</a> and <a href="https://gist.github.com/6aa65685559cdb5b6e5e">another one with a Latex annotation</a>! I updated my code to incorporate some of his suggestions.</p>
 ]]></content>

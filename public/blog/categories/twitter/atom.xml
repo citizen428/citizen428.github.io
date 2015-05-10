@@ -4,7 +4,7 @@
   <title><![CDATA[Category: twitter | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/twitter/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.citizen428.net/blog/2009/11/23/fun-with-twitter-and-ruby/"/>
     <updated>2009-11-23T00:00:00+07:00</updated>
     <id>http://www.citizen428.net/blog/2009/11/23/fun-with-twitter-and-ruby</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m currently toying around with some ideas for Twitter bots etc. so I had a look at some of the available gems out there. Sometimes Ruby makes stuff almost too simple&hellip; ;&ndash;) Here are a few nice snippets of what you could do with a couple of minutes time and some Ruby:</p>
+    <content type="html"><![CDATA[<p>I&rsquo;m currently toying around with some ideas for Twitter bots etc. so I had a look at some of the available gems out there. Sometimes Ruby makes stuff almost too simple&hellip; ;-) Here are a few nice snippets of what you could do with a couple of minutes time and some Ruby:</p>
 
 <p><em>Automatically translate all tweets for a given keyword:</em></p>
 
@@ -39,7 +39,7 @@ Curious of getting a list of current trends on Twitter, without hashtags? There 
 <script src="http://gist.github.com/241437.js?file=gistfile3.rb"></script>
 
 
-<p>Combining all these ideas you could easily write a bot that follows the current Twitter trends and posts translations of them in only a couple of lines. :&ndash;)</p>
+<p>Combining all these ideas you could easily write a bot that follows the current Twitter trends and posts translations of them in only a couple of lines. :-)</p>
 ]]></content>
   </entry>
   
@@ -50,7 +50,7 @@ Curious of getting a list of current trends on Twitter, without hashtags? There 
     <id>http://www.citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
     <content type="html"><![CDATA[<p>Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn&rsquo;t already running, copy  the URL, shorten it, paste it into the client&hellip;</p>
 
-<p>I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It&rsquo;s just a quick and dirty hack, feel free to change it according to your needs&hellip; :&ndash;)</p>
+<p>I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It&rsquo;s just a quick and dirty hack, feel free to change it according to your needs&hellip; :-)</p>
 
 <script src="http://gist.github.com/71559.js"></script>
 

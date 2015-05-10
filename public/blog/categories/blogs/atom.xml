@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blogs | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/blogs/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -21,14 +21,14 @@
     <content type="html"><![CDATA[<p>Ever since I started this blog in January 2005 it was powered by <a href="http://s9y.org/">Serendipity</a> (aka S9Y). Lately however I became more and more dissatisfied with it for various reasons, so I finally took the plunge and moved it over to Wordpress. The whole process was surprisingly painless, but did have some caveats, so I decided to post a short description of what I did:</p>
 
 <p>There is a script for migrating S9Y to Wordpress that has been floating around for a while and has been patched/modified by various people. Luckily I found version <a href="http://snowulf.com/2010/06/11/serendipity-to-wordpress-post-import/">1.4</a>, which got updated very recently (June 2010). For some reason it didn&rsquo;t work for me when I tried to migrate between S9Y 1.5.3 and Wordpress 3.0.1 directly, so I installed Wordpress 2.9.2 first, migrated the content and then upgraded to the most recent version. The import itself was very smooth and successful, categories (which I stopped using a long time ago), users, posts and comments all made it to the new blog! Once you are done importing, you can run several SQL statements provided in <a href="http://code.google.com/p/snowulf/source/browse/trunk/wordpress/s9y-to-wp/readme.txt">readme.txt</a>, so that your new posts will have the same IDs as the old ones, which is necessary for redirecting. For that purpose I added some <a href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html">Apache mod_rewrite </a> rules, so that old post URLs will redirect to the new locations (and so will the RSS and Atom feed so subscriptions don&rsquo;t get interrupted):
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>RewriteEngine on
-</span><span class='line'>RewriteRule ^/archives/([0-9]+)&ndash;.*$ /archives/$1 [R,L]
+</span><span class='line'>RewriteRule ^/archives/([0-9]+)-.*$ /archives/$1 [R,L]
 </span><span class='line'>RewriteRule ^/feeds/index.rss2 /feed [R,L]
-</span><span class='line'>RewriteRule ^/feeds/atom.xml /feed/atom [R,L]</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span><span class='line'>RewriteRule ^/feeds/atom.xml /feed/atom [R,L]</span></code></pre></td></tr></table></div></figure>
 There&rsquo;s still quite a bit to do though: first I need to find a theme I like (I might even stick with the one I&rsquo;m using now and just tweak it a bit), then lots of posts need fixes to their formatting because they were written in <a href="http://www.textism.com/tools/textile/">Textile</a> (I fixed the most recent 2 so far, it&rsquo;s rather quick and painless). There are also some widgets and static pages I want to move over from the old blog, so I guess this site will be a work in progress for a while. I am however very satisfied with Wordpress and glad I finally did this move I put off for so long.</p>
 ]]></content>
   </entry>
@@ -41,8 +41,8 @@ There&rsquo;s still quite a bit to do though: first I need to find a theme I lik
     <content type="html"><![CDATA[<p>This evening I found some time to work on my blog again, so here&rsquo;s a quick rundown of things that changed:</p>
 
 <ul>
-<li>*Share and save:* After reading the templates used by "Serendipity":http://s9y.org to get a hang of "Smarty":http://smarty.php.net/, I've edited entries.tpl to include a mailto link to share entries, as well as the possibility to digg posts or add them to del.icio.us. There ya go, Web 2.0 lovers.</li>
-<li>*Feed love:* Syndication rocks, especially when using "Feedburner":http://www.feedburner.com which offers great features like the Link Splicer which automatically creates this "Links for the day" entries out of my del.icio.us bookmarks. But since I also got an account on "SuprGlu":http://citizen428.suprglu.com/, I've decided to additionally provide you with the "citizen428stalker":http://feeds.feedburner.com/citizen428stalker feed, which additionally contains my flickr photos, my Plazes traze, info from 43 Things and 43 Places and much more. So if you're up for the whole citizen428 package, you might want to give this new feed a try.</li>
+<li>*Share and save:* After reading the templates used by &#8220;Serendipity&#8221;:http://s9y.org to get a hang of &#8220;Smarty&#8221;:http://smarty.php.net/, I&#8217;ve edited entries.tpl to include a mailto link to share entries, as well as the possibility to digg posts or add them to del.icio.us. There ya go, Web 2.0 lovers.</li>
+<li>*Feed love:* Syndication rocks, especially when using &#8220;Feedburner&#8221;:http://www.feedburner.com which offers great features like the Link Splicer which automatically creates this &#8220;Links for the day&#8221; entries out of my del.icio.us bookmarks. But since I also got an account on &#8220;SuprGlu&#8221;:http://citizen428.suprglu.com/, I&#8217;ve decided to additionally provide you with the &#8220;citizen428stalker&#8221;:http://feeds.feedburner.com/citizen428stalker feed, which additionally contains my flickr photos, my Plazes traze, info from 43 Things and 43 Places and much more. So if you&#8217;re up for the whole citizen428 package, you might want to give this new feed a try.</li>
 </ul>
 
 
@@ -60,9 +60,9 @@ There&rsquo;s still quite a bit to do though: first I need to find a theme I lik
     <content type="html"><![CDATA[<p>After using it for quite a while, I got bored with the old look of my blog and so I started to update it today. Here&rsquo;s a quick rundown of things that changed:</p>
 
 <ul>
-<li>*Added various links:* I've updated the sidebar to include links to "my MySpace profile":http://myspace.com/citizen428 (resistance really is futile) and "my SuprGlu site":http://citizen428.suprglu.com/ (making it easier for you stalkers). I've also readded the links to my profiles on "43 Things":http://www.43things.com/person/citizen428 and "43 Plazes":http://www.43places.com/person/citizen428, so it's a happy day for all you buzzword loving Web 2.0 fans out there.</li>
-<li>*Advanced syndication:* I got rid of my blog's own syndication features in favor of "FeedBurner":http://feeds.feedburner.com/citizen428/. Why? Because it offers really cool stuff like "SmartFeeds" which create the right RSS/Atom feeds for the reader you use on the fly, "link slicing" (a daily entry of links I add to "my del.icio.us account":http://del.icio.us/citizen428 gets generated and added to the feed) and the possibility to subscribe to this blog via email. If you are among my true fans who have  subscribed to this site long ago don't despair, I'm 301 redirecting most of the old syndication links to FeedBurner (the RSS 0.91 feed is used to push data to FeedBurner).</li>
-<li>*More syndication features:* I've signed up for "Talkr":http://talkr.com so you lazy folks have the chance to get this site as a Podcast, without me having to go through the hassle of actually recording one. Nifty, eh? Besides that I get US$ 7 for everyone who signs up to Talkr for at least 30 days, and since Christmas is near that just sounds like the perfect opportunity to make yours truly happy, doesn't it? ;) Apart from the Podcast goodness there's now also a convenient link to add this site to your "Technorati":http://del.icio.us/citizen428 favorites with just a single click of your mouse, which means lazyness finally is no longer an excuse for not doing so.</li>
+<li>*Added various links:* I&#8217;ve updated the sidebar to include links to &#8220;my MySpace profile&#8221;:http://myspace.com/citizen428 (resistance really is futile) and &#8220;my SuprGlu site&#8221;:http://citizen428.suprglu.com/ (making it easier for you stalkers). I&#8217;ve also readded the links to my profiles on &#8220;43 Things&#8221;:http://www.43things.com/person/citizen428 and &#8220;43 Plazes&#8221;:http://www.43places.com/person/citizen428, so it&#8217;s a happy day for all you buzzword loving Web 2.0 fans out there.</li>
+<li>*Advanced syndication:* I got rid of my blog&#8217;s own syndication features in favor of &#8220;FeedBurner&#8221;:http://feeds.feedburner.com/citizen428/. Why? Because it offers really cool stuff like &#8220;SmartFeeds&#8221; which create the right RSS/Atom feeds for the reader you use on the fly, &#8220;link slicing&#8221; (a daily entry of links I add to &#8220;my del.icio.us account&#8221;:http://del.icio.us/citizen428 gets generated and added to the feed) and the possibility to subscribe to this blog via email. If you are among my true fans who have  subscribed to this site long ago don&#8217;t despair, I&#8217;m 301 redirecting most of the old syndication links to FeedBurner (the RSS 0.91 feed is used to push data to FeedBurner).</li>
+<li>*More syndication features:* I&#8217;ve signed up for &#8220;Talkr&#8221;:http://talkr.com so you lazy folks have the chance to get this site as a Podcast, without me having to go through the hassle of actually recording one. Nifty, eh? Besides that I get US$ 7 for everyone who signs up to Talkr for at least 30 days, and since Christmas is near that just sounds like the perfect opportunity to make yours truly happy, doesn&#8217;t it? ;) Apart from the Podcast goodness there&#8217;s now also a convenient link to add this site to your &#8220;Technorati&#8221;:http://del.icio.us/citizen428 favorites with just a single click of your mouse, which means lazyness finally is no longer an excuse for not doing so.</li>
 <li>*Sidebar reorganization:* Dropped some plugins, added, rearranged and reconfigured some others.</li>
 </ul>
 
@@ -81,37 +81,33 @@ There&rsquo;s still quite a bit to do though: first I need to find a theme I lik
     <content type="html"><![CDATA[<p>&hellip;some random stuff I wanted to blog about for quite some time already:</p>
 
 <ul>
-<li>*Pearl Jam concert (September 25th@Wiener Stadthalle):* I have to admit that I'm not the biggest "PJ":http://pearljam.com/ fan, but since Silvia was nice enough to invite me (thanks by the way!), I went to see one of the best concerts in a long time! The band and the atmosphere was great and I was quite surprised to see the traditionally rather lame crowd in Vienna so excited! (<a href="http://www.flickr.com/photos/citizen428/sets/72157594302284739">pics@flickr</a>)</li>
+<li>*Pearl Jam concert (September 25th@Wiener Stadthalle):* I have to admit that I&#8217;m not the biggest &#8220;PJ&#8221;:http://pearljam.com/ fan, but since Silvia was nice enough to invite me (thanks by the way!), I went to see one of the best concerts in a long time! The band and the atmosphere was great and I was quite surprised to see the traditionally rather lame crowd in Vienna so excited! (<a href="http://www.flickr.com/photos/citizen428/sets/72157594302284739">pics@flickr</a>)</li>
 
-<li>*Internet Explorer on Linux:* As we all know, IE sucks donkey balls. But some sites who don't care about standards - and whose developers definitely should be first against the wall when the revolution comes - only work with Microsoft's browser. But don't despair, help is available in form of "IEs4Linux":http://www.tatanka.com.br/ies4linux/page/Main_Page, a shellscript which downloads IE and automatically configures Wine for it. Flash 9 is also included and if you really insist on it, you can run 3 different versions of IE at the same time (5, 5.5 and 6), which is pretty handy for web developers. I have IE6 installed on my Kubuntu system for quite a while now, and in the rare cases I really need it, it works like a charm.</li>
+<li>*Internet Explorer on Linux:* As we all know, IE sucks donkey balls. But some sites who don&#8217;t care about standards - and whose developers definitely should be first against the wall when the revolution comes - only work with Microsoft&#8217;s browser. But don&#8217;t despair, help is available in form of &#8220;IEs4Linux&#8221;:http://www.tatanka.com.br/ies4linux/page/Main_Page, a shellscript which downloads IE and automatically configures Wine for it. Flash 9 is also included and if you really insist on it, you can run 3 different versions of IE at the same time (5, 5.5 and 6), which is pretty handy for web developers. I have IE6 installed on my Kubuntu system for quite a while now, and in the rare cases I really need it, it works like a charm.</li>
 
-<li>*Pokerstars client on Linux:* Most online Poker sites don't seem to be interested in Linux users, since the clients they offer are mostly only available for Windows. Some of them at least offer Java clients, but with my general dislike for most things Java and my strong preference of "Pokerstars":http://www.pokerstars.com/ over other Poker sites, I gave the client a shot under Wine and was really pleased to find out that it just works (tm). Of course it would be much nicer to have a native client, but for the time being I'm happy enough with this workaround.</li>
+<li>*Pokerstars client on Linux:* Most online Poker sites don&#8217;t seem to be interested in Linux users, since the clients they offer are mostly only available for Windows. Some of them at least offer Java clients, but with my general dislike for most things Java and my strong preference of &#8220;Pokerstars&#8221;:http://www.pokerstars.com/ over other Poker sites, I gave the client a shot under Wine and was really pleased to find out that it just works (tm). Of course it would be much nicer to have a native client, but for the time being I&#8217;m happy enough with this workaround.</li>
 
 <li>*UEFA cup Pasching vs. Livorno@Pasching:* Went with some other Sportclub fans to see the UEFA cup match Pasching vs. Livorno in Pasching. It was a great day, and I still laugh my ass off when I think about the policemen and -women who found our little group of around 25 people rooting for the away team  (as Austrian you were only able to buy tickets for the home sectors) so frightening, that they not only surrounded us for the whole match, but even put on their riot gear. And there I was, thinking every policeman in Austria already knows that we are only dangerous to ourselves. ;)</li>
 
-<li>*man pages:* Read them! You know you should! Even if you believe you know an application. E.g.: "man sshd", section "AUTHORIZED_KEYS FILE FORMAT". Or am I really the only person who didn't know about all the useful options like "from", "command", "no-port-forwarding", "no-pty" etc.?
+<li>*man pages:* Read them! You know you should! Even if you believe you know an application. E.g.: &#8220;man sshd&#8221;, section &#8220;AUTHORIZED_KEYS FILE FORMAT&#8221;. Or am I really the only person who didn&#8217;t know about all the useful options like &#8220;from&#8221;, &#8220;command&#8221;, &#8220;no-port-forwarding&#8221;, &#8220;no-pty&#8221; etc.?
 
-<li>*Mac stuff:* Here's some cool widgets and plugins which make the OS X experience even nicer: "iTunesShut":http://homepage.mac.com/WebObjects/FileSharing.woa/wa/iTunesShut.zip.zip?a=downloadFile&user=gugulino1&path=.Public/iTunesShut.zip, "VI Input Manager":http://www.corsofamily.net/jcorso/vi/, "Application Update Widget":http://www.dashboardwidgets.com/showcase/details.php?wid=1510 (thanks Moose!), "AppleScript Shell":http://hayne.net/MacDev/Ash/, "Doug's AppleScripts for iTunes":http://www.dougscripts.com/itunes/index.php
+<li>*Mac stuff:* Here&#8217;s some cool widgets and plugins which make the OS X experience even nicer: &#8220;iTunesShut&#8221;:http://homepage.mac.com/WebObjects/FileSharing.woa/wa/iTunesShut.zip.zip?a=downloadFile&user=gugulino1&path=.Public/iTunesShut.zip, &#8220;VI Input Manager&#8221;:http://www.corsofamily.net/jcorso/vi/, &#8220;Application Update Widget&#8221;:http://www.dashboardwidgets.com/showcase/details.php?wid=1510 (thanks Moose!), &#8220;AppleScript Shell&#8221;:http://hayne.net/MacDev/Ash/, &#8220;Doug&#8217;s AppleScripts for iTunes&#8221;:http://www.dougscripts.com/itunes/index.php
 </ul>
 
 
-
-
-<br />
-
-
-<p>Last but not least here are some funny/interesting things I found over the past few weeks:</p>
+<p><br />
+Last but not least here are some funny/interesting things I found over the past few weeks:</p>
 
 <ul>
-<li>"Programming Language Inventor or Serial Killer":http://www.malevole.com/mv/misc/killerquiz (via <a href="http://metalab.at/wiki/Hauptseite">metalab-members</a>)</li>
+<li>&#8220;Programming Language Inventor or Serial Killer&#8221;:http://www.malevole.com/mv/misc/killerquiz (via <a href="http://metalab.at/wiki/Hauptseite">metalab-members</a>)</li>
 
-<li>*Robot chicken:* Great stop motion animation. Examples: "1":http://video.google.com/videoplay?docid=-2660802447916665129&q=robot+chicken, "2":http://video.google.com/videoplay?docid=4651757054772769361&q=robot+chicken, "3":http://video.google.com/videoplay?docid=5395083952125133994&q=robot+chicken (thanks <a href="http://gnulords.org/~colo/serendipity/">colo</a>!)</li>
+<li>*Robot chicken:* Great stop motion animation. Examples: &#8220;1&#8221;:http://video.google.com/videoplay?docid=-2660802447916665129&q=robot+chicken, &#8220;2&#8221;:http://video.google.com/videoplay?docid=4651757054772769361&q=robot+chicken, &#8220;3&#8221;:http://video.google.com/videoplay?docid=5395083952125133994&q=robot+chicken (thanks <a href="http://gnulords.org/~colo/serendipity/">colo</a>!)</li>
 
-<li>"ELP Laser Turntable":http://elpj.com/: "bonki":http://bonki.net/blog/ posted this a while back, but I never came around to post it here.</li>
+<li>&#8220;ELP Laser Turntable&#8221;:http://elpj.com/: &#8220;bonki&#8221;:http://bonki.net/blog/ posted this a while back, but I never came around to post it here.</li>
 
-<li>"Bruce Schreier facts":http://geekz.co.uk/schneierfacts/fact/128: 'cause Chuck Norris isn't as cool as Bruce! And as we all know: Bruce Schneier tapdances in Morse Code. (via <a href="http://berq.net/">berq</a>)</li>
+<li>&#8220;Bruce Schreier facts&#8221;:http://geekz.co.uk/schneierfacts/fact/128: &#8216;cause Chuck Norris isn&#8217;t as cool as Bruce! And as we all know: Bruce Schneier tapdances in Morse Code. (via <a href="http://berq.net/">berq</a>)</li>
 
-<li>"China Makes a Sexy, Slutty Robot":http://www.gizmodo.com/gadgets/robots/china-makes-a-sexy-slutty-robot-210802.php: What can I say... (thanks <a href="http://www.leyrer.priv.at/martin/">m3</a>)</li>
+<li>&#8220;China Makes a Sexy, Slutty Robot&#8221;:http://www.gizmodo.com/gadgets/robots/china-makes-a-sexy-slutty-robot-210802.php: What can I say&#8230; (thanks <a href="http://www.leyrer.priv.at/martin/">m3</a>)</li>
 </ul>
 
 

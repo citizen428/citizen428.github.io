@@ -4,7 +4,7 @@
   <title><![CDATA[Category: music | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/music/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -38,37 +38,33 @@
     <content type="html"><![CDATA[<p>&hellip;some random stuff I wanted to blog about for quite some time already:</p>
 
 <ul>
-<li>*Pearl Jam concert (September 25th@Wiener Stadthalle):* I have to admit that I'm not the biggest "PJ":http://pearljam.com/ fan, but since Silvia was nice enough to invite me (thanks by the way!), I went to see one of the best concerts in a long time! The band and the atmosphere was great and I was quite surprised to see the traditionally rather lame crowd in Vienna so excited! (<a href="http://www.flickr.com/photos/citizen428/sets/72157594302284739">pics@flickr</a>)</li>
+<li>*Pearl Jam concert (September 25th@Wiener Stadthalle):* I have to admit that I&#8217;m not the biggest &#8220;PJ&#8221;:http://pearljam.com/ fan, but since Silvia was nice enough to invite me (thanks by the way!), I went to see one of the best concerts in a long time! The band and the atmosphere was great and I was quite surprised to see the traditionally rather lame crowd in Vienna so excited! (<a href="http://www.flickr.com/photos/citizen428/sets/72157594302284739">pics@flickr</a>)</li>
 
-<li>*Internet Explorer on Linux:* As we all know, IE sucks donkey balls. But some sites who don't care about standards - and whose developers definitely should be first against the wall when the revolution comes - only work with Microsoft's browser. But don't despair, help is available in form of "IEs4Linux":http://www.tatanka.com.br/ies4linux/page/Main_Page, a shellscript which downloads IE and automatically configures Wine for it. Flash 9 is also included and if you really insist on it, you can run 3 different versions of IE at the same time (5, 5.5 and 6), which is pretty handy for web developers. I have IE6 installed on my Kubuntu system for quite a while now, and in the rare cases I really need it, it works like a charm.</li>
+<li>*Internet Explorer on Linux:* As we all know, IE sucks donkey balls. But some sites who don&#8217;t care about standards - and whose developers definitely should be first against the wall when the revolution comes - only work with Microsoft&#8217;s browser. But don&#8217;t despair, help is available in form of &#8220;IEs4Linux&#8221;:http://www.tatanka.com.br/ies4linux/page/Main_Page, a shellscript which downloads IE and automatically configures Wine for it. Flash 9 is also included and if you really insist on it, you can run 3 different versions of IE at the same time (5, 5.5 and 6), which is pretty handy for web developers. I have IE6 installed on my Kubuntu system for quite a while now, and in the rare cases I really need it, it works like a charm.</li>
 
-<li>*Pokerstars client on Linux:* Most online Poker sites don't seem to be interested in Linux users, since the clients they offer are mostly only available for Windows. Some of them at least offer Java clients, but with my general dislike for most things Java and my strong preference of "Pokerstars":http://www.pokerstars.com/ over other Poker sites, I gave the client a shot under Wine and was really pleased to find out that it just works (tm). Of course it would be much nicer to have a native client, but for the time being I'm happy enough with this workaround.</li>
+<li>*Pokerstars client on Linux:* Most online Poker sites don&#8217;t seem to be interested in Linux users, since the clients they offer are mostly only available for Windows. Some of them at least offer Java clients, but with my general dislike for most things Java and my strong preference of &#8220;Pokerstars&#8221;:http://www.pokerstars.com/ over other Poker sites, I gave the client a shot under Wine and was really pleased to find out that it just works (tm). Of course it would be much nicer to have a native client, but for the time being I&#8217;m happy enough with this workaround.</li>
 
 <li>*UEFA cup Pasching vs. Livorno@Pasching:* Went with some other Sportclub fans to see the UEFA cup match Pasching vs. Livorno in Pasching. It was a great day, and I still laugh my ass off when I think about the policemen and -women who found our little group of around 25 people rooting for the away team  (as Austrian you were only able to buy tickets for the home sectors) so frightening, that they not only surrounded us for the whole match, but even put on their riot gear. And there I was, thinking every policeman in Austria already knows that we are only dangerous to ourselves. ;)</li>
 
-<li>*man pages:* Read them! You know you should! Even if you believe you know an application. E.g.: "man sshd", section "AUTHORIZED_KEYS FILE FORMAT". Or am I really the only person who didn't know about all the useful options like "from", "command", "no-port-forwarding", "no-pty" etc.?
+<li>*man pages:* Read them! You know you should! Even if you believe you know an application. E.g.: &#8220;man sshd&#8221;, section &#8220;AUTHORIZED_KEYS FILE FORMAT&#8221;. Or am I really the only person who didn&#8217;t know about all the useful options like &#8220;from&#8221;, &#8220;command&#8221;, &#8220;no-port-forwarding&#8221;, &#8220;no-pty&#8221; etc.?
 
-<li>*Mac stuff:* Here's some cool widgets and plugins which make the OS X experience even nicer: "iTunesShut":http://homepage.mac.com/WebObjects/FileSharing.woa/wa/iTunesShut.zip.zip?a=downloadFile&user=gugulino1&path=.Public/iTunesShut.zip, "VI Input Manager":http://www.corsofamily.net/jcorso/vi/, "Application Update Widget":http://www.dashboardwidgets.com/showcase/details.php?wid=1510 (thanks Moose!), "AppleScript Shell":http://hayne.net/MacDev/Ash/, "Doug's AppleScripts for iTunes":http://www.dougscripts.com/itunes/index.php
+<li>*Mac stuff:* Here&#8217;s some cool widgets and plugins which make the OS X experience even nicer: &#8220;iTunesShut&#8221;:http://homepage.mac.com/WebObjects/FileSharing.woa/wa/iTunesShut.zip.zip?a=downloadFile&user=gugulino1&path=.Public/iTunesShut.zip, &#8220;VI Input Manager&#8221;:http://www.corsofamily.net/jcorso/vi/, &#8220;Application Update Widget&#8221;:http://www.dashboardwidgets.com/showcase/details.php?wid=1510 (thanks Moose!), &#8220;AppleScript Shell&#8221;:http://hayne.net/MacDev/Ash/, &#8220;Doug&#8217;s AppleScripts for iTunes&#8221;:http://www.dougscripts.com/itunes/index.php
 </ul>
 
 
-
-
-<br />
-
-
-<p>Last but not least here are some funny/interesting things I found over the past few weeks:</p>
+<p><br />
+Last but not least here are some funny/interesting things I found over the past few weeks:</p>
 
 <ul>
-<li>"Programming Language Inventor or Serial Killer":http://www.malevole.com/mv/misc/killerquiz (via <a href="http://metalab.at/wiki/Hauptseite">metalab-members</a>)</li>
+<li>&#8220;Programming Language Inventor or Serial Killer&#8221;:http://www.malevole.com/mv/misc/killerquiz (via <a href="http://metalab.at/wiki/Hauptseite">metalab-members</a>)</li>
 
-<li>*Robot chicken:* Great stop motion animation. Examples: "1":http://video.google.com/videoplay?docid=-2660802447916665129&q=robot+chicken, "2":http://video.google.com/videoplay?docid=4651757054772769361&q=robot+chicken, "3":http://video.google.com/videoplay?docid=5395083952125133994&q=robot+chicken (thanks <a href="http://gnulords.org/~colo/serendipity/">colo</a>!)</li>
+<li>*Robot chicken:* Great stop motion animation. Examples: &#8220;1&#8221;:http://video.google.com/videoplay?docid=-2660802447916665129&q=robot+chicken, &#8220;2&#8221;:http://video.google.com/videoplay?docid=4651757054772769361&q=robot+chicken, &#8220;3&#8221;:http://video.google.com/videoplay?docid=5395083952125133994&q=robot+chicken (thanks <a href="http://gnulords.org/~colo/serendipity/">colo</a>!)</li>
 
-<li>"ELP Laser Turntable":http://elpj.com/: "bonki":http://bonki.net/blog/ posted this a while back, but I never came around to post it here.</li>
+<li>&#8220;ELP Laser Turntable&#8221;:http://elpj.com/: &#8220;bonki&#8221;:http://bonki.net/blog/ posted this a while back, but I never came around to post it here.</li>
 
-<li>"Bruce Schreier facts":http://geekz.co.uk/schneierfacts/fact/128: 'cause Chuck Norris isn't as cool as Bruce! And as we all know: Bruce Schneier tapdances in Morse Code. (via <a href="http://berq.net/">berq</a>)</li>
+<li>&#8220;Bruce Schreier facts&#8221;:http://geekz.co.uk/schneierfacts/fact/128: &#8216;cause Chuck Norris isn&#8217;t as cool as Bruce! And as we all know: Bruce Schneier tapdances in Morse Code. (via <a href="http://berq.net/">berq</a>)</li>
 
-<li>"China Makes a Sexy, Slutty Robot":http://www.gizmodo.com/gadgets/robots/china-makes-a-sexy-slutty-robot-210802.php: What can I say... (thanks <a href="http://www.leyrer.priv.at/martin/">m3</a>)</li>
+<li>&#8220;China Makes a Sexy, Slutty Robot&#8221;:http://www.gizmodo.com/gadgets/robots/china-makes-a-sexy-slutty-robot-210802.php: What can I say&#8230; (thanks <a href="http://www.leyrer.priv.at/martin/">m3</a>)</li>
 </ul>
 
 
@@ -83,15 +79,15 @@
     <id>http://www.citizen428.net/blog/2005/10/16/hits-galore</id>
     <content type="html"><![CDATA[<p>As I&rsquo;m listening to a lot of music, I thought it may be a nice idea to periodically post my favourite songs.</p>
 
-<h1>5: &ldquo;Against Me!&rdquo;:<a href="http://www.againstme.net/">http://www.againstme.net/</a> &ndash; &ldquo;Baby, I&rsquo;m an Anarchist!&rdquo;: Taken from their great album &ldquo;Reinventing Axl Rose&rdquo;, this song is the quintessence of why Against Me! are one of the greatest bands I&rsquo;ve ever seen live: energetic and sometimes angry folk punk with great lyrics, that just makes you raise your fists in the air and sing along.</h1>
+<h1>5: &ldquo;Against Me!&rdquo;:<a href="http://www.againstme.net/">http://www.againstme.net/</a> - &ldquo;Baby, I&rsquo;m an Anarchist!&rdquo;: Taken from their great album &ldquo;Reinventing Axl Rose&rdquo;, this song is the quintessence of why Against Me! are one of the greatest bands I&rsquo;ve ever seen live: energetic and sometimes angry folk punk with great lyrics, that just makes you raise your fists in the air and sing along.</h1>
 
-<h1>4: &ldquo;Wolfgang Ambros&rdquo;:<a href="http://www.wolfgangambros.at/">http://www.wolfgangambros.at/</a> &ndash; &ldquo;Die Kinettn wo i schlof&rdquo;: Recently I&rsquo;ve been listening to a lot of Wolfgang Ambros, and I have to say that the music he recorded during the 1970s and early 1980s is defintely among the best music with German (actually Austrian dialect) lyrics I&rsquo;ve ever heard. If you like Wolfgang&rsquo;s music as much as I do, you probably should also check out the DVD &ldquo;Hoffnungslos selbstbewusst&rdquo;:<a href="http://www.amazon.de/exec/obidos/ASIN/B00006J9RG/qid=1129453736/sr=8-2/ref=sr_8_xs_ap_i2_xgl/028-8208621-3236532.">http://www.amazon.de/exec/obidos/ASIN/B00006J9RG/qid=1129453736/sr=8-2/ref=sr_8_xs_ap_i2_xgl/028-8208621-3236532.</a></h1>
+<h1>4: &ldquo;Wolfgang Ambros&rdquo;:<a href="http://www.wolfgangambros.at/">http://www.wolfgangambros.at/</a> - &ldquo;Die Kinettn wo i schlof&rdquo;: Recently I&rsquo;ve been listening to a lot of Wolfgang Ambros, and I have to say that the music he recorded during the 1970s and early 1980s is defintely among the best music with German (actually Austrian dialect) lyrics I&rsquo;ve ever heard. If you like Wolfgang&rsquo;s music as much as I do, you probably should also check out the DVD &ldquo;Hoffnungslos selbstbewusst&rdquo;:<a href="http://www.amazon.de/exec/obidos/ASIN/B00006J9RG/qid=1129453736/sr=8-2/ref=sr_8_xs_ap_i2_xgl/028-8208621-3236532.">http://www.amazon.de/exec/obidos/ASIN/B00006J9RG/qid=1129453736/sr=8-2/ref=sr_8_xs_ap_i2_xgl/028-8208621-3236532.</a></h1>
 
-<h1>3: &ldquo;Gogol Bordello&rdquo;:<a href="http://www.gogolbordello.com/">http://www.gogolbordello.com/</a> &ndash; &ldquo;Start Wearing Purple&rdquo;: Once &ldquo;described as&rdquo;:<a href="http://indiekids.org/2004/04/13/drink-locally-fck-globally/">http://indiekids.org/2004/04/13/drink-locally-fck-globally/</a> &ldquo;Psychopathic Ukrainian Gypsy immigrant folk punk rock&rdquo;, one immediately knows why Gogol Bordello and their album &ldquo;Gipsy Punks&rdquo; are as great as they are.</h1>
+<h1>3: &ldquo;Gogol Bordello&rdquo;:<a href="http://www.gogolbordello.com/">http://www.gogolbordello.com/</a> - &ldquo;Start Wearing Purple&rdquo;: Once &ldquo;described as&rdquo;:<a href="http://indiekids.org/2004/04/13/drink-locally-fck-globally/">http://indiekids.org/2004/04/13/drink-locally-fck-globally/</a> &ldquo;Psychopathic Ukrainian Gypsy immigrant folk punk rock&rdquo;, one immediately knows why Gogol Bordello and their album &ldquo;Gipsy Punks&rdquo; are as great as they are.</h1>
 
-<h1>2: &ldquo;Tim Fite&rdquo;:<a href="http://www.timfite.com/">http://www.timfite.com/</a> &ndash; &ldquo;Away From The Snakes&rdquo;: &ldquo;Teaching The Indie Kids To Dance Again&rdquo;:<a href="http://indiekids.org/">http://indiekids.org/</a> described this song in the following way: &ldquo;This is every stereotype of country music you&rsquo;ve ever heard done right. Music for a whiskey soaked night on the plain with a guitar, drifting to nowhere, but desperate to get away, from cheating wives, lying thieves, and generally being shit on&rdquo;. Great stuff, you should check out the full album called &ldquo;Gone Ain&rsquo;t Gone&rdquo;!</h1>
+<h1>2: &ldquo;Tim Fite&rdquo;:<a href="http://www.timfite.com/">http://www.timfite.com/</a> - &ldquo;Away From The Snakes&rdquo;: &ldquo;Teaching The Indie Kids To Dance Again&rdquo;:<a href="http://indiekids.org/">http://indiekids.org/</a> described this song in the following way: &ldquo;This is every stereotype of country music you&rsquo;ve ever heard done right. Music for a whiskey soaked night on the plain with a guitar, drifting to nowhere, but desperate to get away, from cheating wives, lying thieves, and generally being shit on&rdquo;. Great stuff, you should check out the full album called &ldquo;Gone Ain&rsquo;t Gone&rdquo;!</h1>
 
-<h1>1: &ldquo;Ninja High School&rdquo;:<a href="http://www.ninjahighschool.info/">http://www.ninjahighschool.info/</a> &ndash; &ldquo;It&rsquo;s alright to fight&rdquo;: What can be better than a band that describes its own music as &ldquo;positive hardcore dance-rap&rdquo;? Not much, that&rsquo;s for sure! At least I&rsquo;m completely hooked on their style and am really waiting for their new album &ldquo;Young Adults Against Suicide&rdquo;.</h1>
+<h1>1: &ldquo;Ninja High School&rdquo;:<a href="http://www.ninjahighschool.info/">http://www.ninjahighschool.info/</a> - &ldquo;It&rsquo;s alright to fight&rdquo;: What can be better than a band that describes its own music as &ldquo;positive hardcore dance-rap&rdquo;? Not much, that&rsquo;s for sure! At least I&rsquo;m completely hooked on their style and am really waiting for their new album &ldquo;Young Adults Against Suicide&rdquo;.</h1>
 ]]></content>
   </entry>
   
@@ -103,47 +99,17 @@
     <content type="html"><![CDATA[<p>Today is the perfect example of a nice and lazy afternoon, and I just love it! After having a great brunch at &ldquo;HighTea&rdquo;:<a href="http://hightea.at/">http://hightea.at/</a> where we had toasties, antipasti, bagles and lots of other really good stuff, I&rsquo;m just hanging around in front of my PC reading, doing some Gentoo work and generally having a good time. Live can be so easy&hellip; :)</p>
 
 <p>Now let&rsquo;s see if I have anything interesting to tell you:<!--more-->
-* &ldquo;OSNews&rdquo;:<a href="http://www.osnews.com/">http://www.osnews.com/</a> had a &ldquo;review of GNOME 2.12&rdquo;:<a href="http://www.osnews.com/story.php?news_id=11800">http://www.osnews.com/story.php?news_id=11800</a> and Eugenia seems to enjoy the new release as much as I do. Although she also points out some drawbacks of the desktop environment as lacking good API docs and a RAD tool, she concludes that &ldquo;[&hellip;] Gnome 2.12 is the best X11 DE there is&rdquo;. You wonder why? Because &ldquo;all in all, Gnome is today more powerful, better integrated to the underlying system with DBUS and HAL, looks good, behaves as expected and, most of all, it&rsquo;s simple and clean&rdquo;. I couldn&rsquo;t agree more! (via &ldquo;FootNotes&rdquo;:<a href="http://www.gnomedesktop.org">http://www.gnomedesktop.org</a>)</p>
-
+* &ldquo;OSNews&rdquo;:<a href="http://www.osnews.com/">http://www.osnews.com/</a> had a &ldquo;review of GNOME 2.12&rdquo;:<a href="http://www.osnews.com/story.php?news_id=11800">http://www.osnews.com/story.php?news_id=11800</a> and Eugenia seems to enjoy the new release as much as I do. Although she also points out some drawbacks of the desktop environment as lacking good API docs and a RAD tool, she concludes that &ldquo;[&hellip;] Gnome 2.12 is the best X11 DE there is&rdquo;. You wonder why? Because &ldquo;all in all, Gnome is today more powerful, better integrated to the underlying system with DBUS and HAL, looks good, behaves as expected and, most of all, it&rsquo;s simple and clean&rdquo;. I couldn&rsquo;t agree more! (via &ldquo;FootNotes&rdquo;:<a href="http://www.gnomedesktop.org">http://www.gnomedesktop.org</a>)
 <br>
-
-
-<ul>
-<li>A fellow Gentoo developer convinced me to start hanging out on IRC regularly, which I now do despite being a little reluctant at first. But after two or three weeks I can see all the positive effects this has had for my dev work, which may also have to do with my further increased feeling of being part of a larger community. Directly (as in chat vs. mail) communicating with people really can do wonders for understanding each other better&hellip; If you got something you want to tell me, you&rsquo;ll find me as &lsquo;citizen428&rsquo; (surprising, huh?) on Freenode where I usually can be found in #gentoo-bsd, #gentoo-dev, #gentoo-ruby and #nitro.</li>
-</ul>
-
-
+* A fellow Gentoo developer convinced me to start hanging out on IRC regularly, which I now do despite being a little reluctant at first. But after two or three weeks I can see all the positive effects this has had for my dev work, which may also have to do with my further increased feeling of being part of a larger community. Directly (as in chat vs. mail) communicating with people really can do wonders for understanding each other better&hellip; If you got something you want to tell me, you&rsquo;ll find me as &lsquo;citizen428&rsquo; (surprising, huh?) on Freenode where I usually can be found in #gentoo-bsd, #gentoo-dev, #gentoo-ruby and #nitro.
 <br>
-
-
-<ul>
-<li>I&rsquo;ve been looking for new Linux games and have found &ldquo;OpenAnno&rdquo;:<a href="http://www.lanadminsystem.de/cgi-bin/Lanas.pl?OPENANNO">http://www.lanadminsystem.de/cgi-bin/Lanas.pl?OPENANNO</a> and &ldquo;The Mana World&rdquo;:<a href="http://themanaworld.org/,">http://themanaworld.org/,</a> which both look promising but are still in early stages of development.</li>
-</ul>
-
-
+* I&rsquo;ve been looking for new Linux games and have found &ldquo;OpenAnno&rdquo;:<a href="http://www.lanadminsystem.de/cgi-bin/Lanas.pl?OPENANNO">http://www.lanadminsystem.de/cgi-bin/Lanas.pl?OPENANNO</a> and &ldquo;The Mana World&rdquo;:<a href="http://themanaworld.org/,">http://themanaworld.org/,</a> which both look promising but are still in early stages of development.
 <br>
-
-
-<ul>
-<li>Read a &ldquo;shocking account&rdquo;:<a href="http://www.filmstadtinferno.de/offener_kanal.htm">http://www.filmstadtinferno.de/offener_kanal.htm</a> (in German) of how the &ldquo;Livorno&rdquo;:<a href="http://www.livornocalcio.it/">http://www.livornocalcio.it/</a> &ldquo;Ultras&rdquo;:<a href="http://en.wikipedia.org/wiki/Ultras">http://en.wikipedia.org/wiki/Ultras</a> and their German visitors got treated by the police in Rome after the game against Lazio. Carabinieri vaffanculo!</li>
-</ul>
-
-
+* Read a &ldquo;shocking account&rdquo;:<a href="http://www.filmstadtinferno.de/offener_kanal.htm">http://www.filmstadtinferno.de/offener_kanal.htm</a> (in German) of how the &ldquo;Livorno&rdquo;:<a href="http://www.livornocalcio.it/">http://www.livornocalcio.it/</a> &ldquo;Ultras&rdquo;:<a href="http://en.wikipedia.org/wiki/Ultras">http://en.wikipedia.org/wiki/Ultras</a> and their German visitors got treated by the police in Rome after the game against Lazio. Carabinieri vaffanculo!
 <br>
-
-
-<ul>
-<li>Want to create your own first person shooter? Have fun with &ldquo;FPS Creator&rdquo;:<a href="http://www.fpscreator.com/!">http://www.fpscreator.com/!</a> It uses DirectX though, so you&rsquo;re stuck to Windows&hellip; :(</li>
-</ul>
-
-
+* Want to create your own first person shooter? Have fun with &ldquo;FPS Creator&rdquo;:<a href="http://www.fpscreator.com/!">http://www.fpscreator.com/!</a> It uses DirectX though, so you&rsquo;re stuck to Windows&hellip; :(
 <br>
-
-
-<ul>
-<li>For all you music lovers out there, make sure to check out the Flash magazine &ldquo;Music Hurts&rdquo;:<a href="http://musichurts.com/!">http://musichurts.com/!</a> I got the link from the current print issue of &ldquo;de:bug&rdquo;:<a href="http://www.de-bug.de/,">http://www.de-bug.de/,</a> a magazine you definitely should check out when you&rsquo;re into electronic music!</li>
-</ul>
-
+* For all you music lovers out there, make sure to check out the Flash magazine &ldquo;Music Hurts&rdquo;:<a href="http://musichurts.com/!">http://musichurts.com/!</a> I got the link from the current print issue of &ldquo;de:bug&rdquo;:<a href="http://www.de-bug.de/,">http://www.de-bug.de/,</a> a magazine you definitely should check out when you&rsquo;re into electronic music!</p>
 
 <p>That&rsquo;s it for today, see you at the next episode of &ldquo;citizen428&rsquo;s random link dump&rdquo;!</p>
 ]]></content>
@@ -164,7 +130,7 @@
 <p><b>Games:</b>
 Yes, I&rsquo;m still pretty much addicted to &ldquo;Hattrick&rdquo;:<a href="http://www.hattrick.org">http://www.hattrick.org</a> and the fact that I finally have good chances to promote to China&rsquo;s top division makes the game still exciting for me, even after more than 2,5 years.</p>
 
-<p>Unfortunately I&rsquo;ve never been the kind of guy who&rsquo;s to be satisfied by only one addiction, so I&rsquo;ve started to play a really nice Massive Multiplayer Browser RPG called &ldquo;Pardus&rdquo;:<a href="http://www.pardus.at">http://www.pardus.at</a> which is developed by Austrian students. Probably the best aspect about the game is the role-playing going on, which can best be seen at excellent fan sites as &ldquo;The Tiacken Tribune&rdquo;:<a href="http://pardus.span.com.sg/">http://pardus.span.com.sg/</a> or the &ldquo;Pardus Chronicles&rdquo;:<a href="http://s9.invisionfree.com/TheChronicles/">http://s9.invisionfree.com/TheChronicles/</a> (here are two of &ldquo;my&rdquo;:<a href="http://s9.invisionfree.com/TheChronicles/index.php?showtopic=47">http://s9.invisionfree.com/TheChronicles/index.php?showtopic=47</a> &ldquo;stories&rdquo;:<a href="http://s9.invisionfree.com/TheChronicles/index.php?showtopic=23">http://s9.invisionfree.com/TheChronicles/index.php?showtopic=23</a> &ndash; Okami&rsquo;s the name of my character, Red Cell is the alliance I&rsquo;m a part of &ndash; and soon there are more to come!). Go check it out now, Pardus is really cool!</p>
+<p>Unfortunately I&rsquo;ve never been the kind of guy who&rsquo;s to be satisfied by only one addiction, so I&rsquo;ve started to play a really nice Massive Multiplayer Browser RPG called &ldquo;Pardus&rdquo;:<a href="http://www.pardus.at">http://www.pardus.at</a> which is developed by Austrian students. Probably the best aspect about the game is the role-playing going on, which can best be seen at excellent fan sites as &ldquo;The Tiacken Tribune&rdquo;:<a href="http://pardus.span.com.sg/">http://pardus.span.com.sg/</a> or the &ldquo;Pardus Chronicles&rdquo;:<a href="http://s9.invisionfree.com/TheChronicles/">http://s9.invisionfree.com/TheChronicles/</a> (here are two of &ldquo;my&rdquo;:<a href="http://s9.invisionfree.com/TheChronicles/index.php?showtopic=47">http://s9.invisionfree.com/TheChronicles/index.php?showtopic=47</a> &ldquo;stories&rdquo;:<a href="http://s9.invisionfree.com/TheChronicles/index.php?showtopic=23">http://s9.invisionfree.com/TheChronicles/index.php?showtopic=23</a> - Okami&rsquo;s the name of my character, Red Cell is the alliance I&rsquo;m a part of - and soon there are more to come!). Go check it out now, Pardus is really cool!</p>
 
 <p><b>Sports:</b>
 It&rsquo;s summer and I&rsquo;m doing lots of sports once again! Most importantly I&rsquo;ve started to play &ldquo;water polo&rdquo;:<a href="http://en.wikipedia.org/wiki/Water_polo">http://en.wikipedia.org/wiki/Water_polo</a> for the &ldquo;Wiener Sport-Club&rdquo;:<a href="http://www.wsc-waterpolo.at.tf/.">http://www.wsc-waterpolo.at.tf/.</a> It&rsquo;s a really tough sport and during the first few training sessions my body definitely hated me more than once, but we&rsquo;re making pretty good overall progress as a team and will have 3 weekly training sessions for the next month! :) Our first official friendly game should be played this fall, I will make sure to announce the date in due time.</p>

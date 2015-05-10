@@ -4,7 +4,7 @@
   <title><![CDATA[Category: links | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/links/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -91,7 +91,7 @@
 <li><a href="http://www.cloudera.com/blog/2009/12/17/7-tips-for-improving-mapreduce-performance/">7 Tips for Improving MapReduce Performance</a></li>
 <li><a href="http://www.slideshare.net/cwensel/sam-sig-hadoop-architecture-mapreduce-patterns-and-best-practices-with-cascading">SAM SIG: Hadoop architecture, MapReduce patterns, and best practices with Cascading</a></li>
 <li><a href="http://www.cascading.org/">Cascading - API for defining and executing complex, scale-free, and fault tolerant data processing workflows on a Hadoop cluster</a></li>
-<li><a href="http://www.cloudera.com/blog/2010/03/why-europes-largest-ad-targeting-platform-uses-hadoop/">Why Europe's Largest Ad Targeting Platform Uses Hadoop</a></li>
+<li><a href="http://www.cloudera.com/blog/2010/03/why-europes-largest-ad-targeting-platform-uses-hadoop/">Why Europe&#8217;s Largest Ad Targeting Platform Uses Hadoop</a></li>
 </ul>
 
 
@@ -130,15 +130,15 @@
     <content type="html"><![CDATA[<p>Being sick this week I had a lot of time to read, but most if it went into Bruce Sterling&rsquo;s &ldquo;Hacker Crackdown&rdquo;:<a href="http://www.mit.edu/hacker/hacker.html">http://www.mit.edu/hacker/hacker.html</a> and Joe Dunthorne&rsquo;s &ldquo;Submarine&rdquo;:<a href="http://www.amazon.com/Submarine-Joe-Dunthorne/dp/0241143969.">http://www.amazon.com/Submarine-Joe-Dunthorne/dp/0241143969.</a> Anyway, here we go:</p>
 
 <ul>
-<li>"Did 'Star Wars' become a toy story? ":http://herocomplex.latimes.com/2010/08/12/star-wars-was-born-a-long-time-ago-but-not-all-that-far-far-away-in-1972-filmmakers-george-lucas-and-gary-kurtz-wer/<br>I admit to being quite a Star Wars nerd, the "Han shot first":http://en.wikipedia.org/wiki/Han_shot_first kind who pretends Episode I-III never happened and who actually sat through the entire "Holiday special":http://en.wikipedia.org/wiki/The_Star_Wars_Holiday_Special. If you are remotely like me, this article providing some insider information by "Gary Kurtz":http://en.wikipedia.org/wiki/Gary_Kurtz will be quite an interesting read.</li>
-<li>"Computers and Mathematical Notation":http://www.jsoftware.com/papers/camn.htm<br>Interesting thoughts on how programming languages (<a href="http://en.wikipedia.org/wiki/J_(programming_language">J</a> in this case) could influence mathematical notation by Turing Award winner "Kenneth E. Iverson":http://en.wikipedia.org/wiki/Kenneth_E._Iverson</li>
-<li>"Common Programmer Health Problems":http://sheddingbikes.com/posts/1281257293.html<br>Some sane advice we all occasionally are guilty of ignoring.</li>
-<li>"We Are All Talk Radio Hosts":http://www.wired.com/wiredscience/2010/08/we-are-all-talk-radio-hosts/<br>On strawberry jam, reasoning and cognitive bias.</li>
-<li>"The Millennium Development Goal that really does work has been forgotten":http://aidwatchers.com/2010/09/the-millennium-development-goal-that-really-does-work-has-been-forgotten/<br>Sure, we'll help you. Just not in a way so that you eventually can help yourself.</li>
-<li>"The Anthropology of Hackers":http://www.theatlantic.com/technology/archive/2010/09/the-anthropology-of-hackers/63308/<br>Outline of anthropologist Gabriella Coleman's course about hacker culture at NYU.</li>
-<li>"Ten things to look for in a circumvention tool":https://blog.torproject.org/blog/ten-things-look-circumvention-tool<br>By Roger Dingledine of Tor fame.</li>
-<li>"This Ain't Your Daddy's Wumpus":http://nostarch.com/download/Lisp08.pdf<br>Example chapter from the upcoming book "Land of Lisp":http://nostarch.com/lisp.htm (PDF).</li>
-<li>"In Arabian Desert, a Sustainable City Rises":http://www.nytimes.com/2010/09/26/arts/design/26masdar.html?_r=1&hp<br>The first residents are starting to move into "Masdar":http://en.wikipedia.org/wiki/Masdar_City, a planned city built in Abu Dhabi. There seems to be some discussion about how much of a "real" city Masdar will be, but then Dubai didn't feel like a "real" place to me either, but more like a soulless agglomeration of skyscrapers and shopping malls.</li>
+<li>&#8220;Did &#8216;Star Wars&#8217; become a toy story? &#8220;:http://herocomplex.latimes.com/2010/08/12/star-wars-was-born-a-long-time-ago-but-not-all-that-far-far-away-in-1972-filmmakers-george-lucas-and-gary-kurtz-wer/<br>I admit to being quite a Star Wars nerd, the &#8220;Han shot first&#8221;:http://en.wikipedia.org/wiki/Han_shot_first kind who pretends Episode I-III never happened and who actually sat through the entire &#8220;Holiday special&#8221;:http://en.wikipedia.org/wiki/The_Star_Wars_Holiday_Special. If you are remotely like me, this article providing some insider information by &#8220;Gary Kurtz&#8221;:http://en.wikipedia.org/wiki/Gary_Kurtz will be quite an interesting read.</li>
+<li>&#8220;Computers and Mathematical Notation&#8221;:http://www.jsoftware.com/papers/camn.htm<br>Interesting thoughts on how programming languages (<a href="http://en.wikipedia.org/wiki/J_(programming_language">J</a> in this case) could influence mathematical notation by Turing Award winner &#8220;Kenneth E. Iverson&#8221;:http://en.wikipedia.org/wiki/Kenneth_E._Iverson</li>
+<li>&#8220;Common Programmer Health Problems&#8221;:http://sheddingbikes.com/posts/1281257293.html<br>Some sane advice we all occasionally are guilty of ignoring.</li>
+<li>&#8220;We Are All Talk Radio Hosts&#8221;:http://www.wired.com/wiredscience/2010/08/we-are-all-talk-radio-hosts/<br>On strawberry jam, reasoning and cognitive bias.</li>
+<li>&#8220;The Millennium Development Goal that really does work has been forgotten&#8221;:http://aidwatchers.com/2010/09/the-millennium-development-goal-that-really-does-work-has-been-forgotten/<br>Sure, we&#8217;ll help you. Just not in a way so that you eventually can help yourself.</li>
+<li>&#8220;The Anthropology of Hackers&#8221;:http://www.theatlantic.com/technology/archive/2010/09/the-anthropology-of-hackers/63308/<br>Outline of anthropologist Gabriella Coleman&#8217;s course about hacker culture at NYU.</li>
+<li>&#8220;Ten things to look for in a circumvention tool&#8221;:https://blog.torproject.org/blog/ten-things-look-circumvention-tool<br>By Roger Dingledine of Tor fame.</li>
+<li>&#8220;This Ain&#8217;t Your Daddy&#8217;s Wumpus&#8221;:http://nostarch.com/download/Lisp08.pdf<br>Example chapter from the upcoming book &#8220;Land of Lisp&#8221;:http://nostarch.com/lisp.htm (PDF).</li>
+<li>&#8220;In Arabian Desert, a Sustainable City Rises&#8221;:http://www.nytimes.com/2010/09/26/arts/design/26masdar.html?_r=1&hp<br>The first residents are starting to move into &#8220;Masdar&#8221;:http://en.wikipedia.org/wiki/Masdar_City, a planned city built in Abu Dhabi. There seems to be some discussion about how much of a &#8220;real&#8221; city Masdar will be, but then Dubai didn&#8217;t feel like a &#8220;real&#8221; place to me either, but more like a soulless agglomeration of skyscrapers and shopping malls.</li>
 </ul>
 
 ]]></content>
@@ -150,14 +150,14 @@
     <updated>2010-09-05T00:00:00+07:00</updated>
     <id>http://www.citizen428.net/blog/2010/09/05/information-overload-2010-09-05</id>
     <content type="html"><![CDATA[<ul>
-<li>"Clojure or: How I Learned to Stop Worrying and Love the Parentheses":http://nathanmarz.com/blog/clojure-or-how-i-learned-to-stop-worrying-and-love-the-paren.html<br>Blog post explaining what draws the author - and many others - to Clojure.</li>
-<li>"tactics, tactics, tactics":http://dlowe-wfh.blogspot.com/2007/06/tactics-tactics-tactics.html<br>How to get better at programming. And chess.</li>
-<li>"Die Sankore-Schriften":http://www.wissenslogs.de/wblogs/blog/die-sankore-schriften/wissenschaftsgeschichte/2010-08-19/die-sankor-schriften<br>Little history of the Sankore university in Timbuktu, Mali (in German).</li>
-<li>"The Making Of: Little Computer People":http://www.next-gen.biz/features/the-making-of-little-computer-people<br>I love video game history, especially when it deals with games who influenced very successful titles later on.</li>
-<li>"Sleep Deprivation May Spur Serious Mental Problems, Study Finds":http://www.bloomberg.com/news/2010-08-31/sleep-deprivation-may-trigger-mental-problems-in-young-people-study-finds.html<br>A little reminder to all us geeks, nerds and hackers that sleep does play an important role in our overall well-being.</li>
-<li>"Experience: I spent 29 years in solitary confinement":http://www.guardian.co.uk/lifeandstyle/2010/aug/28/29-years-solitary-confinement-robert-king<br>Robert Kind who spent 29 years in solitary confinement for crimes he didn't commit talks about his experience.</li>
-<li>"Why can you turn clothing right-side-out?":http://math.stackexchange.com/questions/2755/why-can-you-turn-clothing-right-side-out<br>Math is everywhere.</li>
-<li>"Brazilian agriculture:The miracle of the cerrado":http://www.economist.com/node/16886442?story_id=16886442&CFID=142315524&CFTOKEN=99196615<br>Very interesting article on how Brazil transformed itself into one of the world's biggest food exporters.</li>
+<li>&#8220;Clojure or: How I Learned to Stop Worrying and Love the Parentheses&#8221;:http://nathanmarz.com/blog/clojure-or-how-i-learned-to-stop-worrying-and-love-the-paren.html<br>Blog post explaining what draws the author - and many others - to Clojure.</li>
+<li>&#8220;tactics, tactics, tactics&#8221;:http://dlowe-wfh.blogspot.com/2007/06/tactics-tactics-tactics.html<br>How to get better at programming. And chess.</li>
+<li>&#8220;Die Sankore-Schriften&#8221;:http://www.wissenslogs.de/wblogs/blog/die-sankore-schriften/wissenschaftsgeschichte/2010-08-19/die-sankor-schriften<br>Little history of the Sankore university in Timbuktu, Mali (in German).</li>
+<li>&#8220;The Making Of: Little Computer People&#8221;:http://www.next-gen.biz/features/the-making-of-little-computer-people<br>I love video game history, especially when it deals with games who influenced very successful titles later on.</li>
+<li>&#8220;Sleep Deprivation May Spur Serious Mental Problems, Study Finds&#8221;:http://www.bloomberg.com/news/2010-08-31/sleep-deprivation-may-trigger-mental-problems-in-young-people-study-finds.html<br>A little reminder to all us geeks, nerds and hackers that sleep does play an important role in our overall well-being.</li>
+<li>&#8220;Experience: I spent 29 years in solitary confinement&#8221;:http://www.guardian.co.uk/lifeandstyle/2010/aug/28/29-years-solitary-confinement-robert-king<br>Robert Kind who spent 29 years in solitary confinement for crimes he didn&#8217;t commit talks about his experience.</li>
+<li>&#8220;Why can you turn clothing right-side-out?&#8221;:http://math.stackexchange.com/questions/2755/why-can-you-turn-clothing-right-side-out<br>Math is everywhere.</li>
+<li>&#8220;Brazilian agriculture:The miracle of the cerrado&#8221;:http://www.economist.com/node/16886442?story_id=16886442&CFID=142315524&CFTOKEN=99196615<br>Very interesting article on how Brazil transformed itself into one of the world&#8217;s biggest food exporters.</li>
 </ul>
 
 ]]></content>
@@ -169,16 +169,16 @@
     <updated>2010-08-29T00:00:00+07:00</updated>
     <id>http://www.citizen428.net/blog/2010/08/29/information-overload-2010-08-29</id>
     <content type="html"><![CDATA[<ul>
-<li>"How to feed the world":http://vimeo.com/8812686<br>A nice 9 minute animation aimed mainly at kids. Interesting nonetheless and very well done.</li>
-<li>"Danish volunteers build manned spacecraft":http://www.wired.co.uk/news/archive/2010-08/23/danish-manned-spacecraft<br>SomethingAwful goons will launch a space rocket on August 31st without government funding.</li>
-<li>"Measuring the Speed of Light with Marshmallows":http://demonstrations.wolfram.com/MeasuringTheSpeedOfLightWithMarshmallows/<br>A fun idea plus a Mathematica notebook for download.</li>
-<li>"Inside the secret world of Trader Joe's":http://money.cnn.com/2010/08/20/news/companies/inside_trader_joes_full_version.fortune/index.htm<br>Interesting insights into the "cool" convenience store chain.</li>
-<li>"The 7 Stages Of Doing Something New":http://malevolent.com/weblog/archive/2010/08/27/7-stages-doing-something-new/<br>A good reminder that "<a href="http://knowyourmeme.com/memes/impossible-is-nothing">impossible is nothing</a>" ;-).</li>
-<li>"Maoists in Limbo":http://www.foreignpolicy.com/articles/2010/08/26/maoists_in_limbo?page=full<br>Article about the situation of Maoist revolutionaries in present day Nepal. I hope one of my favorite countries will soon be able to establish real peace!</li>
-<li>"China's secure communications quantum leap":http://atimes.com/atimes/China_Business/LH26Cb01.html<br>Overview of China's breakthrough in quantum communication. This could have interesting military implications (e.g. for <a href="http://www.sinodefence.com/navy/sub/default.asp">submarines</a> in the South China Sea), bet the PLA's very happy.</li>
-<li>"Ruby for Awesome Command Line Applications":http://awesome-cli-ruby.heroku.com/<br />Dave Copeland's presentation from "Lone Star Ruby Conference":http://www.lonestarrubyconf.com/. Not earth-shattering, but overall sane advice plus some useful links at the end.</li>
-<li>"Badass of the Week: Nikola Tesla":http://www.badassoftheweek.com/tesla.html<br />Entertaining little article on a very interesting person.</li>
-<li>"Filesharing, Flattr und Bezahlschranken: Die Aufloesung historischer Unfaelle":http://www.neunetz.com/2010/08/25/filesharing-flattr-und-bezahlschranken-die-aufloesung-historischer-unfaelle/<br />Value creation in the digital world and how it should differ from the analog times (German).</li>
+<li>&#8220;How to feed the world&#8221;:http://vimeo.com/8812686<br>A nice 9 minute animation aimed mainly at kids. Interesting nonetheless and very well done.</li>
+<li>&#8220;Danish volunteers build manned spacecraft&#8221;:http://www.wired.co.uk/news/archive/2010-08/23/danish-manned-spacecraft<br>SomethingAwful goons will launch a space rocket on August 31st without government funding.</li>
+<li>&#8220;Measuring the Speed of Light with Marshmallows&#8221;:http://demonstrations.wolfram.com/MeasuringTheSpeedOfLightWithMarshmallows/<br>A fun idea plus a Mathematica notebook for download.</li>
+<li>&#8220;Inside the secret world of Trader Joe&#8217;s&#8221;:http://money.cnn.com/2010/08/20/news/companies/inside_trader_joes_full_version.fortune/index.htm<br>Interesting insights into the &#8220;cool&#8221; convenience store chain.</li>
+<li>&#8220;The 7 Stages Of Doing Something New&#8221;:http://malevolent.com/weblog/archive/2010/08/27/7-stages-doing-something-new/<br>A good reminder that &#8221;<a href="http://knowyourmeme.com/memes/impossible-is-nothing">impossible is nothing</a>&#8221; ;-).</li>
+<li>&#8220;Maoists in Limbo&#8221;:http://www.foreignpolicy.com/articles/2010/08/26/maoists_in_limbo?page=full<br>Article about the situation of Maoist revolutionaries in present day Nepal. I hope one of my favorite countries will soon be able to establish real peace!</li>
+<li>&#8220;China&#8217;s secure communications quantum leap&#8221;:http://atimes.com/atimes/China_Business/LH26Cb01.html<br>Overview of China&#8217;s breakthrough in quantum communication. This could have interesting military implications (e.g. for <a href="http://www.sinodefence.com/navy/sub/default.asp">submarines</a> in the South China Sea), bet the PLA&#8217;s very happy.</li>
+<li>&#8220;Ruby for Awesome Command Line Applications&#8221;:http://awesome-cli-ruby.heroku.com/<br />Dave Copeland&#8217;s presentation from &#8220;Lone Star Ruby Conference&#8221;:http://www.lonestarrubyconf.com/. Not earth-shattering, but overall sane advice plus some useful links at the end.</li>
+<li>&#8220;Badass of the Week: Nikola Tesla&#8221;:http://www.badassoftheweek.com/tesla.html<br />Entertaining little article on a very interesting person.</li>
+<li>&#8220;Filesharing, Flattr und Bezahlschranken: Die Aufloesung historischer Unfaelle&#8221;:http://www.neunetz.com/2010/08/25/filesharing-flattr-und-bezahlschranken-die-aufloesung-historischer-unfaelle/<br />Value creation in the digital world and how it should differ from the analog times (German).</li>
 </ul>
 
 ]]></content>
@@ -192,16 +192,16 @@
     <content type="html"><![CDATA[<p>The web is full of wonderful information. In fact there&rsquo;s so much of it, it almost feels intimidating at times. I therefore plan to start a series of blog posts about articles/screencasts/lectures/etc. I enjoyed during the week (they may have been published at a totally different time though).</p>
 
 <ul>
-<li>"The Philosophy of Punk Rock Mathematics":http://technoccult.net/archives/2010/02/25/the-punk-rock-philosophy-of-mathematics-technoccult-interviews-tom-henderson/<br>An interview with Tom Henderson, aka "@mathpunk":http://twitter.com/mathpunk.</li>
-<li>"Augmented Reality: The Nightmare Scenario":http://www.fastcodesign.com/1661871/augmented-reality-the-nightmare-scenario<br>Short video by a Japanese architecture student about advertising in an augmented (hyper-)reality.</li>
-<li>"The origins of abc":http://ilovetypography.com/2010/08/07/where-does-the-alphabet-come-from/<br>Where does our alphabet come from?</li>
-<li>"Beyond City Limits":http://www.foreignpolicy.com/articles/2010/08/16/beyond_city_limits?page=full<br>Is the age of nations over and are we entering the age of cities?</li>
-<li>"Clojure 1.2 and Beyond":http://fogus.me/static/preso/clj1.2+/<br>A presentation by "@fogus":http://twitter.com/fogus about the newly released Clojure 1.2. Covers everything that's important and has some wild speculation about the future too.</li>
-<li>"Cauchy Curves":http://www.vector.org.uk/?vol=24&no=1&art=jonesreiter<br>Drawing Cauchy curves with "J":http://www.jsoftware.com/.</li>
-<li>"Digital copycats":http://mdn.mainichi.jp/features/news/20100820p2a00m0na019000c.html<br>People in Japan are starting to digitize their books.</li>
-<li>"Hydrogen bombshell: Rewriting life's history":http://www.newscientist.com/article/mg20727721.400-hydrogen-bombshell-rewriting-lifes-history.html<br>Animals who don't need oxygen for survival.</li>
-<li>"An Implausibly Illustrated Introduction to HTML5 Web Workers":http://wearehugh.com/public/2010/08/html5-web-workers/<br>Exactly what the title promises. </li>
-<li>"Urlaub ohne Ende":http://www.spiegel.de/unispiegel/jobundberuf/0,1518,711917,00.html<br>Netflix employees can take as many holidays as they want. Working models for the post-industrial age? (German)</Ii></ul>
+<li>&#8220;The Philosophy of Punk Rock Mathematics&#8221;:http://technoccult.net/archives/2010/02/25/the-punk-rock-philosophy-of-mathematics-technoccult-interviews-tom-henderson/<br>An interview with Tom Henderson, aka &#8220;@mathpunk&#8221;:http://twitter.com/mathpunk.</li>
+<li>&#8220;Augmented Reality: The Nightmare Scenario&#8221;:http://www.fastcodesign.com/1661871/augmented-reality-the-nightmare-scenario<br>Short video by a Japanese architecture student about advertising in an augmented (hyper-)reality.</li>
+<li>&#8220;The origins of abc&#8221;:http://ilovetypography.com/2010/08/07/where-does-the-alphabet-come-from/<br>Where does our alphabet come from?</li>
+<li>&#8220;Beyond City Limits&#8221;:http://www.foreignpolicy.com/articles/2010/08/16/beyond_city_limits?page=full<br>Is the age of nations over and are we entering the age of cities?</li>
+<li>&#8220;Clojure 1.2 and Beyond&#8221;:http://fogus.me/static/preso/clj1.2+/<br>A presentation by &#8220;@fogus&#8221;:http://twitter.com/fogus about the newly released Clojure 1.2. Covers everything that&#8217;s important and has some wild speculation about the future too.</li>
+<li>&#8220;Cauchy Curves&#8221;:http://www.vector.org.uk/?vol=24&no=1&art=jonesreiter<br>Drawing Cauchy curves with &#8220;J&#8221;:http://www.jsoftware.com/.</li>
+<li>&#8220;Digital copycats&#8221;:http://mdn.mainichi.jp/features/news/20100820p2a00m0na019000c.html<br>People in Japan are starting to digitize their books.</li>
+<li>&#8220;Hydrogen bombshell: Rewriting life&#8217;s history&#8221;:http://www.newscientist.com/article/mg20727721.400-hydrogen-bombshell-rewriting-lifes-history.html<br>Animals who don&#8217;t need oxygen for survival.</li>
+<li>&#8220;An Implausibly Illustrated Introduction to HTML5 Web Workers&#8221;:http://wearehugh.com/public/2010/08/html5-web-workers/<br>Exactly what the title promises. </li>
+<li>&#8220;Urlaub ohne Ende&#8221;:http://www.spiegel.de/unispiegel/jobundberuf/0,1518,711917,00.html<br>Netflix employees can take as many holidays as they want. Working models for the post-industrial age? (German)</Ii></ul>
 
 ]]></content>
   </entry>

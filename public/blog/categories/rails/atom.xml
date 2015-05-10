@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -25,7 +25,7 @@
 </ol>
 
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -39,10 +39,6 @@
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;p = Proc.new { |name| &amp;ldquo;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="sr">&amp;rdquo; }</span>
@@ -52,20 +48,16 @@
 </span><span class='line'><span class="sr">p.call</span>
 </span><span class='line'><span class="sr">=&gt; &amp;ldquo;Hello &amp;rdquo;</span>
 </span><span class='line'><span class="sr">l.call</span>
-</span><span class='line'><span class="sr">ArgumentError: wrong number of arguments (0 for 1)&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">4</span><span class="ss">:in</span> <span class="sb">`block in irb_binding&#39;</span>
-</span><span class='line'><span class="sb">from (irb):6:in `</span><span class="n">call</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from (irb):6</span>
-</span><span class='line'><span class="s1">from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&amp;lt;main&amp;gt;&#39;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote>
+</span><span class='line'><span class="sr">ArgumentError: wrong number of arguments (0 for 1)</span>
+</span><span class='line'><span class="sr">    from (irb):4:in &lt;code&gt;block in irb_binding&#39;</span>
+</span><span class='line'><span class="sr">    from (irb):6:in&lt;/</span><span class="n">code</span><span class="o">&gt;</span><span class="n">call</span><span class="o">&amp;</span><span class="c1">#8217;</span>
+</span><span class='line'>    <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">6</span>
+</span><span class='line'>    <span class="n">from</span> <span class="sr">/Users/mi</span><span class="n">chi</span><span class="o">/.</span><span class="n">rvm</span><span class="o">/</span><span class="n">rubies</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">p0</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="ss">irb</span><span class="p">:</span><span class="mi">17</span><span class="ss">:in</span> <span class="sb">`&lt;main&gt;&amp;lsquo;</span>
+</span></code></pre></td></tr></table></div></figure></p></blockquote></blockquote>
 
 <ol>
 <li>The possibility to return from within the closure:
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -83,29 +75,29 @@
 </span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&amp;lt;Proc:0x000001008c4050@(irb):8 (lambda)&gt;</span>
 </span><span class='line'><span class="nb">p</span><span class="o">.</span><span class="n">call</span>
 </span><span class='line'><span class="ss">LocalJumpError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="k">return</span>
-</span><span class='line'> <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">7</span><span class="ss">:in</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">block</span> <span class="k">in</span> <span class="n">irb_binding</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1"> from (irb):9:in&lt;/code&gt;call&#39;</span>
-</span><span class='line'> <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">9</span>
-</span><span class='line'> <span class="n">from</span> <span class="sr">/Users/mi</span><span class="n">chi</span><span class="o">/.</span><span class="n">rvm</span><span class="o">/</span><span class="n">rubies</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">p0</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="ss">irb</span><span class="p">:</span><span class="mi">17</span><span class="ss">:in</span> <span class="sb">`&lt;main&gt;&amp;lsquo;</span>
+</span><span class='line'> <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">7</span><span class="ss">:in</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">block</span> <span class="k">in</span> <span class="n">irb_binding</span><span class="err">&#39;</span>
+</span><span class='line'> <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">9</span><span class="ss">:in</span><span class="o">&lt;</span><span class="sr">/code&gt;call&amp;#8217;</span>
+</span><span class='line'><span class="sr"> from (irb):9</span>
+</span><span class='line'><span class="sr"> from /</span><span class="no">Users</span><span class="o">/</span><span class="n">michi</span><span class="o">/.</span><span class="n">rvm</span><span class="o">/</span><span class="n">rubies</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">p0</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="ss">irb</span><span class="p">:</span><span class="mi">17</span><span class="ss">:in</span> <span class="sb">`&lt;main&gt;&amp;lsquo;</span>
 </span><span class='line'><span class="sb">l.call</span>
 </span><span class='line'><span class="sb">=&gt; nil</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></li>
+</span></code></pre></td></tr></table></div></figure></p></blockquote></blockquote></li>
 </ol>
 
 
 <p>I&rsquo;ve known about this for a while, but as a Rubyists who until quite recently happily ignored Rails, I didn&rsquo;t know that ActiveSupport changes the &ldquo;LocalJumpError&rdquo; from the second example into</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="sb">`call&#39;: Cannot yield from a Proc type filter.</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="sb">`call&amp;#8217;: Cannot yield from a Proc type filter.</span>
 </span><span class='line'><span class="sb">   The Proc must take two arguments and execute</span>
 </span><span class='line'><span class="sb">   #call on the second argument. (ArgumentError)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>when you try to return from callbacks like &ldquo;before_save&rdquo;. I spent quite some time debugging this before I finally found the solution in this &ldquo;blog post&rdquo;:<a href="http://obosan.blogspot.com/2008/11/blocksclosures-and-return.html.">http://obosan.blogspot.com/2008/11/blocksclosures-and-return.html.</a> Instead of</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -113,11 +105,11 @@
 </span><span class='line'>  <span class="k">return</span> <span class="k">if</span> <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
 </span><span class='line'>  <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
 </span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>you have to do</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -125,7 +117,7 @@
 </span><span class='line'>  <span class="k">return</span> <span class="k">if</span><span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
 </span><span class='line'>  <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
 </span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Probably obvious to more experienced Rails developers, but I really got thrown off by the &ldquo;ArgumentError&rdquo; that replaced the &ldquo;LocalJumpError&rdquo;.</p>
 ]]></content>
@@ -164,13 +156,13 @@
 
 <p>&ldquo;RadRails&rdquo;:<a href="http://www.radrails.org/:">http://www.radrails.org/:</a> From a rather recent mail on &ldquo;ruby-talk&rdquo;:<a href="http://blade.nagaokaut.ac.jp/ruby/ruby-talk/index.shtml">http://blade.nagaokaut.ac.jp/ruby/ruby-talk/index.shtml</a> I learned about RadRails, an IDE for (who would&rsquo;ve guessd) &ldquo;Ruby on Rails&rdquo;:<a href="http://www.rubyonrails.org/">http://www.rubyonrails.org/</a> which was built using the <a href="http://www.eclipse.org/rcp">Eclipse RCP</a>. Unfortunately I didn&rsquo;t have too much time to play with it yet, but so far it seems to be quite nice and if you&rsquo;re into Rails you maybe should have a look at this project.</p>
 
-<p>&ldquo;eigenclass&rdquo;:<a href="http://eigenclass.org/:">http://eigenclass.org/:</a> Recently &ldquo;RedHanded&rdquo;:<a href="http://redhanded.hobix.com/">http://redhanded.hobix.com/</a> kept talking about Mauricio Fernandez' new blog called &ldquo;eigenclass&rdquo;, which talks about a lot of really interesting and advanced Ruby stuff. Definitely an interesting read for every serious Ruby programmer and everyone who wants to become one.</p>
+<p>&ldquo;eigenclass&rdquo;:<a href="http://eigenclass.org/:">http://eigenclass.org/:</a> Recently &ldquo;RedHanded&rdquo;:<a href="http://redhanded.hobix.com/">http://redhanded.hobix.com/</a> kept talking about Mauricio Fernandez&#8217; new blog called &ldquo;eigenclass&rdquo;, which talks about a lot of really interesting and advanced Ruby stuff. Definitely an interesting read for every serious Ruby programmer and everyone who wants to become one.</p>
 
 <p>&ldquo;try ruby!&rdquo;:<a href="http://tryruby.hobix.com/:">http://tryruby.hobix.com/:</a> As I found out on &ldquo;poignant-stiffs&rdquo;:<a href="http://rubyforge.org/pipermail/poignant-stiffs/">http://rubyforge.org/pipermail/poignant-stiffs/</a> <a href="http://whytheluckystiff.net/">why</a> is at it again, which means there&rsquo;s something cool coming up. Despite not involving cartoon foxes or chunky bacon, &ldquo;try ruby&rdquo;:<a href="http://tryruby.hobix.com/">http://tryruby.hobix.com/</a> is still a really neat project, giving you the opportunity to interactively test Ruby from within your web browser. There&rsquo;s also a little tutorial, so this site may very well become the first stop to send Nubies to&hellip;</p>
 
 <p><em><em>Disobey</em></em></p>
 
-<p>&ldquo;The Hacktivist&rdquo;:<a href="http://www.thehacktivist.com/:">http://www.thehacktivist.com/:</a> Instead of summing up what the Hacktivist is all about, I&rsquo;ll just give you the self-description of the project: &ldquo;<i>The Hacktivist is dedicated to examining the theory and practice of hacktivism and electronic civil disobedience while contributing to the evolution of hacktivism by promoting constructive debate, effective direct action, and creative solutions to complex problems in order to facilitate positive change.</i>&rdquo; &ndash; Involve yourself!</p>
+<p>&ldquo;The Hacktivist&rdquo;:<a href="http://www.thehacktivist.com/:">http://www.thehacktivist.com/:</a> Instead of summing up what the Hacktivist is all about, I&rsquo;ll just give you the self-description of the project: &ldquo;<i>The Hacktivist is dedicated to examining the theory and practice of hacktivism and electronic civil disobedience while contributing to the evolution of hacktivism by promoting constructive debate, effective direct action, and creative solutions to complex problems in order to facilitate positive change.</i>&rdquo; - Involve yourself!</p>
 
 <p>&ldquo;The World&rsquo;s Most Populated Countries&rdquo;:<a href="http://www.odt.org/Pictures/poplcart.jpg:">http://www.odt.org/Pictures/poplcart.jpg:</a> Sometimes a new look on things helps changing your perspective in a positive way. That&rsquo;s why it&rsquo;s important to take a minute or two to think about this map of the Earth, where all the countries got resized in relation to their population.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -98,17 +98,17 @@ easy to understand a given snippet of Lua code even with little or no previous e
 
 <p>There&rsquo;s is however one more feature of Lua that&rsquo;s worth discussing in a bit more detail, namely its reliance on a single compound data structure, the table. Tables are in essence what other languages commonly refer to as associative arrays or dictionaries, or key-value pairs. This is how you create a simple table:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">table</span> <span class="o">=</span> <span class="p">{</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">foo</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>The values can be accessed like this: <em>t[&ldquo;x&rdquo;]</em> and <em>t[&ldquo;y&rdquo;]</em>. For string keys Lua supports a nice shorthand though, so <em>t.x</em> and <em>t.y</em> will produce the same result.</p>
 
 <p>One special feature of Lua&rsquo;s tables is that they are also optimized for use as arrays, which can be created like this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">array</span> <span class="o">=</span> <span class="p">{</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">citizen</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="mi">428</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">blog</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Indices are assigned automatically and unlike in other languages start from 1, not 0 (although it is possible to explicitly assign to <em>array[0]</em>). So to get the string &ldquo;428&rdquo; out of our array, we have to use <em>array[2]</em>.</p>
 
@@ -118,39 +118,39 @@ easy to understand a given snippet of Lua code even with little or no previous e
 
 <p>Enough theory, let’s look at some example Lua code. First the customary “Hello world” program:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="nb">print</span> <span class="err">“</span><span class="n">Hello</span> <span class="n">world</span><span class="err">”</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>This will just output <em>Hello world</em>. Now for a function definition:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">function</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </span><span class='line'>  <span class="nb">print</span> <span class="p">(</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Hello</span> <span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="o">..</span> <span class="n">name</span> <span class="o">..</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="err">!&amp;</span><span class="n">rdquo</span><span class="p">;)</span>
 </span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>To generate the same output as above, we would have to call the function with the appropriate argument: <em>sayHello(“world”)</em>. Alternatively, the same function could be defined like this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">sayHello</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </span><span class='line'>  <span class="nb">print</span> <span class="p">(</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Hello</span> <span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="o">..</span> <span class="n">name</span> <span class="o">..</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="err">!&amp;</span><span class="n">rdquo</span><span class="p">;)</span>
 </span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Last but not least a small loop that iterates over an array and prints out each element (<em>ipairs</em> returns the index-value pairs of an array):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">str</span> <span class="k">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="k">do</span>
 </span><span class='line'>  <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="o">..</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;:</span> <span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">..</span><span class="n">str</span><span class="p">)</span>
 </span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Assuming the variable <em>array</em> contains the elements “citizen”, “428”, and “blog”, this will generate the following output:</p>
 
@@ -165,7 +165,7 @@ easy to understand a given snippet of Lua code even with little or no previous e
 
 <h3>Library imports</h3>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -173,14 +173,14 @@ easy to understand a given snippet of Lua code even with little or no previous e
 </span><span class='line'><span class="kd">local</span> <span class="n">shortport</span> <span class="o">=</span> <span class="nb">require</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">shortport</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
 </span><span class='line'><span class="kd">local</span> <span class="n">stdnse</span> <span class="o">=</span> <span class="nb">require</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">stdnse</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
 </span><span class='line'><span class="kd">local</span> <span class="n">string</span> <span class="o">=</span> <span class="nb">require</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">string</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>It&rsquo;s customary to start Nmap scripts by importing all the needed <a href="http://nmap.org/book/nse-library.html">libraries</a>. In the process they are assigned to local variables, so if you wanted to access them under a different (presumably shorter) name you could do so (for example <em>local s = require “string”</em>). There&rsquo;s a wide variety of available libraries, from protocols (<em>afp</em>, <em>dns</em>, <em>http</em>, <em>bitcoin</em>, <em>openssl</em> etc.) over encoding/decoding (<em>base32</em>, <em>base64</em>, <em>json</em>) and utility libraries (<em>nmap</em>, <em>packet</em>, <em>pcre</em>) to a framework for brute-force attacks against services (<em>brute</em>).
 The script we are looking at uses the <em>http</em> library for communication, <em>shortport</em> for an easier way to define portrules (more on that later), and <em>stdnse</em>, a collection of utility functions provided by NSE. The <em>string</em> library is a standard Lua library and used for string matching in this example.</p>
 
 <h3>Metadata</h3>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -212,67 +212,67 @@ The script we are looking at uses the <em>http</em> library for communication, <
 </span><span class='line'><span class="s">]]</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">author</span> <span class="o">=</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Michael</span> <span class="n">Kohl</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
-</span><span class='line'><span class="n">license</span> <span class="o">=</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Same</span> <span class="n">as</span> <span class="n">Nmap</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">See</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">http://nmap.org/book/man-legal.html&quot;</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">nmap</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">book</span><span class="o">/</span><span class="n">man</span><span class="o">-</span><span class="n">legal</span><span class="p">.</span><span class="n">html</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">license</span> <span class="o">=</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Same</span> <span class="n">as</span> <span class="n">Nmap</span><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="n">See</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">http://nmap.org/book/man-legal.html&quot;</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">nmap</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">book</span><span class="o">/</span><span class="n">man</span><span class="o">-</span><span class="n">legal</span><span class="p">.</span><span class="n">html</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
 </span><span class='line'><span class="n">categories</span> <span class="o">=</span> <span class="p">{</span><span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">default</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">discovery</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">safe</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">hr</span> <span class="o">/&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">usage</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="err">@</span><span class="n">usage</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">nmap</span> <span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">script</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span> <span class="p">[</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">script</span><span class="o">-</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span><span class="o">=&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">,</span><span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span><span class="o">=&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="p">,</span><span class="err">&amp;</span><span class="n">hellip</span><span class="p">;]</span> <span class="o">&lt;</span><span class="n">host</span><span class="o">&gt;&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="n">nmap</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="n">script</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span> <span class="p">[</span><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="n">script</span><span class="o">-</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span><span class="o">=&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">,</span><span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span><span class="o">=&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="p">,</span><span class="err">&amp;</span><span class="n">hellip</span><span class="p">;]</span> <span class="o">&lt;</span><span class="n">host</span><span class="o">&gt;&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">output</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">PORT</span>    <span class="n">STATE</span> <span class="n">SERVICE</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">80</span><span class="o">/</span><span class="n">tcp</span>  <span class="n">open</span>  <span class="n">http</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">|</span><span class="n">_http</span><span class="o">-</span><span class="n">generator</span><span class="p">:</span> <span class="n">TYPO3</span> <span class="mf">4.2</span> <span class="n">CMS</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">443</span><span class="o">/</span><span class="n">tcp</span> <span class="n">open</span>  <span class="n">https</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="err">@</span><span class="n">output</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="n">PORT</span>    <span class="n">STATE</span> <span class="n">SERVICE</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="mi">80</span><span class="o">/</span><span class="n">tcp</span>  <span class="n">open</span>  <span class="n">http</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="err">|</span><span class="n">_http</span><span class="o">-</span><span class="n">generator</span><span class="p">:</span> <span class="n">TYPO3</span> <span class="mf">4.2</span> <span class="n">CMS</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="mi">443</span><span class="o">/</span><span class="n">tcp</span> <span class="n">open</span>  <span class="n">https</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">|</span><span class="n">_http</span><span class="o">-</span><span class="n">generator</span><span class="p">:</span> <span class="n">TYPO3</span> <span class="mf">4.2</span> <span class="n">CMS</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="err">|</span><span class="n">_http</span><span class="o">-</span><span class="n">generator</span><span class="p">:</span> <span class="n">TYPO3</span> <span class="mf">4.2</span> <span class="n">CMS</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span> <span class="n">Specify</span> <span class="n">the</span> <span class="n">path</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">check</span> <span class="k">for</span> <span class="n">a</span> <span class="n">generator</span> <span class="n">meta</span> <span class="n">tag</span> <span class="p">(</span><span class="n">default</span> <span class="n">to</span> <span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;).</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="err">@</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span> <span class="n">Specify</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">redirects</span> <span class="n">to</span> <span class="n">follow</span> <span class="p">(</span><span class="n">defaults</span> <span class="n">to</span> <span class="mi">3</span><span class="p">).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="err">@</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span> <span class="n">Specify</span> <span class="n">the</span> <span class="n">path</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">check</span> <span class="k">for</span> <span class="n">a</span> <span class="n">generator</span> <span class="n">meta</span> <span class="n">tag</span> <span class="p">(</span><span class="n">default</span> <span class="n">to</span> <span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;).</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="err">@</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span> <span class="n">Specify</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">redirects</span> <span class="n">to</span> <span class="n">follow</span> <span class="p">(</span><span class="n">defaults</span> <span class="n">to</span> <span class="mi">3</span><span class="p">).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">Changelog</span><span class="p">:</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">23</span> <span class="n">Michael</span> <span class="n">Kohl</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">&amp;#109;&amp;#97;&amp;#x69;&amp;#108;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#x63;&amp;#x69;&amp;#116;&amp;#x69;&amp;#122;&amp;#101;&amp;#x6e;&amp;#52;&amp;#50;&amp;#56;&amp;#64;&amp;#x67;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&quot;</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">116</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">122</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">101</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">110</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">52</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">50</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">56</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">64</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x67</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">109</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">97</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">108</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">46</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6f</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">109</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">:</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span>   <span class="o">+</span> <span class="n">Initial</span> <span class="n">version</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="n">Changelog</span><span class="p">:</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">23</span> <span class="n">Michael</span> <span class="n">Kohl</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#99;&amp;#105;&amp;#116;&amp;#105;&amp;#x7a;&amp;#x65;&amp;#110;&amp;#x34;&amp;#x32;&amp;#x38;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x63</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x74</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x7a</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x65</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">110</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">52</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x32</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">56</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">64</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x67</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">109</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">97</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">108</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">46</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x63</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6f</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6d</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">:</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span>   <span class="o">+</span> <span class="n">Initial</span> <span class="n">version</span>
 </span><span class='line'><span class="err">&amp;</span><span class="n">hellip</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>After the library imports, scripts contain some metadata that is used for documentation and internal purposes. The <em>description</em> and author variables are self-explanatory, the syntax used for the former is Lua&rsquo;s way of creating so-called &ldquo;heredocs&rdquo;, string literals that preserve white space and line breaks. In regard to the <em>license</em> script authors have two choices, the GPL-like Nmap license, as well as a simplified (2-clause) BSD license. Last but not least there&rsquo;s documentation in the NSEDoc format. It&rsquo;s customary to include usage documentation, example output, descriptions of all the available arguments (if any) as well as a changelog.</p>
 
-<p>There&rsquo;s another important field that this specific script doesn&rsquo;t use, <em>dependencies</em>. This defines the order in which scripts should be run and is used for the case where one script works on the results of another script. It&rsquo;s important to keep in mind that scripts listed here will not be automatically run, they still have to be selected via <em>&mdash;script scriptname</em> or in another way (for example <em>&mdash;script=default</em>).</p>
+<p>There&rsquo;s another important field that this specific script doesn&rsquo;t use, <em>dependencies</em>. This defines the order in which scripts should be run and is used for the case where one script works on the results of another script. It&rsquo;s important to keep in mind that scripts listed here will not be automatically run, they still have to be selected via <em>&ndash;script scriptname</em> or in another way (for example <em>&ndash;script=default</em>).</p>
 
 <p>The <em>categories</em> variable is a bit more interesting, it defines which groups of scripts our current program belongs to. Scripts marked as <em>default</em> will be run automatically when Nmap is started with the <em>-sC</em> or <em>-A</em> options.To qualify for inclusion in this category, scripts have to adhere to some criteria: they need to be fast, reliable, non-obstrusive and generally useful. There are no clear definitions for these criteria, it&rsquo;s up to the Nmap developers to add a script to this category. The <em>discovery</em> category collects all scripts that actively try to gather more information about the scan targets, in our case the &ldquo;generator&rdquo; HTML meta tag. If a script is marked as <em>safe</em>, that means that it was not written with the intent of crashing services or exploiting vulnerabilities and that it&rsquo;s unlikely to consume large amounts of resources. There are many more categories Nmap uses, for example <em>auth</em> (scripts dealing with authentication credentials), <em>brute</em> (tools for brute force attacks) or <em>vuln</em> (checking for specific vulnerabilities). For a full list, please consult Nmap&rsquo;s excellent documentation.</p>
 
 <p>Now that we know a bit more about categories, let&rsquo;s see how we can use that knowledge for more interesting Nmap runs. Let’s start by running all the default scripts:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap -sC example.com
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>or</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap &amp;mdash;script<span class="o">=</span>default example.com
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap <span class="p">&amp;</span>ndash<span class="p">;</span><span class="nv">script</span><span class="o">=</span>default example.com
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>The invocation <em>nmap -A example.com</em> (&ldquo;Aggressive/advanced scan options&rdquo;) enables OS and version detection, script scanning (equivalent to <em>nmap -sC</em>), and traceroute.</p>
 
-<p>If you just want to run a single script, you can do so by specifying the <em>&mdash;script</em> argument, for example <em>nmap &mdash;script http-generator example.com</em>.</p>
+<p>If you just want to run a single script, you can do so by specifying the <em>&ndash;script</em> argument, for example <em>nmap &ndash;script http-generator example.com</em>.</p>
 
-<p>It’s also possible to run scripts from several categories, by using something like <em>nmap &mdash;script &ldquo;default,safe&rdquo; example.com</em> or <em>nmap &mdash;script &ldquo;default or safe&rdquo; example.com</em>. There is an analogous and operator, so <em>nmap &mdash;script &ldquo;default AND safe&rdquo; example.com</em> will only run scripts that are in all the listed categories.</p>
+<p>It’s also possible to run scripts from several categories, by using something like <em>nmap &ndash;script &ldquo;default,safe&rdquo; example.com</em> or <em>nmap &ndash;script &ldquo;default or safe&rdquo; example.com</em>. There is an analogous and operator, so <em>nmap &ndash;script &ldquo;default AND safe&rdquo; example.com</em> will only run scripts that are in all the listed categories.</p>
 
 <p>As an example for a rather complex invocation, the following command will run all scripts from the three specified categories, except for the ones whose name starts with &ldquo;http-&rdquo;.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap &amp;mdash;script &amp;ldquo;<span class="o">(</span>default or safe or intrusive<span class="o">)</span> and not http-*&amp;rdquo; example.com
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap <span class="p">&amp;</span>ndash<span class="p">;</span>script <span class="p">&amp;</span>ldquo<span class="p">;</span><span class="o">(</span>default or safe or intrusive<span class="o">)</span> and not http-*<span class="p">&amp;</span>rdquo<span class="p">;</span> example.com
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Last but not least it’s also possible to run user scripts which are not part of the standard Nmap distribution, as show in the following example:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap &amp;mdash;script default,banner,/home/user/customscripts example.com
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nmap <span class="p">&amp;</span>ndash<span class="p">;</span>script default,banner,/home/user/customscripts example.com
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>The above invocation will run all default scripts, the script named “banner” and all scripts which can be found in the directory <em>/home/user/customscripts</em>.</p>
 
@@ -282,15 +282,15 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <p>The rule definition in our example script is very simple since it uses the very handy <em>shortport</em> library, which has several predefined rules for common scenarios:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">rule</span> <span class="o">=</span> <span class="n">shortport</span><span class="p">.</span><span class="n">http</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>This will match and return <em>true</em> when a given port is likely to be an HTTP port.</p>
 
 <h3>Action</h3>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -309,13 +309,11 @@ The script we are looking at uses the <em>http</em> library for communication, <
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">action</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">action</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">path</span> <span class="o">=</span> <span class="n">stdnse</span><span class="p">.</span><span class="n">get_script_args</span><span class="p">(</span><span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;)</span> <span class="ow">or</span> <span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">redirects</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">stdnse</span><span class="p">.</span><span class="n">get_script_args</span><span class="p">(</span><span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;))</span> <span class="ow">or</span> <span class="mi">3</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="kd">local</span> <span class="n">path</span> <span class="o">=</span> <span class="n">stdnse</span><span class="p">.</span><span class="n">get_script_args</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">http-generator.path&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;</span><span class="s">/&#39;</span>
-</span><span class='line'><span class="kd">local</span> <span class="n">redirects</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">stdnse</span><span class="p">.</span><span class="n">get_script_args</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">http-generator.redirects&#39;</span><span class="p">))</span> <span class="ow">or</span> <span class="mi">3</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">-- Worst case: &amp;lt;meta name=Generator content=&quot;Microsoft Word 11&quot;&amp;gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="c1">-- Worst case: &amp;lt;meta name=Generator content=&quot;Microsoft Word 11&quot;&amp;gt;</span>
 </span><span class='line'><span class="kd">local</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">&amp;lt;meta name=&quot;?generator&quot;? content=&quot;([^</span><span class="se">\&quot;</span><span class="s">]*)&quot; ?/?&amp;gt;&#39;</span>
 </span><span class='line'>
 </span><span class='line'><span class="c1">-- make pattern case-insensitive</span>
@@ -330,15 +328,15 @@ The script we are looking at uses the <em>http</em> library for communication, <
 </span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>The <em>action</em> function is the heart of every NSE script, it contains the code that will be performed when the rule matches. Basically <em>action</em> is just another Lua function that accepts the same arguments as the <em>rule</em> function (which is not as obvious in our example because of the use of the <em>shortport.http</em> rule).</p>
 
 <p>The function starts with checking for the presence of two arguments and specifies defaults in case the user didn’t provide any values for them. Arguments can be passed to the script in the following way:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">nmap</span> <span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">script</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span> <span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">script</span><span class="o">-</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span><span class="o">=/</span><span class="n">cms</span><span class="p">,</span><span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span><span class="o">=</span><span class="mi">2</span> <span class="n">example</span><span class="p">.</span><span class="n">com</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="n">nmap</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="n">script</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="n">script</span><span class="o">-</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">path</span><span class="o">=/</span><span class="n">cms</span><span class="p">,</span><span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span><span class="o">=</span><span class="mi">2</span> <span class="n">example</span><span class="p">.</span><span class="n">com</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>They get stored in the table <em>nmap.registry.args</em>, but instead of using them directly you should use the function <em>stdnse.get_script_args</em> to access them.</p>
 
@@ -356,7 +354,7 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
 
 <p>As you may have noticed I didn’t yet show you the helper function mentioned above, so while it’s not very interesting in itself, I’ll include it for completeness’ sake:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -367,24 +365,18 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">follow_redirects</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="kd">local</span> <span class="n">loc</span>
-</span><span class='line'><span class="kd">local</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">^[hH][tT][tT][pP]/1.[01] 30[12]&quot;</span>
-</span><span class='line'><span class="kd">local</span> <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
-</span><span class='line'><span class="k">while</span> <span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;</span><span class="s">status-line&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="s2">&quot;</span><span class="s">&quot;</span><span class="p">):</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n</span> <span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">0</span> <span class="k">do</span>
-</span><span class='line'>    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span class='line'>    <span class="n">loc</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;</span><span class="s">location&#39;</span><span class="p">]</span>
-</span><span class='line'>    <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get_url</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">follow_redirects</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">loc</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">pattern</span> <span class="o">=</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">^</span><span class="p">[</span><span class="n">hH</span><span class="p">][</span><span class="n">tT</span><span class="p">][</span><span class="n">tT</span><span class="p">][</span><span class="n">pP</span><span class="p">]</span><span class="o">/</span><span class="mf">1.</span><span class="p">[</span><span class="mi">01</span><span class="p">]</span> <span class="mi">30</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">while</span> <span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">status</span><span class="o">-</span><span class="n">line</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;]</span> <span class="ow">or</span> <span class="err">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="err">&amp;</span><span class="n">rdquo</span><span class="p">;):</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">do</span>
+</span><span class='line'>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+</span><span class='line'>        <span class="n">loc</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">header</span><span class="p">[</span><span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">location</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;]</span>
+</span><span class='line'>        <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">get_url</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">response</span>
 </span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="k">return</span> <span class="n">response</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>This helper function is a simple way to follow HTTP redirects. It first defines a pattern for recognizing the relevant HTTP status codes (301 and 302) before making a request to the specified host, port and path combination. It then checks for the presence of a redirect and if there is one, follows it to retrieve the location information from the new location. When there are no more redirects or the redirect limit (specified in the argument <em>n</em>) has been reached, the function returns the full HTTP response to the caller.</p>
 
@@ -421,55 +413,49 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
     <id>http://www.citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
     <content type="html"><![CDATA[<p>Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today&rsquo;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&rsquo;s an example:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="err">λ</span><span class="o">&gt;</span> <span class="n">map</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">]</span>
 </span><span class='line'><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>As you can see the function to be <code>map</code>ped is specified with the <a href="http://www.haskell.org/haskellwiki/Partial_application">partially applied</a> function <code>(2+)</code> (or <code>(+2)</code> for that matter).</p>
 
 <p>Here&rsquo;s how we would have to write the same code in Ruby:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>This could also be written in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree</a> way, but alas that would make the code rather hard to understand for less experienced Rubyists:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="ss">:+</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>But because Ruby is as flexible as it is, adding partial application is actually really trivial:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
 </span><span class='line'>  <span class="k">alias</span> <span class="ss">:add</span> <span class="ss">:+</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  def +(o=nil)&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">o</span> <span class="p">?</span> <span class="nb">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">o</span><span class="p">)</span> <span class="p">:</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">self</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span>
-</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'><span class="sr">&lt;p&gt;  def +(o=nil)</span>
+</span><span class='line'><span class="sr">    o ? self.add(o) : lambda { |x| self + x }</span>
+</span><span class='line'><span class="sr">  end</span>
+</span><span class='line'><span class="sr">end</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>And now we can do this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">+</span><span class="p">)</span> <span class="c1">#=&gt; [3, 4, 5]</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Not too bad I think and rather consistent with Ruby&rsquo;s overall style. Alas I don&rsquo;t think we are likely to see partial application on a language level any time soon though&hellip;</p>
 ]]></content>

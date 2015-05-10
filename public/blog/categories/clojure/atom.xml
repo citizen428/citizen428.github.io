@@ -4,7 +4,7 @@
   <title><![CDATA[Category: clojure | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/clojure/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -101,16 +101,16 @@
     <updated>2011-02-06T00:00:00+07:00</updated>
     <id>http://www.citizen428.net/blog/2011/02/06/information-overload-2011-02-06</id>
     <content type="html"><![CDATA[<ul>
-<li>"Plenty Of Fish Hacked":http://grumomedia.com/plenty-of-fish-hacked-chris-russos-explains-how-he-did-it/<br>Once again a security researcher gets into trouble for reporting a vulnerability. Will people never learn?</li>
-<li>"Sourceforge Attack: Full Report":http://sourceforge.net/blog/sourceforge-attack-full-report/<br>Speaking of security, here's the full report of the recent Sourceforge hack.</li>
-<li>"Broken sticks puzzle, and a seemingly paradoxical ratio":http://mindyourdecisions.com/blog/2011/02/01/broken-sticks-puzzle-and-a-seemingly-paradoxical-ratio/<br>A nice little math puzzle, solved with the help of Wolfram Alpha.</li>
-<li>"Die wahre Online-Revolution: Ungeduld":http://leyrer.wikosophy.org/blog/2011/02/die-wahre-online-revolution-ungeduld/<br>I often had the same thought about "Twitter revolutions", but Georg actually bothered to sum it up and write it down (in German).</li>
-<li>"On Omar Suleiman":http://www.arabist.net/blog/2011/2/4/on-omar-suleiman.html<br>If you wnat to find out more about the Egyptian Vice President, this is an interesting profile of the man.</li>
-<li>"The Afghan Bank Heist":http://www.newyorker.com/reporting/2011/02/14/110214fa_fact_filkins?currentPage=all<br>A very sobering article about the Afghan government's involvement in large-scale corruption.</li>
-<li>"A tour of the Clojure landscape":http://ericlavigne.wordpress.com/2011/01/30/a-tour-of-the-clojure-landscape/<br>I quite like this map of Clojure projects on GitHub.</li>
-<li>"How To Identify Good Clients (and Avoid Bad Ones)":http://www.smashingmagazine.com/2011/01/14/how-to-identify-good-clients-avoid-bad-ones/<br>Good advice, not only for freelancers.</li>
-<li>"Adsense, no sense at all - what it's like being sacked by a computer...":http://www.duckworksmagazine.com/11/columns/guest/winter/index.htm<br>This is a bit older, but still a good reminder on why it's dangerous to rely on something like Adwords for your income.</li>
-<li>"Sit. Stay. Parse. Good Girl!":http://www.nytimes.com/2011/01/18/science/18dog.html?_r=2&pagewanted=all<br>A dog with a "vocabulary" of over 1000 words.</li>
+<li>&#8220;Plenty Of Fish Hacked&#8221;:http://grumomedia.com/plenty-of-fish-hacked-chris-russos-explains-how-he-did-it/<br>Once again a security researcher gets into trouble for reporting a vulnerability. Will people never learn?</li>
+<li>&#8220;Sourceforge Attack: Full Report&#8221;:http://sourceforge.net/blog/sourceforge-attack-full-report/<br>Speaking of security, here&#8217;s the full report of the recent Sourceforge hack.</li>
+<li>&#8220;Broken sticks puzzle, and a seemingly paradoxical ratio&#8221;:http://mindyourdecisions.com/blog/2011/02/01/broken-sticks-puzzle-and-a-seemingly-paradoxical-ratio/<br>A nice little math puzzle, solved with the help of Wolfram Alpha.</li>
+<li>&#8220;Die wahre Online-Revolution: Ungeduld&#8221;:http://leyrer.wikosophy.org/blog/2011/02/die-wahre-online-revolution-ungeduld/<br>I often had the same thought about &#8220;Twitter revolutions&#8221;, but Georg actually bothered to sum it up and write it down (in German).</li>
+<li>&#8220;On Omar Suleiman&#8221;:http://www.arabist.net/blog/2011/2/4/on-omar-suleiman.html<br>If you wnat to find out more about the Egyptian Vice President, this is an interesting profile of the man.</li>
+<li>&#8220;The Afghan Bank Heist&#8221;:http://www.newyorker.com/reporting/2011/02/14/110214fa_fact_filkins?currentPage=all<br>A very sobering article about the Afghan government&#8217;s involvement in large-scale corruption.</li>
+<li>&#8220;A tour of the Clojure landscape&#8221;:http://ericlavigne.wordpress.com/2011/01/30/a-tour-of-the-clojure-landscape/<br>I quite like this map of Clojure projects on GitHub.</li>
+<li>&#8220;How To Identify Good Clients (and Avoid Bad Ones)&#8221;:http://www.smashingmagazine.com/2011/01/14/how-to-identify-good-clients-avoid-bad-ones/<br>Good advice, not only for freelancers.</li>
+<li>&#8220;Adsense, no sense at all - what it&#8217;s like being sacked by a computer&#8230;&#8221;:http://www.duckworksmagazine.com/11/columns/guest/winter/index.htm<br>This is a bit older, but still a good reminder on why it&#8217;s dangerous to rely on something like Adwords for your income.</li>
+<li>&#8220;Sit. Stay. Parse. Good Girl!&#8221;:http://www.nytimes.com/2011/01/18/science/18dog.html?_r=2&pagewanted=all<br>A dog with a &#8220;vocabulary&#8221; of over 1000 words.</li>
 </ul>
 
 ]]></content>
@@ -122,16 +122,16 @@
     <updated>2011-01-02T00:00:00+07:00</updated>
     <id>http://www.citizen428.net/blog/2011/01/02/information-overload-2011-01-02</id>
     <content type="html"><![CDATA[<ul>
-<li>"Why the Internet Is a Great Tool for Totalitarians":http://www.wired.com/magazine/2010/12/st_essay_totalitarians/<br>It's always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
-<li>"Caring for Your Introvert":http://www.theatlantic.com/magazine/archive/2003/03/caring-for-your-introvert/2696/<br>While I think the author's overly satirical tone actually does a disservice to the content of the article, as an introvert I still urge you to read this.</li>
-<li>"Understanding Pac-Man Ghost Behavior":http://gameinternals.com/post/2072558330/understanding-pac-man-ghost-behavior<br>This is a great example how a few simple rules can create complex looking behavior patterns in AI opponents.</li>
-<li>"Abandon resolutions. Stop looking for a soulmate. Reject positive thinking":http://www.guardian.co.uk/science/2011/jan/01/how-to-better-person-2011<br>For once somebody managed to write a sensible article regarding new year's resolutions.</li>
-<li>"Farmer-scientist group wants to 'hack society' through open-source technology":http://www.grist.org/article/food-2010-12-29-farmer-scientists-want-to-hack-society<br>About "Open Source Ecology":http://openfarmtech.org/wiki/ and the "Global Village Construction Set":http://openfarmtech.org/wiki/Global_Village_Construction_Set. Awesome!</li>
-<li>"The New Year in Snowflakes":http://chouser.github.com/snow/<br>Very nice little Clojure doodle by Chris Houser.</li>
-<li>"Monads Are Not Metaphors":http://www.codecommit.com/blog/ruby/monads-are-not-metaphors<br>A pretty good explanation of monads for everyone struggling with the concept. It should be easy to follow even if your Scala is less than fluent (like mine is).</li>
-<li>"Spacecraft escaping the Solar System":http://heavens-above.com/solar-escape.asp<br>Positions and other data of the 5 spacecraft leaving our solar system on escape trajectories. The space geek in me likes this a lot.</li>
-<li>"Wem gehoert der Brokkoli?":http://www.zeit.de/2011/01/Gentechnik-Patent-Nahrungsmittel?page=all<br>Companies are trying to get patents on vegetables, fruits and even animals (in German).</li>
-<li>"7 Billion":http://ngm.nationalgeographic.com/7-billion<br>A National Geographic special series about the world's population reaching 7 billion in 2011.</li>
+<li>&#8220;Why the Internet Is a Great Tool for Totalitarians&#8221;:http://www.wired.com/magazine/2010/12/st_essay_totalitarians/<br>It&#8217;s always good to balance your views, so why not also think about how the Internet may harm freedom?</li>
+<li>&#8220;Caring for Your Introvert&#8221;:http://www.theatlantic.com/magazine/archive/2003/03/caring-for-your-introvert/2696/<br>While I think the author&#8217;s overly satirical tone actually does a disservice to the content of the article, as an introvert I still urge you to read this.</li>
+<li>&#8220;Understanding Pac-Man Ghost Behavior&#8221;:http://gameinternals.com/post/2072558330/understanding-pac-man-ghost-behavior<br>This is a great example how a few simple rules can create complex looking behavior patterns in AI opponents.</li>
+<li>&#8220;Abandon resolutions. Stop looking for a soulmate. Reject positive thinking&#8221;:http://www.guardian.co.uk/science/2011/jan/01/how-to-better-person-2011<br>For once somebody managed to write a sensible article regarding new year&#8217;s resolutions.</li>
+<li>&#8220;Farmer-scientist group wants to &#8216;hack society&#8217; through open-source technology&#8221;:http://www.grist.org/article/food-2010-12-29-farmer-scientists-want-to-hack-society<br>About &#8220;Open Source Ecology&#8221;:http://openfarmtech.org/wiki/ and the &#8220;Global Village Construction Set&#8221;:http://openfarmtech.org/wiki/Global_Village_Construction_Set. Awesome!</li>
+<li>&#8220;The New Year in Snowflakes&#8221;:http://chouser.github.com/snow/<br>Very nice little Clojure doodle by Chris Houser.</li>
+<li>&#8220;Monads Are Not Metaphors&#8221;:http://www.codecommit.com/blog/ruby/monads-are-not-metaphors<br>A pretty good explanation of monads for everyone struggling with the concept. It should be easy to follow even if your Scala is less than fluent (like mine is).</li>
+<li>&#8220;Spacecraft escaping the Solar System&#8221;:http://heavens-above.com/solar-escape.asp<br>Positions and other data of the 5 spacecraft leaving our solar system on escape trajectories. The space geek in me likes this a lot.</li>
+<li>&#8220;Wem gehoert der Brokkoli?&#8221;:http://www.zeit.de/2011/01/Gentechnik-Patent-Nahrungsmittel?page=all<br>Companies are trying to get patents on vegetables, fruits and even animals (in German).</li>
+<li>&#8220;7 Billion&#8221;:http://ngm.nationalgeographic.com/7-billion<br>A National Geographic special series about the world&#8217;s population reaching 7 billion in 2011.</li>
 </ul>
 
 ]]></content>
@@ -144,7 +144,7 @@
     <id>http://www.citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps</id>
     <content type="html"><![CDATA[<p>&ldquo;Fixed point combinators&rdquo;:<a href="http://en.wikipedia.org/wiki/Fixed_point_combinator">http://en.wikipedia.org/wiki/Fixed_point_combinator</a> are not only an interesting mental excersise, they also e.g. allow you to implement recursion in programming languages that don&rsquo;t explicitly support it. This might be slightly academic, but that doesn&rsquo;t make it less fun.</p>
 
-<p>The most well-known fixed point combinator is probably &ldquo;Haskell B. Curry&rsquo;s&rdquo;:<a href="http://en.wikipedia.org/wiki/Haskell_Curry">http://en.wikipedia.org/wiki/Haskell_Curry</a> &ldquo;Y combinator&rdquo;:<a href="http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator,">http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator,</a> which will be the topic of this post. If you read &ldquo;The Little Schemer&rdquo;:<a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825">http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825</a> &ndash; which I whole-heartedly recommend doing by the way &ndash; you already implemented it once, but if you are like me chances are you didn&rsquo;t entirely get it the first time around. So when I found this nice post on &ldquo;Deriving the Y Combinator in 7 Easy Steps&rdquo;:<a href="http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html,">http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html,</a> I decided to &ldquo;translate&rdquo; it from JavaScript to Clojure.</p>
+<p>The most well-known fixed point combinator is probably &ldquo;Haskell B. Curry&rsquo;s&rdquo;:<a href="http://en.wikipedia.org/wiki/Haskell_Curry">http://en.wikipedia.org/wiki/Haskell_Curry</a> &ldquo;Y combinator&rdquo;:<a href="http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator,">http://en.wikipedia.org/wiki/Fixed_point_combinator#Y_combinator,</a> which will be the topic of this post. If you read &ldquo;The Little Schemer&rdquo;:<a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825">http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=4825</a> - which I whole-heartedly recommend doing by the way - you already implemented it once, but if you are like me chances are you didn&rsquo;t entirely get it the first time around. So when I found this nice post on &ldquo;Deriving the Y Combinator in 7 Easy Steps&rdquo;:<a href="http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html,">http://igstan.ro/posts/2010-12-01-deriving-the-y-combinator-in-7-easy-steps.html,</a> I decided to &ldquo;translate&rdquo; it from JavaScript to Clojure.</p>
 
 <p><em>Step 1</em></p>
 

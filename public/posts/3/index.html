@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Same post as every year, here are the book I read last year. However, this time around there are several novelties: first off, my Spanish got good &hellip;">
+  <meta name="description" content="Today I spent quite some time on a rather hard to track down problem. I had some specs using VCR, which worked perfectly locally, but just wouldn& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,48 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/05/08/vcr/">VCR Case Woes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-08T22:32:55+07:00" pubdate data-updated="true">May 8<sup>th</sup>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I spent quite some time on a rather hard to track down problem. I had some specs using <a href="">VCR</a>, which worked perfectly locally, but just wouldn&rsquo;t run on <a href="https://circleci.com/">CircleCI</a>. In fact, it seemed like CircleCI didn&rsquo;t in fact use the VCR cassettes at all, but instead make a real API call, which failed because the necessary credentials weren&rsquo;t available in the environment (which was kinda the point of using VCR in the first place).</p>
+
+<p>Turns out the problem lay in the combination of using the VCR setting <code>configure_rspec_metadata!</code> and the option <code>core.ignorecase = true</code>, which is standard in newer versions of <a href="http://git-scm.com/">Git</a>. What happened was that at one point I changed the case of a word in a test description, which changes the auto-generated name of the folder VCR will create the cassette in. But since the folder name wasn&rsquo;t changed from git&rsquo;s perspective, I never realized that. So when the code was checked out on CircleCI, VCR encountered the spec with the metadata (<code>vcr: true</code>), but couldn&rsquo;t find the cassette since the checked out folder had the wrong case. It therefore proceeded to run the spec against the live API which failed.</p>
+
+<p>All in all this cost me about 1.5 hours, and I only managed to find a solution thanks to a helpful colleague and CircleCI&rsquo;s option of letting you SSH into the machine the tests run on, which is how we discovered the second folder that was created.</p>
+
+<p>TIL that git&rsquo;s not case-sensitive. I&rsquo;d rather have found out another way.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/01/01/2013-reading-list/">2013 Reading List</a></h1>
     
     
@@ -114,7 +156,7 @@
 
   <div class="entry-content"><p>Same post as every year, here are the book I read last year. However, this time around there are several novelties: first off, my Spanish got good enough to actually read books, so there are 3 languages now (English, German, Spanish). Also my Kindle Fire allowed me to get back into comics, so I (re-)read a lot of the classics and great stuff I missed out on over the years. Last but not least this is also the year where I started listening to audiobooks, mostly because they are really practical on long bus journeys because they keep you occupied but you can still enjoy the landscape.</p>
 
-<p>The links are affiliate links by the way, I have to finance my reading habit somehow ;&ndash;)</p>
+<p>The links are affiliate links by the way, I have to finance my reading habit somehow ;-)</p>
 
 <h2>Books:</h2>
 
@@ -138,7 +180,7 @@ Eduardo Mendoza (Spanish)</li>
 <li><a href="http://www.amazon.com/gp/product/3499248212/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=3499248212&amp;linkCode=as2&amp;tag=citizen4blog-20">Reise durch einen einsamen Kontinent</a>, Andreas Altmann</li>
 <li><a href="http://www.amazon.com/gp/product/B004KPM1LM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004KPM1LM&amp;linkCode=as2&amp;tag=citizen4blog-20">Damned</a>, Chuck Palahniuk</li>
 <li><a href="http://www.amazon.com/gp/product/8434843544/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=8434843544&amp;linkCode=as2&amp;tag=citizen4blog-20">El Rey Solito</a>, Rafael Estrada (Spanish)</li>
-<li><a href="http://www.amazon.com/gp/product/B0000BHOB9/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0000BHOB9&amp;linkCode=as2&amp;tag=citizen4blog-20">Bhakta &ndash; Eine indische Odysee</a>, Walther Eidlitz</li>
+<li><a href="http://www.amazon.com/gp/product/B0000BHOB9/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0000BHOB9&amp;linkCode=as2&amp;tag=citizen4blog-20">Bhakta - Eine indische Odysee</a>, Walther Eidlitz</li>
 <li><a href="http://www.amazon.com/gp/product/B003E749SA/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B003E749SA&amp;linkCode=as2&amp;tag=citizen4blog-20">Food Inc.: A Participant Guide</a>, Karl Weber</li>
 <li><a href="http://www.amazon.com/gp/product/B003WEA0EM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B003WEA0EM&amp;linkCode=as2&amp;tag=citizen4blog-20">La Ultima Jugada</a>, Fernando Trujillo Sanz (Spanish)</li>
 <li><a href="http://www.amazon.com/gp/product/B000JMKNQK/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B000JMKNQK&amp;linkCode=as2&amp;tag=citizen4blog-20">American Empire: Blood &amp; Iron</a>, Harry Turtledove</li>
@@ -744,7 +786,7 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <p>After the library imports, scripts contain some metadata that is used for documentation and internal purposes. The <em>description</em> and author variables are self-explanatory, the syntax used for the former is Lua&rsquo;s way of creating so-called &ldquo;heredocs&rdquo;, string literals that preserve white space and line breaks. In regard to the <em>license</em> script authors have two choices, the GPL-like Nmap license, as well as a simplified (2-clause) BSD license. Last but not least there&rsquo;s documentation in the NSEDoc format. It&rsquo;s customary to include usage documentation, example output, descriptions of all the available arguments (if any) as well as a changelog.</p>
 
-<p>There&rsquo;s another important field that this specific script doesn&rsquo;t use, <em>dependencies</em>. This defines the order in which scripts should be run and is used for the case where one script works on the results of another script. It&rsquo;s important to keep in mind that scripts listed here will not be automatically run, they still have to be selected via <em>&mdash;script scriptname</em> or in another way (for example <em>&mdash;script=default</em>).</p>
+<p>There&rsquo;s another important field that this specific script doesn&rsquo;t use, <em>dependencies</em>. This defines the order in which scripts should be run and is used for the case where one script works on the results of another script. It&rsquo;s important to keep in mind that scripts listed here will not be automatically run, they still have to be selected via <em>&ndash;script scriptname</em> or in another way (for example <em>&ndash;script=default</em>).</p>
 
 <p>The <em>categories</em> variable is a bit more interesting, it defines which groups of scripts our current program belongs to. Scripts marked as <em>default</em> will be run automatically when Nmap is started with the <em>-sC</em> or <em>-A</em> options.To qualify for inclusion in this category, scripts have to adhere to some criteria: they need to be fast, reliable, non-obstrusive and generally useful. There are no clear definitions for these criteria, it&rsquo;s up to the Nmap developers to add a script to this category. The <em>discovery</em> category collects all scripts that actively try to gather more information about the scan targets, in our case the &ldquo;generator&rdquo; HTML meta tag. If a script is marked as <em>safe</em>, that means that it was not written with the intent of crashing services or exploiting vulnerabilities and that it&rsquo;s unlikely to consume large amounts of resources. There are many more categories Nmap uses, for example <em>auth</em> (scripts dealing with authentication credentials), <em>brute</em> (tools for brute force attacks) or <em>vuln</em> (checking for specific vulnerabilities). For a full list, please consult Nmap&rsquo;s excellent documentation.</p>
 
@@ -764,9 +806,9 @@ The script we are looking at uses the <em>http</em> library for communication, <
 
 <p>The invocation <em>nmap -A example.com</em> (&ldquo;Aggressive/advanced scan options&rdquo;) enables OS and version detection, script scanning (equivalent to <em>nmap -sC</em>), and traceroute.</p>
 
-<p>If you just want to run a single script, you can do so by specifying the <em>&mdash;script</em> argument, for example <em>nmap &mdash;script http-generator example.com</em>.</p>
+<p>If you just want to run a single script, you can do so by specifying the <em>&ndash;script</em> argument, for example <em>nmap &ndash;script http-generator example.com</em>.</p>
 
-<p>It’s also possible to run scripts from several categories, by using something like <em>nmap &mdash;script &ldquo;default,safe&rdquo; example.com</em> or <em>nmap &mdash;script &ldquo;default or safe&rdquo; example.com</em>. There is an analogous and operator, so <em>nmap &mdash;script &ldquo;default AND safe&rdquo; example.com</em> will only run scripts that are in all the listed categories.</p>
+<p>It’s also possible to run scripts from several categories, by using something like <em>nmap &ndash;script &ldquo;default,safe&rdquo; example.com</em> or <em>nmap &ndash;script &ldquo;default or safe&rdquo; example.com</em>. There is an analogous and operator, so <em>nmap &ndash;script &ldquo;default AND safe&rdquo; example.com</em> will only run scripts that are in all the listed categories.</p>
 
 <p>As an example for a rather complex invocation, the following command will run all scripts from the three specified categories, except for the ones whose name starts with &ldquo;http-&rdquo;.</p>
 
@@ -1309,78 +1351,6 @@ Another place many people love and that has a lot of hype surrounding it. Coming
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/23/filling-in-the-blanks/">Filling in the Blanks</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-23T17:20:00+07:00" pubdate data-updated="true">Mar 23<sup>rd</sup>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>As should be clear by now, I&rsquo;m not overly good at writing these things regularly, so I won&rsquo;t even pretend to be sorry it&rsquo;s been over a month
-since the last one, and I also won&rsquo;t promise that the next one will come any sooner. I also kinda gave up hope on ever properly filling you in on Argentina part 2 and 3 and Chile, so a very short summary will have to do:</p>
-
-<p><em>Argentina</em></p>
-
-<ul>
-<li>Buenos Aires &ndash; a collective <a href="http://en.wikipedia.org/wiki/Stockholm_syndrome">Stockholm syndrome</a> and one of the most interesting cities I&rsquo;ve ever visited (see, Stockholm syndrome).</li>
-<li>Cordoba &ndash; A nice enough city, surrounded by a very pretty province.</li>
-<li>Mendoza &ndash; Lovely city, nice surroundings, spent Christmas in a great
-little hostel and had an amazing bus ride to Santiage de Chile from
-there.</li>
-<li>Salta &ndash; One of my favorite places in Argentina, a pretty, relaxed little town with some great architecture and a very nice and quirky <a href="http://www.museopajchasalta.com.ar/">museum</a>.</li>
-<li>Huamahuaca &ndash; While I&rsquo;m not as enamored by it as other people, it&rsquo;s a nice place, with an amazing location in the Quebrada de Humahuaca and
-some of Argentina&rsquo;s best food. The nearby <a href="http://www.naturephotos.com/index.php#mi=2&amp;pt=1&amp;pi=10000&amp;s=0&amp;p=15&amp;a=0&amp;at=0">Hornacal</a> mountain range is one of the most amazing things I&rsquo;ve seen on this trip.</li>
-</ul>
-
-
-<p><em>Chile</em></p>
-
-<ul>
-<li>Santiago &ndash; While many people don&rsquo;t seem to like it, I do. Good food, good nightlife, an active cultural life and very friendly people.</li>
-<li>Valparaiso &ndash; While it didn&rsquo;t live up to my expectations (there&rsquo;s too much hype around it), I did get to like it in the end, since it&rsquo;s
-really a haven for street arts.</li>
-<li>Pichilemu &ndash; We didn&rsquo;t even stay in the city proper, but at the &ldquo;Surf Farm&rdquo; 15 minutes out of town by car, in the middle of nowhere. A great
-place, hard to leave.</li>
-<li>La Serena/Coquimbo &ndash; Two nice little beaches at the coast, where we stayed with an amazing CouchSurfing host.</li>
-<li>San Pedro de Atacama &ndash; Surreal landscapes and the world&rsquo;s driest desert.</li>
-</ul>
-
-
-<p>The rest of Bolivia and all of Peru (where we got end of February) will have to wait for the next time, whenever that will be. For the time being you can look at some pictures. although a suicidal SD-card took most of our Bolivia pictures with it :&ndash;(</p>
-
-<ul>
-<li><a href="http://www.flickr.com/photos/citizen428/sets/72157633055981028/">Bolivia (or more precisely the Isla del Sol)</a></li>
-<li><a href="http://www.flickr.com/photos/citizen428/sets/72157633059002656/">Peru</a></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/4">&larr; Older</a>
@@ -1413,6 +1383,10 @@ place, hard to leave.</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/04/05/information-overload-2015-04-05/">Information Overload 2015-04-05</a>
       </li>
     
@@ -1426,10 +1400,6 @@ place, hard to leave.</li>
     
       <li class="post">
         <a href="/blog/2015/03/15/information-overload-2015-03-15/">Information Overload 2015-03-15</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/13/review-programming-elixir/">Review: Programming Elixir</a>
       </li>
     
   </ul>

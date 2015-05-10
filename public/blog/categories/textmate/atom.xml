@@ -4,7 +4,7 @@
   <title><![CDATA[Category: textmate | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/textmate/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -23,7 +23,7 @@
 <p>ClojureX can</p>
 
 <ul>
-<li> download and build the source code for Clojure, "clojure-contrib":http://github.com/richhickey/clojure-contrib/tree/master and "JLine":http://jline.sourceforge.net/ (a readline like library for Java)</li>
+<li> download and build the source code for Clojure, &#8220;clojure-contrib&#8221;:http://github.com/richhickey/clojure-contrib/tree/master and &#8220;JLine&#8221;:http://jline.sourceforge.net/ (a readline like library for Java)</li>
 
 <li> download editor support packages for TextMate and Emacs</li>
 
@@ -31,9 +31,9 @@
 
 <li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
 
-<li> configure Emacs to use "clojure-mode":http://github.com/jochu/clojure-mode/tree/master, "Slime":http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
+<li> configure Emacs to use &#8220;clojure-mode&#8221;:http://github.com/jochu/clojure-mode/tree/master, &#8220;Slime&#8221;:http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
 
-<li> keep your Clojure installation up to date via a simple "git submodule update && ant"</li>
+<li> keep your Clojure installation up to date via a simple &#8220;git submodule update && ant&#8221;</li>
 </ul>
 
 

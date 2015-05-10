@@ -4,7 +4,7 @@
   <title><![CDATA[Category: haskell | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/haskell/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -65,7 +65,7 @@
 
 <blockquote>
 
-If you imagine a Monad as some sort of box, UnitM is what puts an item into the box. Bind extracts such a value (M a), processes it with a function (a -> M b) and returns another item in a box (M b). Why is that cool, because you can't leave the box! If you think about it - and that's an oversimplification - it's a bit like aligning your types so you can chain method calls (just that Unit and Bind have to follow the Monadic laws). Imagine in Ruby you have an intermediary result but instead of returning a plain value OR an array, you always make sure to return [*values]. This way you can chain anything that expects an array, no matter how many intermediary values there were. That's a bit like having an item wrapped up in some sort of array monad (once again, we are in oversimplification land here, but maybe the analogy helps).
+If you imagine a Monad as some sort of box, UnitM is what puts an item into the box. Bind extracts such a value (M a), processes it with a function (a -> M b) and returns another item in a box (M b). Why is that cool, because you can&#8217;t leave the box! If you think about it - and that&#8217;s an oversimplification - it&#8217;s a bit like aligning your types so you can chain method calls (just that Unit and Bind have to follow the Monadic laws). Imagine in Ruby you have an intermediary result but instead of returning a plain value OR an array, you always make sure to return [*values]. This way you can chain anything that expects an array, no matter how many intermediary values there were. That&#8217;s a bit like having an item wrapped up in some sort of array monad (once again, we are in oversimplification land here, but maybe the analogy helps).
 
 </blockquote>
 
@@ -76,37 +76,37 @@ If you imagine a Monad as some sort of box, UnitM is what puts an item into the 
 
 <p><strong>Q&amp;A</strong></p>
 
-<p>Since Tom had some trouble with the paper &ndash; but bravely fought his way through it &ndash; we exchanged quite some emails on the actual content. This is cool, because it&rsquo;s exactly the reason we are doing this! First we needed to get some Haskell syntax out of the way:</p>
+<p>Since Tom had some trouble with the paper - but bravely fought his way through it - we exchanged quite some emails on the actual content. This is cool, because it&rsquo;s exactly the reason we are doing this! First we needed to get some Haskell syntax out of the way:</p>
 
 <blockquote>
 
-Let's do it slow with actual Haskell (this is a stupid function though, you could just do add = (+)):
+Let&#8217;s do it slow with actual Haskell (this is a stupid function though, you could just do add = (+)):
 
 add :: Int -> Int -> Int
 add x y = x + y
 
-This means that "add" is a function that takes two "Ints" and returns an "Int". The value after the last -> is the actual return value of the function. If you wonder about the intermediate arrows, that's because Haskell functions technically only take one argument and return a new function which takes another argument etc.
+This means that &#8220;add&#8221; is a function that takes two &#8220;Ints&#8221; and returns an &#8220;Int&#8221;. The value after the last -> is the actual return value of the function. If you wonder about the intermediate arrows, that&#8217;s because Haskell functions technically only take one argument and return a new function which takes another argument etc.
 
 So what happens when you call
 
 add 5 6
 
-is that "add" gets applied to the argument 5, which returns another function that looks roughly like (add y = 5 + y) which in the end returns the number 11. This is a result of Haskell being based on the lambda calculus, where the equivalent expression would be \x.\y.x+y. For practical purposes it's enough to remember the following though: whatever goes before the last -> are the arguments to the function, the thing after the last -> is the return type.
+is that &#8220;add&#8221; gets applied to the argument 5, which returns another function that looks roughly like (add y = 5 + y) which in the end returns the number 11. This is a result of Haskell being based on the lambda calculus, where the equivalent expression would be \x.\y.x+y. For practical purposes it&#8217;s enough to remember the following though: whatever goes before the last -> are the arguments to the function, the thing after the last -> is the return type.
 
 What about polymorphic functions? Easy:
 
 add :: (Num a) => a -> a -> a
 add x y = x + y
 
-Here we just say that we take 2 arguments of type "a" and return another "a", with the constraint that "a" has to be numeric. 
+Here we just say that we take 2 arguments of type &#8220;a&#8221; and return another &#8220;a&#8221;, with the constraint that &#8220;a&#8221; has to be numeric. 
 
-Since it also is covered in the paper, here's an example of a higher order function, good old map (that's the same as Ruby's map):
+Since it also is covered in the paper, here&#8217;s an example of a higher order function, good old map (that&#8217;s the same as Ruby&#8217;s map):
 
 map :: (a -> b) -> [a] -> [b]
 map f []     = []
 map f (x:xs) = f x : map f xs
 
-This basically tells us that "map" takes two arguments. The first is itself a one-argument function ((a -> b)) the second a list of values ([a]) and we return another list of values ([b]). Note that "a" and "b" can be the same type, but don't have to be.
+This basically tells us that &#8220;map&#8221; takes two arguments. The first is itself a one-argument function ((a -> b)) the second a list of values ([a]) and we return another list of values ([b]). Note that &#8220;a&#8221; and &#8220;b&#8221; can be the same type, but don&#8217;t have to be.
 
 </blockquote>
 
@@ -131,7 +131,7 @@ Brian Beckman recorded an &ldquo;awesome 67 minute video&rdquo;:<a href="http://
 <li><a href="http://en.wikipedia.org/wiki/Call-with-current-continuation">Call-with-current-continuation</a></li>
 <li><a href="http://www.ruby-doc.org/core/classes/Kernel.html#M001422">call/cc in Ruby</a></li>
 <li><a href="http://en.wikipedia.org/wiki/List_comprehension">Wikipedia: List comprehension</a></li>
-<li><a href="http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads">Brian Beckman: Don't fear the Monad</a></li>
+<li><a href="http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads">Brian Beckman: Don&#8217;t fear the Monad</a></li>
 <li><a href="http://moonbase.rydia.net/mental/writings/programming/monads-in-ruby/00introduction.html">Monads in Ruby</a></li>
 </ul>
 
@@ -146,10 +146,10 @@ Brian Beckman recorded an &ldquo;awesome 67 minute video&rdquo;:<a href="http://
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Haskell_(programming_language)">Haskell</a> is a great language and well worth your time. Here are some freely available learning resources for the aspiring Haskeller:</p>
 
 <ul>
-<li>The excellent "Learn You a Haskell for Great Good":http://learnyouahaskell.com/ by Miran Lipovaca is probably the best free Haskell resource on the web. It will "soon be available in print":http://nostarch.com/lyah.htm, but the author told me that the website will be updated to reflect the changes made for the book!</li>
-<li>O'Reilly's "Real World Haskell":http://book.realworldhaskell.org/read/ also has a an online version. I've only read the first few chapters of this, but people told me it's quite good.</li>
-    <li>The "Haskell tutorial":http://lisperati.com/haskell/ by "Conrad Barski":http://lisperati.com/, author of "Land of Lisp":http://landoflisp.com/ and "Casting SPELs in Lisp":http://lisperati.com/casting.html.</li>
-    <li>In "Write Yourself a Scheme in 48 Hours":http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours you'll implement a small Scheme in Haskell, which is a nice introduction to "Parsec":http://legacy.cs.uu.nl/daan/parsec.html.</li>
+<li>The excellent &#8220;Learn You a Haskell for Great Good&#8221;:http://learnyouahaskell.com/ by Miran Lipovaca is probably the best free Haskell resource on the web. It will &#8220;soon be available in print&#8221;:http://nostarch.com/lyah.htm, but the author told me that the website will be updated to reflect the changes made for the book!</li>
+<li>O&#8217;Reilly&#8217;s &#8220;Real World Haskell&#8221;:http://book.realworldhaskell.org/read/ also has a an online version. I&#8217;ve only read the first few chapters of this, but people told me it&#8217;s quite good.</li>
+    <li>The &#8220;Haskell tutorial&#8221;:http://lisperati.com/haskell/ by &#8220;Conrad Barski&#8221;:http://lisperati.com/, author of &#8220;Land of Lisp&#8221;:http://landoflisp.com/ and &#8220;Casting SPELs in Lisp&#8221;:http://lisperati.com/casting.html.</li>
+    <li>In &#8220;Write Yourself a Scheme in 48 Hours&#8221;:http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours you&#8217;ll implement a small Scheme in Haskell, which is a nice introduction to &#8220;Parsec&#8221;:http://legacy.cs.uu.nl/daan/parsec.html.</li>
 </ul>
 
 
@@ -167,10 +167,10 @@ Brian Beckman recorded an &ldquo;awesome 67 minute video&rdquo;:<a href="http://
 <p>In case you are interested in Haskell too, here&rsquo;s a list of the resources I use:</p>
 
 <ul>
-<li>"Haskell :: Functional Programming with Types":http://en.wikibooks.org/wiki/Haskell: A very nice "Wikibook":http://wikibooks.org covering a wide range of topics from the very basics to Monads, Arrows and Zippers.</li>
-<li>"Learn You a Haskell for Great Good":http://learnyouahaskell.com/: A nice and colorful tutorial in the spirit of <a href="http://poignantguide.net/ruby/">Why's (Poignant) Guide to Ruby</a></li>
-<li>"Real World Haskell":http://book.realworldhaskell.org/: Yes, the entire book can be read online (including per paragraph comments!) for free! I've only just started reading this, since I first want to brush up my basic Haskell a bit, but once I'm past the "Project Euler":http://projecteuler.net/ stage this is probably gonna be very nice.</li>
-<li>"Write Yourself a Scheme in 48 Hours":http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours: Now that I'm slowly getting the hang of this functional programming thing, why not write an interpreter for one functional language in another? "Along the way, you'll learn Haskell's I/O, mutable state, dynamic typing, error handling, and parsing features. By the time you finish, you should be fairly fluent in both Haskell and Scheme". Sounds good to me! :)</li>
+<li>&#8220;Haskell :: Functional Programming with Types&#8221;:http://en.wikibooks.org/wiki/Haskell: A very nice &#8220;Wikibook&#8221;:http://wikibooks.org covering a wide range of topics from the very basics to Monads, Arrows and Zippers.</li>
+<li>&#8220;Learn You a Haskell for Great Good&#8221;:http://learnyouahaskell.com/: A nice and colorful tutorial in the spirit of <a href="http://poignantguide.net/ruby/">Why&#8217;s (Poignant) Guide to Ruby</a></li>
+<li>&#8220;Real World Haskell&#8221;:http://book.realworldhaskell.org/: Yes, the entire book can be read online (including per paragraph comments!) for free! I&#8217;ve only just started reading this, since I first want to brush up my basic Haskell a bit, but once I&#8217;m past the &#8220;Project Euler&#8221;:http://projecteuler.net/ stage this is probably gonna be very nice.</li>
+<li>&#8220;Write Yourself a Scheme in 48 Hours&#8221;:http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours: Now that I&#8217;m slowly getting the hang of this functional programming thing, why not write an interpreter for one functional language in another? &#8220;Along the way, you&#8217;ll learn Haskell&#8217;s I/O, mutable state, dynamic typing, error handling, and parsing features. By the time you finish, you should be fairly fluent in both Haskell and Scheme&#8221;. Sounds good to me! :)</li>
 </ul>
 
 ]]></content>

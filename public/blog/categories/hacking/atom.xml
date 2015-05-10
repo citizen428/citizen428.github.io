@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacking | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/hacking/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -54,7 +54,7 @@ Language ans statistics, of course I like this.</li>
 
 <p>Let&rsquo;s look at the following IRB session:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -82,9 +82,9 @@ Language ans statistics, of course I like this.</li>
 </span><span class='line'><span class="sr">=&gt; nil</span>
 </span><span class='line'><span class="sr">dumphist(3, &amp;lsquo;test.rb&amp;rsquo;)</span>
 </span><span class='line'><span class="sr">=&gt; [&amp;ldquo;def foo&amp;rdquo;, &amp;ldquo;puts &amp;lsquo;bar&amp;rsquo;&amp;rdquo;, &amp;ldquo;end&amp;rdquo;]</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote>
+</span></code></pre></td></tr></table></div></figure></p></blockquote></blockquote>
 
-<p>The last command created a file named test.rb for us, which contains only the method foo. :&ndash;)</p>
+<p>The last command created a file named test.rb for us, which contains only the method foo. :-)</p>
 ]]></content>
   </entry>
   
@@ -95,7 +95,7 @@ Language ans statistics, of course I like this.</li>
     <id>http://www.citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
     <content type="html"><![CDATA[<p>Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn&rsquo;t already running, copy  the URL, shorten it, paste it into the client&hellip;</p>
 
-<p>I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It&rsquo;s just a quick and dirty hack, feel free to change it according to your needs&hellip; :&ndash;)</p>
+<p>I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It&rsquo;s just a quick and dirty hack, feel free to change it according to your needs&hellip; :-)</p>
 
 <script src="http://gist.github.com/71559.js"></script>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: aws | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/aws/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -43,12 +43,9 @@
     <link href="http://www.citizen428.net/blog/2010/02/25/plot-ec2-instance-usage-with-clojure-and-incanter/"/>
     <updated>2010-02-25T00:00:00+07:00</updated>
     <id>http://www.citizen428.net/blog/2010/02/25/plot-ec2-instance-usage-with-clojure-and-incanter</id>
-    <content type="html"><![CDATA[<p>Have you ever wondered which instance types you use most when dealing with Amazon&rsquo;s EC2? I have, so I came up with a short Clojure/<a href="http://incanter.org">Incanter</a> program to plot a nice chart like this:</p>
-
+    <content type="html"><![CDATA[<p>Have you ever wondered which instance types you use most when dealing with Amazon&rsquo;s EC2? I have, so I came up with a short Clojure/<a href="http://incanter.org">Incanter</a> program to plot a nice chart like this:
 <br />
-
-
-<p><img src="http://twitpic.com/show/thumb/15byfe.png" width="150" height="150" alt="EC2 usage plotted by #incanter (@liebke) on Twitpic" border="1"><br />
+<img src="http://twitpic.com/show/thumb/15byfe.png" width="150" height="150" alt="EC2 usage plotted by #incanter (@liebke) on Twitpic" border="1"><br />
 <a href="http://twitpic.com/15byfe" title="EC2 usage plotted by incanter">(full size image)</a></p>
 
 <p>Here&rsquo;s the code, if you have any feedback please leave a comment, this was the first time I used Incanter.</p>

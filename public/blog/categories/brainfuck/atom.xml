@@ -4,7 +4,7 @@
   <title><![CDATA[Category: brainfuck | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/brainfuck/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -24,13 +24,13 @@
 
 <p>&ldquo;RadRails&rdquo;:<a href="http://www.radrails.org/:">http://www.radrails.org/:</a> From a rather recent mail on &ldquo;ruby-talk&rdquo;:<a href="http://blade.nagaokaut.ac.jp/ruby/ruby-talk/index.shtml">http://blade.nagaokaut.ac.jp/ruby/ruby-talk/index.shtml</a> I learned about RadRails, an IDE for (who would&rsquo;ve guessd) &ldquo;Ruby on Rails&rdquo;:<a href="http://www.rubyonrails.org/">http://www.rubyonrails.org/</a> which was built using the <a href="http://www.eclipse.org/rcp">Eclipse RCP</a>. Unfortunately I didn&rsquo;t have too much time to play with it yet, but so far it seems to be quite nice and if you&rsquo;re into Rails you maybe should have a look at this project.</p>
 
-<p>&ldquo;eigenclass&rdquo;:<a href="http://eigenclass.org/:">http://eigenclass.org/:</a> Recently &ldquo;RedHanded&rdquo;:<a href="http://redhanded.hobix.com/">http://redhanded.hobix.com/</a> kept talking about Mauricio Fernandez' new blog called &ldquo;eigenclass&rdquo;, which talks about a lot of really interesting and advanced Ruby stuff. Definitely an interesting read for every serious Ruby programmer and everyone who wants to become one.</p>
+<p>&ldquo;eigenclass&rdquo;:<a href="http://eigenclass.org/:">http://eigenclass.org/:</a> Recently &ldquo;RedHanded&rdquo;:<a href="http://redhanded.hobix.com/">http://redhanded.hobix.com/</a> kept talking about Mauricio Fernandez&#8217; new blog called &ldquo;eigenclass&rdquo;, which talks about a lot of really interesting and advanced Ruby stuff. Definitely an interesting read for every serious Ruby programmer and everyone who wants to become one.</p>
 
 <p>&ldquo;try ruby!&rdquo;:<a href="http://tryruby.hobix.com/:">http://tryruby.hobix.com/:</a> As I found out on &ldquo;poignant-stiffs&rdquo;:<a href="http://rubyforge.org/pipermail/poignant-stiffs/">http://rubyforge.org/pipermail/poignant-stiffs/</a> <a href="http://whytheluckystiff.net/">why</a> is at it again, which means there&rsquo;s something cool coming up. Despite not involving cartoon foxes or chunky bacon, &ldquo;try ruby&rdquo;:<a href="http://tryruby.hobix.com/">http://tryruby.hobix.com/</a> is still a really neat project, giving you the opportunity to interactively test Ruby from within your web browser. There&rsquo;s also a little tutorial, so this site may very well become the first stop to send Nubies to&hellip;</p>
 
 <p><em><em>Disobey</em></em></p>
 
-<p>&ldquo;The Hacktivist&rdquo;:<a href="http://www.thehacktivist.com/:">http://www.thehacktivist.com/:</a> Instead of summing up what the Hacktivist is all about, I&rsquo;ll just give you the self-description of the project: &ldquo;<i>The Hacktivist is dedicated to examining the theory and practice of hacktivism and electronic civil disobedience while contributing to the evolution of hacktivism by promoting constructive debate, effective direct action, and creative solutions to complex problems in order to facilitate positive change.</i>&rdquo; &ndash; Involve yourself!</p>
+<p>&ldquo;The Hacktivist&rdquo;:<a href="http://www.thehacktivist.com/:">http://www.thehacktivist.com/:</a> Instead of summing up what the Hacktivist is all about, I&rsquo;ll just give you the self-description of the project: &ldquo;<i>The Hacktivist is dedicated to examining the theory and practice of hacktivism and electronic civil disobedience while contributing to the evolution of hacktivism by promoting constructive debate, effective direct action, and creative solutions to complex problems in order to facilitate positive change.</i>&rdquo; - Involve yourself!</p>
 
 <p>&ldquo;The World&rsquo;s Most Populated Countries&rdquo;:<a href="http://www.odt.org/Pictures/poplcart.jpg:">http://www.odt.org/Pictures/poplcart.jpg:</a> Sometimes a new look on things helps changing your perspective in a positive way. That&rsquo;s why it&rsquo;s important to take a minute or two to think about this map of the Earth, where all the countries got resized in relation to their population.</p>
 
@@ -56,13 +56,13 @@
     <link href="http://www.citizen428.net/blog/2005/04/12/getting-brainfcked/"/>
     <updated>2005-04-12T00:00:00+07:00</updated>
     <id>http://www.citizen428.net/blog/2005/04/12/getting-brainfcked</id>
-    <content type="html"><![CDATA[<p>After knowing &ldquo;Brainfuck&rdquo;:<a href="http://en.wikipedia.org/wiki/Brainfuck">http://en.wikipedia.org/wiki/Brainfuck</a> for quite a while alreay, I today have decided to write my very first &ldquo;program&rdquo; in this funny little language. It does nothing more than displaying the string &ldquo;"CARGAL&rdquo;:<a href="http://www.cargal.org!">http://www.cargal.org!</a>&ldquo; followed by a newline, but nonetheless it was good excercise for getting used to BF.</p>
+    <content type="html"><![CDATA[<p>After knowing &ldquo;Brainfuck&rdquo;:<a href="http://en.wikipedia.org/wiki/Brainfuck">http://en.wikipedia.org/wiki/Brainfuck</a> for quite a while alreay, I today have decided to write my very first &ldquo;program&rdquo; in this funny little language. It does nothing more than displaying the string &ldquo;&#8221;CARGAL&rdquo;:<a href="http://www.cargal.org!">http://www.cargal.org!</a>&ldquo; followed by a newline, but nonetheless it was good excercise for getting used to BF.</p>
 
 <!--more-->
 
 
 <p>Here we go for the source:
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -74,15 +74,15 @@
 <span class='line-number'>10</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
 </span><span class='line'>
-</span><span class='line'>&lt;blockquote>&lt;p>++++++++[&lt;++++++++>&ndash;]&lt;+++.
-</span><span class='line'>&mdash;.
-</span><span class='line'>++++++++[&lt;++>&ndash;]&lt;+.
-</span><span class='line'>+++++[&lt;&mdash;>&ndash;]&lt;&ndash;.
-</span><span class='line'>&mdash;&mdash;&mdash;.
-</span><span class='line'>++[&lt;+++++>&ndash;]&lt;+.
-</span><span class='line'>[&ndash;]+++++++[&lt;&mdash;&mdash;&mdash;>&ndash;]&lt;&ndash;.
-</span><span class='line'>[&ndash;]++++++++++.</span></code></pre></td></tr></table></div></figure></notextile></div>
-Programming in BF gives me a rewarding feeling in a very strange way, which makes me fear that I will spend more time with it, especially now that I know about &ldquo;app-vim/brainfuck-syntax&rdquo;:<a href="http://www.vim.org/scripts/script.php?script_id=716...">http://www.vim.org/scripts/script.php?script_id=716...</a> ;) However, I still wonder how &ldquo;Markus Schaber&rdquo;:<a href="http://www.ulm.ccc.de/~schabi/">http://www.ulm.ccc.de/~schabi/</a> had the patience to implement a multi-threading library for (and of course in) BF.</p></blockquote>
+</span><span class='line'>&lt;blockquote>&lt;p>++++++++[&lt;++++++++>-]&lt;+++.
+</span><span class='line'>&ndash;.
+</span><span class='line'>++++++++[&lt;++>-]&lt;+.
+</span><span class='line'>+++++[&lt;-->-]&lt;-.
+</span><span class='line'>&mdash;&mdash;.
+</span><span class='line'>++[&lt;+++++>-]&lt;+.
+</span><span class='line'>[-]+++++++[&lt;------>-]&lt;-.
+</span><span class='line'>[-]++++++++++.</span></code></pre></td></tr></table></div></figure>
+Programming in BF gives me a rewarding feeling in a very strange way, which makes me fear that I will spend more time with it, especially now that I know about &ldquo;app-vim/brainfuck-syntax&rdquo;:<a href="http://www.vim.org/scripts/script.php?script_id=716...">http://www.vim.org/scripts/script.php?script_id=716&#8230;</a> ;) However, I still wonder how &ldquo;Markus Schaber&rdquo;:<a href="http://www.ulm.ccc.de/~schabi/">http://www.ulm.ccc.de/~schabi/</a> had the patience to implement a multi-threading library for (and of course in) BF.</p></blockquote>
 ]]></content>
   </entry>
   

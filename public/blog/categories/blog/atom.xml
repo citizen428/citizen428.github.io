@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blog | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -22,7 +22,7 @@
 
 <p>First I changed some colors in <code>sass/custom/_colors.scss</code>:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -32,11 +32,11 @@
 </span><span class='line'><span class="na">$nav-bg</span><span class="o">:</span> <span class="nf">desaturate</span><span class="p">(</span><span class="nf">lighten</span><span class="p">(</span><span class="mh">#FF7100</span><span class="o">,</span> <span class="mi">18</span><span class="p">)</span><span class="o">,</span> <span class="mi">5</span><span class="p">)</span>
 </span><span class='line'><span class="na">$link-color</span><span class="o">:</span> <span class="mh">#FF7100</span><span class="err">;</span>
 </span><span class='line'><span class="na">$footer-bg</span><span class="o">:</span> <span class="mh">#CCC</span><span class="err">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Then I reduced the width of the body, the size of the dates and article titles as well as the codeblocks (all of this can be done in <code>sass/custom/_styles.scss</code>):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -54,12 +54,6 @@
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
 </pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">body</span> <span class="err">{</span>
 </span><span class='line'>  <span class="na">max-width</span><span class="o">:</span> <span class="mi">1100</span><span class="kt">px</span><span class="err">;</span>
 </span><span class='line'><span class="err">}</span>
@@ -71,20 +65,14 @@
 </span><span class='line'><span class="err">}</span>
 </span><span class='line'><span class="nt">section</span> <span class="err">{</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nt">blockquote</span><span class="o">&gt;&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="nt">h1</span> <span class="err">{</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="na">&lt;pre&gt;&lt;code&gt;font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span><span class="err">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="nt">code</span><span class="o">&gt;&lt;/</span><span class="nt">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>  <span class="err">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">blockquote</span><span class="o">&gt;&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="nt">h1</span> <span class="err">{</span>
+</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span><span class="err">;</span>
+</span><span class='line'>  <span class="err">}</span>
 </span><span class='line'><span class="err">}</span>
-</span><span class='line'><span class="nt">codeblock</span> <span class="err">{</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="na">&lt;pre&gt;&lt;code&gt;font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.1</span><span class="kt">em</span><span class="err">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="nt">code</span><span class="o">&gt;&lt;/</span><span class="nt">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="err">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote>
+</span><span class='line'><span class="nt">codeblock</span> <span class="err">{</span>
+</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.1</span><span class="kt">em</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure></p></blockquote>
 
 <p>Last but not least I found some <a href="http://www.elegantthemes.com/blog/resources/free-social-media-icon-set">excellent free social media icons</a> for the sidebar.</p>
 
@@ -103,7 +91,7 @@
 
 <p>I created a new Rake task named &ldquo;new_overload&rdquo;, that looks like this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -129,12 +117,6 @@
 <span class='line-number'>24</span>
 <span class='line-number'>25</span>
 <span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">desc</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Create</span> <span class="n">a</span> <span class="kp">new</span> <span class="no">Information</span> <span class="no">Overload</span> <span class="n">template</span> <span class="c1">#{source_dir}/#{posts_dir}&amp;rdquo;</span>
 </span><span class='line'><span class="n">task</span> <span class="ss">:new_overload</span> <span class="k">do</span>
 </span><span class='line'>  <span class="k">raise</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="c1">### You haven&amp;rsquo;t set anything up yet. First run &lt;code&gt;rake install&lt;/code&gt; to set up an Octopress theme.&amp;rdquo; unless File.directory?(source_dir)</span>
@@ -142,32 +124,26 @@
 </span><span class='line'>  <span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">.</span><span class="n">/plugins</span><span class="o">/</span><span class="n">titlecase</span><span class="o">.</span><span class="n">rb</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
 </span><span class='line'>  <span class="n">mkdir_p</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="c1">#{source_dir}/#{posts_dir}&amp;rdquo;</span>
 </span><span class='line'>  <span class="n">date</span> <span class="o">=</span> <span class="p">(</span><span class="no">Date</span><span class="o">.</span><span class="n">today</span> <span class="o">+</span> <span class="p">(</span><span class="mi">7</span><span class="o">-</span><span class="no">Date</span><span class="o">.</span><span class="n">today</span><span class="o">.</span><span class="n">wday</span><span class="p">))</span>
-</span><span class='line'>  <span class="n">title</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Information</span> <span class="no">Overload</span> <span class="c1">#{date.strftime(&amp;rdquo;%Y-%m-%d&quot;)}&amp;ldquo;</span>
-</span><span class='line'>  <span class="n">filename</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="c1">#{source_dir}/#{posts_dir}/#{date.strftime(&amp;lsquo;%Y-%m-%d&amp;rsquo;)}&amp;ndash;#{title.to_url}.#{new_post_ext}&amp;ldquo;</span>
-</span><span class='line'>  <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;abort(&quot;rake aborted!&quot;) if ask(&quot;</span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="sr"> already exists. Do you want to overwrite?&quot;, [&#39;y&#39;, &#39;n&#39;]) == &#39;n&#39;</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">  puts &amp;ldquo;Creating new post: </span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="sr">&amp;rdquo;</span>
-</span><span class='line'><span class="sr">  open(filename, &amp;lsquo;w&amp;rsquo;) do |post|&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nb">system</span> <span class="s2">&quot;mkdir -p </span><span class="si">#{</span><span class="n">source_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">posts_dir</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;---&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;layout: post&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;title: </span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">title</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;amp;/</span><span class="p">,</span><span class="s1">&#39;&amp;amp;amp;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">titlecase</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;date: </span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-%d %H:%M&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;comments: true&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;categories: &quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;published: false&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;---&quot;</span>
-</span><span class='line'><span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;* []()</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">*</span> <span class="mi">10</span>
-</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</span><span class='line'>  <span class="n">title</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Information</span> <span class="no">Overload</span> <span class="c1">#{date.strftime(&amp;rdquo;%Y-%m-%d&amp;#8221;)}&amp;ldquo;</span>
+</span><span class='line'>  <span class="n">filename</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="c1">#{source_dir}/#{posts_dir}/#{date.strftime(&amp;lsquo;%Y-%m-%d&amp;rsquo;)}-#{title.to_url}.#{new_post_ext}&amp;ldquo;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</span><span class='line'>    <span class="nb">abort</span><span class="p">(</span><span class="o">&amp;</span><span class="c1">#8220;rake aborted!&amp;rdquo;) if ask(&amp;ldquo;#{filename} already exists. Do you want to overwrite?&amp;rdquo;, [&amp;lsquo;y&amp;rsquo;, &amp;lsquo;n&amp;rsquo;]) == &amp;lsquo;n&amp;rsquo;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Creating</span> <span class="kp">new</span> <span class="ss">post</span><span class="p">:</span> <span class="c1">#{filename}&amp;rdquo;</span>
+</span><span class='line'>  <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">w</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span> <span class="k">do</span> <span class="o">|</span><span class="n">post</span><span class="o">|</span>
+</span><span class='line'>    <span class="nb">system</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">mkdir</span> <span class="o">-</span><span class="nb">p</span> <span class="c1">#{source_dir}/#{posts_dir}/&amp;rdquo;;</span>
+</span><span class='line'>    <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="ss">layout</span><span class="p">:</span> <span class="n">post</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="ss">title</span><span class="p">:</span> <span class="p">\</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="c1">#{title.gsub(/&amp;amp;/,&amp;lsquo;&amp;amp;&amp;rsquo;).titlecase}\&amp;ldquo;&amp;rdquo;</span>
+</span><span class='line'>    <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="ss">date</span><span class="p">:</span> <span class="c1">#{Time.now.strftime(&amp;lsquo;%Y-%m-%d %H:%M&amp;rsquo;)}&amp;rdquo;</span>
+</span><span class='line'>    <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="ss">comments</span><span class="p">:</span> <span class="kp">true</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="ss">categories</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="ss">published</span><span class="p">:</span> <span class="kp">false</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">*</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="o">&gt;&lt;</span><span class="sr">/a&gt;\n&amp;rdquo; * 10</span>
+</span><span class='line'><span class="sr">  end</span>
+</span><span class='line'><span class="sr">end</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>This is very similar to the standard &ldquo;new_post&rdquo; task, but generates
 the post with the date of the current week&rsquo;s Sunday. It also marks it
@@ -201,7 +177,7 @@ some crappy web input form (ok, granted, I could have done that before
 too).</p>
 
 <p>Now to the actual migration. I started by exporting my WP blog to
-XML. This can be done in the administration backend under &ldquo;Tools &ndash;
+XML. This can be done in the administration backend under &ldquo;Tools -
 Export&rdquo;. Once I had this XML, I used the following script to convert
 the posts to individual files for Octopress:</p>
 
@@ -315,20 +291,19 @@ so all you have to do is copy them into your web server
 configuration. I also added another redirect rule for the RSS feed to
 not annoy my subscribers:</p>
 
-<p><code>
-RewriteRule ^/feed /atom.xml [R=301,L]
-</code></p>
+<pre><code>RewriteRule ^/feed /atom.xml [R=301,L]
+</code></pre>
 
 <p>Of course I also didn&rsquo;t want to loose all my comments, so I had to
 come up with a solution for that. I first
 installed the WP <a href="http://disqus.com">Disqus</a> plugin and exported all
 my current comments. I then used some good old Emacs magic to convert
-the list of redirects I had already generated to a CSV for Disqus'
+the list of redirects I had already generated to a CSV for Disqus&#8217;
 <a href="http://docs.disqus.com/help/39/">URL map migration tool</a>. So far this
 has not migrated all comments to the correct location, but it should
 eventually work out (worst case I&rsquo;ll have to email Disqus support).</p>
 
-<p>Last but not least I used Octopress' excellent
+<p>Last but not least I used Octopress&#8217; excellent
 <a href="http://octopress.org/docs/theme/template/index.html">customization suport</a>
 to re-add some stuff to my headers, like the OpenID delegate.</p>
 

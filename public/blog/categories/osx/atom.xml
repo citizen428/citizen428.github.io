@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/osx/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-04-07T12:11:05+07:00</updated>
+  <updated>2015-05-10T12:10:57+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -20,13 +20,12 @@
     <id>http://www.citizen428.net/blog/2011/11/22/a-little-pow-helper</id>
     <content type="html"><![CDATA[<p>If you are a Ruby developer on MacOS X, you probably love <a href="http://pow.cx">Pow</a> as much as I do. While skimming the <a href="http://pow.cx/manual.html">fine manual</a> today, I noticed <a href="http://pow.cx/manual.html#section_3.2">section 3.2</a>, &ldquo;Reading the Current Configuration&rdquo;, which explains that you can query Pow&rsquo;s config and status via simple HTTP requests:</p>
 
-<p><code>bash Query Pow's status http://pow.cx/manual.html#section_3.2 Pow manual
-curl -H host:pow localhost/status.json
-</code></p>
+<pre><code class="bash Query Pow's status http://pow.cx/manual.html#section_3.2 Pow manual">curl -H host:pow localhost/status.json
+</code></pre>
 
 <p>Since I know I&rsquo;d probably forget that sooner than later, I immediately wrapped it up in a small script, which I called <code>pow-show</code> and put in <code>~/bin</code>:</p>
 
-<p>``` ruby ~/bin/pow-show</p>
+<p>&#8220;` ruby ~/bin/pow-show</p>
 
 <h1>!/usr/bin/env ruby</h1>
 
@@ -38,40 +37,35 @@ curl -H host:pow localhost/status.json
 end</p>
 
 <p>jj JSON.parse(<code>curl -s -H host:pow localhost/#{ARGV[0]}.json</code>)
-```</p>
+&#8220;`</p>
 
 <p>Here&rsquo;s some example output:</p>
 
-<p><code>javascript pow-show status
-{
+<pre><code class="javascript pow-show status">{
   "pid": 802,
   "version": "0.3.2",
   "requestCount": 134
 }
-</code></p>
-
-<p>``` javascript pow-show config
-{
-  &ldquo;bin&rdquo;: &ldquo;/Users/name/Library/Application Support/Pow/Versions/0.3.2/bin/pow&rdquo;,
-  &ldquo;dstPort&rdquo;: 80,
-  &ldquo;httpPort&rdquo;: 20559,
-  &ldquo;dnsPort&rdquo;: 20560,
-  &ldquo;timeout&rdquo;: 900,
-  &ldquo;workers&rdquo;: 2,
-  &ldquo;domains&rdquo;: [</p>
-
-<pre><code>"dev"
 </code></pre>
 
-<p>  ],
-  &ldquo;extDomains&rdquo;: [</p>
+<pre><code class="javascript pow-show config">{
+  "bin": "/Users/name/Library/Application Support/Pow/Versions/0.3.2/bin/pow",
+  "dstPort": 80,
+  "httpPort": 20559,
+  "dnsPort": 20560,
+  "timeout": 900,
+  "workers": 2,
+  "domains": [
+    "dev"
+  ],
+  "extDomains": [
 
-<p>  ],
-  &ldquo;hostRoot&rdquo;: &ldquo;/Users/name/Library/Application Support/Pow/Hosts&rdquo;,
-  &ldquo;logRoot&rdquo;: &ldquo;/Users/name/Library/Logs/Pow&rdquo;,
-  &ldquo;rvmPath&rdquo;: &ldquo;/Users/name/.rvm/scripts/rvm&rdquo;
+  ],
+  "hostRoot": "/Users/name/Library/Application Support/Pow/Hosts",
+  "logRoot": "/Users/name/Library/Logs/Pow",
+  "rvmPath": "/Users/name/.rvm/scripts/rvm"
 }
-```</p>
+</code></pre>
 
 <p>Maybe that&rsquo;s useful for someone else too.</p>
 ]]></content>
@@ -101,7 +95,7 @@ end</p>
 <p>ClojureX can</p>
 
 <ul>
-<li> download and build the source code for Clojure, "clojure-contrib":http://github.com/richhickey/clojure-contrib/tree/master and "JLine":http://jline.sourceforge.net/ (a readline like library for Java)</li>
+<li> download and build the source code for Clojure, &#8220;clojure-contrib&#8221;:http://github.com/richhickey/clojure-contrib/tree/master and &#8220;JLine&#8221;:http://jline.sourceforge.net/ (a readline like library for Java)</li>
 
 <li> download editor support packages for TextMate and Emacs</li>
 
@@ -109,9 +103,9 @@ end</p>
 
 <li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
 
-<li> configure Emacs to use "clojure-mode":http://github.com/jochu/clojure-mode/tree/master, "Slime":http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
+<li> configure Emacs to use &#8220;clojure-mode&#8221;:http://github.com/jochu/clojure-mode/tree/master, &#8220;Slime&#8221;:http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
 
-<li> keep your Clojure installation up to date via a simple "git submodule update && ant"</li>
+<li> keep your Clojure installation up to date via a simple &#8220;git submodule update && ant&#8221;</li>
 </ul>
 
 
@@ -125,8 +119,8 @@ end</p>
     <updated>2009-05-17T00:00:00+07:00</updated>
     <id>http://www.citizen428.net/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps</id>
     <content type="html"><![CDATA[<ul>
-  <li><b>Step 1:</b> Download "Fluid":http://fluidapp.com/, an awesome little application to create site specific browsers.</li>
-  <li><b>Step 2:</b> Find some online API documentation. For Ruby I recommend "railsapi.com":railsapi.com or "RubyBrains":http://rubybrains.com. </li>
+  <li><b>Step 1:</b> Download &#8220;Fluid&#8221;:http://fluidapp.com/, an awesome little application to create site specific browsers.</li>
+  <li><b>Step 2:</b> Find some online API documentation. For Ruby I recommend &#8220;railsapi.com&#8221;:railsapi.com or &#8220;RubyBrains&#8221;:http://rubybrains.com. </li>
   <li><b>Step 3:</b> Create your app in Fluid:</li>
 
 <img src="http://citizen428.net/uploads/fluid.png" alt="Fluid" />
