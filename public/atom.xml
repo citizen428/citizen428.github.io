@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-05-10T12:10:57+07:00</updated>
+  <updated>2015-06-01T18:53:29+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2015-06-01]]></title>
+    <link href="http://www.citizen428.net/blog/2015/06/01/information-overload-2015-06-01/"/>
+    <updated>2015-06-01T18:15:00+07:00</updated>
+    <id>http://www.citizen428.net/blog/2015/06/01/information-overload-2015-06-01</id>
+    <content type="html"><![CDATA[<p>Since I won&rsquo;t manage to publish a new issue of Information Overload every Sunday, from now I&rsquo;ll adopt a &ldquo;whenever I feel like it&rdquo; schedule.</p>
+
+<ul>
+<li><a href="http://thinkprogress.org/climate/2015/05/15/3659355/china-coal-use-drops/">It Only Took Four Months For China To Achieve A Jaw-Dropping Reduction In Carbon Emissions</a><br>
+That&rsquo;s good news for a change.</li>
+<li><a href="http://www.economist.com/blogs/economist-explains/2015/05/economist-explains-12?fsrc=scn/tw/wl/ee/st/ed/whysomanydutchpeopleworkparttime">Why so many Dutch people work part time</a><br>
+Bottom line: because they are smart.</li>
+<li><a href="https://medium.com/@arankhanna/stalking-your-friends-with-facebook-messenger-9da8820bd27d">Stalking Your Friends with Facebook Messenger</a><br>
+This illustrates nicely how location data could be correlated and why that is a problem.</li>
+<li><a href="http://blog.ted.com/a-ted-speaker-coach-shares-11-tips-for-right-before-you-go-on-stage/">A TED speaker coach shares 11 tips for right before you go on stage</a><br></li>
+<li><a href="https://www.psychologytoday.com/blog/suffer-the-children/201203/why-french-kids-dont-have-adhd">Why French Kids Don&rsquo;t Have ADHD</a><br>
+Answer: more reasonable parenting.</li>
+<li><a href="http://www.bbc.com/news/magazine-32625632">The people who think they are made of glass</a><br>
+Speaking of psychology, this is one of the stranger conditions I&rsquo;ve heard of.</li>
+<li><a href="http://sz-magazin.sueddeutsche.de/texte/anzeigen/43140">»Ich bin in Rage angesichts unserer Sexualkultur«</a><br>
+Interesting interview with a sexologist (in German).</li>
+<li><a href="http://www.theguardian.com/world/2015/may/26/french-journalist-poses-muslim-convert-isis-anna-erelle">Skyping with the enemy: I went undercover as a jihadi girlfriend</a><br>
+Title says it all, an intense read.</li>
+<li><a href="http://narrative.ly/stories/a-border-town-built-for-vice/">A Border Town Built for Vice</a><br>
+Border towns can be fascinating places.</li>
+<li><a href="http://mediablackoutusa.com/nigeria-outlaws-female-genital-mutilation/">Nigeria Outlaws Female Genital Mutilation</a><br>
+While this won&rsquo;t solve the problem, it&rsquo;s a good first step.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-05-10]]></title>
@@ -669,29 +701,6 @@ This article certainly enhanced my limited understanding of Sudanese issues.</li
 The SEA Globe writes about the Thai prison system.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Re-kindling My Love Affair With the Kindle Fire]]></title>
-    <link href="http://www.citizen428.net/blog/2014/08/17/re-kindling-my-love-affair-with-the-kindle-fire/"/>
-    <updated>2014-08-17T18:19:31+07:00</updated>
-    <id>http://www.citizen428.net/blog/2014/08/17/re-kindling-my-love-affair-with-the-kindle-fire</id>
-    <content type="html"><![CDATA[<p>When I originally bought my Kindle Fire HD 7&#8221;, I was madly in love with it. However, after the initial euphoria was over, I got very annoyed with the dumbed down user interface and the limited availability of apps in Amazon&rsquo;s app store.</p>
-
-<p>So yesterday morning I finally set aside around 2 hours to do the following:</p>
-
-<ul>
-<li>Root the device (<a href="http://forum.xda-developers.com/showthread.php?t=2074565">How To: Root the Kindle Fire 7&#8221; HD or 2 with Linux/MAC</a>)</li>
-<li>Install Google Play (<a href="http://forum.xda-developers.com/showthread.php?t=2069329">Install Google Play Store Noob (Simple) Version</a>)</li>
-<li>Install <a href="http://novalauncher.com/">Nova Launcher</a> (<a href="http://forum.xda-developers.com/showthread.php?t=1955586">Nova Launcher on the KFHD7!</a>)</li>
-<li>Disable OTA updates (<a href="http://androidcowboy.com/2013/06/how-to-disable-amazon-ota-updates/">How to Disable Amazon OTA Updates</a>)</li>
-</ul>
-
-
-<p>All in all the process went pretty smoothly and I now I have a mostly uncrippled Android tablet. There are some small glitches, but they are certainly less annoying than having a very limited device. At first I couldn&rsquo;t get the Kindle app to run (it&rsquo;s a modified version that&rsquo;s pretty tied to the Fire&rsquo;s native launcher), but after a bit of fiddling around it&rsquo;s now working. Some people also opt for not selecting any launcher as default action for the home button, so they can easily switch between the Kindle experience and a more tablet like launcher.</p>
-
-<p>If you own a Kindle Fire that you don&rsquo;t use much maybe you should give rooting a try, it may re-kindle your interest in the device.</p>
 ]]></content>
   </entry>
   
