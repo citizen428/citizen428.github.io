@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Not too lang ago our favorite language had only implementation, the one made by Matz (now commonly referred to as MatzRuby or MRI). This has changed &hellip;">
+  <meta name="description" content="We all know the feeling: before starting a new script you hack around in IRB to try out some things, but once you&#8217;re done you realize that now &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,80 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/18/create-script-from-irb-session/">Create Script From IRB Session</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-18T00:00:00+07:00" pubdate data-updated="true">Mar 18<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We all know the feeling: before starting a new script you hack around in <span class="caps">IRB</span> to try out some things, but once you&#8217;re done you realize that now you either have to type everything again or copy/paste from the <span class="caps">IRB</span> session (or the history file if you keep one). So I set out on my search for a solution and found an <a href="http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results">old ruby-talk post by Gavin Sinclair</a>, which implemented a method called <b>dumphist</b>, which I modified to my needs and put in my ~/.irbrc:</p>
+<script src="http://gist.github.com/71624.js"></script><p>Let&#8217;s look at the following <span class="caps">IRB</span> session:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;hello&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="kp"&gt;nil&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;world&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;world&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="kp"&gt;nil&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;   &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;   &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="kp"&gt;nil&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dumphist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;test.rb&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;def foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;puts &amp;#39;bar&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;end&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>The last command created a file named test.rb for us, which contains only the method foo. :-)</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -446,46 +520,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/02/01/rubylearning-got-a-new-mentor-with-shiny-shoes-and-a-mac/">RubyLearning Got a New Mentor With Shiny Shoes and a Mac</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-02-01T00:00:00+07:00" pubdate data-updated="true">Feb 1<sup>st</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Since I currently have quite a lot of time but am slightly on the poor side (as we all know: &#8216;money = has_time ? 0 : loads.to_i&#8217;) I decided to join batch 10 of <a href="http://rubylearning.org/class/">RubyLearning&#8217;s</a> free online core Ruby programming course. In my opinion the course is <strong>very</strong> good, so if you always wanted to learn Ruby but couldn&#8217;t find the motivation alone, definitely give this a try! But since I myself am not exactly new to Ruby, it so happened that after the first week of the course I now joined the RubyLearning team as a mentor. Glad to be part of the gang, folks! :)</p>
-<p>Yesterday <a href="http://citizen428.net/archives/353-The-first-steps-in-new-Shoes.html">I blogged</a> about my first experiments with <a href="http://shoooes.net/">Shoes</a> and thanks to some feedback by <a href="http://ashbb.github.com/">ashbb</a> a newer version of the <a href="http://the-shoebox.org/apps/126">Little Helper</a> is now available. And since I plan on doing some more experiments with Shoes, I also started a <a href="http://github.com/citizen428/littlesteps/tree/master">repo called littlesteps</a> on Github where I will keep the source for all those nice little application.</p>
-<p>Finally a bit of good news for all you Ruby on MacOS X fans out there: there soon will be new versions of the <a href="http://rubyosx.rubyforge.org/">Ruby One-Click Installer for <span class="caps">OSX</span></a> for Ruby 1.9.1! :) The <a href="http://wiki.rubyonrails.org/rails/pages/parasew">maintainer</a> is a friend of mine, so I tried to convince him to include <a href="http://rspec.info/">rspec</a> and <a href="http://cheat.errtheblog.com/">cheats</a> in the next release, let&#8217;s see if we&#8217;ll get them&#8230;</p>
-<p>Some links:<br />
-<a href="http://waveninja.blogspot.com/2009/01/ten-steps-in-shoes-step-2-stack-flow.html">waveninja&#8217;s Ten Steps in Shoes, part 2</a><br />
-<a href="http://github.com/ashbb/shoes_tutorial_html/tree/master">ashbb&#8217;s Shoes Tutorial</a></p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/29">&larr; Older</a>
@@ -518,6 +552,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
       </li>
     
@@ -531,10 +569,6 @@
     
       <li class="post">
         <a href="/blog/2015/03/29/information-overload-2015-03-29/">Information Overload 2015-03-29</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/22/information-overload-2015-03-22/">Information Overload 2015-03-22</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: books | citizen428.blog()]]></title>
   <link href="http://www.citizen428.net/blog/categories/books/atom.xml" rel="self"/>
   <link href="http://www.citizen428.net/"/>
-  <updated>2015-06-01T18:53:29+07:00</updated>
+  <updated>2015-06-15T12:32:14+07:00</updated>
   <id>http://www.citizen428.net/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2015-06-07]]></title>
+    <link href="http://www.citizen428.net/blog/2015/06/07/information-overload-2015-06-07/"/>
+    <updated>2015-06-07T00:00:00+07:00</updated>
+    <id>http://www.citizen428.net/blog/2015/06/07/information-overload-2015-06-07</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.theguardian.com/world/2015/jun/01/rent-cap-legislation-in-force-berlin-germany">Berlin becomes first German city to make rent cap a reality</a><br></li>
+<li><a href="http://www.news.com.au/technology/science/aussie-student-proves-existence-of-plasma-tubes-floating-above-earth/story-fnjwlcze-1227379756018">Aussie student proves existence of plasma tubes floating above Earth</a><br></li>
+<li><a href="http://www.theguardian.com/world/2015/jun/07/grandmothers-of-plaza-de-mayo-36-year-hunt-for-stolen-child">A grandmother&rsquo;s 36-year hunt for the child stolen by the Argentinian junta</a><br></li>
+<li><a href="http://www.yesmagazine.org/happiness/ursula-k-le-guin-calls-on-sci-fi-and-fantasy-writers-to-envision-alternatives-to-capitalism">Ursula K. Le Guin Calls on Fantasy and Sci Fi Writers to Envision Alternatives to Capitalism</a><br></li>
+<li><a href="http://www.newyorker.com/news/news-desk/kalief-browder-1993-2015">Kalief Browder, 1993–2015</a><br></li>
+<li><a href="http://www.washingtonpost.com/blogs/worldviews/wp/2015/06/05/map-the-remarkable-distances-you-can-travel-on-a-european-train-in-less-than-a-day/">Map: The remarkable distances you can travel on a European train in less than a day</a><br></li>
+<li><a href="http://sea-globe.com/laos-david-hutt-southeast-asia-globe/">Absolute power</a><br></li>
+<li><a href="http://www.corriere.it/english/15_giugno_07/vladimir-putin-interview-to-the-italian-newspaper-corriere-sera-44c5a66c-0d12-11e5-8612-1eda5b996824.shtml">Vladimir Putin, interview to the Italian newspaper «Il Corriere della Sera»</a><br></li>
+<li><a href="https://debuggerdotbreak.wordpress.com/2015/05/21/my-startups-dead-5-things-i-learned/">My Startup’s Dead! 5 Things I Learned</a><br></li>
+<li><a href="http://www.npr.org/sections/goatsandsoda/2015/06/08/412314701/lost-posture-why-indigenous-cultures-dont-have-back-pain">Lost Posture: Why Some Indigenous Cultures May Not Have Back Pain</a><br></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Programming Elixir]]></title>
@@ -448,82 +469,6 @@ it in the future and maybe even flashing a different ROM, but for now
 I take the Kindle Fire for what it is and thoroughly enjoy it that
 way: during a bus ride the other day I read a book, watched a video,
 and read some comics, all on the same device.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[2012 reading list]]></title>
-    <link href="http://www.citizen428.net/blog/2013/01/02/2012-reading-list/"/>
-    <updated>2013-01-02T20:44:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2013/01/02/2012-reading-list</id>
-    <content type="html"><![CDATA[<p>Once again here&rsquo;s a list of all the books I read in the past year, in
-reading order. I&rsquo;m surprised I made it to 52 again, since there were
-several periods where I didn&rsquo;t read much for various reasons.</p>
-
-<p>I also got to work on two books, first as technical reviewer for <a href="http://www.amazon.com/gp/product/1849515026/ref=as_li_ss_tl?ie=UTF8&amp;tag=citizen4blog-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1849515026">Ruby and MongoDB Web Development Beginner&rsquo;s Guide</a>
-and then as the author of the Metasploit chapter for
-<a href="http://www.sicherheitsforschung-magdeburg.de/buecher.html">Informationstechnologie und Sicherheitspolitik</a>.</p>
-
-<p>Mukoma wa Ngugi: <em>Nairobi Heat</em><br>
-Antoinette Bergin: <em>Bedtime Stories for Children You Hate</em><br>
-Margaret Killjoy: <em>Mythmakers and Lawbreakers: Anarchist Writers on Fiction</em><br>
-Roberto Ierusalimschy: <em>Programming in Lua</em><br>
-Tobias Klein: <em>A Bug Hunter&rsquo;s Diary: A Guided Tour Through the Wilds of Software Security</em><br>
-Salman Rushdie: <em>The Satanic Verses</em><br>
-Banana Yoshimoto: <em>Kitchen</em><br>
-Jens Bjørneboe: <em>Haie: die Geschichte eines Schiffsunterganges</em><br>
-Henry David Thoreau: <em>Civil Disobedience</em><br>
-Terry Pratchett: <em>Reaper Man</em><br>
-Dean Wampler: <em>Programming Scala</em><br>
-Brendan Behan: <em>After the Wake</em><br>
-Bruce Sterling: <em>Black Swan</em><br>
-Lewis Shiner: <em>Slam</em><br>
-Peter Godwin: <em>When a Crocodile Eats the Sun: A Memoir of Africa</em><br>
-Ron Currie Jr.: <em>God Is Dead</em><br>
-Kurt Vonnegut: <em>Cat&rsquo;s Cradle</em><br>
-Aravind Adiga: <em>Between The Assassinations</em><br>
-Jonathan Safran Foer: <em>Eating Animals</em><br>
-Chuck Palahniuk: <em>Nonfiction</em><br>
-Gautam Rege: <em>Ruby and MongoDB Web Development</em><br>
-Terry Pratchett: <em>The Fifth Elephant</em><br>
-Herbert Rosendorfer: <em>Großes Solo für Anton</em><br>
-Brian P. Hogan: <em>tmux: Productive Mouse-Free Development</em><br>
-Charles Bukowski: <em>Ham on Rye</em><br>
-Thomas Marcinko: <em>Astronauts and Heretics</em><br>
-Avdi Grimm: <em>Exceptional Ruby: Master the Art of Handling Failure in Ruby</em><br>
-Michal Zalewski: <em>The Tangled Web: A Guide to Securing Modern Web Applications</em><br>
-Haruki Murakami: <em>1Q84</em><br>
-Jesse Storimer: <em>Working with UNIX Processes</em><br>
-Qiu Xiaolong: <em>When Red Is Black</em><br>
-Lao Tzu: <em>Tao Te King</em><br>
-Kim Wright: <em>City of Darkness</em><br>
-Joyce Carol Oates: <em>Rape. A Love Story</em><br>
-Joseph Heller: <em>Catch-22</em><br>
-Hugh Howey: <em>I, Zombie</em><br>
-Nury Vittachi: <em>Mr. Wong Goes West</em><br>
-Douglas Adams: <em>Dirk Gently&rsquo;s Holistic Detective Agency</em><br>
-p.m.: <em>bolo’ bolo</em><br>
-Kenneth S. Cohen: <em>Qigong. Grundlagen, Methoden, Anwendung</em><br>
-David Wong: <em>John Dies at the End</em><br>
-Terry Pratchett: <em>Lords and Ladies</em><br>
-Julia Alvarez: <em>How The Garcia Girls Lost Their Accents</em><br>
-T. E. Klemm: <em>100 Chess Problems for the Rest of Us</em><br>
-Robert A. Heinlein: <em>6xH</em><br>
-Gao Xingjian: <em>Soul Mountain</em><br>
-Junot Díaz: <em>The Brief Wondrous Life of Oscar Wao</em><br>
-Matt Ruff: <em>Bad Monkeys</em><br>
-Richard Wilhelm: <em>The Secret of the Golden Flower: A Chinese Book of Life</em><br>
-Uzodinma Iweala: <em>Beasts of No Nation</em><br>
-James Bracken: <em>¡Che Boludo!: A gringo&rsquo;s guide to understanding the Argentines</em><br>
-Terry Pratchett: <em>The Light Fantastic</em><br></p>
-
-<p>There also were several programming books I didn&rsquo;t finish, either because I didn&rsquo;t have time, didn&rsquo;t find them interesting enough or because I got all the information I needed before the book was over:</p>
-
-<p>Martin Logan: <em>Erlang and OTP in Action</em><br>
-Leo Brodie: <em>Starting FORTH</em><br>
-Timothy Perrett: <em>Lift in Action</em><br>
-Kees Doets: <em>The Haskell Road to Logic, Maths and Programming</em><br>
-Ivo Balbaert: <em>The Way to Go</em><br></p>
 ]]></content>
   </entry>
   

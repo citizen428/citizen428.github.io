@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="This week &#8220;Information Overload&#8221; is back in full swing, and there really were lots of interesting things I stumbled upon: The Biggest &hellip;">
+  <meta name="description" content="If you are running a non-system Emacs on OS X and have tried to use &#8220;emacsclient&#8221;, you may have seen the following error message despite &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/09/22/emacsclient-on-os-x/">Emacsclient on OS X</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-22T00:00:00+07:00" pubdate data-updated="true">Sep 22<sup>nd</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you are running a non-system Emacs on OS X and have tried to use &#8220;emacsclient&#8221;, you may have seen the following error message despite having started the Emacs server:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;emacsclient: can't find socket; have you started the server?
+&lt;/span&gt;&lt;span class='line'&gt;To start the server in Emacs, type "M-x server-start".
+&lt;/span&gt;&lt;span class='line'&gt;emacsclient: No socket or alternate editor.  Please use:
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;	--socket-name
+&lt;/span&gt;&lt;span class='line'&gt;	--server-file      (or environment variable EMACS_SERVER_FILE)
+&lt;/span&gt;&lt;span class='line'&gt;	--alternate-editor (or environment variable ALTERNATE_EDITOR)&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>This doesn&#8217;t work because you are invoking &#8220;/usr/bin/emacsclient&#8221; which came with the OS, instead of &#8220;/Applications/Emacs.app/Contents/MacOS/bin/emacsclient&#8221;. This can easily be fixed by symlinking the latter to &#8220;/usr/local/bin/emacsclient&#8221; and making sure that &#8220;/usr/local/bin&#8221; is listed in your path before &#8220;/usr/bin&#8221;.</p>
+<p>Not a big deal, but it took me a couple of minutes to figure out and I thought I might as well save others some time&#8230;</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -601,145 +659,6 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/08/20/ror-call-cannot-yield-from-a-proc-type-filter/">RoR: &#8216;Call&#8217;: Cannot Yield From a Proc Type Filter.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-08-20T00:00:00+07:00" pubdate data-updated="true">Aug 20<sup>th</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>As we all know, there are 2 main differences between procs and lambdas in Ruby.</p>
-<p>1. Argument checking:</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-<span class='line-number'>4</span><br />
-<span class='line-number'>5</span><br />
-<span class='line-number'>6</span><br />
-<span class='line-number'>7</span><br />
-<span class='line-number'>8</span><br />
-<span class='line-number'>9</span><br />
-<span class='line-number'>10</span><br />
-<span class='line-number'>11</span><br />
-<span class='line-number'>12</span><br />
-</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Proc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nb"&gt;name&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello &lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="nb"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;#&amp;lt;Proc:0x000001008dc600@(irb):3&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nb"&gt;name&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello &lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="nb"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;#&amp;lt;Proc:0x000001008d3c08@(irb):4 (lambda)&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello &amp;quot;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="no"&gt;ArgumentError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;wrong&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;	&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;irb&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="ss"&gt;:in&lt;/span&gt; &lt;span class="sb"&gt;`block in irb_binding&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="sb"&gt;	from (irb):6:in `&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;	from (irb):6&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="s1"&gt;	from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&amp;lt;main&amp;gt;&amp;#39;&lt;/span&gt;
-&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p>2. The possibility to return from within the closure:<br />
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008c83a8@(irb):7&gt;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Proc:0x000001008c4050@(irb):8 (lambda)&gt;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="nb">p</span><span class="o">.</span><span class="n">call</span>
-</span><span class='line'><span class="no">LocalJumpError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="k">return</span>
-</span><span class='line'>	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">7</span><span class="ss">:in</span> <span class="sb">`block in irb_binding&#39;</span>
-</span><span class='line'><span class="sb">	from (irb):9:in `</span><span class="n">call</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">	from (irb):9</span>
-</span><span class='line'><span class="s1">	from /Users/michi/.rvm/rubies/ruby-1.9.2-p0/bin/irb:17:in `&lt;main&gt;&#39;</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">call</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
-</span></code></pre></td></tr></table></div></figure></div></p>
-<p>I&#8217;ve known about this for a while, but as a Rubyists who until quite recently happily ignored Rails, I didn&#8217;t know that ActiveSupport changes the &#8220;LocalJumpError&#8221; from the second example into</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="sb"&gt;`call&amp;#39;: Cannot yield from a Proc type filter.&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="sb"&gt;   The Proc must take two arguments and execute&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="sb"&gt;   #call on the second argument. (ArgumentError)&lt;/span&gt;
-&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p>when you try to return from callbacks like &#8220;before_save&#8221;. I spent quite some time debugging this before I finally found the solution in this <a href="http://obosan.blogspot.com/2008/11/blocksclosures-and-return.html">blog post</a>. Instead of</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-<span class='line-number'>4</span><br />
-</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="n"&gt;after_save&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p>you have to do</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-<span class='line-number'>4</span><br />
-</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="n"&gt;after_save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="p"&gt;})&lt;/span&gt;
-&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p>Probably obvious to more experienced Rails developers, but I really got thrown off by the &#8220;ArgumentError&#8221; that replaced the &#8220;LocalJumpError&#8221;.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/22">&larr; Older</a>
@@ -772,6 +691,10 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
       </li>
     
@@ -785,10 +708,6 @@ Using <a href="http://www.jsoftware.com/help/dictionary/d402.htm">Antibase</a> (
     
       <li class="post">
         <a href="/blog/2015/03/29/information-overload-2015-03-29/">Information Overload 2015-03-29</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/22/information-overload-2015-03-22/">Information Overload 2015-03-22</a>
       </li>
     
   </ul>

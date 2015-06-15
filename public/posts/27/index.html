@@ -9,19 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="From Ruby Quiz #202:
-And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#8217;s solution:
-1
-2
-3
-4
-5
-1
-2
-3
-4
-5
-&lt;span &hellip;">
+  <meta name="description" content="As we all know posting code to Moodle (the software that powers RubyLearning) can be a bit cumbersome. I therefore created a TextMate command which &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,6 +83,51 @@ And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/">A TextMate Command for the RubyLearning Forums</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-10T00:00:00+07:00" pubdate data-updated="true">May 10<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As we all know posting code to <a href="http://moodle.org/">Moodle</a> (the software that powers <a href="http://rubylearning.org">RubyLearning</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
+<ul>
+<li> take the currently active file</li>
+<li> replace all occurrences of &lt; with the <span class="caps">HTML</span>-entity</li>
+<li> wrap all of that in [code ruby] tags and</li>
+<li> copy it to the clipboard, ready to be pasted into the forums.</li>
+</ul>
+<p>Source:<br />
+<script src="http://gist.github.com/109576.js"></script></p>
+<p>Download:<br />
+<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -539,80 +572,6 @@ And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/03/18/create-script-from-irb-session/">Create Script From IRB Session</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-18T00:00:00+07:00" pubdate data-updated="true">Mar 18<sup>th</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We all know the feeling: before starting a new script you hack around in <span class="caps">IRB</span> to try out some things, but once you&#8217;re done you realize that now you either have to type everything again or copy/paste from the <span class="caps">IRB</span> session (or the history file if you keep one). So I set out on my search for a solution and found an <a href="http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results">old ruby-talk post by Gavin Sinclair</a>, which implemented a method called <b>dumphist</b>, which I modified to my needs and put in my ~/.irbrc:</p>
-<script src="http://gist.github.com/71624.js"></script><p>Let&#8217;s look at the following <span class="caps">IRB</span> session:</p>
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
-<span class='line-number'>2</span><br />
-<span class='line-number'>3</span><br />
-<span class='line-number'>4</span><br />
-<span class='line-number'>5</span><br />
-<span class='line-number'>6</span><br />
-<span class='line-number'>7</span><br />
-<span class='line-number'>8</span><br />
-<span class='line-number'>9</span><br />
-<span class='line-number'>10</span><br />
-<span class='line-number'>11</span><br />
-<span class='line-number'>12</span><br />
-</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;hello&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="kp"&gt;nil&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;world&amp;quot;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;world&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="kp"&gt;nil&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;   &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;   &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="kp"&gt;nil&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dumphist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;test.rb&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;def foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;puts &amp;#39;bar&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;end&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
-<p>The last command created a file named test.rb for us, which contains only the method foo. :-)</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/28">&larr; Older</a>
@@ -645,6 +604,10 @@ And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
       </li>
     
@@ -658,10 +621,6 @@ And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#
     
       <li class="post">
         <a href="/blog/2015/03/29/information-overload-2015-03-29/">Information Overload 2015-03-29</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/22/information-overload-2015-03-22/">Information Overload 2015-03-22</a>
       </li>
     
   </ul>
