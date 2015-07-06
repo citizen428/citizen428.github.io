@@ -9,30 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="As we all know, there are 2 main differences between procs and lambdas in Ruby.
-1. Argument checking:
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10 &hellip;">
+  <meta name="description" content="The web is full of wonderful information. In fact there&#8217;s so much of it, it almost feels intimidating at times. I therefore plan to start a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -106,6 +83,52 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/08/22/information-overload-2010-08-22/">Information Overload 2010-08-22</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-22T00:00:00+07:00" pubdate data-updated="true">Aug 22<sup>nd</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The web is full of wonderful information. In fact there&#8217;s so much of it, it almost feels intimidating at times. I therefore plan to start a series of blog posts about articles/screencasts/lectures/etc. I enjoyed during the week (they may have been published at a totally different time though).</p>
+<ul>
+<li><a href="http://technoccult.net/archives/2010/02/25/the-punk-rock-philosophy-of-mathematics-technoccult-interviews-tom-henderson/">The Philosophy of Punk Rock Mathematics</a><br>An interview with Tom Henderson, aka <a href="http://twitter.com/mathpunk">@mathpunk</a>.</li>
+<li><a href="http://www.fastcodesign.com/1661871/augmented-reality-the-nightmare-scenario">Augmented Reality: The Nightmare Scenario</a><br>Short video by a Japanese architecture student about advertising in an augmented (hyper-)reality.</li>
+<li><a href="http://ilovetypography.com/2010/08/07/where-does-the-alphabet-come-from/">The origins of abc</a><br>Where does our alphabet come from?</li>
+<li><a href="http://www.foreignpolicy.com/articles/2010/08/16/beyond_city_limits?page=full">Beyond City Limits</a><br>Is the age of nations over and are we entering the age of cities?</li>
+<li><a href="http://fogus.me/static/preso/clj1.2+/">Clojure 1.2 and Beyond</a><br>A presentation by <a href="http://twitter.com/fogus">@fogus</a> about the newly released Clojure 1.2. Covers everything that&#8217;s important and has some wild speculation about the future too.</li>
+<li><a href="http://www.vector.org.uk/?vol=24&amp;no=1&amp;art=jonesreiter">Cauchy Curves</a><br>Drawing Cauchy curves with <a href="http://www.jsoftware.com/">J</a>.</li>
+<li><a href="http://mdn.mainichi.jp/features/news/20100820p2a00m0na019000c.html">Digital copycats</a><br>People in Japan are starting to digitize their books.</li>
+<li><a href="http://www.newscientist.com/article/mg20727721.400-hydrogen-bombshell-rewriting-lifes-history.html">Hydrogen bombshell: Rewriting life&#8217;s history</a><br>Animals who don&#8217;t need oxygen for survival.</li>
+<li><a href="http://wearehugh.com/public/2010/08/html5-web-workers/">An Implausibly Illustrated Introduction to HTML5 Web Workers</a><br>Exactly what the title promises. </li>
+<li><a href="http://www.spiegel.de/unispiegel/jobundberuf/0,1518,711917,00.html">Urlaub ohne Ende</a><br>Netflix employees can take as many holidays as they want. Working models for the post-industrial age? (German)</Ii></ul></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -697,64 +720,6 @@ I know that there are several gems for interacting with GitHub, but thanks to th
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/05/12/a-poor-mans-repl-in-ruby/">A Poor Man&#8217;s REPL in Ruby</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-05-12T00:00:00+07:00" pubdate data-updated="true">May 12<sup>th</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I love all the little discussions on RubyLearning, especially when they lead to me writing stupid code the world doesn&#8217;t need. ;-) Today: a poor man&#8217;s <a href="http://en.wikipedia.org/wiki/Read-eval-print_loop"><span class="caps">REPL</span></a> in 2 lines of Ruby 1.9:<br />
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">repl</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="n">prompt</span> <span class="p">{</span> <span class="nb">print</span> <span class="n">prompt</span><span class="p">;</span> <span class="nb">puts</span><span class="p">(</span><span class="s2">&quot; =&gt; %s&quot;</span> <span class="o">%</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">gets</span><span class="o">.</span><span class="n">chomp!</span><span class="p">))</span> <span class="p">}</span>
-</span><span class='line'><span class="kp">loop</span> <span class="p">{</span> <span class="n">repl</span><span class="o">[</span><span class="s2">&quot;&gt;&gt; &quot;</span><span class="o">]</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></div><br />
-Behold the wonder:<br />
-<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
-</span><span class='line'> <span class="o">=&gt;</span> <span class="mi">5</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="s2">&quot;foo&quot;</span><span class="o">.</span><span class="n">upcase</span>
-</span><span class='line'> <span class="o">=&gt;</span> <span class="no">FOO</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="o">[].</span><span class="n">class</span>
-</span><span class='line'> <span class="o">=&gt;</span> <span class="nb">Array</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="sx">%w(foo bar)</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
-</span><span class='line'> <span class="o">=&gt;</span> <span class="n">foo</span>
-</span></code></pre></td></tr></table></div></figure></div></p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/23">&larr; Older</a>
@@ -787,6 +752,10 @@ Behold the wonder:<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
       </li>
     
@@ -800,10 +769,6 @@ Behold the wonder:<br />
     
       <li class="post">
         <a href="/blog/2015/04/05/information-overload-2015-04-05/">Information Overload 2015-04-05</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/29/information-overload-2015-03-29/">Information Overload 2015-03-29</a>
       </li>
     
   </ul>

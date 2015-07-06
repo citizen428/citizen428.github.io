@@ -9,10 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="When we &#8220;swap variables in Ruby&#8221;, what really happens is something called &#8220;a destructuring binding&#8221; in other languages:
-1
-2
-3 &hellip;">
+  <meta name="description" content="I love all the little discussions on RubyLearning, especially when they lead to me writing stupid code the world doesn&#8217;t need. ;-) Today: a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +83,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/05/12/a-poor-mans-repl-in-ruby/">A Poor Man&#8217;s REPL in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-05-12T00:00:00+07:00" pubdate data-updated="true">May 12<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I love all the little discussions on RubyLearning, especially when they lead to me writing stupid code the world doesn&#8217;t need. ;-) Today: a poor man&#8217;s <a href="http://en.wikipedia.org/wiki/Read-eval-print_loop"><span class="caps">REPL</span></a> in 2 lines of Ruby 1.9:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">repl</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="n">prompt</span> <span class="p">{</span> <span class="nb">print</span> <span class="n">prompt</span><span class="p">;</span> <span class="nb">puts</span><span class="p">(</span><span class="s2">&quot; =&gt; %s&quot;</span> <span class="o">%</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">gets</span><span class="o">.</span><span class="n">chomp!</span><span class="p">))</span> <span class="p">}</span>
+</span><span class='line'><span class="kp">loop</span> <span class="p">{</span> <span class="n">repl</span><span class="o">[</span><span class="s2">&quot;&gt;&gt; &quot;</span><span class="o">]</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></div><br />
+Behold the wonder:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+</span><span class='line'> <span class="o">=&gt;</span> <span class="mi">5</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="s2">&quot;foo&quot;</span><span class="o">.</span><span class="n">upcase</span>
+</span><span class='line'> <span class="o">=&gt;</span> <span class="no">FOO</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="o">[].</span><span class="n">class</span>
+</span><span class='line'> <span class="o">=&gt;</span> <span class="nb">Array</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="sx">%w(foo bar)</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'> <span class="o">=&gt;</span> <span class="n">foo</span>
+</span></code></pre></td></tr></table></div></figure></div></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -559,43 +614,6 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/02/25/comprehensive-list-of-cloud-related-links/">Comprehensive List of Cloud-related Links</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-02-25T00:00:00+07:00" pubdate data-updated="true">Feb 25<sup>th</sup>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Lately a lot of my working time is spent on cloud technologies, most notably the <a href="http://aws.amazon.com/">Amazon Web Services</a>. In recent month I compiled a rather comprehensive list of cloud-related links which I now decided to share with you all.</p>
-<p><a href="http://gist.github.com/314445">Cloud Links</a></p>
-<p>It&#8217;s just a markdown file copied into a Gist, so if you want to add any links just fork away! :-)</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/24">&larr; Older</a>
@@ -628,6 +646,10 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
       </li>
     
@@ -641,10 +663,6 @@ The reason I&#8217;m posting this long explanation is that destructuring is ofte
     
       <li class="post">
         <a href="/blog/2015/04/05/information-overload-2015-04-05/">Information Overload 2015-04-05</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/29/information-overload-2015-03-29/">Information Overload 2015-03-29</a>
       </li>
     
   </ul>
