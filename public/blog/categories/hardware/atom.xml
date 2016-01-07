@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: hardware | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/hardware/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/hardware/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Power users?]]></title>
-    <link href="http://www.citizen428.net/blog/2006/04/27/power-users/"/>
+    <link href="http://citizen428.github.io/blog/2006/04/27/power-users/"/>
     <updated>2006-04-27T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/04/27/power-users</id>
+    <id>http://citizen428.github.io/blog/2006/04/27/power-users</id>
     <content type="html"><![CDATA[<p>I&rsquo;m really interested to get some opinions on this particular topic: is there a conncection between how people perceive their own knowledge of computers and what kind of hardware they buy?</p>
 
 <p>I&rsquo;m wondering because I&rsquo;ve just been reading a discussion about the new Intel based notebooks, especially the new Mac Books which will be released in June. With 13,3&#8221; it will be the smallest of Apple&rsquo;s new offerings, and a lot of people have cried loud for a MacBook Pro - ok, the name really sounds stupid - with the same form factor. But will they really feel a difference? Or do they just want them because the &ldquo;Pro&rdquo; makes them feel better (no insult intended)? My own hardware almost always has been pretty old, and I have never much felt the need to own something better just because I&rsquo;m a &ldquo;power user&rdquo; (periods of &ldquo;decadence kills depression&rdquo; excluded of course ;) ). And what&rsquo;s a power user anyway?</p>

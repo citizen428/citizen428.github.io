@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: smalltalk | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/smalltalk/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/smalltalk/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Clever documentation]]></title>
-    <link href="http://www.citizen428.net/blog/2009/04/26/clever-documentation/"/>
+    <link href="http://citizen428.github.io/blog/2009/04/26/clever-documentation/"/>
     <updated>2009-04-26T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/04/26/clever-documentation</id>
+    <id>http://citizen428.github.io/blog/2009/04/26/clever-documentation</id>
     <content type="html"><![CDATA[<p>Playing with <a href="http://www.squeak.org/">Squeak</a>&rsquo;s Method Finder, I discovered a really neat feature that I wish would be available for Ruby documentation. Here&rsquo;s the description from the built-in help:</p>
 
 <p><i>[&hellip;] use an example to find a method in the system.  Type receiver, args, and answer in the top pane with periods between the items.  3. 4. 7</i></p>

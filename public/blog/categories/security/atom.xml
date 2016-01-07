@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: security | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/security/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/security/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-03-15]]></title>
-    <link href="http://www.citizen428.net/blog/2015/03/15/information-overload-2015-03-15/"/>
+    <link href="http://citizen428.github.io/blog/2015/03/15/information-overload-2015-03-15/"/>
     <updated>2015-03-15T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/03/15/information-overload-2015-03-15</id>
+    <id>http://citizen428.github.io/blog/2015/03/15/information-overload-2015-03-15</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.theregister.co.uk/2015/03/10/rowhammer/">Google crocks capacitors and deviates DRAM to root Linux</a><br>
 That&rsquo;s one creative exploit.</li>
@@ -46,9 +46,9 @@ A female MMA fighter is helping in destroying stereotypes.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-02-22]]></title>
-    <link href="http://www.citizen428.net/blog/2015/02/22/information-overload-2015-02-22/"/>
+    <link href="http://citizen428.github.io/blog/2015/02/22/information-overload-2015-02-22/"/>
     <updated>2015-02-22T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/02/22/information-overload-2015-02-22</id>
+    <id>http://citizen428.github.io/blog/2015/02/22/information-overload-2015-02-22</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.theguardian.com/commentisfree/2015/feb/13/super-rich-dont-care-about-us-taxes">The super-rich don’t care about us. It will be their downfall</a><br>
 Always refreshing to see articles like this in mainstream media.</li>
@@ -77,9 +77,9 @@ If that&rsquo;s not state-sponsored, then what is?</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-23]]></title>
-    <link href="http://www.citizen428.net/blog/2012/09/23/information-overload-2012-09-23/"/>
+    <link href="http://citizen428.github.io/blog/2012/09/23/information-overload-2012-09-23/"/>
     <updated>2012-09-23T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2012/09/23/information-overload-2012-09-23</id>
+    <id>http://citizen428.github.io/blog/2012/09/23/information-overload-2012-09-23</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://derstandard.at/1345166255203/In-Wien-fehlt-der-Diskurs-zu-Gentrifizierung">&ldquo;In Wien fehlt der Diskurs zu Gentrifizierung&rdquo;</a><br>On urban gentrification in Vienna (in German).</li>
 <li><a href="http://www.npr.org/blogs/krulwich/2012/09/12/160996525/odd-things-happen-when-you-chop-up-cities-and-stack-them-sideways">Odd Things Happen When You Chop Up Cities And Stack Them Sideways</a><br>Great visualization. And wandering around Istanbul is indeed a pleasure.</li>
@@ -95,9 +95,9 @@ If that&rsquo;s not state-sponsored, then what is?</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-29]]></title>
-    <link href="http://www.citizen428.net/blog/2012/07/29/information-overload-2012-07-29/"/>
+    <link href="http://citizen428.github.io/blog/2012/07/29/information-overload-2012-07-29/"/>
     <updated>2012-07-29T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2012/07/29/information-overload-2012-07-29</id>
+    <id>http://citizen428.github.io/blog/2012/07/29/information-overload-2012-07-29</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://bosker.wordpress.com/2012/07/23/the-prisoners-dilemma/">The Prisoner’s Dilemma</a><br>Nice article on the prisoner&rsquo;s dillema, including an interactive toy to play with various strategies.</li>
 <li><a href="http://scienceblogs.com/startswithabang/2012/07/18/how-big-is-the-entire-universe/">How Big is the Entire Universe?</a><br>The short answer: very big. I love articles like this one.</li>
@@ -113,9 +113,9 @@ If that&rsquo;s not state-sponsored, then what is?</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-07-15]]></title>
-    <link href="http://www.citizen428.net/blog/2012/07/15/information-overload-2012-07-15/"/>
+    <link href="http://citizen428.github.io/blog/2012/07/15/information-overload-2012-07-15/"/>
     <updated>2012-07-15T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2012/07/15/information-overload-2012-07-15</id>
+    <id>http://citizen428.github.io/blog/2012/07/15/information-overload-2012-07-15</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://what-if.xkcd.com/1/">Relativistic Baseball</a><br><a href="http://en.wikipedia.org/wiki/Randall_Munroe">Randal Munroe</a> of xkcd fame has a new blog where he answers hypothetical questions about physics.</li>
 <li><a href="http://gizmodo.com/5924447/scientists-find-molecule-that-will-make-your-teeth-cavityproof">Scientists Create Molecule to Make Teeth Cavityproof</a><br>And if that weren&rsquo;t enough, it can be added to sweets and chewing gum.</li>

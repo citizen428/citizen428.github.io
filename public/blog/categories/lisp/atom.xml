@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: lisp | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/lisp/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/lisp/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: Land of Lisp]]></title>
-    <link href="http://www.citizen428.net/blog/2011/02/03/review-land-of-lisp/"/>
+    <link href="http://citizen428.github.io/blog/2011/02/03/review-land-of-lisp/"/>
     <updated>2011-02-03T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/02/03/review-land-of-lisp</id>
+    <id>http://citizen428.github.io/blog/2011/02/03/review-land-of-lisp</id>
     <content type="html"><![CDATA[<p><i>Disclaimer: The awesome folks at <a href="http://www.nostarch.com/">No Starch Press</a> were nice enough to provide me with a free copy of the book reviewed here, but what I&rsquo;m about to write has not been influenced by this. I just wanted to get this out of the way&hellip;</i></p>
 
 <p>Ever since I first learned about it, I was eagerly awaiting the release of &ldquo;Land of Lisp&rdquo;:<a href="http://landoflisp.com/.">http://landoflisp.com/.</a> If you have never heard about the book before, have a look at this promotional cartoon music video. Yes, that&rsquo;s right, this book comes with its very own promotional cartoon music video!</p>
@@ -39,9 +39,9 @@
   
   <entry>
     <title type="html"><![CDATA[Learning Haskell]]></title>
-    <link href="http://www.citizen428.net/blog/2009/04/09/learning-haskell/"/>
+    <link href="http://citizen428.github.io/blog/2009/04/09/learning-haskell/"/>
     <updated>2009-04-09T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/04/09/learning-haskell</id>
+    <id>http://citizen428.github.io/blog/2009/04/09/learning-haskell</id>
     <content type="html"><![CDATA[<p>To get my mind off Ruby I recently started dabbling in Haskell. I really like what I&rsquo;ve seen so far and it seems I&rsquo;m finally starting to understand functional programming (my two attempts with &ldquo;Practical Common Lisp&rdquo;:<a href="http://www.gigamonkeys.com/book/">http://www.gigamonkeys.com/book/</a> never got past the first few chapters).</p>
 
 <p>In case you are interested in Haskell too, here&rsquo;s a list of the resources I use:</p>
@@ -58,9 +58,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ruby's Lisp features]]></title>
-    <link href="http://www.citizen428.net/blog/2006/04/30/rubys-lisp-features/"/>
+    <link href="http://citizen428.github.io/blog/2006/04/30/rubys-lisp-features/"/>
     <updated>2006-04-30T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/04/30/rubys-lisp-features</id>
+    <id>http://citizen428.github.io/blog/2006/04/30/rubys-lisp-features</id>
     <content type="html"><![CDATA[<p>Not too long ago, Edward Kenworthy &ldquo;inquired about &lsquo;Ruby&rsquo;s lisp features&rsquo;&rdquo;:<a href="http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179515">http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179515</a> on ruby-talk. &ldquo;Matz&#8217; answer&rdquo;:<a href="http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179642">http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179642</a> was as follows:</p>
 
 <p><i>Ruby is a language designed in the following steps:</p>

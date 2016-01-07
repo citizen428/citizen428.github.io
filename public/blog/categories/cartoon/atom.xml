@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: cartoon | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/cartoon/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/cartoon/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[So true]]></title>
-    <link href="http://www.citizen428.net/blog/2006/09/02/so-true/"/>
+    <link href="http://citizen428.github.io/blog/2006/09/02/so-true/"/>
     <updated>2006-09-02T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/09/02/so-true</id>
+    <id>http://citizen428.github.io/blog/2006/09/02/so-true</id>
     <content type="html"><![CDATA[<p><img src="http://xkcd.com/comics/useless.jpg" border="1" />
 Source: &ldquo;<a href="http://xkcd.com/c55.html">http://xkcd.com/c55.html</a>&rdquo;:<a href="http://xkcd.com/c55.html">http://xkcd.com/c55.html</a></p>
 

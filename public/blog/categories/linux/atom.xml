@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: linux | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/linux/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Fixing Grub on a LUKS-encrypted Disk]]></title>
-    <link href="http://www.citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk/"/>
+    <link href="http://citizen428.github.io/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk/"/>
     <updated>2011-10-17T15:41:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk</id>
+    <id>http://citizen428.github.io/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk</id>
     <content type="html"><![CDATA[<p>When I rebooted my new work notebook (a very nice x201s, with a dual-core i7, 8GB RAM and an SSD by the way), it seemed that for whatever reason there was no Grub installed. Strange, but not the only problem I had with the alternate Ubuntu installer that I used for setting up <a href="http://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS-encrypted</a> root and swap partitions. Since this turned out to be more involved than I originally thought, I decided to document what I did to maybe save others the trouble. BTW: You&rsquo;ll need a Linux Live-CD for this, I recommend the excellent Debian-based <a href="http://grml.org/">Grml</a>.</p>
 
 <p>First we need to open the LUKS partition, which can be done with <a href="http://linux.die.net/man/8/cryptsetup">cryptsetup</a>.</p>
@@ -122,9 +122,9 @@
   
   <entry>
     <title type="html"><![CDATA[Finally...]]></title>
-    <link href="http://www.citizen428.net/blog/2006/11/05/finally/"/>
+    <link href="http://citizen428.github.io/blog/2006/11/05/finally/"/>
     <updated>2006-11-05T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/11/05/finally</id>
+    <id>http://citizen428.github.io/blog/2006/11/05/finally</id>
     <content type="html"><![CDATA[<p>&hellip;some random stuff I wanted to blog about for quite some time already:</p>
 
 <ul>
@@ -164,9 +164,9 @@ Last but not least here are some funny/interesting things I found over the past 
   
   <entry>
     <title type="html"><![CDATA[Breaking news: Update to citizen428.blog(), situation unclear!]]></title>
-    <link href="http://www.citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
+    <link href="http://citizen428.github.io/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
     <updated>2006-07-01T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
+    <id>http://citizen428.github.io/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
     <content type="html"><![CDATA[<p>June was pretty busy, so I only managed to blog once. So here&rsquo;s a little update of what happened during the past few weeks:</p>
 
 <p><em>Work:</em>
@@ -195,9 +195,9 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
   
   <entry>
     <title type="html"><![CDATA[First day in my new job]]></title>
-    <link href="http://www.citizen428.net/blog/2006/01/05/first-day-in-my-new-job/"/>
+    <link href="http://citizen428.github.io/blog/2006/01/05/first-day-in-my-new-job/"/>
     <updated>2006-01-05T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/01/05/first-day-in-my-new-job</id>
+    <id>http://citizen428.github.io/blog/2006/01/05/first-day-in-my-new-job</id>
     <content type="html"><![CDATA[<p>/me is now working as a &ldquo;Junior System Engineer&rdquo;, whatever that is supposed to mean&hellip; ;)</p>
 
 <p>After succesfully avoiding anything even remotely resembling regular payed work for some years now, this feels pretty strange, but at least my job is all about open source business solutions (clustering, heartbeat, Nagios setups, etc.), the company desktops run Linux (Debian) and code I write is licensed under the GPL.</p>
@@ -208,9 +208,9 @@ September 19th is International Talk Like A Pirate Day. Yarr!</p>
   
   <entry>
     <title type="html"><![CDATA[linuxConverts++]]></title>
-    <link href="http://www.citizen428.net/blog/2005/11/23/linuxconverts/"/>
+    <link href="http://citizen428.github.io/blog/2005/11/23/linuxconverts/"/>
     <updated>2005-11-23T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2005/11/23/linuxconverts</id>
+    <id>http://citizen428.github.io/blog/2005/11/23/linuxconverts</id>
     <content type="html"><![CDATA[<p>While my girlfriend was visiting her sister in Rotterdam, I finally set up her notebook to dual boot Windows XP and Ubuntu Linux. Before you think bad of me: I didn&rsquo;t sneakily do this without her knowing, but instead because she once mentioned that she&rsquo;d like to try out another OS.</p>
 
 <p>Now you may wonder why I chose Ubuntu over Gentoo, but I&rsquo;m afraid the answer is rather pragmatic and uninspired: I had a magazine CD of the current release, so I dind&rsquo;t have to download an ISO. Also installation is fast and painless and there are lots of nice HOWTOs. Besides that I&rsquo;ve aleady used Ubuntu to convert one of my non-techy friends to Linux and it has worked pretty good. To sum it up: I think Ubuntu is a decent distro, but I maybe wouldn&rsquo;t use it on one of my own boxes.</p>

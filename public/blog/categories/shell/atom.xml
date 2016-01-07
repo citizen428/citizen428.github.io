@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: shell | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/shell/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/shell/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-05-22]]></title>
-    <link href="http://www.citizen428.net/blog/2011/05/22/information-overload-2011-05-22/"/>
+    <link href="http://citizen428.github.io/blog/2011/05/22/information-overload-2011-05-22/"/>
     <updated>2011-05-22T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/05/22/information-overload-2011-05-22</id>
+    <id>http://citizen428.github.io/blog/2011/05/22/information-overload-2011-05-22</id>
     <content type="html"><![CDATA[<ul>
 <li>&#8220;Understanding the Fourier transform by Stuart Riffle&#8221;:http://altdevblogaday.org/2011/05/17/understanding-the-fourier-transform/<br>You know I&#8217;m a big fan of good (math) explanations and this is no exception. I really like the color coded formula!</li>
 <li>&#8220;The Complete Guide to Not Giving a Fuck&#8221;:http://inoveryourhead.net/the-complete-guide-to-not-giving-a-fuck/<br>Some good advice in there, but like with most things in life, the right balance is the key.</li>
@@ -36,9 +36,9 @@
   
   <entry>
     <title type="html"><![CDATA[ XML diffs with bash and awk]]></title>
-    <link href="http://www.citizen428.net/blog/2010/10/01/xml-diffs-with-bash-and-awk/"/>
+    <link href="http://citizen428.github.io/blog/2010/10/01/xml-diffs-with-bash-and-awk/"/>
     <updated>2010-10-01T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/10/01/xml-diffs-with-bash-and-awk</id>
+    <id>http://citizen428.github.io/blog/2010/10/01/xml-diffs-with-bash-and-awk</id>
     <content type="html"><![CDATA[<p><i>Slightly modified version of a &ldquo;post&rdquo;:<a href="http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/">http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/</a> I originally wrote for our &ldquo;company blog&rdquo;:<a href="http://tupalo.com/en/blog/.">http://tupalo.com/en/blog/.</a></i></p>
 
 <p>When importing data at work, we often have to deal with XML. This generally works fine, but the format&rsquo;s structured nature also means that you can&rsquo;t just treat it like any old text file.</p>
@@ -120,9 +120,9 @@
   
   <entry>
     <title type="html"><![CDATA[Most used shell commands]]></title>
-    <link href="http://www.citizen428.net/blog/2009/05/25/most-used-shell-commands/"/>
+    <link href="http://citizen428.github.io/blog/2009/05/25/most-used-shell-commands/"/>
     <updated>2009-05-25T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/05/25/most-used-shell-commands</id>
+    <id>http://citizen428.github.io/blog/2009/05/25/most-used-shell-commands</id>
     <content type="html"><![CDATA[<p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
 
 <p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

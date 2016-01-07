@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: restaurants | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/restaurants/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/restaurants/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[javascript:alert("Nothing to see here, please move on!")]]></title>
-    <link href="http://www.citizen428.net/blog/2005/11/01/javascriptalertnothing-to-see-here-please-move-on/"/>
+    <link href="http://citizen428.github.io/blog/2005/11/01/javascriptalertnothing-to-see-here-please-move-on/"/>
     <updated>2005-11-01T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2005/11/01/javascriptalertnothing-to-see-here-please-move-on</id>
+    <id>http://citizen428.github.io/blog/2005/11/01/javascriptalertnothing-to-see-here-please-move-on</id>
     <content type="html"><![CDATA[<p>You probably don&rsquo;t want to know what I&rsquo;ve been up to lately, but mean bastard that I am, I&rsquo;m going to tell you anyway.</p>
 
 <p><em>Wednesday:</em> Watched another Chinese movie at the &ldquo;Viennale&rdquo;:<a href="http://viennale.at/,">http://viennale.at/,</a> which was called &ldquo;Hong Yan&rdquo;:<a href="http://viennale.at/en/programm/filme/1869.shtml.">http://viennale.at/en/programm/filme/1869.shtml.</a> If you like quiet movies which tell simple stories, this one definitely is a good choice. I liked it quite a lot, so I really recommend you try to see this one!</p>

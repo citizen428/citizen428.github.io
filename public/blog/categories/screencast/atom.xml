@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: screencast | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/screencast/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/screencast/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: Meet MacRuby (PeepCode screencast)]]></title>
-    <link href="http://www.citizen428.net/blog/2009/05/23/review-meet-macruby-peepcode-screencast/"/>
+    <link href="http://citizen428.github.io/blog/2009/05/23/review-meet-macruby-peepcode-screencast/"/>
     <updated>2009-05-23T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/05/23/review-meet-macruby-peepcode-screencast</id>
+    <id>http://citizen428.github.io/blog/2009/05/23/review-meet-macruby-peepcode-screencast</id>
     <content type="html"><![CDATA[<p>This afternoon I had the time to finally watch the &ldquo;PeepCode&rdquo;:<a href="http://peepcode.com/">http://peepcode.com/</a> &ldquo;Meet MacRuby&rdquo;:<a href="http://peepcode.com/products/meet-macruby">http://peepcode.com/products/meet-macruby</a> screencast.</p>
 
 <p>In case you don&rsquo;t know &ldquo;MacRuby&rdquo;:<a href="http://www.macruby.com/,">http://www.macruby.com/,</a> it&rsquo;s a Ruby interpreter sitting on top of &ldquo;Objective-C&rdquo;:<a href="http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/">http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/</a> and OS X core technologies (see also &ldquo;here&rdquo;:<a href="http://citizen428.net/archives/365-Ruby-implementations-and-why-we-should-care.html">http://citizen428.net/archives/365-Ruby-implementations-and-why-we-should-care.html</a>).</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: rubylearning | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/rubylearning/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/rubylearning/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[What's new pussycat?]]></title>
-    <link href="http://www.citizen428.net/blog/2009/10/06/whats-new-pussycat/"/>
+    <link href="http://citizen428.github.io/blog/2009/10/06/whats-new-pussycat/"/>
     <updated>2009-10-06T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/10/06/whats-new-pussycat</id>
+    <id>http://citizen428.github.io/blog/2009/10/06/whats-new-pussycat</id>
     <content type="html"><![CDATA[<p>Quite a bit actually:<ul>
 <li>I live in Vienna again. Seriously.</li>
 <li>I started my new job as IT systems engineer at <a href="http://www.nessus.at/">Nessus</a>. <b>Update</b>: That was October. In November I changed job and now work for <a href="http://matrixware.com">Matrixware</a> </li>
@@ -30,9 +30,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: The Well-Grounded Rubyist (Manning Publications)]]></title>
-    <link href="http://www.citizen428.net/blog/2009/06/09/review-the-well-grounded-rubyist-manning-publications/"/>
+    <link href="http://citizen428.github.io/blog/2009/06/09/review-the-well-grounded-rubyist-manning-publications/"/>
     <updated>2009-06-09T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/06/09/review-the-well-grounded-rubyist-manning-publications</id>
+    <id>http://citizen428.github.io/blog/2009/06/09/review-the-well-grounded-rubyist-manning-publications</id>
     <content type="html"><![CDATA[<p>As part of &ldquo;Rubylearning&rsquo;s&rdquo;:<a href="http://www.rubylearning.org/class/">http://www.rubylearning.org/class/</a> &ldquo;current book promotion&rdquo;:<a href="http://rubylearning.com/blog/2009/05/29/book-promotion-the-well-grounded-rubyist/">http://rubylearning.com/blog/2009/05/29/book-promotion-the-well-grounded-rubyist/</a> I&rsquo;m reading &ldquo;The Well-Grounded Rubyist&rdquo;:<a href="http://www.manning.com/black2/">http://www.manning.com/black2/</a> by David A. Black. Here are my thoughts on the book:</p>
 
 <p>If you are new to Ruby, this may very well be the book you are looking for, since the author was really serious about the &ldquo;well-grounded&rdquo; in the title. Together the first six chapters form Part 1, aptly called &ldquo;Ruby Foundations&rdquo;. Here you&rsquo;ll learn about objects, modules, classes, self and control-flow techniques. Although this part may not be the most interesting for more experienced Rubyists, it&rsquo;s certainly well-written and manages to present a lot of very fundamental Ruby right at the beginning. True, at first I was a bit surprised to see that singleton methods were - implicitly - introduced before classes, but when you follow the author&rsquo;s logic, it all makes a lot of sense. What I really like about this approach is that it exposes the reader to concepts needed for some quite advanced Ruby coding right away, and in a very light-hearted and &ldquo;natural&rdquo; manner. Well done!</p>
@@ -47,9 +47,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: Ruby in Practice (Manning Publications)]]></title>
-    <link href="http://www.citizen428.net/blog/2009/05/18/review-ruby-in-practice-manning-publications/"/>
+    <link href="http://citizen428.github.io/blog/2009/05/18/review-ruby-in-practice-manning-publications/"/>
     <updated>2009-05-18T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/05/18/review-ruby-in-practice-manning-publications</id>
+    <id>http://citizen428.github.io/blog/2009/05/18/review-ruby-in-practice-manning-publications</id>
     <content type="html"><![CDATA[<p>I read &ldquo;Ruby in Practice&rdquo;:<a href="http://www.manning.com/mcanally/">http://www.manning.com/mcanally/</a> for the &ldquo;upcoming book promotion&rdquo;:<a href="http://rubylearning.com/blog/2009/05/12/book-promotion-ruby-in-practice/">http://rubylearning.com/blog/2009/05/12/book-promotion-ruby-in-practice/</a> on &ldquo;RubyLearning&rdquo;:<a href="http://www.rubylearning.org,">http://www.rubylearning.org,</a> and I have to say it&rsquo;s a pretty neat book which will be well worth your time and money. Over the course of 360 pages Jeremy McAnally and Assaf Arkin tackle lots of different topics of interest to developers. The book is structured in 3 main parts:</p>
 
 <ul>
@@ -67,9 +67,9 @@
   
   <entry>
     <title type="html"><![CDATA[A TextMate command for the RubyLearning forums]]></title>
-    <link href="http://www.citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/"/>
+    <link href="http://citizen428.github.io/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/"/>
     <updated>2009-05-10T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums</id>
+    <id>http://citizen428.github.io/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums</id>
     <content type="html"><![CDATA[<p>As we all know posting code to &ldquo;Moodle&rdquo;:<a href="http://moodle.org/">http://moodle.org/</a> (the software that powers &ldquo;RubyLearning&rdquo;:<a href="http://rubylearning.org">http://rubylearning.org</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
 
 <ul>
@@ -92,9 +92,9 @@
   
   <entry>
     <title type="html"><![CDATA[My way: Ruby, Sinatra, Heroku]]></title>
-    <link href="http://www.citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku/"/>
+    <link href="http://citizen428.github.io/blog/2009/03/25/my-way-ruby-sinatra-heroku/"/>
     <updated>2009-03-25T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/03/25/my-way-ruby-sinatra-heroku</id>
+    <id>http://citizen428.github.io/blog/2009/03/25/my-way-ruby-sinatra-heroku</id>
     <content type="html"><![CDATA[<p>&ldquo;RubyLearning&rdquo;:<a href="http://rubylearning.org">http://rubylearning.org</a> just had a nice one week introductory course on &ldquo;Sinatra&rdquo;:<a href="http://www.sinatrarb.com/,">http://www.sinatrarb.com/,</a> a &ldquo;DSL&rdquo;:<a href="http://en.wikipedia.org/wiki/Domain-specific_programming_language">http://en.wikipedia.org/wiki/Domain-specific_programming_language</a> for easily creating web applications. The next batch will start on May 2nd (and I&rsquo;ll probably be around as a mentor again), you can &ldquo;join here&rdquo;:<a href="http://rubylearning.org/class/course/enrol.php?id=32">http://rubylearning.org/class/course/enrol.php?id=32</a> if you are interested.</p>
 
 <p>Anyway, since it&rsquo;s so easy to write applications with Sinatra, you probably don&rsquo;t want to waste time deploying them. That&rsquo;s where &ldquo;Heroku&rdquo;:<a href="http://heroku.com/">http://heroku.com/</a> comes into play, a Ruby hosting platform which modeled it&rsquo;s workflow around &ldquo;git&rdquo;:<a href="http://git-scm.com/.">http://git-scm.com/.</a> In my - still somewhat limited - experience working with Heroku is painless and feels very natural, kudos to the team for providing us with such a nice option for hosting &ldquo;Rack&rdquo;:<a href="http://rack.rubyforge.org/">http://rack.rubyforge.org/</a> based apps! In fact I liked Heroku so much, that I wrote a patch for <a href="http://quirkey.com/">Aaron Quint</a>&rsquo;s &ldquo;sinatra-gen&rdquo;:<a href="http://github.com/quirkey/sinatra-gen/tree/master">http://github.com/quirkey/sinatra-gen/tree/master</a> which will initialize git and create your app on Heroku for you. It&rsquo;s not in the main branch yet, but Aaron said he likes the idea and that he will include it. Up until then you can get my version from &ldquo;here&rdquo;:<a href="http://github.com/citizen428/sinatra-gen/tree/master.">http://github.com/citizen428/sinatra-gen/tree/master.</a></p>

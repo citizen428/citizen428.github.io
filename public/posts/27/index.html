@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Kohl">
 
   
-  <meta name="description" content="Step 1: Download Fluid, an awesome little application to create site specific browsers. Step 2: Find some online API documentation. For Ruby I &hellip;">
+  <meta name="description" content="I read Ruby in Practice for the upcoming book promotion on RubyLearning, and I have to say it&#8217;s a pretty neat book which will be well worth &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.citizen428.net/posts/27">
+  <link rel="canonical" href="http://citizen428.github.io/posts/27">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
@@ -63,7 +63,7 @@
   
 <form action="https://www.google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:www.citizen428.net" />
+    <input type="hidden" name="q" value="site:citizen428.github.io" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -83,6 +83,47 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/18/review-ruby-in-practice-manning-publications/">Review: Ruby in Practice (Manning Publications)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-18T00:00:00+07:00" pubdate data-updated="true">May 18<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I read <a href="http://www.manning.com/mcanally/">Ruby in Practice</a> for the <a href="http://rubylearning.com/blog/2009/05/12/book-promotion-ruby-in-practice/">upcoming book promotion</a> on <a href="http://www.rubylearning.org">RubyLearning</a>, and I have to say it&#8217;s a pretty neat book which will be well worth your time and money. Over the course of 360 pages Jeremy McAnally and Assaf Arkin tackle lots of different topics of interest to developers. The book is structured in 3 main parts:</p>
+<ul>
+<li>Ruby techniques: Gives a general introduction to Ruby&#8217;s strength (which sometimes reads as a bit of a sales pitch), <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development"><span class="caps">BDD</span></a> and <a href="http://en.wikipedia.org/wiki/Test-driven_development"><span class="caps">TDD</span></a>, as well as scripting with Ruby (including <a href="http://en.wikipedia.org/wiki/Object_Linking_and_Embedding"><span class="caps">OLE</span></a> and <a href="http://en.wikipedia.org/wiki/AppleScript"><span class="caps">OSA</span></a>).</li>
+<li>Integration and communication: This part covers Rails, web services in general (<span class="caps">HTTP</span>, <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer"><span class="caps">REST</span></a>, <a href="http://en.wikipedia.org/wiki/SOAP_(protocol)"><span class="caps">SOAP</span></a>), automating communication with email and IM, asynchronous messaging and deployment options.</li>
+<li>Data and document techniques: This part talks about databases, structured text, authentication, searching, indexing and document processing.</li>
+</ul>
+<p>Chapters usually present the reader with a problem, then show an example solution which usually makes good use of existing libraries and then finish with further discussion on the topic (alternative ways to implement it, pitfalls in using the shown solution in &#8220;real life&#8221; scenarios etc.). For people with previous knowledge of Ruby this book is a good read, which shows how the dynamic nature of the language combined with the quite big amount of readily available libraries enable developers to quickly and efficiently find solutions to common problems. I sometimes do have minor quirks with some of the code, but that&#8217;s just personal preferences and being nitpicky. All in all it&#8217;s a very solid book which I enjoy quite a lot.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -542,44 +583,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/03/25/my-way-ruby-sinatra-heroku/">My Way: Ruby, Sinatra, Heroku</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-25T00:00:00+07:00" pubdate data-updated="true">Mar 25<sup>th</sup>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://rubylearning.org">RubyLearning</a> just had a nice one week introductory course on <a href="http://www.sinatrarb.com/">Sinatra</a>, a <a href="http://en.wikipedia.org/wiki/Domain-specific_programming_language"><span class="caps">DSL</span></a> for easily creating web applications. The next batch will start on May 2nd (and I&#8217;ll probably be around as a mentor again), you can <a href="http://rubylearning.org/class/course/enrol.php?id=32">join here</a> if you are interested.</p>
-<p>Anyway, since it&#8217;s so easy to write applications with Sinatra, you probably don&#8217;t want to waste time deploying them. That&#8217;s where <a href="http://heroku.com/">Heroku</a> comes into play, a Ruby hosting platform which modeled it&#8217;s workflow around <a href="http://git-scm.com/">git</a>. In my &#8211; still somewhat limited &#8211; experience working with Heroku is painless and feels very natural, kudos to the team for providing us with such a nice option for hosting <a href="http://rack.rubyforge.org/">Rack</a> based apps! In fact I liked Heroku so much, that I wrote a patch for <a href="http://quirkey.com/">Aaron Quint</a>&#8216;s <a href="http://github.com/quirkey/sinatra-gen/tree/master">sinatra-gen</a> which will initialize git and create your app on Heroku for you. It&#8217;s not in the main branch yet, but Aaron said he likes the idea and that he will include it. Up until then you can get my version from <a href="http://github.com/citizen428/sinatra-gen/tree/master">here</a>.</p>
-<p><em>Update: Said patch &#8211; in slightly modified form &#8211; is now part of mainline sinatra-gen, so I recommend getting the &#8220;official&#8221; version, not mine.</em></p>
-<p>Oh yeah, once you are done creating all this shiny new webapps in Sinatra, don&#8217;t forget to take some snapshots of them with <a href="http://github.com/jurisgalang/snapurl/tree/master">snapurl</a>, another nifty little app I recently wrote a small patch for.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/28">&larr; Older</a>
@@ -612,6 +615,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/07/12/information-overload-2015-07-12/">Information Overload 2015-07-12</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
       </li>
     
@@ -625,10 +632,6 @@
     
       <li class="post">
         <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/04/05/information-overload-2015-04-05/">Information Overload 2015-04-05</a>
       </li>
     
   </ul>
@@ -687,7 +690,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Michael Kohl -
+  Copyright &copy; 2016 - Michael Kohl -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

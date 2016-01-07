@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: gpg | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/gpg/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/gpg/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Pimp my Mail.app!]]></title>
-    <link href="http://www.citizen428.net/blog/2006/08/07/pimp-my-mail-app/"/>
+    <link href="http://citizen428.github.io/blog/2006/08/07/pimp-my-mail-app/"/>
     <updated>2006-08-07T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/08/07/pimp-my-mail-app</id>
+    <id>http://citizen428.github.io/blog/2006/08/07/pimp-my-mail-app</id>
     <content type="html"><![CDATA[<p>I always found Apple&rsquo;s &ldquo;Mail.app&rdquo;:<a href="http://www.apple.com/macosx/features/mail/">http://www.apple.com/macosx/features/mail/</a> in its Tiger incarnation be a really neat MUA because of the nice interface and the good spam filter it offers. Unfortunately it lacks a little when you have to deal with large amounts of mail or want to use some of the more advanced features other MUAs have to offer, so I started looking around for some plug-ins. I soon found &ldquo;Hawk Wings&rdquo;:<a href="http://www.hawkwings.net/,">http://www.hawkwings.net/,</a> a site dedicated entirely to &ldquo;Tips and add-ons to make Apple Mail even better&rdquo;.</p>
 
 <p>Here&rsquo;s a list of the plug-ins I&rsquo;m using so far:</p>

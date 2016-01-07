@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: it | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/it/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/it/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Go! Away! Please!]]></title>
-    <link href="http://www.citizen428.net/blog/2006/05/02/go-away-please/"/>
+    <link href="http://citizen428.github.io/blog/2006/05/02/go-away-please/"/>
     <updated>2006-05-02T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/05/02/go-away-please</id>
+    <id>http://citizen428.github.io/blog/2006/05/02/go-away-please</id>
     <content type="html"><![CDATA[<p>Today when my girlfriend tried to log in to one of her favourite sites to download some music she paid for, her login credentials didn&rsquo;t work. When she wrote an email to the support team (after automatic retrieval of the login credentials and checking them for correctness of course), she received the following answer:</p>
 
 <p><i>
@@ -48,9 +48,9 @@ Hey Silvia, many systems cannot recognize symbols in passwords. Â We have upda
   
   <entry>
     <title type="html"><![CDATA[Why working in Business IT sucks]]></title>
-    <link href="http://www.citizen428.net/blog/2006/02/07/why-working-in-business-it-sucks/"/>
+    <link href="http://citizen428.github.io/blog/2006/02/07/why-working-in-business-it-sucks/"/>
     <updated>2006-02-07T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/02/07/why-working-in-business-it-sucks</id>
+    <id>http://citizen428.github.io/blog/2006/02/07/why-working-in-business-it-sucks</id>
     <content type="html"><![CDATA[<ol>
 <li><p>You&rsquo;ll turn into a bitter cynic. This in fact is probably the best thing about your job, which really  should make you think&hellip;</p></li>
 <li><p>Only wackos and smartasses work in this field. Depending on which group you belong to, this might even be fun. More often though you&rsquo;re screwed.</p></li>

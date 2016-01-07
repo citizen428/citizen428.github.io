@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/ruby/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[VCR case woes]]></title>
-    <link href="http://www.citizen428.net/blog/2014/05/08/vcr/"/>
+    <link href="http://citizen428.github.io/blog/2014/05/08/vcr/"/>
     <updated>2014-05-08T22:32:55+07:00</updated>
-    <id>http://www.citizen428.net/blog/2014/05/08/vcr</id>
+    <id>http://citizen428.github.io/blog/2014/05/08/vcr</id>
     <content type="html"><![CDATA[<p>Today I spent quite some time on a rather hard to track down problem. I had some specs using <a href="">VCR</a>, which worked perfectly locally, but just wouldn&rsquo;t run on <a href="https://circleci.com/">CircleCI</a>. In fact, it seemed like CircleCI didn&rsquo;t in fact use the VCR cassettes at all, but instead make a real API call, which failed because the necessary credentials weren&rsquo;t available in the environment (which was kinda the point of using VCR in the first place).</p>
 
 <p>Turns out the problem lay in the combination of using the VCR setting <code>configure_rspec_metadata!</code> and the option <code>core.ignorecase = true</code>, which is standard in newer versions of <a href="http://git-scm.com/">Git</a>. What happened was that at one point I changed the case of a word in a test description, which changes the auto-generated name of the folder VCR will create the cassette in. But since the folder name wasn&rsquo;t changed from git&rsquo;s perspective, I never realized that. So when the code was checked out on CircleCI, VCR encountered the spec with the metadata (<code>vcr: true</code>), but couldn&rsquo;t find the cassette since the checked out folder had the wrong case. It therefore proceeded to run the spec against the live API which failed.</p>
@@ -30,9 +30,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
-    <link href="http://www.citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
+    <link href="http://citizen428.github.io/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
     <updated>2012-07-30T23:24:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
+    <id>http://citizen428.github.io/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
     <content type="html"><![CDATA[<p>Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today&rsquo;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&rsquo;s an example:</p>
 
 <p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -85,9 +85,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
-    <link href="http://www.citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
+    <link href="http://citizen428.github.io/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
     <updated>2012-07-28T10:15:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
+    <id>http://citizen428.github.io/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
     <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
 
 <p>While I haven&rsquo;t received <a href="http://www.packtpub.com/ruby-and-mongodb-web-development-beginners-guide/book">the book</a> in its final form yet, I&rsquo;ve read all of it, and I can say that the author does a good job at introducing inexperienced programmers to web development with Ruby and MongoDB.</p>
@@ -102,9 +102,9 @@
   
   <entry>
     <title type="html"><![CDATA[Shenanigans]]></title>
-    <link href="http://www.citizen428.net/blog/2012/07/03/shenanigans/"/>
+    <link href="http://citizen428.github.io/blog/2012/07/03/shenanigans/"/>
     <updated>2012-07-03T19:46:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2012/07/03/shenanigans</id>
+    <id>http://citizen428.github.io/blog/2012/07/03/shenanigans</id>
     <content type="html"><![CDATA[<p>About 1.5 month ago I finally packaged some of my Ruby extension methods into the aptly named <a href="https://rubygems.org/gems/shenanigans">Shenanigans</a> gem. It&rsquo;s similar to <a href="http://rubyworks.github.com/facets/">Facets</a> or <a href="http://as.rubyonrails.org/">ActiveSupport</a>, but probably less useful to most people. Also some of the methods actually are in Facets, although sometimes with different names or slightly different semantics. Anyway, since some people told me they actually do like the gem, here&rsquo;s a quick summary of what the different methods do and how they can be useful.</p>
 
 <ul>
@@ -125,9 +125,9 @@
   
   <entry>
     <title type="html"><![CDATA[Rails — Display branch in development mode]]></title>
-    <link href="http://www.citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode/"/>
+    <link href="http://citizen428.github.io/blog/2012/06/12/rails-display-branch-in-development-mode/"/>
     <updated>2012-06-12T21:33:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2012/06/12/rails-display-branch-in-development-mode</id>
+    <id>http://citizen428.github.io/blog/2012/06/12/rails-display-branch-in-development-mode</id>
     <content type="html"><![CDATA[<p>At work we are building a Rails app that&rsquo;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it&rsquo;d be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn&rsquo;t have been any simpler:</p>
 
 <p><figure class='code'><figcaption><span>app/helpers/application_helper.rb </span></figcaption>

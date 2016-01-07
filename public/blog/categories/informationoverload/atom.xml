@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: informationoverload | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/informationoverload/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/informationoverload/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -14,10 +14,32 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Information Overload 2015-07-12]]></title>
+    <link href="http://citizen428.github.io/blog/2015/07/12/information-overload-2015-07-12/"/>
+    <updated>2015-07-12T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2015/07/12/information-overload-2015-07-12</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.bbc.co.uk/news/resources/idt-bc7d54e7-88f6-4026-9faa-2a36d3359bb0">The Ketamine Connection</a><br></li>
+<li><a href="http://www.theguardian.com/cities/2015/jul/07/urban-nap-stigma-snoozing-stay-awake-work">The art of the urban nap: let&rsquo;s lose the stigma of public snoozing</a><br></li>
+<li><a href="http://geekslop.com/2015/catching-pedophiles-running-secret-dark-web-tor-honeypot">14 days running a secret Dark Web pedophile honeypot</a><br>
+Interesting and deeply disturbing. Make sure to also read the comments.</li>
+<li><a href="https://www.newscientist.com/article/dn27846-tetris-blocks-traumatic-flashbacks-even-after-the-memory-is-fixed">Tetris blocks traumatic flashbacks even after the memory is fixed</a><br></li>
+<li><a href="http://asiancorrespondent.com/134144/gang-wars-tackling-thailands-vocational-college-violence/">Gang wars: Tackling Thailand’s vocational college violence</a><br></li>
+<li><a href="http://www.aljazeera.com/indepth/features/2015/07/magazine-life-death-thai-myanmar-border-150729082944988.html">Magazine: Life and death along the Thai-Myanmar border</a><br></li>
+<li><a href="http://jack.ventures/inner-mongolia-2014/"></a><br></li>
+<li><a href=""></a><br></li>
+<li><a href=""></a><br></li>
+<li><a href=""></a><br></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Information Overload 2015-07-06]]></title>
-    <link href="http://www.citizen428.net/blog/2015/07/06/information-overload-2015-07-06/"/>
+    <link href="http://citizen428.github.io/blog/2015/07/06/information-overload-2015-07-06/"/>
     <updated>2015-07-06T15:10:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/07/06/information-overload-2015-07-06</id>
+    <id>http://citizen428.github.io/blog/2015/07/06/information-overload-2015-07-06</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://jdh.hamkins.org/math-for-eight-year-olds/">Math for eight-year-olds: graph theory for kids!</a><br>
 This is a great example of how to present math to children!</li>
@@ -46,9 +68,9 @@ I may not agree with everything, but it&rsquo;s a good read.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-06-07]]></title>
-    <link href="http://www.citizen428.net/blog/2015/06/07/information-overload-2015-06-07/"/>
+    <link href="http://citizen428.github.io/blog/2015/06/07/information-overload-2015-06-07/"/>
     <updated>2015-06-07T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/06/07/information-overload-2015-06-07</id>
+    <id>http://citizen428.github.io/blog/2015/06/07/information-overload-2015-06-07</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.theguardian.com/world/2015/jun/01/rent-cap-legislation-in-force-berlin-germany">Berlin becomes first German city to make rent cap a reality</a><br></li>
 <li><a href="http://www.news.com.au/technology/science/aussie-student-proves-existence-of-plasma-tubes-floating-above-earth/story-fnjwlcze-1227379756018">Aussie student proves existence of plasma tubes floating above Earth</a><br></li>
@@ -67,9 +89,9 @@ I may not agree with everything, but it&rsquo;s a good read.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-06-01]]></title>
-    <link href="http://www.citizen428.net/blog/2015/06/01/information-overload-2015-06-01/"/>
+    <link href="http://citizen428.github.io/blog/2015/06/01/information-overload-2015-06-01/"/>
     <updated>2015-06-01T18:15:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/06/01/information-overload-2015-06-01</id>
+    <id>http://citizen428.github.io/blog/2015/06/01/information-overload-2015-06-01</id>
     <content type="html"><![CDATA[<p>Since I won&rsquo;t manage to publish a new issue of Information Overload every Sunday, from now I&rsquo;ll adopt a &ldquo;whenever I feel like it&rdquo; schedule.</p>
 
 <ul>
@@ -99,9 +121,9 @@ While this won&rsquo;t solve the problem, it&rsquo;s a good first step.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-05-10]]></title>
-    <link href="http://www.citizen428.net/blog/2015/05/10/information-overload-2015-04-26/"/>
+    <link href="http://citizen428.github.io/blog/2015/05/10/information-overload-2015-04-26/"/>
     <updated>2015-05-10T12:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/05/10/information-overload-2015-04-26</id>
+    <id>http://citizen428.github.io/blog/2015/05/10/information-overload-2015-04-26</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.washingtonpost.com/posteverything/wp/2014/12/30/google-got-it-wrong-the-open-office-trend-is-destroying-the-workplace/">Google got it wrong. The open-office trend is destroying the workplace.</a><br>
 I agree with a lot of the points mentioned in this article.</li>
@@ -123,37 +145,6 @@ The Silicon Valley really seems be believe that every problem can be solved with
 This very bizarre story would make a very interesting movie.</li>
 <li><a href="http://www.zeit.de/feature/wladimir-putin-mutter">Vera Putinas verlorener Sohn</a><br>
 An interesting story about Vladimir Putin&rsquo;s alleged real origins (in German, also available in <a href="http://www.zeit.de/feature/vladimir-putin-mother">English</a>).</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2015-04-05]]></title>
-    <link href="http://www.citizen428.net/blog/2015/04/05/information-overload-2015-04-05/"/>
-    <updated>2015-04-05T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/04/05/information-overload-2015-04-05</id>
-    <content type="html"><![CDATA[<p>With a slight delay&hellip;</p>
-
-<ul>
-<li><a href="http://www.netresec.com/?page=Blog&amp;month=2015-03&amp;post=China%27s-Man-on-the-Side-Attack-on-GitHub">China&rsquo;s Man-on-the-Side Attack on GitHub</a><br>
-Using censorship infrastructure for DDoS attacks. More information: <a href="http://blog.erratasec.com/2015/04/pin-pointing-chinas-attack-against.html">Pin-pointing China&rsquo;s attack against GitHub</a></li>
-<li><a href="http://roarmag.org/2015/04/zapatistas-rojava-anarchist-revolution/">Mr. Anarchist, we need to have a chat about colonialism</a><br>
-Interesting read and a good reminder to look for bias in your own arguments/assesments.</li>
-<li><a href="https://medium.com/@fogleman/i-made-an-nes-emulator-here-s-what-i-learned-about-the-original-nintendo-2e078c9b28fe">I made an NES emulator. Here’s what I learned about the original Nintendo.</a><br>
-For retro nerds.</li>
-<li><a href="http://saigoneer.com/saigon-culture/4158-incredibly-detailed-map-shows-se-asia-s-amazing-diversity">Incredibly Detailed Map Shows SE Asia&rsquo;s Amazing Diversity</a><br>
-I love maps and am very interested in SEA, so this is very fascinating.</li>
-<li><a href="http://www.theatlantic.com/international/archive/2015/04/iran-has-been-two-years-away-from-a-nuclear-bomb-since-the-1980s/389333/">Iran&rsquo;s Been Two Years Away From a Nuclear Weapon for Three Decades</a><br>
-The poignant title says it all.</li>
-<li><a href="http://www.dhakatribune.com/op-ed/2015/apr/04/tragedy-maldives">Tragedy in the Maldives</a><br>
-On the exploitation and mistreatment of Bangladeshi migrant workers in the Maldives.</li>
-<li><a href="http://www.sueddeutsche.de/gesundheit/unglueckliche-muetter-sie-wollen-ihr-leben-zurueck-1.2419449">Sie wollen ihr Leben zurück</a><br>
-Not all women are happy to be mothers (in German).</li>
-<li><a href="http://money.cnn.com/2015/03/30/news/hong-kong-mtr-subway-property/">How Hong Kong&rsquo;s subway turns a $2 billion annual profit</a><br>
-Maybe they should use the money they make from property development to subsidize transport.</li>
-<li><a href="http://www.peoplesworld.org/fascists-at-the-gate-in-greece/">Fascists at the gate in Greece</a>
-It&rsquo;s always scary to see institutionalized fascism.</li>
 </ul>
 
 ]]></content>

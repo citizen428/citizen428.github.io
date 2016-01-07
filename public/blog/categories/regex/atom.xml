@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: regex | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/regex/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/regex/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[RegEx madness]]></title>
-    <link href="http://www.citizen428.net/blog/2007/04/05/regex-madness/"/>
+    <link href="http://citizen428.github.io/blog/2007/04/05/regex-madness/"/>
     <updated>2007-04-05T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2007/04/05/regex-madness</id>
+    <id>http://citizen428.github.io/blog/2007/04/05/regex-madness</id>
     <content type="html"><![CDATA[<p>Today at work we needed to find a regular expression to extract the name of a backup job from an SNMP trap. The trap looks as follows:</p>
 
 <p>&ldquo;[beginning garbage]job name[more garbage]&rdquo;</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: elixir | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/elixir/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/elixir/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: Programming Elixir]]></title>
-    <link href="http://www.citizen428.net/blog/2015/03/13/review-programming-elixir/"/>
+    <link href="http://citizen428.github.io/blog/2015/03/13/review-programming-elixir/"/>
     <updated>2015-03-13T22:32:51+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/03/13/review-programming-elixir</id>
+    <id>http://citizen428.github.io/blog/2015/03/13/review-programming-elixir</id>
     <content type="html"><![CDATA[<p><em><strong>Disclaimer</strong>: The good folks at <a href="https://pragprog.com/">The Pragmatic Bookshelf</a> were nice enough to provide me with a free copy of this book, but this has no influence on the contents of the review.</em></p>
 
 <p>My first contact with Dave Thomas was the famous &ldquo;<a href="https://pragprog.com/book/ruby/programming-ruby">Pickaxe book</a>&rdquo; for Ruby. It wasn&rsquo;t my first contact with the language, but it certainly helped in deepening my understanding of it. It&rsquo;s a great book, and I went back numerous times to re-read certain chapters. I already had a crush on Ruby, but &ldquo;the Pickaxe&rdquo; helped turning that into a solid and lasting love affair.</p>

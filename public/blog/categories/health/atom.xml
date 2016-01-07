@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: health | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/health/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/health/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-06-07]]></title>
-    <link href="http://www.citizen428.net/blog/2015/06/07/information-overload-2015-06-07/"/>
+    <link href="http://citizen428.github.io/blog/2015/06/07/information-overload-2015-06-07/"/>
     <updated>2015-06-07T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/06/07/information-overload-2015-06-07</id>
+    <id>http://citizen428.github.io/blog/2015/06/07/information-overload-2015-06-07</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.theguardian.com/world/2015/jun/01/rent-cap-legislation-in-force-berlin-germany">Berlin becomes first German city to make rent cap a reality</a><br></li>
 <li><a href="http://www.news.com.au/technology/science/aussie-student-proves-existence-of-plasma-tubes-floating-above-earth/story-fnjwlcze-1227379756018">Aussie student proves existence of plasma tubes floating above Earth</a><br></li>
@@ -36,9 +36,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-05-01]]></title>
-    <link href="http://www.citizen428.net/blog/2011/05/01/information-overload-2011-05-01/"/>
+    <link href="http://citizen428.github.io/blog/2011/05/01/information-overload-2011-05-01/"/>
     <updated>2011-05-01T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/05/01/information-overload-2011-05-01</id>
+    <id>http://citizen428.github.io/blog/2011/05/01/information-overload-2011-05-01</id>
     <content type="html"><![CDATA[<ul>
 <li>&#8220;Solar power goes viral&#8221;:http://web.mit.edu/newsoffice/2011/solar-virus-0425.html<br>A genetically modified virus increases the efficiency of solar cells.</li>
 <li>&#8220;Digging Deeper&#8221;:http://ajr.org/Article.asp?id=5078<br>In a time where it seems like a lot of journalists just seem to copy whatever they find online, it&#8217;s refreshing when a journalist from a small newspaper - who above all is a science and data geek - wins a Pulitzer Price.</li>
@@ -57,9 +57,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2010-09-26]]></title>
-    <link href="http://www.citizen428.net/blog/2010/09/26/information-overload-2010-09-26/"/>
+    <link href="http://citizen428.github.io/blog/2010/09/26/information-overload-2010-09-26/"/>
     <updated>2010-09-26T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/09/26/information-overload-2010-09-26</id>
+    <id>http://citizen428.github.io/blog/2010/09/26/information-overload-2010-09-26</id>
     <content type="html"><![CDATA[<p>Being sick this week I had a lot of time to read, but most if it went into Bruce Sterling&rsquo;s &ldquo;Hacker Crackdown&rdquo;:<a href="http://www.mit.edu/hacker/hacker.html">http://www.mit.edu/hacker/hacker.html</a> and Joe Dunthorne&rsquo;s &ldquo;Submarine&rdquo;:<a href="http://www.amazon.com/Submarine-Joe-Dunthorne/dp/0241143969.">http://www.amazon.com/Submarine-Joe-Dunthorne/dp/0241143969.</a> Anyway, here we go:</p>
 
 <ul>

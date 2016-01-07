@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: books | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/books/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/books/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-06-07]]></title>
-    <link href="http://www.citizen428.net/blog/2015/06/07/information-overload-2015-06-07/"/>
+    <link href="http://citizen428.github.io/blog/2015/06/07/information-overload-2015-06-07/"/>
     <updated>2015-06-07T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/06/07/information-overload-2015-06-07</id>
+    <id>http://citizen428.github.io/blog/2015/06/07/information-overload-2015-06-07</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.theguardian.com/world/2015/jun/01/rent-cap-legislation-in-force-berlin-germany">Berlin becomes first German city to make rent cap a reality</a><br></li>
 <li><a href="http://www.news.com.au/technology/science/aussie-student-proves-existence-of-plasma-tubes-floating-above-earth/story-fnjwlcze-1227379756018">Aussie student proves existence of plasma tubes floating above Earth</a><br></li>
@@ -36,9 +36,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: Programming Elixir]]></title>
-    <link href="http://www.citizen428.net/blog/2015/03/13/review-programming-elixir/"/>
+    <link href="http://citizen428.github.io/blog/2015/03/13/review-programming-elixir/"/>
     <updated>2015-03-13T22:32:51+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/03/13/review-programming-elixir</id>
+    <id>http://citizen428.github.io/blog/2015/03/13/review-programming-elixir</id>
     <content type="html"><![CDATA[<p><em><strong>Disclaimer</strong>: The good folks at <a href="https://pragprog.com/">The Pragmatic Bookshelf</a> were nice enough to provide me with a free copy of this book, but this has no influence on the contents of the review.</em></p>
 
 <p>My first contact with Dave Thomas was the famous &ldquo;<a href="https://pragprog.com/book/ruby/programming-ruby">Pickaxe book</a>&rdquo; for Ruby. It wasn&rsquo;t my first contact with the language, but it certainly helped in deepening my understanding of it. It&rsquo;s a great book, and I went back numerous times to re-read certain chapters. I already had a crush on Ruby, but &ldquo;the Pickaxe&rdquo; helped turning that into a solid and lasting love affair.</p>
@@ -63,9 +63,9 @@
   
   <entry>
     <title type="html"><![CDATA[2014 Reading List]]></title>
-    <link href="http://www.citizen428.net/blog/2015/01/06/2014-reading-list/"/>
+    <link href="http://citizen428.github.io/blog/2015/01/06/2014-reading-list/"/>
     <updated>2015-01-06T11:38:10+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/01/06/2014-reading-list</id>
+    <id>http://citizen428.github.io/blog/2015/01/06/2014-reading-list</id>
     <content type="html"><![CDATA[<p>Here&rsquo;s my annual reading list post. 2014 saw me read less than I wanted to, but exploring my new hometown (Bangkok) and learning Thai used up a lot of my free time. That said I still managed to get in a decent amount of books, caught up on more comics and added a 4th language (Thai) to my reading, although so far that&rsquo;s been limited to children&rsquo;s books.</p>
 
 <h2>Books:</h2>
@@ -174,9 +174,9 @@
   
   <entry>
     <title type="html"><![CDATA[2013 reading list]]></title>
-    <link href="http://www.citizen428.net/blog/2014/01/01/2013-reading-list/"/>
+    <link href="http://citizen428.github.io/blog/2014/01/01/2013-reading-list/"/>
     <updated>2014-01-01T16:52:04+07:00</updated>
-    <id>http://www.citizen428.net/blog/2014/01/01/2013-reading-list</id>
+    <id>http://citizen428.github.io/blog/2014/01/01/2013-reading-list</id>
     <content type="html"><![CDATA[<p>Same post as every year, here are the book I read last year. However, this time around there are several novelties: first off, my Spanish got good enough to actually read books, so there are 3 languages now (English, German, Spanish). Also my Kindle Fire allowed me to get back into comics, so I (re-)read a lot of the classics and great stuff I missed out on over the years. Last but not least this is also the year where I started listening to audiobooks, mostly because they are really practical on long bus journeys because they keep you occupied but you can still enjoy the landscape.</p>
 
 <p>The links are affiliate links by the way, I have to finance my reading habit somehow ;-)</p>
@@ -309,9 +309,9 @@ Eduardo Mendoza (Spanish)</li>
   
   <entry>
     <title type="html"><![CDATA[My Kindle Fire and I]]></title>
-    <link href="http://www.citizen428.net/blog/2013/06/07/my-kindle-fire-and-i/"/>
+    <link href="http://citizen428.github.io/blog/2013/06/07/my-kindle-fire-and-i/"/>
     <updated>2013-06-07T16:52:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2013/06/07/my-kindle-fire-and-i</id>
+    <id>http://citizen428.github.io/blog/2013/06/07/my-kindle-fire-and-i</id>
     <content type="html"><![CDATA[<p>Back in October I broke my trusty old <a href="http://www.amazon.com/gp/product/B004HZYA6E/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004HZYA6E&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Keyboard</a>, a rather
 annoying thing to happen at the beginning of a long trip. As a
 workaround I started to use the Kindle app on my iPod Touch, and while

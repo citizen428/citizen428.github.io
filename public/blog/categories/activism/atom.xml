@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: activism | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/activism/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/activism/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2010-10-02]]></title>
-    <link href="http://www.citizen428.net/blog/2010/10/03/information-overload-2010-10-02/"/>
+    <link href="http://citizen428.github.io/blog/2010/10/03/information-overload-2010-10-02/"/>
     <updated>2010-10-03T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/10/03/information-overload-2010-10-02</id>
+    <id>http://citizen428.github.io/blog/2010/10/03/information-overload-2010-10-02</id>
     <content type="html"><![CDATA[<p>On a weekend trip again, but managed to squeeze in quite a bit of reading during the week.</p>
 
 <ul>

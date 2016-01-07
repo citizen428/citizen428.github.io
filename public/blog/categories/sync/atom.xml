@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: sync | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/sync/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/sync/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Two nice little helpers]]></title>
-    <link href="http://www.citizen428.net/blog/2007/06/17/two-nice-little-helpers/"/>
+    <link href="http://citizen428.github.io/blog/2007/06/17/two-nice-little-helpers/"/>
     <updated>2007-06-17T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2007/06/17/two-nice-little-helpers</id>
+    <id>http://citizen428.github.io/blog/2007/06/17/two-nice-little-helpers</id>
     <content type="html"><![CDATA[<p>&ldquo;Mozy Online Backup: Mac Mozy&rdquo;:<a href="https://mozy.com/mozy/macmozy">https://mozy.com/mozy/macmozy</a>
 Been using this for around 2 weeks now, really sweet! If you want to sign up, please use this &ldquo;referal link&rdquo;:<a href="https://mozy.com/?ref=ABK655">https://mozy.com/?ref=ABK655</a> which gives both of us more space (of course this also works when you&rsquo;re going to sign up to use the Windows version).</p>
 

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: nitro | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/nitro/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/nitro/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[So what's the word? RUBY!]]></title>
-    <link href="http://www.citizen428.net/blog/2005/11/18/so-whats-the-word-ruby/"/>
+    <link href="http://citizen428.github.io/blog/2005/11/18/so-whats-the-word-ruby/"/>
     <updated>2005-11-18T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2005/11/18/so-whats-the-word-ruby</id>
+    <id>http://citizen428.github.io/blog/2005/11/18/so-whats-the-word-ruby</id>
     <content type="html"><![CDATA[<p>This week I finally had a little more time to work on Gentoo related things again, so I commited some overdue packages to the tree.</p>
 
 <p>The action started on Tuesday, when I commited the 20+ ebuilds from &ldquo;ruby-gnome-0.14.1&rdquo;:<a href="http://ruby-gnome2.sourceforge.jp/">http://ruby-gnome2.sourceforge.jp/</a> (mostly version bumps plus a few new packages like &ldquo;ruby-gtkmozembed&rdquo;:<a href="http://ruby-gnome2.sourceforge.jp/hiki.cgi?RubyZilla">http://ruby-gnome2.sourceforge.jp/hiki.cgi?RubyZilla</a>). Quite a lot of users have been waiting for this, as the previous version we had in the tree (0.12.0) didn&rsquo;t play nicely with GTK+ 2.8/GNOME 2.12. This problems are now sorted, so that quite a few bugs could be closed and marked fixed. :)</p>
@@ -32,9 +32,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ruby: All your web are belong to us]]></title>
-    <link href="http://www.citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us/"/>
+    <link href="http://citizen428.github.io/blog/2005/11/06/ruby-all-your-web-are-belong-to-us/"/>
     <updated>2005-11-06T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2005/11/06/ruby-all-your-web-are-belong-to-us</id>
+    <id>http://citizen428.github.io/blog/2005/11/06/ruby-all-your-web-are-belong-to-us</id>
     <content type="html"><![CDATA[<p>When it comes to Ruby, I&rsquo;ve recently mostly been blogging about &ldquo;Nitro&rdquo;:<a href="http://www.nitrohq.com/,">http://www.nitrohq.com/,</a> which I think will be a really great framework for writing web applications once it matures a little more. For the next version (0.25.0) the developers plan to concentrate on bug fixing, code cleanup and refactoring, as well as documentation. The current development version - which following my suggestion is now called Glycerin - can be fetched from a &ldquo;Darcs repository&rdquo;:<a href="http://repo.nitrohq.com/,">http://repo.nitrohq.com/,</a> so there shouldn&rsquo;t be anything stopping you from valuable contributions! ;)</p>
 
 <p>Ok, after my usual Nitro evangelism, it&rsquo;s time to finally talk about the other excellent web framework Ruby has to offer: &ldquo;Ruby on Rails&rdquo;:<a href="http://www.rubyonrails.com/.">http://www.rubyonrails.com/.</a> I haven&rsquo;t used it for quite some time now, but when I got bored a few days ago, I decided to once again start playing around with it. I&rsquo;ve done some googling and found some nice articles, so here&rsquo;s my suggested reading list for the aspiring Rails programmer (please note that this list doesn&rsquo;t include docs from the official site, because they&rsquo;re easy enough to find):</p>
@@ -54,9 +54,9 @@
   
   <entry>
     <title type="html"><![CDATA[Look who's back...]]></title>
-    <link href="http://www.citizen428.net/blog/2005/10/29/look-whos-back/"/>
+    <link href="http://citizen428.github.io/blog/2005/10/29/look-whos-back/"/>
     <updated>2005-10-29T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2005/10/29/look-whos-back</id>
+    <id>http://citizen428.github.io/blog/2005/10/29/look-whos-back</id>
     <content type="html"><![CDATA[<p>Seems like I haven&rsquo;t had a post on Planet for quite some time now, which may have to do with he fact that I&rsquo;m &ldquo;officially away&rdquo;:<a href="http://dev.gentoo.org/devaway/">http://dev.gentoo.org/devaway/</a> in October&hellip; However, there are times when I just don&rsquo;t want to learn for that frigging exam, so here&rsquo;s a little status update on my Gentoo work:</p>
 
 <ul>

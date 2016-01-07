@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: polyglot | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/polyglot/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/polyglot/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Erlang bit syntax and ID3]]></title>
-    <link href="http://www.citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3/"/>
+    <link href="http://citizen428.github.io/blog/2010/09/04/erlang-bit-syntax-and-id3/"/>
     <updated>2010-09-04T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3</id>
+    <id>http://citizen428.github.io/blog/2010/09/04/erlang-bit-syntax-and-id3</id>
     <content type="html"><![CDATA[<p>A couple of days ago I finally started properly looking at <a href="http://www.erlang.org/">Erlang</a> for the first time. One aspect I find especially interesting is the <a href="http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html">bit syntax</a>, so I wrote a small program for parsing <a href="http://www.id3.org/ID3v1">ID3v1 tags</a> for practice. There’s definitely room for improvement (I ignored ID3v1.1), but it was a fun little exercise.
 Here’s the code:</p>
 
@@ -128,9 +128,9 @@ Here’s the code:</p>
   
   <entry>
     <title type="html"><![CDATA[Rewiring my brain: APL and J]]></title>
-    <link href="http://www.citizen428.net/blog/2010/08/16/rewiring-my-brain-apl-and-j/"/>
+    <link href="http://citizen428.github.io/blog/2010/08/16/rewiring-my-brain-apl-and-j/"/>
     <updated>2010-08-16T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/08/16/rewiring-my-brain-apl-and-j</id>
+    <id>http://citizen428.github.io/blog/2010/08/16/rewiring-my-brain-apl-and-j</id>
     <content type="html"><![CDATA[<p>&ldquo;<em>By relieving the brain of all unnecesary work, a good notation sets it free to concentrate on more advanced problems, and in effect increases the mental power of the race.</em>&rdquo; - &ldquo;A. N. Whitehead&rdquo;:<a href="http://en.wikipedia.org/wiki/Alfred_North_Whitehead">http://en.wikipedia.org/wiki/Alfred_North_Whitehead</a></p>
 
 <p>Yesterday &ldquo;Andreas&rdquo;:<a href="http://antifuchs.soup.io/">http://antifuchs.soup.io/</a> posted this awesome video of a <a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Game of Life</a> coding session in <a href="http://en.wikipedia.org/wiki/APL_(programming_language)">APL</a>, which really blew my mind. Watch it, it&rsquo;s well worth 8 minutes of your time!</p>

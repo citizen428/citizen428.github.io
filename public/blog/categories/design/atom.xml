@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: design | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/design/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/design/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-01-18]]></title>
-    <link href="http://www.citizen428.net/blog/2015/01/18/information-overload-2015-01-18/"/>
+    <link href="http://citizen428.github.io/blog/2015/01/18/information-overload-2015-01-18/"/>
     <updated>2015-01-18T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/01/18/information-overload-2015-01-18</id>
+    <id>http://citizen428.github.io/blog/2015/01/18/information-overload-2015-01-18</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.nytimes.com/2014/11/09/fashion/the-life-of-a-pot-critic-denver-post-clean-with-citrus-notes.html">The Life of a Pot Critic: Clean, With Citrus Notes</a><br>
 New laws, new jobs.</li>
@@ -46,9 +46,9 @@ Hun Sen, the man who ruled Cambodia for the last 30 years is the world&rsquo;s l
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-08-19]]></title>
-    <link href="http://www.citizen428.net/blog/2012/08/19/information-overload-2012-08-19/"/>
+    <link href="http://citizen428.github.io/blog/2012/08/19/information-overload-2012-08-19/"/>
     <updated>2012-08-19T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2012/08/19/information-overload-2012-08-19</id>
+    <id>http://citizen428.github.io/blog/2012/08/19/information-overload-2012-08-19</id>
     <content type="html"><![CDATA[<p>Note: I&rsquo;ll probably be too busy this upcoming week, so don&rsquo;t expect an Information Overload next Sunday.</p>
 
 <ul>
@@ -68,9 +68,9 @@ Hun Sen, the man who ruled Cambodia for the last 30 years is the world&rsquo;s l
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2010-10-17]]></title>
-    <link href="http://www.citizen428.net/blog/2010/10/17/information-overload-2010-10-17/"/>
+    <link href="http://citizen428.github.io/blog/2010/10/17/information-overload-2010-10-17/"/>
     <updated>2010-10-17T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/10/17/information-overload-2010-10-17</id>
+    <id>http://citizen428.github.io/blog/2010/10/17/information-overload-2010-10-17</id>
     <content type="html"><![CDATA[<ul>
 <li>&#8220;The &#8216;Irrational&#8217; Way Humans Interact With Dentists&#8221;:http://www.npr.org/templates/story/story.php?storyId=130356647<br>Are our relationships with our dentists a form of the &#8220;Stockholm Syndrome&#8221;:http://en.wikipedia.org/wiki/Stockholm_syndrome? Ask the behavioral psychologist.</li>
 <li>&#8220;RCA student radically improves the UK plug&#8221;:http://www.iconeye.com/index.php?id=3864:rca-student-radically-improves-the-uk-plug&option=com_content&view=article<br>Awesome redesign of an everyday item.</li>
@@ -89,9 +89,9 @@ Hun Sen, the man who ruled Cambodia for the last 30 years is the world&rsquo;s l
   
   <entry>
     <title type="html"><![CDATA[Delusions of grandeur]]></title>
-    <link href="http://www.citizen428.net/blog/2006/08/12/delusions-of-grandeur/"/>
+    <link href="http://citizen428.github.io/blog/2006/08/12/delusions-of-grandeur/"/>
     <updated>2006-08-12T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/08/12/delusions-of-grandeur</id>
+    <id>http://citizen428.github.io/blog/2006/08/12/delusions-of-grandeur</id>
     <content type="html"><![CDATA[<p>As my PR manager told me, large numbers of fans have already complained about the recent lack of updates. Since I&rsquo;m only my reader&rsquo;s humble servant, I of course have to comply with this wishes, so here are the long awaited news about yours truly:</p>
 
 <p><em>Gentoo:</em>

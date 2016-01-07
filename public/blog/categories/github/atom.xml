@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: github | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/github/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ruby and HTTParty: GitHub issues to CSV]]></title>
-    <link href="http://www.citizen428.net/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv/"/>
+    <link href="http://citizen428.github.io/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv/"/>
     <updated>2010-10-07T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv</id>
+    <id>http://citizen428.github.io/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv</id>
     <content type="html"><![CDATA[<p>To fill our backlog at work, our project manager needed a list of our current <a href="https://github.com/">GitHub</a> issues, ideally in a spreadsheet format. A couple lines of Ruby produce CSV output consisting of issue title, creation date, reporter and labels, which then can be redirected to a file and opened with any spreadsheet program.</p>
 
 <p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -62,9 +62,9 @@
   
   <entry>
     <title type="html"><![CDATA[What's new pussycat?]]></title>
-    <link href="http://www.citizen428.net/blog/2009/10/06/whats-new-pussycat/"/>
+    <link href="http://citizen428.github.io/blog/2009/10/06/whats-new-pussycat/"/>
     <updated>2009-10-06T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/10/06/whats-new-pussycat</id>
+    <id>http://citizen428.github.io/blog/2009/10/06/whats-new-pussycat</id>
     <content type="html"><![CDATA[<p>Quite a bit actually:<ul>
 <li>I live in Vienna again. Seriously.</li>
 <li>I started my new job as IT systems engineer at <a href="http://www.nessus.at/">Nessus</a>. <b>Update</b>: That was October. In November I changed job and now work for <a href="http://matrixware.com">Matrixware</a> </li>
@@ -77,9 +77,9 @@
   
   <entry>
     <title type="html"><![CDATA[unsavory now available as gem]]></title>
-    <link href="http://www.citizen428.net/blog/2009/09/08/unsavory-now-available-as-gem/"/>
+    <link href="http://citizen428.github.io/blog/2009/09/08/unsavory-now-available-as-gem/"/>
     <updated>2009-09-08T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/09/08/unsavory-now-available-as-gem</id>
+    <id>http://citizen428.github.io/blog/2009/09/08/unsavory-now-available-as-gem</id>
     <content type="html"><![CDATA[<p><a href="http://github.com/citizen428/unsavory/tree/master">unsavory</a> is now available as a gem, which means that you can comfortably install it like this:
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -91,9 +91,9 @@ Rubygems will automatically create a wrapper-script named &ldquo;unsavory&rdquo;
   
   <entry>
     <title type="html"><![CDATA[Easy setup for Clojure on Mac OS X Leopard]]></title>
-    <link href="http://www.citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
+    <link href="http://citizen428.github.io/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
     <updated>2009-08-24T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
+    <id>http://citizen428.github.io/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
     <content type="html"><![CDATA[<p>&ldquo;Clojure&rdquo;:<a href="http://clojure.org/">http://clojure.org/</a> definitely is one of the hottest new programming languages around and just recently hit a &ldquo;very important milestone&rdquo;:<a href="http://clojure.blogspot.com/2009/05/clojure-10.html.">http://clojure.blogspot.com/2009/05/clojure-10.html.</a> Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand &ldquo;one of those&rdquo;:<a href="http://github.com/carlism/Clojure-MacOSX/tree">http://github.com/carlism/Clojure-MacOSX/tree</a> into &ldquo;ClojureX&rdquo;:<a href="http://github.com/citizen428/ClojureX/tree/master,">http://github.com/citizen428/ClojureX/tree/master,</a> which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
 
 <p>ClojureX can</p>
@@ -119,9 +119,9 @@ Rubygems will automatically create a wrapper-script named &ldquo;unsavory&rdquo;
   
   <entry>
     <title type="html"><![CDATA[Tweet active Safari tab from command line]]></title>
-    <link href="http://www.citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
+    <link href="http://citizen428.github.io/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
     <updated>2009-02-27T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
+    <id>http://citizen428.github.io/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
     <content type="html"><![CDATA[<p>Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn&rsquo;t already running, copy  the URL, shorten it, paste it into the client&hellip;</p>
 
 <p>I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It&rsquo;s just a quick and dirty hack, feel free to change it according to your needs&hellip; :-)</p>

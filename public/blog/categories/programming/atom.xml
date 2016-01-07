@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: programming | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/programming/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: Programming Elixir]]></title>
-    <link href="http://www.citizen428.net/blog/2015/03/13/review-programming-elixir/"/>
+    <link href="http://citizen428.github.io/blog/2015/03/13/review-programming-elixir/"/>
     <updated>2015-03-13T22:32:51+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/03/13/review-programming-elixir</id>
+    <id>http://citizen428.github.io/blog/2015/03/13/review-programming-elixir</id>
     <content type="html"><![CDATA[<p><em><strong>Disclaimer</strong>: The good folks at <a href="https://pragprog.com/">The Pragmatic Bookshelf</a> were nice enough to provide me with a free copy of this book, but this has no influence on the contents of the review.</em></p>
 
 <p>My first contact with Dave Thomas was the famous &ldquo;<a href="https://pragprog.com/book/ruby/programming-ruby">Pickaxe book</a>&rdquo; for Ruby. It wasn&rsquo;t my first contact with the language, but it certainly helped in deepening my understanding of it. It&rsquo;s a great book, and I went back numerous times to re-read certain chapters. I already had a crush on Ruby, but &ldquo;the Pickaxe&rdquo; helped turning that into a solid and lasting love affair.</p>
@@ -42,9 +42,9 @@
   
   <entry>
     <title type="html"><![CDATA[VCR case woes]]></title>
-    <link href="http://www.citizen428.net/blog/2014/05/08/vcr/"/>
+    <link href="http://citizen428.github.io/blog/2014/05/08/vcr/"/>
     <updated>2014-05-08T22:32:55+07:00</updated>
-    <id>http://www.citizen428.net/blog/2014/05/08/vcr</id>
+    <id>http://citizen428.github.io/blog/2014/05/08/vcr</id>
     <content type="html"><![CDATA[<p>Today I spent quite some time on a rather hard to track down problem. I had some specs using <a href="">VCR</a>, which worked perfectly locally, but just wouldn&rsquo;t run on <a href="https://circleci.com/">CircleCI</a>. In fact, it seemed like CircleCI didn&rsquo;t in fact use the VCR cassettes at all, but instead make a real API call, which failed because the necessary credentials weren&rsquo;t available in the environment (which was kinda the point of using VCR in the first place).</p>
 
 <p>Turns out the problem lay in the combination of using the VCR setting <code>configure_rspec_metadata!</code> and the option <code>core.ignorecase = true</code>, which is standard in newer versions of <a href="http://git-scm.com/">Git</a>. What happened was that at one point I changed the case of a word in a test description, which changes the auto-generated name of the folder VCR will create the cassette in. But since the folder name wasn&rsquo;t changed from git&rsquo;s perspective, I never realized that. So when the code was checked out on CircleCI, VCR encountered the spec with the metadata (<code>vcr: true</code>), but couldn&rsquo;t find the cassette since the checked out folder had the wrong case. It therefore proceeded to run the spec against the live API which failed.</p>
@@ -57,9 +57,9 @@
   
   <entry>
     <title type="html"><![CDATA[Extending Nmap with Lua]]></title>
-    <link href="http://www.citizen428.net/blog/2013/08/31/extending-nmap-with-lua/"/>
+    <link href="http://citizen428.github.io/blog/2013/08/31/extending-nmap-with-lua/"/>
     <updated>2013-08-31T17:49:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2013/08/31/extending-nmap-with-lua</id>
+    <id>http://citizen428.github.io/blog/2013/08/31/extending-nmap-with-lua</id>
     <content type="html"><![CDATA[<p><em>I originally wrote this piece for a pentesting magazine, but after some unprofessional behavior by their editor I lost my cool and decided not too publish it there. It&rsquo;d be a shame to let it go to waste though, so I after almost three month I finally decided to put it up on my blog.</em></p>
 
 <p>Whether you are working as a security professional or a network administrator, chances are that <a href="http://nmap.org/">Nmap</a> (“Network Mapper”) is part of your regular toolkit. For many people this project, which was started by Gordon &ldquo;Fyodor&rdquo; Lyon in 1997, is the first choice when it comes to host and service discovery. But thanks to the Nmap Scripting Engine (NSE), it can do much more than that, allowing users to easily develop and share their own scripts, thus turning it into a versatile security scanner.</p>
@@ -233,7 +233,7 @@ The script we are looking at uses the <em>http</em> library for communication, <
 </span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="err">@</span><span class="n">args</span> <span class="n">http</span><span class="o">-</span><span class="n">generator</span><span class="p">.</span><span class="n">redirects</span> <span class="n">Specify</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">redirects</span> <span class="n">to</span> <span class="n">follow</span> <span class="p">(</span><span class="n">defaults</span> <span class="n">to</span> <span class="mi">3</span><span class="p">).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="n">Changelog</span><span class="p">:</span>
-</span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">23</span> <span class="n">Michael</span> <span class="n">Kohl</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#99;&amp;#x69;&amp;#116;&amp;#x69;&amp;#122;&amp;#101;&amp;#110;&amp;#x34;&amp;#x32;&amp;#x38;&amp;#64;&amp;#103;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&quot;</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">116</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x7a</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x65</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">110</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">52</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x32</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">56</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x40</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x67</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6d</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">97</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6c</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">46</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6f</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">109</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">:</span>
+</span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">23</span> <span class="n">Michael</span> <span class="n">Kohl</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">&amp;#109;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#99;&amp;#105;&amp;#x74;&amp;#105;&amp;#122;&amp;#x65;&amp;#x6e;&amp;#x34;&amp;#x32;&amp;#x38;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&quot;</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">99</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x74</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x69</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">122</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x65</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">110</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">52</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">50</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">56</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x40</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">103</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6d</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">97</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">105</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6c</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x2e</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x63</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="mi">111</span><span class="p">;</span><span class="err">&amp;</span><span class="o">#</span><span class="n">x6d</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">:</span>
 </span><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span>   <span class="o">+</span> <span class="n">Initial</span> <span class="n">version</span>
 </span><span class='line'><span class="err">&amp;</span><span class="n">hellip</span><span class="p">;</span>
 </span></code></pre></td></tr></table></div></figure></p>
@@ -392,9 +392,9 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2012-09-09]]></title>
-    <link href="http://www.citizen428.net/blog/2012/09/09/information-overload-2012-09-09/"/>
+    <link href="http://citizen428.github.io/blog/2012/09/09/information-overload-2012-09-09/"/>
     <updated>2012-09-09T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2012/09/09/information-overload-2012-09-09</id>
+    <id>http://citizen428.github.io/blog/2012/09/09/information-overload-2012-09-09</id>
     <content type="html"><![CDATA[<p>I was rather busy this week, so this Information Overload is super short.</p>
 
 <ul>
@@ -408,9 +408,9 @@ After that the <em>follow_redirects</em> helper function is used to get an HTTP 
   
   <entry>
     <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
-    <link href="http://www.citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
+    <link href="http://citizen428.github.io/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
     <updated>2012-07-30T23:24:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
+    <id>http://citizen428.github.io/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
     <content type="html"><![CDATA[<p>Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today&rsquo;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&rsquo;s an example:</p>
 
 <p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

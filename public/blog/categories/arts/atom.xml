@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: arts | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/arts/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/arts/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2014-09-21]]></title>
-    <link href="http://www.citizen428.net/blog/2014/09/21/information-overload-2014-09-21/"/>
+    <link href="http://citizen428.github.io/blog/2014/09/21/information-overload-2014-09-21/"/>
     <updated>2014-09-21T12:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2014/09/21/information-overload-2014-09-21</id>
+    <id>http://citizen428.github.io/blog/2014/09/21/information-overload-2014-09-21</id>
     <content type="html"><![CDATA[<p>After an almost 2 year hiatus, it&rsquo;s time to revive this series, although I&rsquo;m not yet sure if it&rsquo;s going to be weekly again.</p>
 
 <ul>
@@ -48,9 +48,9 @@ The SEA Globe writes about the Thai prison system.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-06-03]]></title>
-    <link href="http://www.citizen428.net/blog/2011/06/03/information-overload-2011-06-03/"/>
+    <link href="http://citizen428.github.io/blog/2011/06/03/information-overload-2011-06-03/"/>
     <updated>2011-06-03T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/06/03/information-overload-2011-06-03</id>
+    <id>http://citizen428.github.io/blog/2011/06/03/information-overload-2011-06-03</id>
     <content type="html"><![CDATA[<p>Information Overload is a bit early this week and may be skipped altogether next Sunday. After that it should be back to the regular schedule.</p>
 
 <ul>

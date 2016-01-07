@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: haskell | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/haskell/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/haskell/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Haskell: A summary of the "Typeclassopedia"]]></title>
-    <link href="http://www.citizen428.net/blog/2011/07/23/haskell-a-summary-of-the-typeclassopedia/"/>
+    <link href="http://citizen428.github.io/blog/2011/07/23/haskell-a-summary-of-the-typeclassopedia/"/>
     <updated>2011-07-23T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/07/23/haskell-a-summary-of-the-typeclassopedia</id>
+    <id>http://citizen428.github.io/blog/2011/07/23/haskell-a-summary-of-the-typeclassopedia</id>
     <content type="html"><![CDATA[<p>In my current effort of trying to really learn and master Haskell, I spent the last two or so weeks reading the excellent &ldquo;Typeclassopedia&rdquo;:<a href="http://www.haskell.org/haskellwiki/Typeclassopedia">http://www.haskell.org/haskellwiki/Typeclassopedia</a> by Brent Yorgey. Since I probably will have to go through it a couple more times, I took notes in Emacs &ldquo;org-mode&rdquo;:<a href="http://orgmode.org/">http://orgmode.org/</a> and exported them to HTML. You can find the summary either on GitHub or here:</p>
 
 <ul>
@@ -30,9 +30,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: Learn You a Haskell for Great Good]]></title>
-    <link href="http://www.citizen428.net/blog/2011/07/07/review-learn-you-a-haskell-for-great-good/"/>
+    <link href="http://citizen428.github.io/blog/2011/07/07/review-learn-you-a-haskell-for-great-good/"/>
     <updated>2011-07-07T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/07/07/review-learn-you-a-haskell-for-great-good</id>
+    <id>http://citizen428.github.io/blog/2011/07/07/review-learn-you-a-haskell-for-great-good</id>
     <content type="html"><![CDATA[<p><em>Disclaimer: <a href="http://www.nostarch.com/">No Starch Press</a> were nice enough to provide me with a free copy of the book reviewed here but what I&rsquo;m about to write has not been influenced by this.</em></p>
 
 <p>Properly learning Haskell has been on my todo list for years. One of my first more serious attempts was in 2009, when I found &ldquo;a weird little book with lots of cartoons online&rdquo;:<a href="http://learnyouahaskell.com/.">http://learnyouahaskell.com/.</a> As you may have guessed that was Miran Lipovaca&rsquo;s &ldquo;Learn You a Haskell for Great Good&rdquo; and I was immediately intrigued by the writing style and cute cartoons. However back then the book was still a work in progress and I eventually stopped reading it before Miran got around to adding the last chapters. I always promised myself to eventually revisit this later, so I was delighted when I found out that No Starch Press is actually releasing an offline version of the book! Here you can see the cover in its full cartoony glory:
@@ -48,9 +48,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tom and Michael vs The Monad]]></title>
-    <link href="http://www.citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad/"/>
+    <link href="http://citizen428.github.io/blog/2011/05/18/tom-and-michael-vs-the-monad/"/>
     <updated>2011-05-18T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/05/18/tom-and-michael-vs-the-monad</id>
+    <id>http://citizen428.github.io/blog/2011/05/18/tom-and-michael-vs-the-monad</id>
     <content type="html"><![CDATA[<p>So, over the last few weeks &ldquo;Tom Crinson&rdquo;:<a href="http://mrjaba.posterous.com/">http://mrjaba.posterous.com/</a> and I read another paper, this time &ldquo;The essence of functional programming&rdquo; (available &ldquo;here&rdquo;:<a href="http://homepages.inf.ed.ac.uk/wadler/topics/monads.html">http://homepages.inf.ed.ac.uk/wadler/topics/monads.html</a>) by Philip Wadler, one of the principal designers of Haskell. Tom&rsquo;s post is &ldquo;here&rdquo;:<a href="http://mrjaba.posterous.com/michael-and-tom-vs-the-monad.">http://mrjaba.posterous.com/michael-and-tom-vs-the-monad.</a></p>
 
 <p><strong>The paper</strong></p>
@@ -140,9 +140,9 @@ Brian Beckman recorded an &ldquo;awesome 67 minute video&rdquo;:<a href="http://
   
   <entry>
     <title type="html"><![CDATA[So, you want to learn Haskell?]]></title>
-    <link href="http://www.citizen428.net/blog/2010/12/29/so-you-want-to-learn-haskell/"/>
+    <link href="http://citizen428.github.io/blog/2010/12/29/so-you-want-to-learn-haskell/"/>
     <updated>2010-12-29T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/12/29/so-you-want-to-learn-haskell</id>
+    <id>http://citizen428.github.io/blog/2010/12/29/so-you-want-to-learn-haskell</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Haskell_(programming_language)">Haskell</a> is a great language and well worth your time. Here are some freely available learning resources for the aspiring Haskeller:</p>
 
 <ul>
@@ -159,9 +159,9 @@ Brian Beckman recorded an &ldquo;awesome 67 minute video&rdquo;:<a href="http://
   
   <entry>
     <title type="html"><![CDATA[Learning Haskell]]></title>
-    <link href="http://www.citizen428.net/blog/2009/04/09/learning-haskell/"/>
+    <link href="http://citizen428.github.io/blog/2009/04/09/learning-haskell/"/>
     <updated>2009-04-09T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2009/04/09/learning-haskell</id>
+    <id>http://citizen428.github.io/blog/2009/04/09/learning-haskell</id>
     <content type="html"><![CDATA[<p>To get my mind off Ruby I recently started dabbling in Haskell. I really like what I&rsquo;ve seen so far and it seems I&rsquo;m finally starting to understand functional programming (my two attempts with &ldquo;Practical Common Lisp&rdquo;:<a href="http://www.gigamonkeys.com/book/">http://www.gigamonkeys.com/book/</a> never got past the first few chapters).</p>
 
 <p>In case you are interested in Haskell too, here&rsquo;s a list of the resources I use:</p>

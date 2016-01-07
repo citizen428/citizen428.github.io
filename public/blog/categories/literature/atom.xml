@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: literature | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/literature/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/literature/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2010-12-26]]></title>
-    <link href="http://www.citizen428.net/blog/2010/12/26/information-overload-2010-12-26/"/>
+    <link href="http://citizen428.github.io/blog/2010/12/26/information-overload-2010-12-26/"/>
     <updated>2010-12-26T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/12/26/information-overload-2010-12-26</id>
+    <id>http://citizen428.github.io/blog/2010/12/26/information-overload-2010-12-26</id>
     <content type="html"><![CDATA[<ul>
 <li>&#8220;The Limits of Pain - Irukandji Syndrome&#8221;:http://godheadv.blogspot.com/2010/12/limits-of-pain-irukandji-syndrome.html<br>Small jellyfish, big pain!</li>
 <li>&#8220;The Simple Software That Could &#8211; but Probably Won&#8217;t &#8211; Change the Face of Writing&#8221;:http://www.theatlantic.com/technology/archive/2010/12/the-simple-software-that-could-but-probably-wont-change-the-face-of-writing/68364/<br>&#8220;T.S. Eliot&#8221;:http://en.wikipedia.org/wiki/T._S._Eliot and &#8220;Etherpad&#8221;:http://en.wikipedia.org/wiki/Etherpad aren&#8217;t often mentioned int the same article, but here they are.</li>
@@ -36,9 +36,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2010-12-05]]></title>
-    <link href="http://www.citizen428.net/blog/2010/12/05/information-overload-2010-12-05/"/>
+    <link href="http://citizen428.github.io/blog/2010/12/05/information-overload-2010-12-05/"/>
     <updated>2010-12-05T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/12/05/information-overload-2010-12-05</id>
+    <id>http://citizen428.github.io/blog/2010/12/05/information-overload-2010-12-05</id>
     <content type="html"><![CDATA[<ul>
 <li>&#8220;Die unertraegliche Lameness des Web 2.0&#8221;:http://blog.koehntopp.de/archives/2978-Die-unertraegliche-Lameness-des-Web-2.0.html<br>Why the &#8220;social web&#8221; fails and what could be done better. I couldn&#8217;t agree more, the author tackles lots of valid points (in German, but also &#8220;available in English&#8221;:http://blog.koehntopp.de/archives/2978-Die-unertraegliche-Lameness-des-Web-2.0.html#en. Update: Currently offline because of the controversial &#8220;JMStV&#8221;:http://www.techeye.net/internet/web-age-certificates-law-forces-german-blogs-offline). </li>
 <li>&#8220;What Your Computer Does While You Wait&#8221;:http://duartes.org/gustavo/blog/post/what-your-computer-does-while-you-wait<br>Interesting article comparing the relative speeds of the various parts in your computer, using illustrative examples.</li>

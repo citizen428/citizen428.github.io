@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: language | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/language/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/language/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-05-10]]></title>
-    <link href="http://www.citizen428.net/blog/2015/05/10/information-overload-2015-04-26/"/>
+    <link href="http://citizen428.github.io/blog/2015/05/10/information-overload-2015-04-26/"/>
     <updated>2015-05-10T12:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/05/10/information-overload-2015-04-26</id>
+    <id>http://citizen428.github.io/blog/2015/05/10/information-overload-2015-04-26</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.washingtonpost.com/posteverything/wp/2014/12/30/google-got-it-wrong-the-open-office-trend-is-destroying-the-workplace/">Google got it wrong. The open-office trend is destroying the workplace.</a><br>
 I agree with a lot of the points mentioned in this article.</li>
@@ -46,9 +46,9 @@ An interesting story about Vladimir Putin&rsquo;s alleged real origins (in Germa
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-02-15]]></title>
-    <link href="http://www.citizen428.net/blog/2015/02/15/information-overload-2015-02-15/"/>
+    <link href="http://citizen428.github.io/blog/2015/02/15/information-overload-2015-02-15/"/>
     <updated>2015-02-15T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/02/15/information-overload-2015-02-15</id>
+    <id>http://citizen428.github.io/blog/2015/02/15/information-overload-2015-02-15</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://manoharvanga.com/hackme/">hackme: Deconstructing an ELF File</a><br>
 Great read. If you like this sort of thing, I can wholeheartedly recommend <a href="http://www.amazon.com/gp/product/1593273851/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1593273851&amp;linkCode=as2&amp;tag=citizen4blog-20&amp;linkId=TQPCBOME4UONL52F">A Bug Hunter&rsquo;s Diary</a> (affiliate link).</li>
@@ -75,9 +75,9 @@ Language ans statistics, of course I like this.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-12-25]]></title>
-    <link href="http://www.citizen428.net/blog/2011/12/25/information-overload-2011-12-25/"/>
+    <link href="http://citizen428.github.io/blog/2011/12/25/information-overload-2011-12-25/"/>
     <updated>2011-12-25T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/12/25/information-overload-2011-12-25</id>
+    <id>http://citizen428.github.io/blog/2011/12/25/information-overload-2011-12-25</id>
     <content type="html"><![CDATA[<p><blockquote><p>They’ve reminded us that politics is not a matter of choosing among what we’re offered but of fighting for what we and others actually need, not to mention what we hope for.</p><footer><strong>Nathan Schneider <a href="http://www.thenation.com/article/165240/thank-you-anarchists">http://www.thenation.com/article/165240/thank-you-anarchists</a> Thank You</strong> <cite>Anarchists</cite></footer></blockquote></p>
 
 <ul>
@@ -100,9 +100,9 @@ Language ans statistics, of course I like this.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-10-16]]></title>
-    <link href="http://www.citizen428.net/blog/2011/10/16/information-overload-2011-10-16/"/>
+    <link href="http://citizen428.github.io/blog/2011/10/16/information-overload-2011-10-16/"/>
     <updated>2011-10-16T20:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/10/16/information-overload-2011-10-16</id>
+    <id>http://citizen428.github.io/blog/2011/10/16/information-overload-2011-10-16</id>
     <content type="html"><![CDATA[<p><blockquote><p>Above all, remember the more harm you cause, the more hate you feel, and the more kindness you deal into the world the more you come to love the people you help.</p><footer><strong>David McRaney <a href="http://youarenotsosmart.com/2011/10/05/the-benjamin-franklin-effect/">http://youarenotsosmart.com/2011/10/05/the-benjamin-franklin-effect/</a> The Benjamin Franklin Effect</strong></footer></blockquote>
 * <a href="http://youarenotsosmart.com/2011/10/05/the-benjamin-franklin-effect/">The Benjamin Franklin Effect</a><br>A very interesting article on cognitive dissonance and how we tend to rationalize things.
 * <a href="http://www.twitlonger.com/show/dh5l3q">Letter from a psychopath</a><br>An email copy/pasted into TwitLonger, giving great insight into the world of a (claimed) psychopath.</li>
@@ -121,9 +121,9 @@ Language ans statistics, of course I like this.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2011-04-17]]></title>
-    <link href="http://www.citizen428.net/blog/2011/04/17/information-overload-2011-04-17/"/>
+    <link href="http://citizen428.github.io/blog/2011/04/17/information-overload-2011-04-17/"/>
     <updated>2011-04-17T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/04/17/information-overload-2011-04-17</id>
+    <id>http://citizen428.github.io/blog/2011/04/17/information-overload-2011-04-17</id>
     <content type="html"><![CDATA[<ul>
 <li>&#8220;How I got a blank book to the top of the Amazon charts&#8221;:http://realbusiness.co.uk/news/how-i-got-a-blank-book-to-the-top-of-the-amazon-charts<br>A good example of what marketing can do for you.</li>
 <li>&#8220;The Grand Tour&#8221;:http://www.newyorker.com/reporting/2011/04/18/110418fa_fact_osnos?currentPage=all<br>Very interesting insight into a Chinese tour group in Europe.</li>

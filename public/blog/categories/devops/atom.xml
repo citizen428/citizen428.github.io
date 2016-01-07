@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: devops | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/devops/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/devops/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2010-11-07]]></title>
-    <link href="http://www.citizen428.net/blog/2010/11/07/information-overload-2010-11-07/"/>
+    <link href="http://citizen428.github.io/blog/2010/11/07/information-overload-2010-11-07/"/>
     <updated>2010-11-07T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/11/07/information-overload-2010-11-07</id>
+    <id>http://citizen428.github.io/blog/2010/11/07/information-overload-2010-11-07</id>
     <content type="html"><![CDATA[<ul>
 <li>&#8220;The OS Doesn&#8217;t Matter&#8230;&#8221;:http://www.mondaynote.com/2010/10/03/the-os-doesn%E2%80%99t-matter/<br>Interesting take on why OS wars don&#8217;t really matter anymore, since basically everything except for Windows has moved in a Unix direction or will do so in the near future. Quote: &#8220;This is today&#8217;s OS. User experience. Development tools.&#8221;</li>
 <li>&#8220;Why newspapers make you stupid&#8221;:http://blogs.tribune.com.pk/story/2660/why-newspapers-make-you-stupid/<br>On media bias and why you will need more background information and context than newspapers generally provide.</li>

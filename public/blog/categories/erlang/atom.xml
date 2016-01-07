@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: erlang | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/erlang/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/erlang/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Erlang bit syntax and ID3]]></title>
-    <link href="http://www.citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3/"/>
+    <link href="http://citizen428.github.io/blog/2010/09/04/erlang-bit-syntax-and-id3/"/>
     <updated>2010-09-04T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/09/04/erlang-bit-syntax-and-id3</id>
+    <id>http://citizen428.github.io/blog/2010/09/04/erlang-bit-syntax-and-id3</id>
     <content type="html"><![CDATA[<p>A couple of days ago I finally started properly looking at <a href="http://www.erlang.org/">Erlang</a> for the first time. One aspect I find especially interesting is the <a href="http://www.erlang.org/documentation/doc-5.6/doc/programming_examples/bit_syntax.html">bit syntax</a>, so I wrote a small program for parsing <a href="http://www.id3.org/ID3v1">ID3v1 tags</a> for practice. There’s definitely room for improvement (I ignored ID3v1.1), but it was a fun little exercise.
 Here’s the code:</p>
 

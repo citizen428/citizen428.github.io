@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: science | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/science/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/science/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-07-06]]></title>
-    <link href="http://www.citizen428.net/blog/2015/07/06/information-overload-2015-07-06/"/>
+    <link href="http://citizen428.github.io/blog/2015/07/06/information-overload-2015-07-06/"/>
     <updated>2015-07-06T15:10:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/07/06/information-overload-2015-07-06</id>
+    <id>http://citizen428.github.io/blog/2015/07/06/information-overload-2015-07-06</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://jdh.hamkins.org/math-for-eight-year-olds/">Math for eight-year-olds: graph theory for kids!</a><br>
 This is a great example of how to present math to children!</li>
@@ -46,9 +46,9 @@ I may not agree with everything, but it&rsquo;s a good read.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-06-07]]></title>
-    <link href="http://www.citizen428.net/blog/2015/06/07/information-overload-2015-06-07/"/>
+    <link href="http://citizen428.github.io/blog/2015/06/07/information-overload-2015-06-07/"/>
     <updated>2015-06-07T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/06/07/information-overload-2015-06-07</id>
+    <id>http://citizen428.github.io/blog/2015/06/07/information-overload-2015-06-07</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.theguardian.com/world/2015/jun/01/rent-cap-legislation-in-force-berlin-germany">Berlin becomes first German city to make rent cap a reality</a><br></li>
 <li><a href="http://www.news.com.au/technology/science/aussie-student-proves-existence-of-plasma-tubes-floating-above-earth/story-fnjwlcze-1227379756018">Aussie student proves existence of plasma tubes floating above Earth</a><br></li>
@@ -67,9 +67,9 @@ I may not agree with everything, but it&rsquo;s a good read.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-03-29]]></title>
-    <link href="http://www.citizen428.net/blog/2015/03/29/information-overload-2015-03-29/"/>
+    <link href="http://citizen428.github.io/blog/2015/03/29/information-overload-2015-03-29/"/>
     <updated>2015-03-29T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/03/29/information-overload-2015-03-29</id>
+    <id>http://citizen428.github.io/blog/2015/03/29/information-overload-2015-03-29</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.dsausa.org/shorter_work_weeks">Why We Should Demand a Shorter Workweek</a><br>
 To add some perspective: <a href="http://en.wikipedia.org/wiki/Refusal_of_work">Refusal of work</a></li>
@@ -98,9 +98,9 @@ Time for some history.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-03-22]]></title>
-    <link href="http://www.citizen428.net/blog/2015/03/22/information-overload-2015-03-22/"/>
+    <link href="http://citizen428.github.io/blog/2015/03/22/information-overload-2015-03-22/"/>
     <updated>2015-03-22T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/03/22/information-overload-2015-03-22</id>
+    <id>http://citizen428.github.io/blog/2015/03/22/information-overload-2015-03-22</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.theguardian.com/education/2012/nov/19/improbable-research-thai-women-cut-off-penis">Why Thai women cut off their husbands&#8217; penises</a><br>
 The article is somewhat older, but still an interesting read.</li>
@@ -127,9 +127,9 @@ Als this is not the only politically motivated/engineered famine.</li>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-03-15]]></title>
-    <link href="http://www.citizen428.net/blog/2015/03/15/information-overload-2015-03-15/"/>
+    <link href="http://citizen428.github.io/blog/2015/03/15/information-overload-2015-03-15/"/>
     <updated>2015-03-15T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2015/03/15/information-overload-2015-03-15</id>
+    <id>http://citizen428.github.io/blog/2015/03/15/information-overload-2015-03-15</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.theregister.co.uk/2015/03/10/rowhammer/">Google crocks capacitors and deviates DRAM to root Linux</a><br>
 That&rsquo;s one creative exploit.</li>

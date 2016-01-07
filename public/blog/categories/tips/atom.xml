@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: tips | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/tips/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/tips/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Event tip: Coded Cultures 2011]]></title>
-    <link href="http://www.citizen428.net/blog/2011/09/15/event-tip-coded-cultures-2011/"/>
+    <link href="http://citizen428.github.io/blog/2011/09/15/event-tip-coded-cultures-2011/"/>
     <updated>2011-09-15T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2011/09/15/event-tip-coded-cultures-2011</id>
+    <id>http://citizen428.github.io/blog/2011/09/15/event-tip-coded-cultures-2011</id>
     <content type="html"><![CDATA[<p>The awesome folks of &ldquo;5uper.net&rdquo;:<a href="http://5uper.net/">http://5uper.net/</a> are organizing the &ldquo;Coded Cultures&rdquo;:<a href="http://codedcultures.net/">http://codedcultures.net/</a> festival, an event I highly recommend! Here&rsquo;s their press release:</p>
 
 <blockquote>
@@ -52,9 +52,9 @@ No9, MAGAZIN, Lust Gallery
   
   <entry>
     <title type="html"><![CDATA[OpenSolaris cheat sheet]]></title>
-    <link href="http://www.citizen428.net/blog/2010/01/26/opensolaris-cheat-sheet/"/>
+    <link href="http://citizen428.github.io/blog/2010/01/26/opensolaris-cheat-sheet/"/>
     <updated>2010-01-26T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/01/26/opensolaris-cheat-sheet</id>
+    <id>http://citizen428.github.io/blog/2010/01/26/opensolaris-cheat-sheet</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve always been a big fan of the handy little utility <a href="http://cheat.errtheblog.com">cheat</a> and recently became interested in <a href="http://hub.opensolaris.org/bin/view/Main/">OpenSolaris</a> (which btw runs fine on my Thinkpad x200s), so I did the obvious and created an OpenSolaris cheat sheet:</p>
 
 <p><a href="http://cheat.errtheblog.com/s/open_solaris"><a href="http://cheat.errtheblog.com/s/open_solaris">http://cheat.errtheblog.com/s/open_solaris</a></a></p>
@@ -65,9 +65,9 @@ No9, MAGAZIN, Lust Gallery
   
   <entry>
     <title type="html"><![CDATA[Some more movie recommendations]]></title>
-    <link href="http://www.citizen428.net/blog/2007/07/09/some-more-movie-recommendations/"/>
+    <link href="http://citizen428.github.io/blog/2007/07/09/some-more-movie-recommendations/"/>
     <updated>2007-07-09T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2007/07/09/some-more-movie-recommendations</id>
+    <id>http://citizen428.github.io/blog/2007/07/09/some-more-movie-recommendations</id>
     <content type="html"><![CDATA[<p>Some more good movies I&rsquo;ve recently (re-)watched:</p>
 
 <p>&ldquo;American Hardcore&rdquo;:<a href="http://www.imdb.com/title/tt0419434/">http://www.imdb.com/title/tt0419434/</a>
@@ -83,9 +83,9 @@ No9, MAGAZIN, Lust Gallery
   
   <entry>
     <title type="html"><![CDATA[Finally...]]></title>
-    <link href="http://www.citizen428.net/blog/2006/11/05/finally/"/>
+    <link href="http://citizen428.github.io/blog/2006/11/05/finally/"/>
     <updated>2006-11-05T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/11/05/finally</id>
+    <id>http://citizen428.github.io/blog/2006/11/05/finally</id>
     <content type="html"><![CDATA[<p>&hellip;some random stuff I wanted to blog about for quite some time already:</p>
 
 <ul>
@@ -125,9 +125,9 @@ Last but not least here are some funny/interesting things I found over the past 
   
   <entry>
     <title type="html"><![CDATA[Videos for the masses]]></title>
-    <link href="http://www.citizen428.net/blog/2006/09/24/videos-for-the-masses/"/>
+    <link href="http://citizen428.github.io/blog/2006/09/24/videos-for-the-masses/"/>
     <updated>2006-09-24T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2006/09/24/videos-for-the-masses</id>
+    <id>http://citizen428.github.io/blog/2006/09/24/videos-for-the-masses</id>
     <content type="html"><![CDATA[<p>Over the last few weeks the ongoing struggle between good (aka going out to party) and evil (aka work) has led to a severe lack of sleep and a general feeling of exhaustion. That&rsquo;s why yesterday evening I only had some running sushi with friends and a few beers afterwards, before returning home before midnight. But instead of going to bed immediately, I made the fatal mistake of visiting &ldquo;YouTube&rdquo;:<a href="http://www.youtube.com/">http://www.youtube.com/</a> to watch the videos &ldquo;Lotussteve&rdquo;:<a href="http://www.cargal.org,">http://www.cargal.org,</a> &ldquo;m3&rdquo;:<a href="http://www.leyrer.priv.at/martin/">http://www.leyrer.priv.at/martin/</a> and &ldquo;Red&rdquo;:<a href="http://red667.org/">http://red667.org/</a> have recommended. Here are some of my favorites, thanks guys!</p>
 
 <ul>

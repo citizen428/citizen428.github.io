@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: sociology | citizen428.blog()]]></title>
-  <link href="http://www.citizen428.net/blog/categories/sociology/atom.xml" rel="self"/>
-  <link href="http://www.citizen428.net/"/>
-  <updated>2015-07-07T10:56:51+07:00</updated>
-  <id>http://www.citizen428.net/</id>
+  <link href="http://citizen428.github.io/blog/categories/sociology/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:00:12+07:00</updated>
+  <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
     <email><![CDATA[citizen428@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2010-10-09]]></title>
-    <link href="http://www.citizen428.net/blog/2010/10/10/information-overload-2010-10-09/"/>
+    <link href="http://citizen428.github.io/blog/2010/10/10/information-overload-2010-10-09/"/>
     <updated>2010-10-10T00:00:00+07:00</updated>
-    <id>http://www.citizen428.net/blog/2010/10/10/information-overload-2010-10-09</id>
+    <id>http://citizen428.github.io/blog/2010/10/10/information-overload-2010-10-09</id>
     <content type="html"><![CDATA[<ul>
 <li>&#8220;How Fake Money Saved Brazil&#8221;:http://www.npr.org/blogs/money/2010/10/04/130329523/how-fake-money-saved-brazil<br>How Brazilian economists overcame hyper-inflation.</li>
 <li>&#8220;Humor on the web & how to stop it&#8221;:http://blog.bumblebeelabs.com/social-software-sundays-1-humor-on-the-web-how-to-stop-it/<br>I iz in your memes, explaining dem. Oh, damn.</li>
