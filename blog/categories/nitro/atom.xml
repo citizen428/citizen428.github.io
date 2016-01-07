@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: nitro | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/nitro/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[So what's the word? RUBY!]]></title>
+    <link href="http://citizen428.github.io/blog/2005/11/18/so-whats-the-word-ruby/"/>
+    <updated>2005-11-18T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/11/18/so-whats-the-word-ruby</id>
+    <content type="html"><![CDATA[<p>This week I finally had a little more time to work on Gentoo related things again, so I commited some overdue packages to the tree.</p>
+
+<p>The action started on Tuesday, when I commited the 20+ ebuilds from &ldquo;ruby-gnome-0.14.1&rdquo;:<a href="http://ruby-gnome2.sourceforge.jp/">http://ruby-gnome2.sourceforge.jp/</a> (mostly version bumps plus a few new packages like &ldquo;ruby-gtkmozembed&rdquo;:<a href="http://ruby-gnome2.sourceforge.jp/hiki.cgi?RubyZilla">http://ruby-gnome2.sourceforge.jp/hiki.cgi?RubyZilla</a>). Quite a lot of users have been waiting for this, as the previous version we had in the tree (0.12.0) didn&rsquo;t play nicely with GTK+ 2.8/GNOME 2.12. This problems are now sorted, so that quite a few bugs could be closed and marked fixed. :)</p>
+
+<p>And then &ldquo;George released Nitro 0.25.0&rdquo;:<a href="http://www.gmosx.com/article/2">http://www.gmosx.com/article/2</a> yesterday, which found its way into the tree only hours later. This has mainly to do with the fact that I already had everything in place from the 0.24.0 release, which I then never commited because George said that there soon will be a release focussed on bug fixes and code clean-up. Apparently this has worked out nicely, so go ahaed, emerge &ldquo;Nitro&rdquo;:<a href="http://www.nitrohq.com/">http://www.nitrohq.com/</a> and play around with it, I&rsquo;m sure you&rsquo;ll like it.</p>
+
+<p>In the evening &ldquo;we&rdquo;:<a href="http://aglug.net">http://aglug.net</a> had our montly Viennese Gentoo users meetup, which as always was really funny. I came home pretty late and my head still hurts, but it definitely was among the most entertaining evenings in the last few weeks. Thanks guys!</p>
+
+<p>Boomtime, The Aftermath 30, 3171 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby: All your web are belong to us]]></title>
+    <link href="http://citizen428.github.io/blog/2005/11/06/ruby-all-your-web-are-belong-to-us/"/>
+    <updated>2005-11-06T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/11/06/ruby-all-your-web-are-belong-to-us</id>
+    <content type="html"><![CDATA[<p>When it comes to Ruby, I&rsquo;ve recently mostly been blogging about &ldquo;Nitro&rdquo;:<a href="http://www.nitrohq.com/,">http://www.nitrohq.com/,</a> which I think will be a really great framework for writing web applications once it matures a little more. For the next version (0.25.0) the developers plan to concentrate on bug fixing, code cleanup and refactoring, as well as documentation. The current development version - which following my suggestion is now called Glycerin - can be fetched from a &ldquo;Darcs repository&rdquo;:<a href="http://repo.nitrohq.com/,">http://repo.nitrohq.com/,</a> so there shouldn&rsquo;t be anything stopping you from valuable contributions! ;)</p>
+
+<p>Ok, after my usual Nitro evangelism, it&rsquo;s time to finally talk about the other excellent web framework Ruby has to offer: &ldquo;Ruby on Rails&rdquo;:<a href="http://www.rubyonrails.com/.">http://www.rubyonrails.com/.</a> I haven&rsquo;t used it for quite some time now, but when I got bored a few days ago, I decided to once again start playing around with it. I&rsquo;ve done some googling and found some nice articles, so here&rsquo;s my suggested reading list for the aspiring Rails programmer (please note that this list doesn&rsquo;t include docs from the official site, because they&rsquo;re easy enough to find):</p>
+
+<ol>
+<li><p>&ldquo;MVC: The Most Vexing Conundrum&rdquo;:<a href="http://www.slash7.com/articles/2005/02/22/mvc-the-most-vexing-conundrum:">http://www.slash7.com/articles/2005/02/22/mvc-the-most-vexing-conundrum:</a> Befrore you do anything with Rails, head over to Amy Hoy&rsquo;s blog, and read her explanation of &ldquo;MVC&rdquo;:<a href="http://en.wikipedia.org/wiki/MVC,">http://en.wikipedia.org/wiki/MVC,</a> the &ldquo;design pattern&rdquo;:<a href="http://en.wikipedia.org/wiki/Software_design_pattern">http://en.wikipedia.org/wiki/Software_design_pattern</a> Rails is following. I think it&rsquo;s really important to wrap your head around the underlying principles of a framework before you start to use it, so make sure you really understand what Amy&rsquo;s trying to tell you.</p></li>
+<li><p>&ldquo;Rolling with Ruby on Rails&rdquo;:<a href="http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html:">http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html:</a> Once you got the basic principles, it&rsquo;s time to visit &ldquo;ONLamp&rdquo;:<a href="http://www.onlamp.com/">http://www.onlamp.com/</a> to read Curt  Hibbs nice introductory article. It doesn&rsquo;t really go into much detail, but I&rsquo;m sure it will wet your appetite&hellip;</p></li>
+<li><p>&ldquo;Really Getting Started in Rails&rdquo;:<a href="http://www.slash7.com/articles/2005/01/24/really-getting-started-in-rails:">http://www.slash7.com/articles/2005/01/24/really-getting-started-in-rails:</a> Now that you&rsquo;re rolling with Rails, it&rsquo;s time to go back to Amy&rsquo;s site. There you&rsquo;ll find this nice article that is meant as an addition to the previously mentioned &ldquo;Rolling with Ruby on Rails&rdquo;, explaining some of the whys and hows Curt had to leave out to keep his text short and to the point.</p></li>
+<li><p>&ldquo;Rolling with Ruby on Rails, Part 2&rdquo;:<a href="http://www.onlamp.com/pub/a/onlamp/2005/03/03/rails.html:">http://www.onlamp.com/pub/a/onlamp/2005/03/03/rails.html:</a> Do you start to see a pattern here? Correct, it&rsquo;s Curt&rsquo;s turn again. In the second part of his introductory Rails article, he finishes off the cookbook application from the first part, before giving pointers to some of the more interesting features of Rails, like caching, transactions, testing, generators and so on.</p></li>
+<li><p>&ldquo;Four Days on Rails&rdquo;:<a href="http://rails.homelinux.org/:">http://rails.homelinux.org/:</a> Now that you should have a basic understanding of how Rails works, you should definitely check out this excellent HOWTO by John McCreesh: &ldquo;<i>It&rsquo;s about 40 pages formatted for double-sided printing on A4, and by the time you&rsquo;ve read it, you should have a useful toolbox of Rails techniques and a good idea of where to look on the web for more information</i>&rdquo;.</p></li>
+</ol>
+
+
+<p>If you take your time to carefully read this stuff, you should be pretty much up to speed in Rails development in less than a week! Don&rsquo;t be passive while reading the articles, but start writing you own little app and constantly improve it while you learn. Once you feel comfortable with the basic principles, you can read some of the more advanced stuff, like &ldquo;Ajax on Rails&rdquo;:<a href="http://www.onlamp.com/pub/a/onlamp/2005/06/09/rails_ajax.html,">http://www.onlamp.com/pub/a/onlamp/2005/06/09/rails_ajax.html,</a> &ldquo;REST on Rails&rdquo;:<a href="http://www.xml.com/pub/a/2005/11/02/rest-on-rails.html,">http://www.xml.com/pub/a/2005/11/02/rest-on-rails.html,</a> &ldquo;Ajaxariffic Autocomplete with Scriptaculous&rdquo;:<a href="http://www.slash7.com/articles/2005/08/13/ajaxariffic-autocomplete-with-scriptaculous">http://www.slash7.com/articles/2005/08/13/ajaxariffic-autocomplete-with-scriptaculous</a>  or the Rails articles &ldquo;why the lucky stuff&rdquo;:<a href="http://whytheluckystiff.net/">http://whytheluckystiff.net/</a> publishes on &ldquo;RedHanded&rdquo;:<a href="http://redhanded.hobix.com/.">http://redhanded.hobix.com/.</a> Have fun!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Look who's back...]]></title>
+    <link href="http://citizen428.github.io/blog/2005/10/29/look-whos-back/"/>
+    <updated>2005-10-29T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/10/29/look-whos-back</id>
+    <content type="html"><![CDATA[<p>Seems like I haven&rsquo;t had a post on Planet for quite some time now, which may have to do with he fact that I&rsquo;m &ldquo;officially away&rdquo;:<a href="http://dev.gentoo.org/devaway/">http://dev.gentoo.org/devaway/</a> in October&hellip; However, there are times when I just don&rsquo;t want to learn for that frigging exam, so here&rsquo;s a little status update on my Gentoo work:</p>
+
+<ul>
+<li>*Gentoo/ALT documentation:* Since we will soon start to recruit Arch Testers for the Gentoo/ALT project, I converted our old docs to handbook format, moved them around and wrote some new things. This led to the not-quite-finished &#8220;Gentoo/ALT Contributor&#8217;s Guide&#8221;:http://www.gentoo.org/proj/en/gentoo-alt/contribute/, which is intended to be the one place where people interested in our project should find all the necessary information. I&#8217;ll still need a few more hours to fix typos and check other docs for now deprecated URLs, but other than that it&#8217;s fairly complete, so I hope it&#8217;s useful to you!</li>
+<li>*Gentoo/ALT Arch Testers:* As mentioned above the Gentoo/ALT project will recruit Arch Testers soon. Somehow &#8220;Flameeyes&#8221;:http://dev.gentoo.org/~flameeyes/ managed to convince me to become the operational lead for our ATs, and hparker already brought me up to speed on what that task involves. As I think that good documentation is really important before we start bringing anyone on board, I first want to finish the new handbook before recruiting begins. Once we are actually starting to look for fresh blood, you&#8217;ll find announcements in the usual locations (GWN, gentoo-dev, here).</li>
+<li>*Nitro:* Yesterday &#8220;George&#8221;:http://www.gmosx.com released version 0.24.0 of his really nice web application framework! There are lots of cool new features, like a complete reworked annotation/property system, support for &#8220;KirbyBase&#8221;:http://www.netpromi.com/kirbybase_ruby.html,  SCGI support, experimental HTTP streaming support, improved scaffolding and lots of other great stuff! Seeing how busy George has been, I thought that the ebuilds for all Nitro related packages deserve some extra love, like moving the DBMS use flags to the og ebuild instead of the nitro one (where they really belong, in case someone wants to use og without Nitro), as well as adding some extra useflags. Given that I already commited &#8220;cmdparse&#8221;:http://cmdparse.rubyforge.org/, KirbyBase and an updated version of &#8220;Facets&#8221;:http://www.gentoo.org/doc/en/mysql-upgrading.xml to CVS, it shouldn&#8217;t take much longer until an &#8220;emerge nitro&#8221; will get you the new and shiny 0.24.0!</li>
+<li>*MySQL upgrade guide:* Lately there has been quite a lot of feedback on the &#8220;MySQL upgrade guide&#8221;:http://www.gentoo.org/doc/en/mysql-upgrading.xml vivo and I have written. Please rest assured that we&#8217;re trying to update the doc accordingly ASAP. Unfortunately last time I checked days still don&#8217;t have more than a measly 24 hours, and this guide isn&#8217;t exactly top of my priority list&#8230;</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

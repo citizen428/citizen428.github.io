@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: shell | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/shell/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-05-22]]></title>
+    <link href="http://citizen428.github.io/blog/2011/05/22/information-overload-2011-05-22/"/>
+    <updated>2011-05-22T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2011/05/22/information-overload-2011-05-22</id>
+    <content type="html"><![CDATA[<ul>
+<li>&#8220;Understanding the Fourier transform by Stuart Riffle&#8221;:http://altdevblogaday.org/2011/05/17/understanding-the-fourier-transform/<br>You know I&#8217;m a big fan of good (math) explanations and this is no exception. I really like the color coded formula!</li>
+<li>&#8220;The Complete Guide to Not Giving a Fuck&#8221;:http://inoveryourhead.net/the-complete-guide-to-not-giving-a-fuck/<br>Some good advice in there, but like with most things in life, the right balance is the key.</li>
+<li>&#8220;You can increase your intelligence: 5 ways to maximize your cognitive potential&#8221;:http://www.scientificamerican.com/blog/post.cfm?id=you-can-increase-your-intelligence-2011-03-07<br>Interesting article in the Scientific American. Funny tidbit: I regularly observe all the described behaviors in the hacker community, seems we are doing well in this regard.</li>
+<li>&#8220;On TermKit&#8221;:http://acko.net/blog/on-termkit<br>While I&#8217;m not sure I&#8217;d use this, it&#8217;s interesting to see the Unix terminal re-imagined.</li>
+<li>&#8220;The People vs. Goldman Sachs&#8221;:http://www.rollingstone.com/politics/news/the-people-vs-goldman-sachs-20110511<br>To get an idea what this is about, here&#8217;s a quote from the article: &#8220;This is America: Corporate stealing is practically the national pastime, and Goldman Sachs is far from the only company to get away with doing it&#8221;.</li>
+<li>&#8220;How Food Explains the World&#8221;:http://www.foreignpolicy.com/articles/2011/04/25/how_food_explains_the_world?page=full<br>I really like this Foreign Policy article on food, a topic we should really tackle on a global scale.</li>
+<li>&#8220;First &#8216;habitable&#8217; exoplanet confirmed&#8221;:http://www.cosmosmagazine.com/news/4321/first-habitable-exoplanet-confirmed<br>Don&#8217;t pack your bags just yet, but this is still cool.</li>
+<li>&#8220;Ein Job zum Davonlaufen&#8221;:http://sz-magazin.sueddeutsche.de/texte/anzeigen/35651<br>Police officer, a job to run away from? (in German)</li>
+<li>&#8220;Life is a cosmic giggle on the breath of the universe&#8221;:http://www.viceland.com/int/v18n5/htdocs/life-is-a-cosmic-giggle-803.php?page=1<br>Wow, once again real life is much more screwed up than TV. If you think &#8220;Breaking Bad&#8221;:http://en.wikipedia.org/wiki/Breaking_Bad is hardcore, read this article/interview.</li>
+<li>&#8220;NASA Announces Results Of Epic Space-Time Experiment&#8221;:http://science.nasa.gov/science-news/science-at-nasa/2011/04may_epic/<br>47 years in the making, this experiment proves the existence of a space-time vortex around Earth.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ XML diffs with bash and awk]]></title>
+    <link href="http://citizen428.github.io/blog/2010/10/01/xml-diffs-with-bash-and-awk/"/>
+    <updated>2010-10-01T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2010/10/01/xml-diffs-with-bash-and-awk</id>
+    <content type="html"><![CDATA[<p><i>Slightly modified version of a &ldquo;post&rdquo;:<a href="http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/">http://tupalo.com/en/blog/generating-xml-diffs-with-awk-and-bash/</a> I originally wrote for our &ldquo;company blog&rdquo;:<a href="http://tupalo.com/en/blog/.">http://tupalo.com/en/blog/.</a></i></p>
+
+<p>When importing data at work, we often have to deal with XML. This generally works fine, but the format&rsquo;s structured nature also means that you can&rsquo;t just treat it like any old text file.</p>
+
+<p>That&rsquo;s something we recently had to work around when we wanted to generate a daily XML diff, which only contains elements which changed since the previous feed. Of course there are several open source tools for diff-ing XML (e.g. <a href="http://diffxml.sourceforge.net/">diffxml</a> or <a href="http://www.logilab.org/859">xmldiff</a>) but since we didn&rsquo;t get them to do what we want in a reasonable amount of time, we just decided to roll our own.</p>
+
+<p>The final solution is a 71 line bash script, which downloads a zip, extracts it, generates <a href="http://en.wikipedia.org/wiki/MD5">MD5</a> sums for every element and then creates a diff between this new file and the previous list of MD5 sums. Once we know which elements have changed we merge them into a new feed which then gets handed to our importer. The awesome <a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> was a great help in this, as was battle-tested old <a href="http://en.wikipedia.org/wiki/AWK">awk</a>.</p>
+
+<p>Let&rsquo;s look at an interesting snippet from the script:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>xmlstarlet sel -I -t -m <span class="p">&amp;</span>ldquo<span class="p">;</span>//item<span class="p">&amp;</span>rdquo<span class="p">;</span> -v <span class="p">&amp;</span>ldquo<span class="p">;</span>./guid<span class="p">&amp;</span>rdquo<span class="p">;</span> -o <span class="p">&amp;</span>ldquo<span class="p">;|&amp;</span>rdquo<span class="p">;</span> -c <span class="p">&amp;</span>ldquo<span class="p">;</span>.<span class="p">&amp;</span>rdquo<span class="p">;</span> -n - <span class="p">|</span>
+</span><span class='line'>  sed -e <span class="p">&amp;</span>lsquo<span class="p">;&amp;</span>hellip<span class="p">;&amp;</span>rsquo<span class="p">;</span> <span class="p">|</span>
+</span><span class='line'>  awk <span class="se">\</span>
+</span><span class='line'>    <span class="p">&amp;</span>lsquo<span class="p">;</span>BEGIN <span class="o">{</span>
+</span><span class='line'>      <span class="nv">FS</span><span class="o">=</span><span class="p">&amp;</span>ldquo<span class="p">;|&amp;</span>rdquo<span class="p">;</span>
+</span><span class='line'>      <span class="nv">RS</span><span class="o">=</span><span class="p">&amp;</span>ldquo<span class="p">;</span><span class="se">\n</span><span class="p">&amp;</span>rdquo<span class="p">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="nv">id</span><span class="o">=</span><span class="nv">$1</span>
+</span><span class='line'>      <span class="nb">command</span><span class="o">=</span><span class="p">&amp;</span>ldquo<span class="p">;</span><span class="nb">printf</span> <span class="se">\&amp;</span>rdquo<span class="p">;</span>%s<span class="se">\&amp;</span>ldquo<span class="p">;</span> <span class="se">\&amp;</span>rdquo<span class="p">;&amp;</span>ldquo<span class="p">;</span> <span class="nv">$2</span> <span class="p">&amp;</span>rdquo<span class="p">;</span><span class="se">\&amp;</span>ldquo<span class="p">;</span> <span class="p">|</span> md5sum <span class="p">|</span> cut -d<span class="se">\&amp;</span>rdquo<span class="p">;</span> <span class="se">\&amp;</span>ldquo<span class="p">;</span> -f1<span class="p">&amp;</span>rdquo<span class="p">;</span>
+</span><span class='line'>      <span class="nb">command</span> <span class="p">|</span> getline md5
+</span><span class='line'>      close<span class="o">(</span><span class="nb">command</span><span class="o">)</span>
+</span><span class='line'>      print id<span class="p">&amp;</span><span class="c">#8221;:&amp;ldquo;md5</span>
+</span><span class='line'>    <span class="o">}</span><span class="p">&amp;</span>rsquo<span class="p">;</span> &gt;&gt; <span class="nv">$MD5_DIR</span>/vendor-md5-<span class="nv">$TODAY</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Here we use xmlstarlet to iterate over all the items in the feed (the <a href="http://www.w3.org/TR/xpath/">XPath</a> &ldquo;//item&rdquo;), print the value of the &ldquo;guid&rdquo; element (-v &ldquo;./guid&rdquo;), output a pipe character (-o &ldquo;|&rdquo;) and then copy the current element followed by a newline (-c &ldquo;.&rdquo; -n) . This then gets piped through sed for some cleaning up (which I omitted here for brevity&rsquo;s sake) before awk takes the part after each &ldquo;|&rdquo;, generates an MD5 sum and finally produces a file that looks like this:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rKKTZ:4012fced7c4cd77da607d294fbb8b5b6
+</span><span class='line'>hC7Jr:39245a0f9a976e6d47c0e2d76abf6238
+</span><span class='line'>&hellip;</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Now that we are able to create a daily list of MD5 sums, it&rsquo;s easy to generate the diff feed:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">if</span> <span class="o">[</span> -e <span class="nv">$MD5_DIR</span>/vendor-md5-last <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span><span class='line'>  <span class="nv">changed</span><span class="o">=</span>&lt;code&gt;diff <span class="nv">$MD5_DIR</span>/vendor-md5-last <span class="nv">$MD5_DIR</span>/vendor-md5-<span class="nv">$TODAY</span> <span class="p">|</span>
+</span><span class='line'>       grep <span class="s2">&quot;^&amp;gt;&quot;</span> <span class="p">|</span>
+</span><span class='line'>           cut -d<span class="s2">&quot;:&quot;</span> -f <span class="m">1</span> <span class="p">|</span>
+</span><span class='line'>           cut -b 1-2 --complement&lt;/code&gt;&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;for record in <span class="nv">$changed</span> <span class="p">;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="nv">f</span><span class="o">=</span>&lt;code&gt;fgrep -l <span class="s2">&quot;&amp;lt;guid&amp;gt;$record&amp;lt;/guid&amp;gt;&quot;</span> <span class="nv">$FILE_PATTERN</span>&lt;/code&gt;
+</span><span class='line'>  xmlstarlet sel -I -t -c <span class="p">&amp;</span>ldquo<span class="p">;</span>/rss/channel/item<span class="o">[</span><span class="nv">guid</span><span class="o">=</span><span class="p">&amp;</span>lsquo<span class="p">;</span><span class="nv">$record</span><span class="p">&amp;</span>rsquo<span class="p">;</span><span class="o">]</span><span class="p">&amp;</span>rdquo<span class="p">;</span> <span class="nv">$f</span> &gt;&gt; vendor-import-<span class="nv">$TODAY</span>.xml
+</span><span class='line'><span class="k">done</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Here we create an array with the id of the changed elements over which we then iterate. In the loop we once again use xmlstarlet to extract the current item from the feed which contains the right guid.</p>
+
+<p>I&rsquo;m quite happy with the result, it does exactly what we want it to do and is also reasonably fast. This is a good example of how familiar Unix tools can be combined to create fairly concise solutions for non-trivial problem.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Most used shell commands]]></title>
+    <link href="http://citizen428.github.io/blog/2009/05/25/most-used-shell-commands/"/>
+    <updated>2009-05-25T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/05/25/most-used-shell-commands</id>
+    <content type="html"><![CDATA[<p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | awk &lsquo;{a[$2]++ } END{for(i in a){print a[i] &ldquo; &rdquo; i}}&rsquo;|sort -rn|head</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Although there was no real point in doing so, I felt the need to write a short Ruby script to do the same:</p>
+
+<script src="http://gist.github.com/117571.js"></script>
+
+
+<p>Here&rsquo;s the output on my MacBook:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>command_stats | head
+</span><span class='line'><span class="nb">time</span>: 75
+</span><span class='line'><span class="nb">cd</span>: 68
+</span><span class='line'>ls: 66
+</span><span class='line'>git: 35
+</span><span class='line'>cat: 32
+</span><span class='line'>irb: 20
+</span><span class='line'>awk: 17
+</span><span class='line'>ruby: 15
+</span><span class='line'>scala: 15
+</span><span class='line'>vim: 12
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>If you are surprised by how many times (no pun intended) I called <em>time</em>, it&rsquo;s just because I was benchmarking &ldquo;Project Euler&rdquo;:<a href="http://projecteuler.net/">http://projecteuler.net/</a> solutions in several languages, everything else is quite regular (and suggests I don&rsquo;t use the Finder much ;) ).</p>
+]]></content>
+  </entry>
+  
+</feed>

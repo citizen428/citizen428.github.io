@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: books | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/books/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2015-06-07]]></title>
+    <link href="http://citizen428.github.io/blog/2015/06/07/information-overload-2015-06-07/"/>
+    <updated>2015-06-07T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2015/06/07/information-overload-2015-06-07</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.theguardian.com/world/2015/jun/01/rent-cap-legislation-in-force-berlin-germany">Berlin becomes first German city to make rent cap a reality</a><br></li>
+<li><a href="http://www.news.com.au/technology/science/aussie-student-proves-existence-of-plasma-tubes-floating-above-earth/story-fnjwlcze-1227379756018">Aussie student proves existence of plasma tubes floating above Earth</a><br></li>
+<li><a href="http://www.theguardian.com/world/2015/jun/07/grandmothers-of-plaza-de-mayo-36-year-hunt-for-stolen-child">A grandmother&rsquo;s 36-year hunt for the child stolen by the Argentinian junta</a><br></li>
+<li><a href="http://www.yesmagazine.org/happiness/ursula-k-le-guin-calls-on-sci-fi-and-fantasy-writers-to-envision-alternatives-to-capitalism">Ursula K. Le Guin Calls on Fantasy and Sci Fi Writers to Envision Alternatives to Capitalism</a><br></li>
+<li><a href="http://www.newyorker.com/news/news-desk/kalief-browder-1993-2015">Kalief Browder, 1993–2015</a><br></li>
+<li><a href="http://www.washingtonpost.com/blogs/worldviews/wp/2015/06/05/map-the-remarkable-distances-you-can-travel-on-a-european-train-in-less-than-a-day/">Map: The remarkable distances you can travel on a European train in less than a day</a><br></li>
+<li><a href="http://sea-globe.com/laos-david-hutt-southeast-asia-globe/">Absolute power</a><br></li>
+<li><a href="http://www.corriere.it/english/15_giugno_07/vladimir-putin-interview-to-the-italian-newspaper-corriere-sera-44c5a66c-0d12-11e5-8612-1eda5b996824.shtml">Vladimir Putin, interview to the Italian newspaper «Il Corriere della Sera»</a><br></li>
+<li><a href="https://debuggerdotbreak.wordpress.com/2015/05/21/my-startups-dead-5-things-i-learned/">My Startup’s Dead! 5 Things I Learned</a><br></li>
+<li><a href="http://www.npr.org/sections/goatsandsoda/2015/06/08/412314701/lost-posture-why-indigenous-cultures-dont-have-back-pain">Lost Posture: Why Some Indigenous Cultures May Not Have Back Pain</a><br></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Programming Elixir]]></title>
+    <link href="http://citizen428.github.io/blog/2015/03/13/review-programming-elixir/"/>
+    <updated>2015-03-13T22:32:51+07:00</updated>
+    <id>http://citizen428.github.io/blog/2015/03/13/review-programming-elixir</id>
+    <content type="html"><![CDATA[<p><em><strong>Disclaimer</strong>: The good folks at <a href="https://pragprog.com/">The Pragmatic Bookshelf</a> were nice enough to provide me with a free copy of this book, but this has no influence on the contents of the review.</em></p>
+
+<p>My first contact with Dave Thomas was the famous &ldquo;<a href="https://pragprog.com/book/ruby/programming-ruby">Pickaxe book</a>&rdquo; for Ruby. It wasn&rsquo;t my first contact with the language, but it certainly helped in deepening my understanding of it. It&rsquo;s a great book, and I went back numerous times to re-read certain chapters. I already had a crush on Ruby, but &ldquo;the Pickaxe&rdquo; helped turning that into a solid and lasting love affair.</p>
+
+<p>Fast-forward some years. While I still love Ruby and work with it professionally, I have to admit to having a new language crush: <a href="http://elixir-lang.org/">Elixir</a>. I&rsquo;ve been interested in Erlang for several years, read some books, dabbled a bit, but never really got into the language. Elixir however got me hooked almost from the get-go. I find it&rsquo;s a simple, elegant language, that&rsquo;s easy to pick up, but has quite some depth.</p>
+
+<h3>The book</h3>
+
+<p>Let&rsquo;s start off by clearly stating what this book is not: a reference. It weighs in at around 340 pages and does not try to cover every aspect of Elixir/Erlang. It still is one of my all-time favorite programming books though. Why? Because I believe it does an amazing job in conveying the &ldquo;essence&rdquo; of Elixir. There&rsquo;s no point in documenting APIs, the language has <a href="http://elixir-lang.org/docs.html">great documentation online</a>. Instead Dave tries to teach the reader how to think in Elixir.</p>
+
+<p>&ldquo;Programming Elixir&rdquo; has three main parts. The first called &ldquo;Conventional Programming&rdquo; introduces some core concepts like pattern matching and immutability, before covering Elixir types, functions, modules, language constructs, and project organization. It&rsquo;s easy to read, but not too boring for seasoned developers. However, if you have some previous experience with Elixir, Erlang, or even some other functional programming language you may end up skimming this section a bit, at least I did.</p>
+
+<p>Where it starts to get really interesting is the next part called &ldquo;Concurrent Programming&rdquo;, which covers processes, nodes and the basics of OTP. This latter part can easily fill books of its own, so the author only manages to cover some <a href="http://www.erlang.org/doc/design_principles/des_princ.html">behaviours</a>, like servers (<em>gen_server</em> to be specific), supervisors and applications. It&rsquo;s some excellent material however, so unless you&rsquo;re a seasoned Erlang developer this part alone could be reason enough to read this book. Sure, it would have been great to go into some more detail or cover more of OTP, but I think it&rsquo;s more than enough to make people understand the core principles of the framework so they are able to continue their studies with a solid foundation. I&rsquo;ve seen many people struggle with the concept of processes and message passing concurrency, despite the relative simplicity of the <a href="http://www.wikiwand.com/en/Actor_model">Actor model</a>. But when Dave suggests thinking of processes somewhat like objects in the sense that they encapsulate state, sending messages suddenly will feel very familiar to OO programmers who find it hard to structure their code around Elixir/Erlang semantics.</p>
+
+<p>Last but not least there&rsquo;s &ldquo;More Advanced Elixir&rdquo;, which covers macros, protocols, the language&rsquo;s approach to mixins and a grab bag of topics that didn&rsquo;t quite warrant chapters of their own. I really liked this entire section, especially the parts on protocols and mixins. I feel like it gave me the tools to look at most Elixir code and figure out what&rsquo;s happening, which is quite an achievement for a book of this length.</p>
+
+<h3>Closing thoughts</h3>
+
+<p>The world of Erlang/OTP is somewhat different from other programming languages, so no matter what your background is, chances are that certain things may feel somewhat alien to you. This is were &ldquo;Programming Elixir&rdquo; shines: it doesn&rsquo;t just try to get you to write Elixir, it wants you to write good idiomatic code because you understand what makes the language tick. The writing has a good flow and is to the point. On top of that each chapter comes with some well thought-out exercises that should keep motivated readers busy for a while. It&rsquo;s hard to imagine a better introduction to the language than &ldquo;Programming Elixir&rdquo;, highly recommended!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[2014 Reading List]]></title>
+    <link href="http://citizen428.github.io/blog/2015/01/06/2014-reading-list/"/>
+    <updated>2015-01-06T11:38:10+07:00</updated>
+    <id>http://citizen428.github.io/blog/2015/01/06/2014-reading-list</id>
+    <content type="html"><![CDATA[<p>Here&rsquo;s my annual reading list post. 2014 saw me read less than I wanted to, but exploring my new hometown (Bangkok) and learning Thai used up a lot of my free time. That said I still managed to get in a decent amount of books, caught up on more comics and added a 4th language (Thai) to my reading, although so far that&rsquo;s been limited to children&rsquo;s books.</p>
+
+<h2>Books:</h2>
+
+<ul>
+<li>Tom Vater: <em>The Cambodian Book of the Dead</em><br></li>
+<li>A.C. Bhaktivedanta Swami Prabhupāda: <em>On the Way to Krisna</em><br></li>
+<li>Timeri N. Murari: <em>The Taliban Cricket Club</em><br></li>
+<li>Jonas Jonasson: <em>The 100-Year-Old Man Who Climbed Out the Window and Disappeared</em><br></li>
+<li>Luis Sepúlveda: <em>Historia de una Gaviota y del Gato Que le Enseñó a Volar</em><br></li>
+<li>Charles Bukowski: <em>Post Office</em><br></li>
+<li>David Sedaris: <em>Let&rsquo;s Explore Diabetes with Owls</em><br></li>
+<li>Tom Vater: <em>The Devil&rsquo;s Road To Kathmandu</em><br></li>
+<li>Jean-Claude Izzo: <em>The Lost Sailors</em><br></li>
+<li>Sean Eads: <em>The Survivors</em><br></li>
+<li>Charles Bukowski: <em>Factotum</em><br></li>
+<li>Benny Lewis: <em>Fluent in 3 Months</em><br></li>
+<li>Paco Ignacio Taibo II: <em>Some Clouds: A Hector Belascoaran Shayne Detective Novel</em><br></li>
+<li>Charles Bukowski: <em>Women</em><br></li>
+<li>Aldous Huxley: <em>Brave New World Revisited </em><br></li>
+<li>NoViolet Bulawayo: <em>We Need New Names</em><br></li>
+<li>Alex MacCaw: <em>The Little Book on CoffeeScript</em><br></li>
+<li>Ernest Cline: <em>Ready Player One</em><br></li>
+<li>Andreas Altmann: <em>Der Preis der Leichtigkeit : eine Reise durch Thailand, Kambodscha und Vietnam</em><br></li>
+<li>Charles Bukowski: <em>Burning in Water, Drowning in Flame</em><br></li>
+<li>อีสป: <em>ราคานิทานอีสป2ภาษา อินทรีกับชาวนา</em><br></li>
+<li>Marco Ferrarese: <em>Nazi Goreng</em><br></li>
+<li>Nnedi Okorafor: <em>Who Fears Death</em><br></li>
+<li>Nick Wilgus: <em>Mindfulness and Murder: A Father Ananda Mystery</em><br></li>
+<li>Vikas Swarup: <em>Six Suspects</em><br></li>
+<li>Haruki Murakami: <em>Norwegian Wood</em><br></li>
+<li>Shamini Flint: <em>A Most Peculiar Malaysian Murder</em><br></li>
+<li>D.D. Johnston: <em>Peace, Love &amp; Petrol Bombs</em><br></li>
+<li>Mohsin Hamid: <em>How to Get Filthy Rich in Rising Asia</em><br></li>
+<li>Rodolfo Pardi: <em>The most important Chess Pattern - Critical Squares</em><br></li>
+<li>Dan Kennedy: <em>Loser Goes First: My Thirty-Something Years of Dumb Luck and Minor Humiliation</em><br></li>
+<li>Junot Díaz: <em>This Is How You Lose Her</em><br></li>
+<li>David Sedaris: <em>Dress Your Family in Corduroy and Denim</em><br></li>
+<li>รัชนี ศรีไพรวรรณ: <em>หนังสือเรียนภาษาไทย</em><br></li>
+<li>Ali Almossawi: <em>An Illustrated Book of Bad Arguments</em><br></li>
+<li>Avdi Grimm: <em>Confident Ruby</em><br></li>
+<li>Terry Pratchett: <em>Unseen Academicals</em><br></li>
+<li>Ioan Grillo: <em>El Narco: Inside Mexico&rsquo;s Criminal Insurgency</em><br></li>
+<li>Mikel Santiago: <em>Historia de un crimen perfecto</em><br></li>
+<li>Charles Bukowski: <em>Mockingbird Wish Me Luck</em><br></li>
+<li>Johnny Cash: <em>Cash</em><br></li>
+<li>Marc-Uwe Kling: <em>Die Känguru-Chroniken: Ansichten eines vorlauten Beuteltiers</em><br></li>
+<li>Barend Jan Terwiel: <em>Thailand&rsquo;s Political History: From the 13th century to recent times</em><br></li>
+<li>John Siracusa: <em>OS X 10.10 Yosemite: The Ars Technica Review</em><br></li>
+<li>Marc-Uwe Kling: <em>Das Känguru-Manifest</em><br></li>
+<li>Marc-Uwe Kling: <em>Die Känguru-Offenbarung</em><br></li>
+<li>Namita Gokhale: <em>The Book of Shiva</em><br></li>
+<li>Julia Alvarez: <em>In the Time of the Butterflies</em><br></li>
+<li>Peter F. Hamilton: <em>If at First&hellip;</em><br></li>
+<li>Simon St. Laurent: <em>Introducing Elixir: Getting Started in Functional Programming</em><br></li>
+<li><ol type="a">
+<li>David Eisenberg: <em>Études for Elixir</em><br></li>
+</ol>
+</li>
+<li>Anthony Grey: <em>Saigon: An Epic Novel of Vietnam</em><br></li>
+</ul>
+
+
+<h2>Comics:</h2>
+
+<ul>
+<li>Scott Snyder: <em>American Vampire, Vol. 2</em><br></li>
+<li>Jeff Lemire: <em>Sweet Tooth, Vol. 1: Out of the Deep Woods</em><br></li>
+<li>Jeff Lemire: <em>Sweet Tooth, Vol. 2: In Captivity</em><br></li>
+<li>Jeff Lemire: <em>Sweet Tooth, Vol. 3: Animal Armies</em><br></li>
+<li>Jeff Lemire: <em>Sweet Tooth, Vol. 4: Endangered Species</em><br></li>
+<li>Jeff Lemire: <em>Sweet Tooth, Vol. 5: Unnatural Habitats</em><br></li>
+<li>Jeff Lemire: <em>Sweet Tooth, Vol. 6: Wild Game</em><br></li>
+<li>Jason: <em>I Killed Adolf Hitler</em><br></li>
+<li>Fábio Moon: <em>Daytripper</em><br></li>
+<li>David Mazzucchelli: <em>Asterios Polyp</em><br></li>
+<li>Brian K. Vaughan: <em>Saga, Volume 3 (Saga #13-18)</em><br></li>
+<li>Fujiko F. Fujio: <em>DORAEMON Vol.4</em><br></li>
+<li>Ed Brubaker: <em>Deadenders</em><br></li>
+<li>Matt Fraction: <em>Sex Criminals, Vol. 1: One Weird Trick</em><br></li>
+<li>Scott Snyder: <em>American Vampire, Vol. 3</em><br></li>
+<li>Neil Gaiman: <em>Marvel 1602</em><br></li>
+<li>Ales Kot: <em>Zero, Vol. 1 An Emergency</em><br></li>
+<li>Fujiko F. Fujio: <em>DORAEMON Vol.5</em><br></li>
+<li>Jeph Loeb: <em>Spider-Man: Blue</em><br></li>
+<li>Mark Waid: <em>Irredeemable, Vol. 1</em><br></li>
+<li>Mark Waid: <em>Irredeemable, Vol. 2</em><br></li>
+<li>Mark Waid: <em>Irredeemable, Vol. 3</em><br></li>
+<li>Jonathan Hickman: <em>The Manhattan Projects, Vol. 1: Science, Bad</em><br></li>
+<li>Mark Waid: <em>Irredeemable, Vol. 4</em><br></li>
+<li>Mark Waid: <em>Irredeemable, Vol. 5</em><br></li>
+<li>Mark Waid: <em>Irredeemable, Vol. 6</em><br></li>
+<li>Mark Waid: <em>Irredeemable, Vol. 7</em><br></li>
+<li>Mark Waid: <em>Irredeemable, Vol. 8</em><br></li>
+<li>Mark Waid: <em>Irredeemable, Vol. 9</em><br></li>
+<li>Mark Waid: <em>Irredeemable, Vol. 10</em><br></li>
+<li>Hugh Howey: <em>Wool: The Graphic Novel</em><br></li>
+<li>Joe Sacco: <em>Palestine</em><br></li>
+<li>Ales Kot: <em>Zero, Vol. 2: At the Heart of It All</em><br></li>
+<li>Mike Richardson: <em>Crimson Empire, Volume 2: Council of Blood</em><br></li>
+<li>Brian K. Vaughan: <em>Saga, Volume 4</em><br></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[2013 reading list]]></title>
+    <link href="http://citizen428.github.io/blog/2014/01/01/2013-reading-list/"/>
+    <updated>2014-01-01T16:52:04+07:00</updated>
+    <id>http://citizen428.github.io/blog/2014/01/01/2013-reading-list</id>
+    <content type="html"><![CDATA[<p>Same post as every year, here are the book I read last year. However, this time around there are several novelties: first off, my Spanish got good enough to actually read books, so there are 3 languages now (English, German, Spanish). Also my Kindle Fire allowed me to get back into comics, so I (re-)read a lot of the classics and great stuff I missed out on over the years. Last but not least this is also the year where I started listening to audiobooks, mostly because they are really practical on long bus journeys because they keep you occupied but you can still enjoy the landscape.</p>
+
+<p>The links are affiliate links by the way, I have to finance my reading habit somehow ;-)</p>
+
+<h2>Books:</h2>
+
+<ul>
+<li><a href="http://www.amazon.com/gp/product/B003WUYQG4/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B003WUYQG4&amp;linkCode=as2&amp;tag=citizen4blog-20">Fear and Loathing in Las Vegas</a>, Hunter S. Thompson</li>
+<li><a href="http://www.amazon.com/gp/product/B002PMVY42/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B002PMVY42&amp;linkCode=as2&amp;tag=citizen4blog-20">Chronic City</a>, Jonathan Lethem</li>
+<li><a href="http://www.amazon.com/gp/product/B005AJWU7C/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B005AJWU7C&amp;linkCode=as2&amp;tag=citizen4blog-20">The Sheltering Sky</a>, Paul Bowles</li>
+<li><a href="http://www.amazon.com/gp/product/B0043RSJMC/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0043RSJMC&amp;linkCode=as2&amp;tag=citizen4blog-20">Eleven</a>, Mark Watson</li>
+<li><a href="http://www.amazon.com/gp/product/B007QQBRXU/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B007QQBRXU&amp;linkCode=as2&amp;tag=citizen4blog-20">Aristoi</a>, Walter Jon Williams</li>
+<li><a href="http://www.amazon.com/gp/product/B00EJRU0LO/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00EJRU0LO&amp;linkCode=as2&amp;tag=citizen4blog-20">Sin noticias de Gurb</a>,
+Eduardo Mendoza (Spanish)</li>
+<li><a href="http://www.amazon.com/gp/product/B001L83PLQ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B001L83PLQ&amp;linkCode=as2&amp;tag=citizen4blog-20">Half of a Yellow Sun</a>, Chimamanda Ngozi Adichie</li>
+<li><a href="http://www.amazon.com/gp/product/B004Q9U0MY/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004Q9U0MY&amp;linkCode=as2&amp;tag=citizen4blog-20">Essays in Humanism</a>, Albert Einstein</li>
+<li><a href="http://www.amazon.com/gp/product/B00BH51HWW/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00BH51HWW&amp;linkCode=as2&amp;tag=citizen4blog-20">The Legend of Sleepy Hollow</a>, Washington Irving</li>
+<li><a href="http://www.amazon.com/gp/product/B0036S4C6G/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0036S4C6G&amp;linkCode=as2&amp;tag=citizen4blog-20">A Visit from the Goon Squad</a>, Jennifer Egan</li>
+<li><a href="http://www.amazon.com/gp/product/B004QGYWIA/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004QGYWIA&amp;linkCode=as2&amp;tag=citizen4blog-20">The Bad Girl</a>, Mario Vargas Llosa</li>
+<li><a href="http://www.amazon.com/gp/product/0763624217/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0763624217&amp;linkCode=as2&amp;tag=citizen4blog-20">Dog</a>, Daniel Pennac</li>
+<li><a href="http://www.amazon.com/gp/product/B008NED4TO/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B008NED4TO&amp;linkCode=as2&amp;tag=citizen4blog-20">An Easy Thing</a>, Paco Ignacio Taibo II</li>
+<li><a href="http://www.amazon.com/gp/product/B007QRCX14/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B007QRCX14&amp;linkCode=as2&amp;tag=citizen4blog-20">One Life To Ride</a>, Ajit Harisinghani</li>
+<li><a href="http://www.amazon.com/gp/product/0060920084/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0060920084&amp;linkCode=as2&amp;tag=citizen4blog-20">The Lost Continent</a>, Bill Bryson</li>
+<li><a href="http://www.amazon.com/gp/product/3499248212/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=3499248212&amp;linkCode=as2&amp;tag=citizen4blog-20">Reise durch einen einsamen Kontinent</a>, Andreas Altmann</li>
+<li><a href="http://www.amazon.com/gp/product/B004KPM1LM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004KPM1LM&amp;linkCode=as2&amp;tag=citizen4blog-20">Damned</a>, Chuck Palahniuk</li>
+<li><a href="http://www.amazon.com/gp/product/8434843544/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=8434843544&amp;linkCode=as2&amp;tag=citizen4blog-20">El Rey Solito</a>, Rafael Estrada (Spanish)</li>
+<li><a href="http://www.amazon.com/gp/product/B0000BHOB9/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0000BHOB9&amp;linkCode=as2&amp;tag=citizen4blog-20">Bhakta - Eine indische Odysee</a>, Walther Eidlitz</li>
+<li><a href="http://www.amazon.com/gp/product/B003E749SA/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B003E749SA&amp;linkCode=as2&amp;tag=citizen4blog-20">Food Inc.: A Participant Guide</a>, Karl Weber</li>
+<li><a href="http://www.amazon.com/gp/product/B003WEA0EM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B003WEA0EM&amp;linkCode=as2&amp;tag=citizen4blog-20">La Ultima Jugada</a>, Fernando Trujillo Sanz (Spanish)</li>
+<li><a href="http://www.amazon.com/gp/product/B000JMKNQK/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B000JMKNQK&amp;linkCode=as2&amp;tag=citizen4blog-20">American Empire: Blood &amp; Iron</a>, Harry Turtledove</li>
+<li><a href="http://www.amazon.com/gp/product/9875667757/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=9875667757&amp;linkCode=as2&amp;tag=citizen4blog-20">El club de la pelea</a>, Chuck Palahniuk (Spanish)</li>
+<li><a href="http://www.amazon.com/gp/product/B002361MLA/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;cr">The Power of Now: A Guide to Spiritual Enlightenment</a>, Eckhart Tolle</li>
+<li><a href="http://www.amazon.com/gp/product/0307278042/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0307278042&amp;linkCode=as2&amp;tag=citizen4blog-20">Delirium</a>, Laura Restrepo</li>
+<li><a href="http://www.amazon.com/gp/product/B004TRQ996/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004TRQ996&amp;linkCode=as2&amp;tag=citizen4blog-20">Myths and Legends of All Nations</a>, Logan Marshall</li>
+<li><a href="http://www.amazon.com/gp/product/B003ZSIT0M/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B003ZSIT0M&amp;linkCode=as2&amp;tag=citizen4blog-20">Zoo City</a>, Lauren Beukes</li>
+<li><a href="http://www.amazon.com/gp/product/B00AFW4XRY/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00AFW4XRY&amp;linkCode=as2&amp;tag=citizen4blog-20">The Impressionist</a>, Hari Kunzru</li>
+<li><a href="http://www.amazon.com/gp/product/B002MQYOFW/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B002MQYOFW&amp;linkCode=as2&amp;tag=citizen4blog-20">The Hunger Games</a>, Suzanne Collins</li>
+<li><a href="http://www.amazon.com/gp/product/B00AUWJEKA/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00AUWJEKA&amp;linkCode=as2&amp;tag=citizen4blog-20">Fundamental Chess Patterns</a>, Rodolfo Pardi</li>
+<li><a href="http://www.amazon.com/gp/product/B0046ZRG0M/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0046ZRG0M&amp;linkCode=as2&amp;tag=citizen4blog-20">First They Killed My Father</a>, Loung Ung</li>
+<li><a href="http://www.amazon.com/gp/product/B008BU6XV6/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B008BU6XV6&amp;linkCode=as2&amp;tag=citizen4blog-20">Mi primera vez</a>, Juan Goytisolo et al. (Spanish)</li>
+<li><a href="http://www.amazon.com/gp/product/B002KJA97I/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B002KJA97I&amp;linkCode=as2&amp;tag=citizen4blog-20">Mother Night</a>, Kurt Vonnegut</li>
+<li><a href="http://www.amazon.com/gp/product/B0012GTZC0/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0012GTZC0&amp;linkCode=as2&amp;tag=citizen4blog-20">Eye of the Needle</a>, Ken Follett</li>
+<li>The Awakening of Lovingkindness: Chin Kung</li>
+<li>Essence of Islam: Islamic Propagation Centre International Malaysia</li>
+<li><a href="http://www.amazon.com/gp/product/B000FC22M2/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B000FC22M2&amp;linkCode=as2&amp;tag=citizen4blog-20">Bhagavad-Gita</a>, Edwin Arnold</li>
+<li><a href="http://www.amazon.com/gp/product/8495618389/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=8495618389&amp;linkCode=as2&amp;tag=citizen4blog-20">La Primera Detective De Botsuana</a>, Alexander McCall Smith (Spanish)</li>
+<li><a href="http://www.amazon.com/gp/product/B0019O6IWU/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0019O6IWU&amp;linkCode=as2&amp;tag=citizen4blog-20">Nonviolent Communication</a>, Marshall B. Rosenberg</li>
+<li><a href="http://www.amazon.com/gp/product/B00GK5P6L2/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00GK5P6L2&amp;linkCode=as2&amp;tag=citizen4blog-20">Ruby Under a Microscope</a>, Pat Shaughnessy</li>
+<li><a href="http://www.amazon.com/gp/product/B0081BTOJS/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0081BTOJS&amp;linkCode=as2&amp;tag=citizen4blog-20">The Magus</a>, John Fowles</li>
+<li><a href="http://www.amazon.com/gp/product/3351032056/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=3351032056&amp;linkCode=as2&amp;tag=citizen4blog-20">Die Dritte Jungfrau</a>, Fred Vargas</li>
+<li><a href="http://www.amazon.com/gp/product/B003SHDM8O/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B003SHDM8O&amp;linkCode=as2&amp;tag=citizen4blog-20">Tao Te Ching</a>, Lao Tzu</li>
+<li><a href="http://www.amazon.com/gp/product/B005307LJA/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B005307LJA&amp;linkCode=as2&amp;tag=citizen4blog-20">Hello Kitty Must Die</a>, Angela S. Choi</li>
+<li><a href="http://www.amazon.com/gp/product/B0044R96OQ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0044R96OQ&amp;linkCode=as2&amp;tag=citizen4blog-20">The Geography of Thought</a>, Richard E. Nisbett</li>
+<li><a href="http://www.amazon.com/gp/product/B004AHK9ZA/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004AHK9ZA&amp;linkCode=as2&amp;tag=citizen4blog-20">Machine of Death</a>, Ryan North</li>
+<li><a href="http://www.amazon.com/gp/product/B008VDNUNC/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B008VDNUNC&amp;linkCode=as2&amp;tag=citizen4blog-20">The Paranoid&rsquo;s Pocket Guide</a>, Cameron Tuttle</li>
+<li><a href="http://www.amazon.com/gp/product/B003H4I4JU/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B003H4I4JU&amp;linkCode=as2&amp;tag=citizen4blog-20">Speaker for the Dead</a>, Orson Scott Card</li>
+<li><a href="http://www.amazon.com/gp/product/B005X0K520/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B005X0K520&amp;linkCode=as2&amp;tag=citizen4blog-20">Year Zero</a>, Rob  Reid</li>
+<li><a href="http://www.amazon.com/gp/product/B004EPZ6CE/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004EPZ6CE&amp;linkCode=as2&amp;tag=citizen4blog-20">The Tiger&rsquo;s Wife</a>, Téa Obreht</li>
+<li><a href="http://www.amazon.com/gp/product/B000OI1AEI/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B000OI1AEI&amp;linkCode=as2&amp;tag=citizen4blog-20">The Bird Artist</a>, Howard Norman</li>
+<li><a href="http://www.amazon.com/gp/product/B000FCKENQ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B000FCKENQ&amp;linkCode=as2&amp;tag=citizen4blog-20">Anansi Boys</a>, Neil Gaiman</li>
+<li><a href="http://www.amazon.com/gp/product/B00AEUH112/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00AEUH112&amp;linkCode=as2&amp;tag=citizen4blog-20">AfroSF: Science Fiction by African Writers</a>, Ivor W. Hartmann</li>
+</ul>
+
+
+<h2>Comics:</h2>
+
+<ul>
+<li><a href="http://www.amazon.com/gp/product/B009POHIE8/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B009POHIE8&amp;linkCode=as2&amp;tag=citizen4blog-20">Transmetropolitan, Vol. 1: Back on the Street</a>, Warren Ellis</li>
+<li><a href="http://www.amazon.com/gp/product/B009POHJ5Q/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B009POHJ5Q&amp;linkCode=as2&amp;tag=citizen4blog-20">Transmetropolitan, Vol. 2: Lust for Life</a>, Warren Ellis</li>
+<li><a href="http://www.amazon.com/gp/product/B009POHJVA/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B009POHJVA&amp;linkCode=as2&amp;tag=citizen4blog-20">Transmetropolitan, Vol. 3: Year of the Bastard</a>, Warren Ellis</li>
+<li><a href="http://www.amazon.com/gp/product/B009POHJXS/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B009POHJXS&amp;linkCode=as2&amp;tag=citizen4blog-20">Transmetropolitan, Vol. 4: The New Scum</a>, Warren Ellis</li>
+<li><a href="http://www.amazon.com/gp/product/0394747232/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0394747232&amp;linkCode=as2&amp;tag=citizen4blog-20">Maus 1: A Survivor&rsquo;s Tale</a>, Art Spiegelman</li>
+<li><a href="http://www.amazon.com/gp/product/0679729771/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0679729771&amp;linkCode=as2&amp;tag=citizen4blog-20">Maus, Vol. 2: And Here My Troubles Began</a>, Art Spiegelman</li>
+<li><a href="http://www.amazon.com/gp/product/1401228194/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1401228194&amp;linkCode=as2&amp;tag=citizen4blog-20">Transmetropolitan, Vol. 5: Lonely City</a>, Warren Ellis</li>
+<li><a href="http://www.amazon.com/gp/product/B00BQOB1CU/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00BQOB1CU&amp;linkCode=as2&amp;tag=citizen4blog-20">Transmetropolitan, Vol. 6: Gouge Away</a>, Warren Ellis</li>
+<li><a href="http://www.amazon.com/gp/product/B0064W65UM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0064W65UM&amp;linkCode=as2&amp;tag=citizen4blog-20">V for Vendetta</a>, Alan Moore</li>
+<li><a href="http://www.amazon.com/gp/product/B00BWZ2YIS/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00BWZ2YIS&amp;linkCode=as2&amp;tag=citizen4blog-20">Transmetropolitan, Vol. 7: Spider&rsquo;s Thrash</a>, Warren Ellis</li>
+<li><a href="http://www.amazon.com/gp/product/B0064W66HY/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0064W66HY&amp;linkCode=as2&amp;tag=citizen4blog-20">Batman: The Dark Knight Returns</a>, Frank Miller</li>
+<li><a href="http://www.amazon.com/gp/product/B00D7X9PZI/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00D7X9PZI&amp;linkCode=as2&amp;tag=citizen4blog-20">Lex Luthor: Man of Steel</a>, Brian Azzarello</li>
+<li><a href="http://www.amazon.com/gp/product/B00A820WEY/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A820WEY&amp;linkCode=as2&amp;tag=citizen4blog-20">Betrayal, Vol. 1</a>, Scott Allie</li>
+<li><a href="http://www.amazon.com/gp/product/1401229360/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1401229360&amp;linkCode=as2&amp;tag=citizen4blog-20">Transmetropolitan, Vol. 8: Dirge</a>, Warren Ellis</li>
+<li><a href="http://www.amazon.com/gp/product/1401230490/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1401230490&amp;linkCode=as2&amp;tag=citizen4blog-20">Transmetropolitan, Vol. 9: The Cure</a>, Warren Ellis</li>
+<li><a href="http://www.amazon.com/gp/product/037571457X/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=037571457X&amp;linkCode=as2&amp;tag=citizen4blog-20">Persepolis: The Story of a Childhood</a>, Marjane Satrapi</li>
+<li><a href="http://www.amazon.com/gp/product/0375714669/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0375714669&amp;linkCode=as2&amp;tag=citizen4blog-20">Persepolis 2: The Story of a Return</a>, Marjane Satrapi</li>
+<li><a href="http://www.amazon.com/gp/product/1401231241/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1401231241&amp;linkCode=as2&amp;tag=citizen4blog-20">Transmetropolitan, Vol. 10: One More Time</a>, Warren Ellis</li>
+<li><a href="http://www.amazon.com/gp/product/B00A820W26/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A820W26&amp;linkCode=as2&amp;tag=citizen4blog-20">Crimson Empire, Volume 1</a>, Mike Richardson</li>
+<li><a href="http://www.amazon.com/gp/product/0060825456/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0060825456&amp;linkCode=as2&amp;tag=citizen4blog-20">Coraline</a>, P. Craig Russell</li>
+<li><a href="http://www.amazon.com/gp/product/0615314465/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0615314465&amp;linkCode=as2&amp;tag=citizen4blog-20">xkcd: volume 0</a>, Randall Munroe</li>
+<li><a href="http://www.amazon.com/gp/product/B0064W65N4/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0064W65N4&amp;linkCode=as2&amp;tag=citizen4blog-20">American Vampire Vol. 1</a>, Scott Snyder</li>
+<li><a href="http://www.amazon.com/gp/product/B00CF5BJTO/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00CF5BJTO&amp;linkCode=as2&amp;tag=citizen4blog-20">Blacksad</a>, Juan Díaz Canales</li>
+<li><a href="http://www.amazon.com/gp/product/B00CF5BJTY/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00CF5BJTY&amp;linkCode=as2&amp;tag=citizen4blog-20">Blacksad: A Silent Hell</a>, Juan Díaz Canales</li>
+<li><a href="http://www.amazon.com/gp/product/1607065983/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1607065983&amp;linkCode=as2&amp;tag=citizen4blog-20">Mind the Gap, Vol. 1: Intimate Strangers</a>, Jim McCann</li>
+<li><a href="http://www.amazon.com/gp/product/B00A7H2NC4/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A7H2NC4&amp;linkCode=as2&amp;tag=citizen4blog-20">Sin City, Vol. 1: The Hard Goodbye</a>, Frank Miller</li>
+<li><a href="http://www.amazon.com/gp/product/1607067331/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1607067331&amp;linkCode=as2&amp;tag=citizen4blog-20">Mind the Gap Volume 2: Wish You Were Here</a>, Jim McCann</li>
+<li><a href="http://www.amazon.com/gp/product/B00A7H2NLA/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A7H2NLA&amp;linkCode=as2&amp;tag=citizen4blog-20">Sin City, Vol. 2: A Dame to Kill For</a>, Frank Miller</li>
+<li><a href="http://www.amazon.com/gp/product/B00A7H2NHE/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A7H2NHE&amp;linkCode=as2&amp;tag=citizen4blog-20">Sin City, Vol. 3: The Big Fat Kill</a>, Frank Miller</li>
+<li><a href="http://www.amazon.com/gp/product/B00A7H2ODM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A7H2ODM&amp;linkCode=as2&amp;tag=citizen4blog-20">Sin City, Vol. 4: That Yellow Bastard</a>, Frank Miller</li>
+<li><a href="http://www.amazon.com/gp/product/0375714685/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0375714685&amp;linkCode=as2&amp;tag=citizen4blog-20">Epileptic</a>, David B.</li>
+<li><a href="http://www.amazon.com/gp/product/B00CWGLOY6/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00CWGLOY6&amp;linkCode=as2&amp;tag=citizen4blog-20">Saga, Volume 1</a>, Brian K. Vaughan</li>
+<li><a href="http://www.amazon.com/gp/product/B00DHIFKZM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DHIFKZM&amp;linkCode=as2&amp;tag=citizen4blog-20">Saga, Volume 2</a>, Brian K. Vaughan</li>
+<li><a href="http://www.amazon.com/gp/product/1607068117/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1607068117&amp;linkCode=as2&amp;tag=citizen4blog-20">Mind the Gap Volume 3: Out of Bodies TP</a>, Jim McCann</li>
+<li><a href="http://www.amazon.com/gp/product/0618871713/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0618871713&amp;linkCode=as2&amp;tag=citizen4blog-20">Fun Home</a>, Alison Bechdel</li>
+<li><a href="http://www.amazon.com/gp/product/B00A7H2OFU/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A7H2OFU&amp;linkCode=as2&amp;tag=citizen4blog-20">Sin City, Vol. 5: Family Values</a>, Frank Miller</li>
+<li><a href="http://www.amazon.com/gp/product/B00A7H2OHS/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A7H2OHS&amp;linkCode=as2&amp;tag=citizen4blog-20">Sin City, Vol. 6: Booze, Broads, and Bullets</a>, Frank Miller</li>
+<li><a href="http://www.amazon.com/gp/product/B00A7H2OL4/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A7H2OL4&amp;linkCode=as2&amp;tag=citizen4blog-20">Sin City, Vol. 7: Hell and Back</a>, Frank Miller</li>
+<li><a href="http://www.amazon.com/gp/product/B0064W667Y/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0064W667Y&amp;linkCode=as2&amp;tag=citizen4blog-20">Fables, Vol. 1: Legends in Exile</a>, Bill Willingham</li>
+<li><a href="http://www.amazon.com/gp/product/0785111751/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0785111751&amp;linkCode=as2&amp;tag=citizen4blog-20">Thor MAX: Vikings</a>, Garth Ennis</li>
+<li><a href="http://www.amazon.com/gp/product/098285370X/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=098285370X&amp;linkCode=as2&amp;tag=citizen4blog-20">Save Yourself, Mammal!</a>, Zach Weiner</li>
+<li><a href="http://www.amazon.com/gp/product/0982853718/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0982853718&amp;linkCode=as2&amp;tag=citizen4blog-20">The Most Dangerous Game</a>, Zach Weiner</li>
+<li><a href="http://www.amazon.com/gp/product/B005CRQ2IU/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B005CRQ2IU&amp;linkCode=as2&amp;tag=citizen4blog-20">Watchmen</a>, Alan Moore</li>
+<li><a href="http://www.amazon.com/gp/product/B00GTG4776/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00GTG4776&amp;linkCode=as2&amp;tag=citizen4blog-20">Doraemon, Vol. 1</a>, Fujiko F. Fujio</li>
+<li><a href="http://www.amazon.com/gp/product/B00HFMB8BQ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00HFMB8BQ&amp;linkCode=as2&amp;tag=citizen4blog-20">Doraemon, Vol. 2</a>,  Fujiko F. Fujio</li>
+<li><a href="http://www.amazon.com/gp/product/B0064W64RQ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0064W64RQ&amp;linkCode=as2&amp;tag=citizen4blog-20">Fables Vol. 2: Animal Farm</a>, Bill Willingham</li>
+<li><a href="http://www.amazon.com/gp/product/B00HFMB8AW/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00HFMB8AW&amp;linkCode=as2&amp;tag=citizen4blog-20">Doraemon, Vol. 3</a>, Fujiko F. Fujio</li>
+<li><a href="http://www.amazon.com/gp/product/1593077521/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1593077521&amp;linkCode=as2&amp;tag=citizen4blog-20">Signal to Noise</a>, Neil Gaiman</li>
+</ul>
+
+
+<h2>Audiobooks:</h2>
+
+<ul>
+<li><a href="http://www.amazon.com/gp/product/B002DYJR4G/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B002DYJR4G&amp;linkCode=as2&amp;tag=citizen4blog-20">Free: The Future of a Radical Price</a>, Chris Anderson</li>
+<li><a href="http://www.amazon.com/gp/product/B005CRQ2OE/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B005CRQ2OE&amp;linkCode=as2&amp;tag=citizen4blog-20">Boomerang: Travels in the New Third World</a>, Michael Lewis</li>
+<li><a href="http://www.amazon.com/gp/product/B002UK6NO0/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B002UK6NO0&amp;linkCode=as2&amp;tag=citizen4blog-20">The Art Of Happiness: A Handbook For Living</a>, Dalai Lama XIV</li>
+<li><a href="http://www.amazon.com/gp/product/159007257X/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=159007257X&amp;linkCode=as2&amp;tag=citizen4blog-20">The Hitchhiker&rsquo;s Guide to the Galaxy: The Complete Radio Series</a>, Douglas Adams</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Kindle Fire and I]]></title>
+    <link href="http://citizen428.github.io/blog/2013/06/07/my-kindle-fire-and-i/"/>
+    <updated>2013-06-07T16:52:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2013/06/07/my-kindle-fire-and-i</id>
+    <content type="html"><![CDATA[<p>Back in October I broke my trusty old <a href="http://www.amazon.com/gp/product/B004HZYA6E/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004HZYA6E&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Keyboard</a>, a rather
+annoying thing to happen at the beginning of a long trip. As a
+workaround I started to use the Kindle app on my iPod Touch, and while
+I did manage to finish several books on it, it&rsquo;s a bit annoying to
+read on such a small screen. So I decided to get a new device, but
+which one? Either the new <a href="http://www.amazon.com/gp/product/B008UB7DU6/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B008UB7DU6&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Paperwhite</a>, a <a href="http://www.amazon.com/gp/product/B008GGCAVM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B008GGCAVM&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Fire</a> or maybe
+just an iPad or an Android tablet with the Kindle app?</p>
+
+<p><strong>Tablet or Kindle?</strong></p>
+
+<p>Lately I got a lot more serious about my chess playing, so I own
+several books on the topic in digital form. Needless to say, they
+don&rsquo;t do too well on a &ldquo;classical&rdquo; Kindle, so I started considering a
+Fire or other tablet. Once I started thinking along those lines,
+another group of publications came to mind, comics and graphic
+novels. I used to love and collect them, but eventually stopped
+because they just take up way too much space. Nowadays a lot of
+publishers do have digital editions though, so this became the point
+where the Paperwhite got thrown out of the race.</p>
+
+<p><strong>The decision process</strong></p>
+
+<p>So I knew I wanted a tablet, and I knew I wanted something small. This
+left me with four contestants, the <a href="http://www.amazon.com/gp/product/B008GGCAVM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B008GGCAVM&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Fire HD 7&#8221;</a>, the <a href="http://www.amazon.com/gp/product/B00746W3HG/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00746W3HG&amp;linkCode=as2&amp;tag=citizen4blog-20">iPad Mini</a>,
+the <a href="http://www.amazon.com/gp/product/B009X3UW2G/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B009X3UW2G&amp;linkCode=as2&amp;tag=citizen4blog-20">Nexus 7</a> and the <a href="http://www.amazon.com/gp/product/B007P4VOWC/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B007P4VOWC&amp;linkCode=as2&amp;tag=citizen4blog-20">Galaxy Tab 2 7&#8221;</a>.</p>
+
+<p>I like Apple products, but I wasn&rsquo;t really willing to shell out the
+money for an iPad Mini (although you can get them for as little as 300
+bucks at Wallmart at the moment). One down, three to go. Now for the
+Nexus 7. It&rsquo;s a powerful Android device and also caters to the &ldquo;power
+user&rdquo;, whatever that&rsquo;s worth in the tablet world. Alas I found a ton
+of comments and posts about quality issues (DOA, glass coming off the
+screens, devices having to be RMA&rsquo;d after only two weeks etc.) so I
+was hesitant to get one, because the last thing I need while traveling
+is carrying around a dead device while trying to get it replaced. Also
+at $250 it was only $50 cheaper than an iPad Mini.</p>
+
+<p>That left the Kindle Fire HD and the Galaxy Tab 2, the latter of which
+is ridiculously cheap by now (the cheapest I saw was $150 with a
+cover), but it&rsquo;s also not exactly the newest piece of hardware. I
+still was leaning in the direction of the more general device
+though&hellip; Until I walked into a Radioshack during our layover in
+Florida, saw the Kindle Fire HD and bought it. Damn you, instant
+gratification!</p>
+
+<p><strong>First impressions</strong></p>
+
+<p>When I turned it on for the first time, I was amazed. The display is
+good, and I mean really good! As are the Dolby speakers. In short, I
+find the audio and video quality to be pretty amazing for a 7 inch
+device. Reading with the Kindle app is a pleasure, as is watching
+movies and listening to music. I actually really enjoy watching stuff
+on the Kindle Fire, much more than I expected on such a small screen.</p>
+
+<p>But then I started to explore a bit more, and I got disappointed
+rather fast. Amazon&rsquo;s user interface clearly was only built for two
+purposes: shopping and consuming content. The Kindle Fire is not meant
+to be a full-fledged Android tablet, it&rsquo;s a portable frontend to the
+Amazon store and cloud. Starting from the ads which get displayed when
+you wake up the device (I know, you can pay to have them removed),
+over the unavailability of many apps in Amazon&rsquo;s app store (for
+example all Google apps like GMail or Google Maps) to the extremely
+content focused UI, everything screams &ldquo;Consume!&rdquo; in a rather shrill
+and annoying voice.</p>
+
+<p><strong>Making it work for me</strong></p>
+
+<p>Luckily, there are lots of things you can do to make the Kindle Fire a
+lot more interesting, even without rooting it (something I really
+can&rsquo;t be bothered to do while on the road).</p>
+
+<p>First off, you will need an alternative app store. After some research
+I settled on <a href="http://slideme.org/">SlideME</a>, mostly because they actually check the
+applications they are offering, thus alleviating some of the security
+concerns I had about other offerings. Next I got myself a decent file
+manager in the form of <a href="http://slideme.org/application/es-file-explorer">ES File Explorer</a>, before setting out to
+find a decent browser. Yes, a browser, because somehow Amazon&rsquo;s own
+offering, called Silk, doesn&rsquo;t really cut it for me. It has good
+features, but I found it to be rather sluggish. And I had some privacy
+concerns about the cloud rendering, euphemistically called &ldquo;Accelerate
+Page Loading&rdquo; in the settings. Sure, you can choose to encrypt the
+data or disable this &ldquo;feature&rdquo; completely, but it did leave a somewhat
+bitter aftertaste. Most people seem to prefer <a href="http://slideme.org/application/dolphin-browser-0">Dolphin</a> or similar
+offerings for their Android devices, but I settled for the good old
+Firefox (or rather Aurora) in its <a href="http://www.mozilla.org/en-US/mobile/aurora/">mobile incarnation</a>. It&rsquo;s a solid app
+and so far provides everything I need, including a direct download
+from the website. This is how I interact with Google apps for the time
+being, I just use their mobile versions in the browser.</p>
+
+<p>App store fixed, file manager acquired, browser fixed, on to the
+horrible UI. Unfortunately there&rsquo;s not really too much you can do in
+this regard, but I found <a href="http://www.amazon.com/gp/product/B004VN7BRC/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004VN7BRC&amp;linkCode=as2&amp;tag=citizen4blog-20">Smart Taskbar</a> to be a huge
+improvement. It has a small icon for triggering the app from
+everywhere and features quick launch for up to five apps, configurable
+labels and much more. Not as good as having a &ldquo;normal&rdquo; Android
+interface, but definitely much better than the standard Kindle Fire
+offering.</p>
+
+<p>Last but not least I installed <a href="https://www.dropbox.com/android">Dropbox</a> for easier file exchange, which
+is super easy because there&rsquo;s a direct download link on the web
+site. I wish more developers would do this&hellip;</p>
+
+<p><strong>More content</strong></p>
+
+<p>Once I was done with the basics, it was time to add more content
+sources/viewers. <a href="http://www.amazon.com/gp/product/B004UBB1HQ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004UBB1HQ&amp;linkCode=as2&amp;tag=citizen4blog-20">ComiCat</a> is an exzellent CBR/CBZ reader and I
+highly recommend it for managing and reading your digital
+comics. <a href="http://www.amazon.com/gp/product/B005VVSQU4/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B005VVSQU4&amp;linkCode=as2&amp;tag=citizen4blog-20">ComiXology</a> (and its app Comics) also is a good addition,
+especially since they have a rather well stocked online store and a
+decent read-by-panel feature. Both of these apps are available in
+Amazon&rsquo;s app store ($3 for ComiCat, Comics is for free).</p>
+
+<p>For access to more books I added the <a href="http://slideme.org/application/gutenberg-ereader">Gutenberg eReader</a> app, a frontend
+to the well-known Project Gutenberg, as well as the <a href="http://slideme.org/application/nook">NOOK</a>
+software. Yes, NOOK, on a Kindle. As you can imagine this did not come
+from the official app store but from SlideME instead. Since I&rsquo;m
+usually really happy with Amazon&rsquo;s offerings I&rsquo;m not even sure I&rsquo;ll
+use it, but it&rsquo;s nice to have a choice and apparently the NOOK store
+has a dedicated comic section, so who knows&hellip;</p>
+
+<p>On to movies. While Amazon&rsquo;s streaming service is great (or so I&rsquo;ve
+heard), it&rsquo;s of no use to me while traveling. I do however have quite
+a few films and documentaries on my netbook (go check out <a href="http://vodo.net/">VODO</a>,
+there&rsquo;s some great free stuff on there), but I don&rsquo;t want to convert
+all of them to a format the Kindle understands. Enter <a href="http://www.amazon.com/gp/product/B00AHQNHSY/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00AHQNHSY&amp;linkCode=as2&amp;tag=citizen4blog-20">MoboPlayer</a>, a
+great free movie player that can deal with a ton of formats and even
+has a windowed mode. Yes, on a tablet!</p>
+
+<p>With comics, books and movies covered, what&rsquo;s left? Games! The guys
+over at <a href="https://www.humblebundle.com/">Humble Bundle</a> don&rsquo;t only compile great game bundles, they
+also have a nifty <a href="https://www.humblebundle.com/app">Android app</a>, that let&rsquo;s you manage all your
+purchases. Since they offered several Android bundles in the past I
+actually have a ton of games, and the Kindle Fire is an excellent
+device to play them on.</p>
+
+<p>Of course I have a lot more apps than that (Instapaper, Twitter,
+Flipboard, LinkedIn etc.) but they all come from the official app
+store and don&rsquo;t really need any explanation here.</p>
+
+<p><strong>Final verdict</strong></p>
+
+<p>After I got over my initial frustrations, I REALLY like my Kindle
+Fire. I guess it&rsquo;s all about expectation management. This is not a
+productivity device, it&rsquo;s a gadget for consuming media in all its
+forms. I especially love reading comics and graphic novels on it, the
+colors are great, and the resolution is high enough to actually be
+able to enjoy them, even on a rather small screen. It&rsquo;s also great for
+watching movies or listening to music and audiobooks, and since it&rsquo;s a
+Kindle, reading eBooks is a pleasure too once you configured the app
+to your liking.</p>
+
+<p>The hardware is fantastic (especially for $200) and the battery life
+(around 10-11h) is great. I don&rsquo;t exclude the possibility of rooting
+it in the future and maybe even flashing a different ROM, but for now
+I take the Kindle Fire for what it is and thoroughly enjoy it that
+way: during a bus ride the other day I read a book, watched a video,
+and read some comics, all on the same device.</p>
+]]></content>
+  </entry>
+  
+</feed>

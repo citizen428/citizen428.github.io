@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: productivity | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/productivity/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2011-11-13]]></title>
+    <link href="http://citizen428.github.io/blog/2011/11/13/information-overload-2011-11-13/"/>
+    <updated>2011-11-13T19:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2011/11/13/information-overload-2011-11-13</id>
+    <content type="html"><![CDATA[<p><blockquote><p>[&hellip;] Iran has as much chance of stopping an Israeli strike as Prime Minister Benjamin Netanyahu does of becoming an ayatollah [&hellip;]</p><footer><strong>Michael Peck <a href="http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full">http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full</a> The Persian Incursion</strong></footer></blockquote></p>
+
+<ul>
+<li><a href="http://www.economist.com/blogs/babbage/2011/11/artificial-intelligence">Difference Engine: Luddite legacy</a><br>Will more and more jobs be done by machines instead of people?</li>
+<li><a href="http://matadornetwork.com/abroad/the-kabul-you-dont-see-in-the-news/">The Kabul you don’t see in the news</a><br>Great photo series of present day Kabul street life.</li>
+<li><a href="http://discovermagazine.com/2011/sep/18-your-brain-knows-lot-more-than-you-realize">Your Brain Knows a Lot More Than You Realize</a><br>The brain&rsquo;s a fascinating organ.</li>
+<li><a href="http://zachholman.com/posts/swearing/">Swearing</a><br>GitHub&rsquo;s Zach Holman on why he swears in his talks.</li>
+<li><a href="http://online.wsj.com/article/SB10001424052970203499704576622550325233260.html">How a Few Bad Apples Ruin Everything</a><br>From personal experience, I&rsquo;d say this is true (and not only at work).</li>
+<li><a href="http://calnewport.com/blog/2011/11/11/if-youre-busy-youre-doing-something-wrong-the-surprisingly-relaxed-lives-of-elite-achievers/">If You’re Busy, You’re Doing Something Wrong</a><br>This is something I noticed in myself, if I clearly separate busy and free times and focus more on the tasks at hand, I&rsquo;m more productive.</li>
+<li><a href="http://arstechnica.com/tech-policy/news/2011/11/the-borderless-internet-is-officially-dead.ars">Remember the &ldquo;borderless&rdquo; Internet? It&rsquo;s officially dead</a><br>The idea of regulating the Internet seems to be popular all over the planet at the moment.</li>
+<li><a href="http://www.foreignpolicy.com/articles/2011/11/08/the_persian_incursion?page=full">The Persian Incursion</a><br>What insight can be gained from a strategy game about a potential Israeli air-strike on Iran? Interesting article from Foreign Policy.</li>
+<li><a href="http://www.grist.org/food/2011-11-11-slouching-toward-a-bananapocolypse">Slouching toward a bananapocalypse?</a><br>Will bananas soon disappear from our supermarkets? Good insights into the world food market and monocultures, which kinda made me think of <a href="http://www.amazon.com/Windup-Girl-Paolo-Bacigalupi/dp/1597801585/?tag=citizen4blog-20">The Windup Girl</a> (affiliate link) by Paolo Bacigalupi.</li>
+<li><a href="http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory">Shanghai Gets Supersized</a><br>This article about Shanghai, a city I called home for a year, sent me on trip down memory lane, so I want to share it with you.</li>
+</ul>
+
+
+<p><blockquote><p>We’re from Shanghai. We care only about money. You want to talk politics, go to Beijing.</p><footer><strong>Unnamed businessman <a href="http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory">http://www.smithsonianmag.com/travel/Shanghai-Gets-Supersized.html?c=y&amp;story=fullstory</a> Shanghai Gets Supersized</strong></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pimp my Mail.app!]]></title>
+    <link href="http://citizen428.github.io/blog/2006/08/07/pimp-my-mail-app/"/>
+    <updated>2006-08-07T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/08/07/pimp-my-mail-app</id>
+    <content type="html"><![CDATA[<p>I always found Apple&rsquo;s &ldquo;Mail.app&rdquo;:<a href="http://www.apple.com/macosx/features/mail/">http://www.apple.com/macosx/features/mail/</a> in its Tiger incarnation be a really neat MUA because of the nice interface and the good spam filter it offers. Unfortunately it lacks a little when you have to deal with large amounts of mail or want to use some of the more advanced features other MUAs have to offer, so I started looking around for some plug-ins. I soon found &ldquo;Hawk Wings&rdquo;:<a href="http://www.hawkwings.net/,">http://www.hawkwings.net/,</a> a site dedicated entirely to &ldquo;Tips and add-ons to make Apple Mail even better&rdquo;.</p>
+
+<p>Here&rsquo;s a list of the plug-ins I&rsquo;m using so far:</p>
+
+<ul>
+<li>&#8220;GPGMailBundle&#8221;:http://www.sente.ch/software/GPGMail/English.lproj/GPGMail.html (&#8220;Review&#8221;:http://www.hawkwings.net/2005/09/15/gpg-encrypting-messages-in-apple-mail/): Lacking support for &#8220;GPG&#8221;:http://gnupg.org/ in the default installation is IMHO one of the greatest shortcomings of Apple Mail. Fortunately enough there&#8217;s GPGMailBundle to remedy this situation. This nice little plug-in of course needs a working GPG installtion to function properly and I recommend &#8220;MacGPG&#8221;:http://macgpg.sourceforge.net/ in combination with GPGKeychainAccess from the same site for this. Once you&#8217;re set up and ready to go, GPGMailBundle can easily be configured from Mail&#8217;s preferences panel. A great plug-in, which makes Mail.app a lot more useful to me!</li>
+<li>&#8220;Letterbox&#8221;:http://harnly.net/software/letterbox/letterbox_0.16.html (&#8220;Review&#8221;:http://www.hawkwings.net/2006/06/02/three-pane-mailapp-hack-that-works/): If you too own a widescreen display, Letterbox may just be the plug-in you&#8217;ve been waiting for if you&#8217;re trying to make the most out of your screen real estate. What it does is arranging the interface into three vertical columns by putting the message preview right of the message pane instead of below it (as known from &#8220;Entourage&#8221;:http://www.microsoft.com/mac/products/entourage2004/entourage2004.aspx). This definitely depends on personal preference and reading habits, but so far I really like this layout, especially with all the additional information GPGMailBundle adds to the message preview.</li>
+<li>&#8220;Mail Act-On&#8221;:http://www.indev.ca/MailActOn.html (&#8220;Review&#8221;:http://www.hawkwings.net/2005/08/08/mail-act-on-getting-sorted-saving-time/): A cool plug-in which allows you to create a plethorea of different mail rules and to assign them to keystrokes, therefore making your mail sorting a whole lot faster and more efficient.</li>
+<li>&#8220;MailTags&#8221;:http://www.indev.ca/MailTags.html (&#8220;Review&#8221;:http://www.hawkwings.net/2005/08/24/managing-email-with-mailtags/): Coming from the same author, MailTags does for managing mails what Mail Act-On does for sorting them. It adds a little tag to all messages, which lets you add keywords, notes, due dates, priorities and other useful infos to them. And as if that&#8217;s not cool enough already, you can also build smart mail boxes from this metadata (which btw can be used and changed from Apple Mail rules). Now consider that this great plug-in also allows you to link messages to iCal to do items, and you&#8217;ll immediately see how useful this thing really is. The only thing that annoys me a little is the &#8220;begging&#8221; for donations. Not because I don&#8217;t think it&#8217;s worth the money - I&#8217;m probably going to donate something too - but because I think the PayPal button on the web site would have sufficed, since I really don&#8217;t want to see it all the time&#8230;</li>
+</ul>
+
+
+<p>That&rsquo;s it for today, but since there are a lot of other nice and useful looking plug-ins for Apple Mail, I&rsquo;m pretty sure there&rsquo;ll be a followup post to this in the near future.</p>
+
+<p>Setting Orange, Bureaucracy 1, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

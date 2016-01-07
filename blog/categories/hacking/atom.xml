@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hacking | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/hacking/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2015-02-15]]></title>
+    <link href="http://citizen428.github.io/blog/2015/02/15/information-overload-2015-02-15/"/>
+    <updated>2015-02-15T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2015/02/15/information-overload-2015-02-15</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://manoharvanga.com/hackme/">hackme: Deconstructing an ELF File</a><br>
+Great read. If you like this sort of thing, I can wholeheartedly recommend <a href="http://www.amazon.com/gp/product/1593273851/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1593273851&amp;linkCode=as2&amp;tag=citizen4blog-20&amp;linkId=TQPCBOME4UONL52F">A Bug Hunter&rsquo;s Diary</a> (affiliate link).</li>
+<li><a href="http://io9.com/10-things-people-once-complained-would-ruin-the-english-1684240298">10 Things People Once Complained Would Ruin The English Language</a><br>
+Next up: the Internet.</li>
+<li><a href="http://www.cnet.com/au/news/samsungs-warning-our-smart-tvs-record-your-living-room-chatter/">Samsung&rsquo;s warning: Our Smart TVs record your living room chatter</a><br>
+If you read the article, also read this comment: <a href="http://fyre.it/PlswOh.4">comment</a></li>
+<li><a href="http://thediplomat.com/2015/02/singapore-a-mutiny-like-no-other/">Singapore: A Mutiny Like No Other</a><br>
+A bit of history for the 50 years anniversary this year.</li>
+<li><a href="http://phys.org/news/2015-02-big-quantum-equation-universe.html">No Big Bang? Quantum equation predicts universe has no beginning</a><br>
+This week&rsquo;s most discussed Physic&rsquo;s article.</li>
+<li><a href="http://thespeaker.co/chinese-charge-government-officials-part-illegal-underground-tibetan-independence-organization/">Chinese charge government officials for being part of “illegal underground Tibetan independence organization”</a><br>
+I have to say I&rsquo;m somewhat surprised by this.</li>
+<li><a href="http://www.livetravelenjoy.com/a-city-where-everyone-works-there-is-no-police-and-the-salary-is-1200-euros/">A City Where Everyone Works, There is No Police, and the Salary is 1200 Euros</a><br>
+This is not some sort of socialist utopia, but a real place.</li>
+<li><a href="http://theanarchistlibrary.org/library/l-susan-brown-does-work-really-work">Does Work Really Work?</a><br>
+Somewhat older, but still a very good read.</li>
+<li><a href="http://www.sciencealert.com/spanish-is-the-happiest-language-chinese-is-the-most-balanced-new-study-reveals">Spanish is the happiest language, Chinese the most balanced, new study reveals</a><br>
+Language ans statistics, of course I like this.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Create script from IRB session]]></title>
+    <link href="http://citizen428.github.io/blog/2009/03/18/create-script-from-irb-session/"/>
+    <updated>2009-03-18T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/03/18/create-script-from-irb-session</id>
+    <content type="html"><![CDATA[<p>We all know the feeling: before starting a new script you hack around in IRB to try out some things, but once you&rsquo;re done you realize that now you either have to type everything again or copy/paste from the IRB session (or the history file if you keep one). So I set out on my search for a solution and found an &ldquo;old ruby-talk post by Gavin Sinclair&rdquo;:<a href="http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results,">http://markmail.org/message/tdb2boe6gdpiay7q#query:save%20code%20from%20irb+page:1+mid:jp64bdbszrqrurkx+state:results,</a> which implemented a method called <b>dumphist</b>, which I modified to my needs and put in my ~/.irbrc:</p>
+
+<script src="http://gist.github.com/71624.js"></script>
+
+
+<p>Let&rsquo;s look at the following IRB session:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;puts &amp;ldquo;hello&amp;rdquo;</span>
+</span><span class='line'><span class="sr">hello</span>
+</span><span class='line'><span class="sr">=&gt; nil</span>
+</span><span class='line'><span class="sr">puts &amp;ldquo;world&amp;rdquo;</span>
+</span><span class='line'><span class="sr">world</span>
+</span><span class='line'><span class="sr">=&gt; nil</span>
+</span><span class='line'><span class="sr">def foo</span>
+</span><span class='line'><span class="sr">..   puts &amp;lsquo;bar&amp;rsquo;</span>
+</span><span class='line'><span class="sr">..   end</span>
+</span><span class='line'><span class="sr">=&gt; nil</span>
+</span><span class='line'><span class="sr">dumphist(3, &amp;lsquo;test.rb&amp;rsquo;)</span>
+</span><span class='line'><span class="sr">=&gt; [&amp;ldquo;def foo&amp;rdquo;, &amp;ldquo;puts &amp;lsquo;bar&amp;rsquo;&amp;rdquo;, &amp;ldquo;end&amp;rdquo;]</span>
+</span></code></pre></td></tr></table></div></figure></p></blockquote></blockquote>
+
+<p>The last command created a file named test.rb for us, which contains only the method foo. :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tweet active Safari tab from command line]]></title>
+    <link href="http://citizen428.github.io/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
+    <updated>2009-02-27T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
+    <content type="html"><![CDATA[<p>Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn&rsquo;t already running, copy  the URL, shorten it, paste it into the client&hellip;</p>
+
+<p>I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It&rsquo;s just a quick and dirty hack, feel free to change it according to your needs&hellip; :-)</p>
+
+<script src="http://gist.github.com/71559.js"></script>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Summer Chaos]]></title>
+    <link href="http://citizen428.github.io/blog/2007/01/25/summer-chaos/"/>
+    <updated>2007-01-25T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2007/01/25/summer-chaos</id>
+    <content type="html"><![CDATA[<p>The date and location for the &ldquo;Chaos Communication Camp 2007&rdquo;:<a href="http://events.ccc.de/camp/">http://events.ccc.de/camp/</a> have now been confirmed! Hope to see you all there!</p>
+
+<p>Setting Orange, Chaos 25, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[23C3 here we come]]></title>
+    <link href="http://citizen428.github.io/blog/2006/12/25/23c3-here-we-come/"/>
+    <updated>2006-12-25T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/12/25/23c3-here-we-come</id>
+    <content type="html"><![CDATA[<p>In a little less than four hours, &ldquo;berq&rdquo;:<a href="http:berq.net,">http:berq.net,</a> &ldquo;lippi&rdquo;:<a href="http://twoday.tuwien.ac.at/perm,">http://twoday.tuwien.ac.at/perm,</a> &ldquo;red667&rdquo;:<a href="http://red667.org,">http://red667.org,</a> and me will leave for Berlin where we&rsquo;re going to attend the &ldquo;23C3&rdquo;:<a href="http://events.ccc.de/congress/2006/Home.">http://events.ccc.de/congress/2006/Home.</a> Since the &ldquo;Ã–BB&rdquo;:<a href="http://oebb.at">http://oebb.at</a> still sucks, we&rsquo;re once again going by bus, arriving tomorrow at around 6:30am. Judging from last year the time between our arrival until we can check into our &ldquo;hostel&rdquo;:<a href="http://www.hostels.com/en/availability.php/HostelNumber.10594">http://www.hostels.com/en/availability.php/HostelNumber.10594</a> at around noon will be spent drinking beer, which definitely isn&rsquo;t a recommended breakfast option. Kids, don&rsquo;t try this at home!</p>
+
+<p>I&rsquo;m pretty sure we&rsquo;ll once again have loads of fun, and unlike the last years I plan on regularly blogging and posting pics from the event, so stay tuned! Anyone interested in meeting up at the 23C3 either post a comment here or send a mail to my GMail account.</p>
+
+<p>Prickle-Prickle, The Aftermath 67, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

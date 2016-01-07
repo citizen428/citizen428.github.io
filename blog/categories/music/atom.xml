@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: music | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/music/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Random ramblings]]></title>
+    <link href="http://citizen428.github.io/blog/2007/07/08/random-ramblings/"/>
+    <updated>2007-07-08T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2007/07/08/random-ramblings</id>
+    <content type="html"><![CDATA[<p>*) Ordered a presale ticket for the &ldquo;Chaos Communication Camp 2007&rdquo;:<a href="https://events.ccc.de/camp/2007/Intro/">https://events.ccc.de/camp/2007/Intro/</a></p>
+
+<p>*) Got myself a pre-order copy of &ldquo;VMware Fusion&rdquo;:<a href="http://www.vmware.com/beta/fusion/">http://www.vmware.com/beta/fusion/</a> which is an absolute bargain for $39.99, since it would be well worth the $79.99 it will cost later on.</p>
+
+<p>*) Found out that &ldquo;Tim Fite&rdquo;:<a href="http://myspace.com/timfite">http://myspace.com/timfite</a> now also offers his 2004 album &ldquo;2 Minute Blues&rdquo; as a &ldquo;free download on his website&rdquo;:<a href="http://www.timfite.com/songs.html.">http://www.timfite.com/songs.html.</a> While you&rsquo;re there make sure to also get &ldquo;Over the Counter Culture&rdquo;, which probably is the best new album I&rsquo;ve heard this year.</p>
+
+<p>Life&rsquo;s (mostly) good!</p>
+
+<p>Prickle-Prickle, Confusion 43, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Finally...]]></title>
+    <link href="http://citizen428.github.io/blog/2006/11/05/finally/"/>
+    <updated>2006-11-05T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/11/05/finally</id>
+    <content type="html"><![CDATA[<p>&hellip;some random stuff I wanted to blog about for quite some time already:</p>
+
+<ul>
+<li>*Pearl Jam concert (September 25th@Wiener Stadthalle):* I have to admit that I&#8217;m not the biggest &#8220;PJ&#8221;:http://pearljam.com/ fan, but since Silvia was nice enough to invite me (thanks by the way!), I went to see one of the best concerts in a long time! The band and the atmosphere was great and I was quite surprised to see the traditionally rather lame crowd in Vienna so excited! (<a href="http://www.flickr.com/photos/citizen428/sets/72157594302284739">pics@flickr</a>)</li>
+
+<li>*Internet Explorer on Linux:* As we all know, IE sucks donkey balls. But some sites who don&#8217;t care about standards - and whose developers definitely should be first against the wall when the revolution comes - only work with Microsoft&#8217;s browser. But don&#8217;t despair, help is available in form of &#8220;IEs4Linux&#8221;:http://www.tatanka.com.br/ies4linux/page/Main_Page, a shellscript which downloads IE and automatically configures Wine for it. Flash 9 is also included and if you really insist on it, you can run 3 different versions of IE at the same time (5, 5.5 and 6), which is pretty handy for web developers. I have IE6 installed on my Kubuntu system for quite a while now, and in the rare cases I really need it, it works like a charm.</li>
+
+<li>*Pokerstars client on Linux:* Most online Poker sites don&#8217;t seem to be interested in Linux users, since the clients they offer are mostly only available for Windows. Some of them at least offer Java clients, but with my general dislike for most things Java and my strong preference of &#8220;Pokerstars&#8221;:http://www.pokerstars.com/ over other Poker sites, I gave the client a shot under Wine and was really pleased to find out that it just works (tm). Of course it would be much nicer to have a native client, but for the time being I&#8217;m happy enough with this workaround.</li>
+
+<li>*UEFA cup Pasching vs. Livorno@Pasching:* Went with some other Sportclub fans to see the UEFA cup match Pasching vs. Livorno in Pasching. It was a great day, and I still laugh my ass off when I think about the policemen and -women who found our little group of around 25 people rooting for the away team  (as Austrian you were only able to buy tickets for the home sectors) so frightening, that they not only surrounded us for the whole match, but even put on their riot gear. And there I was, thinking every policeman in Austria already knows that we are only dangerous to ourselves. ;)</li>
+
+<li>*man pages:* Read them! You know you should! Even if you believe you know an application. E.g.: &#8220;man sshd&#8221;, section &#8220;AUTHORIZED_KEYS FILE FORMAT&#8221;. Or am I really the only person who didn&#8217;t know about all the useful options like &#8220;from&#8221;, &#8220;command&#8221;, &#8220;no-port-forwarding&#8221;, &#8220;no-pty&#8221; etc.?
+
+<li>*Mac stuff:* Here&#8217;s some cool widgets and plugins which make the OS X experience even nicer: &#8220;iTunesShut&#8221;:http://homepage.mac.com/WebObjects/FileSharing.woa/wa/iTunesShut.zip.zip?a=downloadFile&user=gugulino1&path=.Public/iTunesShut.zip, &#8220;VI Input Manager&#8221;:http://www.corsofamily.net/jcorso/vi/, &#8220;Application Update Widget&#8221;:http://www.dashboardwidgets.com/showcase/details.php?wid=1510 (thanks Moose!), &#8220;AppleScript Shell&#8221;:http://hayne.net/MacDev/Ash/, &#8220;Doug&#8217;s AppleScripts for iTunes&#8221;:http://www.dougscripts.com/itunes/index.php
+</ul>
+
+
+<p><br />
+Last but not least here are some funny/interesting things I found over the past few weeks:</p>
+
+<ul>
+<li>&#8220;Programming Language Inventor or Serial Killer&#8221;:http://www.malevole.com/mv/misc/killerquiz (via <a href="http://metalab.at/wiki/Hauptseite">metalab-members</a>)</li>
+
+<li>*Robot chicken:* Great stop motion animation. Examples: &#8220;1&#8221;:http://video.google.com/videoplay?docid=-2660802447916665129&q=robot+chicken, &#8220;2&#8221;:http://video.google.com/videoplay?docid=4651757054772769361&q=robot+chicken, &#8220;3&#8221;:http://video.google.com/videoplay?docid=5395083952125133994&q=robot+chicken (thanks <a href="http://gnulords.org/~colo/serendipity/">colo</a>!)</li>
+
+<li>&#8220;ELP Laser Turntable&#8221;:http://elpj.com/: &#8220;bonki&#8221;:http://bonki.net/blog/ posted this a while back, but I never came around to post it here.</li>
+
+<li>&#8220;Bruce Schreier facts&#8221;:http://geekz.co.uk/schneierfacts/fact/128: &#8216;cause Chuck Norris isn&#8217;t as cool as Bruce! And as we all know: Bruce Schneier tapdances in Morse Code. (via <a href="http://berq.net/">berq</a>)</li>
+
+<li>&#8220;China Makes a Sexy, Slutty Robot&#8221;:http://www.gizmodo.com/gadgets/robots/china-makes-a-sexy-slutty-robot-210802.php: What can I say&#8230; (thanks <a href="http://www.leyrer.priv.at/martin/">m3</a>)</li>
+</ul>
+
+
+<p>Prickle-Prickle, The Aftermath 17, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hits galore]]></title>
+    <link href="http://citizen428.github.io/blog/2005/10/16/hits-galore/"/>
+    <updated>2005-10-16T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/10/16/hits-galore</id>
+    <content type="html"><![CDATA[<p>As I&rsquo;m listening to a lot of music, I thought it may be a nice idea to periodically post my favourite songs.</p>
+
+<h1>5: &ldquo;Against Me!&rdquo;:<a href="http://www.againstme.net/">http://www.againstme.net/</a> - &ldquo;Baby, I&rsquo;m an Anarchist!&rdquo;: Taken from their great album &ldquo;Reinventing Axl Rose&rdquo;, this song is the quintessence of why Against Me! are one of the greatest bands I&rsquo;ve ever seen live: energetic and sometimes angry folk punk with great lyrics, that just makes you raise your fists in the air and sing along.</h1>
+
+<h1>4: &ldquo;Wolfgang Ambros&rdquo;:<a href="http://www.wolfgangambros.at/">http://www.wolfgangambros.at/</a> - &ldquo;Die Kinettn wo i schlof&rdquo;: Recently I&rsquo;ve been listening to a lot of Wolfgang Ambros, and I have to say that the music he recorded during the 1970s and early 1980s is defintely among the best music with German (actually Austrian dialect) lyrics I&rsquo;ve ever heard. If you like Wolfgang&rsquo;s music as much as I do, you probably should also check out the DVD &ldquo;Hoffnungslos selbstbewusst&rdquo;:<a href="http://www.amazon.de/exec/obidos/ASIN/B00006J9RG/qid=1129453736/sr=8-2/ref=sr_8_xs_ap_i2_xgl/028-8208621-3236532.">http://www.amazon.de/exec/obidos/ASIN/B00006J9RG/qid=1129453736/sr=8-2/ref=sr_8_xs_ap_i2_xgl/028-8208621-3236532.</a></h1>
+
+<h1>3: &ldquo;Gogol Bordello&rdquo;:<a href="http://www.gogolbordello.com/">http://www.gogolbordello.com/</a> - &ldquo;Start Wearing Purple&rdquo;: Once &ldquo;described as&rdquo;:<a href="http://indiekids.org/2004/04/13/drink-locally-fck-globally/">http://indiekids.org/2004/04/13/drink-locally-fck-globally/</a> &ldquo;Psychopathic Ukrainian Gypsy immigrant folk punk rock&rdquo;, one immediately knows why Gogol Bordello and their album &ldquo;Gipsy Punks&rdquo; are as great as they are.</h1>
+
+<h1>2: &ldquo;Tim Fite&rdquo;:<a href="http://www.timfite.com/">http://www.timfite.com/</a> - &ldquo;Away From The Snakes&rdquo;: &ldquo;Teaching The Indie Kids To Dance Again&rdquo;:<a href="http://indiekids.org/">http://indiekids.org/</a> described this song in the following way: &ldquo;This is every stereotype of country music you&rsquo;ve ever heard done right. Music for a whiskey soaked night on the plain with a guitar, drifting to nowhere, but desperate to get away, from cheating wives, lying thieves, and generally being shit on&rdquo;. Great stuff, you should check out the full album called &ldquo;Gone Ain&rsquo;t Gone&rdquo;!</h1>
+
+<h1>1: &ldquo;Ninja High School&rdquo;:<a href="http://www.ninjahighschool.info/">http://www.ninjahighschool.info/</a> - &ldquo;It&rsquo;s alright to fight&rdquo;: What can be better than a band that describes its own music as &ldquo;positive hardcore dance-rap&rdquo;? Not much, that&rsquo;s for sure! At least I&rsquo;m completely hooked on their style and am really waiting for their new album &ldquo;Young Adults Against Suicide&rdquo;.</h1>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lazy sunday afternoon]]></title>
+    <link href="http://citizen428.github.io/blog/2005/09/11/lazy-sunday-afternoon/"/>
+    <updated>2005-09-11T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/09/11/lazy-sunday-afternoon</id>
+    <content type="html"><![CDATA[<p>Today is the perfect example of a nice and lazy afternoon, and I just love it! After having a great brunch at &ldquo;HighTea&rdquo;:<a href="http://hightea.at/">http://hightea.at/</a> where we had toasties, antipasti, bagles and lots of other really good stuff, I&rsquo;m just hanging around in front of my PC reading, doing some Gentoo work and generally having a good time. Live can be so easy&hellip; :)</p>
+
+<p>Now let&rsquo;s see if I have anything interesting to tell you:<!--more-->
+* &ldquo;OSNews&rdquo;:<a href="http://www.osnews.com/">http://www.osnews.com/</a> had a &ldquo;review of GNOME 2.12&rdquo;:<a href="http://www.osnews.com/story.php?news_id=11800">http://www.osnews.com/story.php?news_id=11800</a> and Eugenia seems to enjoy the new release as much as I do. Although she also points out some drawbacks of the desktop environment as lacking good API docs and a RAD tool, she concludes that &ldquo;[&hellip;] Gnome 2.12 is the best X11 DE there is&rdquo;. You wonder why? Because &ldquo;all in all, Gnome is today more powerful, better integrated to the underlying system with DBUS and HAL, looks good, behaves as expected and, most of all, it&rsquo;s simple and clean&rdquo;. I couldn&rsquo;t agree more! (via &ldquo;FootNotes&rdquo;:<a href="http://www.gnomedesktop.org">http://www.gnomedesktop.org</a>)
+<br>
+* A fellow Gentoo developer convinced me to start hanging out on IRC regularly, which I now do despite being a little reluctant at first. But after two or three weeks I can see all the positive effects this has had for my dev work, which may also have to do with my further increased feeling of being part of a larger community. Directly (as in chat vs. mail) communicating with people really can do wonders for understanding each other better&hellip; If you got something you want to tell me, you&rsquo;ll find me as &lsquo;citizen428&rsquo; (surprising, huh?) on Freenode where I usually can be found in #gentoo-bsd, #gentoo-dev, #gentoo-ruby and #nitro.
+<br>
+* I&rsquo;ve been looking for new Linux games and have found &ldquo;OpenAnno&rdquo;:<a href="http://www.lanadminsystem.de/cgi-bin/Lanas.pl?OPENANNO">http://www.lanadminsystem.de/cgi-bin/Lanas.pl?OPENANNO</a> and &ldquo;The Mana World&rdquo;:<a href="http://themanaworld.org/,">http://themanaworld.org/,</a> which both look promising but are still in early stages of development.
+<br>
+* Read a &ldquo;shocking account&rdquo;:<a href="http://www.filmstadtinferno.de/offener_kanal.htm">http://www.filmstadtinferno.de/offener_kanal.htm</a> (in German) of how the &ldquo;Livorno&rdquo;:<a href="http://www.livornocalcio.it/">http://www.livornocalcio.it/</a> &ldquo;Ultras&rdquo;:<a href="http://en.wikipedia.org/wiki/Ultras">http://en.wikipedia.org/wiki/Ultras</a> and their German visitors got treated by the police in Rome after the game against Lazio. Carabinieri vaffanculo!
+<br>
+* Want to create your own first person shooter? Have fun with &ldquo;FPS Creator&rdquo;:<a href="http://www.fpscreator.com/!">http://www.fpscreator.com/!</a> It uses DirectX though, so you&rsquo;re stuck to Windows&hellip; :(
+<br>
+* For all you music lovers out there, make sure to check out the Flash magazine &ldquo;Music Hurts&rdquo;:<a href="http://musichurts.com/!">http://musichurts.com/!</a> I got the link from the current print issue of &ldquo;de:bug&rdquo;:<a href="http://www.de-bug.de/,">http://www.de-bug.de/,</a> a magazine you definitely should check out when you&rsquo;re into electronic music!</p>
+
+<p>That&rsquo;s it for today, see you at the next episode of &ldquo;citizen428&rsquo;s random link dump&rdquo;!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lessons learned from Dawson's Creek]]></title>
+    <link href="http://citizen428.github.io/blog/2005/07/15/lessons-learned-from-dawsons-creek/"/>
+    <updated>2005-07-15T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/07/15/lessons-learned-from-dawsons-creek</id>
+    <content type="html"><![CDATA[<p>As recent surveys have shown I haven&rsquo;t blogged in over two month. That&rsquo;s quite a long time even for my standards, and I have no one to blame for this lack of communications besides myself (believe me, I really tried to find a scapegoat).</p>
+
+<p>True, my dear old laptop is still broken, but there&rsquo;s my trustworthy Athlon 650 desktop that currently serves as my main computer. For all of you who wonder what I&rsquo;ve been up to lately, here&rsquo;s a short overview of what I spent my time on over the last few weeks.</p>
+
+<!--more-->
+
+
+<p><b>Games:</b>
+Yes, I&rsquo;m still pretty much addicted to &ldquo;Hattrick&rdquo;:<a href="http://www.hattrick.org">http://www.hattrick.org</a> and the fact that I finally have good chances to promote to China&rsquo;s top division makes the game still exciting for me, even after more than 2,5 years.</p>
+
+<p>Unfortunately I&rsquo;ve never been the kind of guy who&rsquo;s to be satisfied by only one addiction, so I&rsquo;ve started to play a really nice Massive Multiplayer Browser RPG called &ldquo;Pardus&rdquo;:<a href="http://www.pardus.at">http://www.pardus.at</a> which is developed by Austrian students. Probably the best aspect about the game is the role-playing going on, which can best be seen at excellent fan sites as &ldquo;The Tiacken Tribune&rdquo;:<a href="http://pardus.span.com.sg/">http://pardus.span.com.sg/</a> or the &ldquo;Pardus Chronicles&rdquo;:<a href="http://s9.invisionfree.com/TheChronicles/">http://s9.invisionfree.com/TheChronicles/</a> (here are two of &ldquo;my&rdquo;:<a href="http://s9.invisionfree.com/TheChronicles/index.php?showtopic=47">http://s9.invisionfree.com/TheChronicles/index.php?showtopic=47</a> &ldquo;stories&rdquo;:<a href="http://s9.invisionfree.com/TheChronicles/index.php?showtopic=23">http://s9.invisionfree.com/TheChronicles/index.php?showtopic=23</a> - Okami&rsquo;s the name of my character, Red Cell is the alliance I&rsquo;m a part of - and soon there are more to come!). Go check it out now, Pardus is really cool!</p>
+
+<p><b>Sports:</b>
+It&rsquo;s summer and I&rsquo;m doing lots of sports once again! Most importantly I&rsquo;ve started to play &ldquo;water polo&rdquo;:<a href="http://en.wikipedia.org/wiki/Water_polo">http://en.wikipedia.org/wiki/Water_polo</a> for the &ldquo;Wiener Sport-Club&rdquo;:<a href="http://www.wsc-waterpolo.at.tf/.">http://www.wsc-waterpolo.at.tf/.</a> It&rsquo;s a really tough sport and during the first few training sessions my body definitely hated me more than once, but we&rsquo;re making pretty good overall progress as a team and will have 3 weekly training sessions for the next month! :) Our first official friendly game should be played this fall, I will make sure to announce the date in due time.</p>
+
+<p>Besides that I participated in a great Snooker course held by &ldquo;Michael Kreuziger&rdquo;:<a href="http://www.globalsnookercentre.co.uk/files/Players/Global_Europe/Global_Austria/aut_m_kreuziger.htm,">http://www.globalsnookercentre.co.uk/files/Players/Global_Europe/Global_Austria/aut_m_kreuziger.htm,</a> Austria&rsquo;s only internationally certified Snooker coach. This surely improved my game a whole lot, although I still didn&rsquo;t manage to get a break higher than 18 points&hellip; :(</p>
+
+<p>I&rsquo;ve also participated in two football tournaments: The first was held near Linz and was organized by the Linzer Stahlfront, whereas from July 6th to July 10th &ldquo;we&rdquo;:<a href="http://www.friedhofstrib%C3%BCne.at">http://www.friedhofstrib%C3%BCne.at</a> played at the &ldquo;Mondiali Antirazzisti&rdquo;:<a href="http://www.mondialiantirazzisti.org/">http://www.mondialiantirazzisti.org/</a> in Montecchio, which was a great experience. I plan on writing another entry solely for this event, but at my current update rate this may well take a while.</p>
+
+<p><b>Reading:</b>
+If you haven&rsquo;t done so, go and read Neal Stephenson&rsquo;s &ldquo;Quicksilver&rdquo;:<a href="http://www.amazon.de/exec/obidos/ASIN/3442545684/qid=1121464817/sr=8-1/ref=pd_ka_1/028-0962384-5250117,">http://www.amazon.de/exec/obidos/ASIN/3442545684/qid=1121464817/sr=8-1/ref=pd_ka_1/028-0962384-5250117,</a> the first part of his &ldquo;Baroque Cycle&rdquo;. As the thrilogy amounts to a massive total of around 2700 pages, it might be advisable to check &ldquo;some&rdquo;:<a href="http://www.amazon.de/exec/obidos/ASIN/014027037X/qid=1121464936/sr=2-1/ref=sr_2_11_1/028-0962384-5250117">http://www.amazon.de/exec/obidos/ASIN/014027037X/qid=1121464936/sr=2-1/ref=sr_2_11_1/028-0962384-5250117</a> &ldquo;other&rdquo;:<a href="http://www.amazon.de/exec/obidos/ASIN/0553573861/qid=1121464960/sr=2-2/ref=sr_2_11_2/028-0962384-5250117">http://www.amazon.de/exec/obidos/ASIN/0553573861/qid=1121464960/sr=2-2/ref=sr_2_11_2/028-0962384-5250117</a> &ldquo;books&rdquo;:<a href="http://www.amazon.de/exec/obidos/ASIN/0060512806/qid=1121464994/sr=2-1/ref=sr_2_11_1/028-0962384-5250117">http://www.amazon.de/exec/obidos/ASIN/0060512806/qid=1121464994/sr=2-1/ref=sr_2_11_1/028-0962384-5250117</a> by the same author first though. Over the last two years I&rsquo;ve read nearly all of them and enjoyed every single page.</p>
+
+<p>Another book that I find highly entertaining is Gerd Koenen&rsquo;s &ldquo;Das rote Jahrzehnt&rdquo;:<a href="http://www.amazon.de/exec/obidos/ASIN/3596155738/qid=1121465084/sr=1-1/ref=sr_1_10_1/028-0962384-5250117,">http://www.amazon.de/exec/obidos/ASIN/3596155738/qid=1121465084/sr=1-1/ref=sr_1_10_1/028-0962384-5250117,</a> which offers an interesting perspective on Germany&rsquo;s political left in the 1960s.</p>
+
+<p>Next on my list is Tim Park&rsquo;s &ldquo;A Season with Verona&rdquo;:<a href="http://www.amazon.de/exec/obidos/ASIN/0099422670/qid=1121465261/sr=1-1/ref=sr_1_8_1/028-0962384-5250117,">http://www.amazon.de/exec/obidos/ASIN/0099422670/qid=1121465261/sr=1-1/ref=sr_1_8_1/028-0962384-5250117,</a> a book that I&rsquo;ve wanted to read for quite some time now.</p>
+
+<p><b>Movies:</b>
+I&rsquo;ve also seen some pretty good movies over the last few weeks and especially want to recommend &ldquo;The Woodsman&rdquo;:<a href="http://www.imdb.com/title/tt0361127/,">http://www.imdb.com/title/tt0361127/,</a> which features a great Kevin Bacon. I also really enjoyed &ldquo;The Machinist&rdquo;:<a href="http://www.imdb.com/title/tt0361862/,">http://www.imdb.com/title/tt0361862/,</a> where Christian Bale once again delivers an excellent performance. &ldquo;Football Factory&rdquo;:<a href="http://www.imdb.com/title/tt0385705/">http://www.imdb.com/title/tt0385705/</a> was also pretty good and has a cool sound track, so if you&rsquo;re too lazy to read the book by John King, try to at least see the movie. And as I just have finished watching it once again, I&rsquo;d also like to recommend Alfred Hitchcock&rsquo;s &ldquo;Vertigo&rdquo;:<a href="http://www.imdb.com/title/tt0052357/,">http://www.imdb.com/title/tt0052357/,</a> which I think is a really great movie about fear, love and obsession.</p>
+
+<p><b>Music:</b>
+Not only did &ldquo;Breakcore&rdquo;:<a href="http://en.wikipedia.org/wiki/Breakcore">http://en.wikipedia.org/wiki/Breakcore</a> help me to fill the void Drum and Bass left in the electronic dance music genre (it just got too boring after all those years), I also got hooked by Indian &ldquo;bhangra&rdquo;:<a href="http://en.wikipedia.org/wiki/Bhangra">http://en.wikipedia.org/wiki/Bhangra</a> and &ldquo;desi&rdquo;:<a href="http://en.wikipedia.org/wiki/Desi#Music">http://en.wikipedia.org/wiki/Desi#Music</a> music. And if that&rsquo;s not enough, the great &ldquo;Against Me!&rdquo;:<a href="http://www.againstme.net/">http://www.againstme.net/</a> are coming to Vienna next Wednesday, so I can once again see them in the EKH!
+On a sidenote I advise you to check out New Model Army&rsquo;s formidable album &ldquo;Thunder and Consolation&rdquo;, which despite its 16 years of age is still absolutely fantastic!</p>
+
+<p>That was a pretty long and unorderly rant, and still there have been none of the promised lessons learned from Dawson&rsquo;s Creek. The morale of the story is that there probably are none, besides living your life instead of only talking about it like certain characters in this show seem to do.</p>
+]]></content>
+  </entry>
+  
+</feed>

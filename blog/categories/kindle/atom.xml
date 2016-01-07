@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: kindle | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/kindle/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My first week with the Kindle 3]]></title>
+    <link href="http://citizen428.github.io/blog/2010/09/14/my-first-week-with-the-kindle-3/"/>
+    <updated>2010-09-14T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2010/09/14/my-first-week-with-the-kindle-3</id>
+    <content type="html"><![CDATA[<p>tl;dr: Kindle 3 == teh awesum.</p>
+
+<p>One week ago I finally got my &ldquo;Kindle 3&rdquo;:<a href="http://www.amazon.com/Kindle-Wireless-Reader-Wifi-Graphite/dp/B002Y27P3M">http://www.amazon.com/Kindle-Wireless-Reader-Wifi-Graphite/dp/B002Y27P3M</a> and it&rsquo;s about time for a review. Here we go: Awesome! That&rsquo;s it, &lsquo;nuff said. In all seriousness, the Kindle may well be my favorite gadget and that comes from somebody who owns a MacBook Pro, an Android phone, an iPod Touch and a Nintendo DS.</p>
+
+<p>First off, at around 180 Euro for the WiFi+3G version it&rsquo;s quite a bargain. I love the form factor, and the software is quite ok too, especially after the latest update. The built-in dictionary has already proven to be useful on several occasions and I&rsquo;m sure I&rsquo;ll start using the annotation feature rather sooner than later. But now for the most important part, the &ldquo;e-paper&rdquo;:<a href="http://en.wikipedia.org/wiki/Electronic_paper">http://en.wikipedia.org/wiki/Electronic_paper</a> display. It&rsquo;s an absolute pleasure to read on, I find the experience to be highly immersive. Since Saturday I read most of Cory Doctorow&rsquo;s novel &ldquo;Little Brother&rdquo;:<a href="http://craphound.com/littlebrother/download/">http://craphound.com/littlebrother/download/</a> on it, and am surprised how the Kindle just seems to disappear while I read. Hands-free reading without the need to keep the book open is pretty sweet too.</p>
+
+<p>As a book nerd and regular reader (I usually read between 50-60 books a year) I still can&rsquo;t entirely abandon paper books though, there&rsquo;s just something magical about their feel and smell. I also tend to pick up a lot of my reading material from second-hand shops, &ldquo;Bookcrossing&rdquo;:<a href="http://www.bookcrossing.com/">http://www.bookcrossing.com/</a> or &ldquo;Offener Buecherschrank&rdquo;:<a href="http://www.offener-buecherschrank.at/,">http://www.offener-buecherschrank.at/,</a> something which is not possible for eBooks (yet). However, the Kindle is great for reading all the great freely available books like Peter Watt&rsquo;s &ldquo;Rifters&rdquo;:<a href="http://www.rifters.com/real/shorts.htm">http://www.rifters.com/real/shorts.htm</a> trilogy, or the &ldquo;Project Gutenberg&rdquo;:<a href="http://www.gutenberg.org/wiki/Main_Page">http://www.gutenberg.org/wiki/Main_Page</a> texts which I mostly ignored so far because I find it too annoying to read them on a computer screen (programming eBooks are a different matter, I <em>want</em> to read them on my screen so I can easily switch to an editor and try out things).</p>
+
+<p>As should be obvious by now, I&rsquo;m pretty stoked by my new toy. There is however one app that makes it even more awesome, &ldquo;Calibre&rdquo;:<a href="http://calibre-ebook.com/.">http://calibre-ebook.com/.</a> While it has a pretty ugly UI, it&rsquo;s jam-packed with &ldquo;useful features&rdquo;:<a href="http://calibre-ebook.com/demo">http://calibre-ebook.com/demo</a> every eBook user will appreciate. I especially love the ability to fetch RSS feeds and convert them into Kindle &ldquo;magazines&rdquo;: every morning Calibre fetches the feeds of several of my favorite online publications, converts them and emails them to my Kindle where I can later read them. Users can contribute their own recipes for this and some of them are just amazing (e.g. the one for Austrian newspaper &ldquo;Der Standard&rdquo;:<a href="http://derstandard.at/">http://derstandard.at/</a> is basically of equal - or better - quality as the commercial offers in the Kindle store). Of course the program also can deal with authentication, so it&rsquo;s no problem to access my subscription of the English edition of &ldquo;Le Monde diplomatique&rdquo;:<a href="http://mondediplo.com/">http://mondediplo.com/</a> or my unread &ldquo;Instapaper&rdquo;:<a href="http://www.instapaper.com/">http://www.instapaper.com/</a> items. Recipes are Python scripts by the way, so it&rsquo;s easy to modify or create them. All in all an absolutely fantastic piece of software, which I happily donated money to! :-)</p>
+
+<p>If you are looking for an eBook reader, it&rsquo;s probably hard to find better value for money than the new Kindle. I&rsquo;ve been wanting to buy one for the last 6 month or so, but am very happy that I waited until now. It&rsquo;s everything I expected from such a device, plus a bit more.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="I read Ruby in Practice for the upcoming book promotion on RubyLearning, and I have to say it&#8217;s a pretty neat book which will be well worth &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.github.io/posts/27">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/18/review-ruby-in-practice-manning-publications/">Review: Ruby in Practice (Manning Publications)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-18T00:00:00+07:00" pubdate data-updated="true">May 18<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I read <a href="http://www.manning.com/mcanally/">Ruby in Practice</a> for the <a href="http://rubylearning.com/blog/2009/05/12/book-promotion-ruby-in-practice/">upcoming book promotion</a> on <a href="http://www.rubylearning.org">RubyLearning</a>, and I have to say it&#8217;s a pretty neat book which will be well worth your time and money. Over the course of 360 pages Jeremy McAnally and Assaf Arkin tackle lots of different topics of interest to developers. The book is structured in 3 main parts:</p>
+<ul>
+<li>Ruby techniques: Gives a general introduction to Ruby&#8217;s strength (which sometimes reads as a bit of a sales pitch), <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development"><span class="caps">BDD</span></a> and <a href="http://en.wikipedia.org/wiki/Test-driven_development"><span class="caps">TDD</span></a>, as well as scripting with Ruby (including <a href="http://en.wikipedia.org/wiki/Object_Linking_and_Embedding"><span class="caps">OLE</span></a> and <a href="http://en.wikipedia.org/wiki/AppleScript"><span class="caps">OSA</span></a>).</li>
+<li>Integration and communication: This part covers Rails, web services in general (<span class="caps">HTTP</span>, <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer"><span class="caps">REST</span></a>, <a href="http://en.wikipedia.org/wiki/SOAP_(protocol)"><span class="caps">SOAP</span></a>), automating communication with email and IM, asynchronous messaging and deployment options.</li>
+<li>Data and document techniques: This part talks about databases, structured text, authentication, searching, indexing and document processing.</li>
+</ul>
+<p>Chapters usually present the reader with a problem, then show an example solution which usually makes good use of existing libraries and then finish with further discussion on the topic (alternative ways to implement it, pitfalls in using the shown solution in &#8220;real life&#8221; scenarios etc.). For people with previous knowledge of Ruby this book is a good read, which shows how the dynamic nature of the language combined with the quite big amount of readily available libraries enable developers to quickly and efficiently find solutions to common problems. I sometimes do have minor quirks with some of the code, but that&#8217;s just personal preferences and being nitpicky. All in all it&#8217;s a very solid book which I enjoy quite a lot.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps/">Create Your Own (Ruby) API Browser in 3 Easy Steps</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-17T00:00:00+07:00" pubdate data-updated="true">May 17<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+  <li><b>Step 1:</b> Download <a href="http://fluidapp.com/">Fluid</a>, an awesome little application to create site specific browsers.</li>
+  <li><b>Step 2:</b> Find some online <span class="caps">API</span> documentation. For Ruby I recommend <a href="railsapi.com">railsapi.com</a> or <a href="http://rubybrains.com">RubyBrains</a>. </li>
+  <li><b>Step 3:</b> Create your app in Fluid:</li>
+<p><img src="http://citizen428.net/uploads/fluid.png" alt="Fluid" /></p>
+</ul>
+<p>Here&#8217;s an example screenshot of a site specific browser for RubyBrain.com:</p>
+<p><img src="http://citizen428.net/uploads/fluid_rubybrain.png" alt="Fluid RubyBrain" /></p>
+<p>Of course this still requires you to have a working internet connection, but you could always use a local version of the <span class="caps">API</span> docs when creating the app. On a related note you should also check out <a href="http://www.robinlu.com/blog/goo">Goo</a> which is a nice alternative to gem server on OS X.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/">A TextMate Command for the RubyLearning Forums</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-10T00:00:00+07:00" pubdate data-updated="true">May 10<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As we all know posting code to <a href="http://moodle.org/">Moodle</a> (the software that powers <a href="http://rubylearning.org">RubyLearning</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
+<ul>
+<li> take the currently active file</li>
+<li> replace all occurrences of &lt; with the <span class="caps">HTML</span>-entity</li>
+<li> wrap all of that in [code ruby] tags and</li>
+<li> copy it to the clipboard, ready to be pasted into the forums.</li>
+</ul>
+<p>Source:<br />
+<script src="http://gist.github.com/109576.js"></script></p>
+<p>Download:<br />
+<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/03/im-in-your-pi-crunching-your-numbers/">I&#8217;m in Your Pi, Crunching Your Numbers ;-)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-03T00:00:00+07:00" pubdate data-updated="true">May 3<sup>rd</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>From <a href="http://rubyquiz.strd6.com/quizzes/202">Ruby Quiz #202</a>:</p>
+<p><em>And sometimes the fastest code is the code you don&#8217;t write. Michael Kohl&#8217;s solution:</em></p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;rubygems&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hpricot&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;open-uri&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Hpricot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://www.eveandersson.com/pi/digits/100000&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pre&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inner_html&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p><em>It finishes in less than one second for the entire 100,000 digits!</em></p>
+<p>And no, this wasn&#8217;t a serious submission&#8230; :-)</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/26/clever-documentation/">Clever Documentation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-26T00:00:00+07:00" pubdate data-updated="true">Apr 26<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Playing with <a href="http://www.squeak.org/">Squeak</a>&#8216;s Method Finder, I discovered a really neat feature that I wish would be available for Ruby documentation. Here&#8217;s the description from the built-in help:</p>
+<p><i>[&#8230;] use an example to find a method in the system.  Type receiver, args, and answer in the top pane with periods between the items.  3. 4. 7</i></p>
+<p>Yes, this means that if you want to know how to do modulo in Smalltalk, you can open the Method Finder, type <i>7. 3. 1</i> and see that the answer is <i>Number&gt;&gt;&#92;</i>, whereas <I>&#8216;abc&#8217; . &#8216;<span class="caps">ABC</span>&#8217;</i> will tell us about <i>String&gt;&gt;asUppercase</i>.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/23/reading-frenzy/">Reading Frenzy</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-23T00:00:00+07:00" pubdate data-updated="true">Apr 23<sup>rd</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Since my reading time wasn&#8217;t influenced by distracting things like work or studies last year, I managed to read 69 books since end of April 2008, which quite likely is a new personal record for one year. Here&#8217;s the complete list, some of this books I had wanted to read forever, some others were just lucky finds and yet others were just&#8230;finds. ;-)</p>
+<p><b>Marion Molteno:</b> &#8220;A Language in Common&#8221;<br />
+<b>James Frey:</b> &#8220;A Million Little Pieces&#8221;<br />
+<b>Haruki Murakami:</b> &#8220;After Dark&#8221;<br />
+<b>Haruki Murakami:</b> &#8220;After the Quake: Stories&#8221;<br />
+<b>Ali Smith:</b> &#8220;Ali Smith&#8217;s Supersonic 70s&#8221;<br />
+<b>Lewis Carroll:</b> &#8220;Alice&#8217;s Adventures in Wonderland&#8221;<br />
+<b>Neil Gaiman:</b> &#8220;American Gods&#8221;<br />
+<b>Heinrich Böll:</b> &#8220;Ansichten Eines Clowns&#8221;<br />
+<b>Anita Desai:</b> &#8220;Baumgartner&#8217;s Bombay&#8221;<br />
+<b>Achmat Dangor:</b> &#8220;Bitter Fruit&#8221;<br />
+<b>Monica Ali:</b> &#8220;Brick Lane&#8221;<br />
+<b>Heinz Peter Schwerfel:</b> &#8220;Buenos Aires intensiv.: Tango urbano &#8211; Stadt im Aufbruch&#8221;<br />
+<b>Ines Rieder:</b> &#8220;Cosmopolis: Urban Stories by Women&#8221;<br />
+<b>Andrea Camilleri:</b> &#8220;Der Hund aus Terracotta&#8221;<br />
+<b>Peter Handke:</b> &#8220;Die Angst des Tormanns beim Elfmeter&#8221;<br />
+<b>Thomas Mann:</b> &#8220;Die Betrogene. Erzählungen 1940 &#8211; 1953.&#8221;<br />
+<b>Helge Schneider:</b> &#8220;Die Memoiren des Rodriguez Fazantas&#8221;<br />
+<b>Stanislaw Lem:</b> &#8220;Eine Minute der Menschheit.&#8221;<br />
+<b>Orson Scott Card:</b> &#8220;Ender&#8217;s Game&#8221;<br />
+<b>Terry Pratchett:</b> &#8220;Equal Rites&#8221;<br />
+<b>Jonathan Safran Foer:</b> &#8220;Everything Is Illuminated&#8221;<br />
+<b>Feridun Zaimoglu:</b> &#8220;German Amok.&#8221;<br />
+<b>Terry Pratchett &amp; Neil Gaiman</b> &#8220;Good Omens&#8221;<br />
+<b>Haruki Murakami:</b> &#8220;Hard-Boiled Wonderland and the End of the World&#8221;<br />
+<b>Irvine Welsh:</b> &#8220;If You Liked School, You&#8217;ll Love Work&#8221;<br />
+<b>Andre Brink:</b> &#8220;Imaginings of Sand&#8221;<br />
+<b>Orhan Pamuk:</b> &#8220;Istanbul&#8221;<br />
+<b>Gene Brewer:</b> &#8220;K-Pax&#8221;<br />
+<b>Haruki Murakami:</b> &#8220;Kafka on the Shore&#8221;<br />
+<b>Peter Handke:</b> &#8220;Kali&#8221;<br />
+<b>Feridun Zaimoglu:</b> &#8220;Leinwand&#8221;<br />
+<b>Yann Martel:</b> &#8220;Life of Pi&#8221;<br />
+<b>William Golding:</b> &#8220;Lord of the Flies&#8221;<br />
+<b>Elfriede Jelinek:</b> &#8220;Lust&#8221;<br />
+<b>Ryszard Kapuscinski:</b> &#8220;Meine Reisen mit Herodot&#8221;<br />
+<b>Saul Bellow:</b> &#8220;Mosby&#8217;s Memoirs and Other Stories&#8221;<br />
+<b>Howard Marks:</b> &#8220;Mr. Nice: An Autobiography&#8221;<br />
+<b>Orhan Pamuk:</b> &#8220;My Name Is Red&#8221;<br />
+<b>Eli Gottlieb:</b> &#8220;Now You See Him: A Novel&#8221;<br />
+<b>John Steinbeck:</b> &#8220;Of Mice and Men&#8221;<br />
+<b>Amit Gilboa</b> &#8220;Off the Rails in Phnom Penh&#8221;<br />
+<b>Terry Pratchett:</b> &#8220;Pyramids&#8221;<br />
+<b>Paul Torday:</b> &#8220;Salmon Fishing in the Yemen&#8221;<br />
+<b>Woody Allen:</b> &#8220;Side Effects&#8221;<br />
+<b>Miriam Tzali:</b> &#8220;Soweto Stories&#8221;<br />
+<b>Helen Oyeyemi:</b> &#8220;The Icarus Girl&#8221;<br />
+<b>John Updike:</b> &#8220;Terrorist: A Novel&#8221;<br />
+<b>Jorge Luis Borges:</b> &#8220;The Aleph&#8221;<br />
+<b>Zadie Smith:</b> &#8220;The Autograph Man&#8221;<br />
+<b>Alex Garland:</b> &#8220;The Beach&#8221;<br />
+<b>Iain M. Banks:</b> &#8220;The Crow Road&#8221;<br />
+<b>John Case:</b> &#8220;The Eighth Day&#8221;<br />
+<b>Paul Theroux:</b> &#8220;The Elephanta Suite: Three Novellas&#8221;<br />
+<b>Shan Sa:</b> &#8220;The Girl Who Played Go&#8221;<br />
+<b>Leon Uris:</b> &#8220;The Haj&#8221;<br />
+<b>Michael Cunningham:</b> &#8220;The Hours&#8221;<br />
+<b>Miguel de Cervantes:</b> &#8220;The Jealous Extremaduran&#8221;<br />
+<b>Terry Pratchett:</b> &#8220;The Last Continent&#8221;<br />
+<b>A. B. Yehoshua:</b> &#8220;The Lover&#8221;<br />
+<b>Ernest Hemingway:</b> &#8220;The Old Man and The Sea&#8221;<br />
+<b>M. C. Beaton:</b> &#8220;The Quiche of Death&#8221;<br />
+<b>Audrey Niffenegger:</b> &#8220;The Time Traveler&#8217;s Wife&#8221;<br />
+<b>Roddy Doyle:</b> &#8220;The Van&#8221;<br />
+<b>H.G. Wells:</b> &#8220;The War of the Worlds (Penguin Classics)&#8221;<br />
+<b>Iain M. Banks:</b> &#8220;The Wasp Factory: A Novel&#8221;<br />
+<b>Aravind Adiga:</b> &#8220;The White Tiger: A Novel&#8221;<br />
+<b>Terry Pratchett:</b> &#8220;Thud!&#8221;<br />
+<b>Zadie Smith:</b> &#8220;White Teeth: A Novel&#8221;<br />
+<b>Florian Weber:</b> &#8220;You&#8217;ll Never Walk Alone. Ein Fussballmusikroman&#8221;</p>
+<p>And that&#8217;s the 2 books I&#8217;m currently reading:</p>
+<p><b>Nancy L. Clark:</b> &#8220;South Africa: The Rise and Fall of Apartheid&#8221;<br />
+<b>Will Ferguson:</b> &#8220;Hokkaido Highway Blues&#8221;</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/09/learning-haskell/">Learning Haskell</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-09T00:00:00+07:00" pubdate data-updated="true">Apr 9<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To get my mind off Ruby I recently started dabbling in Haskell. I really like what I&#8217;ve seen so far and it seems I&#8217;m finally starting to understand functional programming (my two attempts with <a href="http://www.gigamonkeys.com/book/">Practical Common Lisp</a> never got past the first few chapters).</p>
+<p>In case you are interested in Haskell too, here&#8217;s a list of the resources I use:<br />
+<ul><br />
+<li><a href="http://en.wikibooks.org/wiki/Haskell">Haskell :: Functional Programming with Types</a>: A very nice <a href="http://wikibooks.org">Wikibook</a> covering a wide range of topics from the very basics to Monads, Arrows and Zippers.</li><br />
+<li><a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good</a>: A nice and colorful tutorial in the spirit of <a href="http://poignantguide.net/ruby/">Why&#8217;s (Poignant) Guide to Ruby</a></li><br />
+<li><a href="http://book.realworldhaskell.org/">Real World Haskell</a>: Yes, the entire book can be read online (including per paragraph comments!) for free! I&#8217;ve only just started reading this, since I first want to brush up my basic Haskell a bit, but once I&#8217;m past the <a href="http://projecteuler.net/">Project Euler</a> stage this is probably gonna be very nice.</li><br />
+<li><a href="http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours">Write Yourself a Scheme in 48 Hours</a>: Now that I&#8217;m slowly getting the hang of this functional programming thing, why not write an interpreter for one functional language in another? &#8220;Along the way, you&#8217;ll learn Haskell&#8217;s I/O, mutable state, dynamic typing, error handling, and parsing features. By the time you finish, you should be fairly fluent in both Haskell and Scheme&#8221;. Sounds good to me! :)</li></p>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/05/filterableenumerable/">FilterableEnumerable</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-05T00:00:00+07:00" pubdate data-updated="true">Apr 5<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My recent post on <a href="http://citizen428.net/archives/372-Enumerablefilter.html">Enumerable#filter</a> created a bit of discussion on RubyFlow, which led to a <a href="http://gist.github.com/89491">much nicer implementation than mine</a>. Enjoy!</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/01/enumerablefilter/">Enumerable#filter</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-01T00:00:00+07:00" pubdate data-updated="true">Apr 1<sup>st</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>Update:</strong> Thanks to some feedback I rewrote Enumberable#filter so it doesn&#8217;t use &#8216;eval&#8217;. It&#8217;s a bit less flexible now and I also like the syntax less, but at least it doesn&#8217;t eat puppies for breakfast. As the disclaimer said, maybe it was a bad idea to begin with.</p>
+<p>As much as I like Ruby, some constructs I just don&#8217;t find too sexy, e.g.:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;select&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>That&#8217;s why I came up with an alternative solution which I find reads nicer than the above code:</p>
+<script src="http://gist.github.com/88836.js"></script><p>(Sorry, I really don&#8217;t care much about having this for strings)</p>
+<p>I kinda got inspired by Martin Aumont&#8217;s <a href="http://mynyml.com/15-enumerableevery/">every</a>, which allows us to use</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="n"&gt;enum&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;every&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;floor&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>instead of</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="n"&gt;enum&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;floor&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="n"&gt;enum&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="ss"&gt;:floor&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p><i>Disclaimer: Today this seems like a pretty good idea, but I also haven&#8217;t slept much. In case this breaks in horrible ways, already exists in some other form or is stupid for some other reason I&#8217;m too tired to consider, please let me know.</i></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/27/rock-paper-scissors-in-sinatra/">Rock-paper-scissors in Sinatra</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-27T00:00:00+07:00" pubdate data-updated="true">Mar 27<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Just a stupid little example to demonstrate why Sinatra is cool:</p>
+<script src="http://gist.github.com/86780.js"></script></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/28">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/26">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I&#8217;m Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/12/information-overload-2015-07-12/">Information Overload 2015-07-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

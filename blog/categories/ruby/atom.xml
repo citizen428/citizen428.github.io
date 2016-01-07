@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[VCR case woes]]></title>
+    <link href="http://citizen428.github.io/blog/2014/05/08/vcr/"/>
+    <updated>2014-05-08T22:32:55+07:00</updated>
+    <id>http://citizen428.github.io/blog/2014/05/08/vcr</id>
+    <content type="html"><![CDATA[<p>Today I spent quite some time on a rather hard to track down problem. I had some specs using <a href="">VCR</a>, which worked perfectly locally, but just wouldn&rsquo;t run on <a href="https://circleci.com/">CircleCI</a>. In fact, it seemed like CircleCI didn&rsquo;t in fact use the VCR cassettes at all, but instead make a real API call, which failed because the necessary credentials weren&rsquo;t available in the environment (which was kinda the point of using VCR in the first place).</p>
+
+<p>Turns out the problem lay in the combination of using the VCR setting <code>configure_rspec_metadata!</code> and the option <code>core.ignorecase = true</code>, which is standard in newer versions of <a href="http://git-scm.com/">Git</a>. What happened was that at one point I changed the case of a word in a test description, which changes the auto-generated name of the folder VCR will create the cassette in. But since the folder name wasn&rsquo;t changed from git&rsquo;s perspective, I never realized that. So when the code was checked out on CircleCI, VCR encountered the spec with the metadata (<code>vcr: true</code>), but couldn&rsquo;t find the cassette since the checked out folder had the wrong case. It therefore proceeded to run the spec against the live API which failed.</p>
+
+<p>All in all this cost me about 1.5 hours, and I only managed to find a solution thanks to a helpful colleague and CircleCI&rsquo;s option of letting you SSH into the machine the tests run on, which is how we discovered the second folder that was created.</p>
+
+<p>TIL that git&rsquo;s not case-sensitive. I&rsquo;d rather have found out another way.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby — Left section for infix operators]]></title>
+    <link href="http://citizen428.github.io/blog/2012/07/30/ruby-left-section-for-infix-operators/"/>
+    <updated>2012-07-30T23:24:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2012/07/30/ruby-left-section-for-infix-operators</id>
+    <content type="html"><![CDATA[<p>Let me admit right away that this is yet another &ldquo;because I can&rdquo; type of post with little practical use. With that out of the way, today&rsquo;s topic is <a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">sections of infix operators</a> as known from e.g. Haskell. Here&rsquo;s an example:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haskell'><span class='line'><span class="err">λ</span><span class="o">&gt;</span> <span class="n">map</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">]</span>
+</span><span class='line'><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>As you can see the function to be <code>map</code>ped is specified with the <a href="http://www.haskell.org/haskellwiki/Partial_application">partially applied</a> function <code>(2+)</code> (or <code>(+2)</code> for that matter).</p>
+
+<p>Here&rsquo;s how we would have to write the same code in Ruby:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>This could also be written in a <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree</a> way, but alas that would make the code rather hard to understand for less experienced Rubyists:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="ss">:+</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>But because Ruby is as flexible as it is, adding partial application is actually really trivial:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
+</span><span class='line'>  <span class="k">alias</span> <span class="ss">:add</span> <span class="ss">:+</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;  def +(o=nil)</span>
+</span><span class='line'><span class="sr">    o ? self.add(o) : lambda { |x| self + x }</span>
+</span><span class='line'><span class="sr">  end</span>
+</span><span class='line'><span class="sr">end</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>And now we can do this:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="mi">2</span><span class="o">.</span><span class="n">+</span><span class="p">)</span> <span class="c1">#=&gt; [3, 4, 5]</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Not too bad I think and rather consistent with Ruby&rsquo;s overall style. Alas I don&rsquo;t think we are likely to see partial application on a language level any time soon though&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
+    <link href="http://citizen428.github.io/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
+    <updated>2012-07-28T10:15:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
+    <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
+
+<p>While I haven&rsquo;t received <a href="http://www.packtpub.com/ruby-and-mongodb-web-development-beginners-guide/book">the book</a> in its final form yet, I&rsquo;ve read all of it, and I can say that the author does a good job at introducing inexperienced programmers to web development with Ruby and MongoDB.</p>
+
+<p>This is a hands-on book and you&rsquo;ll get most out of it by following all the exercises and doing them on your own. From getting all the necessary components and installing them, to developing apps with Sinatra and Rails, a lot of ground is covered.</p>
+
+<p>While the author does tackle some more advanced topics, they are clearly not the focus of this book (it&rsquo;s subtitled &ldquo;Beginner&rsquo;s Guide&rdquo; for a reason) which will leave more experienced developers wanting for more. However, the presented material is well written, chapters build on each other and if you are new to web development with Ruby/RoR and/or MongoDB, this is a good title to get you up to speed in just 300 pages.</p>
+
+<p>If you are a more experienced Ruby developer or are already very familiar with MongoDB, this is probably not the book for you, even though you&rsquo;ll probably still get something out of it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Shenanigans]]></title>
+    <link href="http://citizen428.github.io/blog/2012/07/03/shenanigans/"/>
+    <updated>2012-07-03T19:46:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2012/07/03/shenanigans</id>
+    <content type="html"><![CDATA[<p>About 1.5 month ago I finally packaged some of my Ruby extension methods into the aptly named <a href="https://rubygems.org/gems/shenanigans">Shenanigans</a> gem. It&rsquo;s similar to <a href="http://rubyworks.github.com/facets/">Facets</a> or <a href="http://as.rubyonrails.org/">ActiveSupport</a>, but probably less useful to most people. Also some of the methods actually are in Facets, although sometimes with different names or slightly different semantics. Anyway, since some people told me they actually do like the gem, here&rsquo;s a quick summary of what the different methods do and how they can be useful.</p>
+
+<ul>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:%5E">Array#^</a>: Ruby defines <a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/set/rdoc/Set.html#method-i-5E">Set#^</a>, which returns the elements exclusive between the set and a given enum. Since a lot of people use arrays instead of proper sets in Ruby, I found it makes a nice addition to <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-7C">Array#|</a> and <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-26">Array#&amp;</a>.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:random_subarray">Array#random_subarray</a>: Generates one or more random subarrays of an array, using the fact that Ruby can index integers to get the bit values to ensure fast uniform distributions. Similar to <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-sample">Array#sample</a>, but can generate several subarrays at once.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Array:zip_with">Array#zip_with</a>: The more general form of <code>zip</code> (e.g. in Haskell you could define <code>zip = zipWith (,)</code>). Like Ruby&rsquo;s <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject">Enumerable#inject</a> it can take a symbol argument or a block, and like Haskell&rsquo;s <code>zip</code> it discards excess array elements if one list is shorter than the other, whereas Ruby&rsquo;s <a href="http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-zip">Array#zip</a> only does that if the receiver is shorter than the argument (it adds <code>nil</code>s in the other case).</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Hash:has_shape%3F">Hash#has_shape?</a>: A quick way to check if a hash&rsquo;s keys are of certain classes. This does feel a bit strange in a duck-typed language like Ruby, but someone asked for it on StackOverflow and it was easy enough to write. This could be useful in validations or unit tests though.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Hash:to_ostruct">Hash#to_ostruct</a>: I really like the <a href="https://github.com/railsjedi/rails_config">rails_config</a> gem. I therefore decided to write something that gives me similar functionality (although a lot simpler) for plain Ruby projects. Basically this recursively converts a hash and all nested hashes into <a href="http://ruby-doc.org/stdlib-1.9.3/libdoc/ostruct/rdoc/OpenStruct.html">OpenStruct</a> instances. Populate the hash with Ruby&rsquo;s <a href="http://corelib.rubyonrails.org/classes/YAML.html">YAML</a> support and you have an instant settings object.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:fn">Kernel#fn</a>: I admit, this was more of a &ldquo;because I can&rdquo; method. Originally I wrote this so I could compose blocks in <a href="http://www.haskell.org/haskellwiki/Pointfree">pointfree style</a>, but later added support for <a href="http://www.ruby-doc.org/core-1.9.3/Proc.html">Proc</a> instances too.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:prompt">Kernel#prompt</a>: While it&rsquo;s great that Ruby&rsquo;s <a href="http://www.ruby-doc.org/core-1.9.3/IO.html#method-i-gets">IO#gets</a> is so general, I always wanted something like Python&rsquo;s <a href="http://docs.python.org/library/functions.html#raw_input">raw_input</a> for command line apps. Additionally you can also automatically call any of the numeric conversions, and I&rsquo;m pondering adding support for every unary string method.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Kernel:with">Kernel#with</a>: I think <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> is great. However, I sometimes see it used as a replacement for <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject">Enumerable#inject</a> or <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_with_object">Enumerable#each_with_object</a>, but for some reason I never really liked the semantics of it. And since I&rsquo;m anal about that sort of thing I added this Pascal/ActionScript like <code>with</code> statement.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Object:display">Object#display</a>: Having no proper object-oriented way to print objects in Ruby always kinda bothered me, so I abused <a href="http://ruby-doc.org/core-1.9.3/Object.html#method-i-tap">Object#tap</a> as a wrapper around <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html#method-i-puts">Kernel#puts</a> and <a href="http://www.ruby-doc.org/core-1.9.3/Kernel.html#method-i-print">Kernel#print</a>. Additionally this is aliased to the name <code>d</code>, which I stole from <a href="https://github.com/janlelis/irbtools">irbtools</a>. The latter form makes it great for debugging method chains and the likes.</p></li>
+<li><p><a href="http://rubydoc.info/gems/shenanigans/1.0.4/Object:it">Object#it</a>: I always disliked blocks of the form <code>{ |x| x }</code> that sometimes crop up when using  <a href="http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-group_by">Enumerable#group_by</a> or similar methods. Since Ruby lacks an identity method and <code>id</code> has historically been taken, I decided to name it <code>it</code>.</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails — Display branch in development mode]]></title>
+    <link href="http://citizen428.github.io/blog/2012/06/12/rails-display-branch-in-development-mode/"/>
+    <updated>2012-06-12T21:33:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2012/06/12/rails-display-branch-in-development-mode</id>
+    <content type="html"><![CDATA[<p>At work we are building a Rails app that&rsquo;s supposed to run on appliances instead of being hosted by us. To make it easier to deal with bug reports and feature requests, we always display the version number in the footer. A couple of days ago I thought it&rsquo;d be handy to replace this with the current branch in development mode. Using <a href="https://github.com/mojombo/grit">Grit</a> the solution couldn&rsquo;t have been any simpler:</p>
+
+<p><figure class='code'><figcaption><span>app/helpers/application_helper.rb </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">version_div</span>
+</span><span class='line'>  <span class="n">version</span> <span class="o">=</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">development?</span> <span class="p">?</span> <span class="o">::</span><span class="ss">Grit</span><span class="p">:</span><span class="ss">:Repo</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="o">::</span><span class="ss">OurApp</span><span class="p">:</span><span class="ss">:Application</span><span class="o">::</span><span class="no">Version</span>
+</span><span class='line'>  <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:span</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">version</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Call <code>version_div</code> in a view and you are good to go. If dragging in another dev dependency for just one call bothers you, you can also shell out to get the current branch: <code>git rev-parse --abbrev-ref HEAD</code>.</p>
+]]></content>
+  </entry>
+  
+</feed>

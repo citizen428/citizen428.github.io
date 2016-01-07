@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Disclaimer: The fine folks at No Starch Press were nice enough to provide me with a review copy of this book, but this has not influenced this review &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.github.io/posts/14">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/23/review-metasplot-the-penetration-testers-guide/">Review: Metasploit - the Penetration Tester&#8217;s Guide</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-23T00:00:00+07:00" pubdate data-updated="true">Aug 23<sup>rd</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Disclaimer: The fine folks at No Starch Press were nice enough to provide me with a review copy of this book, but this has not influenced this review in any way.</em></p>
+<p>Where to start? The <a href="http://www.metasploit.com/">Metasploit Framework</a> (<span class="caps">MSF</span>) is a very popular penetration testing tool used by security professionals the world over. It was previously written in Perl but underwent a complete rewrite for version 3, where the developers switched the project to Ruby. The tool unifies the various stages of penetration testing in convenient interfaces (&#8220;msfconsole&#8221; for interactive use and &#8220;msfcli&#8221; for scripting purposes): information gathering and storage, exploit and payload configuration, <span class="caps">IDS</span> and antivirus evasion and actually exploiting the system.</p>
+<p>From this you probably can gather that Metasploit is quite big and complex, as well as in a state of constant flux. This makes it rather hard to write a definitive book on it, which is illustrated by the fact that shortly after this volume got published, the Metasploit team released version 4 of the framework. Considering these difficulties, I&#8217;m tempted to say that the authors have done a tremendous job describing <span class="caps">MSF</span> as it was at the time of writing.</p>
+<p>Now for the actual content: after a foreword by Metasploit&#8217;s main developer HD Moore, there&#8217;s a little introduction section on penetration testing and the history of the framework. This is followed by the first chapter, which covers some penetration testing basics. After this the authors give a first introduction to the <span class="caps">MSF</span>, before dedicating a chapter each to various phases of pen testing, namely information gathering, vulnerability scanning and the actual exploitation. After this you&#8217;ll find a whole chapter on Meterpreter, covering various aspects of post-exploitation techniques. Once you get to this point, you should have a good idea about how Metasploit works in principle and how capable it is. The authors don&#8217;t stop here though, but use the following chapters to try to teach you about avoiding detection, client-side exploits and  Metasploit&#8217;s auxiliary modules. By this point in the book it felt like I already had learned a lot, but then I realized that I&#8217;m only halfway through the book! There still were chapters on various topics, including the social-engineering toolkit which is built in the <span class="caps">MSF</span> and wireless exploitation with Karmetasploit. As a Ruby developer/dev ops guy I was really interested in the next couple of chapters, which deal with building your own modules and exploits as well as porting existing exploits to Metasploit and Meterpreter scripting. Wow, the authors definitely covered a lot of ground until here, but we are still not done, since there&#8217;s on more chapter on how to simulate your pen tests.</p>
+<p>While the above shows what the book covered, it doesn&#8217;t say much on how it was covered. In my opinion the authors did a very good job, the text is easy to follow and to the point and helped by screenshots and transcripts of &#8220;msfconsole&#8221; sessions. Sure, most of this material is also available on the <a href="http://www.offensive-security.com/metasploit-unleashed/Metasploit_Unleashed_Information_Security_Training">Metasploit Unleashed</a> web site, but I like having it all in the form of one compact book. I noticed 2-3 places where the textual description and the content of the screenshot/transcript didn&#8217;t exactly match, which can lead to brief moments of confusion, but nothing dramatic.</p>
+<p>If you are new to Metasploit and want to get up to speed quickly, it&#8217;s hard to imagine that you&#8217;ll find a better book at the moment. More experienced users of the framework should flip through it in a book store to decide how much they&#8217;ll really get from it, but it&#8217;s probably still a good book to have around, even if it&#8217;s just for the cheat sheet in Appendix B.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/21/information-overload-2011-08-21/">Information Overload 2011-08-21</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-21T00:00:00+07:00" pubdate data-updated="true">Aug 21<sup>st</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.telegraph.co.uk/culture/film/8681025/Saddams-demon-seed.html">Saddam&#8217;s demon seed</a><br>Latif Yahia was forced to work as Uday Hussein&#8217;s (Saddam&#8217;s son) body double, now a movie has been made about his life.</li>
+<li><a href="http://www.hrw.org/news/2011/08/14/indonesia-military-documents-reveal-unlawful-spying-papua">Indonesia: Military Documents Reveal Unlawful Spying in Papua</a><br>Lately I&#8217;ve been quite interested in Indonesia, not least because it&#8217;s a place people don&#8217;t tend to talk about too much, which is kinda odd considering it&#8217;s the 4th biggest country in the world.</li>
+<li><a href="http://zachholman.com/posts/how-github-works-hours/">How GitHub Works: Hours are Bullshit</a><br>A 3 part series of blog posts explaining how GitHub works. This is not about technical stuff, but about working hours, internal communications and so on (<a href="http://zachholman.com/posts/how-github-works-asynchronous/">part 2</a>, <a href="http://zachholman.com/posts/how-github-works-creativity/">part 3</a>).</li>
+<li><a href="http://thegazette.com/2011/08/15/for-first-time-more-corn-to-be-used-for-ethanol-than-livestock/">For first time, more corn used for ethanol than livestock</a><br>While food prices rise and people are starving, more corn is used for ethanol than for feeding animals (and we are not even talking feeding people here).</li>
+<li><a href="http://www.hanselman.com/blog/ImAPhonyAreYou.aspx">I&#8217;m a phony. Are you?</a><br>I too noticed this lack of self-confidence in a lot of IT people and occasionally myself. Do you have any experience with it?</li>
+<li><a href="http://www.economist.com/node/21525851">Don&#8217;t look down</a><br>I&#8217;m always surprised by how many people adhere to the &#8220;as long as someone is worth of than me&#8221; principle.</li>
+<li><a href="http://articles.cnn.com/2011-08-17/tech/finishing.videogames.snow_1_red-dead-redemption-entertainment-software-association-avid-gamers?_s=PM:TECH">Why most people don&#8217;t finish video games</a><br>I barely play video games anymore, but when I do I also prefer short and/or multiplayer ones.</li>
+<li><a href="http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html" title="AES">A Stick Figure Guide to the Advanced Encryption Standard</a><br>Awesome post explaining crypto to the non-techies out there. In related news, a <a href="http://www.net-security.org/secworld.php?id=11474">new potential weakness</a> in <span class="caps">AES</span> as found this week.</li>
+<li><a href="http://www.businessinsider.com/karl-marx-is-hot-2011-8">Karl Marx Is Hot</a><br>When US economists start quoting Marx, I start wondering if the global economy is really screwed?</li>
+<li><a href="http://inhabitat.com/13-year-old-makes-solar-power-breakthrough-by-harnessing-the-fibonacci-sequence/">13-Year-Old Makes Solar Power Breakthrough by Harnessing the Fibonacci Sequence</a><br>A young boy looks at nature, sees a pattern and turns it into something useful. Here&#8217;s an <a href="http://www.amnh.org/nationalcenter/youngnaturalistawards/2011/aidan.html">essay</a></li> <p>he wrote for the Young Naturalist Award. Or maybe this all was a hoax, at least according to one <a href="http://webcache.googleusercontent.com/search?q=cache:JmlMNqVPKlsJ:uvdiv.blogspot.com/2011/08/solar-panel-trees-really-are-inferior.html+http://uvdiv.blogspot.com/2011/08/solar-panel-trees-really-are-inferior.html&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us">removed post on Blogger</a>.</p>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/15/chaos-communication-camp-2011/">Chaos Communication Camp 2011</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-15T00:00:00+07:00" pubdate data-updated="true">Aug 15<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After <a href="http://en.wikipedia.org/wiki/What_the_Hack">What the Hack</a> in 2005 and the <a href="http://events.ccc.de/camp/2007/Intro/">Chaos Communication Camp 2007</a> this was my third hacker camp and once again it was an inspiring, funny, chaotic and productive week of talks, hacking, partying, networking and more.</p>
+<p>Monday was mostly spent driving to the camp, which all in all went rather smoothly. All hail to Tesco where we picked up a lot of equipment, including the super awesome tent we slept in. Tuesday was a good opportunity to get a first impression of the camp, see who&#8217;s there, starting to socialize and having a party.</p>
+<p>On Wednesday the talks started and I saw three of them. <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4421.en.html">Strong encryption of credit card information</a> was really quite interesting and once again I was shocked by how insecure some very important aspects of our lives are. <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4505.en.html">Strahlung im Weltall</a> dealt with space radiation and was part of the <a href="http://events.ccc.de/camp/2011/Fahrplan/events/4551.en.html">Hackers in Space</a> track of the conference. When you think web development is difficult, how about dealing with radiation that might randomly flip a bit? Last but not least <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4504.en.html"><span class="caps">GPRS</span> Intercept</a> was another rather shocking talk, showing that <span class="caps">GPRS</span> security is as bad as GSM&#8217;s.</p>
+<p>Thursday I started with <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4478.en.html">Die psychologischen Grundlagen des Social Engineerings</a>, which was a really good and interesting talk by Stefan Schumacher, who&#8217;s a really nice guy who spent quite a bit of time at our <a href="http://leiwandville.soup.io/">village</a>. <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4488.en.html">Steal Everything, Kill Everyone, Cause Total Financial Ruin!</a> was another social engineering related talk and very entertaining. I got to talk to Jayson later that night and he really is as adorable as he says ;-) One of the talks I was most looking forward to was <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4472.en.html">Hacking <span class="caps">DNA</span></a> and I wasn&#8217;t disappointed. As an added bonus Marc took some time on Saturday to come over to our village and help us with some really useful information on how to get a biohacking group going at a hackerspace.</p>
+<p>Friday I spent mostly socializing, but I also went to see 2 talks. <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4487.en.html">She-Hackers: Millennials and Gender in European F/<span class="caps">LOSS</span> Subculture</a> unfortunately was the worst lecture I saw at this camp, which is a real shame considering that the topic at hand was very interesting. In the evening I watched <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4426.en.html">Certified programming with dependent types</a>, which was a fairly interesting introduction to the <a href="http://coq.inria.fr/">Coq Proof Assistant</a>. As often with Andreas&#8217;s talks the title and abstract suggested slightly more, but it still was a solid and interesting presentation.</p>
+<p>Saturday started rather late for me due to Friday night&#8217;s party, but I still woke up in time for <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4597.en.html">Moonbounce Radio Communication</a>, held by members of Metalab&#8217;s amateur radio crew. Later that day the Metalab was on stage again, this time in the form of <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4491.en.html">Rethinking online news</a>, which was an awesome presentation that led to a nice little meetup of interested parties the next afternoon. Stay tuned on this front, there might be interesting things happening in the not too distant future! The most amazing part of the day for me though was taking a 20 minute flight in an <a href="http://en.wikipedia.org/wiki/Antonov_An-2">Antonov An-2</a> from 1968, which was really cool and worth every cent of the 45 Euro it cost.</p>
+<p>On Sunday I watched <a href="https://events.ccc.de/camp/2011/Fahrplan/events/4445.en.html">Data Mining Your City</a>, which was not as interesting as I&#8217;d hoped for. It sadly also was the day where we had to say goodbye to the camp :-(</p>
+<p>Random thoughts: It&#8217;s super inspiring to spend an entire week around several thousand intelligent and creative people and like always after such an event I feel invigorated and full of ideas. I also finally should learn not to count on getting any work on one of my projects done at the camp, it never really works. Sometimes I wonder why I even bother bringing my laptop, an iPad or Netbook would probably be sufficient. But then why would I sit in front of my computer working on the same stuff I&#8217;m working on for the rest of the year when I&#8217;m surrounded by loads of interesting things and people I haven&#8217;t met yet?</p>
+<p>I &lt;3 you, Chaos Communication Camp!</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/07/information-overload-2011-08-07/">Information Overload 2011-08-07</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-07T00:00:00+07:00" pubdate data-updated="true">Aug 7<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.guardian.co.uk/uk/2011/jul/31/westminster-police-anarchist-whistleblower-advice">Anarchists should be reported, advises Westminster anti-terror police</a><br>Yeah, let&#8217;s all spy on our neighbors, that always worked out well&#8230;</li>
+<li><a href="http://languagelog.ldc.upenn.edu/nll/?p=3336">Not so gullible after all</a><br>Interesting piece about psychological studies on how we react to advertising logos and slogans.</li>
+<li><a href="http://www.fastcompany.com/1765168/the-detroit-empowerment-project-homeless-sleeping-bag-coats-veronika-scott">How A 21-Year-Old Design Student&#8217;s Sleeping-Bag Coat Could Break The Cycle Of Homelessnes</a><br>I love projects that are about empowering and really helping people in need.</li>
+<li><a href="http://diestandard.at/1311802514847/Erziehung-Geschlecht-unbekannt">Geschlecht unbekannt</a><br>A Canadian couple is keeping the gender of their third child a secret, because they &#8220;want to let the kid decide&#8221;. They also are quite unconventional in bringing up the 2 older siblings (in German).</li>
+<li><a href="http://www.nytimes.com/2011/07/31/opinion/sunday/executions-should-be-televised.html?_r=3">Executions Should Be Televised</a><br>Wow, if you seriously start thinking about this, there are lots of ethical considerations to be made. I&#8217;ll try to get over my initial gut reaction and to ponder the arguments of both sides.</li>
+<li><a href="http://www.telegraph.co.uk/culture/8667855/The-40-year-mystery-of-Americas-greatest-skyjacking.html">The 40-year mystery of America&#8217;s greatest skyjacking</a><br>The crazy story of the USA&#8217;s only unsolved skyjacking. How have I never heard about this before?</li>
+<li><a href="http://www.bbc.co.uk/news/technology-12004815">Kenya&#8217;s ambitions for an outsourced future</a><br>Kenya is trying to establish itself as an outsourcing destination to establish a second line of income next to tourism.</li>
+<li><a href="http://www.alternet.org/module/printversion/151850">8 Reasons Young Americans Don&#8217;t Fight Back: How the US Crushed Youth Resistance</a><br>Although this was originally written for the US, some if it applies all over the world.</li>
+<li><a href="http://blogs.forbes.com/davidewalt/2011/08/03/felicia-day-dragon-age-redemption/">Felicia Day: Mogul In The Making</a><br>A little look at the work of Felicia Day, author and main character of the web series <a href="http://www.watchtheguild.com">The Guild</a>.</li>
+<li><a href="http://boingboing.net/2011/07/14/far.html">The Singularity is Far: A Neuroscientist&#8217;s View</a><br>So the singularity might not be around the corner, what a surprise.</li>
+</ul>
+<p>There won&#8217;t be an &#8220;Information Overload&#8221; next week as I&#8217;ll be attending the <a href="http://events.ccc.de/camp/2011/">Chaos Communication Camp</a>.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/31/information-overload-2011-07-31/">Information Overload 2011-07-31</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-31T00:00:00+07:00" pubdate data-updated="true">Jul 31<sup>st</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://arstechnica.com/apple/reviews/2011/07/mac-os-x-10-7.ars/1">Mac OS X 10.7 Lion: the Ars Technica review</a><br>Every time a new version of OS X comes out, I&#8217;m really looking forward to the in-depth Ars Technica review, because they are always super detailed (the current one weighs in at 19 pages), critical and highly informative.</li>
+<li><a href="http://www.viceland.com/germany/v4n2/htdocs/flux_pink_indians.php">Pinke Inderinnen</a><br>Dalit (&#8220;untouchable&#8221;) untouchable women in a poor region of India of Indian formed a gang to fight for their rights (in German).</li>
+<li><a href="http://geekfeminism.wikia.com/wiki/Timeline_of_incidents">Timeline of incidents</a><br>The <a href="http://geekfeminism.wikia.com/wiki/Geek_Feminism_Wiki">Geek Feminism</a> wiki has a timeline of sexist incidents in geek communities. It&#8217;s sad we still need something like this in 2011.</li>
+<li><a href="http://singularityhub.com/2011/07/24/researcher-makes-a-career-developing-cocaine-vaccine-but-pharmaceutical-companies-won’t-produce-it">Researcher Makes a Career Developing Cocaine Vaccine, But Pharmaceutical Companies Won&#8217;t Produce It</a><br>Let&#8217;s rather fight a &#8220;war on drugs&#8221;, hm? Somehow I do find the thought of an anti-addiction vaccine pretty scary though.</li>
+<li><a href="http://www.sciencedaily.com/releases/2011/07/110725190044.htm">Minority Rules: Scientists Discover Tipping Point for the Spread of Ideas</a><br>Apparently if 10 percent of a population hold an unshakable belief, it will be adopted by the majority. I think that would explain a lot&#8230;</li>
+<li><a href="http://www.slate.com/id/2299256/">The World&#8217;s Deadliest Distinction</a><br>The world&#8217;s oldest people regularly seem to die when they reach 114.</li>
+<li><a href="http://www.theatlantic.com/international/archive/2011/07/the-campaign-to-terrify-you-about-emp/241971/">The Campaign to Terrify You About <span class="caps">EMP</span></a><br>I&#8217;m constantly surprised by what politicians will bring up. The comment thread is kinda interesting though, people talk about solar flares and electro-magnetic storms which would have the same effect as an <span class="caps">EMP</span>.</li>
+<li><a href="http://www.businessinsider.com/year-of-overthrow-2011-6?op=1">Is This The Beginning Of A Global Revolution?</a><br>A summary of the big political changes we saw in recent month. It&#8217;s a bit strange how this article conflates revolutions and civil uprisings with democratic elections, but it&#8217;s still a good roundup.</li>
+<li><a href="http://www.foodrenegade.com/secret-ingredient-your-orange-juice/">The Secret Ingredient In Your Orange Juice</a><br>While I always have a certain hope that food laws in the EU are stricter than in the US, some of this probably still applies to juices sold here.</li>
+<li><a href="https://petertauber.wordpress.com/2011/07/28/neue-medien-und-alte-geister/">Neue Medien und alte Geister</a><br>It&#8217;s sometimes reassuring to read blog posts by politicians like Peter Tauber (<span class="caps">CDU</span>) who do understand the internet and new media (in German).</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/30/tom-and-michael-vs-the-good-grief-algorithm/">Tom and Michael vs the Good Grief Algorithm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-30T00:00:00+07:00" pubdate data-updated="true">Jul 30<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This week <a href="http://mrjaba.posterous.com/">Tom</a> &mdash; who is now a happily married man :-) &mdash; and yours truly finally read another paper and since I&#8217;m sick and barely left bed for the last 2 days I decided to fight my boredom by writing about it.</p>
+<p><strong>The paper</strong><br />
+&#8220;Multiple Aspect Ranking using the Good Grief Algorithm&#8221; by Benjamin Snyder and Regina Barzilay from the <span class="caps">MIT</span> CS and AI Lab.</p>
+<ul>
+<li><a href="http://people.csail.mit.edu/regina/my_papers/ggranker.ps">Paper</a></li>
+<li><a href="http://pages.cs.wisc.edu/~bsnyder/presentations/naacl07.pdf">Presentation</a></li>
+<li><a href="http://people.csail.mit.edu/bsnyder/naacl07/">Data and code</a></li>
+</ul>
+<p><strong>Summary</strong><br />
+The paper is in the field of sentiment analysis &mdash; extracting opinions from a text &mdash; and uses restaurant reviews as a corpus. The prime assumption is that such texts will contain more than one opinion (e.g. quality of food, price range, interior, quality of service), which the authors believe is not properly reflected by previous work in this area, where one opinion per text is assumed.</p>
+<p>The problem the authors try to solve is assigning a rank from a fixed scale (e.g. 1-5) to several related aspects. They dismiss the easy approach of treating every aspect as a separate ranking problem, since they believe that a real text relates the different aspects in a coherent way (e.g. through phrases like &#8220;but&#8221;, &#8220;one problem was&#8221; etc.).</p>
+<p>They built on previous work in the natural language processing field, namely linear models trained with <a href="http://en.wikipedia.org/wiki/Perceptron">&#8220;Perceptron&#8221;</a> and extended this framework with a sort of &#8220;meta-model&#8221; that predicts relations (agreement or disagreement) between the individually ranked aspects. By relating the different aspects in such a way, it&#8217;s easier to reflect the contrasting views in real text like &#8220;good <span class="caps">BUT</span> pricey&#8221; in a meaningful way.</p>
+<p>What follows is some math, where each input (a review) gets assigned an m-dimensional ranking vector (reflecting m aspects). For example if you try to rank 3 different aspects (food, service, price) on a scale of 1-5 a ranking vector might look like &lt;5,5,3&gt; (&#8220;food and service were great, but it was a bit pricey&#8221;). The joint ranking model then combines the individual ranks with an &#8220;agreement model&#8221; to introduce &#8220;grief terms&#8221; which express dissatisfaction in a certain aspect. The algorithm than tries to minimize the sum of this &#8220;grief&#8221; &mdash; which is what gave the algorithm its name &mdash; in a joint rank. This step then gets incorporated into the training of the individual rankers (there&#8217;s some pseudo-code for the joint training), where features of an aspect get represented through presence or absence of words and word <a href="http://en.wikipedia.org/wiki/Bigram">bigrams</a>. This is obviously a very simplified description of the algorithm, but it seems moot to repeat the entire math here, which is very well laid out in the presentation. There&#8217;s also a very nice illustration about decoding and relating the various aspects at the end of the <span class="caps">PDF</span>.</p>
+<p>What then follows is a comparison of the Good Grief algorithm with similar algorithms on a corpus of 4500 restaurant reviews ranking restaurants on 5 different aspects, where it outperforms the &#8220;competition&#8221; in a statistically relevant way.</p>
+<p><strong>Takeaway</strong><br />
+As someone who works in an area where sentiment analyses could come in handy I do have an interest in the topic, but alas we don&#8217;t have the time and resources to develop our own system to do this properly. I once hacked something together with JRuby and the OpenNLP library, which wasn&#8217;t really sentiment analysis but an attempt to extract useful phrases from reviews. It was crude and had its faults, but worked surprisingly well for the amount of time it took to write. It did however get abandoned in a prototype stage and after reading the paper it&#8217;s quite clear to me that that probably was a good choice. Sentiment analysis is a non-trivial problem that can&#8217;t properly be tackled in the ad-hoc fashion we tried. Should this topic ever resurface at my company I&#8217;ll definitely try to go for a more elaborate and scientific approach.</p>
+<p><strong>Difficulty of the paper</strong><br />
+I know that for some people the math might look scary, but if you take some time and look at it carefully you&#8217;ll notice that it&#8217;s actually rather simple. It probably doesn&#8217;t hurt to be acquainted with some basic concepts of <span class="caps">NLP</span> and machine learning, but if you have those it&#8217;s quite an enjoyable paper even if you are not an absolute crack in the field.</p>
+<p><strong>Further reading</strong></p>
+<ul>
+	<li><a href="http://en.wikipedia.org/wiki/Natural_language_processing">Natural language processing</a></li>
+	<li><a href="http://en.wikipedia.org/wiki/Sentiment_analysis">Sentiment analysis</a></li>
+	<li><a href="http://incubator.apache.org/opennlp/">OpenNLP</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/24/information-overload-2011-07-24/">Information Overload 2011-07-24</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-24T00:00:00+07:00" pubdate data-updated="true">Jul 24<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://online.wsj.com/article/SB10001424052702304911104576445862242908294.html?mod=WSJ_hp_mostpop_read">Why My Father Hated India</a><br>A half Indian/half Pakistani sheds some light on the animosity between the two countries.</li>
+<li><a href="http://www.wired.com/magazine/2011/07/ff_khan/all/1">How Khan Academy Is Changing the Rules of Education</a><br>Very nice piece on the <a href="http://www.khanacademy.org/">Khan Academy</a>, including examples of how it&#8217;s used in class rooms as well as positive and negative feedback by educators.</li>
+<li><a href="http://www.wired.com/magazine/2011/07/mf_chainworld/all/1">Chain World Videogame Was Supposed to be a Religion-Not a Holy War</a><br>Wow, I completely missed this last year, but this is a super-interesting piece on an even more interesting indie game.</li>
+<li><a href="http://rahulbijlani.com/essays/you-are-not-running-out-of-time-essay/">You are not running out of time</a><br>This really resonates with me and judging from the comments I&#8217;m not the only one.</li>
+<li><a href="http://www.guardian.co.uk/world/2011/jun/07/marching-with-the-slutwalkers">Marching with the SlutWalkers</a><br>A Guardian story on the <a href="http://en.wikipedia.org/wiki/SlutWalk">SlutWalk</a> protest marches that are causing debate amongst feminists. Because it fits the topic, here&#8217;s a picture of a sticker I took in Vienna not so long ago (it roughly translates to &#8220;the power of definition means that only the aggrieved can decide if sexual borders were crossed&#8221;):</li>
+<div align="center"><img src="https://lh5.googleusercontent.com/-MmAHHFB4gTA/TiK_HvbSdwI/AAAAAAAAAPQ/q1JIrriJNCo/s912/11%2B-%2B1" /></div>
+<li><a href="http://www.fastcodesign.com/1664508/apple-designer-creates-teaching-ui-that-kills-math-using-data-viz">Ex-Apple Designer Creates Teaching UI That &quot;Kills Math&quot; Using Data Viz</a><br>I&#8217;m almost jealous all these great math teaching tools didn&#8217;t exist when I went to school. Ok, I am jealous.</li>
+<li><a href="http://willinglycrazy.blogspot.com/2011/07/why-i-talk-openly-about-deep-dark-hole.html" title="and why you should too">Why I talk openly about the deep dark hole I&#8217;m sitting in</a><br>For various reasons this affects me on a very personal level and I can only agree with the message of this post.</li>
+<li><a href="http://www.heise.de/tp/artikel/29/29687/1.html">&quot;In 30 Jahren wird es keinen Kapitalismus mehr geben&quot;</a><br>Will capitalism really disappear within the next 30 years? Sometimes it definitely feels like it.</li>
+<li><a href="http://www.physorg.com/news/2011-07-years-math-problem-falls.html">After almost 20 years, math problem falls</a><br>Interesting result about approximating something NP-complete without something P-complete which might have a huge impact in several disciplines, from engineering to economics.</li>
+<li><a href="http://www.theatlantic.com/technology/archive/2011/07/keepin-it-cool-how-the-air-conditioner-made-modern-america/241892/">Keepin&#8217; It Cool: How the Air Conditioner Made Modern America</a><br>I&#8217;m not a big fan of ACs, but this article isn&#8217;t only about them, but about how one piece of technology can change the world in profound ways.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/23/haskell-a-summary-of-the-typeclassopedia/">Haskell: A Summary of the &#8220;Typeclassopedia&#8221;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-23T00:00:00+07:00" pubdate data-updated="true">Jul 23<sup>rd</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In my current effort of trying to really learn and master Haskell, I spent the last two or so weeks reading the excellent <a href="http://www.haskell.org/haskellwiki/Typeclassopedia">Typeclassopedia</a> by Brent Yorgey. Since I probably will have to go through it a couple more times, I took notes in Emacs <a href="http://orgmode.org/">org-mode</a> and exported them to <span class="caps">HTML</span>. You can find the summary either on GitHub or here:</p>
+<ul>
+	<li><a href="https://github.com/citizen428/study-notes/tree/master/typeclassopedia">GitHub repo</a></li>
+	<li><a href="http://typeclassopedia.citizen428.net/">Typeclassopedia on citizen428.net</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/17/information-overload-2011-07-17/">Information Overload 2011-07-17</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-17T00:00:00+07:00" pubdate data-updated="true">Jul 17<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.nytimes.com/2011/07/11/opinion/11Prager.html">How Seawater Can Power the World</a><br>Interesting <span class="caps">NYT</span> op-ed on the future of fusion energy.</li>
+<li><a href="http://www.economist.com/node/18925855?story_id=18925855">Zoobotics</a><br>Robot researchers are modeling their creations after animals now, assuming that it&#8217;s hard to come up with a better design than evolution.</li>
+<li><a href="http://charliepark.org/slopegraphs/">Edward Tufte&#8217;s &quot;Slopegraphs&quot;</a><br>I really like this under-used chart style, I think it conveys meaning very well.</li>
+<li><a href="http://www.slate.com/id/2298871/pagenum/all/">Groundhog Decade</a><br>Very good piece on how Hollywood apparently is dead set on repeating the mistakes of the music industry.</li>
+<li><a href="http://soft.vub.ac.be/~tvcutsem/whypls.html">Why Programming Languages?</a><br>A programming language researcher explains why there are so many different programming languages and why we&#8217;ll likely keep on seeing new ones.</li>
+<li><a href="http://www.stanfordalumni.org/news/magazine/2011/julaug/features/spe.html">The Menace Within</a><br>40 years after the Stanford Prison Experiment some key players tell about their experience and what they took away from the experiment.</li>
+<li><a href="http://youarenotsosmart.com/2011/07/07/misattribution-of-arousal/">Misattribution of Arousal</a><br>I love all those insights into how our brains work. This article deals with the misattribution of arousal (not only of the sexual kind) to other people.</li>
+<li><a href="http://www.wired.com/threatlevel/2011/07/how-digital-detectives-deciphered-stuxnet/all/1">How Digital Detectives Deciphered Stuxnet, the Most Menacing Malware in History</a><br>If you have the slightest interest in IT security, you&#8217;ll love this article, but even if you usually don&#8217;t enjoy this topic the story still reads like the plot of a Hollywood movie.</li>
+<li><a href="http://d-build.org/blog/?p=2128">Tower of David: 45 Floors of Favela Chic</a><br>One of Latin America&#8217;s tallest buildings is now squatted by around 2500 people, many of them escaping live on the streets.</li>
+<li><a href="http://m.motherjones.com/politics/2011/05/indian-call-center-americanization">My Summer at an Indian Call Center</a><br>An American citizen works in an Indian call center for a summer.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/">Tom and Michael vs Prototypical Inheritance</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-11T00:00:00+07:00" pubdate data-updated="true">Jul 11<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://mrjaba.posterous.com/">Tom</a> and I read another paper, this time on prototypical inheritance: <a href="http://selflanguage.org/documentation/published/organizing-programs.html">Organizing Programs Without Classes</a>. You can find his post <a href="http://mrjaba.posterous.com/organizing-programs-without-classes">here</a> and I have to admit that he also did almost the entire summary this time whereas I only added some minor things and code examples.</p>
+<p><strong>Summary</strong></p>
+<p><span class="caps">OOP</span> is a paradigm which uses &#8220;objects&#8221; to encapsulate behavior and state in a programming language. This can be accomplished in a few ways, two of the more popular being class based and prototype based object orientation. In class based object models (e.g. Java) a class will be written to define the behavior and state that the object will embody. A class can be inherited from and extended to provide new functionality. In prototype based object models (e.g. ECMAScript, Io), there are no classes, only objects which can be cloned and altered to provide new features. Here&#8217;s a quick comparison of the two approaches in Ruby and ECMAScript:</p>
+<p>Ruby:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># define a class</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">Hello</span>
+</span><span class='line'>   <span class="k">def</span> <span class="nf">hello</span>
+</span><span class='line'>     <span class="nb">puts</span> <span class="s2">&quot;Hello&quot;</span>
+</span><span class='line'>   <span class="k">end</span>
+</span><span class='line'><span class="k">end</span> <span class="c1">#=&gt; nil</span>
+</span><span class='line'><span class="c1"># create an object instance</span>
+</span><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="no">Hello</span><span class="o">.</span><span class="n">new</span> <span class="c1">#=&gt; #&lt;Hello:0x00000100a2f520&gt;</span>
+</span><span class='line'><span class="c1"># call a method</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">hello</span> <span class="c1">#=&gt; nil</span>
+</span><span class='line'><span class="no">Hello</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>ECMAScript:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// create object using a function</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">Hello</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">hello</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span> <span class="p">}</span> <span class="p">};</span>
+</span><span class='line'><span class="c1">// create instance</span>
+</span><span class='line'><span class="nx">h</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Hello</span><span class="p">();</span>
+</span><span class='line'><span class="nx">h</span><span class="p">.</span><span class="nx">hello</span><span class="p">();</span> <span class="c1">// pops up an alert</span>
+</span><span class='line'><span class="c1">// alternatively we can use an object literal</span>
+</span><span class='line'><span class="nx">h</span> <span class="o">=</span> <span class="p">{</span><span class="nx">hello</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span> <span class="p">}</span> <span class="p">};</span>
+</span><span class='line'><span class="nx">h</span><span class="p">.</span><span class="nx">hello</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Class based inheritance purports many organizational benefits. Do prototype based languages share them? The paper looks at each benefit in turn and shows approaches to add these features into classless languages or even improve upon them.</p>
+<p><em>Behaviour Sharing:<br />
+</em>In class based programming languages code re-use is easy, you can inherit from a class and you&#8217;ll get access to that class&#8217;s methods and member variables.</p>
+<p>In prototype based languages a clone/copy method is written on a prototypical object which can define which data members and methods are copied to the new object. This idea can be refined to an object whose sole purpose is to supply behavior, a trait. This can be a parent object of the new object to provide its functionality. As this trait object is shared amongst all clones, any changes to it affect the clones, just as with the class and subclass of class based programming. Here&#8217;s an example on behavior sharing in a prototype based language (Io):</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+</pre></td><td class='code'><pre><code class='javascript'>&lt;span class='line'&gt;&lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;Object&lt;/span&gt; &lt;span class="nx"&gt;clone&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;m&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;in A\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;m&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;clone&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="nx"&gt;m&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>This will print:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>in A
+</span><span class='line'>in B
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p><em>Representation Sharing:</em><br />
+In class based languages, subclassing gives the child class access to the member variables of the parent, its representation. In prototype based languages, a trait object provides only behavior, not data. This job is performed by a prototype instance of the object, one every other object will be cloned from. Its clone method will copy across its data slots (member variables) with any default values the programmer has provided. This is called a &#8220;Data Parent&#8221;.</p>
+<p>In Ruby:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">A</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span>
+</span><span class='line'>    <span class="vi">@member</span> <span class="o">=</span> <span class="s2">&quot;fred&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'> <span class="k">def</span> <span class="nf">method_a</span>
+</span><span class='line'>   <span class="nb">puts</span> <span class="s2">&quot;in A with </span><span class="si">#{</span><span class="vi">@member</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'> <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">B</span> <span class="o">&lt;</span> <span class="n">A</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">method_b</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="s2">&quot;in B with </span><span class="si">#{</span><span class="vi">@member</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">A</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">method_a</span>
+</span><span class='line'><span class="n">B</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">method_b</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#in A with fred</span>
+</span><span class='line'><span class="c1">#in B with fred</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>In IO:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Food</span> <span class="o">:=</span> <span class="nb">Object</span> <span class="nx">clone</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pizza</span> <span class="o">:=</span> <span class="nx">Food</span> <span class="nx">clone</span>
+</span><span class='line'><span class="nx">pizza</span> <span class="nx">name</span> <span class="o">:=</span> <span class="s2">&quot;Meat Feast&quot;</span>
+</span><span class='line'><span class="nx">pizza</span> <span class="nx">price</span> <span class="o">:=</span> <span class="mi">10</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pasta</span> <span class="o">:=</span> <span class="nx">pizza</span> <span class="nx">clone</span>
+</span><span class='line'><span class="nx">pasta</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Macaroni Cheese&quot;</span>
+</span><span class='line'><span class="nx">pasta</span> <span class="nx">price</span> <span class="o">=</span> <span class="mi">5</span>
+</span></code></pre></td></tr></table></div></figure></div><br />
+<em>Dynamic Behaviour Changes &#8211; Changing an instance&#8217;s class and dynamic inheritance:<br />
+</em><em>Tom:</em> This was a section of particular interest, mainly because I think it&#8217;s not quite as skewed as they portray it. The idea is that because in a prototype based model the reference to the parent object (traits, data) is simply a reference it can be changed very easily depending on the state the object is in. This provides new functionality as the object goes through its life. In a class based model, changing an instance&#8217;s class is difficult at best and not a good idea, however the idea of changing behavior based on state is still a useful concept. The authors however seem to miss the concept of composition and delegation, it&#8217;s next to trivial to change the behavior of an object simply by changing the object that is providing a function, just take a look at the Strategy Pattern for an example.<br />
+<em>Michael:</em> This paper is from 1991, the <a href="http://en.wikipedia.org/wiki/Design_Patterns">Gang of Four book on Design Patterns</a> from 1994, so I guess you&#8217;re blaming the authors for not knowing about something that hasn&#8217;t been published when they wrote their paper.<br />
+<em>Tom:</em> Fair point! I wonder when the concept of delegation was first coined?<br />
+<em>Michael:</em> According to <a href="http://en.wikipedia.org/wiki/Delegation_(programming)">Wikipedia</a> in a paper from 1986, &#8220;Using Prototypical Objects to Implement Shared Behavior in Object-Oriented Systems&#8221;.</p>
+<p>In ECMAScript:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">circle</span><span class="p">(){}</span>
+</span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span>
+</span><span class='line'><span class="err">#</span><span class="nx">circle</span>
+</span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">ellipse</span><span class="p">(){}</span>
+</span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span>
+</span><span class='line'><span class="err">#</span><span class="nx">ellipse</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Changing the prototype can entirely change the behavior of an object.</p>
+<p><em>Naming and Categorising:<br />
+</em>This feature is vital in any nontrivial system, without being able to find code to serve its purpose the programmer would be constantly rewriting the same code over and over. Class based languages tend to provide a globally accessible name for a set of functions. They also tend to provide namespaces to prevent naming collisions or categorisation. Prototype based languages need to be able to access the prototype anywhere in the system to be cloned, but as they are just regular objects, they have no internal names. The authors of the paper propose that namespace objects can be used to fill this need. Essentially a globally accessible hash map, which can contain nested namespace objects to provide categorisation. This later emerged as a fairly common pattern in ECMAScript.</p>
+<p>In Ruby:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">A</span><span class="p">;</span> <span class="k">end</span>
+</span><span class='line'><span class="n">A</span>
+</span><span class='line'><span class="c1">#A</span>
+</span></code></pre></td></tr></table></div></figure></div><br />
+A is a globally defined constant which points to an Object.</p>
+<p>In ECMAScript:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">TopLevel</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">TopLevel</span> <span class="o">||</span> <span class="p">{}</span>
+</span><span class='line'><span class="nx">TopLevel</span><span class="p">.</span><span class="nx">SecondLevel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">member</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">function</span> <span class="nx">memberMethod</span><span class="p">(){</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Note that TopLevel is simply an object literal.</p>
+<p>The naming of these type of systems is highly dependent on the structure of the system, this type of naming is called Extensional naming. Intensional naming is the term given to systems where the name of classes is defined by the programmer and not necessarily related to the structure of the system. The authors claim that Extensional naming has a few key advantages:</p>
+<p>1) It&#8217;s free with a classless language; no other constructs are required for this behaviour to work.<br />
+2) The names are also expressions, and as this is code it can have additional interpretations.<br />
+3) Intensional naming can become inconsistent quite easily.</p>
+<p>Tom&#8217;s not convinced any of these reasons are actually advantages: 1) just because a system comes with a feature doesn&#8217;t mean you should use it if there is a better alternative available &#8211; prototype based models don&#8217;t seem to have much of an alternative. 2) because it is code and not a simple lookup this is more complicated and has more potential for error. 3) this is probably valid. Changing a class name does require it to be updated everywhere in the system, but with refactoring tools this is mitigated.</p>
+<p><strong>Conclusion:<br />
+</strong>This was a pretty interesting paper. Personally I&#8217;ve always been drawn to Io, but never got past the &#8220;playing around&#8221; stage with it. Checking out Self also is on my todo list. I think there&#8217;s a certain elegance to prototype based object orientation and I&#8217;d like to research it a bit more.</p>
+<p><strong>Further reading:</strong><br />
+<ul><li><a href="http://en.wikipedia.org/wiki/Self_(programming_language)" title="Self">Self</a></li><li><a href="http://en.wikipedia.org/wiki/Javascript" title="Javascript">Javascript</a></li><li><a href="http://en.wikipedia.org/wiki/Io_(programming_language)" title="Io">Io</a></li><li><a href="http://en.wikipedia.org/wiki/Prototype_based" title="Protoype based object orientation">Protoype based object orientation</a></li><li><a href="http://en.wikipedia.org/wiki/Trait_(computer_programming)" title="Trait">Trait</a></li></ul></p></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/15">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/13">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I&#8217;m Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/12/information-overload-2015-07-12/">Information Overload 2015-07-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

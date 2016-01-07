@@ -1,0 +1,904 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Apparently there was a certain demand for MethodFinder and after being mentioned on Ruby5, it now has almost 150 followers on GitHub as well as over &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.github.io/posts/17">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/04/08/motivating-methodfinder-feedback/">Motivating MethodFinder Feedback</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-08T00:00:00+07:00" pubdate data-updated="true">Apr 8<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Apparently there was a certain demand for <a href="https://github.com/citizen428/methodfinder">MethodFinder</a> and after being mentioned on <a href="http://ruby5.envylabs.com">Ruby5</a>, it now has almost 150 followers on GitHub as well as over 200 downloads on Rubygems, which is more than I ever expected.  There&#8217;s also been some very nice feedback on Twitter:</p>
+<blockquote><p>MethodFinder, where have you been all my life?</p><footer><strong>@rbates</strong> <cite><a href='http://twitter.com/#!/metasoarous/status/55714164802453504'>twitter.com/#!/metasoarous/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>[&#8230;] that MethodFinder is quite awesome though I&#8217;m not sure I&#8217;ve ever needed one</p><footer><strong>@anentropic</strong> <cite><a href='http://twitter.com/#!/anentropic/status/53086564179382272'>twitter.com/#!/anentropic/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>MethodFinder is one of the coolest things about Squeak. Neat to see it&#8217;s been ported to Ruby</p><footer><strong>@avibryant</strong> <cite><a href='http://twitter.com/#!/caldeiro/status/53078298682593280'>twitter.com/#!/caldeiro/status/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>MethodFinder in ruby has to be the coolest Gem I&#8217;ve ever seen</p><footer><strong>@bilco105</strong> <cite><a href='http://twitter.com/bilco105/status/53052032973676544'>twitter.com/bilco105/status/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>geniale</p><footer><strong>@microspino</strong> <cite><a href='http://twitter.com/microspino/status/53020300220182528'>twitter.com/microspino/status/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>I loved Smalltalk&#8217;s method finder. Now there is one for Ruby. Cool!</p><footer><strong>@wallingf</strong> <cite><a href='http://twitter.com/#!/wdjunaidi/status/52872212788678657'>twitter.com/#!/wdjunaidi/status/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>This is one neat piece of code</p><footer><strong>@lukaszkorecki</strong> <cite><a href='http://twitter.com/lukaszkorecki/status/52824077538312192'>twitter.com/lukaszkorecki/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>Hulk <span class="caps">WANTS</span> for #clojure.</p><footer><strong>@marick</strong> <cite><a href='http://twitter.com/#!/garybernhardt/status/52801103615635456'>twitter.com/#!/garybernhardt/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>Holy shitballs, I need to learn SmallTalk</p><footer><strong>@batasrki</strong> <cite><a href='http://twitter.com/#!/batasrki/status/52799132351463424'>twitter.com/#!/batasrki/status/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>This is great for Ruby newbies like me !</p><footer><strong>@stiiifff</strong> <cite><a href='http://twitter.com/#!/stiiifff/status/52792106460266496'>twitter.com/#!/stiiifff/status/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>#Ruby method finder ftw!</p><footer><strong>@kuroi_kenshi</strong> <cite><a href='http://twitter.com/kuroi_kenshi/status/52791499364118528'>twitter.com/kuroi_kenshi/status/&hellip;</a></cite></footer></blockquote>
+<blockquote><p>Really amazing!!</p><footer><strong>@5pidou</strong> <cite><a href='http://twitter.com/5pidou/status/52788853618122752'>twitter.com/5pidou/status/&hellip;</a></cite></footer></blockquote>
+<p>That&#8217;s quite motivating and I&#8217;m currently experimenting with some ideas that might eventually lead to another tool useful for Ruby learners.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/04/03/information-overload-2011-04-03/">Information Overload 2011-04-03</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-03T00:00:00+07:00" pubdate data-updated="true">Apr 3<sup>rd</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.slate.com/id/2289012/pagenum/all/">No Sharing Allowed</a><br>Ebooks as yet another example of how &#8220;old media&#8221; companies have a hard time transitioning into the digital world. </li>
+<li><a href="http://www.paolocirio.net/work/gift-finance/p2p_gift_credit_card.php">P2P Gift Credit Card</a><br>Interesting idea by Italian artist <a href="http://www.paolocirio.net/cv.php">Paolo Cirio</a>.</li>
+<li><a href="http://www.core77.com/blog/education/biomimetic_designers_take_note_goat_hooves_confer_ninja-like_climbing_abilities_18851.asp">Biomimetic Designers Take Note: Goat Hooves Confer Ninja-like Climbing Abilities</a><br>Ever wondered why goats are such amazing climbers? Here&#8217;s the answer.</li>
+<li><a href="http://www.time.com/time/photogallery/0,29307,2061931_2260133,00.html">Inside Seized Drug-Smuggling Submarines</a><br>So Columbian drug traffickers build (semi-)submergibles for getting their drugs into the Central America and the US. Take that <span class="caps">DIY</span> community!</li>
+<li><a href="http://www.spiegel.de/netzwelt/web/0,1518,750111,00.html">Die ganze Welt ist meiner Meinung</a><br>On how algorithmic filtering of content and personalization can lead to a filter bubble (in German).</li>
+<li><a href="http://teddziuba.com/2011/03/monitoring-theory.html">Monitoring Theory</a><br>If you ever were a sysadmin who spent nights on call with an overambitious Nagios texting you every 3.5 seconds, you&#8217;ll love this. And even if you didn&#8217;t there&#8217;s some good thoughts on monitoring in there.</li>
+<li><a href="http://www.newscientist.com/blogs/culturelab/2011/03/mathematical-artist-why-hyperbolic-space-is-awesome.html">Mathematical artist: Why hyperbolic space is awesome</a><br>Nice interview with <a href="http://vihart.com/everything/">Vi Hart</a> on the beauty of mathematics. If you don&#8217;t know her work, you should definitely check it out (personally I&#8217;d recommend the &#8220;math doodling&#8221; videos)!</li>
+<li><a href="http://www.newyorker.com/online/blogs/georgepacker/2011/04/ivory-coast-rebels.html">The Other Rebels</a><br>With all the attention on Lybia, it&#8217;s easy to overlook conflicts in other countries, e.g. Ivory Coast.</li>
+<li><a href="http://opendata.zeit.de/widgets/dataretention/">Tell-all telephone</a><br>Next time you have trouble explaining the dangers of data retention in relation to privacy, just show your conversation partner this visualization.</li>
+<li><a href="http://zedshaw.com/essays/programmer_stats.html">Programmers Need To Learn Statistics Or I Will Kill Them All</a><br>Like with most things Zed Shaw writes I&#8217;m not a big fan of the language, but agree with the content.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/29/cloud-link-collection/">Cloud Link Collection</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-29T00:00:00+07:00" pubdate data-updated="true">Mar 29<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In late 2009 and early 2010 I worked on a very interesting cloud computing project. In the process I accrued a fairly comprehensive link list on the topic, which I already briefly mentioned <a href="http://citizen428.net/archives/417">here</a>. The list was also published on the blog of my back then employer, but since the company doesn&rsquo;t exist anymore and their site is offline, I figured I might as well put it up here. The <a href="https://gist.github.com/314445">gist</a> where I originally collected this is still on GitHub, feel free to fork, add etc.</p>
+
+<h2>Cloud Providers</h2>
+
+<ul>
+<li><a href="http://aws.amazon.com/">Amazon Web Services</a></li>
+<li><a href="http://elasticserver.com/">Elastic Server</a></li>
+<li><a href="http://www.eucalyptus.com/">Eucalyptus</a></li>
+<li><a href="http://www.gogrid.com">GoGrid</a></li>
+<li><a href="http://code.google.com/appengine/">Google App Engine</a></li>
+<li><a href="http://www.linode.com/">Linode - Xen VPS Hosting</a></li>
+<li><a href="http://www.microsoft.com/windowsazure/">Microsoft Azure</a></li>
+<li><a href="http://www.picloud.com/">PiCloud</a></li>
+<li><a href="http://www.rackspacecloud.com/">Rackspace</a></li>
+<li><a href="http://www.slicehost.com/">Slicehost</a></li>
+<li><a href="http://www.vmware.com/appliances/services/vcloud-express.html">VWware vCloud</a></li>
+<li><a href="http://www.netmonic.com/">Netmonic</a> </li>
+</ul>
+
+
+<h2>General / Architecture</h2>
+
+<ul>
+<li><a href="http://openfoo.org/blog/amazon_ec2_underlying_architecture.html">EC2 Architecture</a></li>
+<li><a href="http://www.cloudclimate.com/">Cloud Climate</a></li>
+<li><a href="http://calculator.s3.amazonaws.com/calc5.html">AWS Pricing Calculator</a></li>
+<li><a href="http://media.amazonwebservices.com/Amazon_EC2_Cost_Comparison_Calculator_020110.xls">EC2 Cost Comparison Calculator</a></li>
+<li><a href="http://media.amazonwebservices.com/The_Economics_of_the_AWS_Cloud_vs_Owned_IT_Infrastructure.pdf">The Economics of the AWS Cloud vs. Owned IT Infrastructure</a></li>
+<li><a href="http://jineshvaria.s3.amazonaws.com/public/cloudbestpractices-jvaria.pdf">Architecting for the Cloud: Best Practices</a></li>
+<li><a href="http://www.cloudexchange.org/">cloud exchange</a> - Spot instance prices comparison</li>
+</ul>
+
+
+<h2>Getting Started</h2>
+
+<ul>
+<li><a href="http://www.youtube.com/watch?v=bBajLxeKqoY">Amazon EC2 Tutorial Video</a></li>
+<li><a href="http://thewebfellas.com/blog/2008/9/1/creating-an-new-ec2-ami-from-within-vmware-or-from-vmdk-files">Creating a new EC2 AMI from VMware or VMDK files</a></li>
+<li><a href="http://www.elastician.com/2009/12/creating-ebs-backed-ami-from-s3-backed.html">Creating an EBS-backed AMI from an S3-backed AMI</a></li>
+<li><a href="http://coderslike.us/2009/12/07/amazon-ec2-boot-from-ebs-and-ami-conversion/">amazon ec2 - boot from ebs and ami conversion</a></li>
+</ul>
+
+
+<h2>Security</h2>
+
+<ul>
+<li><a href="http://www.cloudsecurityalliance.org/">Cloud Security Alliance</a></li>
+<li><a href="http://www.slideshare.net/craigbalding/what-everyone-ought-to-know-about-cloud-security">What Everyone Ought To Know About Cloud Security</a></li>
+<li><a href="http://www.enisa.europa.eu/act/rm/files/deliverables/cloud-computing-risk-assessment">Cloud Computing Risk Assessment</a></li>
+<li><a href="http://s3.amazonaws.com/aws_blog/AWS_Security_Whitepaper_2008_09.pdf">AWS Security Whitepaper</a></li>
+</ul>
+
+
+<h2>Programming / Libraries</h2>
+
+<ul>
+<li><a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=2843&amp;categoryID=87">EC2 API</a></li>
+<li><a href="http://code.google.com/p/boto/">boto - Python interface to AWS</a></li>
+<li><a href="http://search.cpan.org/~jkim/Net-Amazon-EC2-0.14/">Net-Amazon-EC2 - Perl library</a></li>
+<li><a href="http://amazon-ec2.rubyforge.org/">amazon-ec2 - Ruby</a></li>
+<li><a href="http://deltacloud.org/">Deltacloud - Many clouds. One API.</a></li>
+<li><a href="http://incubator.apache.org/libcloud/">libcloud - a unified interface to the cloud</a></li>
+<li><a href="http://www.gridgain.com/">GridGain - Cloud Development Platform</a></li>
+</ul>
+
+
+<h2>MapReduce</h2>
+
+<ul>
+<li><a href="http://architects.dzone.com/articles/comparison-gridcloud-computing">Comparison of the Grid/Cloud Computing Frameworks</a></li>
+<li><a href="http://www.cloudera.com/blog/2009/12/17/7-tips-for-improving-mapreduce-performance/">7 Tips for Improving MapReduce Performance</a></li>
+<li><a href="http://www.slideshare.net/cwensel/sam-sig-hadoop-architecture-mapreduce-patterns-and-best-practices-with-cascading">SAM SIG: Hadoop architecture, MapReduce patterns, and best practices with Cascading</a></li>
+<li><a href="http://www.cascading.org/">Cascading - API for defining and executing complex, scale-free, and fault tolerant data processing workflows on a Hadoop cluster</a></li>
+<li><a href="http://www.cloudera.com/blog/2010/03/why-europes-largest-ad-targeting-platform-uses-hadoop/">Why Europe&#8217;s Largest Ad Targeting Platform Uses Hadoop</a></li>
+</ul>
+
+
+<h2>Blogs</h2>
+
+<ul>
+<li><a href="http://www.elastician.com/">Elastician - Mitch Garnaat, author of Boto, founder of CloudRight</a></li>
+<li><a href="http://blog.rightscale.com/">RightScale Blog</a></li>
+</ul>
+
+
+<h2>Monitoring</h2>
+
+<ul>
+<li><a href="http://portal.monitis.com/web/guest/ec2-monitoring">Monitis</a></li>
+<li><a href="https://www.cloudkick.com/">Cloudkick</a></li>
+<li><a href="http://dev.bizo.com/2010/03/introducing-cloudviz.html">Cloudviz</a> - Graph CloudWatch data</li>
+<li><a href="http://cloud42.net/">Cloud42</a> - Open Source management framework for Amazon EC2</li>
+</ul>
+
+
+<h2>Images</h2>
+
+<ul>
+<li><a href="http://www.rabbitmq.com/ec2.html">RabbitMQ EC2 Images</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/27/information-overload-2011-03-27/">Information Overload 2011-03-27</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-27T00:00:00+07:00" pubdate data-updated="true">Mar 27<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.news-world.us/pics/2010/08/22/60-worst-countries-in-the-world/">60 Worst Countries in the World</a><br>Although I find the name of this article a bit unfortunate, this is a sobering list of the world&#8217;s worst off countries.</li>
+<li><a href="http://www.guardian.co.uk/world/interactive/2011/mar/14/new-europe-statistics-interactive">Europe by numbers: the complete interactive guide</a><br>Great interactive statistics about various aspects of life in Europe.</li>
+<li><a href="http://www.mostlymaths.net/2010/06/timeboxing-you-will-work-like-never.html">Timeboxing: You Will Work Like Never Before</a><br>Ruben from <a href="http://www.mostlymaths.net/">Mostly Maths</a> explains his time management strategy.</li>
+<li><a href="http://www.fastcompany.com/node/1739774/print">How Carrots Became the New Junk Food</a><br>On how a US marketing company tries to market baby carrots as junk food to increase sales.</li>
+<li><a href="http://journal.neilgaiman.com/2008/12/why-defend-freedom-of-icky-speech.html">Why defend freedom of icky speech?</a><br>Excellent post by Neil Gaiman on why defending of free speech also has to mean defending the rights of things you don&#8217;t agree with.</li>
+<li><a href="http://www.yiransheng.com/2010/03/bot">A Conversation between Two Chat Bots</a><br>This makes for some hilarious dialogue and I really hope &#8220;Your conversation skills should be shot.&#8221; catches on as an internet meme. ;-)</li>
+<li><a href="http://www.theatlantic.com/life/archive/2011/03/how-to-feed-the-world-by-2050-biotech-isnt-the-answer/72768/">How to Feed the World by 2050: Biotech Isn&#8217;t the Answer</a><br>I like it when people can talk rationally about emotionally charged subjects.</li>
+<li><a href="http://wsf.tv/videos/spotlight_do_not_touch_the_frog">Do Not Touch the Frog</a><br>Very funny talk from World Science Festival about <a href="http://wsf.tv/participants/mark_moffett">Mark Moffet</a>&#8217;s search for an elusive poison dart frog.</li>
+<li><a href="http://jonathanstray.com/the-editorial-search-engine">The editorial search engine</a><br>Journalist Jonathan Stray thinks about the future role of algorithmic curation in the newsroom.</li>
+<li><a href="https://www.accessnow.org/pages/protecting-your-security-online">A Practical Guide to Protecting Your Identity and Security Online and When Using Mobile Phones.</a><br>Originally written for the people in the Middle East and North Africa, this document is a good resource for many people (available in English and Arabic).</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/20/information-overload-2011-03-20/">Information Overload 2011-03-20</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-20T00:00:00+07:00" pubdate data-updated="true">Mar 20<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://cdsmith.wordpress.com/2011/03/13/haskells-niche-hard-problems/">Haskell&#8217;s Niche: Hard Problems</a><br>Doing more Haskell was on my todo list for 2011, but so far I&#8217;ve failed rather miserably. Oh well, at least I&#8217;m reading about it&#8230;</li>
+<li><a href="http://www.friendlyanarchist.com/beyond-rules/">Beyond Rules</a><br>Nice post with a free download of the ebook &#8220;Beyond Rules: A Dilettante&#8217;s Guide to Personal Sovereignty, Space Travel, and Lots of Ice Cream&#8221;.</li>
+<li><a href="http://tauday.com/">The Tau Manifesto</a><br>The math fans among my readers should like this one (and the accompanying <a href="http://halftauday.com/">Half Tau Day</a>), I certainly did!</li>
+<li><a href="http://www.misik.at/texte-aus-der-taz-berlin/was-haben-wir-aus-unserer-welt-gemacht.php">Was haben wir aus unserer Welt gemacht?</a><br>Austrian journalist Robert Misik comments on the current nuclear energy safety discussion (in German).</li>
+<li><a href="http://www.theatlantic.com/technology/archive/2011/03/antarctica-1961-a-soviet-surgeon-has-to-remove-his-own-appendix/72445/">Antarctica, 1961: A Soviet Surgeon Has to Remove His Own Appendix</a><br>The Chuck Norris of surgery.</li>
+<li><a href="http://theinvisiblethings.blogspot.com/2011/03/partitioning-my-digital-life-into.html">Partitioning my digital life into security domains</a><br>Well&#8212;known security researcher Joanna Rutkowska describes how she partitions her digital life into separate domains with <a href="http://qubes-os.org/Home.html">Qubes OS</a>. A very interesting approach and I&#8217;m curious to see Beta 1 of the OS.</li>
+<li><a href="http://www.npr.org/blogs/krulwich/2011/03/18/134597833/cosmonaut-crashed-into-earth-crying-in-rage?ft=1&amp;f=1026">Cosmonaut Crashed Into Earth &#8216;Crying In Rage&#8217;</a><br>The man who died to save his friend Yuri Gagarin.</li>
+<li><a href="http://futurezone.at/netzpolitik/2282-facebook-online-proteste-ohne-offline-effekt.php">Facebook: Online-Proteste ohne Offline-Effekt</a><br>Good article on &#8220;Slacktivism&#8221; (in German).</li>
+<li><a href="http://groups.google.com/group/alt.fan.noam-chomsky/msg/12c9b62ed459d63d?pli=1">Chomsky on &#8216;Intellectual Property&#8217;</a><br>Interview with Noam Chomsky about intellectual property. This is a bit older, but still a good read.</li>
+<li><a href="http://thingist.com/t/item/4372/">Nerds, we need to have a talk</a><br>Good rant about an attitude problem in nerd culture.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/13/information-overload-2011-03-13/">Information Overload 2011-03-13</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-13T00:00:00+07:00" pubdate data-updated="true">Mar 13<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://online.wsj.com/article/SB10001424052748703386704576186592268116056.html">Galleon&#8217;s Web</a><br>Great visualization of the Galleon insider trading case by the <a href="http://europe.wsj.com/home-page">Wall Street Journal</a>.</li>
+<li><a href="http://opendata.zeit.de/pisa-wohlstands-vergleich/visualisierung.php#/en/DEU-OECD"><span class="caps">PISA</span> based Wealth Comparison</a><br>More visualization, this time by German weekly <a href="http://www.zeit.de/">Die Zeit</a> (also available in <a href="http://opendata.zeit.de/pisa-wohlstands-vergleich/visualisierung.php#/de/DEU-OECD">German</a>).</li>
+<li><a href="http://ediscope.labs.yahoo.net/">The Like Log Study</a><br>Seems like we have a topic for this issue of &#8220;Information Overload&#8221;&#8230; Here&#8217;s another interesting data analysis, this time about Facebook &#8220;Likes&#8221; on news web sites.</li>
+<li><a href="http://pinboard.in/blog/173/#f2">Anatomy of a Crushing</a><br>Interesting article on the <a href="http://pinboard.in/">Pinboard</a> blog on how they dealt with the onslaught of Delicious refugees right before Christmas.</li>
+<li><a href="http://www.mauronewmedia.com/blog/2011/02/why-angry-birds-is-so-successful-a-cognitive-teardown-of-the-user-experience/">Why Angry Birds is so successful and popular: a cognitive teardown of the user experience</a><br>Super interesting analysis of why <a href="http://en.wikipedia.org/wiki/Angry_Birds">Angry Birds</a> is so popular. Makes you wonder how much of that was by design and how much was just plain luck.</li>
+<li><a href="http://www.fordham.edu/academics/programs_at_fordham_/mathematics_departme/what_math/index.asp">What Math?</a><br>Great post on an under-appreciated subject and some nice analogies to use next time someone gives you the &#8220;math isn&#8217;t useful&#8221; routine (it&#8217;s not, <a href="http://www.economist.com/node/18329424/">see</a>.</li>
+<li><a href="http://www.ppl-pilot.com/mame.aspx">The Day <span class="caps">MAME</span> Saved My A**</a><br>This hit several news site last December, but I didn&#8217;t get around to read it until now. A game developer tells the story about how <a href="http://mamedev.org/"><span class="caps">MAME</span></a> helped him in porting an old game, despite all the trouble the publisher got him and his team in.</li>
+<li><a href="http://www.economist.com/node/18329424/">Dispatch from <span class="caps">SXSW</span>: Have Startups Become a Fetish?</a><br>I&#8217;m glad there is more criticism about the startup craze lately, it&#8217;s really getting out of hand.</li>
+<li><a href="http://www.vanityfair.com/culture/features/2011/04/dubai-201104?currentPage=all">Dubai on Empty</a><br>I&#8217;m glad this article from Vanity Fair was linked on Hacker News, it&#8217;s very much in line with my own limited experience in Dubai.</li>
+<li><a href="http://en.rsf.org/nawaat-reporters-without-borders-11-03-2011,39776.html">World Day Against Cyber-Censorship: new “Enemies of the Internet” list</a><br>Compiled by Reporters Without Borders. Make sure you don&#8217;t miss the dropdown with per country information at the bottom!</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/11/unsavory-1-0-0-and-methodfinder-1-0-1/">Unsavory 1.0.0 and Methodfinder 1.0.1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-11T00:00:00+07:00" pubdate data-updated="true">Mar 11<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://github.com/citizen428/unsavory">unsavory</a> has reached maturity (meaning I can&rsquo;t really come up with any more stuff I want to add), so i decided it&rsquo;s enough with the conservative versioning and jumped from 0.3.3 to 1.0.0 :-) Right before Christmas I had changed it from Delicious to <a href="http://pinboard.in">Pinboard</a> and today I replaced the previous - rather verbose - output with a nice little <a href="http://0xcc.net/ruby-progressbar/index.html.en">progressbar</a> and a log file.</p>
+
+<p>I also did a mini update to <a href="https://github.com/citizen428/methodfinder">methodfinder</a>, which now uses <a href="http://www.ruby-doc.org/stdlib/libdoc/stringio/rdoc/index.html">StringIO</a> objects instead of <code>/dev/null</code> for output redirection, which should make the Windows users out there happy.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/09/haskell-like-zip_with-for-ruby/">Haskell Like &#8220;Zip_with&#8221; for Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-09T00:00:00+07:00" pubdate data-updated="true">Mar 9<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I always liked Haskell&#8217;s <a href="http://hackage.haskell.org/packages/archive/base/latest/doc/html/Prelude.html#v:zipWith">zipWith</a> and sometimes miss it in Ruby, so I wrote my own a couple of weeks ago. I also submitted a pull request to <a href="http://rubyworks.github.com/facets/">Facets</a>, but since it&#8217;s still not included I decided to post the code here in case it&#8217;s useful for anyone:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">zip_with</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="kp">nil</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="o">[]</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">empty?</span> <span class="o">||</span> <span class="n">other</span><span class="o">.</span><span class="n">empty?</span>
+</span><span class='line'>  <span class="n">clipped</span> <span class="o">=</span> <span class="nb">self</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.other</span><span class="o">.</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">zipped</span> <span class="o">=</span> <span class="n">clipped</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">op</span>
+</span><span class='line'>    <span class="n">zipped</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="n">zipped</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="k">yield</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Usage examples:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">].</span><span class="n">zip_with</span><span class="p">(</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="ss">:+</span><span class="p">)</span> <span class="c1">#=&gt; [7, 7, 7]</span>
+</span><span class='line'><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">].</span><span class="n">zip_with</span><span class="p">(</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span> <span class="p">}</span> <span class="c1">#=&gt; [15, 16, 17]</span>
+</span></code></pre></td></tr></table></div></figure></div></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/09/smalltalks-method-finder-in-ruby/">Smalltalk&#8217;s Method Finder in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-09T00:00:00+07:00" pubdate data-updated="true">Feb 9<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Update: The code is on Github now - <a href="https://github.com/citizen428/MethodFinder"><a href="https://github.com/citizen428/MethodFinder">https://github.com/citizen428/MethodFinder</a></a></p>
+
+<p>I changed the argument order (so you don&rsquo;t have to always specify empty arrays), added support for blocks, do some method filtering based on arity and ensure that the streams get properly restored. I left the original code in this post for reference though.
+</em></p>
+
+<p>I always was quite fond of Squeak&rsquo;s Method Finder, which let&rsquo;s you enter a receiver, arguments and the desired result and will show you all methods that will return this result when sent to the receiver with the provided arguments. Since I started mentoring courses at RubyLearning 2 years ago I often thought that something like this might be nice for the students of our core course.</p>
+
+<p>Last night I was about to start looking for an implementation of Method Finder in Ruby I found some years ago, but then decided to just write my own, which is more fun and doesn&rsquo;t take long. Here we go:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">MethodFinder</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">find</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">redirect_streams</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">found</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">select</span> <span class="k">do</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">o</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Numeric</span><span class="p">)</span> <span class="p">?</span> <span class="n">obj</span> <span class="p">:</span> <span class="n">obj</span><span class="o">.</span><span class="n">dup</span>
+</span><span class='line'>      <span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="k">rescue</span> <span class="kp">nil</span><span class="p">)</span> <span class="o">==</span> <span class="n">res</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">restore_streams</span>
+</span><span class='line'>    <span class="n">found</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">redirect_streams</span>
+</span><span class='line'>    <span class="vi">@orig_stdout</span> <span class="o">=</span> <span class="vg">$stdout</span>
+</span><span class='line'>    <span class="vi">@orig_stderr</span> <span class="o">=</span> <span class="vg">$stderr</span>
+</span><span class='line'>    <span class="vg">$stdout</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;/dev/null&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="vg">$stderr</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;/dev/null&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">restore_streams</span>
+</span><span class='line'>    <span class="vg">$stdout</span> <span class="o">=</span> <span class="vi">@orig_stdout</span>
+</span><span class='line'>    <span class="vg">$stderr</span> <span class="o">=</span> <span class="vi">@orig_stderr</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nb">private_class_method</span> <span class="ss">:redirect_streams</span><span class="p">,</span> <span class="ss">:restore_streams</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s how you use it:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;divmod&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span><span class="o">[/.</span><span class="n">/</span><span class="o">]</span><span class="p">,</span><span class="sx">%w(a b c)</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;scan&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;aBc&quot;</span><span class="p">,</span><span class="o">[]</span><span class="p">,</span><span class="s2">&quot;AbC&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;swapcase!&quot;</span><span class="p">,</span> <span class="s2">&quot;swapcase&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;**&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="no">MethodFinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">6</span><span class="o">]</span><span class="p">,</span><span class="o">[]</span><span class="p">,</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;compact&quot;</span><span class="p">,</span> <span class="s2">&quot;compact!&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I think I&rsquo;ll pack this up as a gem for our course participants to install and use in their IRBs, but before that I might add/change a couple of things:</p>
+
+<ul>
+    <li>Exclude method&#8217;s based on arity to reduce the number of message sends. <em>Done.</em></li>
+    <li>Add support for blocks which is trivial. <em>Done.</em></li>
+    <li>Maybe switch the order of arguments and expected result, so you don&#8217;t always have to specify an empty array for the arguments. I am a bit torn on this one though, since I like having the argument list explicit. <em>Done.</em></li>
+    <li>Redirect <code>stdout</code> and <code>stderr</code> to a StringIO object instead of <code>/dev/null</code> unless someone tells me that the latter works on Windows. <em>Done.</em></li>
+    <li>Maybe add some sort of method blacklist so they won&#8217;t get tried in the block. <em>Done.</em></i>
+</ul>
+
+
+<p>This shouldn&rsquo;t take long, but still may have to wait for a couple of weeks because of a trip I&rsquo;m taking.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/06/information-overload-2011-02-06/">Information Overload 2011-02-06</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-06T00:00:00+07:00" pubdate data-updated="true">Feb 6<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://grumomedia.com/plenty-of-fish-hacked-chris-russos-explains-how-he-did-it/">Plenty Of Fish Hacked</a><br>Once again a security researcher gets into trouble for reporting a vulnerability. Will people never learn?</li>
+<li><a href="http://sourceforge.net/blog/sourceforge-attack-full-report/">Sourceforge Attack: Full Report</a><br>Speaking of security, here&#8217;s the full report of the recent Sourceforge hack.</li>
+<li><a href="http://mindyourdecisions.com/blog/2011/02/01/broken-sticks-puzzle-and-a-seemingly-paradoxical-ratio/">Broken sticks puzzle, and a seemingly paradoxical ratio</a><br>A nice little math puzzle, solved with the help of Wolfram Alpha.</li>
+<li><a href="http://leyrer.wikosophy.org/blog/2011/02/die-wahre-online-revolution-ungeduld/">Die wahre Online-Revolution: Ungeduld</a><br>I often had the same thought about &#8220;Twitter revolutions&#8221;, but Georg actually bothered to sum it up and write it down (in German).</li>
+<li><a href="http://www.arabist.net/blog/2011/2/4/on-omar-suleiman.html">On Omar Suleiman</a><br>If you wnat to find out more about the Egyptian Vice President, this is an interesting profile of the man.</li>
+<li><a href="http://www.newyorker.com/reporting/2011/02/14/110214fa_fact_filkins?currentPage=all">The Afghan Bank Heist</a><br>A very sobering article about the Afghan government&#8217;s involvement in large-scale corruption.</li>
+<li><a href="http://ericlavigne.wordpress.com/2011/01/30/a-tour-of-the-clojure-landscape/">A tour of the Clojure landscape</a><br>I quite like this map of Clojure projects on GitHub.</li>
+<li><a href="http://www.smashingmagazine.com/2011/01/14/how-to-identify-good-clients-avoid-bad-ones/" title="and Avoid Bad Ones">How To Identify Good Clients</a><br>Good advice, not only for freelancers.</li>
+<li><a href="http://www.duckworksmagazine.com/11/columns/guest/winter/index.htm">Adsense, no sense at all &#8211; what it&#8217;s like being sacked by a computer&#8230;</a><br>This is a bit older, but still a good reminder on why it&#8217;s dangerous to rely on something like Adwords for your income.</li>
+<li><a href="http://www.nytimes.com/2011/01/18/science/18dog.html?_r=2&amp;pagewanted=all">Sit. Stay. Parse. Good Girl!</a><br>A dog with a &#8220;vocabulary&#8221; of over 1000 words.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/18">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/16">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I&#8217;m Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/12/information-overload-2015-07-12/">Information Overload 2015-07-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

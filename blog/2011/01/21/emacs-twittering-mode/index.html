@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Emacs Twittering-mode - citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="When my usual Twitter client stopped working last Tuesday, I got inspired by Ruben&rsquo;s Emacs 30 Day Challenge and decided to look what Emacs had &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.github.io/blog/2011/01/21/emacs-twittering-mode">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Emacs Twittering-mode</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-21T00:00:00+07:00" pubdate data-updated="true">Jan 21<sup>st</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>When my <a href="http://nambu.com/">usual Twitter client</a> stopped working last Tuesday, I got inspired by <a href="http://www.mostlymaths.net/2010/12/emacs-30-day-challenge.html">Ruben&rsquo;s Emacs 30 Day Challenge</a> and decided to look what Emacs had to offer in terms of Twitter clients. On the always helpful EmacsWiki I found a <a href="http://emacswiki.org/emacs/Twitter">list of available options</a> and after some browsing settled on <a href="http://twmode.sourceforge.net/">twittering-mode</a>. I got hooked really fast, so even after getting Nambu to work again (somehow authentication got screwed up), I decided to stay with Emacs for my Twitter needs.</p>
+
+<p>Here&rsquo;s a screenshot from the Emacs wiki (although I usually have the avatars turned off):</p>
+
+<p><img src="http://www.emacswiki.org/pics/static/TwitteringModeScreenshot.jpg" alt="Emacs twittering-mode" title="TwitteringMode" /></p>
+
+<p>If you also want to give this awesome mode a spin, I recommend starting at <a href="http://www.emacswiki.org/emacs/TwitteringMode">this EmacsWiki page</a>, which has installation instructions, a summary of key-bindings and options and some discussion by users.</p>
+
+<p>Here are the relevant parts of my Emacs config, with extra comments added for this post:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class='scheme'><span class='line'><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;twittering-mode</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; update every 10 minutes</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-timer-interval</span> <span class="mi">600</span><span class="p">)</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-url-show-status</span> <span class="nv">nil</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; Show character count in compose buffer</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-show-minibuffer-length</span> <span class="nv">t</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; I added is.gd support myself, pull request sent.</span>
+</span><span class='line'><span class="c1">; standard options are tinyurl and toly</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-tinyurl-service</span> <span class="ss">&#39;is</span><span class="o">.</span><span class="nv">gd</span><span class="p">)</span>
+</span><span class='line'><span class="c1">; See http://www.reverttoconsole.com/blog/nix/twitter-mode-for-emacs-with-oauth/</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-use-master-password</span> <span class="nv">t</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">; This tells twittering-mode which time line buffers</span>
+</span><span class='line'><span class="c1">; to open when starting</span>
+</span><span class='line'><span class="p">(</span><span class="nf">setq</span> <span class="nv">twittering-initial-timeline-spec-string</span>
+</span><span class='line'>      <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;:friends&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:replies&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:direct_messages&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:search/clojure/&quot;</span>
+</span><span class='line'>        <span class="s">&quot;:search/#jlang/&quot;</span>
+</span><span class='line'>        <span class="s">&quot;citizen428/tupaleros&quot;</span><span class="p">))</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">; some key bindings</span>
+</span><span class='line'><span class="p">(</span><span class="nf">add-hook</span> <span class="ss">&#39;twittering-mode-hook</span>
+</span><span class='line'>          <span class="p">(</span><span class="k">lambda </span><span class="p">()</span>
+</span><span class='line'>            <span class="p">(</span><span class="nf">mapc</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">pair</span><span class="p">)</span>
+</span><span class='line'>                    <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">key</span> <span class="p">(</span><span class="nb">car </span><span class="nv">pair</span><span class="p">))</span>
+</span><span class='line'>                          <span class="p">(</span><span class="nf">func</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">pair</span><span class="p">)))</span>
+</span><span class='line'>                      <span class="p">(</span><span class="nf">define-key</span> <span class="nv">twittering-mode-map</span>
+</span><span class='line'>                        <span class="p">(</span><span class="nf">read-kbd-macro</span> <span class="nv">key</span><span class="p">)</span> <span class="nv">func</span><span class="p">)))</span>
+</span><span class='line'>                  <span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;R&quot;</span> <span class="o">.</span> <span class="nv">twittering-native-retweet</span><span class="p">)</span>
+</span><span class='line'>                    <span class="p">(</span><span class="s">&quot;l&quot;</span> <span class="o">.</span> <span class="nv">twittering-goto-next-thing</span><span class="p">)))))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>TImelines</strong></p>
+
+<p>As you can see <code>twittering-initial-timeline-spec-string</code> defines which timeline buffers get opened when starting. This is really convenient, since you can use <code>f</code> and <code>b</code> to cycle through them. If you want to see only the timeline of the author of the currently active tweet hit <code>v</code>, <code>C-c C-v</code> will open the profile in a web browser. <code>V</code> gives you access to all pre-defined timelines like <code>:public</code> or <code>:retweets_of_me</code>.</p>
+
+<p><strong>Tweets</strong></p>
+
+<p>Inside a timeline <code>j</code> and <code>k</code> let you jump from tweet to tweet, whereas <code>p</code> and <code>n</code> go to the previous or next tweet by the same author. Replying to a tweet is as easy as pressing enter. I&rsquo;ve rebound <code>twittering-native-retweet</code> (for &ldquo;new style&rdquo; retweets) to <code>R</code> instead of the somewhat unwieldy <code>C-u C-c Enter</code>, &ldquo;organic&rdquo; retweets are possible with <code>C-c Enter</code>. <code>r</code> opens related tweets, so it&rsquo;s easy to follow conversations and <code>u</code> let&rsquo;s you post a new tweet.  My favorite function is probably <code>twittering-goto-next-thing</code> (bound to <code>l</code> in my setup), which  jumps to the next username (to make it easy to visit the profile), URI, or timeline symbol (like a hashtag).</p>
+
+<p>There are many more useful functions and key combinations (like <code>i</code> for showing/hiding avatars), it&rsquo;s best to look them up on the EmacsWiki page. I&rsquo;m very impressed by and happy with my new Twitter client, browsing through my update stream has never been so fast and efficient.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Kohl</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-21T00:00:00+07:00" pubdate data-updated="true">Jan 21<sup>st</sup>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/emacs/'>emacs</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.github.io/blog/2011/01/21/emacs-twittering-mode/" data-via="citizen428" data-counturl="http://citizen428.github.io/blog/2011/01/21/emacs-twittering-mode/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/01/16/information-overload-2011-01-16/" title="Previous Post: Information Overload 2011-01-16">&laquo; Information Overload 2011-01-16</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/01/21/sicp-1-12-kind-of/" title="Next Post: SICP 1.12, kind of...">SICP 1.12, kind of... &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I'm Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/12/information-overload-2015-07-12/">Information Overload 2015-07-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://citizen428.github.io/blog/2011/01/21/emacs-twittering-mode/';
+        var disqus_url = 'http://citizen428.github.io/blog/2011/01/21/emacs-twittering-mode/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

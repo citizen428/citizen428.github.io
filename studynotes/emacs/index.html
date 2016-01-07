@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Emacs Cheatsheet</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="Emacs Cheatsheet"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-04-14 01:02:18 CEST"/>
+<meta name="author" content="Michael Kohl"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Emacs Cheatsheet</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Emacs general</a>
+<ul>
+<li><a href="#sec-1-1">1.1 Help</a></li>
+<li><a href="#sec-1-2">1.2 General</a></li>
+<li><a href="#sec-1-3">1.3 Movement</a></li>
+<li><a href="#sec-1-4">1.4 Search</a></li>
+<li><a href="#sec-1-5">1.5 Tags</a></li>
+<li><a href="#sec-1-6">1.6 Frames</a></li>
+<li><a href="#sec-1-7">1.7 Windows</a></li>
+<li><a href="#sec-1-8">1.8 Buffers</a></li>
+<li><a href="#sec-1-9">1.9 Copy/paste/delete</a></li>
+<li><a href="#sec-1-10">1.10 File management</a></li>
+<li><a href="#sec-1-11">1.11 Various</a></li>
+<li><a href="#sec-1-12">1.12 Evaluate Elisp code</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Org-mode</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Emacs general</h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Help</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-h t</td><td class="left">Tutorial</td><td class="left">help-with-tutorial</td></tr>
+<tr><td class="left">C-h m</td><td class="left">Help for active mode</td><td class="left">describe-mode</td></tr>
+<tr><td class="left">C-h k</td><td class="left">Help for key sequence</td><td class="left">describe-key</td></tr>
+<tr><td class="left">C-h f</td><td class="left">Help for function</td><td class="left">describe-function</td></tr>
+<tr><td class="left">C-h v</td><td class="left">Help for variable</td><td class="left">describe-varialbe</td></tr>
+<tr><td class="left">C-h a</td><td class="left">Search help</td><td class="left">apropos</td></tr>
+<tr><td class="left">C-h i</td><td class="left">Info reader</td><td class="left">info</td></tr>
+<tr><td class="left">C-h p</td><td class="left">Find help by keyword</td><td class="left">finder-by-keyword</td></tr>
+<tr><td class="left">q</td><td class="left">Close help buffer</td><td class="left">quit-window</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> General</h3>
+<div class="outline-text-3" id="text-1-2">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-g</td><td class="left">Cancel</td><td class="left">keyboard-quit</td></tr>
+<tr><td class="left">C-0 to C-9, M-0 to M-9, C-u &lt;num&gt;</td><td class="left">Numeric argument</td><td class="left">digit-argument</td></tr>
+<tr><td class="left">C-u</td><td class="left">Universal argument (same as numerical argument 4)</td><td class="left">universal-argument</td></tr>
+<tr><td class="left">M&ndash;, C-M&ndash;</td><td class="left">Negative argument</td><td class="left">negative-argument</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Movement</h3>
+<div class="outline-text-3" id="text-1-3">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-f</td><td class="left">Next character</td><td class="left"></td></tr>
+<tr><td class="left">C-b</td><td class="left">Previous character</td><td class="left"></td></tr>
+<tr><td class="left">M-f</td><td class="left">Next word</td><td class="left"></td></tr>
+<tr><td class="left">M-b</td><td class="left">Previous word</td><td class="left"></td></tr>
+<tr><td class="left">C-a</td><td class="left">Beginning of line</td><td class="left"></td></tr>
+<tr><td class="left">C-e</td><td class="left">End of line</td><td class="left"></td></tr>
+<tr><td class="left">M-a</td><td class="left">Backward sentence</td><td class="left"></td></tr>
+<tr><td class="left">M-e</td><td class="left">Forward sentence</td><td class="left"></td></tr>
+<tr><td class="left">C-up</td><td class="left">Previous paragraph</td><td class="left">backward-paragraph</td></tr>
+<tr><td class="left">C-down</td><td class="left">Nextt paragraph</td><td class="left">forward-paragraph</td></tr>
+<tr><td class="left">C-l</td><td class="left">Center line on screen</td><td class="left"></td></tr>
+<tr><td class="left">C-n</td><td class="left">Next line</td><td class="left"></td></tr>
+<tr><td class="left">C-p</td><td class="left">Previous line</td><td class="left"></td></tr>
+<tr><td class="left">C-v</td><td class="left">Next page</td><td class="left"></td></tr>
+<tr><td class="left">M-v</td><td class="left">Previous page</td><td class="left"></td></tr>
+<tr><td class="left">C-M-v</td><td class="left">Scroll other window/frame</td><td class="left"></td></tr>
+<tr><td class="left">C-M-S-v</td><td class="left">Scroll other window/frame backwards</td><td class="left"></td></tr>
+<tr><td class="left">M-&lt;</td><td class="left">Beginning of document</td><td class="left"></td></tr>
+<tr><td class="left">M-&gt;</td><td class="left">End of document</td><td class="left"></td></tr>
+<tr><td class="left">C-M-f</td><td class="left">Move forward by s-expression</td><td class="left"></td></tr>
+<tr><td class="left">C-M-b</td><td class="left">Move backward by s-expression</td><td class="left"></td></tr>
+<tr><td class="left">C-M-d</td><td class="left">Move down list</td><td class="left"></td></tr>
+<tr><td class="left">C-M-u</td><td class="left">Move up list</td><td class="left"></td></tr>
+<tr><td class="left">M-g g</td><td class="left">Go to line</td><td class="left"></td></tr>
+<tr><td class="left">M-g M-g</td><td class="left">Go to line</td><td class="left"></td></tr>
+<tr><td class="left">M-m</td><td class="left">Back to indentation</td><td class="left"></td></tr>
+<tr><td class="left">M-r</td><td class="left">Cycle top/center/bottom of visible window</td><td class="left">move-to-window-line-top-bottom</td></tr>
+<tr><td class="left">C-x r SPC</td><td class="left">Store point in register</td><td class="left">point-to-register</td></tr>
+<tr><td class="left">C-x r j</td><td class="left">Jump to point stored in register</td><td class="left">jump-to-register</td></tr>
+<tr><td class="left">C-x C-x</td><td class="left">Toggle point and mark</td><td class="left">exchange-point-and-mark</td></tr>
+<tr><td class="left">C-u C-SPC</td><td class="left">Cycle mark ring</td><td class="left"></td></tr>
+<tr><td class="left">M-g M-n</td><td class="left">Next error (in compile mode)</td><td class="left">next-error</td></tr>
+<tr><td class="left">M-g M-p</td><td class="left">Previous error (in compile mode)</td><td class="left">previous-error</td></tr>
+<tr><td class="left">C-M-a</td><td class="left">Beginning of function/class definition</td><td class="left">beginning-of-defun</td></tr>
+<tr><td class="left">C-M-e</td><td class="left">End of function/class definition</td><td class="left">end-of-defun</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Search</h3>
+<div class="outline-text-3" id="text-1-4">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-s</td><td class="left">Forward search</td><td class="left">isearch-forward-regexp</td></tr>
+<tr><td class="left">C-r</td><td class="left">Backward search</td><td class="left">isearch-backward-regexp</td></tr>
+<tr><td class="left">C-s C-w</td><td class="left">Add word after point to search</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> Tags</h3>
+<div class="outline-text-3" id="text-1-5">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">M-.</td><td class="left">Go to symbol definition</td><td class="left">find-tag</td></tr>
+<tr><td class="left">M-*</td><td class="left">Return to starting point</td><td class="left">pop-tag-mark</td></tr>
+<tr><td class="left">M-0 M-.</td><td class="left">Go to next matching definition</td><td class="left"></td></tr>
+<tr><td class="left">M-x tag-search</td><td class="left">Start a search</td><td class="left"></td></tr>
+<tr><td class="left">M-,</td><td class="left">Go to next match</td><td class="left">tags-loop-continue</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> Frames</h3>
+<div class="outline-text-3" id="text-1-6">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">M-x make-frame</td><td class="left">New frame</td><td class="left"></td></tr>
+<tr><td class="left">C-x 5 0</td><td class="left">Close frame</td><td class="left">delete-frame</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-7" class="outline-3">
+<h3 id="sec-1-7"><span class="section-number-3">1.7</span> Windows</h3>
+<div class="outline-text-3" id="text-1-7">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-x 0</td><td class="left">Close window</td><td class="left">delete-window</td></tr>
+<tr><td class="left">C-x 1</td><td class="left">Make current window only window</td><td class="left">delete-other-windows</td></tr>
+<tr><td class="left">C-x 2</td><td class="left">Split vertically</td><td class="left">split-window-below</td></tr>
+<tr><td class="left">C-x 3</td><td class="left">Split horizontally</td><td class="left">split-window-right</td></tr>
+<tr><td class="left">C-x o</td><td class="left">Go to next window</td><td class="left">other-window</td></tr>
+<tr><td class="left">Shift+arrow key</td><td class="left">Focus in direction</td><td class="left">windmove-left/right/etc</td></tr>
+<tr><td class="left">C-x M-f</td><td class="left">Open file in new window</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-8" class="outline-3">
+<h3 id="sec-1-8"><span class="section-number-3">1.8</span> Buffers</h3>
+<div class="outline-text-3" id="text-1-8">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-x b</td><td class="left">Switch buffer</td><td class="left"></td></tr>
+<tr><td class="left">C-x C-b</td><td class="left">Buffer list</td><td class="left"></td></tr>
+<tr><td class="left">C-x k</td><td class="left">Kill buffer</td><td class="left"></td></tr>
+<tr><td class="left">C-y</td><td class="left">Send buffer to end of buffer list</td><td class="left"></td></tr>
+<tr><td class="left">C-x C-Right</td><td class="left">Next buffer</td><td class="left"></td></tr>
+<tr><td class="left">C-x C-Left</td><td class="left">Previous buffer</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-9" class="outline-3">
+<h3 id="sec-1-9"><span class="section-number-3">1.9</span> Copy/paste/delete</h3>
+<div class="outline-text-3" id="text-1-9">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-SPC</td><td class="left">Set mark</td><td class="left"></td></tr>
+<tr><td class="left">C-x h</td><td class="left">Select whole buffer</td><td class="left"></td></tr>
+<tr><td class="left">M-h</td><td class="left">Select paragraph</td><td class="left"></td></tr>
+<tr><td class="left">C-w</td><td class="left">Kill region</td><td class="left"></td></tr>
+<tr><td class="left">M-w</td><td class="left">Copy region</td><td class="left"></td></tr>
+<tr><td class="left">C-y</td><td class="left">Paste from kill ring</td><td class="left"></td></tr>
+<tr><td class="left">M-y</td><td class="left">Cycle kill ring</td><td class="left"></td></tr>
+<tr><td class="left">C-k</td><td class="left">Kill text to end of line</td><td class="left"></td></tr>
+<tr><td class="left">C-M-h</td><td class="left">Kill previous word</td><td class="left"></td></tr>
+<tr><td class="left">C-u C-SPC</td><td class="left">Jump to last mark</td><td class="left"></td></tr>
+<tr><td class="left">C-_</td><td class="left">Undo</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-10" class="outline-3">
+<h3 id="sec-1-10"><span class="section-number-3">1.10</span> File management</h3>
+<div class="outline-text-3" id="text-1-10">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-x C-f</td><td class="left">Find file</td><td class="left"></td></tr>
+<tr><td class="left">C-x f</td><td class="left">Find recent file</td><td class="left"></td></tr>
+<tr><td class="left">C-x s</td><td class="left">Save file</td><td class="left"></td></tr>
+<tr><td class="left">C-c r</td><td class="left">Revert to file on disk</td><td class="left">revert-buffer</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-11" class="outline-3">
+<h3 id="sec-1-11"><span class="section-number-3">1.11</span> Various</h3>
+<div class="outline-text-3" id="text-1-11">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-x m</td><td class="left">Emacs shell</td><td class="left"></td></tr>
+<tr><td class="left">M-;</td><td class="left">(Un-)Comment region</td><td class="left"></td></tr>
+<tr><td class="left">M-/</td><td class="left">Completion (Hippie Expand)</td><td class="left"></td></tr>
+<tr><td class="left">C-x C-i</td><td class="left">Ido function list</td><td class="left"></td></tr>
+<tr><td class="left">C-M \</td><td class="left">Reindent region</td><td class="left"></td></tr>
+<tr><td class="left">C-c n</td><td class="left">Cleanup whitespace in ws mode</td><td class="left"></td></tr>
+<tr><td class="left">C-&#124;</td><td class="left">Shell command on region</td><td class="left"></td></tr>
+<tr><td class="left">C-u C-&#124;</td><td class="left">Like above, replace selection</td><td class="left"></td></tr>
+<tr><td class="left">C-u C-Spc</td><td class="left">Pop mark</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-12" class="outline-3">
+<h3 id="sec-1-12"><span class="section-number-3">1.12</span> Evaluate Elisp code</h3>
+<div class="outline-text-3" id="text-1-12">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-c v</td><td class="left">Evaluate buffer</td><td class="left"></td></tr>
+<tr><td class="left">C-x C-e</td><td class="left">Evaluate last sexp</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Org-mode</h2>
+<div class="outline-text-2" id="text-2">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key binding</th><th scope="col" class="left">Description</th><th scope="col" class="left">Command</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">M-Shift-Ret</td><td class="left">Insert TODO item</td><td class="left"></td></tr>
+<tr><td class="left">C-c C-t</td><td class="left">Mark TODO as done</td><td class="left"></td></tr>
+<tr><td class="left">C-c C-o</td><td class="left">Open link</td><td class="left"></td></tr>
+<tr><td class="left">C-c l</td><td class="left">Store link</td><td class="left"></td></tr>
+<tr><td class="left">C-c C-l</td><td class="left">Paste link</td><td class="left"></td></tr>
+<tr><td class="left">C-c C-s</td><td class="left">Schedule task</td><td class="left"></td></tr>
+<tr><td class="left">Shift-Tab</td><td class="left">Document overview</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2012-04-14 01:02:18 CEST</p>
+<p class="author">Author: Michael Kohl</p>
+<p class="creator">Org version 7.8.03 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

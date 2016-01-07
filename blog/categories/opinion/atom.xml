@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: opinion | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/opinion/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[C#/Mono: first impressions, IDEs]]></title>
+    <link href="http://citizen428.github.io/blog/2005/09/03/cmono-first-impressions-ides/"/>
+    <updated>2005-09-03T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/09/03/cmono-first-impressions-ides</id>
+    <content type="html"><![CDATA[<p>Now that I&rsquo;m working through my &ldquo;Mono Developer&rsquo;s Notebook&rdquo;:<a href="http://www.amazon.de/exec/obidos/tg/detail/-/0596007922/qid=1125743180/sr=8-1/ref=pd_bbs_1/302-8376596-0194421?v=glance&amp;s=books&amp;n=507846,">http://www.amazon.de/exec/obidos/tg/detail/-/0596007922/qid=1125743180/sr=8-1/ref=pd_bbs_1/302-8376596-0194421?v=glance&amp;s=books&amp;n=507846,</a> I thought it&rsquo;s time for some first impressions on C# and Mono. Ok, they are not really first impressions, as I&rsquo;ve played with the framework before. But not until now have I done so methodically, with the aim of <em>really</em> learning C# and the &ldquo;class libraries&rdquo;:<a href="http://www.go-mono.com/docs/.">http://www.go-mono.com/docs/.</a><!--more--><em>Firsts impressions:</em>
+First off, C# is a pretty modern language which features stuff like automatic garbage collection, support for interfaces, versioning, delegates and much more. I really like the &ldquo;StringBuilder&rdquo;:<a href="http://www.go-mono.com/docs/index.aspx?link=T%3aSystem.Text.StringBuilder,">http://www.go-mono.com/docs/index.aspx?link=T%3aSystem.Text.StringBuilder,</a> and think that regular expressions are handled &ldquo;in a nice way&rdquo;:<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconUsingRegularExpressionClasses.asp.">http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconUsingRegularExpressionClasses.asp.</a> &ldquo;Collections&rdquo;:<a href="http://www.go-mono.com/docs/monodoc.ashx?tlink=7@N%3aSystem.Collections">http://www.go-mono.com/docs/monodoc.ashx?tlink=7@N%3aSystem.Collections</a> and &ldquo;Indexers&rdquo;:<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcerrusingindexers.asp">http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcerrusingindexers.asp</a> are pretty neat too, and I yet have to look into &ldquo;Attributes and Reflection&rdquo;:<a href="http://www.oreilly.com/catalog/progcsharp/chapter/ch18.html">http://www.oreilly.com/catalog/progcsharp/chapter/ch18.html</a> a little more. I also like the great documentation that can either be found on the &ldquo;MSDN library&rdquo;:<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcoriCProgrammersReference.asp">http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcoriCProgrammersReference.asp</a> or the &ldquo;Mono website&rdquo;:<a href="http://www.go-mono.com/docs/.">http://www.go-mono.com/docs/.</a></p>
+
+<p>What I don&rsquo;t like is that like Java C# is a pretty verbose language, which means you have to write lots of code for simple tasks. I guess that&rsquo;s the problem that comes with such a comprehensive class library: easy programs get more complicated than necessary, but the advantages of the framework really pay off when you start writing larger applications. It feels kinda strange to work with a strongly typed language again, but I&rsquo;m getting used to it faster than you can say &ldquo;type cast&rdquo;. ;) I&rsquo;m missing quite a lot of the nice iterators Ruby has to offer, but at least C# has a decent &ldquo;foreach loop&rdquo;:<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vclrftheforeachstatement.asp.">http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vclrftheforeachstatement.asp.</a> Still it&rsquo;s strange to have to write all this for loops again, when a simple <em>10.downto(1)</em> or <em>5.times</em> could have achieved the same&hellip;</p>
+
+<p><em>IDEs:</em>
+When it comes to editing C# files, I naturally thought about using &ldquo;Vim&rdquo;:<a href="http://www.vim.org/,">http://www.vim.org/,</a> which of course offers syntax highlighting for the language. However, it is not an IDE, and for a language with such an excessive class library, I really prefer to have all this nifty things like auto-completion (if only someone would port &ldquo;Intellisense&rdquo;:<a href="http://www.vim.org/scripts/script.php?script_id=747">http://www.vim.org/scripts/script.php?script_id=747</a> to Linux), integrated documentation etc.</p>
+
+<p>Enter &ldquo;MonoDevelop&rdquo;:<a href="http://www.monodevelop.com/,">http://www.monodevelop.com/,</a> a GTK port of the famous &ldquo;SharpDevelop&rdquo;:<a href="http://www.icsharpcode.net/OpenSource/SD/Default.aspx.">http://www.icsharpcode.net/OpenSource/SD/Default.aspx.</a> It&rsquo;s a nice IDE that caters exclusively to the Mono programmer, e.g. I really ike how they seamlessly integrated &ldquo;MonoDoc&rdquo;:<a href="http://www.mono-project.com/Image:Screenshot-B2-thumb.png.">http://www.mono-project.com/Image:Screenshot-B2-thumb.png.</a> The problem is that MD is still very much a work in progress and is missing some features like starting a program from the IDE with specified parameters and also sometimes crashes on me. Still I think that over time MD may well become the #1 Mono IDE for Linux.  I surely will use it again when I start playing around with &ldquo;Boo&rdquo;:<a href="http://boo.codehaus.org/.">http://boo.codehaus.org/.</a></p>
+
+<p>For the time being though I will continue to use &ldquo;Anjuta 1.2.4&rdquo;:<a href="http://www.anjuta.org/">http://www.anjuta.org/</a> as my IDE of choice. It offers good syntax highlighting and auto-completion, and unlike MD it also does code folding. If I want to test a program from the IDE I can start it with &ldquo;Build&rdquo; - &ldquo;Set program params &hellip;&rdquo; without the need for a seperate terminal window (<em>Note: for this to work I had to add change the line mono &ldquo;$(current.full.filename).exe&rdquo; to &ldquo;mono $(current.full.filename).exe $(anjuta.program.arguments)&rdquo; under &ldquo;Settings&rdquo; - &ldquo;Commands&rdquo; - &ldquo;Execute&rdquo;</em>). Anjuta is a pretty mature development environment, so it offers all the goodies you might expect from such a tool (like CVS integration), without having an overly cluttered interface. Also version 2 is coming along nicely (&ldquo;Screenshot&rdquo;:<a href="http://www.anjuta.org/screen-shots">http://www.anjuta.org/screen-shots</a>) and has cool features like Glad integration.</p>
+
+<p>That&rsquo;s it for today, but I think I&rsquo;ll continue to post about my adventures in Mono land&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

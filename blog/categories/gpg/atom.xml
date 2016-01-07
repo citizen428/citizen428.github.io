@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gpg | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/gpg/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Pimp my Mail.app!]]></title>
+    <link href="http://citizen428.github.io/blog/2006/08/07/pimp-my-mail-app/"/>
+    <updated>2006-08-07T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/08/07/pimp-my-mail-app</id>
+    <content type="html"><![CDATA[<p>I always found Apple&rsquo;s &ldquo;Mail.app&rdquo;:<a href="http://www.apple.com/macosx/features/mail/">http://www.apple.com/macosx/features/mail/</a> in its Tiger incarnation be a really neat MUA because of the nice interface and the good spam filter it offers. Unfortunately it lacks a little when you have to deal with large amounts of mail or want to use some of the more advanced features other MUAs have to offer, so I started looking around for some plug-ins. I soon found &ldquo;Hawk Wings&rdquo;:<a href="http://www.hawkwings.net/,">http://www.hawkwings.net/,</a> a site dedicated entirely to &ldquo;Tips and add-ons to make Apple Mail even better&rdquo;.</p>
+
+<p>Here&rsquo;s a list of the plug-ins I&rsquo;m using so far:</p>
+
+<ul>
+<li>&#8220;GPGMailBundle&#8221;:http://www.sente.ch/software/GPGMail/English.lproj/GPGMail.html (&#8220;Review&#8221;:http://www.hawkwings.net/2005/09/15/gpg-encrypting-messages-in-apple-mail/): Lacking support for &#8220;GPG&#8221;:http://gnupg.org/ in the default installation is IMHO one of the greatest shortcomings of Apple Mail. Fortunately enough there&#8217;s GPGMailBundle to remedy this situation. This nice little plug-in of course needs a working GPG installtion to function properly and I recommend &#8220;MacGPG&#8221;:http://macgpg.sourceforge.net/ in combination with GPGKeychainAccess from the same site for this. Once you&#8217;re set up and ready to go, GPGMailBundle can easily be configured from Mail&#8217;s preferences panel. A great plug-in, which makes Mail.app a lot more useful to me!</li>
+<li>&#8220;Letterbox&#8221;:http://harnly.net/software/letterbox/letterbox_0.16.html (&#8220;Review&#8221;:http://www.hawkwings.net/2006/06/02/three-pane-mailapp-hack-that-works/): If you too own a widescreen display, Letterbox may just be the plug-in you&#8217;ve been waiting for if you&#8217;re trying to make the most out of your screen real estate. What it does is arranging the interface into three vertical columns by putting the message preview right of the message pane instead of below it (as known from &#8220;Entourage&#8221;:http://www.microsoft.com/mac/products/entourage2004/entourage2004.aspx). This definitely depends on personal preference and reading habits, but so far I really like this layout, especially with all the additional information GPGMailBundle adds to the message preview.</li>
+<li>&#8220;Mail Act-On&#8221;:http://www.indev.ca/MailActOn.html (&#8220;Review&#8221;:http://www.hawkwings.net/2005/08/08/mail-act-on-getting-sorted-saving-time/): A cool plug-in which allows you to create a plethorea of different mail rules and to assign them to keystrokes, therefore making your mail sorting a whole lot faster and more efficient.</li>
+<li>&#8220;MailTags&#8221;:http://www.indev.ca/MailTags.html (&#8220;Review&#8221;:http://www.hawkwings.net/2005/08/24/managing-email-with-mailtags/): Coming from the same author, MailTags does for managing mails what Mail Act-On does for sorting them. It adds a little tag to all messages, which lets you add keywords, notes, due dates, priorities and other useful infos to them. And as if that&#8217;s not cool enough already, you can also build smart mail boxes from this metadata (which btw can be used and changed from Apple Mail rules). Now consider that this great plug-in also allows you to link messages to iCal to do items, and you&#8217;ll immediately see how useful this thing really is. The only thing that annoys me a little is the &#8220;begging&#8221; for donations. Not because I don&#8217;t think it&#8217;s worth the money - I&#8217;m probably going to donate something too - but because I think the PayPal button on the web site would have sufficed, since I really don&#8217;t want to see it all the time&#8230;</li>
+</ul>
+
+
+<p>That&rsquo;s it for today, but since there are a lot of other nice and useful looking plug-ins for Apple Mail, I&rsquo;m pretty sure there&rsquo;ll be a followup post to this in the near future.</p>
+
+<p>Setting Orange, Bureaucracy 1, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

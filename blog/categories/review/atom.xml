@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: review | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/review/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Programming Elixir]]></title>
+    <link href="http://citizen428.github.io/blog/2015/03/13/review-programming-elixir/"/>
+    <updated>2015-03-13T22:32:51+07:00</updated>
+    <id>http://citizen428.github.io/blog/2015/03/13/review-programming-elixir</id>
+    <content type="html"><![CDATA[<p><em><strong>Disclaimer</strong>: The good folks at <a href="https://pragprog.com/">The Pragmatic Bookshelf</a> were nice enough to provide me with a free copy of this book, but this has no influence on the contents of the review.</em></p>
+
+<p>My first contact with Dave Thomas was the famous &ldquo;<a href="https://pragprog.com/book/ruby/programming-ruby">Pickaxe book</a>&rdquo; for Ruby. It wasn&rsquo;t my first contact with the language, but it certainly helped in deepening my understanding of it. It&rsquo;s a great book, and I went back numerous times to re-read certain chapters. I already had a crush on Ruby, but &ldquo;the Pickaxe&rdquo; helped turning that into a solid and lasting love affair.</p>
+
+<p>Fast-forward some years. While I still love Ruby and work with it professionally, I have to admit to having a new language crush: <a href="http://elixir-lang.org/">Elixir</a>. I&rsquo;ve been interested in Erlang for several years, read some books, dabbled a bit, but never really got into the language. Elixir however got me hooked almost from the get-go. I find it&rsquo;s a simple, elegant language, that&rsquo;s easy to pick up, but has quite some depth.</p>
+
+<h3>The book</h3>
+
+<p>Let&rsquo;s start off by clearly stating what this book is not: a reference. It weighs in at around 340 pages and does not try to cover every aspect of Elixir/Erlang. It still is one of my all-time favorite programming books though. Why? Because I believe it does an amazing job in conveying the &ldquo;essence&rdquo; of Elixir. There&rsquo;s no point in documenting APIs, the language has <a href="http://elixir-lang.org/docs.html">great documentation online</a>. Instead Dave tries to teach the reader how to think in Elixir.</p>
+
+<p>&ldquo;Programming Elixir&rdquo; has three main parts. The first called &ldquo;Conventional Programming&rdquo; introduces some core concepts like pattern matching and immutability, before covering Elixir types, functions, modules, language constructs, and project organization. It&rsquo;s easy to read, but not too boring for seasoned developers. However, if you have some previous experience with Elixir, Erlang, or even some other functional programming language you may end up skimming this section a bit, at least I did.</p>
+
+<p>Where it starts to get really interesting is the next part called &ldquo;Concurrent Programming&rdquo;, which covers processes, nodes and the basics of OTP. This latter part can easily fill books of its own, so the author only manages to cover some <a href="http://www.erlang.org/doc/design_principles/des_princ.html">behaviours</a>, like servers (<em>gen_server</em> to be specific), supervisors and applications. It&rsquo;s some excellent material however, so unless you&rsquo;re a seasoned Erlang developer this part alone could be reason enough to read this book. Sure, it would have been great to go into some more detail or cover more of OTP, but I think it&rsquo;s more than enough to make people understand the core principles of the framework so they are able to continue their studies with a solid foundation. I&rsquo;ve seen many people struggle with the concept of processes and message passing concurrency, despite the relative simplicity of the <a href="http://www.wikiwand.com/en/Actor_model">Actor model</a>. But when Dave suggests thinking of processes somewhat like objects in the sense that they encapsulate state, sending messages suddenly will feel very familiar to OO programmers who find it hard to structure their code around Elixir/Erlang semantics.</p>
+
+<p>Last but not least there&rsquo;s &ldquo;More Advanced Elixir&rdquo;, which covers macros, protocols, the language&rsquo;s approach to mixins and a grab bag of topics that didn&rsquo;t quite warrant chapters of their own. I really liked this entire section, especially the parts on protocols and mixins. I feel like it gave me the tools to look at most Elixir code and figure out what&rsquo;s happening, which is quite an achievement for a book of this length.</p>
+
+<h3>Closing thoughts</h3>
+
+<p>The world of Erlang/OTP is somewhat different from other programming languages, so no matter what your background is, chances are that certain things may feel somewhat alien to you. This is were &ldquo;Programming Elixir&rdquo; shines: it doesn&rsquo;t just try to get you to write Elixir, it wants you to write good idiomatic code because you understand what makes the language tick. The writing has a good flow and is to the point. On top of that each chapter comes with some well thought-out exercises that should keep motivated readers busy for a while. It&rsquo;s hard to imagine a better introduction to the language than &ldquo;Programming Elixir&rdquo;, highly recommended!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Kindle Fire and I]]></title>
+    <link href="http://citizen428.github.io/blog/2013/06/07/my-kindle-fire-and-i/"/>
+    <updated>2013-06-07T16:52:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2013/06/07/my-kindle-fire-and-i</id>
+    <content type="html"><![CDATA[<p>Back in October I broke my trusty old <a href="http://www.amazon.com/gp/product/B004HZYA6E/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004HZYA6E&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Keyboard</a>, a rather
+annoying thing to happen at the beginning of a long trip. As a
+workaround I started to use the Kindle app on my iPod Touch, and while
+I did manage to finish several books on it, it&rsquo;s a bit annoying to
+read on such a small screen. So I decided to get a new device, but
+which one? Either the new <a href="http://www.amazon.com/gp/product/B008UB7DU6/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B008UB7DU6&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Paperwhite</a>, a <a href="http://www.amazon.com/gp/product/B008GGCAVM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B008GGCAVM&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Fire</a> or maybe
+just an iPad or an Android tablet with the Kindle app?</p>
+
+<p><strong>Tablet or Kindle?</strong></p>
+
+<p>Lately I got a lot more serious about my chess playing, so I own
+several books on the topic in digital form. Needless to say, they
+don&rsquo;t do too well on a &ldquo;classical&rdquo; Kindle, so I started considering a
+Fire or other tablet. Once I started thinking along those lines,
+another group of publications came to mind, comics and graphic
+novels. I used to love and collect them, but eventually stopped
+because they just take up way too much space. Nowadays a lot of
+publishers do have digital editions though, so this became the point
+where the Paperwhite got thrown out of the race.</p>
+
+<p><strong>The decision process</strong></p>
+
+<p>So I knew I wanted a tablet, and I knew I wanted something small. This
+left me with four contestants, the <a href="http://www.amazon.com/gp/product/B008GGCAVM/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B008GGCAVM&amp;linkCode=as2&amp;tag=citizen4blog-20">Kindle Fire HD 7&#8221;</a>, the <a href="http://www.amazon.com/gp/product/B00746W3HG/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00746W3HG&amp;linkCode=as2&amp;tag=citizen4blog-20">iPad Mini</a>,
+the <a href="http://www.amazon.com/gp/product/B009X3UW2G/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B009X3UW2G&amp;linkCode=as2&amp;tag=citizen4blog-20">Nexus 7</a> and the <a href="http://www.amazon.com/gp/product/B007P4VOWC/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B007P4VOWC&amp;linkCode=as2&amp;tag=citizen4blog-20">Galaxy Tab 2 7&#8221;</a>.</p>
+
+<p>I like Apple products, but I wasn&rsquo;t really willing to shell out the
+money for an iPad Mini (although you can get them for as little as 300
+bucks at Wallmart at the moment). One down, three to go. Now for the
+Nexus 7. It&rsquo;s a powerful Android device and also caters to the &ldquo;power
+user&rdquo;, whatever that&rsquo;s worth in the tablet world. Alas I found a ton
+of comments and posts about quality issues (DOA, glass coming off the
+screens, devices having to be RMA&rsquo;d after only two weeks etc.) so I
+was hesitant to get one, because the last thing I need while traveling
+is carrying around a dead device while trying to get it replaced. Also
+at $250 it was only $50 cheaper than an iPad Mini.</p>
+
+<p>That left the Kindle Fire HD and the Galaxy Tab 2, the latter of which
+is ridiculously cheap by now (the cheapest I saw was $150 with a
+cover), but it&rsquo;s also not exactly the newest piece of hardware. I
+still was leaning in the direction of the more general device
+though&hellip; Until I walked into a Radioshack during our layover in
+Florida, saw the Kindle Fire HD and bought it. Damn you, instant
+gratification!</p>
+
+<p><strong>First impressions</strong></p>
+
+<p>When I turned it on for the first time, I was amazed. The display is
+good, and I mean really good! As are the Dolby speakers. In short, I
+find the audio and video quality to be pretty amazing for a 7 inch
+device. Reading with the Kindle app is a pleasure, as is watching
+movies and listening to music. I actually really enjoy watching stuff
+on the Kindle Fire, much more than I expected on such a small screen.</p>
+
+<p>But then I started to explore a bit more, and I got disappointed
+rather fast. Amazon&rsquo;s user interface clearly was only built for two
+purposes: shopping and consuming content. The Kindle Fire is not meant
+to be a full-fledged Android tablet, it&rsquo;s a portable frontend to the
+Amazon store and cloud. Starting from the ads which get displayed when
+you wake up the device (I know, you can pay to have them removed),
+over the unavailability of many apps in Amazon&rsquo;s app store (for
+example all Google apps like GMail or Google Maps) to the extremely
+content focused UI, everything screams &ldquo;Consume!&rdquo; in a rather shrill
+and annoying voice.</p>
+
+<p><strong>Making it work for me</strong></p>
+
+<p>Luckily, there are lots of things you can do to make the Kindle Fire a
+lot more interesting, even without rooting it (something I really
+can&rsquo;t be bothered to do while on the road).</p>
+
+<p>First off, you will need an alternative app store. After some research
+I settled on <a href="http://slideme.org/">SlideME</a>, mostly because they actually check the
+applications they are offering, thus alleviating some of the security
+concerns I had about other offerings. Next I got myself a decent file
+manager in the form of <a href="http://slideme.org/application/es-file-explorer">ES File Explorer</a>, before setting out to
+find a decent browser. Yes, a browser, because somehow Amazon&rsquo;s own
+offering, called Silk, doesn&rsquo;t really cut it for me. It has good
+features, but I found it to be rather sluggish. And I had some privacy
+concerns about the cloud rendering, euphemistically called &ldquo;Accelerate
+Page Loading&rdquo; in the settings. Sure, you can choose to encrypt the
+data or disable this &ldquo;feature&rdquo; completely, but it did leave a somewhat
+bitter aftertaste. Most people seem to prefer <a href="http://slideme.org/application/dolphin-browser-0">Dolphin</a> or similar
+offerings for their Android devices, but I settled for the good old
+Firefox (or rather Aurora) in its <a href="http://www.mozilla.org/en-US/mobile/aurora/">mobile incarnation</a>. It&rsquo;s a solid app
+and so far provides everything I need, including a direct download
+from the website. This is how I interact with Google apps for the time
+being, I just use their mobile versions in the browser.</p>
+
+<p>App store fixed, file manager acquired, browser fixed, on to the
+horrible UI. Unfortunately there&rsquo;s not really too much you can do in
+this regard, but I found <a href="http://www.amazon.com/gp/product/B004VN7BRC/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004VN7BRC&amp;linkCode=as2&amp;tag=citizen4blog-20">Smart Taskbar</a> to be a huge
+improvement. It has a small icon for triggering the app from
+everywhere and features quick launch for up to five apps, configurable
+labels and much more. Not as good as having a &ldquo;normal&rdquo; Android
+interface, but definitely much better than the standard Kindle Fire
+offering.</p>
+
+<p>Last but not least I installed <a href="https://www.dropbox.com/android">Dropbox</a> for easier file exchange, which
+is super easy because there&rsquo;s a direct download link on the web
+site. I wish more developers would do this&hellip;</p>
+
+<p><strong>More content</strong></p>
+
+<p>Once I was done with the basics, it was time to add more content
+sources/viewers. <a href="http://www.amazon.com/gp/product/B004UBB1HQ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004UBB1HQ&amp;linkCode=as2&amp;tag=citizen4blog-20">ComiCat</a> is an exzellent CBR/CBZ reader and I
+highly recommend it for managing and reading your digital
+comics. <a href="http://www.amazon.com/gp/product/B005VVSQU4/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B005VVSQU4&amp;linkCode=as2&amp;tag=citizen4blog-20">ComiXology</a> (and its app Comics) also is a good addition,
+especially since they have a rather well stocked online store and a
+decent read-by-panel feature. Both of these apps are available in
+Amazon&rsquo;s app store ($3 for ComiCat, Comics is for free).</p>
+
+<p>For access to more books I added the <a href="http://slideme.org/application/gutenberg-ereader">Gutenberg eReader</a> app, a frontend
+to the well-known Project Gutenberg, as well as the <a href="http://slideme.org/application/nook">NOOK</a>
+software. Yes, NOOK, on a Kindle. As you can imagine this did not come
+from the official app store but from SlideME instead. Since I&rsquo;m
+usually really happy with Amazon&rsquo;s offerings I&rsquo;m not even sure I&rsquo;ll
+use it, but it&rsquo;s nice to have a choice and apparently the NOOK store
+has a dedicated comic section, so who knows&hellip;</p>
+
+<p>On to movies. While Amazon&rsquo;s streaming service is great (or so I&rsquo;ve
+heard), it&rsquo;s of no use to me while traveling. I do however have quite
+a few films and documentaries on my netbook (go check out <a href="http://vodo.net/">VODO</a>,
+there&rsquo;s some great free stuff on there), but I don&rsquo;t want to convert
+all of them to a format the Kindle understands. Enter <a href="http://www.amazon.com/gp/product/B00AHQNHSY/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00AHQNHSY&amp;linkCode=as2&amp;tag=citizen4blog-20">MoboPlayer</a>, a
+great free movie player that can deal with a ton of formats and even
+has a windowed mode. Yes, on a tablet!</p>
+
+<p>With comics, books and movies covered, what&rsquo;s left? Games! The guys
+over at <a href="https://www.humblebundle.com/">Humble Bundle</a> don&rsquo;t only compile great game bundles, they
+also have a nifty <a href="https://www.humblebundle.com/app">Android app</a>, that let&rsquo;s you manage all your
+purchases. Since they offered several Android bundles in the past I
+actually have a ton of games, and the Kindle Fire is an excellent
+device to play them on.</p>
+
+<p>Of course I have a lot more apps than that (Instapaper, Twitter,
+Flipboard, LinkedIn etc.) but they all come from the official app
+store and don&rsquo;t really need any explanation here.</p>
+
+<p><strong>Final verdict</strong></p>
+
+<p>After I got over my initial frustrations, I REALLY like my Kindle
+Fire. I guess it&rsquo;s all about expectation management. This is not a
+productivity device, it&rsquo;s a gadget for consuming media in all its
+forms. I especially love reading comics and graphic novels on it, the
+colors are great, and the resolution is high enough to actually be
+able to enjoy them, even on a rather small screen. It&rsquo;s also great for
+watching movies or listening to music and audiobooks, and since it&rsquo;s a
+Kindle, reading eBooks is a pleasure too once you configured the app
+to your liking.</p>
+
+<p>The hardware is fantastic (especially for $200) and the battery life
+(around 10-11h) is great. I don&rsquo;t exclude the possibility of rooting
+it in the future and maybe even flashing a different ROM, but for now
+I take the Kindle Fire for what it is and thoroughly enjoy it that
+way: during a bus ride the other day I read a book, watched a video,
+and read some comics, all on the same device.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Ruby and MongoDB Web Development]]></title>
+    <link href="http://citizen428.github.io/blog/2012/07/28/review-ruby-and-mongodb-web-development/"/>
+    <updated>2012-07-28T10:15:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2012/07/28/review-ruby-and-mongodb-web-development</id>
+    <content type="html"><![CDATA[<p><em>Disclaimer:</em> I was one of the technical editors of this book, so I may be biased.</p>
+
+<p>While I haven&rsquo;t received <a href="http://www.packtpub.com/ruby-and-mongodb-web-development-beginners-guide/book">the book</a> in its final form yet, I&rsquo;ve read all of it, and I can say that the author does a good job at introducing inexperienced programmers to web development with Ruby and MongoDB.</p>
+
+<p>This is a hands-on book and you&rsquo;ll get most out of it by following all the exercises and doing them on your own. From getting all the necessary components and installing them, to developing apps with Sinatra and Rails, a lot of ground is covered.</p>
+
+<p>While the author does tackle some more advanced topics, they are clearly not the focus of this book (it&rsquo;s subtitled &ldquo;Beginner&rsquo;s Guide&rdquo; for a reason) which will leave more experienced developers wanting for more. However, the presented material is well written, chapters build on each other and if you are new to web development with Ruby/RoR and/or MongoDB, this is a good title to get you up to speed in just 300 pages.</p>
+
+<p>If you are a more experienced Ruby developer or are already very familiar with MongoDB, this is probably not the book for you, even though you&rsquo;ll probably still get something out of it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review: The Tangled Web]]></title>
+    <link href="http://citizen428.github.io/blog/2012/06/20/review-the-tangled-web/"/>
+    <updated>2012-06-20T15:05:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2012/06/20/review-the-tangled-web</id>
+    <content type="html"><![CDATA[<p><em>Disclaimer 1: The good folks of No Starch Press were kind enough to provide me with a review copy of this book, but this did not influence the following text.</em></p>
+
+<p><em>Disclaimer 2: Links to books are Amazon affiliate links.</em></p>
+
+<p>I&rsquo;ve been interested in IT security for a long time, but obviously even more so since I started working professionally in this area. Since web applications have become ubiquitous in recent years, they constitute a big part of our penetration testing work. This is a very broad topic, so <a href="http://www.amazon.com/gp/product/1593273886/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1593273886">The Tangled Web: A Guide to Securing Modern Web Applications</a><img src="http://www.assoc-amazon.com/e/ir?t=citizen4blog-20&l=as2&o=1&a=1593273886" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> by Michal Zalewski is an ambitious project.</p>
+
+<p>The first thing I noticed was that the book is comparatively thin. At around 300 pages it&rsquo;s only about one third of <a href="http://www.amazon.com/gp/product/1118026470/ref=as_li_ss_tl?ie=UTF8&tag=citizen4blog-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1118026470">The Web Application Hacker&rsquo;s Handbook: Finding and Exploiting Security Flaws</a><img src="http://www.assoc-amazon.com/e/ir?t=citizen4blog-20&l=as2&o=1&a=1118026470" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. Don&rsquo;t let that fool you though, this book is not a lightweight by any means. It&rsquo;s logically structured in three parts, the first of which explores the various components that constitute the web as we know it today (URLs, HTTP, HTML, CSS etc.) and their security implications. This is followed by a look at the security features — and their shortcomings — of current browsers. After this part 3 deals with current developments and the future of browser and web application security. This is rounded off by a list of common security problems including references to the chapters of the book that cover them, as well as an epilogue with a surprisingly philosophical outlook on IT security and trust in human societies.</p>
+
+<p>The writing was clear and to the point, with tons of footnotes and references to provide the interested reader with the chance to further research the presented topics. The author clearly knows what he&rsquo;s talking about and manages to present it in a very approachable way. Due to it&rsquo;s limited size the book still has to be a bit dense though, so I never really felt like reading more than one chapter at a time, otherwise it&rsquo;d have been to much information to take in at once.</p>
+
+<p>Whether you work in IT security or are a web application developer, this definitely is a book you don&rsquo;t want to miss.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[28C3 day 4]]></title>
+    <link href="http://citizen428.github.io/blog/2011/12/30/28c3-day-4/"/>
+    <updated>2011-12-30T13:01:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2011/12/30/28c3-day-4</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4828.en.html">Antiforensik</a><br>How to work against forensics. Nothing revolutionary, but a solid talk.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4587.en.html">bup: Git for backups</a><br>An interesting backup project using git, this is open source and still needs help in case you are looking for something to work on.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4856.en.html">The engineering part of social engineering</a><br>I wasn&rsquo;t entirely convinced by this talk. While there were some interesting points, the speaker was quite full of himself and frankly the talk wasn&rsquo;t so different from other SE talks that I&rsquo;ve seen before.</li>
+<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4754.en.html">Smart Hacking For Privacy</a><br>This started off rather bad when  one of the 2 speakers couldn&rsquo;t get over this nervousness, but ended up being a really funny and interesting talk, which was later joined by the CEO of the company whose product got hacked.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

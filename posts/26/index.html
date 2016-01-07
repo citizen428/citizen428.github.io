@@ -1,0 +1,739 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Clojure definitely is one of the hottest new programming languages around and just recently hit a very important milestone. Setting up a nice Clojure &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.github.io/posts/26">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/">Easy Setup for Clojure on Mac OS X Leopard</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-24T00:00:00+07:00" pubdate data-updated="true">Aug 24<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://clojure.org/">Clojure</a> definitely is one of the hottest new programming languages around and just recently hit a <a href="http://clojure.blogspot.com/2009/05/clojure-10.html">very important milestone</a>. Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand <a href="http://github.com/carlism/Clojure-MacOSX/tree">one of those</a> into <a href="http://github.com/citizen428/ClojureX/tree/master">ClojureX</a>, which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
+<p>ClojureX can</p>
+<ul>
+<li> download and build the source code for Clojure, <a href="http://github.com/richhickey/clojure-contrib/tree/master">clojure-contrib</a> and <a href="http://jline.sourceforge.net/">JLine</a> (a readline like library for Java)</li>
+<li> download editor support packages for TextMate and Emacs</li>
+<li> create a symlink for the Clojure startup script in /usr/local/bin</li>
+<li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
+<li> configure Emacs to use <a href="http://github.com/jochu/clojure-mode/tree/master">clojure-mode</a>, <a href="http://common-lisp.net/project/slime/">Slime</a> and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
+<li> keep your Clojure installation up to date via a simple &#8220;git submodule update &amp;&amp; ant&#8221;</li>
+</ul>
+<p>I hope this will come in handy for other people interested in trying out Clojure on Mac OS X, if you have any feedback please post it in the comment section.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/29/pascal-vs-ruby/">Pascal vs. Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-29T00:00:00+07:00" pubdate data-updated="true">Jun 29<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>On ruby-talk somebody <a href="http://www.ruby-forum.com/topic/190552">was asking</a> for a method which will be used to generate a random string, by returning either a lowercase letter or one of the digits 0-9 when called. As an example he posted the following Pascal program:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+</pre></td><td class='code'><pre><code class='pascal'>&lt;span class='line'&gt;&lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;GetRandomChar&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;var&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;integer&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;random&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt; &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;   &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;..&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="bp"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;chr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;   &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="bp"&gt;result&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;chr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt; &lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>&#8220;Translating&#8221; this to Ruby, this is what I got:</p>
+<script src="http://gist.github.com/137675.js"></script><p>In your face, Niklaus Wirth! ;-)</p>
+<p>P.S. Actually I <i>do</i> have fond memories of the good old <a href="http://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a> days.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/18/quick-and-dirty-lazy-lists-in-ruby/">Quick and Dirty Lazy Lists in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-18T00:00:00+07:00" pubdate data-updated="true">Jun 18<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hash.new with a block is a sexy beast: you can specify default hash values and when a key is first used, the value will be calculated and inserted into the Hash. Based on that behavior I took a couple of minutes to hack together a small proof of concept class for <a href="http://en.wikipedia.org/wiki/Lazy_evaluation">lazy lists</a>:</p>
+<script src="http://gist.github.com/131821.js"></script><p>As I said, this is quick and dirty, especially since you have to pass the entire Hash.new block to LazyList.new right now. Other than that I quite like it though. I know there are at least <a href="http://lazylist.rubyforge.org/">two</a> <a href="http://moonbase.rydia.net/software/lazy.rb/">other</a> lazy list implementations for Ruby, but it seems like both haven&#8217;t been updated in a while and I don&#8217;t particularly like their interfaces. Dunno, if I manage to simplify list definition, I may actually try to develop this into something. Don&#8217;t hold your breath though&#8230;</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/15/unsavory-updates/">Unsavory Updates</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-15T00:00:00+07:00" pubdate data-updated="true">Jun 15<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I felt like playing around with <a href="http://github.com/citizen428/unsavory/tree/master">unsavory</a> a bit more, which led to some minor improvements: <br />
+<ul><br />
+<li>code reorganization: the delicious class got moved to a separate file in lib/ and got a new method for easier retrieval of the URLs array</li><br />
+<li>login credentials can now be read from a config file, thus making HighLine optional</li></p>
+</ul>
+<p>Next on my list is packaging this up as a gem so people can simply install it with &#8216;gem install unsavory&#8217;.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/09/review-the-well-grounded-rubyist-manning-publications/">Review: The Well-Grounded Rubyist (Manning Publications)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-09T00:00:00+07:00" pubdate data-updated="true">Jun 9<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As part of <a href="http://www.rubylearning.org/class/">Rubylearning&#8217;s</a> <a href="http://rubylearning.com/blog/2009/05/29/book-promotion-the-well-grounded-rubyist/">current book promotion</a> I&#8217;m reading <a href="http://www.manning.com/black2/">The Well-Grounded Rubyist</a> by David A. Black. Here are my thoughts on the book:</p>
+<p>If you are new to Ruby, this may very well be the book you are looking for, since the author was really serious about the &#8220;well-grounded&#8221; in the title. Together the first six chapters form Part 1, aptly called &#8220;Ruby Foundations&#8221;. Here you&#8217;ll learn about objects, modules, classes, self and control-flow techniques. Although this part may not be the most interesting for more experienced Rubyists, it&#8217;s certainly well-written and manages to present a lot of very fundamental Ruby right at the beginning. True, at first I was a bit surprised to see that singleton methods were &#8211; implicitly &#8211; introduced before classes, but when you follow the author&#8217;s logic, it all makes a lot of sense. What I really like about this approach is that it exposes the reader to concepts needed for some quite advanced Ruby coding right away, and in a very light-hearted and &#8220;natural&#8221; manner. Well done!</p>
+<p>Part 2 (&#8220;Built-in classes and modules&#8221;) covers everything from strings, over symbols to regular expressions and file I/O. What I really like about this part is that the author dedicated two whole chapters to collections and iterators/enumerators, which are essential for everyone striving to become fluent in Ruby.</p>
+<p>Last but not least Part 3 (&#8220;Ruby dynamics&#8221;) talks about singleton methods, procs, lambdas, Symbol#to_proc, the various eval methods, bindings and introspection, thus equipping the reader with all the necessary tools for metaprogramming, one of the many things that make Ruby that sexy little beast it is.</p>
+<p>Oh yeah, since I didn&#8217;t mention this before, &#8220;The Well-Grounded&#8221; Rubyist&quot; covers Ruby 1.9.1, which means you&#8217;ll learn about the coolest Ruby around. Don&#8217;t worry though, most of what you read will also apply to 1.8.6, but isn&#8217;t it about time that we all slowly moved on?</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/07/fitness-galore/">Fitness Galore</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-07T00:00:00+07:00" pubdate data-updated="true">Jun 7<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Since my trip last year I have been fitter than I&#8217;ve been for ages, thanks to a weight-loss of about 25kg, more exercise and a healthier diet. Through <a href="http://twitter.com/kyrah">kyrah&#8217;s tweets</a> I learned about a workout program called <a href="http://hundredpushups.com/">one hundred pushups</a> and decided to have a closer look today. I took the initial test and only managed a meager 12 good-form pushups, but they were always one of my weak spots. At least I start from the most challenging category. Through the site I also found the two related programs <a href="http://www.twohundredsitups.com/">two hundred situps</a> and <a href="http://www.twohundredsquats.com">two hundred squats</a>, where the initial tests looked a lot friendlier: with 35 situps and 40+ squats both programs suggest that I start from week 3. :-)</p>
+<p>Now let&#8217;s see how effective these workouts will turn out to be.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/06/unsavory-%25e2%2580%2594-get-rid-of-stale-delicious-bookmarks/">Unsavory — Get Rid of Stale Delicious Bookmarks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-06T00:00:00+07:00" pubdate data-updated="true">Jun 6<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>While browsing through <a href="http://delicious.com/citizen428">my Delicious bookmarks</a> the other day, I realized that over time I had accumulated quite a few dead links (about 5% of my collection). I then looked for a <strong>simple</strong> tool to automatically remove them, but couldn&#8217;t find one that appealed to me, so I wrote my own script called <em>unsavory</em> which you can find on GitHub:</p>
+<p><a href="http://github.com/citizen428/unsavory/tree/master">http://github.com/citizen428/unsavory/tree/master</a></p>
+<p>It uses HTTParty to generate a list of all your bookmarks, which then get checked individually with Net::<span class="caps">HTTP</span>. Every link that returns an <span class="caps">HTTP</span> status code of 404 will automatically be removed (no questions asked, no undo), links with a status code other than 200 (OK) won&#8217;t be changed but will display some information in case you want to fix them manually. Here&#8217;s some example output (links anonymized for this post):</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+<span class='line-number'>15</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;Enter Delicious username: citizen428
+&lt;/span&gt;&lt;span class='line'&gt;  Enter Delicious password: *********
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  citizen428 has 664 bookmarks.
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0001: OK
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0002: OK
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0003: OK
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0004: OK
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0005: OK
+&lt;/span&gt;&lt;span class='line'&gt;  ...
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0013: 405: http://...
+&lt;/span&gt;&lt;span class='line'&gt;  ...
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0074: 302: http://...
+&lt;/span&gt;&lt;span class='line'&gt;  ...
+&lt;/span&gt;&lt;span class='line'&gt;  Processing URL #0086: Connection reset by peer - https://...&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Not bad for under 60 lines of code. :-) I hope this is useful to some of you, I do have some features I plan on adding to this in the future.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/25/review-functional-programming-with-clojure-peepcode-screencast/">Review: Functional Programming With Clojure (PeepCode Screencast)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-25T00:00:00+07:00" pubdate data-updated="true">May 25<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A couple of month ago I first heard about <a href="http://clojure.org/">Clojure</a>, a <a href="http://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a>-like language sitting on top of the <a href="http://en.wikipedia.org/wiki/Java_virtual_machine"><span class="caps">JVM</span></a>. Alas I didn&#8217;t yet have time to have a closer look at it, so I decided to get myself the <a href="https://peepcode.com/products/functional-programming-with-clojure">PeepCode screencast</a>.</p>
+<p>This 65 minute video is the first to use PeepCode&#8217;s new post-production workflow, and it&#8217;s very well done! In just a little over an hour you go from learning about Clojure&#8217;s basic concepts and syntax to writing a <a href="http://github.com/technomancy/mire/tree/master">multi-user text based adventure game</a>, tackling topics such as data structures, thread safety, lazy collections, unit testing and packaging of Clojure apps. All of that is clearly presented and easy to follow, which makes for an ideal first overview of the language. If you are curious about Clojure but have little time, consider investing the money for this screencast!</p>
+<p>On a more general note it&#8217;s interesting to see that more and more languages seem to target the <span class="caps">JVM</span>. I never really had any interest in Java and also totally ignored <a href="http://groovy.codehaus.org/">Groovy</a>, but now that <a href="http://jruby.codehaus.org/">JRuby</a>, <a href="http://www.scala-lang.org/">Scala</a> and Clojure entered the stage, I might start looking into the Java platform a bit more. Especially Scala with its mixed Ruby/Haskell feel appeals to me, but as <a href="http://boinkor.net/">antifuchs</a> showed, there&#8217;s also <a href="http://boinkor.net/archives/2009/03/clojure_and_art_of_illusion_bf.html">pretty neat stuff</a> (<a href="http://github.com/antifuchs/aoi-swank-plugin/">GitHub project</a>) one can do with Clojure.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/25/most-used-shell-commands/">Most Used Shell Commands</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-25T00:00:00+07:00" pubdate data-updated="true">May 25<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I recently found a bash snippet which creates a list of the commands in your .bash_history file and how many times you invoked them:</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+</pre></td><td class='code'><pre><code class=''>&lt;span class='line'&gt;history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn|head&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Although there was no real point in doing so, I felt the need to write a short Ruby script to do the same:</p>
+<script src="http://gist.github.com/117571.js"></script><p>Here&#8217;s the output on my MacBook:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>command_stats | head
+</span><span class='line'><span class="nb">time</span>: 75
+</span><span class='line'><span class="nb">cd</span>: 68
+</span><span class='line'>ls: 66
+</span><span class='line'>git: 35
+</span><span class='line'>cat: 32
+</span><span class='line'>irb: 20
+</span><span class='line'>awk: 17
+</span><span class='line'>ruby: 15
+</span><span class='line'>scala: 15
+</span><span class='line'>vim: 12
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>If you are surprised by how many times (no pun intended) I called <em>time</em>, it&#8217;s just because I was benchmarking <a href="http://projecteuler.net/">Project Euler</a> solutions in several languages, everything else is quite regular (and suggests I don&#8217;t use the Finder much ;) ).</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/23/review-meet-macruby-peepcode-screencast/">Review: Meet MacRuby (PeepCode Screencast)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-23T00:00:00+07:00" pubdate data-updated="true">May 23<sup>rd</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This afternoon I had the time to finally watch the <a href="http://peepcode.com/">PeepCode</a> <a href="http://peepcode.com/products/meet-macruby">Meet MacRuby</a> screencast.</p>
+<p>In case you don&#8217;t know <a href="http://www.macruby.com/">MacRuby</a>, it&#8217;s a Ruby interpreter sitting on top of <a href="http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/">Objective-C</a> and OS X core technologies (see also <a href="http://citizen428.net/archives/365-Ruby-implementations-and-why-we-should-care.html">here</a>).</p>
+<p>During the 74 minute screencast you will build a basic but functional Twitter client, and in the process learn about MacRuby and <a href="http://developer.apple.com/cocoa/">Cocoa</a> basics, using <a href="http://developer.apple.com/tools/macosxtools.html">Xcode</a> and <a href="http://developer.apple.com/tools/interfacebuilder.html">InterfaceBuilder</a> to develop and bundle your application and many other interesting topics.</p>
+<p>The screencast is very well structured, easy to follow and full of good and practical information, including perks and rough edges of the current MacRuby version. All in all a really enjoyable and informative video, which is well worth US$9 (or less if you buy packs of credits)!</p></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/27">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/25">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I&#8217;m Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/12/information-overload-2015-07-12/">Information Overload 2015-07-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

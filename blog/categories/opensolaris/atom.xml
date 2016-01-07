@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: opensolaris | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/opensolaris/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[OpenSolaris cheat sheet]]></title>
+    <link href="http://citizen428.github.io/blog/2010/01/26/opensolaris-cheat-sheet/"/>
+    <updated>2010-01-26T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2010/01/26/opensolaris-cheat-sheet</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve always been a big fan of the handy little utility <a href="http://cheat.errtheblog.com">cheat</a> and recently became interested in <a href="http://hub.opensolaris.org/bin/view/Main/">OpenSolaris</a> (which btw runs fine on my Thinkpad x200s), so I did the obvious and created an OpenSolaris cheat sheet:</p>
+
+<p><a href="http://cheat.errtheblog.com/s/open_solaris"><a href="http://cheat.errtheblog.com/s/open_solaris">http://cheat.errtheblog.com/s/open_solaris</a></a></p>
+
+<p>It&rsquo;s still missing information regarding ZFS, but I guess I&rsquo;ll eventually add that too. And who knows, maybe I even get motivated enough for a nicely formatted Latex version&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

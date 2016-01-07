@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: football | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/football/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Finally...]]></title>
+    <link href="http://citizen428.github.io/blog/2006/11/05/finally/"/>
+    <updated>2006-11-05T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/11/05/finally</id>
+    <content type="html"><![CDATA[<p>&hellip;some random stuff I wanted to blog about for quite some time already:</p>
+
+<ul>
+<li>*Pearl Jam concert (September 25th@Wiener Stadthalle):* I have to admit that I&#8217;m not the biggest &#8220;PJ&#8221;:http://pearljam.com/ fan, but since Silvia was nice enough to invite me (thanks by the way!), I went to see one of the best concerts in a long time! The band and the atmosphere was great and I was quite surprised to see the traditionally rather lame crowd in Vienna so excited! (<a href="http://www.flickr.com/photos/citizen428/sets/72157594302284739">pics@flickr</a>)</li>
+
+<li>*Internet Explorer on Linux:* As we all know, IE sucks donkey balls. But some sites who don&#8217;t care about standards - and whose developers definitely should be first against the wall when the revolution comes - only work with Microsoft&#8217;s browser. But don&#8217;t despair, help is available in form of &#8220;IEs4Linux&#8221;:http://www.tatanka.com.br/ies4linux/page/Main_Page, a shellscript which downloads IE and automatically configures Wine for it. Flash 9 is also included and if you really insist on it, you can run 3 different versions of IE at the same time (5, 5.5 and 6), which is pretty handy for web developers. I have IE6 installed on my Kubuntu system for quite a while now, and in the rare cases I really need it, it works like a charm.</li>
+
+<li>*Pokerstars client on Linux:* Most online Poker sites don&#8217;t seem to be interested in Linux users, since the clients they offer are mostly only available for Windows. Some of them at least offer Java clients, but with my general dislike for most things Java and my strong preference of &#8220;Pokerstars&#8221;:http://www.pokerstars.com/ over other Poker sites, I gave the client a shot under Wine and was really pleased to find out that it just works (tm). Of course it would be much nicer to have a native client, but for the time being I&#8217;m happy enough with this workaround.</li>
+
+<li>*UEFA cup Pasching vs. Livorno@Pasching:* Went with some other Sportclub fans to see the UEFA cup match Pasching vs. Livorno in Pasching. It was a great day, and I still laugh my ass off when I think about the policemen and -women who found our little group of around 25 people rooting for the away team  (as Austrian you were only able to buy tickets for the home sectors) so frightening, that they not only surrounded us for the whole match, but even put on their riot gear. And there I was, thinking every policeman in Austria already knows that we are only dangerous to ourselves. ;)</li>
+
+<li>*man pages:* Read them! You know you should! Even if you believe you know an application. E.g.: &#8220;man sshd&#8221;, section &#8220;AUTHORIZED_KEYS FILE FORMAT&#8221;. Or am I really the only person who didn&#8217;t know about all the useful options like &#8220;from&#8221;, &#8220;command&#8221;, &#8220;no-port-forwarding&#8221;, &#8220;no-pty&#8221; etc.?
+
+<li>*Mac stuff:* Here&#8217;s some cool widgets and plugins which make the OS X experience even nicer: &#8220;iTunesShut&#8221;:http://homepage.mac.com/WebObjects/FileSharing.woa/wa/iTunesShut.zip.zip?a=downloadFile&user=gugulino1&path=.Public/iTunesShut.zip, &#8220;VI Input Manager&#8221;:http://www.corsofamily.net/jcorso/vi/, &#8220;Application Update Widget&#8221;:http://www.dashboardwidgets.com/showcase/details.php?wid=1510 (thanks Moose!), &#8220;AppleScript Shell&#8221;:http://hayne.net/MacDev/Ash/, &#8220;Doug&#8217;s AppleScripts for iTunes&#8221;:http://www.dougscripts.com/itunes/index.php
+</ul>
+
+
+<p><br />
+Last but not least here are some funny/interesting things I found over the past few weeks:</p>
+
+<ul>
+<li>&#8220;Programming Language Inventor or Serial Killer&#8221;:http://www.malevole.com/mv/misc/killerquiz (via <a href="http://metalab.at/wiki/Hauptseite">metalab-members</a>)</li>
+
+<li>*Robot chicken:* Great stop motion animation. Examples: &#8220;1&#8221;:http://video.google.com/videoplay?docid=-2660802447916665129&q=robot+chicken, &#8220;2&#8221;:http://video.google.com/videoplay?docid=4651757054772769361&q=robot+chicken, &#8220;3&#8221;:http://video.google.com/videoplay?docid=5395083952125133994&q=robot+chicken (thanks <a href="http://gnulords.org/~colo/serendipity/">colo</a>!)</li>
+
+<li>&#8220;ELP Laser Turntable&#8221;:http://elpj.com/: &#8220;bonki&#8221;:http://bonki.net/blog/ posted this a while back, but I never came around to post it here.</li>
+
+<li>&#8220;Bruce Schreier facts&#8221;:http://geekz.co.uk/schneierfacts/fact/128: &#8216;cause Chuck Norris isn&#8217;t as cool as Bruce! And as we all know: Bruce Schneier tapdances in Morse Code. (via <a href="http://berq.net/">berq</a>)</li>
+
+<li>&#8220;China Makes a Sexy, Slutty Robot&#8221;:http://www.gizmodo.com/gadgets/robots/china-makes-a-sexy-slutty-robot-210802.php: What can I say&#8230; (thanks <a href="http://www.leyrer.priv.at/martin/">m3</a>)</li>
+</ul>
+
+
+<p>Prickle-Prickle, The Aftermath 17, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[javascript:alert("Nothing to see here, please move on!")]]></title>
+    <link href="http://citizen428.github.io/blog/2005/11/01/javascriptalertnothing-to-see-here-please-move-on/"/>
+    <updated>2005-11-01T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/11/01/javascriptalertnothing-to-see-here-please-move-on</id>
+    <content type="html"><![CDATA[<p>You probably don&rsquo;t want to know what I&rsquo;ve been up to lately, but mean bastard that I am, I&rsquo;m going to tell you anyway.</p>
+
+<p><em>Wednesday:</em> Watched another Chinese movie at the &ldquo;Viennale&rdquo;:<a href="http://viennale.at/,">http://viennale.at/,</a> which was called &ldquo;Hong Yan&rdquo;:<a href="http://viennale.at/en/programm/filme/1869.shtml.">http://viennale.at/en/programm/filme/1869.shtml.</a> If you like quiet movies which tell simple stories, this one definitely is a good choice. I liked it quite a lot, so I really recommend you try to see this one!</p>
+
+<p><em>Thursday:</em> My girl friend and me had lunch at the &ldquo;Wiener Deewan&rdquo;:<a href="http://www.falter.at/web/wwei/detail.php?nr=5266&amp;ref=">http://www.falter.at/web/wwei/detail.php?nr=5266&amp;ref=</a>(strasse%3Dliechtenstein%26bezirk%3D9%26teil%3D1, which is located in Vienna&rsquo;s 9th district. It&rsquo;s a nice small restaurant with Indian/Pakistani food, which has a unique concept: All you can eat, pay what you want! Really! They have several  great curries, salad and bread. Quite a lot of dishes are vegetarian, and everything&rsquo;s delicious. And although the drinks sell for fixed prices and are not included in the &ldquo;pay what you want&rdquo;, you get free tap water with the food, so you don&rsquo;t feel obliged to order drinks. The &ldquo;dal&rdquo;:<a href="http://en.wikipedia.org/wiki/Daal">http://en.wikipedia.org/wiki/Daal</a> is fantastic, as are the other vegetarian dishes and the lamb curry. The restaurant itself is small and packed, which together with the intersting mix of people adds up to a nice and relaxed athmosphere. Definitely a good place to go if you are in Vienna and dig Indian food!</p>
+
+<p><em>Friday:</em> Football! Went to Parndorf to watch the Sportklub game, which we lost 4:0. Later we collectively tried hard to erase our memories of that game, and I somehow ended up in a strange location I&rsquo;ve never been before, watching a Russian/American surf punk band called &ldquo;The Jancee Pornick Casino&rdquo;:<a href="http://www.janceewarnick.com/.">http://www.janceewarnick.com/.</a> Here&rsquo;s a little info from their web site: <i>The trio calls their own style Las Vegas-punk and Russian surf, but there are many more ingredients like rockabilly, beat music and even 60&rsquo;s elevator music, all being laced with a good jug of good-hearted Russian humor making the Pornick sound so vivid and unique. These are some wild boys but, man, they can also play their instruments!</i> Unfortunately we came rather late and only saw the last few songs, but the gig was pretty cool and I&rsquo;ll probably buy one or two of their CDs once I have money again&hellip; (Hint: If you now feel a strange urge to buy me one now, I surely won&rsquo;t stop you!)</p>
+
+<p><em>Saturday:</em> On Saturday my friend &ldquo;Steve&rdquo;:<a href="http://www.cargal.org/drupal/index.php">http://www.cargal.org/drupal/index.php</a> decided that Salzburg is way too boring, so he came to Vienna to visit museums, meet friends and for generally having a good time. We had food and some beers at the &ldquo;Blue Box&rdquo;:<a href="http://bluebox.at,">http://bluebox.at,</a> before moving on to the Xeno, where I finish off a lot of my nights out with a last beer on my way home&hellip; It was a relaxed and nice evening, especially since I hadn&rsquo;t seen Steve for quite some time before this.</p>
+
+<p><em>Sunday:</em> I&rsquo;m sure that like most other days Sunday had a morning and afternoon as well, but I only remember watching TV in the evening and listening to the first episode of Cory Doctorow&rsquo;s new podcast, &ldquo;When Sysadmins Ruled the World&rdquo;:<a href="http://craphound.com/000547.html.">http://craphound.com/000547.html.</a> It&rsquo;s really great and I can&rsquo;t wait to hear the next episode, so I definitely recommend this to you my fellow geeks and nerds!</p>
+
+<p><em>Monday:</em> Went to the &ldquo;Big Time International Pub&rdquo;:<a href="http://www.bigtime.at/">http://www.bigtime.at/</a> where some Austrian &ldquo;Pardus&rdquo;:<a href="http://pardus.at">http://pardus.at</a> players had a little meetup. All in all there were 8 people, we had some beer, talked a lot about the game and generally had a good time. You still don&rsquo;t play Pardus yet? Well, then you certainly should start!</p>
+
+<p><em>Tuesday:</em> Nothing special. Did some long overdue university stuff, hung out in the Pardus alliance chat and watched 3sat for the whole day. They have a China special going on, so it&rsquo;s 24 hours of documentaries and movies about the &ldquo;Middle Kingdom&rdquo;. Some of this has been quite interesting, and how often do you get a chance to claim watching TV is related to university?</p>
+
+<p>I&rsquo;ve also played around with some technical stuff and found a really nice project I hardly can wait to tell you about, but I&rsquo;ll leave that for another blog. I&rsquo;ll now try to find out what happened to the last few hours, because I just noticed it&rsquo;s close to 9:30pm already and it only feels like 6:30 or something&hellip; Oh, before I forget it: I added a &ldquo;ClustrMap&rdquo;:<a href="http://clustrmaps.com/counter/maps.php?url=http://citizen428.net">http://clustrmaps.com/counter/maps.php?url=http://citizen428.net</a> to my blog&rsquo;s sidebar, so that from now on I can check from where in the world my blog gets read. South America and Africa don&rsquo;t seem to be particularly interested in what I write, which makes the kittens sad. And does nobody around here ever think about the children?*</p>
+
+<p><I>Disclaimer: I neither have children nor kittens, but I didn&rsquo;t want to drag Baby Jesus into this mess. If I would he&rsquo;d be crying though&hellip;</i></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tell the kids that it's alright to fight]]></title>
+    <link href="http://citizen428.github.io/blog/2005/09/26/tell-the-kids-that-its-alright-to-fight/"/>
+    <updated>2005-09-26T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/09/26/tell-the-kids-that-its-alright-to-fight</id>
+    <content type="html"><![CDATA[<p>Yeah, it&rsquo;s time for a little update again, so let&rsquo;s sum up the last week and a half, shall we?</p>
+
+<p>On Friday the 16th I went to Neusiedl with some friends. We arrived at the camping site in the afternoon and had some drinks before going to watch the football match between the &ldquo;Wiener Sportklub&rdquo;:<a href="http://www.wienersportklub.at/web/servlet/Start">http://www.wienersportklub.at/web/servlet/Start</a> and &ldquo;Neusiedl SC&rdquo;:<a href="http://www.scneusiedl.at/.">http://www.scneusiedl.at/.</a> We won that game 2-1 and I can&rsquo;t remember when was the last time we celebrated a goal as much as we did celebrate the winning goal in this game. Later on we went to see a concert of Austrian Ska band &ldquo;No Head on my Shoulders&rdquo;:<a href="http://www.noheadonmyshoulders.com/">http://www.noheadonmyshoulders.com/</a> in the surprisingly nice &ldquo;Bergwerk Neusiedl&rdquo;:<a href="http://www.bergwerk-neusiedl.at/.">http://www.bergwerk-neusiedl.at/.</a> The gig was great, and to my surprise the guy playing the guitar is an old friend of mine whom I haven&rsquo;t seen for years. It&rsquo;s also worth to note that &ldquo;our friends from Tyrol&rdquo;:<a href="http://www.np03.com/">http://www.np03.com/</a> joined us for the weekend, which maybe explains why the partying continued into the wee hours and my memories are a  little vague&hellip; And it&rsquo;s probably also the reason why we spent the greater part of Saturday hanging around and doing nothing, except for a little shopping trip to the outlet center in Parndorf. In the evening we then proceeded to watch the game of Wacker Innsbruck (yes, that&rsquo;s the way the team should be called) against Mattersburg in terrible rain. I&rsquo;ve seen many football games under bad weather conditions, but this match definitely is among the worst, especially given that it ended 0-0.<!--more-->Because of university related duties the rest of the week wasn&rsquo;t all that spectacular, except for our &ldquo;Gentoo LUG&rdquo;:<a href="http://aglug.net">http://aglug.net</a> meeting on Thursday, which once again was good fun.</p>
+
+<p>On Saturday me, my girlfriend and &ldquo;friends&rdquo;:<a href="http://mbaierl.com/">http://mbaierl.com/</a> went to Styria where the &ldquo;Zotter&rdquo;:<a href="http://www.zotter.at/">http://www.zotter.at/</a> chocolate factory had an open day. It was interesting to see how the best chocolate I ever ate gets produced, especially when there are loads of free samples! :) Later on we also visited the &ldquo;Riegersburger Turmschinkerei&rdquo;:<a href="http://www.steiermark.com/183_de/homepage.asp?id=240&amp;menurt=1479&amp;menuid=1875,">http://www.steiermark.com/183_de/homepage.asp?id=240&amp;menurt=1479&amp;menuid=1875,</a> which because of an event called &ldquo;Kulinarischer Herbst&rdquo; also had an open house on that day. They make great ham and other nice stuff, which you definitely should give a try! After some strolling around we then went on to visit &ldquo;Alois Goelles&rdquo;:<a href="http://www.goelles.at/,">http://www.goelles.at/,</a> who produces great spirits and delicious vinegar. As you may already have guessed, it was open house and free samples all over again, so we were already pretty full when we had dinner in a rather nice &ldquo;Buschenschank&rdquo;. Let&rsquo;s try to translate this into English: It&rsquo;s restaurant type of thing where you only can go to in late spring, summer and early autumn, and which sells local specialities. I know this description sucks, but it&rsquo;s the best I can come up with&hellip;</p>
+
+<p>The rest of the weekend was spent on Gentoo and other computer related stuff, but I won&rsquo;t bother you with the boring details. Ah, before I forget it, I&rsquo;ve finally signed up at &ldquo;last.fm&rdquo;:<a href="http://www.last.fm/,">http://www.last.fm/,</a> which means that from now on you can have a look at my &ldquo;personal music profile&rdquo;:<a href="http://www.last.fm/user/citizen428/.">http://www.last.fm/user/citizen428/.</a> I also found a great MP3 blog called &ldquo;Teach The Indie Kids To Dance Again&rdquo;:<a href="http://www.indiekids.org/,">http://www.indiekids.org/,</a> which I really like because it &ldquo;makes me find interesting music&rdquo;:<a href="http://indiekids.org/2005/08/30/this-is-whats-up/.">http://indiekids.org/2005/08/30/this-is-whats-up/.</a> BTW: I found this site while looking for a review of &ldquo;Gogol Bordello&rsquo;s&rdquo;:<a href="http://www.gogolbordello.com/">http://www.gogolbordello.com/</a> new album called &ldquo;Gipsy Punks&rdquo;, which you definitely should check out!</p>
+
+<p>Now for some random links:
+&ldquo;El Santo&rdquo;:<a href="http://www.flickr.com/photos/44845892@N00/sets/1003065/:">http://www.flickr.com/photos/44845892@N00/sets/1003065/:</a> A vintage fotonovella some kind soul translated into English and uploaded to &ldquo;flickr&rdquo;:<a href="http://www.flickr.com/">http://www.flickr.com/</a> (via &ldquo;BoingBoing&rdquo;:<a href="http://boingboing.net">http://boingboing.net</a>).</p>
+
+<p>&ldquo;Nabatzag&rdquo;:<a href="http://www.nabaztag.com/vl/FR/qui_est_nabaztag_eng.jsp:">http://www.nabaztag.com/vl/FR/qui_est_nabaztag_eng.jsp:</a> One of the strangest geek gadgets I&rsquo;ve seen for quite a while. Anyone wanna buy me one? (also via &ldquo;BoingBoing&rdquo;:<a href="http://boingboing.net">http://boingboing.net</a></p>
+
+<p>&ldquo;A review of &lsquo;3 Dev Adam&rsquo;&rdquo;:<a href="http://www.i-mockery.com/minimocks/3devadam/,">http://www.i-mockery.com/minimocks/3devadam/,</a> a trashy Turkish movie where Captain America teams up with Santo the masked wrestler to fight an evil Spiderman [sic]. I have to see this one!</p>
+
+<p>&ldquo;Alienware&rdquo;:<a href="http://www.alienware.com/">http://www.alienware.com/</a> A vendor of &lsquo;high-performance systems&rsquo; I haven&rsquo;t heard of before reading a &ldquo;blog&rdquo;:<a href="http://zacbowling.com/blog/2005/09/20/new-toys/">http://zacbowling.com/blog/2005/09/20/new-toys/</a> on &ldquo;Monologue&rdquo;:<a href="http://www.go-mono.com/monologue/.">http://www.go-mono.com/monologue/.</a> I kind of like their notebooks, although I find them quite expensive. Maybe someone who has first-hand experience with this company can tell me a little more about the quality of their products?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lazy sunday afternoon]]></title>
+    <link href="http://citizen428.github.io/blog/2005/09/11/lazy-sunday-afternoon/"/>
+    <updated>2005-09-11T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/09/11/lazy-sunday-afternoon</id>
+    <content type="html"><![CDATA[<p>Today is the perfect example of a nice and lazy afternoon, and I just love it! After having a great brunch at &ldquo;HighTea&rdquo;:<a href="http://hightea.at/">http://hightea.at/</a> where we had toasties, antipasti, bagles and lots of other really good stuff, I&rsquo;m just hanging around in front of my PC reading, doing some Gentoo work and generally having a good time. Live can be so easy&hellip; :)</p>
+
+<p>Now let&rsquo;s see if I have anything interesting to tell you:<!--more-->
+* &ldquo;OSNews&rdquo;:<a href="http://www.osnews.com/">http://www.osnews.com/</a> had a &ldquo;review of GNOME 2.12&rdquo;:<a href="http://www.osnews.com/story.php?news_id=11800">http://www.osnews.com/story.php?news_id=11800</a> and Eugenia seems to enjoy the new release as much as I do. Although she also points out some drawbacks of the desktop environment as lacking good API docs and a RAD tool, she concludes that &ldquo;[&hellip;] Gnome 2.12 is the best X11 DE there is&rdquo;. You wonder why? Because &ldquo;all in all, Gnome is today more powerful, better integrated to the underlying system with DBUS and HAL, looks good, behaves as expected and, most of all, it&rsquo;s simple and clean&rdquo;. I couldn&rsquo;t agree more! (via &ldquo;FootNotes&rdquo;:<a href="http://www.gnomedesktop.org">http://www.gnomedesktop.org</a>)
+<br>
+* A fellow Gentoo developer convinced me to start hanging out on IRC regularly, which I now do despite being a little reluctant at first. But after two or three weeks I can see all the positive effects this has had for my dev work, which may also have to do with my further increased feeling of being part of a larger community. Directly (as in chat vs. mail) communicating with people really can do wonders for understanding each other better&hellip; If you got something you want to tell me, you&rsquo;ll find me as &lsquo;citizen428&rsquo; (surprising, huh?) on Freenode where I usually can be found in #gentoo-bsd, #gentoo-dev, #gentoo-ruby and #nitro.
+<br>
+* I&rsquo;ve been looking for new Linux games and have found &ldquo;OpenAnno&rdquo;:<a href="http://www.lanadminsystem.de/cgi-bin/Lanas.pl?OPENANNO">http://www.lanadminsystem.de/cgi-bin/Lanas.pl?OPENANNO</a> and &ldquo;The Mana World&rdquo;:<a href="http://themanaworld.org/,">http://themanaworld.org/,</a> which both look promising but are still in early stages of development.
+<br>
+* Read a &ldquo;shocking account&rdquo;:<a href="http://www.filmstadtinferno.de/offener_kanal.htm">http://www.filmstadtinferno.de/offener_kanal.htm</a> (in German) of how the &ldquo;Livorno&rdquo;:<a href="http://www.livornocalcio.it/">http://www.livornocalcio.it/</a> &ldquo;Ultras&rdquo;:<a href="http://en.wikipedia.org/wiki/Ultras">http://en.wikipedia.org/wiki/Ultras</a> and their German visitors got treated by the police in Rome after the game against Lazio. Carabinieri vaffanculo!
+<br>
+* Want to create your own first person shooter? Have fun with &ldquo;FPS Creator&rdquo;:<a href="http://www.fpscreator.com/!">http://www.fpscreator.com/!</a> It uses DirectX though, so you&rsquo;re stuck to Windows&hellip; :(
+<br>
+* For all you music lovers out there, make sure to check out the Flash magazine &ldquo;Music Hurts&rdquo;:<a href="http://musichurts.com/!">http://musichurts.com/!</a> I got the link from the current print issue of &ldquo;de:bug&rdquo;:<a href="http://www.de-bug.de/,">http://www.de-bug.de/,</a> a magazine you definitely should check out when you&rsquo;re into electronic music!</p>
+
+<p>That&rsquo;s it for today, see you at the next episode of &ldquo;citizen428&rsquo;s random link dump&rdquo;!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Football books]]></title>
+    <link href="http://citizen428.github.io/blog/2005/09/04/football-books/"/>
+    <updated>2005-09-04T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/09/04/football-books</id>
+    <content type="html"><![CDATA[<p>As we all know, football is one of the greatest hobbies around! What&rsquo;s better than travelling through the whole country - and sometimes even further - with your friends, watching games and having a few beers? Or meeting with people to watch a game on TV together? Or travelling to fan tournaments and playing yourself? Not much, that&rsquo;s for sure! :)</p>
+
+<p>Alas there is this dark time called off-season, where you have to find another way to satisfy your football addiction. That&rsquo;s exactly the time of the year football books have been written for, and in this blog I&rsquo;m going to recommend you three of them.<!--more-->&ldquo;Fever Pitch&rdquo;:<a href="http://www.amazon.com/exec/obidos/tg/detail/-/0140293442/qid=1125847999/sr=8-9/ref=pd_bbs_9/103-1578840-7552625?v=glance&amp;s=books&amp;n=507846">http://www.amazon.com/exec/obidos/tg/detail/-/0140293442/qid=1125847999/sr=8-9/ref=pd_bbs_9/103-1578840-7552625?v=glance&amp;s=books&amp;n=507846</a>
+Written by Arsenal supporter Nick Hornby, Fever Pitch is a nice book about football obsession in form of an autobiography. It doesn&rsquo;t talk too much about the &ldquo;dark&rdquo; sides of fandom, but maybe that&rsquo;s also the reason why it&rsquo;s a good first football book. It&rsquo;s not great, but I still enjoyed it quite a lot when I read it several years ago. It&rsquo;s possible that maybe my unexplainable affection for the Gunners has something to do with it&hellip; There&rsquo;s also a movie with Drew Barraymore based on Hornby&rsquo;s book, but the story was moved to Boston and involves a baseball team. Need i say more?</p>
+
+<p>&ldquo;Hoolifan&rdquo;:<a href="http://www.amazon.com/exec/obidos/tg/detail/-/1840181745/qid=1125848394/sr=8-1/ref=pd_bbs_1/103-1578840-7552625?v=glance&amp;s=books&amp;n=507846">http://www.amazon.com/exec/obidos/tg/detail/-/1840181745/qid=1125848394/sr=8-1/ref=pd_bbs_1/103-1578840-7552625?v=glance&amp;s=books&amp;n=507846</a>
+I bought this story of a die-hard Chelsea supporter in a book shop in Cork and have never regretted this decision. &ldquo;Hoolifan&rdquo; offers good insight into the phenomen of football holliganism, far from all the clichés traditional media has to offer on this topic. A mighty good read, highly entertaining and interesting.</p>
+
+<p>&ldquo;A season with Verona&rdquo;:<a href="http://www.amazon.com/exec/obidos/tg/detail/-/1559706287/qid=1125848686/sr=1-1/ref=sr_1_1/103-1578840-7552625?v=glance&amp;s=books">http://www.amazon.com/exec/obidos/tg/detail/-/1559706287/qid=1125848686/sr=1-1/ref=sr_1_1/103-1578840-7552625?v=glance&amp;s=books</a>
+This book by British author Tim Parks, who lives in Verona for more than 20 years now, focusses on Hellas Verona and their infamous supporters, the <em>brigatte gialloblu</em>. In this mixture of travelogue, anecdotes and match accounts Parks not only talks about football and fans&#8217; obsessions in general, but also about the specifics of Italy&rsquo;s serie A and the Italian mindset in general. I&rsquo;ve just finished this book and really liked it, so I can only recommend reading it.</p>
+
+<p>And although it&rsquo;s not a book, I&rsquo;d also like to recommend the &ldquo;ballester&rdquo;:<a href="http://www.ballesterer.at/neu/index.php,">http://www.ballesterer.at/neu/index.php,</a> one of the best German language magazines on football. Give it a try, you surely won&rsquo;t regret it!</p>
+]]></content>
+  </entry>
+  
+</feed>

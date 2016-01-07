@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>C#/Mono: First Impressions, IDEs - citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Now that I&#8217;m working through my Mono Developer&#8217;s Notebook, I thought it&#8217;s time for some first impressions on C# and Mono. Ok, they &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.github.io/blog/2005/09/03/cmono-first-impressions-ides">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">C#/Mono: First Impressions, IDEs</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-09-03T00:00:00+07:00" pubdate data-updated="true">Sep 3<sup>rd</sup>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Now that I&#8217;m working through my <a href="http://www.amazon.de/exec/obidos/tg/detail/-/0596007922/qid=1125743180/sr=8-1/ref=pd_bbs_1/302-8376596-0194421?v=glance&amp;s=books&amp;n=507846">Mono Developer&#8217;s Notebook</a>, I thought it&#8217;s time for some first impressions on C# and Mono. Ok, they are not really first impressions, as I&#8217;ve played with the framework before. But not until now have I done so methodically, with the aim of <strong>really</strong> learning C# and the <a href="http://www.go-mono.com/docs/">class libraries</a>.<!--more--><strong>Firsts impressions:</strong><br />
+First off, C# is a pretty modern language which features stuff like automatic garbage collection, support for interfaces, versioning, delegates and much more. I really like the <a href="http://www.go-mono.com/docs/index.aspx?link=T%3aSystem.Text.StringBuilder">StringBuilder</a>, and think that regular expressions are handled <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconUsingRegularExpressionClasses.asp">in a nice way</a>. <a href="http://www.go-mono.com/docs/monodoc.ashx?tlink=7@N%3aSystem.Collections">Collections</a> and <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcerrusingindexers.asp">Indexers</a> are pretty neat too, and I yet have to look into <a href="http://www.oreilly.com/catalog/progcsharp/chapter/ch18.html">Attributes and Reflection</a> a little more. I also like the great documentation that can either be found on the <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vcoriCProgrammersReference.asp"><span class="caps">MSDN</span> library</a> or the <a href="http://www.go-mono.com/docs/">Mono website</a>.</p>
+<p>What I don&#8217;t like is that like Java C# is a pretty verbose language, which means you have to write lots of code for simple tasks. I guess that&#8217;s the problem that comes with such a comprehensive class library: easy programs get more complicated than necessary, but the advantages of the framework really pay off when you start writing larger applications. It feels kinda strange to work with a strongly typed language again, but I&#8217;m getting used to it faster than you can say &#8220;type cast&#8221;. ;) I&#8217;m missing quite a lot of the nice iterators Ruby has to offer, but at least C# has a decent <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vclrftheforeachstatement.asp">foreach loop</a>. Still it&#8217;s strange to have to write all this for loops again, when a simple <em>10.downto(1)</em> or <em>5.times</em> could have achieved the same&#8230;</p>
+<p><strong>IDEs:</strong><br />
+When it comes to editing C# files, I naturally thought about using <a href="http://www.vim.org/">Vim</a>, which of course offers syntax highlighting for the language. However, it is not an <span class="caps">IDE</span>, and for a language with such an excessive class library, I really prefer to have all this nifty things like auto-completion (if only someone would port <a href="http://www.vim.org/scripts/script.php?script_id=747">Intellisense</a> to Linux), integrated documentation etc.</p>
+<p>Enter <a href="http://www.monodevelop.com/">MonoDevelop</a>, a <span class="caps">GTK</span> port of the famous <a href="http://www.icsharpcode.net/OpenSource/SD/Default.aspx">SharpDevelop</a>. It&#8217;s a nice <span class="caps">IDE</span> that caters exclusively to the Mono programmer, e.g. I really ike how they seamlessly integrated <a href="http://www.mono-project.com/Image:Screenshot-B2-thumb.png">MonoDoc</a>. The problem is that MD is still very much a work in progress and is missing some features like starting a program from the <span class="caps">IDE</span> with specified parameters and also sometimes crashes on me. Still I think that over time MD may well become the #1 Mono <span class="caps">IDE</span> for Linux.  I surely will use it again when I start playing around with <a href="http://boo.codehaus.org/">Boo</a>.</p>
+<p>For the time being though I will continue to use <a href="http://www.anjuta.org/">Anjuta 1.2.4</a> as my <span class="caps">IDE</span> of choice. It offers good syntax highlighting and auto-completion, and unlike MD it also does code folding. If I want to test a program from the <span class="caps">IDE</span> I can start it with &#8220;Build&#8221; &#8211; &#8220;Set program params &#8230;&#8221; without the need for a seperate terminal window (<em>Note: for this to work I had to add change the line mono &#8220;$(current.full.filename).exe&#8221; to &#8220;mono $(current.full.filename).exe $(anjuta.program.arguments)&#8221; under &#8220;Settings&#8221; &#8211; &#8220;Commands&#8221; &#8211; &#8220;Execute&#8221;</em>). Anjuta is a pretty mature development environment, so it offers all the goodies you might expect from such a tool (like <span class="caps">CVS</span> integration), without having an overly cluttered interface. Also version 2 is coming along nicely (<a href="http://www.anjuta.org/screen-shots">Screenshot</a>) and has cool features like Glad integration.</p>
+<p>That&#8217;s it for today, but I think I&#8217;ll continue to post about my adventures in Mono land&#8230;</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Kohl</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-09-03T00:00:00+07:00" pubdate data-updated="true">Sep 3<sup>rd</sup>, 2005</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/books/'>books</a>, <a class='category' href='/blog/categories/foss/'>foss</a>, <a class='category' href='/blog/categories/mono/'>mono</a>, <a class='category' href='/blog/categories/opinion/'>opinion</a>, <a class='category' href='/blog/categories/programming/'>programming</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.github.io/blog/2005/09/03/cmono-first-impressions-ides/" data-via="citizen428" data-counturl="http://citizen428.github.io/blog/2005/09/03/cmono-first-impressions-ides/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2005/09/02/links-links/" title="Previous Post: Links? Links!">&laquo; Links? Links!</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2005/09/04/football-books/" title="Next Post: Football books">Football books &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I'm Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/12/information-overload-2015-07-12/">Information Overload 2015-07-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://citizen428.github.io/blog/2005/09/03/cmono-first-impressions-ides/';
+        var disqus_url = 'http://citizen428.github.io/blog/2005/09/03/cmono-first-impressions-ides/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

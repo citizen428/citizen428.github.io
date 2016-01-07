@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: crime | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/crime/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Information Overload 2010-09-19]]></title>
+    <link href="http://citizen428.github.io/blog/2010/09/19/information-overload-2010-09-19/"/>
+    <updated>2010-09-19T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2010/09/19/information-overload-2010-09-19</id>
+    <content type="html"><![CDATA[<p>This week &ldquo;Information Overload&rdquo; is back in full swing, and there really were lots of interesting things I stumbled upon:</p>
+
+<ul>
+<li>&#8220;The Biggest Company You&#8217;ve Never Heard Of&#8221;:http://www.youtube.com/watch?v=szNLMtgI7hU<br>Interesting two and a half minute video about &#8220;Serco&#8221;:http://en.wikipedia.org/wiki/Serco, a company I indeed never had heard of before.</li>
+<li>&#8220;Goran Lindberg and Sweden&#8217;s dark side&#8221;:http://www.guardian.co.uk/world/2010/aug/01/goran-lindberg-sweden-crime-palme<br>Are &#8220;Stieg Larsson&#8217;s&#8221;:http://en.wikipedia.org/wiki/Stieg_Larsson novels closer to the truth than expectd?</li>
+<li>&#8220;Third Kim lucky?&#8221;:http://www.economist.com/node/16994770?story_id=16994770<br>This article suggests that &#8220;Kim Jong-un&#8221;:http://en.wikipedia.org/wiki/Kim_Jong-un will become &#8220;Kim Jong-il&#8217;s&#8221;:http://en.wikipedia.org/wiki/Kim_jong_il successor. I&#8217;d have expected a kind of military/party government after the latter&#8217;s retirement/death, let&#8217;s see what actually happens.</li>
+<li>&#8220;Genetic Scars of the Holocaust: Children Suffer Too&#8221;:http://www.time.com/time/health/article/0,8599,2016824,00.html<br>&#8220;Epigenetics&#8221;:http://en.wikipedia.org/wiki/Epigenetics in the context of Holocaust victims and their children. </li>
+<li>&#8220;The Most Powerful Colors in the World&#8221;:http://www.colourlovers.com/business/blog/2010/09/15/the-most-powerful-colors-in-the-world<br>With so many colors to choose from, companies don&#8217;t seem to be overly creative when deciding on their logos.</li>
+<li>&#8220;Todesopfer rechter Gewalt&#8221;:http://www.zeit.de/gesellschaft/zeitgeschehen/todesopfer-rechter-gewalt<br>Interactive map of of people who died due to right-wing violence in Germany. Also see &#8220;137 Todesopfer rechter Gewalt&#8221;:http://www.tagesspiegel.de/politik/rechtsextremismus/137-todesopfer-rechter-gewalt/1934424.html for more information on the victims (both in German).</li>
+<li>&#8220;Itunes Remove duplicated songs&#8221;:http://sergioveiga.com/index.php/2010/09/16/itunes-remove-duplicated-songs/<br>It&#8217;s always nice to see something based on my blog posts, especially in this case where it was the first time ever I wrote something about Erlang.</li>
+<li>&#8220;The Myth of the Boy Wizard&#8221;:http://blog.jgc.org/2010/09/myth-of-boy-wizard.html<br>After the recently discovered flaw in &#8220;Haystack&#8221;:http://www.haystacknetwork.com/, &#8220;Austin Heap&#8221;:http://blog.austinheap.com/ got a lot of flak. This article is an interesting take on the media&#8217;s role and responsibility in all of this.</li>
+<li>&#8220;Zeros to heroes: 10 unlikely ideas that changed the world&#8221;:http://www.newscientist.com/special/zeros-to-heroes-10-unlikely-ideas-that-changed-the-world<br>A good reminder to keep on hacking despite the odds.</li>
+<li>&#8220;Clojure is Fast&#8221;:http://learnclojure.blogspot.com/2010/09/clojure-is-fast.html<br>If you ever where curious just how fast you can get your Clojure code to run, this will provide some valuable insight.</li>
+<li>&#8220;Lawsuit challenges Obama&#8217;s power to kill citizens without due process&#8221;:http://www.salon.com/news/opinion/glenn_greenwald/2010/08/30/assassinations/index.html<br>You know a country is fucked once it needs a lawsuit like this.</li>
+</ul>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

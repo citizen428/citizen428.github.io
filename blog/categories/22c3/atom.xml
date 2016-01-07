@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 22c3 | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/22c3/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[citizen428 vs 22C3]]></title>
+    <link href="http://citizen428.github.io/blog/2006/01/04/citizen428-vs-22c3/"/>
+    <updated>2006-01-04T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/01/04/citizen428-vs-22c3</id>
+    <content type="html"><![CDATA[<p>&ldquo;22C3&rdquo;:<a href="http://events.ccc.de/congress/2005/">http://events.ccc.de/congress/2005/</a> is over since last Friday, but I needed some time to let everything sink in. Besides that I just came home from Germany this morning&hellip; Here&rsquo;s a list of all the talks I saw:</p>
+
+<p><em>Day 1:</em>
+Private Investigations
+Understanding buffer overflow exploitations
+Hacking CCTV
+Hacking Data Retention
+Bad TRIPs
+We lost the war
+VoIP Phreaking</p>
+
+<p><em>Day 2:</em>
+AJAX Based Web Applications
+Anonymous Data Broadcasting by Misuse of Satellite ISPs
+Digital Identity and the Ghost in the Machine
+Literarisches Code-Quartett</p>
+
+<p><em>Day 3:</em>
+COMPLETE Hard Disk Encryption with FreeBSD
+How to construct Utopia
+The truth about Nanotechnology
+Fnord JahresrÃ¼ckblick
+Hacker Jeoparday</p>
+
+<p><em>Day 4:</em>
+A discussion about modern disk encryption systems</p>
+
+<p><em>People:</em>
+&ldquo;berq&rdquo;:<a href="http://www.berq.net/blog/,">http://www.berq.net/blog/,</a> lippi and Manuel were really great company and we had a damn good time together! Thanks guys! :) &ldquo;teemow&rdquo;:<a href="http://teemow.de/">http://teemow.de/</a> also was at the congress, and once again we had some interesting conversations. I&rsquo;ve also met some fellow Gentoo devs, but unfortunately we didn&rsquo;t talk that much. Maybe next year we once again should try to organize a more formal get-together. I&rsquo;ve also met some nice people to play Go with, and although I still suck at this game, I really enjoyed playing it.</p>
+
+<p><em>Misc:</em>
+Get rich, because using busses for long-distance travel sucks, at least if you want to sleep. Luckily our hostel (&ldquo;CityStay Berlin Mitte&rdquo;:<a href="http://citystay.de/">http://citystay.de/</a>) did great in that regard, and I only can recommend this place to anyone looking for a clean and cheap accomodation in Berlin.</p>
+
+<p><em>Conclusion:</em>
+22C3 definitely was good fun. I&rsquo;ve seen interesting talks, met a lot of nice people and generally had a good time. However, I found the overall quality of the lectures not that impressive and I tried to express this sentiments via the feedback forms&hellip;</p>
+
+<p>Prickle-Prickle, Chaos 4, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

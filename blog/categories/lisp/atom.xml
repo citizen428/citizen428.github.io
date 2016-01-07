@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: lisp | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/lisp/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Review: Land of Lisp]]></title>
+    <link href="http://citizen428.github.io/blog/2011/02/03/review-land-of-lisp/"/>
+    <updated>2011-02-03T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2011/02/03/review-land-of-lisp</id>
+    <content type="html"><![CDATA[<p><i>Disclaimer: The awesome folks at <a href="http://www.nostarch.com/">No Starch Press</a> were nice enough to provide me with a free copy of the book reviewed here, but what I&rsquo;m about to write has not been influenced by this. I just wanted to get this out of the way&hellip;</i></p>
+
+<p>Ever since I first learned about it, I was eagerly awaiting the release of &ldquo;Land of Lisp&rdquo;:<a href="http://landoflisp.com/.">http://landoflisp.com/.</a> If you have never heard about the book before, have a look at this promotional cartoon music video. Yes, that&rsquo;s right, this book comes with its very own promotional cartoon music video!</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/HM1Zb3xmvMc" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Your reaction to this video is actually a pretty good indicator on wether or not you are likely to enjoy this book. If you can&rsquo;t take the cartoons and strange humor, &ldquo;Land of Lisp&rdquo; will probably not be for you. If you do however, you&rsquo;ll be relieved that the book is at least as awesome as the video and probably even more.</p>
+
+<p>People believing that <a href="http://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a> has been dead since the &ldquo;AI winter&rdquo;:<a href="http://en.wikipedia.org/wiki/AI_winter">http://en.wikipedia.org/wiki/AI_winter</a> may be surprised by the release of new book on the language in 2010. They may however have missed the release of Peter Seibel&rsquo;s &ldquo;Practical Common Lisp&rdquo;:<a href="http://www.gigamonkeys.com/book/">http://www.gigamonkeys.com/book/</a> in 2005, which managed to expose the language to a wider audience again, a feat I think &ldquo;LoL&rdquo; might achieve too.</p>
+
+<p>For me the best part about <a href="http://www.lisperati.com/">Conrad Barski</a>&rsquo;s book is its very readable and entertaining style,  combined with cartoons and the use of small games as demonstrations of the techniques introduced in the book. I think this is what makes &ldquo;LoL&rdquo; really stand out from the other Lisp books: it&rsquo;s neither as academic as most of the texts focussed on Scheme (with &ldquo;The Little Schemer&rdquo;:<a href="http://www.ccs.neu.edu/home/matthias/BTLS/">http://www.ccs.neu.edu/home/matthias/BTLS/</a> being an obvious exception), nor is it as dry as Seibel&rsquo;s book (which otherwise is a pretty good read) or as dated as Paul Graham&rsquo;s &ldquo;On Lisp&rdquo;:<a href="http://www.paulgraham.com/onlisp.html">http://www.paulgraham.com/onlisp.html</a> which was written while Common Lisp was still in the process of being standardized. For many people &ldquo;Land of Lisp&rdquo; may very well be there first contact with the language, and I think with its funny and easy to follow style it may get quite a few people hooked.</p>
+
+<p>The book is structured in 4 main parts, the first of which - called &ldquo;Lisp Is Power&rdquo; - serves as a general introduction to the language, explaing the basic syntax and so on. The second part (&ldquo;Lisp Is Symmetry&rdquo;) introduces the reader to flow control, data structures, input and output, &ldquo;lambda expressions&rdquo;:<a href="http://en.wikipedia.org/wiki/Lambda_calculus">http://en.wikipedia.org/wiki/Lambda_calculus</a> and more. In the process you&rsquo;ll write the first part of a game engine for text based games, a great little version of &ldquo;Hunt the Wumpus&rdquo;:<a href="http://en.wikipedia.org/wiki/Hunt_the_Wumpus">http://en.wikipedia.org/wiki/Hunt_the_Wumpus</a> called &ldquo;Grand Theft Wumpus&rdquo; and &ldquo;Orc Battle&rdquo;, a small strategy game played in the &ldquo;REPL&rdquo;:<a href="http://en.wikipedia.org/wiki/REPL.">http://en.wikipedia.org/wiki/REPL.</a> The third part (&ldquo;Lisp Is Hacking&rdquo;) introduces us to the powerful and sometimes disputed &ldquo;format&rdquo; and &ldquo;loop&rdquo; commands, as well as streams. Game-wise you&rsquo;ll encounter a little simulation of an evolving world as well as &ldquo;Attack of the Robots&rdquo;, a retro game where your aim is to get rid of some robots by making them collide with each other.  The last part (&ldquo;Lisp Is Science&rdquo;) introduces functional programming techniques, macros, &ldquo;DSLs&rdquo;:<a href="http://en.wikipedia.org/wiki/Domain-specific_language">http://en.wikipedia.org/wiki/Domain-specific_language</a> and &ldquo;laziness&rdquo;:<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Lazy_evaluation.">https://secure.wikimedia.org/wikipedia/en/wiki/Lazy_evaluation.</a> Besides finishing the text adventure started in an earlier chapter, you&rsquo;ll also write &ldquo;Dice Of Doom&rdquo;, a &ldquo;Dice Wars&rdquo;:<a href="http://www.gamedesign.jp/flash/dice/dice.html">http://www.gamedesign.jp/flash/dice/dice.html</a> clone that&rsquo;s the most complex program of the whole book. Last but not least there&rsquo;s an epilogue, where the author gives a brief overview of several important topics that got little or no exposure up to that point, like &ldquo;CLOS&rdquo;:<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Common_Lisp_Object_System">https://secure.wikimedia.org/wikipedia/en/wiki/Common_Lisp_Object_System</a> or the condition system.</p>
+
+<p>As a final summary I&rsquo;d say that &ldquo;Land of Lisp&rdquo; is a truly great achievement. It&rsquo;s fun to read and does a good job of introducing the reader to the most important concepts of Lisp, by giving a taste of the language&rsquo;s power, without being overwhelming. For more experienced Lispers this might make the book significantly less interesting, since some really nifty things only get mentioned in the epilogue. If you are among them, Seibel&rsquo;s book is probably what you want to read (if you haven&rsquo;t already, which would be surprising).  I&rsquo;d also advise you to not get too excited about the &ldquo;game development&rdquo; part of the book, except for the last one all the games are rather minimal and simple, so don&rsquo;t expect writing 3d shooters or anything like that. They are however awesome examples of the concepts introduced in the individual chapters and way more fun than the contrived examples one finds in way too many programming books. For new Lispers or people who need to brush up on their Common Lisp skills (e.g. when migrating from some other Lisp) this comes highly recommend, but even more senior Lispers might want to get a copy, even if it&rsquo;s only for the odd cartoons.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Haskell]]></title>
+    <link href="http://citizen428.github.io/blog/2009/04/09/learning-haskell/"/>
+    <updated>2009-04-09T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/04/09/learning-haskell</id>
+    <content type="html"><![CDATA[<p>To get my mind off Ruby I recently started dabbling in Haskell. I really like what I&rsquo;ve seen so far and it seems I&rsquo;m finally starting to understand functional programming (my two attempts with &ldquo;Practical Common Lisp&rdquo;:<a href="http://www.gigamonkeys.com/book/">http://www.gigamonkeys.com/book/</a> never got past the first few chapters).</p>
+
+<p>In case you are interested in Haskell too, here&rsquo;s a list of the resources I use:</p>
+
+<ul>
+<li>&#8220;Haskell :: Functional Programming with Types&#8221;:http://en.wikibooks.org/wiki/Haskell: A very nice &#8220;Wikibook&#8221;:http://wikibooks.org covering a wide range of topics from the very basics to Monads, Arrows and Zippers.</li>
+<li>&#8220;Learn You a Haskell for Great Good&#8221;:http://learnyouahaskell.com/: A nice and colorful tutorial in the spirit of <a href="http://poignantguide.net/ruby/">Why&#8217;s (Poignant) Guide to Ruby</a></li>
+<li>&#8220;Real World Haskell&#8221;:http://book.realworldhaskell.org/: Yes, the entire book can be read online (including per paragraph comments!) for free! I&#8217;ve only just started reading this, since I first want to brush up my basic Haskell a bit, but once I&#8217;m past the &#8220;Project Euler&#8221;:http://projecteuler.net/ stage this is probably gonna be very nice.</li>
+<li>&#8220;Write Yourself a Scheme in 48 Hours&#8221;:http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours: Now that I&#8217;m slowly getting the hang of this functional programming thing, why not write an interpreter for one functional language in another? &#8220;Along the way, you&#8217;ll learn Haskell&#8217;s I/O, mutable state, dynamic typing, error handling, and parsing features. By the time you finish, you should be fairly fluent in both Haskell and Scheme&#8221;. Sounds good to me! :)</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby's Lisp features]]></title>
+    <link href="http://citizen428.github.io/blog/2006/04/30/rubys-lisp-features/"/>
+    <updated>2006-04-30T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/04/30/rubys-lisp-features</id>
+    <content type="html"><![CDATA[<p>Not too long ago, Edward Kenworthy &ldquo;inquired about &lsquo;Ruby&rsquo;s lisp features&rsquo;&rdquo;:<a href="http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179515">http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179515</a> on ruby-talk. &ldquo;Matz&#8217; answer&rdquo;:<a href="http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179642">http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/179642</a> was as follows:</p>
+
+<p><i>Ruby is a language designed in the following steps:</p>
+
+<ul>
+<li>take a simple lisp language (like one prior to CL).</li>
+<li>remove macros, s-expression.</li>
+<li>add simple object system (much simpler than CLOS).</li>
+<li>add blocks, inspired by higher order functions.</li>
+<li>add methods found in Smalltalk.</li>
+<li>add functionality found in Perl (in OO way).<br />
+So, Ruby was a Lisp originally, in theory.
+Let&rsquo;s call it MatzLisp from now on. ;-)</i><br />
+Is it just me, or does that really sound like &ldquo;I took a Lisp dialect, removed most of the cool stuff and added some things from other languages&rdquo;? Don&rsquo;t get me wrong, I still think Matz has done a really amazing job when he created Ruby, and it still is one of my favourite programming languages. I just find it amazing how Lisp doesn&rsquo;t have more exposure, when apparently some of the &ldquo;cool&rdquo; languages of today are trying hard to incorporate some of its (less powerful) features.<br /><br /></li>
+</ul>
+
+
+<p>Further references:
+&ldquo;Why Ruby is an acceptable Lisp&rdquo;:<a href="http://www.randomhacks.net/articles/2005/12/03/why-ruby-is-an-acceptable-lisp">http://www.randomhacks.net/articles/2005/12/03/why-ruby-is-an-acceptable-lisp</a>
+&ldquo;&lsquo;Ruby aka MatzLisp&rsquo; on comp.lang.lisp&rdquo;:<a href="http://groups.google.com/group/comp.lang.lisp/browse_frm/thread/c75404a8a0c05fb0/352dc25c0db37fc7?tvc=1&amp;q=matzlisp#352dc25c0db37fc7">http://groups.google.com/group/comp.lang.lisp/browse_frm/thread/c75404a8a0c05fb0/352dc25c0db37fc7?tvc=1&amp;q=matzlisp#352dc25c0db37fc7</a></p>
+
+<p>Sweetmorn, Discord 48, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

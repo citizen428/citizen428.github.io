@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Tom and Michael vs Prototypical Inheritance - citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Tom and I read another paper, this time on prototypical inheritance: Organizing Programs Without Classes. You can find his post here and I have to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.github.io/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Tom and Michael vs Prototypical Inheritance</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-11T00:00:00+07:00" pubdate data-updated="true">Jul 11<sup>th</sup>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://mrjaba.posterous.com/">Tom</a> and I read another paper, this time on prototypical inheritance: <a href="http://selflanguage.org/documentation/published/organizing-programs.html">Organizing Programs Without Classes</a>. You can find his post <a href="http://mrjaba.posterous.com/organizing-programs-without-classes">here</a> and I have to admit that he also did almost the entire summary this time whereas I only added some minor things and code examples.</p>
+<p><strong>Summary</strong></p>
+<p><span class="caps">OOP</span> is a paradigm which uses &#8220;objects&#8221; to encapsulate behavior and state in a programming language. This can be accomplished in a few ways, two of the more popular being class based and prototype based object orientation. In class based object models (e.g. Java) a class will be written to define the behavior and state that the object will embody. A class can be inherited from and extended to provide new functionality. In prototype based object models (e.g. ECMAScript, Io), there are no classes, only objects which can be cloned and altered to provide new features. Here&#8217;s a quick comparison of the two approaches in Ruby and ECMAScript:</p>
+<p>Ruby:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># define a class</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">Hello</span>
+</span><span class='line'>   <span class="k">def</span> <span class="nf">hello</span>
+</span><span class='line'>     <span class="nb">puts</span> <span class="s2">&quot;Hello&quot;</span>
+</span><span class='line'>   <span class="k">end</span>
+</span><span class='line'><span class="k">end</span> <span class="c1">#=&gt; nil</span>
+</span><span class='line'><span class="c1"># create an object instance</span>
+</span><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="no">Hello</span><span class="o">.</span><span class="n">new</span> <span class="c1">#=&gt; #&lt;Hello:0x00000100a2f520&gt;</span>
+</span><span class='line'><span class="c1"># call a method</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">hello</span> <span class="c1">#=&gt; nil</span>
+</span><span class='line'><span class="no">Hello</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>ECMAScript:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// create object using a function</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">Hello</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">hello</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span> <span class="p">}</span> <span class="p">};</span>
+</span><span class='line'><span class="c1">// create instance</span>
+</span><span class='line'><span class="nx">h</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Hello</span><span class="p">();</span>
+</span><span class='line'><span class="nx">h</span><span class="p">.</span><span class="nx">hello</span><span class="p">();</span> <span class="c1">// pops up an alert</span>
+</span><span class='line'><span class="c1">// alternatively we can use an object literal</span>
+</span><span class='line'><span class="nx">h</span> <span class="o">=</span> <span class="p">{</span><span class="nx">hello</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span> <span class="p">}</span> <span class="p">};</span>
+</span><span class='line'><span class="nx">h</span><span class="p">.</span><span class="nx">hello</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Class based inheritance purports many organizational benefits. Do prototype based languages share them? The paper looks at each benefit in turn and shows approaches to add these features into classless languages or even improve upon them.</p>
+<p><em>Behaviour Sharing:<br />
+</em>In class based programming languages code re-use is easy, you can inherit from a class and you&#8217;ll get access to that class&#8217;s methods and member variables.</p>
+<p>In prototype based languages a clone/copy method is written on a prototypical object which can define which data members and methods are copied to the new object. This idea can be refined to an object whose sole purpose is to supply behavior, a trait. This can be a parent object of the new object to provide its functionality. As this trait object is shared amongst all clones, any changes to it affect the clones, just as with the class and subclass of class based programming. Here&#8217;s an example on behavior sharing in a prototype based language (Io):</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+</pre></td><td class='code'><pre><code class='javascript'>&lt;span class='line'&gt;&lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;Object&lt;/span&gt; &lt;span class="nx"&gt;clone&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;m&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;in A\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;m&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;clone&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="nx"&gt;m&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>This will print:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>in A
+</span><span class='line'>in B
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p><em>Representation Sharing:</em><br />
+In class based languages, subclassing gives the child class access to the member variables of the parent, its representation. In prototype based languages, a trait object provides only behavior, not data. This job is performed by a prototype instance of the object, one every other object will be cloned from. Its clone method will copy across its data slots (member variables) with any default values the programmer has provided. This is called a &#8220;Data Parent&#8221;.</p>
+<p>In Ruby:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">A</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span>
+</span><span class='line'>    <span class="vi">@member</span> <span class="o">=</span> <span class="s2">&quot;fred&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'> <span class="k">def</span> <span class="nf">method_a</span>
+</span><span class='line'>   <span class="nb">puts</span> <span class="s2">&quot;in A with </span><span class="si">#{</span><span class="vi">@member</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'> <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">B</span> <span class="o">&lt;</span> <span class="n">A</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">method_b</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="s2">&quot;in B with </span><span class="si">#{</span><span class="vi">@member</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">A</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">method_a</span>
+</span><span class='line'><span class="n">B</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">method_b</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#in A with fred</span>
+</span><span class='line'><span class="c1">#in B with fred</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>In IO:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Food</span> <span class="o">:=</span> <span class="nb">Object</span> <span class="nx">clone</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pizza</span> <span class="o">:=</span> <span class="nx">Food</span> <span class="nx">clone</span>
+</span><span class='line'><span class="nx">pizza</span> <span class="nx">name</span> <span class="o">:=</span> <span class="s2">&quot;Meat Feast&quot;</span>
+</span><span class='line'><span class="nx">pizza</span> <span class="nx">price</span> <span class="o">:=</span> <span class="mi">10</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pasta</span> <span class="o">:=</span> <span class="nx">pizza</span> <span class="nx">clone</span>
+</span><span class='line'><span class="nx">pasta</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Macaroni Cheese&quot;</span>
+</span><span class='line'><span class="nx">pasta</span> <span class="nx">price</span> <span class="o">=</span> <span class="mi">5</span>
+</span></code></pre></td></tr></table></div></figure></div><br />
+<em>Dynamic Behaviour Changes &#8211; Changing an instance&#8217;s class and dynamic inheritance:<br />
+</em><em>Tom:</em> This was a section of particular interest, mainly because I think it&#8217;s not quite as skewed as they portray it. The idea is that because in a prototype based model the reference to the parent object (traits, data) is simply a reference it can be changed very easily depending on the state the object is in. This provides new functionality as the object goes through its life. In a class based model, changing an instance&#8217;s class is difficult at best and not a good idea, however the idea of changing behavior based on state is still a useful concept. The authors however seem to miss the concept of composition and delegation, it&#8217;s next to trivial to change the behavior of an object simply by changing the object that is providing a function, just take a look at the Strategy Pattern for an example.<br />
+<em>Michael:</em> This paper is from 1991, the <a href="http://en.wikipedia.org/wiki/Design_Patterns">Gang of Four book on Design Patterns</a> from 1994, so I guess you&#8217;re blaming the authors for not knowing about something that hasn&#8217;t been published when they wrote their paper.<br />
+<em>Tom:</em> Fair point! I wonder when the concept of delegation was first coined?<br />
+<em>Michael:</em> According to <a href="http://en.wikipedia.org/wiki/Delegation_(programming)">Wikipedia</a> in a paper from 1986, &#8220;Using Prototypical Objects to Implement Shared Behavior in Object-Oriented Systems&#8221;.</p>
+<p>In ECMAScript:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">circle</span><span class="p">(){}</span>
+</span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span>
+</span><span class='line'><span class="err">#</span><span class="nx">circle</span>
+</span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">ellipse</span><span class="p">(){}</span>
+</span><span class='line'><span class="nx">circle</span><span class="p">.</span><span class="nx">prototype</span>
+</span><span class='line'><span class="err">#</span><span class="nx">ellipse</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Changing the prototype can entirely change the behavior of an object.</p>
+<p><em>Naming and Categorising:<br />
+</em>This feature is vital in any nontrivial system, without being able to find code to serve its purpose the programmer would be constantly rewriting the same code over and over. Class based languages tend to provide a globally accessible name for a set of functions. They also tend to provide namespaces to prevent naming collisions or categorisation. Prototype based languages need to be able to access the prototype anywhere in the system to be cloned, but as they are just regular objects, they have no internal names. The authors of the paper propose that namespace objects can be used to fill this need. Essentially a globally accessible hash map, which can contain nested namespace objects to provide categorisation. This later emerged as a fairly common pattern in ECMAScript.</p>
+<p>In Ruby:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">A</span><span class="p">;</span> <span class="k">end</span>
+</span><span class='line'><span class="n">A</span>
+</span><span class='line'><span class="c1">#A</span>
+</span></code></pre></td></tr></table></div></figure></div><br />
+A is a globally defined constant which points to an Object.</p>
+<p>In ECMAScript:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">TopLevel</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">TopLevel</span> <span class="o">||</span> <span class="p">{}</span>
+</span><span class='line'><span class="nx">TopLevel</span><span class="p">.</span><span class="nx">SecondLevel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">member</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">function</span> <span class="nx">memberMethod</span><span class="p">(){</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Note that TopLevel is simply an object literal.</p>
+<p>The naming of these type of systems is highly dependent on the structure of the system, this type of naming is called Extensional naming. Intensional naming is the term given to systems where the name of classes is defined by the programmer and not necessarily related to the structure of the system. The authors claim that Extensional naming has a few key advantages:</p>
+<p>1) It&#8217;s free with a classless language; no other constructs are required for this behaviour to work.<br />
+2) The names are also expressions, and as this is code it can have additional interpretations.<br />
+3) Intensional naming can become inconsistent quite easily.</p>
+<p>Tom&#8217;s not convinced any of these reasons are actually advantages: 1) just because a system comes with a feature doesn&#8217;t mean you should use it if there is a better alternative available &#8211; prototype based models don&#8217;t seem to have much of an alternative. 2) because it is code and not a simple lookup this is more complicated and has more potential for error. 3) this is probably valid. Changing a class name does require it to be updated everywhere in the system, but with refactoring tools this is mitigated.</p>
+<p><strong>Conclusion:<br />
+</strong>This was a pretty interesting paper. Personally I&#8217;ve always been drawn to Io, but never got past the &#8220;playing around&#8221; stage with it. Checking out Self also is on my todo list. I think there&#8217;s a certain elegance to prototype based object orientation and I&#8217;d like to research it a bit more.</p>
+<p><strong>Further reading:</strong><br />
+<ul><li><a href="http://en.wikipedia.org/wiki/Self_(programming_language)" title="Self">Self</a></li><li><a href="http://en.wikipedia.org/wiki/Javascript" title="Javascript">Javascript</a></li><li><a href="http://en.wikipedia.org/wiki/Io_(programming_language)" title="Io">Io</a></li><li><a href="http://en.wikipedia.org/wiki/Prototype_based" title="Protoype based object orientation">Protoype based object orientation</a></li><li><a href="http://en.wikipedia.org/wiki/Trait_(computer_programming)" title="Trait">Trait</a></li></ul></p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Kohl</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-11T00:00:00+07:00" pubdate data-updated="true">Jul 11<sup>th</sup>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/papers/'>papers</a>, <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/versus/'>versus</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://citizen428.github.io/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/" data-via="citizen428" data-counturl="http://citizen428.github.io/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/07/10/information-overload-2011-07-10/" title="Previous Post: Information Overload 2011-07-10">&laquo; Information Overload 2011-07-10</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/07/17/information-overload-2011-07-17/" title="Next Post: Information Overload 2011-07-17">Information Overload 2011-07-17 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I'm Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/12/information-overload-2015-07-12/">Information Overload 2015-07-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://citizen428.github.io/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/';
+        var disqus_url = 'http://citizen428.github.io/blog/2011/07/11/tom-and-michael-vs-prototypical-inheritance/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

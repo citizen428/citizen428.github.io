@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ubuntu | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[linuxConverts++]]></title>
+    <link href="http://citizen428.github.io/blog/2005/11/23/linuxconverts/"/>
+    <updated>2005-11-23T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/11/23/linuxconverts</id>
+    <content type="html"><![CDATA[<p>While my girlfriend was visiting her sister in Rotterdam, I finally set up her notebook to dual boot Windows XP and Ubuntu Linux. Before you think bad of me: I didn&rsquo;t sneakily do this without her knowing, but instead because she once mentioned that she&rsquo;d like to try out another OS.</p>
+
+<p>Now you may wonder why I chose Ubuntu over Gentoo, but I&rsquo;m afraid the answer is rather pragmatic and uninspired: I had a magazine CD of the current release, so I dind&rsquo;t have to download an ISO. Also installation is fast and painless and there are lots of nice HOWTOs. Besides that I&rsquo;ve aleady used Ubuntu to convert one of my non-techy friends to Linux and it has worked pretty good. To sum it up: I think Ubuntu is a decent distro, but I maybe wouldn&rsquo;t use it on one of my own boxes.</p>
+
+<p>Back to the original topic: I&rsquo;m really curious to see how well my girlfriend will get along with her new operating system&hellip; So far it seems she&rsquo;ll have a smooth transition. There are free alternatives for all the programs she uses on a regular basis and I found a nice explanation of how to &ldquo;share Firefox and Thunderbird profiles on a dual boot system&rdquo;:<a href="http://www.plaintivemewling.com/?p=20">http://www.plaintivemewling.com/?p=20</a> (the link doesn&rsquo;t contain anything surprising, but it&rsquo;s a nice reference anyway). Additionally I&rsquo;m really curious to see how she will like &ldquo;GNOME&rdquo;:<a href="http://www.gnome.org/">http://www.gnome.org/</a> and if she finds it as user-friendly as I do.</p>
+
+<p>Boomtime, The Aftermath 35, 3171 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

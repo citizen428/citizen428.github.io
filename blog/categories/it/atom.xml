@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: it | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/it/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Go! Away! Please!]]></title>
+    <link href="http://citizen428.github.io/blog/2006/05/02/go-away-please/"/>
+    <updated>2006-05-02T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/05/02/go-away-please</id>
+    <content type="html"><![CDATA[<p>Today when my girlfriend tried to log in to one of her favourite sites to download some music she paid for, her login credentials didn&rsquo;t work. When she wrote an email to the support team (after automatic retrieval of the login credentials and checking them for correctness of course), she received the following answer:</p>
+
+<p><i>
+Hey Silvia, many systems cannot recognize symbols in passwords. Â We have updated your profile and removed the symbol from your password Â so you should be able to successfully login to your account now.  Your new password is [snipped]
+[insert company name] Support
+</i></p>
+
+<p>What do we learn from this?</p>
+
+<ol>
+<li>They want to make us believe &ldquo;+&rdquo; is a symbol many systems can&rsquo;t recognize. Sure. Besides thanks for assuming we&rsquo;re too stupid to try out special characters (aka &ldquo;symbols&rdquo;) in the user name field after several failed log in attempts.</li>
+<li>They store their customer&rsquo;s passwords in cleartext.</li>
+<li>They change user profiles without permission to avoid looking for the real problem.</li>
+<li>They even try to make it look like a good solution (&ldquo;you should be able to succesfully login to your account now&rdquo;).</li>
+<li>They suck like most tech supports do.</li>
+</ol>
+
+
+<p>When I read replies like that, I really wonder how people would treat a mechanic who says &ldquo;I don&rsquo;t know what the problem with your engine is, but many streets don&rsquo;t recognize your tires so I&rsquo;ve changed them. Besides that I changed your ignition lock and made a backup key for myself. All cool, eh?&rdquo;.</p>
+
+<p>My only hope: those guys obviously are dull boys, and dull boys don&rsquo;t get chicks. If we&rsquo;re just a little lucky, the gene pool will sort itself out.</p>
+
+<p>P.S. Yeah, I might be a little p*ssed after spending 13 hours in the office.</p>
+
+<p>Boomtime, Discord 49, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why working in Business IT sucks]]></title>
+    <link href="http://citizen428.github.io/blog/2006/02/07/why-working-in-business-it-sucks/"/>
+    <updated>2006-02-07T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/02/07/why-working-in-business-it-sucks</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>You&rsquo;ll turn into a bitter cynic. This in fact is probably the best thing about your job, which really  should make you think&hellip;</p></li>
+<li><p>Only wackos and smartasses work in this field. Depending on which group you belong to, this might even be fun. More often though you&rsquo;re screwed.</p></li>
+<li><p>If your boss screws up, it will probably get communicated to the customer as your fault. Given that you took the job in the first place, that&rsquo;s even true.</p></li>
+<li><p>Every job where people tell you things along the line of &ldquo;An average day has 24 hours and if that isn&rsquo;t enough, you&rsquo;ll have to make use of the nights too!&rdquo; and find that actually funny, is a good reason to spend the rest of your life in a zen buddhist monastery, a mental home or both.</p></li>
+<li><p>The best thing about your average work day is that there&rsquo;s always at least one person in the office who is worse off than you (see #1). However, he&rsquo;s most likely also the one poor guy who&rsquo;s neither a wacko nor a smartass (see #2), so you have to control your bitter cynicism and feel sorry for him.</p></li>
+<li><p>The coffee is cold or bad and the coke is either warm or a diet coke. They&rsquo;ve thought about everything!</p></li>
+<li><p>After a certain amount of time you won&rsquo;t be able to remember if the sentences &ldquo;Resistance is futile. Your life as it has been is over. From this time forward, you will service us.&rdquo; have been said by your boss or Locutus of Borg. What&rsquo;s even worse is that it doesn&rsquo;t really make a difference anyway&hellip;</p></li>
+</ol>
+
+
+<p>P.S. I&rsquo;m also planning on writing up some reasons for &ldquo;Why working in Business IT rocks&rdquo;. Yeah, right.</p>
+
+<p>Pungenday, Chaos 38, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

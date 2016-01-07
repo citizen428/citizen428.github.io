@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fixing Grub on a LUKS-encrypted Disk]]></title>
+    <link href="http://citizen428.github.io/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk/"/>
+    <updated>2011-10-17T15:41:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2011/10/17/fixing-grub-on-a-luks-encrypted-disk</id>
+    <content type="html"><![CDATA[<p>When I rebooted my new work notebook (a very nice x201s, with a dual-core i7, 8GB RAM and an SSD by the way), it seemed that for whatever reason there was no Grub installed. Strange, but not the only problem I had with the alternate Ubuntu installer that I used for setting up <a href="http://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS-encrypted</a> root and swap partitions. Since this turned out to be more involved than I originally thought, I decided to document what I did to maybe save others the trouble. BTW: You&rsquo;ll need a Linux Live-CD for this, I recommend the excellent Debian-based <a href="http://grml.org/">Grml</a>.</p>
+
+<p>First we need to open the LUKS partition, which can be done with <a href="http://linux.die.net/man/8/cryptsetup">cryptsetup</a>.</p>
+
+<p><figure class='code'><figcaption><span>Step 1: Unlock LUKS </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cryptsetup luksOpen /dev/&lt;device&gt; &lt;name&gt;&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;you&amp;rsquo;ll be asked <span class="k">for </span>your password&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>With that out of the way, you&rsquo;ll have to mount your LVM volumes. This took me a bit because my VG wasn&rsquo;t active, but thanks to an excellent blog post I found (see sources) this problem was solved quickly.</p>
+
+<p><figure class='code'><figcaption><span>Step 2: Mounting LVM </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;do a lvm disk scan&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>lvmdiskscan&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;activate the volume group&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>vgchange -ay&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;make sure the VG is active now&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>lvscan&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;mount the actual volume&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>mount /dev/&lt;volume_group_name&gt;/&lt;volume&gt; /mnt/external
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>I then needed to mount the unencrypted <code>/boot</code> partition as well as some special filesystems (with bind mounts) at the appropriate mount points.</p>
+
+<p><figure class='code'><figcaption><span>Step 3: Preparing for the chroot </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;mount the boot partion&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>mount /dev/&lt;device&gt; /mnt/external/boot&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;bind mount some things we need in the chroot env&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;<span class="nv">$ </span>mount <span class="p">&amp;</span>ndash<span class="p">;</span><span class="nb">bind</span> /dev /mnt/external/dev
+</span><span class='line'><span class="nv">$ </span>mount <span class="p">&amp;</span>ndash<span class="p">;</span><span class="nb">bind</span> /proc /mnt/external/proc
+</span><span class='line'><span class="nv">$ </span>mount <span class="p">&amp;</span>ndash<span class="p">;</span><span class="nb">bind</span> /sys /mnt/external/sys
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>With everything set up, all that&rsquo;s left to do is <code>chroot</code>ing into the system and fixing Grub.</p>
+
+<p><figure class='code'><figcaption><span>Step 4: chrooting and fixing Grub </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>chroot /mnt/external
+</span><span class='line'>chroot<span class="nv">$ </span> grub-setup <span class="c"># grub-install, whatever you need</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Sources:</p>
+
+<ul>
+<li><a href="http://www.shallowsky.com/blog/linux/luks-encryption.html">Creating and mounting a LUKS encrypted disk</a></li>
+<li><a href="http://pissedoffadmins.com/?p=481">mount: unknown filesystem type ‘LVM2_member’</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Finally...]]></title>
+    <link href="http://citizen428.github.io/blog/2006/11/05/finally/"/>
+    <updated>2006-11-05T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/11/05/finally</id>
+    <content type="html"><![CDATA[<p>&hellip;some random stuff I wanted to blog about for quite some time already:</p>
+
+<ul>
+<li>*Pearl Jam concert (September 25th@Wiener Stadthalle):* I have to admit that I&#8217;m not the biggest &#8220;PJ&#8221;:http://pearljam.com/ fan, but since Silvia was nice enough to invite me (thanks by the way!), I went to see one of the best concerts in a long time! The band and the atmosphere was great and I was quite surprised to see the traditionally rather lame crowd in Vienna so excited! (<a href="http://www.flickr.com/photos/citizen428/sets/72157594302284739">pics@flickr</a>)</li>
+
+<li>*Internet Explorer on Linux:* As we all know, IE sucks donkey balls. But some sites who don&#8217;t care about standards - and whose developers definitely should be first against the wall when the revolution comes - only work with Microsoft&#8217;s browser. But don&#8217;t despair, help is available in form of &#8220;IEs4Linux&#8221;:http://www.tatanka.com.br/ies4linux/page/Main_Page, a shellscript which downloads IE and automatically configures Wine for it. Flash 9 is also included and if you really insist on it, you can run 3 different versions of IE at the same time (5, 5.5 and 6), which is pretty handy for web developers. I have IE6 installed on my Kubuntu system for quite a while now, and in the rare cases I really need it, it works like a charm.</li>
+
+<li>*Pokerstars client on Linux:* Most online Poker sites don&#8217;t seem to be interested in Linux users, since the clients they offer are mostly only available for Windows. Some of them at least offer Java clients, but with my general dislike for most things Java and my strong preference of &#8220;Pokerstars&#8221;:http://www.pokerstars.com/ over other Poker sites, I gave the client a shot under Wine and was really pleased to find out that it just works (tm). Of course it would be much nicer to have a native client, but for the time being I&#8217;m happy enough with this workaround.</li>
+
+<li>*UEFA cup Pasching vs. Livorno@Pasching:* Went with some other Sportclub fans to see the UEFA cup match Pasching vs. Livorno in Pasching. It was a great day, and I still laugh my ass off when I think about the policemen and -women who found our little group of around 25 people rooting for the away team  (as Austrian you were only able to buy tickets for the home sectors) so frightening, that they not only surrounded us for the whole match, but even put on their riot gear. And there I was, thinking every policeman in Austria already knows that we are only dangerous to ourselves. ;)</li>
+
+<li>*man pages:* Read them! You know you should! Even if you believe you know an application. E.g.: &#8220;man sshd&#8221;, section &#8220;AUTHORIZED_KEYS FILE FORMAT&#8221;. Or am I really the only person who didn&#8217;t know about all the useful options like &#8220;from&#8221;, &#8220;command&#8221;, &#8220;no-port-forwarding&#8221;, &#8220;no-pty&#8221; etc.?
+
+<li>*Mac stuff:* Here&#8217;s some cool widgets and plugins which make the OS X experience even nicer: &#8220;iTunesShut&#8221;:http://homepage.mac.com/WebObjects/FileSharing.woa/wa/iTunesShut.zip.zip?a=downloadFile&user=gugulino1&path=.Public/iTunesShut.zip, &#8220;VI Input Manager&#8221;:http://www.corsofamily.net/jcorso/vi/, &#8220;Application Update Widget&#8221;:http://www.dashboardwidgets.com/showcase/details.php?wid=1510 (thanks Moose!), &#8220;AppleScript Shell&#8221;:http://hayne.net/MacDev/Ash/, &#8220;Doug&#8217;s AppleScripts for iTunes&#8221;:http://www.dougscripts.com/itunes/index.php
+</ul>
+
+
+<p><br />
+Last but not least here are some funny/interesting things I found over the past few weeks:</p>
+
+<ul>
+<li>&#8220;Programming Language Inventor or Serial Killer&#8221;:http://www.malevole.com/mv/misc/killerquiz (via <a href="http://metalab.at/wiki/Hauptseite">metalab-members</a>)</li>
+
+<li>*Robot chicken:* Great stop motion animation. Examples: &#8220;1&#8221;:http://video.google.com/videoplay?docid=-2660802447916665129&q=robot+chicken, &#8220;2&#8221;:http://video.google.com/videoplay?docid=4651757054772769361&q=robot+chicken, &#8220;3&#8221;:http://video.google.com/videoplay?docid=5395083952125133994&q=robot+chicken (thanks <a href="http://gnulords.org/~colo/serendipity/">colo</a>!)</li>
+
+<li>&#8220;ELP Laser Turntable&#8221;:http://elpj.com/: &#8220;bonki&#8221;:http://bonki.net/blog/ posted this a while back, but I never came around to post it here.</li>
+
+<li>&#8220;Bruce Schreier facts&#8221;:http://geekz.co.uk/schneierfacts/fact/128: &#8216;cause Chuck Norris isn&#8217;t as cool as Bruce! And as we all know: Bruce Schneier tapdances in Morse Code. (via <a href="http://berq.net/">berq</a>)</li>
+
+<li>&#8220;China Makes a Sexy, Slutty Robot&#8221;:http://www.gizmodo.com/gadgets/robots/china-makes-a-sexy-slutty-robot-210802.php: What can I say&#8230; (thanks <a href="http://www.leyrer.priv.at/martin/">m3</a>)</li>
+</ul>
+
+
+<p>Prickle-Prickle, The Aftermath 17, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Breaking news: Update to citizen428.blog(), situation unclear!]]></title>
+    <link href="http://citizen428.github.io/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear/"/>
+    <updated>2006-07-01T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/07/01/breaking-news-update-to-citizen428-blog-situation-unclear</id>
+    <content type="html"><![CDATA[<p>June was pretty busy, so I only managed to blog once. So here&rsquo;s a little update of what happened during the past few weeks:</p>
+
+<p><em>Work:</em>
+Still the same old bullsh*t, except that I spent 7 days at a customer&rsquo;s site in Upper Austria, where we set up several virtual &ldquo;Heartbeat&rdquo;:<a href="http://linux-ha.org/">http://linux-ha.org/</a> clusters in &ldquo;VMware Server&rdquo;:<a href="http://www.vmware.com/products/server/.">http://www.vmware.com/products/server/.</a> Summary: the scenery and people in Upper Austria are pretty nice, VMware is one of the coolest things since the invention of sliced bread and Heartbeat really can be a bitch to set up correctly (no surprises here I guess).</p>
+
+<p><em>Capitalism:</em>
+Got myself a <a href="http://www.viewsonic.com/products/desktopdisplays/lcddisplays/valueseries/va1912wb/">nice widescreen 19&#8221; LCD</a>  for my beloved Mac Mini. I also decided that it&rsquo;s about time to get a new digital camera, since my old one broke ages ago. I finally settled on an &ldquo;Olympus SP-700&rdquo;:<a href="http://www.dpreview.com/news/0510/05100401oly_sp700.asp,">http://www.dpreview.com/news/0510/05100401oly_sp700.asp,</a> which Amazon sold for a really good price. The camera arrived last Thursday, and from what I&rsquo;ve seen so far I&rsquo;m really impressed with my new gadget. Today I once again went on a DVD buying spree and bought &ldquo;Ken Park&rdquo;:<a href="http://imdb.com/title/tt0209077/,">http://imdb.com/title/tt0209077/,</a> &ldquo;Romper Stomper&rdquo;:<a href="http://imdb.com/title/tt0105275/,">http://imdb.com/title/tt0105275/,</a> &ldquo;Bad Taste&rdquo;:<a href="http://imdb.com/title/tt0092610/">http://imdb.com/title/tt0092610/</a> and the first season of &ldquo;The Sopranos&rdquo;:<a href="http://imdb.com/title/tt0141842/.">http://imdb.com/title/tt0141842/.</a> Next on my list are an external Mac Mini HD like the &ldquo;miniStack&rdquo;:<a href="http://www.newertech.com/ministack">http://www.newertech.com/ministack</a> and a new notebook. Unfortunately neither the MacBook nor the MacBook Pro does really cut it for me (no 12&#8221; version, too heavy, too hot and far too many issues reported by early adopters), so I will probably settle for an &ldquo;X60s&rdquo;:<a href="http://www5.pc.ibm.com/de/products.nsf/$wwwPartNumLookup/_UK15LGE?OpenDocument">http://www5.pc.ibm.com/de/products.nsf/$wwwPartNumLookup/_UK15LGE?OpenDocument</a> running Gentoo. I&rsquo;d really would have loved to buy a portable Mac, but I&rsquo;m not enough of an Apple fanboy to buy a product which doesn&rsquo;t really fit my needs&hellip;</p>
+
+<p><em>Books:</em>
+If you want to read a really good book by a Cuban author, you definitely should try &ldquo;The Insatiable Spiderman&rdquo;:<a href="http://www.amazon.com/gp/product/0786716657/ref=sr_11_1/103-1901030-1131048?ie=UTF8">http://www.amazon.com/gp/product/0786716657/ref=sr_11_1/103-1901030-1131048?ie=UTF8</a> by Pedro Juan GutiÃ©rrez. Next on my list is &ldquo;Playing the Moldovans at Tennis &rdquo;:<a href="http://www.amazon.com/gp/product/0753152142/qid=1151763922/sr=1-1/ref=sr_1_1/103-1901030-1131048?s=books&amp;v=glance&amp;n=283155,">http://www.amazon.com/gp/product/0753152142/qid=1151763922/sr=1-1/ref=sr_1_1/103-1901030-1131048?s=books&amp;v=glance&amp;n=283155,</a> which I&rsquo;ll start reading tomorrow. I also got myself a copy of &ldquo;Mac OS X Tiger: Missing Manual&rdquo;:<a href="http://www.amazon.com/gp/product/0596009410/qid=1151763999/sr=2-1/ref=pd_bbs_b_2_1/103-1901030-1131048?s=books&amp;v=glance&amp;n=283155,">http://www.amazon.com/gp/product/0596009410/qid=1151763999/sr=2-1/ref=pd_bbs_b_2_1/103-1901030-1131048?s=books&amp;v=glance&amp;n=283155,</a> which has shown me some neat tricks although it mainly targets a non-techy audience.</p>
+
+<p><em>Geek stuff:</em>
+I&rsquo;ve always been a great fan of tiling window managers like &ldquo;Ion3&rdquo;:<a href="http://www.modeemi.fi/~tuomov/ion/.">http://www.modeemi.fi/~tuomov/ion/.</a> However, lately I fell in love with &ldquo;wmii&rdquo;:<a href="http://wmii.de/,">http://wmii.de/,</a> which I think is an absolutely amazing WM. I&rsquo;m using version 3, which features dynamic window management as known from &ldquo;acme&rdquo;:<a href="http://en.wikipedia.org/wiki/Acme_%28text_editor%29">http://en.wikipedia.org/wiki/Acme_%28text_editor%29</a> or &ldquo;Oberon&rdquo;:<a href="http://en.wikipedia.org/wiki/Oberon_operating_system.">http://en.wikipedia.org/wiki/Oberon_operating_system.</a> Reading the &ldquo;guide&rdquo;:<a href="http://wmii.de/index.php?page=guide">http://wmii.de/index.php?page=guide</a> doesn&rsquo;t take longer than about 15 minutes, after which I was already able to conviniently work with wmii. So far the experience is really great, and I haven&rsquo;t even started using the scripting capapilites &ldquo;9P&rdquo;:<a href="http://en.wikipedia.org/wiki/9P">http://en.wikipedia.org/wiki/9P</a> offers&hellip; Additionally using wmii once again made me play around with &ldquo;Plan 9&rdquo;:<a href="http://cm.bell-labs.com/plan9/,">http://cm.bell-labs.com/plan9/,</a> an operating system I&rsquo;ve been strangely interested in ever since I first heard about it around 6 years ago. Note to self: spend some time with the &ldquo;9fans&rdquo;:<a href="https://lists.cse.psu.edu/mailman/listinfo/9fans">https://lists.cse.psu.edu/mailman/listinfo/9fans</a> at &ldquo;23C3&rdquo;:<a href="http://events.ccc.de/congress/2006/!">http://events.ccc.de/congress/2006/!</a></p>
+
+<p><em>Gentoo:</em>
+Another month spent without doing anything Gentoo related. To be completely honest, my Gentoo box has only been started twice since I moved into my new apartment in early March. Given that I&rsquo;ll be on holidays for around 10 days in July, you once again shouldn&rsquo;t expect too much activity from me&hellip; :( I&rsquo;m really thinking about leaving the project, as I&rsquo;m currently not doing anything which warrants my developer status. Probably the only alternative to that would be dropping all the ebuilds I&rsquo;m currently working on, and to focus solely on &ldquo;Gentoo-alt&rdquo;:<a href="http://www.gentoo.org/proj/en/gentoo-alt/,">http://www.gentoo.org/proj/en/gentoo-alt/,</a> maintaining the Gentoo/FreeBSD and Gentoo/NetBSD docs, while also working on &ldquo;Gentoo for Mac OS X&rdquo;:<a href="http://www.gentoo.org/proj/en/gentoo-alt/macos/index.xml">http://www.gentoo.org/proj/en/gentoo-alt/macos/index.xml</a> (although Fink works really well for me). Input wanted!</p>
+
+<p><em>Random:</em>
+September 19th is International Talk Like A Pirate Day. Yarr!</p>
+
+<p><a href="http://www.talklikeapirate.com/"><img src="http://www.talklikeapirate.com/partykit/tlapdbanner2.gif" align="center" border="1"></a></p>
+
+<p>Boomtime, Confusion 36, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First day in my new job]]></title>
+    <link href="http://citizen428.github.io/blog/2006/01/05/first-day-in-my-new-job/"/>
+    <updated>2006-01-05T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/01/05/first-day-in-my-new-job</id>
+    <content type="html"><![CDATA[<p>/me is now working as a &ldquo;Junior System Engineer&rdquo;, whatever that is supposed to mean&hellip; ;)</p>
+
+<p>After succesfully avoiding anything even remotely resembling regular payed work for some years now, this feels pretty strange, but at least my job is all about open source business solutions (clustering, heartbeat, Nagios setups, etc.), the company desktops run Linux (Debian) and code I write is licensed under the GPL.</p>
+
+<p>Setting Orange, Chaos 5, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[linuxConverts++]]></title>
+    <link href="http://citizen428.github.io/blog/2005/11/23/linuxconverts/"/>
+    <updated>2005-11-23T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/11/23/linuxconverts</id>
+    <content type="html"><![CDATA[<p>While my girlfriend was visiting her sister in Rotterdam, I finally set up her notebook to dual boot Windows XP and Ubuntu Linux. Before you think bad of me: I didn&rsquo;t sneakily do this without her knowing, but instead because she once mentioned that she&rsquo;d like to try out another OS.</p>
+
+<p>Now you may wonder why I chose Ubuntu over Gentoo, but I&rsquo;m afraid the answer is rather pragmatic and uninspired: I had a magazine CD of the current release, so I dind&rsquo;t have to download an ISO. Also installation is fast and painless and there are lots of nice HOWTOs. Besides that I&rsquo;ve aleady used Ubuntu to convert one of my non-techy friends to Linux and it has worked pretty good. To sum it up: I think Ubuntu is a decent distro, but I maybe wouldn&rsquo;t use it on one of my own boxes.</p>
+
+<p>Back to the original topic: I&rsquo;m really curious to see how well my girlfriend will get along with her new operating system&hellip; So far it seems she&rsquo;ll have a smooth transition. There are free alternatives for all the programs she uses on a regular basis and I found a nice explanation of how to &ldquo;share Firefox and Thunderbird profiles on a dual boot system&rdquo;:<a href="http://www.plaintivemewling.com/?p=20">http://www.plaintivemewling.com/?p=20</a> (the link doesn&rsquo;t contain anything surprising, but it&rsquo;s a nice reference anyway). Additionally I&rsquo;m really curious to see how she will like &ldquo;GNOME&rdquo;:<a href="http://www.gnome.org/">http://www.gnome.org/</a> and if she finds it as user-friendly as I do.</p>
+
+<p>Boomtime, The Aftermath 35, 3171 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

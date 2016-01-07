@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: osx | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/osx/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A little Pow helper]]></title>
+    <link href="http://citizen428.github.io/blog/2011/11/22/a-little-pow-helper/"/>
+    <updated>2011-11-22T21:08:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2011/11/22/a-little-pow-helper</id>
+    <content type="html"><![CDATA[<p>If you are a Ruby developer on MacOS X, you probably love <a href="http://pow.cx">Pow</a> as much as I do. While skimming the <a href="http://pow.cx/manual.html">fine manual</a> today, I noticed <a href="http://pow.cx/manual.html#section_3.2">section 3.2</a>, &ldquo;Reading the Current Configuration&rdquo;, which explains that you can query Pow&rsquo;s config and status via simple HTTP requests:</p>
+
+<pre><code class="bash Query Pow's status http://pow.cx/manual.html#section_3.2 Pow manual">curl -H host:pow localhost/status.json
+</code></pre>
+
+<p>Since I know I&rsquo;d probably forget that sooner than later, I immediately wrapped it up in a small script, which I called <code>pow-show</code> and put in <code>~/bin</code>:</p>
+
+<p>&#8220;` ruby ~/bin/pow-show</p>
+
+<h1>!/usr/bin/env ruby</h1>
+
+<p>require &lsquo;json&rsquo;</p>
+
+<p>unless %w(status config).include?(ARGV[0])
+  puts &ldquo;Usage: #{File.basename($0)} status|config&rdquo;
+  exit 1
+end</p>
+
+<p>jj JSON.parse(<code>curl -s -H host:pow localhost/#{ARGV[0]}.json</code>)
+&#8220;`</p>
+
+<p>Here&rsquo;s some example output:</p>
+
+<pre><code class="javascript pow-show status">{
+  "pid": 802,
+  "version": "0.3.2",
+  "requestCount": 134
+}
+</code></pre>
+
+<pre><code class="javascript pow-show config">{
+  "bin": "/Users/name/Library/Application Support/Pow/Versions/0.3.2/bin/pow",
+  "dstPort": 80,
+  "httpPort": 20559,
+  "dnsPort": 20560,
+  "timeout": 900,
+  "workers": 2,
+  "domains": [
+    "dev"
+  ],
+  "extDomains": [
+
+  ],
+  "hostRoot": "/Users/name/Library/Application Support/Pow/Hosts",
+  "logRoot": "/Users/name/Library/Logs/Pow",
+  "rvmPath": "/Users/name/.rvm/scripts/rvm"
+}
+</code></pre>
+
+<p>Maybe that&rsquo;s useful for someone else too.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fixing MacPorts on Snow Leopard]]></title>
+    <link href="http://citizen428.github.io/blog/2009/10/19/fixing-macports-on-snow-leopard/"/>
+    <updated>2009-10-19T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/10/19/fixing-macports-on-snow-leopard</id>
+    <content type="html"><![CDATA[<pre><code>&lt;p&gt;After upgrading to Snow Leopard I had quite a bit of trouble with my &lt;a href="http://www.macports.org/"&gt;MacPorts&lt;/a&gt; installation, since most builds just failed with configure errors. After the obvious first steps of installing a newer version for SL and making sure I have the most recent XCode, I was a bit stumped until I finally found this site:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://trac.macports.org/wiki/Migration"&gt;Migrating a MacPorts install to a new major OS version or CPU architecture&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After finding this guide &amp;#8211; which btw really solved my problems &amp;#8211; I felt a bit stupid, but since I didn&amp;#8217;t have to do anything after the Tiger-&gt;Leopard upgrade, I really didn&amp;#8217;t expect this.&lt;/p&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Easy setup for Clojure on Mac OS X Leopard]]></title>
+    <link href="http://citizen428.github.io/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
+    <updated>2009-08-24T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
+    <content type="html"><![CDATA[<p>&ldquo;Clojure&rdquo;:<a href="http://clojure.org/">http://clojure.org/</a> definitely is one of the hottest new programming languages around and just recently hit a &ldquo;very important milestone&rdquo;:<a href="http://clojure.blogspot.com/2009/05/clojure-10.html.">http://clojure.blogspot.com/2009/05/clojure-10.html.</a> Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand &ldquo;one of those&rdquo;:<a href="http://github.com/carlism/Clojure-MacOSX/tree">http://github.com/carlism/Clojure-MacOSX/tree</a> into &ldquo;ClojureX&rdquo;:<a href="http://github.com/citizen428/ClojureX/tree/master,">http://github.com/citizen428/ClojureX/tree/master,</a> which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
+
+<p>ClojureX can</p>
+
+<ul>
+<li> download and build the source code for Clojure, &#8220;clojure-contrib&#8221;:http://github.com/richhickey/clojure-contrib/tree/master and &#8220;JLine&#8221;:http://jline.sourceforge.net/ (a readline like library for Java)</li>
+
+<li> download editor support packages for TextMate and Emacs</li>
+
+<li> create a symlink for the Clojure startup script in /usr/local/bin</li>
+
+<li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
+
+<li> configure Emacs to use &#8220;clojure-mode&#8221;:http://github.com/jochu/clojure-mode/tree/master, &#8220;Slime&#8221;:http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
+
+<li> keep your Clojure installation up to date via a simple &#8220;git submodule update && ant&#8221;</li>
+</ul>
+
+
+<p>I hope this will come in handy for other people interested in trying out Clojure on Mac OS X, if you have any feedback please post it in the comment section.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Create your own (Ruby) API browser in 3 easy steps]]></title>
+    <link href="http://citizen428.github.io/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps/"/>
+    <updated>2009-05-17T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/05/17/create-your-own-ruby-api-browser-in-3-easy-steps</id>
+    <content type="html"><![CDATA[<ul>
+  <li><b>Step 1:</b> Download &#8220;Fluid&#8221;:http://fluidapp.com/, an awesome little application to create site specific browsers.</li>
+  <li><b>Step 2:</b> Find some online API documentation. For Ruby I recommend &#8220;railsapi.com&#8221;:railsapi.com or &#8220;RubyBrains&#8221;:http://rubybrains.com. </li>
+  <li><b>Step 3:</b> Create your app in Fluid:</li>
+
+<img src="http://citizen428.net/uploads/fluid.png" alt="Fluid" />
+</ul>
+
+
+<p>Here&rsquo;s an example screenshot of a site specific browser for RubyBrain.com:</p>
+
+<p><img src="http://citizen428.net/uploads/fluid_rubybrain.png" alt="Fluid RubyBrain" /></p>
+
+<p>Of course this still requires you to have a working internet connection, but you could always use a local version of the API docs when creating the app. On a related note you should also check out &ldquo;Goo&rdquo;:<a href="http://www.robinlu.com/blog/goo">http://www.robinlu.com/blog/goo</a> which is a nice alternative to gem server on OS X.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A TextMate command for the RubyLearning forums]]></title>
+    <link href="http://citizen428.github.io/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums/"/>
+    <updated>2009-05-10T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/05/10/a-textmate-command-for-the-rubylearning-forums</id>
+    <content type="html"><![CDATA[<p>As we all know posting code to &ldquo;Moodle&rdquo;:<a href="http://moodle.org/">http://moodle.org/</a> (the software that powers &ldquo;RubyLearning&rdquo;:<a href="http://rubylearning.org">http://rubylearning.org</a>) can be a bit cumbersome. I therefore created a TextMate command which will</p>
+
+<ul>
+<li> take the currently active file</li>
+<li> replace all occurrences of < with the HTML-entity</li>
+<li> wrap all of that in [code ruby] tags and</li>
+<li> copy it to the clipboard, ready to be pasted into the forums.</li>
+</ul>
+
+
+<p>Source:</p>
+
+<script src="http://gist.github.com/109576.js"></script>
+
+
+<p>Download:
+<a href="http://stuff.citizen428.net/RubyLearning.tmCommand.zip">RubyLearning.tmCommand</a></p>
+]]></content>
+  </entry>
+  
+</feed>

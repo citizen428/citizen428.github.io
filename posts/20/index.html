@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Synopsis:
+Create Your Own Programming Language by Marc-Andre Cournoyer is a guide on &#8211; surprise &#8211; creating your own programming language &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.github.io/posts/20">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/08/review-create-your-own-programming-language/">Review: Create Your Own Programming Language</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-08T00:00:00+07:00" pubdate data-updated="true">Nov 8<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>Synopsis:</strong><br />
+<a href="http://createyourproglang.com/">Create Your Own Programming Language</a> by Marc-Andre Cournoyer is a guide on &#8211; surprise &#8211; creating your own programming language, consisting of a 53 page <span class="caps">PDF</span>, exercises and solutions, a toy language written in Ruby and a more full-featured one hosted on the <span class="caps">JVM</span>. There&#8217;s also a 10 minute long screencast on extending the latter, as well as an <a href="http://createyourproglang.com/community/">online community</a>.</p>
+<p><strong>The author:</strong><br />
+Hailing from Montreal, Marc-Andre is no stranger, especially if you are a Rubyist. Some of his notable projects include the web server <a href="http://code.macournoyer.com/thin/">Thin</a>, the Ruby interpreter <a href="http://code.macournoyer.com/tinyrb/">tinyrb</a> and the web site <a href="RefactorMyCode.com">Refactor My Code</a>. He also co-founded a company and is now <span class="caps">CTO</span> of another one.</p>
+<p><strong>The book:</strong><br />
+Obviously 53 pages are not enough to teach you everything about writing your own production-ready programming language, but that&#8217;s also not what the author advertises. What you do get is a quite well-made little <span class="caps">PDF</span>, explaining all the important components &#8211; lexer, parser, interpreter, runtime model, compiler and virtual machine &#8211; of a toy language called &#8220;Awesome&#8221;, which is basically a subset of Ruby with Python-style indentation.</p>
+<p>After the introduction, all chapters follow the same basic structure. First a brief introduction of the topic at hand, including pointers to well established projects like <a href="http://flex.sourceforge.net/manual/">Flex</a>, <a href="http://www.complang.org/ragel/">Ragel</a>, <a href="http://www.gnu.org/software/bison/">Bison</a> or <a href="http://llvm.org/"><span class="caps">LLVM</span></a>. After that you&#8217;ll find some well-documented and easy to understand Ruby code, implementing what you just learned about. Chapters finish with small exercises, e.g. implementing the WhileNode in the interpreter or adding inheritance to the runtime. In the end there are some parting thoughts on topics like homoiconicity and self-hosting, as well as a resources section including pointers to events, forums, blogs and notable languages. If you are a language geek there&#8217;s probably not much new here, but it&#8217;s a nice addition. Last but not least you&#8217;ll find solutions to the exercises. Once you came this far you can dive into the <span class="caps">JVM</span> language and experiment with extending it.</p>
+<p><strong>Summary:</strong><br />
+Would I recommend this book? That depends on what you are looking for. If you want a detailed academic text, <a href="http://createyourproglang.com/">Create Your Own Programming language</a> is definitely not for you. Likewise if you already implemented your own language or have a good idea about what&#8217;s involved in doing so, there are also better books to spend your money on. If however you are looking for a fun quick intro to the topic, including easy to understand and well-document code, as well as the right terms to feed into your preferred search engine, this might just be what you are looking for, but you&#8217;ll have to decide if you are willing to spend US$40 on that, which I personally find a bit too steep.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/07/information-overload-2010-11-07/">Information Overload 2010-11-07</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-07T00:00:00+07:00" pubdate data-updated="true">Nov 7<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.mondaynote.com/2010/10/03/the-os-doesn%E2%80%99t-matter/">The OS Doesn&#8217;t Matter&#8230;</a><br>Interesting take on why OS wars don&#8217;t really matter anymore, since basically everything except for Windows has moved in a Unix direction or will do so in the near future. Quote: &#8220;This is today&#8217;s OS. User experience. Development tools.&#8221;</li>
+<li><a href="http://blogs.tribune.com.pk/story/2660/why-newspapers-make-you-stupid/">Why newspapers make you stupid</a><br>On media bias and why you will need more background information and context than newspapers generally provide.</li>
+<li><a href="http://blog.acidrayne.net/?p=25">TryClojure &#8211; A Call To Action</a><br><a href="http://tryclj.licenser.net/">TryClojure</a>&#8217;s author is asking for help in keeping the project alive and kicking. Check out the related <a href="http://groups.google.com/group/tryclojure">Google Group</a> if you may be interested in helping out.</li>
+<li><a href="http://www.npr.org/templates/story/story.php?storyId=131043062&amp;ps=cprs">The Fed&#8217;s $600 Billion Statement, Translated Into Plain English</a><br>The <a href="http://en.wikipedia.org/wiki/Federal_Reserve_System&#39;s">Fed</a> latest <a href="http://www.npr.org/templates/story/story.php?storyId=131043062&amp;ps=cprs">statement</a> in plain English. Created with this <a href="http://labs.slate.com/articles/plain-english/">awesome tool by Slate</a>, there should be more articles like this.</li>
+<li><a href="http://www.cnn.com/2010/WORLD/americas/11/04/canada.disguised.passenger/index.html">Man in disguise boards international flight</a><br>This week&#8217;s hilarious contribution to the aviation security circus: an Asian male boards an Air Canada flight in Hong Kong disguised as an elderly Caucasian and asks for refugee protection upon arriving in Vancouver.</li>
+<li><a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">What Is This Devops Thing, Anyway?</a><br>Now that the term &#8220;devops&#8221; is slowly becoming a bit more popular, it&#8217;s about time to find out what the hype is all about.</li>
+<li><a href="http://chronicle.com/article/The-New-War-Between-Science/65400/">The New War Between Science and Religion</a><br>Maybe even more dangerous in the long run than followers of &#8220;intelligent design&#8221;, the &#8220;accommodationists&#8221; are trying to fend off science by declaring certain aspects as off-limits to scientific scrutiny.</li>
+<li><a href="https://www.technologyreview.com/blog/mimssbits/25964/">Chatbot Wears Down Proponents of Anti-Science Nonsense</a><br>While I can partly understand the frustration that led to writing said bot, I don&#8217;t think that Twitter spamming people who obviously don&#8217;t care about rationale arguments is doing but worsen the divide between the religiously and the scientific minded.</li>
+<li><a href="http://scientopia.org/blogs/goodmath/2010/11/02/fractals-without-a-computer/">Fractals without a Computer!</a><br>This is clever and beautiful at the same time!</li>
+<li><a href="http://www.guardian.co.uk/artanddesign/2010/oct/10/graffiti-knitting">The graffiti knitting epidemic</a><br>This makes me want to learn handycraft, anyone in? ;-)</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/05/viennale-2010/">Viennale 2010</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-05T00:00:00+07:00" pubdate data-updated="true">Nov 5<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Another <a href="http://en.wikipedia.org/wiki/Vienna_International_Film_Festival">Viennale</a> has finished, time for a little recap of the five movies we saw this year:</p>
+<ul>
+	<li><a href="http://www.imdb.com/title/tt1637694/">Los labios</a> (Ivan Fund &amp; Santiago Loza)<br>
+This had potential, but didn&#8217;t really live up to it. Usually I&#8217;m all for mixing professional and amateur actors, but in this case it didn&#8217;t work for me. A documentary on this topic would probably haven been more interesting.</li>
+	<li><a href="http://www.imdb.com/title/tt1156173/">Vincere</a> (Marco Bellocchio)<br>
+Probably my favorite movie of this year&#8217;s festival. An interesting &#8211; and true &#8211; story, great acting and beautiful presentation, what more can you ask for?</li>
+	<li><a href="http://www.imdb.com/title/tt1639901/">Un homme qui crie</a> (Mahamat-Saleh Haroun)<br />
+A solid movie about present-day Chad. Told in a very dry manner, I really enjoyed the first half of this, but found it a bit of a drag towards the end. The lead actor was great though!</li>
+	<li><a href="http://www.imdb.com/title/tt1522857/">The Oath</a> (Laura Poitras)<br />
+A documentary about two men from Yemen who worked for Osama Bin Laden. I found this very interesting and as always it&#8217;s good to hear the other side of a story.</li>
+	<li><a href="http://www.imdb.com/title/tt1424053/">Engkwentro</a> (Pepe Diokno)<br>
+The life of two brothers in a ghetto somewhere in the Philippine &#8211; violence, drugs and gangs. This seems to have been made with a fairly low budget, and the nervous handheld camera may upset some people. Overall it was pretty interesting though and I&#8217;m glad we saw this.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/31/information-overload-2010-10-31/">Information Overload 2010-10-31</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-31T00:00:00+07:00" pubdate data-updated="true">Oct 31<sup>st</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://theferrett.livejournal.com/1534590.html">Designing For Jedi</a><br>On libertarians and the Victorian Era.</li>
+<li><a href="http://www.vancouversun.com/travel/2941610/story.html">Full-body scanners are waste of money, Israeli expert says</a><br>The former chief security officer of Tel Aviv&#8217;s Ben Gurion airport explains why he thinks full-body scanner are a waste of money.</li>
+<li><a href="http://www.zdnet.com.au/sweet-bypass-for-student-finger-scanner-339306878.htm">Sweet bypass for student finger scanner</a><br>Australian school&#8217;s plan to use fingerprint readers to track students&#8217; attendance might be foiled by the good old <a href="http://www.theregister.co.uk/2002/05/16/gummi_bears_defeat_fingerprint_sensors/">gummy bear attack</a>?</li>
+<li><a href="http://primaxstudio.com/stuff/scale_of_universe/">Scale of Universe</a><br>An interactive tool to visualize the scale of the universe from <a href="http://en.wikipedia.org/wiki/Quantum_foam">quantum foam</a> to beyond the observable universe. Mind-boggling!</li>
+<li><a href="http://newsfeed.time.com/2010/10/26/what-a-rotten-world-it-can-be-report-says-three-fourths-of-world-is-corrupt/">What a Rotten World It Can Be: Report Says Three-Fourths of World Is Corrupt</a><br> Transparency International&#8217;s Corruption Perceptions Index 2010 is out, once again with depressing results.</li>
+<li><a href="http://kaleidic.com/2009/composing-j-in-my-mind/">Composing J in my mind</a><br>Also over a year old, this post by <a href="http://twitter.com/#!/kaleidic">@kaleidic</a> on <a href="http://www.jsoftware.com/">J</a> is a good reminder why it&#8217;s such an awesome language that I want to spend more time with.</li>
+<li><a href="http://www.guardian.co.uk/world/2010/oct/25/peter-bossman-first-black-major-eastern-europe-slovenia">Peter Bossman becomes Eastern Europe&#8217;s first black mayor</a><br>After many depressing elections in Europe, it&#8217;s good to have some positive news at last.</li>
+<li><a href="http://www.reversejobapplication.com/">Andrew Horner: The reverse job applicant</a><br>An interesting way to look for a job, good luck to the author!</li>
+<li><a href="http://www.foreignpolicy.com/articles/2010/10/11/think_again_global_aging?page=full">Think Again: Global Aging</a><br>Awesome article on global aging and the reasons for and consequences of demographic shifts.</li>
+<li><a href="http://www.1up.com/news/super-mario-bros-25th-miyamoto">Super Mario Bros.&#8217; 25th: Miyamoto Reveals All</a><br>Happy birthday Super Mario Bros!</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/24/information-overload-2010-10-24/">Information Overload 2010-10-24</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-24T00:00:00+07:00" pubdate data-updated="true">Oct 24<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://amix.dk/blog/post/19574">How Hacker News ranking algorithm works</a><br><a href="http://arclanguage.org/">Arc</a> source code of the <a href="http://news.ycombinator.com">Hacker News</a> scoring algorithm, including an explanation and a translation to Python.</li>
+<li><a href="http://aidwatchers.com/2010/10/when-the-brain-drain-is-healthy-for-democracy/">When the brain drain is healthy for democracy</a><br>A neglected aspect in the study of <a href="http://en.wikipedia.org/wiki/Brain_drain">brain drain</a>, is it actually good for democracy?</li>
+<li><a href="http://reason.com/blog/2010/10/18/the-horror-of-canadian-obsceni">The Horror of Canadian Obscenity Law</a><br>A Canadian horror movie producer got prosecuted for &#8220;corrupting morals&#8221;.</li>
+<li><a href="http://www.baltimoresun.com/wreg-pilot-protest,0,774981,full.story">Pilot tells <span class="caps">TSA</span>: &#8216;No Naked Photos&#8217;</a><br>Best summarized by this quote by the pilot in question:  &#8220;Better people than I have sacrificed more than their careers, their livelihood, for the cause of freedom,&#8221; he says. &#8220;Americans need to wake up and stand up.&#8221;</li>
+<li><a href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/democraticrepublicofcongo/8078612/Aircraft-crashes-after-crocodile-on-board-escapes-and-sparks-panic.html">Aircraft crashes after crocodile on board escapes and sparks panic</a><br>On the other end of the spectrum of air travel security, a man in Congo smuggled a crocodile into a plane which crashed as a result of the ensuing panic.</li>
+<li><a href="http://www.businessweek.com/magazine/content/10_44/b4201043146825.htm">The Tax Haven That&#8217;s Saving Google Billions</a><br>By using a complicated structure involving Ireland, the Netherlands and Bermuda, Google keeps its corporate tax rate at only 2.4 percent.</li>
+<li><a href="http://www.telegraph.co.uk/technology/news/8075563/Every-email-and-website-to-be-stored.html">Every email and website to be stored</a><br>Monitoring citizens&#8217; communication data is back on the political agenda in the UK.</li>
+<li><a href="http://www.fernstrategy.com/2010/10/21/the-end-of-x86/">The End of x86?</a><br>Will the <a href="http://en.wikipedia.org/wiki/ARM_architecture"><span class="caps">ARM</span> architecture</a> replace the <a href="http://en.wikipedia.org/wiki/X86">x86</a> architecture?</li>
+<li><a href="http://www.nytimes.com/2010/10/17/business/17stream.html?_r=2&amp;src=tptw">How Aging Populations May Crimp the World&#8217;s Finances</a><br>For the first time in human history, people older than 65 will outnumber children younger than 5.</li>
+<li><a href="http://techcrunch.com/2010/10/18/ipv4/">IPv4 Space Shrinks To 5% &#8211; Final Addresses To Be Issued In Early 2011</a><br>Not exactly news, but includes a nice video to show to your less tech-savvy friends.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/20/quick-and-dirty-simhash-in-ruby/">Quick and Dirty Simhash in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-20T00:00:00+07:00" pubdate data-updated="true">Oct 20<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today at work we ended up talking about simhashing (a hash function which generates similar hashes for similar inputs) and I found <a href="http://matpalm.com/resemblance/simhash/">this nice article</a> with a step by step explanation of the algorithm, so I wrote a quick Ruby version (needs 1.9):</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+<span class='line-number'>15</span><br />
+<span class='line-number'>16</span><br />
+<span class='line-number'>17</span><br />
+<span class='line-number'>18</span><br />
+<span class='line-number'>19</span><br />
+<span class='line-number'>20</span><br />
+<span class='line-number'>21</span><br />
+<span class='line-number'>22</span><br />
+<span class='line-number'>23</span><br />
+<span class='line-number'>24</span><br />
+<span class='line-number'>25</span><br />
+<span class='line-number'>26</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;String&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;shingles&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="nb"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;//&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each_cons&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="ss"&gt;:join&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;uniq&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;simhash&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Array&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;hashes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;shingles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="ss"&gt;:hash&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;hashes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nb"&gt;hash&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="nb"&gt;hash&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_s&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chars&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each_with_index&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;bit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;        &lt;span class="n"&gt;bit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_i&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hamming_distance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;other&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;other_sh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;other&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;simhash&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="nb"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;simhash&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chars&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each_with_index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;total&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;bit&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;other_sh&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="n"&gt;total&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>Getting the &#8220;features&#8221; of a string:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="s2">&quot;This is a test string&quot;</span><span class="o">.</span><span class="n">shingles</span>
+</span><span class='line'><span class="c1">#=&gt; [&quot;Th&quot;, &quot;hi&quot;, &quot;is&quot;, &quot;s &quot;, &quot; i&quot;, &quot; a&quot;, &quot;a &quot;, &quot; t&quot;, &quot;te&quot;, &quot;es&quot;, ...]</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Simhashing a string:<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="s2">&quot;This is a test string&quot;</span><span class="o">.</span><span class="n">simhash</span>
+</span><span class='line'><span class="c1">#=&gt; &quot;0100110001100001001100010000000010001001001000110110000010101100&quot;</span>
+</span></code></pre></td></tr></table></div></figure></div></p>
+<p>Calculating the <a href="http://en.wikipedia.org/wiki/Hamming_distance">Hamming distance</a> between the symhashes of two strings (higher numbers mean less similar, with 64 being the highest possible score):<br />
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="s2">&quot;This is a test string&quot;</span><span class="o">.</span><span class="n">hamming_distance</span><span class="p">(</span><span class="s2">&quot;This is another test string&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="c1">#=&gt; 8</span>
+</span></code></pre></td></tr></table></div></figure></div></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/17/information-overload-2010-10-17/">Information Overload 2010-10-17</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-17T00:00:00+07:00" pubdate data-updated="true">Oct 17<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.npr.org/templates/story/story.php?storyId=130356647">The &#8216;Irrational&#8217; Way Humans Interact With Dentists</a><br>Are our relationships with our dentists a form of the <a href="http://en.wikipedia.org/wiki/Stockholm_syndrome">Stockholm Syndrome</a>? Ask the behavioral psychologist.</li>
+<li><a href="http://www.iconeye.com/index.php?id=3864:rca-student-radically-improves-the-uk-plug&amp;option=com_content&amp;view=article"><span class="caps">RCA</span> student radically improves the UK plug</a><br>Awesome redesign of an everyday item.</li>
+<li><a href="http://www.bbc.co.uk/news/technology-11502715">William Gibson says the future is right here, right now</a><br>When it comes to the future, who to trust if not William Gibson?</li>
+<li><a href="http://money.cnn.com/2010/10/08/news/honey_bees_ny_times.fortune/index.htm">What a scientist didn&#8217;t tell the New York Times about his study on bee deaths</a><br>Follow-up to last week&#8217;s <span class="caps">NYT</span> article on <a href="http://en.wikipedia.org/wiki/Colony_collapse_disorder">Colony Collapse Disorder</a>. How is <a href="http://en.wikipedia.org/wiki/Bayer">Bayer</a> related to all of this?</li>
+<li><a href="http://www.spiegel.de/spiegel/0,1518,722673,00.html">Die kritische Masse</a><br>Interesting article on online review portals, user motivation and manipulation (in German).</li>
+<li><a href="http://www.rawstory.com/rs/2010/10/whistleblower-reveals-systematic-humiliation/">Whistleblower reveals &#8216;systematic&#8217; humiliation of detainees</a><br>When reading things like this, &#8220;what goes around comes around&#8221; is always my first sad thought.</li>
+<li><a href="http://structureofnews.wordpress.com/2010/10/12/the-numbers-game/">The Numbers Game</a><br>A plea to increase <a href="http://en.wikipedia.org/wiki/Numeracy">numeracy</a> amongst journalists. Amen to that!</li>
+<li><a href="http://www.guardian.co.uk/world/2010/sep/24/sweden-immigration-far-right-asylum">Sweden joins Europe-wide backlash against immigration</a><br>Sweden joins the ranks of European countries where xeno- and Islamophobia win elections. Also contains a short summary of similar developments all over Europe.</li>
+<li><a href="http://www.techeye.net/internet/irish-isp-wins-major-legal-victory-against-record-labels">Irish <span class="caps">ISP</span> wins major legal victory against record labels</a><br><span class="caps">UPC</span> wins a court case against the record industry and does not have to implement a three strikes system for its customers (for now).</li>
+<li><a href="http://www.laquadrature.net/en/council-of-europe-agrees-that-net-neutrality-is-key-to-freedom-of-expression">Council of Europe Agrees That Net neutrality is Key to Freedom of Expression</a><br>Some more good news on the freedom of expression front.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/10/information-overload-2010-10-09/">Information Overload 2010-10-09</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-10T00:00:00+07:00" pubdate data-updated="true">Oct 10<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.npr.org/blogs/money/2010/10/04/130329523/how-fake-money-saved-brazil">How Fake Money Saved Brazil</a><br>How Brazilian economists overcame hyper-inflation.</li>
+<li><a href="http://blog.bumblebeelabs.com/social-software-sundays-1-humor-on-the-web-how-to-stop-it/">Humor on the web &amp; how to stop it</a><br>I iz in your memes, explaining dem. Oh, damn.</li>
+<li><a href="http://www.guardian.co.uk/global-development/poverty-matters/2010/sep/29/gates-foundation-gm-monsanto">Why is the Gates foundation investing in GM giant Monsanto?</a><br>The gates foundation is investing in GM giants Monsanto and Cargill. Is this their vision for agrarian development in Africa?</li>
+<li><a href="http://www.nytimes.com/2010/10/07/science/07bees.html?_r=1">Scientists and Soldiers Solve a Bee Mystery</a><br>In the US scientists and the military teamed up to solve the mystery of &#8220;collapsing&#8221; bee colonies.</li>
+<li><a href="http://bestinclass.dk/index.clj/2010/10/taking-uncle-bob-to-school.html">Taking Uncle Bob to school</a><br><a href="http://bestinclass.dk/">Lau Jenson</a> goes through some Clojure code by <a href="http://www.objectmentor.com/omTeam/martin_r.html">Uncle Bob</a> and makes it more idiomatic.</li>
+<li><a href="http://www.newyorker.com/arts/critics/books/2010/10/11/101011crbo_books_surowiecki?currentPage=all">Later &#8211; What does procrastination tell us about ourselves?</a><br>A <a href="http://www.newyorker.com/">New Yorker</a> piece on <a href="http://books.google.com/books?id=Huw5YrMQ4icC&amp;dq=%E2%80%9CThe+Thief+of+Time%E2%80%9D+Andreou;+Mark+D.+White;+Essays;+George+Ainslie;+George+Akerlof&amp;source=bl&amp;ots=SSIyiC2lqp&amp;sig=_9LM9nZImBmWCqcy9wR4FW4KB6g&amp;hl=en&amp;ei=jXWvTKjfLsKeOrua_NUF&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=3&amp;ved=0CBYQ6AEwAg">The Thief of Time</a>, a collection of essays about procrastination. Don&#8217;t read this tomorrow, read it now!</li>
+<li><a href="http://www.slate.com/id/2268000/pagenum/all/">Confessions of a used-book salesman.</a><br>Interesting insight into what the person describing his job perceives as a shameful profession.</li>
+<li><a href="http://www.nature.com/news/2010/101004/full/467645a.html">A shocking discovery</a><br>In the late 1940s, the US Public Health Service infected Guatemalan prisoners with Syphilis.</li>
+<li><a href="http://www.salon.com/news/opinion/glenn_greenwald/2010/10/01/flotilla">U.N. Report finds Israel &#8216;summarily executed&#8217; U.S. citizen on flotilla</a><br>Is anyone even surprised anymore?</li>
+<li><a href="http://www.schneier.com/blog/archives/2010/09/wiretapping_the.html">Wiretapping the Internet</a><br>Another excellent writeup by Bruce Schneier.</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/07/ruby-and-httparty-github-issues-to-csv/">Ruby and HTTParty: GitHub Issues to CSV</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-07T00:00:00+07:00" pubdate data-updated="true">Oct 7<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To fill our backlog at work, our project manager needed a list of our current <a href="https://github.com/">GitHub</a> issues, ideally in a spreadsheet format. A couple lines of Ruby produce <span class="caps">CSV</span> output consisting of issue title, creation date, reporter and labels, which then can be redirected to a file and opened with any spreadsheet program.</p>
+<div class='bogus-wrapper'><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br />
+<span class='line-number'>2</span><br />
+<span class='line-number'>3</span><br />
+<span class='line-number'>4</span><br />
+<span class='line-number'>5</span><br />
+<span class='line-number'>6</span><br />
+<span class='line-number'>7</span><br />
+<span class='line-number'>8</span><br />
+<span class='line-number'>9</span><br />
+<span class='line-number'>10</span><br />
+<span class='line-number'>11</span><br />
+<span class='line-number'>12</span><br />
+<span class='line-number'>13</span><br />
+<span class='line-number'>14</span><br />
+<span class='line-number'>15</span><br />
+<span class='line-number'>16</span><br />
+</pre></td><td class='code'><pre><code class='ruby'>&lt;span class='line'&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;httparty&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;GitHubIssues&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="kp"&gt;include&lt;/span&gt; &lt;span class="no"&gt;HTTParty&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="n"&gt;base_uri&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http://github.com/api/v2/yaml&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nc"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;show&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="c1"&gt;# username must be of the form &amp;#39;&amp;lt;username&amp;gt;/token:&amp;lt;token&amp;gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="n"&gt;opts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="ss"&gt;:basic_auth&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="ss"&gt;:username&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="nb"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/issues/list/&amp;lt;user&amp;gt;/&amp;lt;projects&amp;gt;/open&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;opts&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;issues&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;issue&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;      &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;issue&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;issue&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;created_at&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;issue&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;user&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;issue&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;labels&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;    &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class='line'&gt;
+&lt;/span&gt;&lt;span class='line'&gt;&lt;span class="no"&gt;GitHubIssues&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;
+&lt;/span&gt;</code></pre></td><p></tr></table></div></figure></notextile></div></p>
+<p>It&#8217;s quick and dirty (e.g. will die if there are no issues), but does exactly what we needed in just a couple of lines thanks to the awesome <a href="http://github.com/jnunemaker/httparty">HTTParty</a>.</p>
+<p><i>This also has been <a href="http://tupalo.com/en/blog/github-issues-as-csv-with-ruby-and-httparty/">published</a> in slightly different form on our <a href="http://tupalo.com/en/blog/">company blog</a>.</i></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/03/information-overload-2010-10-02/">Information Overload 2010-10-02</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-03T00:00:00+07:00" pubdate data-updated="true">Oct 3<sup>rd</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>On a weekend trip again, but managed to squeeze in quite a bit of reading during the week.</p>
+<ul>
+<li><a href="http://www.newsweek.com/2010/09/24/the-sad-truth-about-the-facebook-movie.html">Friends Without Benefits</a><br>Was there a paradigm shift in Silicon Valley from hard science to pointless web 2.0 startups?</li>
+<li><a href="http://jseliger.com/2010/09/26/how-universities-work-or-what-i-wish-i%E2%80%99d-known-freshman-year-a-guide-to-american-university-life-for-the-uninitiated/">How Universities Work</a><br>As the title implies this is about universities in the US, but a lot of it also holds true for academic institutions in Europe.</li>
+<li><a href="http://www.telegraph.co.uk/news/worldnews/europe/germany/8029948/First-World-War-officially-ends.html">First World War officially ends</a><br>92 years after the end of the war, Germany will pay the last chunk of reparations imposed by the Treaty of Versailles.</li>
+<li><a href="http://shellhaters.heroku.com/#1">The Shell Hater&#8217;s Handbook</a><br>Despite the name, this presentation by GitHubber <a href="http://tomayko.com/">Ryan Tomyako</a> is a nice intro to shell scripting. If you know a shell hater, send him a link to this presentation.</li>
+<li><a href="http://www.nytimes.com/roomfordebate/2010/09/29/can-twitter-lead-people-to-the-streets/virtual-vs-real-protests">Virtual vs. Real Protests</a><br>Twitter &#8220;revolutions&#8221; and the confusion between &#8220;mobilization&#8221; and &#8220;organization&#8221;.</li>
+<li><a href="http://www.newyorker.com/reporting/2010/10/04/101004fa_fact_gladwell">Small Change</a><br>Very much in the same vain as the previous article, Malcolm Gladwell talks about hierarchies vs. networks, strong vs. weak ties and why joining a Facebook group is not the same sort of activism as putting your life at risk in a real world conflict.</li>
+<li><a href="http://bendauphinee.com/paythebills">Pay The Bills</a><br>Interesting experiment in earning some money while looking for a job.</li>
+<li><a href="http://tier.cs.berkeley.edu/drupal/node/148">Software Development for Developing Regions: Another Hat for Hackers</a><br>Interesting idea about using skills like reversee engineering, code injection etc. for making software better suited to third world demands.</li>
+<li><a href="http://www.economist.com/node/17147648">India&#8217;s surprising economic miracle</a><br>Will India&#8217;s economy thrive when the global economy becomes more knowledge-intensive?</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/21">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/19">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I&#8217;m Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/12/information-overload-2015-07-12/">Information Overload 2015-07-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

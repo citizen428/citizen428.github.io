@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: webculture | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/webculture/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Damn...]]></title>
+    <link href="http://citizen428.github.io/blog/2006/11/19/damn/"/>
+    <updated>2006-11-19T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/11/19/damn</id>
+    <content type="html"><![CDATA[<p>I just lost the <a href="http://losethegame.com/">game</a>.</p>
+
+<p>RULE 1: You are playing The Game.
+RULE 2: Whenever you think about The Game, you lose.
+RULE 3: Loss must be announced.</p>
+
+<p>Pungenday, The Aftermath 31, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tor mirror set up!]]></title>
+    <link href="http://citizen428.github.io/blog/2006/09/24/tor-mirror-set-up/"/>
+    <updated>2006-09-24T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/09/24/tor-mirror-set-up</id>
+    <content type="html"><![CDATA[<p>After running a &ldquo;Tor&rdquo;:<a href="http://tor.eff.org">http://tor.eff.org</a> server for more than half a year already and having donated some money to support Tor&rsquo;s development, I was looking for new ways to help out the project. That&rsquo;s why I decided to set up a mirror, which can be reached &ldquo;here&rdquo;:<a href="http://tor.blingblingsquad.net">http://tor.blingblingsquad.net</a> (&ldquo;dist/ mirror&rdquo;:<a href="http://tor.blingblingsquad.net">http://tor.blingblingsquad.net</a>). The initial sync is still running, but the site should be fully functional soon. Once this is finished, I&rsquo;ll also try to set up another mirror on the Vienna based server hosting this domain.</p>
+
+<p>Boomtime, Bureaucracy 48, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A closer look at Google.cn filtering]]></title>
+    <link href="http://citizen428.github.io/blog/2006/01/27/a-closer-look-at-google-cn-filtering/"/>
+    <updated>2006-01-27T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2006/01/27/a-closer-look-at-google-cn-filtering</id>
+    <content type="html"><![CDATA[<p>While reading &ldquo;netzpolitik.org&rdquo;:netzpolitik.org yesterday, I found a link to an article on the &ldquo;OpenNet Initiative Blog&rdquo;:<a href="http://opennetinitiative.net/blog/,">http://opennetinitiative.net/blog/,</a> explaining &ldquo;how the filtering of Google.cn works&rdquo;:<a href="http://www.opennetinitiative.net/blog/?p=87.">http://www.opennetinitiative.net/blog/?p=87.</a> Now let&rsquo;s have a closer look at some of the blocked sites:</p>
+
+<p>site:hrw.org
+site:hrichina.org</p>
+
+<p>Human Rights Watch and Human Rights in China. Who is surprised that they get blocked? Nobody? Guessed so&hellip;</p>
+
+<p>site:rfa.org</p>
+
+<p>Radio Free Asia describes itself in the following way: &ldquo;<em>RFA is a private, nonprofit corporation that broadcasts news and information in nine native Asian languages to listeners who do not have access to full and free news media. The purpose of RFA is to provide a forum for a variety of opinions and voices from within these Asian countries.</em>&rdquo;</p>
+
+<p>site:tsquare.tv</p>
+
+<p>A pretty informative site about the incident on Tiananmen Square in 1989. You really should try to see the &ldquo;documentary&rdquo;:<a href="http://tsquare.tv/film/,">http://tsquare.tv/film/,</a> it&rsquo;s probably the best I&rsquo;ve seen so far on this topic.</p>
+
+<p><a href="http://64memo.com/">http://64memo.com/</a></p>
+
+<p>The Tianmen Massacre Memorial Museum. I haven&rsquo;t read any of the articles on this site yet, so it&rsquo;s hard to tell how exactly they are dealing with the subject.</p>
+
+<p>site:news.bbc.co.uk
+site:voa.gov</p>
+
+<p>Ok, the BBC and Voice of America may not be the most objective news sources one can find in the world, but blocking them seems a little harsh.</p>
+
+<p>site:boxun.com
+site:peacehall.com</p>
+
+<p>Both domains will lead you to the Boxun News Network, a site writing a lot about censorship, free speech and similar topics.</p>
+
+<p>site:freechina.net</p>
+
+<p>After having a look at the &ldquo;goals&rdquo;:<a href="http://www.freechina.net/goal/index_en.htm">http://www.freechina.net/goal/index_en.htm</a> of The Free China Movement, it should be pretty obvious why the Chinese government wants this site blocked.</p>
+
+<p>site:geocities.com</p>
+
+<p>Free web hosting == free expression? It seems so&hellip;</p>
+
+<p>site:falundafa.org
+site:epochtimes.com</p>
+
+<p>After having been at a conference with participants from these groups I have to say that I don&rsquo;t feel any sympathy for them, but that definitely isn&rsquo;t an excuse for locking them up and censoring their sites.</p>
+
+<p>site:savetibet.org</p>
+
+<p>It should be pretty obvious why this got blocked.</p>
+
+<p>site:topforum.com</p>
+
+<p>A dynamic index of Chinese forums websites.</p>
+
+<p>site:laogai.org</p>
+
+<p>Since 1992 the Laogai Research Foundation is trying to gather information on Chinese penal camps and other &ldquo;<em>systemic human rights violations in China, including public executions, organ harvesting from executed prisoners, the coercive enforcement of China&rsquo;s population control policy, and persecution of religious believers.</em>&rdquo;</p>
+
+<p>I guess that sites like the &ldquo;China Labour Bulletin&rdquo;:<a href="http://www.china-labour.org.hk/public/main">http://www.china-labour.org.hk/public/main</a> and related worker&rsquo;s movements get filtered as well, but I can&rsquo;t personally confirm this currently.</p>
+
+<p>Boomtime, Chaos 27, 3172 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Happy hoodwinking!]]></title>
+    <link href="http://citizen428.github.io/blog/2005/11/29/happy-hoodwinking/"/>
+    <updated>2005-11-29T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/11/29/happy-hoodwinking</id>
+    <content type="html"><![CDATA[<p><i>You have nil shillings. You are a simple cleric, you have 10 more shillings to earn before you have proven your xpath/regexen charming skills on par with the druids. A real druid will check your work and pay you soon enough.</i> - &ldquo;<a href="http://hoodwink.d/">http://hoodwink.d/</a>&rdquo;:<a href="http://hoodwink.d/">http://hoodwink.d/</a></p>
+
+<p>But I&rsquo;ve been working hard and tried to prove these druids that my xpath and regex skills are up to their standards. I have hopefully earned my first shilling and I&rsquo;ve earned it with my very own site! :) So you hoodwinkers out there, feel free to leave your winks instead of regular comments from now on!</p>
+
+<p>And don&rsquo;t be afraid when you have nfc what I&rsquo;m talking about, &ldquo;this link&rdquo;:<a href="http://hoodwinkd.hobix.com/">http://hoodwinkd.hobix.com/</a> explains it all, so open your eyes and feel around&hellip;</p>
+
+<p>Pungenday, The Aftermath 41, 3171 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why blogging is cool]]></title>
+    <link href="http://citizen428.github.io/blog/2005/10/19/why-blogging-is-cool/"/>
+    <updated>2005-10-19T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/10/19/why-blogging-is-cool</id>
+    <content type="html"><![CDATA[<p>I have to admit that I was really sceptical when this whole blogging thing started a few years back, mostly because I had the feeling that this will only add to all the noise that already makes finding information on the web harder than it needs to be. However, as time moved on and the blogging scene developed, I really came to appreciate this form of communication. Blogs are not only a great way to keep people updated on what you&rsquo;re currently up to (or to stalk other people for that matter), comments and the possibility of trackbacks also provide great facilities for interesting discussions with a wide variety of people and their differing opinions, especially when aggregators like &ldquo;Technorati&rdquo;:<a href="http://www.technorati.com/">http://www.technorati.com/</a> and &ldquo;Planet&rdquo;:<a href="http://www.planetplanet.org/">http://www.planetplanet.org/</a> come into play&hellip;</p>
+
+<p>Why am I writing this today? Well, not long ago &ldquo;I&rsquo;ve blogged about my favourite music&rdquo;:<a href="http://citizen428.net/archives/227-Hits-galore.html">http://citizen428.net/archives/227-Hits-galore.html</a> and mentioned the band &ldquo;Ninja High School&rdquo;. And then yesterday I get an email from band member Gregory Collins, telling me that he  appreciates I&rsquo;ve been writing about them and that they are big Linux geeks themselves. Or do you remember that &ldquo;blog&rdquo;:<a href="http://citizen428.net/archives/204-Dawn-of-the-Dead,-Ruby-Monday,-Doc-FreeBSD.html">http://citizen428.net/archives/204-Dawn-of-the-Dead,-Ruby-Monday,-Doc-FreeBSD.html</a> where I was really surprised that jabber4r got resurrected? Jabber&rsquo;s very own &ldquo;patron saint&rdquo; &ldquo;Peter Saint-Andre&rdquo;:<a href="http://www.saint-andre.com/blog/">http://www.saint-andre.com/blog/</a> chipped in to tell me about netxmpp-ruby. And then there is all this other valuable input by people like RL friend &ldquo;Martin &lsquo;m3&rsquo; Leyrer&rdquo;:<a href="http://www.leyrer.priv.at/martin">http://www.leyrer.priv.at/martin</a> or Gentoo Universe reader &ldquo;George Prowse&rdquo;:<a href="http://cokehabit.homelinux.org/,">http://cokehabit.homelinux.org/,</a> whom I&rsquo;ve never met in person but who seems to have taken a certain interest in what I&rsquo;m writing.</p>
+
+<p>And that&rsquo;s exactly why I just love having a blog that gets aggregated by &ldquo;Planet Gentoo&rdquo;:<a href="http://planet.gentoo.org/">http://planet.gentoo.org/</a> and &ldquo;Gentoo Universe&rdquo;:<a href="http://planet.gentoo.org/universe/:">http://planet.gentoo.org/universe/:</a> it gives my random musings a greater audience, which quite often leads to interesting comments or trackbacks I wouldn&rsquo;t haven gotten otherwise. So thanks to everyone who made this possible, and even more thanks to all the people who care enough to read what I write and help me learn about other views and perspectives by posting comments! :)<u></u></p>
+]]></content>
+  </entry>
+  
+</feed>

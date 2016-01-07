@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: communities | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/communities/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Loads of links]]></title>
+    <link href="http://citizen428.github.io/blog/2005/12/10/loads-of-links/"/>
+    <updated>2005-12-10T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2005/12/10/loads-of-links</id>
+    <content type="html"><![CDATA[<p>I haven&rsquo;t blogged for quite some time now, so I decided I could at least entertain you with one of my semi-regular link dumps until I&rsquo;m motivated enough to write a proper entry again&hellip;</p>
+
+<p><em><em>Ruby</em></em></p>
+
+<p>&ldquo;RadRails&rdquo;:<a href="http://www.radrails.org/:">http://www.radrails.org/:</a> From a rather recent mail on &ldquo;ruby-talk&rdquo;:<a href="http://blade.nagaokaut.ac.jp/ruby/ruby-talk/index.shtml">http://blade.nagaokaut.ac.jp/ruby/ruby-talk/index.shtml</a> I learned about RadRails, an IDE for (who would&rsquo;ve guessd) &ldquo;Ruby on Rails&rdquo;:<a href="http://www.rubyonrails.org/">http://www.rubyonrails.org/</a> which was built using the <a href="http://www.eclipse.org/rcp">Eclipse RCP</a>. Unfortunately I didn&rsquo;t have too much time to play with it yet, but so far it seems to be quite nice and if you&rsquo;re into Rails you maybe should have a look at this project.</p>
+
+<p>&ldquo;eigenclass&rdquo;:<a href="http://eigenclass.org/:">http://eigenclass.org/:</a> Recently &ldquo;RedHanded&rdquo;:<a href="http://redhanded.hobix.com/">http://redhanded.hobix.com/</a> kept talking about Mauricio Fernandez&#8217; new blog called &ldquo;eigenclass&rdquo;, which talks about a lot of really interesting and advanced Ruby stuff. Definitely an interesting read for every serious Ruby programmer and everyone who wants to become one.</p>
+
+<p>&ldquo;try ruby!&rdquo;:<a href="http://tryruby.hobix.com/:">http://tryruby.hobix.com/:</a> As I found out on &ldquo;poignant-stiffs&rdquo;:<a href="http://rubyforge.org/pipermail/poignant-stiffs/">http://rubyforge.org/pipermail/poignant-stiffs/</a> <a href="http://whytheluckystiff.net/">why</a> is at it again, which means there&rsquo;s something cool coming up. Despite not involving cartoon foxes or chunky bacon, &ldquo;try ruby&rdquo;:<a href="http://tryruby.hobix.com/">http://tryruby.hobix.com/</a> is still a really neat project, giving you the opportunity to interactively test Ruby from within your web browser. There&rsquo;s also a little tutorial, so this site may very well become the first stop to send Nubies to&hellip;</p>
+
+<p><em><em>Disobey</em></em></p>
+
+<p>&ldquo;The Hacktivist&rdquo;:<a href="http://www.thehacktivist.com/:">http://www.thehacktivist.com/:</a> Instead of summing up what the Hacktivist is all about, I&rsquo;ll just give you the self-description of the project: &ldquo;<i>The Hacktivist is dedicated to examining the theory and practice of hacktivism and electronic civil disobedience while contributing to the evolution of hacktivism by promoting constructive debate, effective direct action, and creative solutions to complex problems in order to facilitate positive change.</i>&rdquo; - Involve yourself!</p>
+
+<p>&ldquo;The World&rsquo;s Most Populated Countries&rdquo;:<a href="http://www.odt.org/Pictures/poplcart.jpg:">http://www.odt.org/Pictures/poplcart.jpg:</a> Sometimes a new look on things helps changing your perspective in a positive way. That&rsquo;s why it&rsquo;s important to take a minute or two to think about this map of the Earth, where all the countries got resized in relation to their population.</p>
+
+<p>&ldquo;Church of the Flying Spaghetti Monster&rdquo;:<a href="http://www.venganza.org/index.htm:">http://www.venganza.org/index.htm:</a> This comes from an open letter to the Kansas school board: &ldquo;<i> I am writing you with much concern after having read of your hearing to decide whether the alternative theory of Intelligent Design should be taught along with the theory of Evolution. [&hellip;]  Let us remember that there are multiple theories of Intelligent Design. I and many others around the world are of the strong belief that the universe was created by a Flying Spaghetti Monster. It was He who created all that we see and all that we feel. We feel strongly that the overwhelming scientific evidence pointing towards evolutionary processes is nothing but a coincidence, put in place by Him</i>&rdquo;. Ramen!</p>
+
+<div align="center"><a href="http://www.venganza.org"><img src="http://www.venganza.org/images/spreadword/th_jollyfish.jpg" alt="Do you believe?" /></a></div>
+
+
+<p><em><em>Relax</em></em></p>
+
+<p>&ldquo;Unintentionally sexual comic book covers: Part 1&rdquo;:<a href="http://www.thebestpageintheuniverse.net/c.cgi?u=uscc_part1:">http://www.thebestpageintheuniverse.net/c.cgi?u=uscc_part1:</a> If you know &ldquo;The Best Page In The Universe&rdquo;:<a href="http://maddox.xmission.com/">http://maddox.xmission.com/</a> you either love or hate Maddox. No matter to which group you belong, check out this collection of unintentionally sexual comic book covers and have a good laugh! (via <a href="http://hoodwink.d/onslaught/">hoodwink.d onslaught</a>)</p>
+
+<p>&ldquo;The Website Development Process&rdquo;:<a href="http://www.pingmag.jp/2005/12/09/the-website-development-process/:">http://www.pingmag.jp/2005/12/09/the-website-development-process/:</a> Learn everything important there is to know about the process of developing a professional website from platic figurines. (via <a href="http://www.boingboing.net/2005/12/09/plastic_figurines_gu.html">BoingBoing</a>)</p>
+
+<p>&ldquo;Squidoo&rdquo;:<a href="http://www.squidoo.com/:">http://www.squidoo.com/:</a> The developers of Squidoo thought that &ldquo;Everyone&rsquo;s an expert on something&rdquo;, so they decided to give all of us the opportunity to share our knowledge in the form of &ldquo;lenses&rdquo;. For all of you who are to lazy to look at the &ldquo;FAQ&rdquo;:<a href="http://www.squidoo.com/pages/faq">http://www.squidoo.com/pages/faq</a> to find out what a lense is, here&rsquo;s the answer: &ldquo;<I> A lens is one person&rsquo;s (lensmaster&rsquo;s) view on a topic he cares about. More specifically, a lens is a single web page filled with information and links that point to other web pages, to continually updated RSS feeds, or to relevant advertising. It&rsquo;s a place to start, not finish. </i>&rdquo;. Interesting concept, and there are some pretty cool lenses already. (via <a href="http://www.teemow.com/2005/12/07/squidoo/">teemow</a>).</p>
+
+<p>Setting Orange, The Aftermath 53, 3171 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>

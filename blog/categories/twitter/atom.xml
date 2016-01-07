@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: twitter | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/twitter/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fun with Twitter and Ruby]]></title>
+    <link href="http://citizen428.github.io/blog/2009/11/23/fun-with-twitter-and-ruby/"/>
+    <updated>2009-11-23T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/11/23/fun-with-twitter-and-ruby</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m currently toying around with some ideas for Twitter bots etc. so I had a look at some of the available gems out there. Sometimes Ruby makes stuff almost too simple&hellip; ;-) Here are a few nice snippets of what you could do with a couple of minutes time and some Ruby:</p>
+
+<p><em>Automatically translate all tweets for a given keyword:</em></p>
+
+<script src="http://gist.github.com/241437.js?file=gistfile1.rb"></script>
+
+
+<p><em>Daemonize the above:</em>
+Alternatively you can also follow a userid instead of a keyword and daemonize the whole thing, thus making it super easy to create a bot which posts translations of Matz&rsquo;s tweets:</p>
+
+<script src="http://gist.github.com/241437.js?file=gistfile2.rb"></script>
+
+
+<p>If you put this into a file like transbot.rb,  the command ruby transbot.rb will give you all the regular daemon commands like start, stop, etc.</p>
+
+<p><em>Ruby is trendy:</em>
+Curious of getting a list of current trends on Twitter, without hashtags? There you go:</p>
+
+<script src="http://gist.github.com/241437.js?file=gistfile3.rb"></script>
+
+
+<p>Combining all these ideas you could easily write a bot that follows the current Twitter trends and posts translations of them in only a couple of lines. :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tweet active Safari tab from command line]]></title>
+    <link href="http://citizen428.github.io/blog/2009/02/27/tweet-active-safari-tab-from-command-line/"/>
+    <updated>2009-02-27T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/02/27/tweet-active-safari-tab-from-command-line</id>
+    <content type="html"><![CDATA[<p>Tweeting the URL of the article you are currently reading can be quite cumbersome: start your Twitter client if it isn&rsquo;t already running, copy  the URL, shorten it, paste it into the client&hellip;</p>
+
+<p>I therefore wrote a little Ruby script I can call from the command line and which will do all this annoying work for me. As an added bonus you can pass in hashtags as command line parameters. It&rsquo;s just a quick and dirty hack, feel free to change it according to your needs&hellip; :-)</p>
+
+<script src="http://gist.github.com/71559.js"></script>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Blog reactivated, Feedburner feeds history]]></title>
+    <link href="http://citizen428.github.io/blog/2009/01/21/blog-reactivated-feedburner-feeds-history/"/>
+    <updated>2009-01-21T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/01/21/blog-reactivated-feedburner-feeds-history</id>
+    <content type="html"><![CDATA[<p>Although I do love &ldquo;my Soup&rdquo;:<a href="http://soup.citizen428.net,">http://soup.citizen428.net,</a> &ldquo;Twitter&rdquo;:<a href="http://twitter.com/citizen428">http://twitter.com/citizen428</a> and all those other microblogs, tumblelogs and whatgotyou, I recently feel the urge to sometimes write proper long blog posts rising again. Therefore I once again resurrected this blog (I slowly start feeling like the &ldquo;George Romero&rdquo;:<a href="http://en.wikipedia.org/wiki/George_Romero">http://en.wikipedia.org/wiki/George_Romero</a> of blogging), gave it a proper facelift and am now ready to roll again.</p>
+
+<p>On a related note, I&rsquo;d like to inform you that my 2 Feedburner feeds will get deactivated in 30 days. To be honest, I can&rsquo;t even remember why I got them in the first place, but I&rsquo;m pretty sure I had a really good reason back then (&ldquo;Are you pondering what I&rsquo;m pondering?&rdquo;). Anyway, there&rsquo;s still plenty of subscription options here and on Soup, so you really don&rsquo;t have to stop stalking me if you don&rsquo;t fell like it.</p>
+]]></content>
+  </entry>
+  
+</feed>

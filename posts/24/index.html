@@ -1,0 +1,696 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>citizen428.blog()</title>
+  <meta name="author" content="Michael Kohl">
+
+  
+  <meta name="description" content="Have you ever wondered which instance types you use most when dealing with Amazon&#8217;s EC2? I have, so I came up with a short Clojure/Incanter &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://citizen428.github.io/posts/24">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="citizen428.blog()" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta name="google-site-verification" content="bArHZu2u3n3GxMD_LR02GfyzeA-nYFOuaBuDbfJT07U" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1416057-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">citizen428.blog()</a></h1>
+  
+    <h2>Try to learn something about everything</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:citizen428.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks_and_publications">Output</a></li>
+  <li><a href="/studynotes">Study Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/imprint/">Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/02/25/plot-ec2-instance-usage-with-clojure-and-incanter/">Plot EC2 Instance Usage With Clojure and Incanter</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-25T00:00:00+07:00" pubdate data-updated="true">Feb 25<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Have you ever wondered which instance types you use most when dealing with Amazon&#8217;s EC2? I have, so I came up with a short Clojure/<a href="http://incanter.org">Incanter</a> program to plot a nice chart like this:<br />
+<br />
+<img src="http://twitpic.com/show/thumb/15byfe.png" width="150" height="150" alt="EC2 usage plotted by #incanter (@liebke) on Twitpic" border="1"><br />
+<a href="http://twitpic.com/15byfe" title="EC2 usage plotted by incanter">(full size image)</a></p>
+<p>Here&#8217;s the code, if you have any feedback please leave a comment, this was the first time I used Incanter.</p>
+<script src="http://gist.github.com/315191.js?file=parse-ec2-report.clj"></script></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/02/25/comprehensive-list-of-cloud-related-links/">Comprehensive List of Cloud-related Links</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-25T00:00:00+07:00" pubdate data-updated="true">Feb 25<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Lately a lot of my working time is spent on cloud technologies, most notably the <a href="http://aws.amazon.com/">Amazon Web Services</a>. In recent month I compiled a rather comprehensive list of cloud-related links which I now decided to share with you all.</p>
+<p><a href="http://gist.github.com/314445">Cloud Links</a></p>
+<p>It&#8217;s just a markdown file copied into a Gist, so if you want to add any links just fork away! :-)</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/02/21/major-changes-in-clojurex/">Major Changes in ClojureX</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-21T00:00:00+07:00" pubdate data-updated="true">Feb 21<sup>st</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When ClojureX was started it tried to be everything for everybody. Not only did it checkout and compile the git HEADs of clojure, clojure-contrib and jline, it also (optionally) downloaded packages for Clojure support in TextMate or Emacs, configured and installed them. This has two obvious drawbacks. First off, people end up downloading stuff they don&#8217;t need. With current disk sizes and connection speeds that&#8217;s probably not much of a problem, but some users may still find annoying. More importantly though it was hard to keep up with the upstream changes, e.g. clojure-contrib&#8217;s recent switch to Maven.</p>
+<p>So now instead of trying to provide a one-size-fits-all solution I&#8217;m taking a totally different approach: from now on ClojureX will only contain the most recent <strong>stable</strong> releases of clojure, clojure-contrib and jline, as well as a very full-featured clj script:</p>
+<script src="http://gist.github.com/310392.js?file=ClojureX+help"></script><p>I know that this potentially makes ClojureX less useful to some people, but I do believe that it&#8217;s one of the fastest and most painless ways to set up a Clojure development environment.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/26/opensolaris-cheat-sheet/">OpenSolaris Cheat Sheet</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-26T00:00:00+07:00" pubdate data-updated="true">Jan 26<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve always been a big fan of the handy little utility <a href="http://cheat.errtheblog.com">cheat</a> and recently became interested in <a href="http://hub.opensolaris.org/bin/view/Main/">OpenSolaris</a> (which btw runs fine on my Thinkpad x200s), so I did the obvious and created an OpenSolaris cheat sheet:</p>
+<p><a href="http://cheat.errtheblog.com/s/open_solaris">http://cheat.errtheblog.com/s/open_solaris</a></p>
+<p>It&#8217;s still missing information regarding <span class="caps">ZFS</span>, but I guess I&#8217;ll eventually add that too. And who knows, maybe I even get motivated enough for a nicely formatted Latex version&#8230;</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/12/scary-ruby/">Scary Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-12T00:00:00+07:00" pubdate data-updated="true">Jan 12<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We all know that Ruby&#8217;s a flexible beast, but just how much you can bend it is almost scary. How about inheriting from a class randomly chosen at runtime? Sure, no problem:</p>
+<script src="http://gist.github.com/275701.js?file=gistfile1.rb"></script><p>I dare you to find a use case for this ;-) And in case random isn&#8217;t good enough for you, why not have the user choose the superclass for you?</p>
+<script src="http://gist.github.com/275701.js?file=gistfile2.rb"></script></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/11/bored-dont-worry-heres-a-new-programming-language/">Bored? Don&#8217;t Worry, Here&#8217;s a New Programming Language&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-11T00:00:00+07:00" pubdate data-updated="true">Jan 11<sup>th</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently &#8211; for various degrees of recent that is &#8211; people really seem to be into programming language design and development. You&#8217;ve probably all heard about <a href="http://www.scala-lang.org/">Scala</a>, <a href="http://clojure.org/">Clojure</a> and <a href="http://golang.org/">Go</a> already, but here are some more new languages which may be new to you (descriptions taken from the projects&#8217; websites):<br />
+<ul><br />
+<li><a href="http://code.google.com/p/anic/"><span class="caps">ANI</span></a>, <i>the experimental, high-performance, statically-safe, fully implicitly parallel, object-oriented, general-purpose dataflow programming language.</i></li><br />
+<li><a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> <i>is a little language that compiles into JavaScript. [&#8230;] it compiles into clean JavaScript (the good parts) that can use existing JavaScript libraries seamlessly, and passes through JSLint without warnings. The compiled output is quite readable — pretty-printed, with comments preserved intact.</i></li><br />
+<li><a href="http://www.factorcode.org/">Factor</a> <i>is a concatenative programming language where references to dynamically-typed values are passed between words (functions) on a stack. [It] is expressive, fast, supports interactive development and has a full-featured library. </i></li><br />
+<li><a href="http://ooc-lang.org/">ooc</a>, <i>a modern, object-oriented, functional-ish, high-level, low-level, sexy programming language. It&#8217;s translated to pure C with a source-to-source compiler. It strives to be powerful, modular, extensible, portable, yet simple and fast.</i></li><br />
+<li><a href="http://mth.github.com/yeti/">Yeti</a>, <i>ML style functional programming language, that runs on the <span class="caps">JVM</span>.</i></li><br /></p>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/02/2009-reading-list/">2009 Reading List</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-02T00:00:00+07:00" pubdate data-updated="true">Jan 2<sup>nd</sup>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here&#8217;s what I read in 2009, in the order I read them:</p>
+<p><b>Brick Lane</b>: Monica Ali<br />
+<b>Die Angst des Tormanns beim Elfmeter</b>: Peter Handke<br />
+<b>Soweto Stories</b>: Miriam Tzali<br />
+<b>The Eighth Day</b>: John Case<br />
+<b>A Language in Common</b>: Marion Molteno<br />
+<b>The Lover</b>: A. B. Yehoshua<br />
+<b>Everything Is Illuminated</b>: Jonathan Safran Foer<br />
+<b>Ali Smith&#8217;s Supersonic 70s</b>: Ali Smith<br />
+<b>Die Memoiren des Rodriguez Fazantas</b>: Helge Schneider<br />
+<b>German Amok</b>: Feridun Zaimoglu<br />
+<b>Imaginings of Sand</b>: Andre Brink<br />
+<b>Leinwand</b>: Feridun Zaimoglu<br />
+<b>Bitter Fruit</b>: Achmat Dangor<br />
+<b>Die Betrogene</b>: Thomas Mann<br />
+<b>The Crow Road</b>: Iain Banks<br />
+<b>The White Tiger</b>: Aravind Adiga<br />
+<b>Kali: Eine Vorwintergeschichte</b>: Peter Handke<br />
+<b>The Icarus Girl</b>: Helen Oyeyemi<br />
+<b>Der Hund aus Terracotta</b>: Andrea Camilleri<br />
+<b>Ansichten eines Clowns</b>: Heinrich Böll<br />
+<b>Lust</b>: Elfriede Jelinek<br />
+<b>Transmission</b>: Hari Kunzru<br />
+<b>Zwölf Gramm Glück</b>: Feridun Zaimoglu<br />
+<b>Hokkaido Highway Blues</b>: Will Ferguson<br />
+<b>Never Let Me Go</b>: Kazuo Ishiguro<br />
+<b>Lunar Park</b>: Bret Easton Ellis<br />
+<b>The Burial Brothers</b>: Simon Mayle<br />
+<b>Ruby in Practice</b>: Jeremy McAnally<br />
+<b>An der Arche um Acht</b>: Ulrich Hub<br />
+<b>Ubik</b>: Philip Kindred Dick<br />
+<b>A Loyal Character Dancer</b>: Qiu Xiaolong<br />
+<b>Bartleby The Scrivener</b>: Herman Melville<br />
+<b>2 B R 0 2 B</b>: Kurt Vonnegut<br />
+<b>Handbuch des Kriegers des Lichts</b>: Paulo Coelho<br />
+<b>The Well-Grounded Rubyist</b>: David A. Black<br />
+<b>The Accidental</b>: Ali Smith<br />
+<b>Rice Boy</b>: Evan Dahm<br />
+<b>South Africa: The Rise and Fall of Apartheid</b>: Nancy L. Clark<br />
+<b>Squeak by Example</b>: Andrew P. Black<br />
+<b>Rabbit, Run</b>: John Updike<br />
+<b>Heartland</b>: Joey Goebel<br />
+<b>Guards! Guards!</b>: Terry Pratchett<br />
+<b>Die Girls von Riad</b>: Rajaa Alsanea<br />
+<b>Angela&#8217;s Ashes</b>: Frank McCourt<br />
+<b>Verblendung</b>: Stieg Larsson<br />
+<b>Der Tote im Sumida</b>: Sujata Massey<br />
+<b>Crime</b>: Irvine Welsh<br />
+<b>Interesting Times</b>: Terry Pratchett<br />
+<b>Sacred Games</b>: Vikram Chandra<br />
+<b>The God of Small Things</b>: Arundhati Roy<br />
+<b>Programming Clojure</b>: Stuart Halloway<br />
+<b>Armageddon</b>: Leon Uris<br />
+<b>Small Gods</b>: Terry Pratchett<br />
+<b>The Dice Man</b>: Luke Rhinehart<br />
+<b>Verdammnis</b>: Stieg Larsson<br />
+<b>Oranges Are Not the Only Fruit</b>: Jeanette Winterson<br />
+<b>Vergebung</b>: Stieg Larsson<br />
+<b>JavaScript: The Good Parts</b>: Douglas Crockford<br />
+<b>Going Postal</b>: Terry Pratchett<br /></p>
+<p>Started in 2009 but not finished:<br /></p>
+<p><b>Gödel, Escher, Bach</b>: Douglas R. Hofstadter<br />
+<b>Brückenkurs Mathematik</b>: Guido Walz<br /></p>
+<p>This list is not taking into account stuff that didn&#8217;t have ISBNs like some eBooks or scientific papers.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/28/simple-aws-scripting-with-boto/">Simple AWS Scripting With Boto</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-28T00:00:00+07:00" pubdate data-updated="true">Dec 28<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://code.google.com/p/boto/">boto</a> is a very nice Python interface to the Amazon Web Services which I can heartily recommend for your cloud scripting needs. Here&#8217;s a quick example program I whipped up around 2 weeks ago (be gentle, I&#8217;m not a Python guy and this is just a throwaway quickie), which will list all your AMIs (excluding public ones), used S3 buckets plus a list of currently running instances with some information like instance type, start time etc. The nice part is that you can connect to any instance via <span class="caps">SSH</span> directly from this lsit which I find more convenient than copy/pasting the public <span class="caps">DNS</span> name from the <span class="caps">AWS</span> console:</p>
+<script src="http://gist.github.com/264696.js?file=cloudwtf.py"></script></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/17/android-and-me/">Android and Me</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-17T00:00:00+07:00" pubdate data-updated="true">Dec 17<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Last Monday I got an <a href="http://en.wikipedia.org/wiki/Android_(operating_system)">Android</a> phone from work (unfortunately A1 still only has the <span class="caps">HTC</span> Magic, but I don&#8217;t want to be ungrateful) and I obviously had to get into the whole community firmware thing and all. Here are some links that I hope are interesting and/or useful:<br />
+<ul><br />
+<li><a href="http://developer.htc.com/adp.html">Fastboot for Mac</a> (you have to scroll down a bit)</li><br />
+<li><a href="http://forum.xda-developers.com/showthread.php?t=529019">Engineering <span class="caps">SPL</span> for <span class="caps">HTC</span> Magic</a></li><br />
+<li><a href="http://forum.xda-developers.com/showpost.php?p=4029315&#38;postcount=1">Amon_RA Sapphire Recovery Image</li><br />
+<li><a href="http://wiki.smartphonefrance.info/firmware-htcmagic.ashx">Smartphone France Recovery and Firmware Image</a> (nice image, already rooted)</li><br />
+<li><a href="http://forum.xda-developers.com/showthread.php?t=556933%26highlight=theofficial%2Brogers">TheOfficial Rogers <span class="caps">ROM</span></a> (very nice Android 1.5 <span class="caps">ROM</span>, needs root before installing)</li><br /></p>
+</ul>
+<p>One last word of advice: save your <span class="caps">APN</span> settings before you flash your phone!</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/13/happynerds-net-is-online/">happynerds.net Is Online!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-13T00:00:00+07:00" pubdate data-updated="true">Dec 13<sup>th</sup>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In my <a href="http://citizen428.net/archives/404-Fun-with-Sinatra,-Heroku-and-MongoDB.html">previous blog post</a> I mentioned how much fun I have in creating a small web project with Sinatra, Heroku and MongoHQ and today said project finally went online:</p>
+<p><a href="http://www.happynerds.net/">Happynerds &#8211; Programming Links for Kids</a></p>
+<p>f you wonder why I&#8217;m doing this, RailsBridge has a <a href="http://teachingkids.railsbridge.org/">good summary</a> on the topic.</p></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/25">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/23">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About citizen428</h1>
+  <p>I&#8217;m Michael Kohl, generally known as citizen428 online. I mainly
+  write about programming, and do a regular <a href="/blog/categories/informationoverload/">blog post series</a> collecting interesting
+  articles I enjoyed throughout the week.</p>
+<div id="social_media_icons" align="center">
+<a href="http://twitter.com/citizen428"><img src="/images/icons/twitter.png"
+                                             alt="Twitter" /></a>
+<a href="https://plus.google.com/u/0/101046237539584353961/posts"><img src="/images/icons/google.png"
+                                             alt="Twitter"
+                                             /></a>
+<a href="http://www.linkedin.com/in/citizen428"><img src="/images/icons/linkedin.png"
+                                             alt="Twitter" /></a>
+</div>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/12/information-overload-2015-07-12/">Information Overload 2015-07-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/06/information-overload-2015-07-06/">Information Overload 2015-07-06</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/07/information-overload-2015-06-07/">Information Overload 2015-06-07</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/01/information-overload-2015-06-01/">Information Overload 2015-06-01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/10/information-overload-2015-04-26/">Information Overload 2015-05-10</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("citizen428", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/citizen428" class="twitter-follow-button" data-show-count="true">Follow @citizen428</a>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/citizen428">@citizen428</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'citizen428',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Michael Kohl -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'citizen428-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

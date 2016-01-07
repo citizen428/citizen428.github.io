@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: development | citizen428.blog()]]></title>
+  <link href="http://citizen428.github.io/blog/categories/development/atom.xml" rel="self"/>
+  <link href="http://citizen428.github.io/"/>
+  <updated>2016-01-07T21:04:23+07:00</updated>
+  <id>http://citizen428.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Kohl]]></name>
+    <email><![CDATA[citizen428@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Easy setup for Clojure on Mac OS X Leopard]]></title>
+    <link href="http://citizen428.github.io/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard/"/>
+    <updated>2009-08-24T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2009/08/24/easy-setup-for-clojure-on-mac-os-x-leopard</id>
+    <content type="html"><![CDATA[<p>&ldquo;Clojure&rdquo;:<a href="http://clojure.org/">http://clojure.org/</a> definitely is one of the hottest new programming languages around and just recently hit a &ldquo;very important milestone&rdquo;:<a href="http://clojure.blogspot.com/2009/05/clojure-10.html.">http://clojure.blogspot.com/2009/05/clojure-10.html.</a> Setting up a nice Clojure development environment on OS X still can be a bit of a pain though, which can be seen by the number of HOWTOs and installation notes floating around on the web. I therefore decided to expand &ldquo;one of those&rdquo;:<a href="http://github.com/carlism/Clojure-MacOSX/tree">http://github.com/carlism/Clojure-MacOSX/tree</a> into &ldquo;ClojureX&rdquo;:<a href="http://github.com/citizen428/ClojureX/tree/master,">http://github.com/citizen428/ClojureX/tree/master,</a> which I believe is the easiest way to get up to speed with Clojure development on Leopard.</p>
+
+<p>ClojureX can</p>
+
+<ul>
+<li> download and build the source code for Clojure, &#8220;clojure-contrib&#8221;:http://github.com/richhickey/clojure-contrib/tree/master and &#8220;JLine&#8221;:http://jline.sourceforge.net/ (a readline like library for Java)</li>
+
+<li> download editor support packages for TextMate and Emacs</li>
+
+<li> create a symlink for the Clojure startup script in /usr/local/bin</li>
+
+<li> install support for TextMate via the <a href="http://github.com/stephenroller/clojure-tmbundle/tree/master">clojure-tmbundle</a></li>
+
+<li> configure Emacs to use &#8220;clojure-mode&#8221;:http://github.com/jochu/clojure-mode/tree/master, &#8220;Slime&#8221;:http://common-lisp.net/project/slime/ and <a href="http://github.com/jochu/swank-clojure/tree/master">swank-clojure</a></li>
+
+<li> keep your Clojure installation up to date via a simple &#8220;git submodule update && ant&#8221;</li>
+</ul>
+
+
+<p>I hope this will come in handy for other people interested in trying out Clojure on Mac OS X, if you have any feedback please post it in the comment section.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RegEx madness]]></title>
+    <link href="http://citizen428.github.io/blog/2007/04/05/regex-madness/"/>
+    <updated>2007-04-05T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2007/04/05/regex-madness</id>
+    <content type="html"><![CDATA[<p>Today at work we needed to find a regular expression to extract the name of a backup job from an SNMP trap. The trap looks as follows:</p>
+
+<p>&ldquo;[beginning garbage]job name[more garbage]&rdquo;</p>
+
+<p>The job name can consist of several words containing alphanumeric characters, separated by either a space, an underscore or a dash. Here&rsquo;s the crucial part of the final solution I came up with:</p>
+
+<p><b>((?:\w+[- ]?)<em>\w</em>)</b></p>
+
+<p>When you use this in a longer regex that also filters out the beginning garbage, this works like a charm even for strange job names as &ldquo;foo-bar_baz qux_ madness&rdquo;.</p>
+
+<p>Setting Orange, Discord 22, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[XPath (good|mad)ness]]></title>
+    <link href="http://citizen428.github.io/blog/2007/01/04/xpath-goodmadness/"/>
+    <updated>2007-01-04T00:00:00+07:00</updated>
+    <id>http://citizen428.github.io/blog/2007/01/04/xpath-goodmadness</id>
+    <content type="html"><![CDATA[<p>Today I started writing a useful little &ldquo;Greasemonkey&rdquo;:<a href="http://greasemonkey.mozdev.org/">http://greasemonkey.mozdev.org/</a> &ldquo;userscript&rdquo;:<a href="http://userscripts.org/">http://userscripts.org/</a> for a &ldquo;browser-based MMRPG&rdquo;:<a href="http://www.pardus.at">http://www.pardus.at</a> I&rsquo;m playing. Although I&rsquo;m no JavaScript guru I feel somewhat confident in the language and am quite fond of &ldquo;XPath&rdquo;:<a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a> ever since I joined the &ldquo;hoodwink.d&rdquo;:<a href="http://hoodwinkd.hobix.com/">http://hoodwinkd.hobix.com/</a> community.  Everything was going well, until I kind of hit a road block: selecting images whose src attribute contains a certain directory (e.g. &ldquo;funky&rdquo;) from a frame within a frameset. What sounds trivial at first cost me close to one and a half hours, but luckily enough I finally found a <a href="http://simile.mit.edu/mail/ReadMsg?listName=General&msgId=8502">solution</a>. To spare you the hassle, here&rsquo;s the working result:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var xpath = &ldquo;/html/frameset/frame[@name=&lsquo;main&rsquo;]&rdquo;;
+</span><span class='line'>var frameResult = document.evaluate(xpath, document, null,
+</span><span class='line'>   XPathResult.ANY_UNORDERED_NODE_TYPE,null).singleNodeValue;
+</span><span class='line'>var document2 = frameResult.contentDocument;
+</span><span class='line'>var imgResult = document2.evaluate(&ldquo;//img[contains(@src,&lsquo;funky&rsquo;)]&rdquo;, document2, null,
+</span><span class='line'>  XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Of course if any of you know sbout a better way to achieve the same result, please don&rsquo;t hesitate to post a comment, thanks!</p>
+
+<p>On a completely unrelated note: I&rsquo;m probably the last person to find out that &ldquo;Slashdot&rdquo;:<a href="http://sladhdot.org">http://sladhdot.org</a> features random Futurama quotes in its HTTP headers, but nonetheless I find it pretty cool to find stuff like &ldquo;X-Fry: The less fortunate get all the breaks!&rdquo; in there!</p>
+
+<p>Setting Orange, Chaos 5, 3173 YOLD</p>
+]]></content>
+  </entry>
+  
+</feed>
