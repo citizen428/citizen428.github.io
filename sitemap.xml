@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://citizen428.github.io/blog/2016/06/04/new-post/</loc>
+    <lastmod>2016-06-04T13:26:07+07:00</lastmod>
+  </url>
+  <url>
     <loc>http://citizen428.github.io/blog/2015/07/12/information-overload-2015-07-12/</loc>
     <lastmod>2015-07-12T00:00:00+07:00</lastmod>
   </url>
@@ -1817,25 +1821,25 @@
     <lastmod>2005-01-23T00:00:00+07:00</lastmod>
   </url>
   <url>
-    <loc>http://citizen428.github.io/blog/archives/</loc>
-  </url>
-  <url>
     <loc>http://citizen428.github.io/</loc>
   </url>
   <url>
-    <loc>http://citizen428.github.io/studynotes/</loc>
-  </url>
-  <url>
-    <loc>http://citizen428.github.io/projects/</loc>
+    <loc>http://citizen428.github.io/blog/archives/</loc>
   </url>
   <url>
     <loc>http://citizen428.github.io/imprint/</loc>
   </url>
   <url>
-    <loc>http://citizen428.github.io/talks_and_publications/</loc>
+    <loc>http://citizen428.github.io/studynotes/</loc>
   </url>
   <url>
     <loc>http://citizen428.github.io/about/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/projects/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/talks_and_publications/</loc>
   </url>
   <url>
     <loc>http://citizen428.github.io/blog/categories/blogs/</loc>
@@ -2402,35 +2406,170 @@
     <loc>http://citizen428.github.io/blog/categories/internet/</loc>
   </url>
   <url>
+    <loc>http://citizen428.github.io/posts/2/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/3/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/4/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/5/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/6/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/7/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/8/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/9/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/10/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/11/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/12/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/13/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/14/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/15/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/16/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/17/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/18/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/19/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/20/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/21/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/22/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/23/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/24/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/25/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/26/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/27/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/28/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/29/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/30/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/31/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/32/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/33/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/34/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/35/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/36/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/37/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/38/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/39/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/40/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/41/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/42/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/43/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/44/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/45/</loc>
+  </url>
+  <url>
+    <loc>http://citizen428.github.io/posts/46/</loc>
+  </url>
+  <url>
     <loc>http://citizen428.github.io/studynotes/c64/index.html</loc>
-    <lastmod>2015-04-21T10:11:17+07:00</lastmod>
+    <lastmod>2016-06-04T13:21:16+07:00</lastmod>
   </url>
   <url>
     <loc>http://citizen428.github.io/studynotes/emacs/index.html</loc>
-    <lastmod>2015-04-21T10:11:17+07:00</lastmod>
+    <lastmod>2016-06-04T13:21:16+07:00</lastmod>
   </url>
   <url>
     <loc>http://citizen428.github.io/studynotes/monads/index.html</loc>
-    <lastmod>2015-04-21T10:11:17+07:00</lastmod>
+    <lastmod>2016-06-04T13:21:16+07:00</lastmod>
   </url>
   <url>
     <loc>http://citizen428.github.io/studynotes/mysql/index.html</loc>
-    <lastmod>2015-04-21T10:11:17+07:00</lastmod>
+    <lastmod>2016-06-04T13:21:16+07:00</lastmod>
   </url>
   <url>
     <loc>http://citizen428.github.io/studynotes/postgres/index.html</loc>
-    <lastmod>2015-04-21T10:11:17+07:00</lastmod>
+    <lastmod>2016-06-04T13:21:16+07:00</lastmod>
   </url>
   <url>
     <loc>http://citizen428.github.io/studynotes/rails4/index.html</loc>
-    <lastmod>2015-04-21T10:11:17+07:00</lastmod>
+    <lastmod>2016-06-04T13:21:16+07:00</lastmod>
   </url>
   <url>
     <loc>http://citizen428.github.io/studynotes/ruby_performance/index.html</loc>
-    <lastmod>2015-04-21T10:11:17+07:00</lastmod>
+    <lastmod>2016-06-04T13:21:16+07:00</lastmod>
   </url>
   <url>
     <loc>http://citizen428.github.io/studynotes/typeclassopedia/index.html</loc>
-    <lastmod>2015-04-21T10:11:17+07:00</lastmod>
+    <lastmod>2016-06-04T13:21:16+07:00</lastmod>
   </url>
 </urlset>

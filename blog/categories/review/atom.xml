@@ -4,7 +4,7 @@
   <title><![CDATA[Category: review | citizen428.blog()]]></title>
   <link href="http://citizen428.github.io/blog/categories/review/atom.xml" rel="self"/>
   <link href="http://citizen428.github.io/"/>
-  <updated>2016-01-07T21:31:04+07:00</updated>
+  <updated>2016-06-04T13:28:20+07:00</updated>
   <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[new-post]]></title>
+    <link href="http://citizen428.github.io/blog/2016/06/04/new-post/"/>
+    <updated>2016-06-04T13:26:07+07:00</updated>
+    <id>http://citizen428.github.io/blog/2016/06/04/new-post</id>
+    <content type="html"><![CDATA[<p><em>Disclaimer 1: The good folks of <a href="https://www.nostarch.com">No Starch Press</a> were kind enough to provide me with a review copy of this book, but this did not influence my assessment in any way.</em></p>
+
+<p>+Disclaimer 2: Links to books are Amazon affiliate links._</p>
+
+<p><a href="http://amzn.to/1t7Od66">Statistics Done Wrong: The Woefully Complete Guide</a></p>
+
+<p>Let me preface this review by saying that if you&rsquo;re looking for a book to learn statistics from, this is not it. The author assumes a certain knowledge on the subject matter and unless you have that, you probably won&rsquo;t get much out of this text as explanations are a bit on the terse side (though heavily referenced for additional reading).</p>
+
+<p>So who is this book for then? Everyone who works with statistics and/or data analytics, and wants to get a handle on some of the most common mistakes and fallacies committed in the field, whether knowingly or unknowingly. Like mentioned before the style can be a bit terse, and I think occasionally chapters could have benefitted from slightly more background on the presented concepts, especially since this book is marketed as a &ldquo;complete guide&rdquo;. I nonetheless consider it a good resource for people as myself, who mainly picked up their statistical knowledge in relation to their main interest, i.e. for machine learning or bioinformatics. If you feel like you have at decent handle on basic statistics, but wouldn&rsquo;t trust yourself to set up your own analysis or experiments, you&rsquo;ll certainly gain something from &ldquo;Statistics Done Wrong&rdquo;.</p>
+
+<p>On a stylistic note, I have to say that for a book on statistics, this has been a surprisingly entertaining read and the author deserves some bonus points for pointing out the irony of using published studies and papers to point out fallacies in other studies and papers.</p>
+
+<p>If you are an experienced statistician you probably can give this one a pass, but if you want to freshen up or add to your existing basic statistics knowledge, this is a very enjoyable book.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review: Programming Elixir]]></title>
@@ -238,21 +259,6 @@ and read some comics, all on the same device.</p>
 <p>The writing was clear and to the point, with tons of footnotes and references to provide the interested reader with the chance to further research the presented topics. The author clearly knows what he&rsquo;s talking about and manages to present it in a very approachable way. Due to it&rsquo;s limited size the book still has to be a bit dense though, so I never really felt like reading more than one chapter at a time, otherwise it&rsquo;d have been to much information to take in at once.</p>
 
 <p>Whether you work in IT security or are a web application developer, this definitely is a book you don&rsquo;t want to miss.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[28C3 day 4]]></title>
-    <link href="http://citizen428.github.io/blog/2011/12/30/28c3-day-4/"/>
-    <updated>2011-12-30T13:01:00+07:00</updated>
-    <id>http://citizen428.github.io/blog/2011/12/30/28c3-day-4</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4828.en.html">Antiforensik</a><br>How to work against forensics. Nothing revolutionary, but a solid talk.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4587.en.html">bup: Git for backups</a><br>An interesting backup project using git, this is open source and still needs help in case you are looking for something to work on.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4856.en.html">The engineering part of social engineering</a><br>I wasn&rsquo;t entirely convinced by this talk. While there were some interesting points, the speaker was quite full of himself and frankly the talk wasn&rsquo;t so different from other SE talks that I&rsquo;ve seen before.</li>
-<li><a href="http://events.ccc.de/congress/2011/Fahrplan/events/4754.en.html">Smart Hacking For Privacy</a><br>This started off rather bad when  one of the 2 speakers couldn&rsquo;t get over this nervousness, but ended up being a really funny and interesting talk, which was later joined by the CEO of the company whose product got hacked.</li>
-</ul>
-
 ]]></content>
   </entry>
   

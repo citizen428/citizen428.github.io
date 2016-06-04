@@ -4,7 +4,7 @@
   <title><![CDATA[citizen428.blog()]]></title>
   <link href="http://citizen428.github.io/atom.xml" rel="self"/>
   <link href="http://citizen428.github.io/"/>
-  <updated>2016-01-07T21:31:04+07:00</updated>
+  <updated>2016-06-04T13:28:20+07:00</updated>
   <id>http://citizen428.github.io/</id>
   <author>
     <name><![CDATA[Michael Kohl]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[New-post]]></title>
+    <link href="http://citizen428.github.io/blog/2016/06/04/new-post/"/>
+    <updated>2016-06-04T13:26:07+07:00</updated>
+    <id>http://citizen428.github.io/blog/2016/06/04/new-post</id>
+    <content type="html"><![CDATA[<p><em>Disclaimer 1: The good folks of <a href="https://www.nostarch.com">No Starch Press</a> were kind enough to provide me with a review copy of this book, but this did not influence my assessment in any way.</em></p>
+
+<p>+Disclaimer 2: Links to books are Amazon affiliate links._</p>
+
+<p><a href="http://amzn.to/1t7Od66">Statistics Done Wrong: The Woefully Complete Guide</a></p>
+
+<p>Let me preface this review by saying that if you&rsquo;re looking for a book to learn statistics from, this is not it. The author assumes a certain knowledge on the subject matter and unless you have that, you probably won&rsquo;t get much out of this text as explanations are a bit on the terse side (though heavily referenced for additional reading).</p>
+
+<p>So who is this book for then? Everyone who works with statistics and/or data analytics, and wants to get a handle on some of the most common mistakes and fallacies committed in the field, whether knowingly or unknowingly. Like mentioned before the style can be a bit terse, and I think occasionally chapters could have benefitted from slightly more background on the presented concepts, especially since this book is marketed as a &ldquo;complete guide&rdquo;. I nonetheless consider it a good resource for people as myself, who mainly picked up their statistical knowledge in relation to their main interest, i.e. for machine learning or bioinformatics. If you feel like you have at decent handle on basic statistics, but wouldn&rsquo;t trust yourself to set up your own analysis or experiments, you&rsquo;ll certainly gain something from &ldquo;Statistics Done Wrong&rdquo;.</p>
+
+<p>On a stylistic note, I have to say that for a book on statistics, this has been a surprisingly entertaining read and the author deserves some bonus points for pointing out the irony of using published studies and papers to point out fallacies in other studies and papers.</p>
+
+<p>If you are an experienced statistician you probably can give this one a pass, but if you want to freshen up or add to your existing basic statistics knowledge, this is a very enjoyable book.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Information Overload 2015-07-12]]></title>
@@ -641,39 +662,6 @@ Hun Sen, the man who ruled Cambodia for the last 30 years is the world&rsquo;s l
 <li>Ales Kot: <em>Zero, Vol. 2: At the Heart of It All</em><br></li>
 <li>Mike Richardson: <em>Crimson Empire, Volume 2: Council of Blood</em><br></li>
 <li>Brian K. Vaughan: <em>Saga, Volume 4</em><br></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Information Overload 2013-12-14]]></title>
-    <link href="http://citizen428.github.io/blog/2014/12/13/information-overload-2014-10-12/"/>
-    <updated>2014-12-13T00:00:00+07:00</updated>
-    <id>http://citizen428.github.io/blog/2014/12/13/information-overload-2014-10-12</id>
-    <content type="html"><![CDATA[<p>I know, I usually publish the Information Overload on Sundays, but my schedule has become so irregular&hellip;</p>
-
-<ul>
-<li><a href="http://www.globalcitizen.org/Content/Content.aspx?id=3afe9b6c-b83f-4526-9df5-4fa704dbb9a1">15 Things You Shouldn&rsquo;t Believe About Africa</a><br>
-What I can&rsquo;t believe is that this needed to be written&hellip;</li>
-<li><a href="http://www.theguardian.com/cities/2014/sep/25/-sp-world-subterranean-ghost-stations-tube-abandoned-underground">The weird afterlife of the world&rsquo;s subterranean &lsquo;ghost stations&rsquo;</a><br>
-The Guardian City blog is one of my favorite web sites at the moment.</li>
-<li><a href="http://thediplomat.com/2014/09/the-dalai-lama-and-the-politics-of-reincarnation/">The Dalai Lama and the Politics of Reincarnation</a><br>
-It will be interesting to see how this pans out.</li>
-<li><a href="http://www.vice.com/read/research-drugs-and-the-grey-market">A Young Chemist Explains How Legal Highs Work</a><br>
-People clearly want to take drugs, so maybe policy changes are in order.</li>
-<li><a href="http://www.theguardian.com/cities/2014/sep/16/-sp-life-timbuktu-mali-ancient-city-gold-slowly-turning-to-dust">Life in Timbuktu: how the ancient city of gold is slowly turning to dust</a><br>
-It did say it&rsquo;s one of my favorite web sites, didn&rsquo;t I?</li>
-<li><a href="http://www.iflscience.com/physics/there-parallel-universe-thats-moving-backwards-time">Is There a Parallel Universe That&rsquo;s Moving Backwards in Time?</a><br>
-The title of this website says it all, &ldquo;I fucking love science&rdquo;.</li>
-<li><a href="http://www.bangkokpost.com/lifestyle/social-and-lifestyle/448419">Law and Order: Special Victims Unit</a><br>
-Lots of bad press for the Thai police lately, but I also always like other viewpoints.</li>
-<li><a href="http://thediplomat.com/2014/12/chinas-economy-dont-bet-on-beijing/">China&rsquo;s Economy: Don’t Bet on Beijing</a><br>
-<a href="http://www.wikiwand.com/en/The_Diplomat">The Diplomat</a> confuses me. While some of their articles are interesting, I&rsquo;m still wondering about their overall agenda.</li>
-<li><a href="http://sea-globe.com/transgender-singapore-southeast-asia-globe/">The skin I live in</a><br>
-The excellent Southeast Asia Globe with an article on transgender sex workers in Singapore.</li>
-<li><a href="http://qz.com/299003/a-quick-history-of-why-asians-wear-surgical-masks-in-public/">A quick history of why Asians wear surgical masks in public</a><br>
-After having lived in China, I don&rsquo;t even notice them anymore.</li>
 </ul>
 
 ]]></content>
