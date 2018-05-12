@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://citizen428.github.io/sitemap.xml 
+Sitemap: http://legacyblog.citizen428.net/sitemap.xml
+
